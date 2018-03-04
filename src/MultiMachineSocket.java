@@ -74,7 +74,7 @@ public class MultiMachineSocket {
 		// 4) set port(port for connection with first slave)
 		line = b.readLine();
 		setPort( Integer.parseInt(line));
-		System.out.println(" first port: " + port);
+		System.out.println("First port: " + port);
 	}
 	
 	public Socket[] connect() throws IOException{

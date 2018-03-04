@@ -55,8 +55,6 @@ public class MalletInput {
 			writer.println();
 		}
 		writer.close();
-		
-		
 	}
 	
 }

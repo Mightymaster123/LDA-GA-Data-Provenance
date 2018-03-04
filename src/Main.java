@@ -81,10 +81,10 @@ public class Main {
         assert files != null : "There is nothing to process in the current directory";
         for (String file : files) {
             // If the file is a subdirectory, recurse
-            if (new File(baseDir + "/" + file).isDirectory())
+            if (new File(baseDir + "/" + file).isDirectory()) {
                 recurse(baseDir + "/" + file, mirrorDir + "/" + file);
+            }
             else {
-
                 // Initialize a stream tokenizer
                 FileReader rd = new FileReader(baseDir + "/" + file);
                 StreamTokenizer st = new StreamTokenizer(rd);
@@ -101,7 +101,6 @@ public class Main {
                 String previous = "";
                 while (token != StreamTokenizer.TT_EOF) {
                     switch (token) {
-
                         case StreamTokenizer.TT_WORD:
                             // Check if it is a package name from package import statement
                             if (previous.compareTo("package") == 0 || previous.compareTo("import") == 0) {
@@ -119,7 +118,6 @@ public class Main {
                             if (categorize(st.sval))
                                 content.append(st.sval.toLowerCase()).append(" ");
                             break;
-
                         case StreamTokenizer.TT_NUMBER:
                             // Check for numbers, decimal and hexadecimal
                             if ((token = st.nextToken()) != StreamTokenizer.TT_EOF) {
@@ -141,12 +139,12 @@ public class Main {
                 // Check if the file is of type article
                 // An _a denotes an article
                 if (file.contains("$AAA$")) {
-                    //System.out.println("File has $AAA$, Article found...");
+                    System.out.println("File has $AAA$, Article found...");
                     Article newArticle = new Article(file, content.toString());
                     documentList.add(newArticle);
                     articleMap.put(file, newArticle);
                 } else {
-                    //System.out.println("File is not an article...");
+                    System.out.println("File is not an article...");
                     SourceFile newSource = new SourceFile(file, content.toString());
                     documentList.add(newSource);
                     sourceFileMap.put(file, newSource);
@@ -267,18 +265,12 @@ public class Main {
         // Pass the stopwords list as the parameter
         init("stopwords.txt");
 
-        String dataDir = "txtData";        // name of the directory that contains the original source data
+        String dataDir = "rawData";                 // name of the directory that contains the original source data
         String mirrorDir = "processed-data";        //name of the directory where the modified data is to be stored
 
         // Mirror directory structure while retaining only tokenized source files (eg. PDF files, CSV files, etc. from handlers in pkg1)
+        // I feel like this recurse function processes article titles and keywords into a txt file...
         recurse(dataDir, mirrorDir);
-
-        // Print out each article's title along with it's keywords
-        for (String article : articleMap.keySet()) {
-            Article ar = articleMap.get(article);
-            System.out.println(ar.name);
-            System.out.println(ar.getKeyWords());
-        }
 
         // Output the time it took to find all article's titles and keywords
         long preprocessEndTime = System.currentTimeMillis();
