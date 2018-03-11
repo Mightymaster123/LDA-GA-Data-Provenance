@@ -86,7 +86,7 @@ public class MultiMachineSocket {
 		
 		
 		// if this machine is master
-		boolean isMaster = false;
+		boolean is_master = false;
 		try 
 		{
 			System.out.println("Full list of Network Interfaces:");
@@ -100,7 +100,7 @@ public class MultiMachineSocket {
 					System.out.println("        " + inetAddress.toString());
 					if(masterAddr.equals(inetAddress))
 					{
-						isMaster = true;
+						is_master = true;
 						break;
 					}
 				}
@@ -112,7 +112,7 @@ public class MultiMachineSocket {
 	    
 	    
     	//if(masterAddr.equals(InetAddress.getByName("localhost")) || masterAddr.equals(InetAddress.getLocalHost())){
-    	if(isMaster)
+    	if(is_master)
     	{
     		setId(-1);
     		System.out.println("I am master");
