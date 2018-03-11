@@ -3,9 +3,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.NetworkInterface;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.util.Enumeration;
 
 public class MultiMachineSocket {
 	private InetAddress masterAddr = null;
@@ -80,8 +83,37 @@ public class MultiMachineSocket {
 	public Socket[] connect() throws IOException{
 		System.out.println("My IP is: " + InetAddress.getLocalHost().toString());
 		Socket sockets[] = null;
+		
+		
 		// if this machine is master
-    	if(masterAddr.equals(InetAddress.getByName("localhost")) || masterAddr.equals(InetAddress.getLocalHost())){
+		boolean isMaster = false;
+		try 
+		{
+			System.out.println("Full list of Network Interfaces:");
+			for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) 
+			{
+				NetworkInterface intf = en.nextElement();
+				System.out.println("    " + intf.getName() + " " + intf.getDisplayName());
+				for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements(); ) 
+				{
+					InetAddress inetAddress = enumIpAddr.nextElement();
+					System.out.println("        " + inetAddress.toString());
+					if(masterAddr.equals(inetAddress))
+					{
+						isMaster = true;
+						break;
+					}
+				}
+			}
+		} catch (SocketException e) 
+		{
+			System.out.println(" (error retrieving network interface list)");
+		}
+	    
+	    
+    	//if(masterAddr.equals(InetAddress.getByName("localhost")) || masterAddr.equals(InetAddress.getLocalHost())){
+    	if(isMaster)
+    	{
     		setId(-1);
     		System.out.println("I am master");
     		// create serverSocket for each slave, and then listen to request from each slave
