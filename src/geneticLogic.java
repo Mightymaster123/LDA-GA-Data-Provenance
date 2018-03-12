@@ -11,6 +11,8 @@ import com.google.common.collect.Multimap;
 
 public class geneticLogic {
 
+	public static final int THREADS_PER_MACHINE = 3;
+	
 	private static int numMachines;
 	private static int machineId;
 	private static boolean finishedByOthers = false; // means one of the machines has finished the job, only make sense when on master machine
@@ -31,7 +33,7 @@ public class geneticLogic {
 		if(machineId == -1){
 			listeners = new Listener[numMachines - 1];
 			for(int i = 0; i < numMachines - 1; i++){
-				listeners[i] = new Listener(sockets, i);
+				listeners[i] = new Listener(sockets[i], i);
 				listeners[i].start();
 			}
 		}
@@ -40,7 +42,8 @@ public class geneticLogic {
 		//the initial population of size 6(numMachines * 3)
 		// to make paralleling work easier, make it size = number of machines * number of cores on each machine
 		
-		int population = numMachines * 3;
+		
+		int population = numMachines * THREADS_PER_MACHINE;
 		int[][] initialPopulation = new int[population][2];
 		
 		boolean maxFitnessFound = false;
@@ -74,19 +77,19 @@ public class geneticLogic {
 			
 			long startTime = System.currentTimeMillis();
 		
-			int coresNum = 4;
-			int newThreadsNum = 3;
-			Thread threads[] = new Thread[newThreadsNum];
-			for(int i = 0; i < newThreadsNum; i++){
-				threads[i] = new Thread( new MyThread(i, numMachines, machineId, initialPopulation, tm, numberOfDocuments, fitnessValues));
-				System.out.println("Thread " + i + " begin start...");
+			//int coresNum = 4;
+			Thread threads[] = new Thread[THREADS_PER_MACHINE];
+			for(int i = 0; i < THREADS_PER_MACHINE; i++){
+				int population_index = THREADS_PER_MACHINE * (machineId+1) + i;
+				threads[i] = new Thread( new MyThread(i, initialPopulation[population_index][0], initialPopulation[population_index][1], tm, numberOfDocuments, fitnessValues, population_index));			
+				//System.out.println("Thread " + i + " begin start...");
 				threads[i].start();
-				System.out.println("Thread " + i + " end start...");
+				//System.out.println("Thread " + i + " end start...");
 			}
 			
-			for(int i = 0; i < newThreadsNum; i++){
+			for(int i = 0; i < THREADS_PER_MACHINE; i++){
 				threads[i].join();
-				System.out.println("Thread " + i + " joined");
+				//System.out.println("Thread " + i + " joined");
 			}
 			
 			long paraEndTime = System.currentTimeMillis();
@@ -104,7 +107,7 @@ public class geneticLogic {
 					if(fitnessValues[j] > maxFitness) {
 						maxFitness = fitnessValues[j];
 						
-						//stop reproducing or creating new generations if the expected fitness is reached by one of the machiens
+						//stop reproducing or creating new generations if the expected fitness is reached by one of the machines
 						/**
 						 * Please find what would be a suitable fitness to classify the set of documents that you choose
 						 */
@@ -186,10 +189,10 @@ public class geneticLogic {
 		
 	}
 	private static class Listener extends Thread{
-		private Socket sockets[];
+		private Socket socket;
 		private int listenerId;
-		public Listener(Socket s[], int i){
-			sockets = s;
+		public Listener(Socket s, int i){
+			socket = s;
 			listenerId = i;
 		}
 		
@@ -197,7 +200,7 @@ public class geneticLogic {
         public void run( ){
 			ObjectInputStream input = null;
 			try {
-				input = new ObjectInputStream(sockets[listenerId].getInputStream());
+				input = new ObjectInputStream(socket.getInputStream());
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -215,7 +218,7 @@ public class geneticLogic {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				System.out.println("topic: " + msg[0] + " interations: " + msg[1]);
+				System.out.println("topic: " + msg[0] + " iterations: " + msg[1]);
 				setMsgFromOthers(msg[0], msg[1]);
 			}
 		}

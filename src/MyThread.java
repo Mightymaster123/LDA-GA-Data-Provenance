@@ -8,44 +8,40 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
 public class MyThread implements Runnable{
-	private int MyCount;
-	private int globalCount;
-	private int machineId;
-	private int[][] initialPopulation;
+	private int thread_index;
+	int number_of_topics;
+	int number_of_iterations;
 	private TopicModelling tm;
 	private int numberOfDocuments;
 	private double[] fitnessValues;
+	private int fitness_index;
 	
-	
-	public MyThread(int count, int numMachines, int id, int[][] initialPopulation, TopicModelling tm, int numberOfDocuments, double[] fitnessValues){
-		MyCount = count;// count of thread on one machine
-		machineId = id;
-		globalCount = (numMachines) * (machineId + 1) + MyCount;
-		this.initialPopulation = initialPopulation;
+	public MyThread(int _thread_index, int _number_of_topics, int _number_of_iterations, TopicModelling tm,	int numberOfDocuments, double[] fitnessValues, int _fitness_index){
+		thread_index = _thread_index;// thread index on one machine
+		number_of_topics = _number_of_topics;
+		number_of_iterations = _number_of_iterations;		
 		this.tm = tm;
 		this.numberOfDocuments = numberOfDocuments;
 		this.fitnessValues = fitnessValues;
+		fitness_index = _fitness_index;
 	}
 	
 	
 	public void run(){
 		try{
 			//invoke the LDA function
-			tm.LDA(initialPopulation[globalCount][0], initialPopulation[globalCount][1], false, globalCount);
-					
-			//number of topics - the first value
-			int numberOfTopics = initialPopulation[globalCount][0];
+			tm.LDA(number_of_topics, number_of_iterations, false, fitness_index);
 	
 			//clustermatrix - matrix explaining the distribution of documents into different topics
 			//the distibution is written to a text file by the name "distribution.txt"
-			double[][] clusterMatrix = new double[numberOfDocuments - 1][numberOfTopics];
-			System.out.println("Thread " + MyCount + " is about to sleep");
-			Thread.sleep(2000);
-			System.out.println("Thread " + MyCount + " is out of sleep");
+			double[][] clusterMatrix = new double[numberOfDocuments - 1][number_of_topics];
+			System.out.println("Thread " + thread_index + " is about to sleep");
+			Thread.sleep(2000);//todo: Don't sleep such a long time [liudong]
+			System.out.println("Thread " + thread_index + " is out of sleep");
 	
 			//reading the values from distribution.txt and populating the cluster matrix
 			int rowNumber=0, columnNumber = 0;
-			Scanner fileRead = new Scanner( new File("distribution" + globalCount + ".txt"));
+			Scanner fileRead = new Scanner( new File("distribution" + fitness_index + ".txt"));
 			fileRead.nextLine();
 			
 			//Map to save the documents that belong to each cluster
@@ -60,7 +56,7 @@ public class MyThread implements Runnable{
 				rowNumber = fileRead.nextInt();
 				fileRead.next();
 			
-				for(int z = 0 ; z < numberOfTopics  ; z++) {
+				for(int z = 0 ; z < number_of_topics  ; z++) {
 					columnNumber = fileRead.nextInt();
 					if( z == 0 ){
 						clusterMap.put(columnNumber,rowNumber);  
@@ -72,17 +68,17 @@ public class MyThread implements Runnable{
 			fileRead.close();
 		
 			//getting the centroid of each cluster by calculating the average of their cluster distribution
-			double[][] clusterCentroids = new double[numberOfTopics][numberOfTopics];
+			double[][] clusterCentroids = new double[number_of_topics][number_of_topics];
 			for(int k: clusterMap.keySet()){
 				List<Integer> values = (List<Integer>) clusterMap.get(k);
 			
 				for(int j = 0 ; j < values.size() ; j++) {
 					int docNo = values.get(j);
-					for(int y = 0 ; y < numberOfTopics ; y++ ) {
+					for(int y = 0 ; y < number_of_topics ; y++ ) {
 						clusterCentroids[k][y] = clusterCentroids[k][y] + clusterMatrix[docNo][y];
 					}
 				}
-				for(int y = 0 ; y < numberOfTopics ; y++ ) {
+				for(int y = 0 ; y < number_of_topics ; y++ ) {
 					clusterCentroids[k][y] = clusterCentroids[k][y] / values.size();
 				}
 			}
@@ -105,7 +101,7 @@ public class MyThread implements Runnable{
 					
 						//finding euclidean distance between the two points/docuemnts
 						double distance = 0;
-						for(int h = 0 ; h < numberOfTopics ; h++) {
+						for(int h = 0 ; h < number_of_topics ; h++) {
 							distance =  distance + Math.pow((clusterMatrix[otherDocNo][h] - clusterMatrix[docNo][h]), 2);
 						}
 						distance = Math.sqrt(distance);
@@ -126,14 +122,14 @@ public class MyThread implements Runnable{
 				for(int y = 0 ; y < values.size() ; y++ ) {
 					int docNo = values.get(y);
 					minDistanceOutsideCluster[docNo] = Integer.MAX_VALUE;
-					for(int z = 0 ; z < numberOfTopics ; z++) {
+					for(int z = 0 ; z < number_of_topics ; z++) {
 	
 						//don't calculate the distance to the same cluster
 						if(z == k) {
 							continue;
 						}
 						double distance = 0;
-						for(int h = 0 ; h < numberOfTopics ; h++) {
+						for(int h = 0 ; h < number_of_topics ; h++) {
 							distance =  distance + Math.pow((clusterCentroids[z][h] - clusterMatrix[docNo][h]), 2);
 						}
 						distance = Math.sqrt(distance);
@@ -156,7 +152,7 @@ public class MyThread implements Runnable{
 			for(int m = 0 ; m < (numberOfDocuments-1); m++ ) {
 				total = total + silhouetteCoefficient[m]; 
 			}
-			fitnessValues[globalCount] = total / (numberOfDocuments - 1);		
+			fitnessValues[fitness_index] = total / (numberOfDocuments - 1);		
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block

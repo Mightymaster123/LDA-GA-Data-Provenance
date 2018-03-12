@@ -22,6 +22,10 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Main {
+	public static final String ORIGINAL_DATA_DIRECTORY = "txtData"; // name of the directory that contains the original
+																	// source data
+	public static final String PROCESSED_DATA_DIRECTORY = "processed-data"; // name of the directory where the useful
+																			// data is stored
 
 	static KeywordExtractor kwe;
 	static HashMap<String, Long> javaKeys;
@@ -77,27 +81,27 @@ public class Main {
 		return false;
 	}
 
-	// This function extract useful words from files in baseDir directory, then save
-	// these useful words in mirrorDir directory.
-	// This function recurses into the source directory containing .java source
-	// files or Wikipedia articles,then
-	// It tokenizes each .java file, removes comments, or removes unused words in
-	// Wikipedia articles.
-	public static void recurse(String baseDir, String mirrorDir) throws IOException, InterruptedException {
+	// This function extracts useful words from files in original_directory, then
+	// saves these useful words in processed_directory. This function recurses into
+	// the original_directory containing .java source files or Wikipedia
+	// articles,then it tokenizes each .java file, removes comments, or removes
+	// unused words in Wikipedia articles.
+	public static void extract_useful_words(String original_directory, String processed_directory)
+			throws IOException, InterruptedException {
 		// Initialize a stream tokenizers
 
-		File dir = new File(baseDir);
+		File dir = new File(original_directory);
 
 		String[] files = dir.list();
 
 		for (String file : files) {
 			// If the file is a subdirectory, recurse
-			if (new File(baseDir + "/" + file).isDirectory())
-				recurse(baseDir + "/" + file, mirrorDir + "/" + file);
+			if (new File(original_directory + "/" + file).isDirectory())
+				extract_useful_words(original_directory + "/" + file, processed_directory + "/" + file);
 			else {
 
 				// Initialize a stream tokenizer
-				FileReader rd = new FileReader(baseDir + "/" + file);
+				FileReader rd = new FileReader(original_directory + "/" + file);
 				StreamTokenizer st = new StreamTokenizer(rd);
 
 				// Prepare the tokenizer for Java-style tokenizing rules
@@ -166,11 +170,11 @@ public class Main {
 
 				// Write content to the file
 				if (content.length() != 0) {
-					File newDir = new File(mirrorDir);
+					File newDir = new File(processed_directory);
 					if (newDir.exists() == false)
 						newDir.mkdirs();
 					FileWriter wt = null;
-					wt = new FileWriter(mirrorDir + "/" + file);
+					wt = new FileWriter(processed_directory + "/" + file);
 
 					wt.write(content);
 					wt.close();
@@ -194,8 +198,7 @@ public class Main {
 
 	public static void calculatePrecisionRecall(List<Cluster> clusters) throws FileNotFoundException {
 
-		if(clusters==null || clusters.size()<=0)
-		{
+		if (clusters == null || clusters.size() <= 0) {
 			System.out.println("PRECISION : " + 0);
 			System.out.println("RECALL : " + 0);
 			return;
@@ -218,7 +221,7 @@ public class Main {
 		for (int i = 0; i < clusters.size(); i++) {
 			precision[i] = 0;
 			recall[i] = 0;
-			
+
 			Cluster cl = clusters.get(i);
 
 			String name = cl.articles.get(0);
@@ -226,8 +229,7 @@ public class Main {
 
 			// retrieve the article from the truth file
 			String trueSource = truthData.get(name);
-			if(trueSource==null || trueSource=="")
-			{
+			if (trueSource == null || trueSource == "") {
 				System.out.println("Failed to find truth data: " + name);
 				continue;
 			}
@@ -250,7 +252,7 @@ public class Main {
 			for (String sourceName : sources) {
 				sourceSet.add(sourceName);
 			}
-			if (trueSourceSplit == null || trueSourceSplit.length<=0) {
+			if (trueSourceSplit == null || trueSourceSplit.length <= 0) {
 				if (sourceSet.contains(trueSource)) {
 					recall[i] = 1;
 				}
@@ -279,34 +281,51 @@ public class Main {
 
 		System.out.println("PRECISION : " + precision_percentage);
 		System.out.println("RECALL : " + recall_percentage);
-		
+
 		truthFile.close();
 	}
-	
+
+	public static void delete_directory(String directory_name) {
+		File dir = new File(directory_name);
+		if (dir.exists()) {
+			String[] entries = dir.list();
+			if (entries != null) {
+				for (String s : entries) {
+					File currentFile = new File(dir.getPath(), s);
+					if (currentFile.isDirectory()) {
+						delete_directory(currentFile.getPath());
+					} else {
+						currentFile.delete();
+					}
+				}
+			}
+
+			dir.delete();
+		}
+	}
 
 	public static void main(String[] argv) throws IOException, InterruptedException, ClassNotFoundException {
-		//Build connection between multiple machines: 1 master, multiple slaves
+		// Build connection between multiple machines: 1 master, multiple slaves
 		MultiMachineSocket mms = new MultiMachineSocket();
 		mms.config();
 
 		long startTime = System.currentTimeMillis();
 
-		// pass the stop words list as the parameter. Stop words are useless information. 
+		// pass the stop words list as the parameter. Stop words are useless
+		// information.
 		init("stopwords.txt");
-
-		String dataDir = "txtData"; // name of the directory that contains the original source data
-		String mirrorDir = "processed-data"; // name of the directory where the useful data is stored
 
 		// Mirror directory structure while retaining only tokenized source files (eg.
 		// PDF files, CSV files, etc. from handlers in pkg1)
-		recurse(dataDir, mirrorDir);
+		delete_directory(PROCESSED_DATA_DIRECTORY);
+		extract_useful_words(ORIGINAL_DATA_DIRECTORY, PROCESSED_DATA_DIRECTORY);
 
 		// Print out each article's title along with it's keywords
 		System.out.println("The number of articles is " + articleMap.size());
 		int article_index = 0;
 		for (String article : articleMap.keySet()) {
 			Article ar = articleMap.get(article);
-			System.out.println((article_index+1)+".\t"+ar.name + "    " + ar.getKeyWords());
+			System.out.println((article_index + 1) + ".\t" + ar.name + "    " + ar.getKeyWords());
 			++article_index;
 		}
 

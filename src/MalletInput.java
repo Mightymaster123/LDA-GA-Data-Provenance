@@ -9,7 +9,8 @@ import java.util.List;
 
 
 public class MalletInput {
-
+	public static final String INPUT_FILE_NAME = "input1.txt";
+	public static final String INPUT_FILE_CHARSET = "UTF-8";
 	
 	//the main function reads the input from the written preprocessed files
 	public static void main(String[] args) throws IOException {
@@ -46,17 +47,12 @@ public class MalletInput {
 	//this function is written in an effort to avoid writing to the preprocessed folder and reading it back again
 	public static void createMalletInput(List<Document> documentList) throws FileNotFoundException, UnsupportedEncodingException{
 		
-		System.out.println("The number of documents is " + documentList.size());
-		
-		PrintWriter writer = new PrintWriter("input1.txt", "UTF-8");
-		
+		System.out.println("The number of documents is " + documentList.size());		
+		PrintWriter writer = new PrintWriter(INPUT_FILE_NAME, INPUT_FILE_CHARSET);		
 		for(Document d : documentList) {
-			writer.print(d.name + "	X	"+d.getKeyWords());
-			writer.println();
+			writer.println(d.name + "	X	"+d.getKeyWords());
 		}
 		writer.close();
-		
-		
 	}
 	
 }

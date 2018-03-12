@@ -101,7 +101,7 @@ public class Cluster {
 		        }
 		        sc.close();
 		 } catch (FileNotFoundException e) {
-			 System.out.println("Hit error while reading the topic.txt ");
+			 System.out.println("Hit error while reading the distribution.txt ");
 		        e.printStackTrace();
 		 }
 		 

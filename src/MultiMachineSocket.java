@@ -121,7 +121,9 @@ public class MultiMachineSocket {
 				}
 				masterSockets[i] = new ServerSocket(port + i);
 				sockets = new Socket[numSlaves];
-
+				for(int j=0; j<numSlaves; ++j){
+					sockets[j] = null;
+				}
 				while (true) {
 					sockets[i] = masterSockets[i].accept();
 					// System.out.println("*****tag****");
@@ -151,15 +153,4 @@ public class MultiMachineSocket {
 			return sockets;
 		}
 	}
-	//
-	// // tell master one slave have finished the job
-	// public void finishSignal(){
-	//
-	// }
-	//
-	// // send result back to master
-	// public void sendResult(){
-	//
-	// }
-	//
 }

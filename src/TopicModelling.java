@@ -37,7 +37,7 @@ public class TopicModelling {
         /**
          * the stopwords file that is to be used is to be set in as the file value here.
          */
-        Reader fileReader = new InputStreamReader(new FileInputStream(new File("input1.txt")), "UTF-8");
+        Reader fileReader = new InputStreamReader(new FileInputStream(new File(MalletInput.INPUT_FILE_NAME)), MalletInput.INPUT_FILE_CHARSET);
         instances.addThruPipe(new CsvIterator (fileReader, Pattern.compile("^(\\S*)[\\s,]*(\\S*)[\\s,]*(.*)$"),3, 2, 1)); // data, label, name fields
 
         
@@ -124,7 +124,7 @@ public class TopicModelling {
         System.out.println("0\t" + testProbabilities[0]);*/
     }
 	
-	public void LDA(int numberOfTopics, int numberOfIterations, boolean topicFile, int MyCount) throws IOException {
+	public void LDA(int numberOfTopics, int numberOfIterations, boolean topicFile, int distribution_index) throws IOException {
 		// TODO Auto-generated method stub
 		
 		//import documents from the texts to Mallet format
@@ -150,7 +150,7 @@ public class TopicModelling {
         /**
          * the stopwords file that is to be used is to be set in as the file value here.
          */
-        Reader fileReader = new InputStreamReader(new FileInputStream(new File("input1.txt")), "UTF-8");
+        Reader fileReader = new InputStreamReader(new FileInputStream(new File(MalletInput.INPUT_FILE_NAME)), MalletInput.INPUT_FILE_CHARSET);
         instances.addThruPipe(new CsvIterator (fileReader, Pattern.compile("^(\\S*)[\\s,]*(\\S*)[\\s,]*(.*)$"),3, 2, 1)); // data, label, name fields
 
         
@@ -159,8 +159,7 @@ public class TopicModelling {
         // Create a model with 100 topics, alpha_t = 0.01, beta_w = 0.01
         //  Note that the first parameter is passed as the sum over topics, while
         //  the second is the parameter for a single dimension of the Dirichlet prior.
-        int numTopics = numberOfTopics;
-        ParallelTopicModel model = new ParallelTopicModel(numTopics,0.01, 0.01);
+        ParallelTopicModel model = new ParallelTopicModel(numberOfTopics,0.01, 0.01);
         
         
         model.addInstances(instances);
@@ -175,17 +174,16 @@ public class TopicModelling {
         model.estimate();
      // Show the words and topics in the first instance
         
-        String fileName = "distribution" + MyCount + ".txt";
+        String fileName = "distribution" + distribution_index + ".txt";
         model.printDocumentTopics(new File(fileName));
 
         // The data alphabet maps word IDs to strings
         Alphabet dataAlphabet = instances.getDataAlphabet();
         
-        FeatureSequence tokens = (FeatureSequence) model.getData().get(0).instance.getData();
-        LabelSequence topics = model.getData().get(0).topicSequence;
+        //FeatureSequence tokens = (FeatureSequence) model.getData().get(0).instance.getData();
+        //LabelSequence topics = model.getData().get(0).topicSequence;
         
-        Formatter out = new Formatter(new StringBuilder(), Locale.US);
-        
+      
         // Estimate the topic distribution of the first instance, 
         //  given the current Gibbs state.
         double[] topicDistribution = model.getTopicProbabilities(0);
@@ -195,12 +193,10 @@ public class TopicModelling {
         
         
         //writing the topics to the file if topicFile is true
-        if(topicFile == true) {
-        	
-    		out = new Formatter("topic.txt");
-
+        if(topicFile == true) {        	
+        	Formatter out = new Formatter("topic.txt");
         	// Show top 5 words in topics with proportions for the first document
-        	for (int topic = 0; topic < numTopics; topic++) {
+        	for (int topic = 0; topic < numberOfTopics; topic++) {
         		Iterator<IDSorter> iterator = topicSortedWords.get(topic).iterator();
             
         		//out = new Formatter(new StringBuilder(), Locale.US);
