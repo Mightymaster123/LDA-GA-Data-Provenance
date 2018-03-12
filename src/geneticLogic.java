@@ -22,6 +22,7 @@ public class geneticLogic {
 		msgFromOther[0] = topics;
 		msgFromOther[1] = iterations;
 	}
+	
 	//public static void main(String[] args) throws IOException, InterruptedException {
 	public static void geneticLogic(MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
 		
@@ -119,7 +120,7 @@ public class geneticLogic {
 							break;
 						}
 						// set fitness threshold here!!!
-						if(maxFitness > 0.25) {
+						if(maxFitness > 0.75) {
 						// when maxFitness satisfies the requirement, stop running GA
 
 							// if this machine is slave, tell the master what the best combination is
@@ -223,5 +224,13 @@ public class geneticLogic {
 			}
 		}
 	}
+	
+	class population_unit
+	{
+		public int number_of_topics;
+		public int number_of_iterations;
+	}
+	
+	
 }
 	
