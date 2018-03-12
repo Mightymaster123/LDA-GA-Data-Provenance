@@ -119,7 +119,7 @@ public class geneticLogic {
 							break;
 						}
 						// set fitness threshold here!!!
-						if(maxFitness > 0.75) {
+						if(maxFitness > 0.25) {
 						// when maxFitness satisfies the requirement, stop running GA
 
 							// if this machine is slave, tell the master what the best combination is
@@ -218,7 +218,7 @@ public class geneticLogic {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				System.out.println("topic: " + msg[0] + " iterations: " + msg[1]);
+				System.out.println("slave topic: " + msg[0] + " iterations: " + msg[1]);
 				setMsgFromOthers(msg[0], msg[1]);
 			}
 		}
