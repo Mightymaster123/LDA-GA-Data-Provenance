@@ -36,8 +36,7 @@ public class geneticLogic {
 			my_socket[0] = new MySocket(sockets[0], -1);
 			genetic_logic_slave(mms);
 		}
-		for(int i=0; i<my_socket.length; ++i)
-		{
+		for (int i = 0; i < my_socket.length; ++i) {
 			my_socket[i].close();
 		}
 	}
@@ -137,12 +136,9 @@ public class geneticLogic {
 						 */
 						// set fitness threshold here!!!
 						if (maxFitness > FITNESS_THRESHHOLD) {
-							// if this machine is master, stop all listener threads and then stop GA
-							// else{
-							// for(int i = 0; i < numMachines - 1; i++){
-							// listeners[i].end();
-							// break;
-							// }
+							for (int i_socket = 0; i_socket < my_socket.length; ++i_socket) {
+								my_socket[i_socket].close();
+							}
 
 							// run the function again to get the words in each topic
 							// the third parameter states that the topics are to be written to a file
@@ -216,7 +212,9 @@ public class geneticLogic {
 		while (true) {
 			population_config[] slavePopulation = my_socket[0].receive();
 			if (slavePopulation == null || slavePopulation.length != THREADS_PER_MACHINE) {
-				System.out.println("Slave" + machineId + " failed to receive population: " + (slavePopulation != null ? slavePopulation.length : 0));
+				if (slavePopulation != null) {
+					System.out.println("Slave " + machineId + " failed to receive population: " + slavePopulation.length);
+				}
 				break;
 			}
 			/**
