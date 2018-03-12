@@ -56,8 +56,8 @@ public class KeywordExtractor { //implements Singleton {
     
 
     
-    public ArrayList processComment(String comment){
-        ArrayList result = new ArrayList();
+    public ArrayList<String> processComment(String comment){
+        ArrayList<String> result = new ArrayList<String>();
         String[] tokens = comment.split("[\\s]+");
         for(int i = 0; i< tokens.length;++i){
             result.add(tokens[i]);
@@ -65,13 +65,13 @@ public class KeywordExtractor { //implements Singleton {
         return result;
     }
     
-    public ArrayList processCode(String codeFragment){
-        ArrayList result = new ArrayList();
+    public ArrayList<String> processCode(String codeFragment){
+        ArrayList<String> result = new ArrayList<String>();
         
         if (codeFragment == null || codeFragment.equals("")) {
         	return result;
         }
-        ArrayList unprocessed = new ArrayList();
+        ArrayList<String> unprocessed = new ArrayList<String>();
         //result.add(codeFragment);
         //unprocessed.add(codeFragment);
         String prototype = stripMethodSyntax(codeFragment);
@@ -80,9 +80,9 @@ public class KeywordExtractor { //implements Singleton {
             result.add(components[i]);
             unprocessed.add(components[i]);
         }
-        ArrayList firstCut = removeUnderScore(result);
-        ArrayList secondCut = removeHiphen(firstCut);
-        ArrayList caseCut = parseCase(secondCut);
+        ArrayList<String> firstCut = removeUnderScore(result);
+        ArrayList<String> secondCut = removeHiphen(firstCut);
+        ArrayList<String> caseCut = parseCase(secondCut);
        //replace this with better rules later
       /*  if(caseCut.size()==1 && 
         		!(codeFragment.
@@ -99,12 +99,12 @@ public class KeywordExtractor { //implements Singleton {
     }
     
     
-    public ArrayList processJavaClass(Class c) {
-    	ArrayList result = new ArrayList();
+    public ArrayList<String> processJavaClass(Class c) {
+    	ArrayList<String> result = new ArrayList<String>();
     	
         Method[] m = c.getMethods();
         for(int j = 0; j<m.length;++j){
-            ArrayList a = processCode(m[j].getName());
+            ArrayList<String> a = processCode(m[j].getName());
             result.addAll(a);
         }
         
@@ -112,9 +112,9 @@ public class KeywordExtractor { //implements Singleton {
     }
     
     
-    private ArrayList removeUnderScore(ArrayList tokens){
-        ArrayList result = new ArrayList();
-        Iterator it = tokens.iterator();
+    private ArrayList<String> removeUnderScore(ArrayList<String> tokens){
+        ArrayList<String> result = new ArrayList<String>();
+        Iterator<String> it = tokens.iterator();
         while(it.hasNext()){
             String s = (String)it.next();
             String[] words = s.split("[_$.]");
@@ -125,9 +125,9 @@ public class KeywordExtractor { //implements Singleton {
         return result;
     }
     
-    private ArrayList removeHiphen(ArrayList tokens){
-        ArrayList result = new ArrayList();
-        Iterator it = tokens.iterator();
+    private ArrayList<String> removeHiphen(ArrayList<String> tokens){
+        ArrayList<String> result = new ArrayList<String>();
+        Iterator<String> it = tokens.iterator();
         while(it.hasNext()){
             String s = (String)it.next();
             String[] words = s.split("[—$.]");
@@ -146,13 +146,13 @@ public class KeywordExtractor { //implements Singleton {
         return result;
     }
     
-    private ArrayList parseCase(ArrayList tokens){
-        ArrayList result = new ArrayList();
-        Iterator it = tokens.iterator();
+    private ArrayList<String> parseCase(ArrayList<String> tokens){
+        ArrayList<String> result = new ArrayList<String>();
+        Iterator<String> it = tokens.iterator();
         while(it.hasNext()){
             String s = (String) it.next();
             int end = s.length();
-            ArrayList index = new ArrayList();
+            ArrayList<Integer> index = new ArrayList<Integer>();
             index.add(new Integer(end));
             for(int i = end-1; i > 0; --i){
                 char e = s.charAt(i);

@@ -81,7 +81,7 @@ public class MultiMachineSocket {
 
 	boolean isMyIP(InetAddress inetAddress) {
 		try {
-			System.out.println("Full list of Network Interfaces:");
+			System.out.println("My full list of Network Interfaces:");
 			for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
 				NetworkInterface intf = en.nextElement();
 				System.out.println("    " + intf.getName() + " " + intf.getDisplayName());
@@ -100,7 +100,7 @@ public class MultiMachineSocket {
 	}
 
 	public Socket[] connect() throws IOException {
-		System.out.println("My IP is: " + InetAddress.getLocalHost().toString());
+		//System.out.println("My IP is: " + InetAddress.getLocalHost().toString());
 		Socket sockets[] = null;
 
 		// if this machine is master
@@ -113,6 +113,12 @@ public class MultiMachineSocket {
 			// slave
 			masterSockets = new ServerSocket[numSlaves];
 			for (int i = 0; i < numSlaves; i++) {
+			    try {
+					Process p = Runtime.getRuntime().exec("fuser -k "+(port + i)+"/tcp");
+					p.waitFor();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 				masterSockets[i] = new ServerSocket(port + i);
 				sockets = new Socket[numSlaves];
 

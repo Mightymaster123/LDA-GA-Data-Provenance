@@ -46,7 +46,7 @@ public class MalletInput {
 	//this function is written in an effort to avoid writing to the preprocessed folder and reading it back again
 	public static void createMalletInput(List<Document> documentList) throws FileNotFoundException, UnsupportedEncodingException{
 		
-		System.out.println(" the number of documents is " + documentList.size());
+		System.out.println("The number of documents is " + documentList.size());
 		
 		PrintWriter writer = new PrintWriter("input1.txt", "UTF-8");
 		
