@@ -342,7 +342,7 @@ public class Main {
 		// threads and the number of cores
 		// on the master and worker machine to find the best iteration and fitness from
 		// the set of documents
-		geneticLogic.geneticLogic(mms);
+		geneticLogic.genetic_logic(mms);
 
 		// Outputs the time it took to finish the genetic algorithm
 		long geneticEndTime = System.currentTimeMillis();
