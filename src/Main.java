@@ -216,6 +216,9 @@ public class Main {
 		float[] recall = new float[clusters.size()];
 
 		for (int i = 0; i < clusters.size(); i++) {
+			precision[i] = 0;
+			recall[i] = 0;
+			
 			Cluster cl = clusters.get(i);
 
 			String name = cl.articles.get(0);
@@ -223,12 +226,15 @@ public class Main {
 
 			// retrieve the article from the truth file
 			String trueSource = truthData.get(name);
+			if(trueSource==null || trueSource=="")
+			{
+				System.out.println("Failed to find truth data: " + name);
+				continue;
+			}
 			String[] trueSourceSplit = trueSource.split(" ");
 
 			// calculating precision
-			if (sources.size() == 0) {
-				precision[i] = 0;
-			} else {
+			if (sources.size() != 0) {
 				int precise_count = 0;
 				for (int j = 0; j < sources.size(); j++) {
 					if (trueSource.contains(sources.get(j))) {
@@ -239,7 +245,6 @@ public class Main {
 			}
 
 			// calculate recall
-			recall[i] = 0;
 			// convert the list of source files to a set
 			Set<String> sourceSet = new HashSet<String>();
 			for (String sourceName : sources) {
