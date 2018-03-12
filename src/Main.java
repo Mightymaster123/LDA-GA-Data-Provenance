@@ -344,11 +344,20 @@ public class Main {
 		// threads and the number of cores
 		// on the master and worker machine to find the best iteration and fitness from
 		// the set of documents
-		long net_connect_start_time = geneticLogic.genetic_logic(mms);
+		long net_connect_start_time = 0;
+		try
+		{
+			net_connect_start_time = geneticLogic.genetic_logic(mms);
+		}catch(Exception e)
+		{
+			e.printStackTrace(System.err);
+			mms.close();
+			return;
+		}
 
 		// Outputs the time it took to finish the genetic algorithm
 		long geneticEndTime = System.currentTimeMillis();
-		System.out.println("Genetic algorithm takes " + (geneticEndTime - preprocessEndTime) + "ms");
+		System.out.println("Genetic algorithm takes " + (geneticEndTime - net_connect_start_time) + "ms");
 
 		// create clusters based on the distribution.txt
 		List<Cluster> clusters = Cluster.createClusters();
@@ -367,6 +376,7 @@ public class Main {
 		Cluster.cleanSourceFileCluster(clusters, sourceFileMap);
 		System.out.println("Clusters after cleaning the source file");
 		printOutput(clusters);
+		
 
 		long clusteringEndTime = System.currentTimeMillis();
 		System.out.println("Clustering takes " + (clusteringEndTime - geneticEndTime) + "ms");

@@ -152,7 +152,7 @@ public class MultiMachineSocket {
 				Socket socket = new Socket(masterAddr, port + id);
 				sockets[0] = socket;
 			} catch (IOException e) {
-				System.out.println("\n\nPlease start master first");
+				System.out.println("\n\nPlease start master first\\n\\n");
 				throw e;
 			}
 			return sockets;
