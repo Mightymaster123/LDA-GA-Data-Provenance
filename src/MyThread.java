@@ -29,6 +29,13 @@ public class MyThread implements Runnable{
 	
 	public void run(){
 		try{
+			if(fitnessValues[fitness_index] > 0.0f)
+			{
+				//we have already got the fitness value. For example: this is one of the best chromosomes in last round
+				System.out.println(" ********************************  fitnessValues["+fitness_index+"] is already generated: "+fitnessValues[fitness_index]+"  ************************************************");	
+				return;
+			}
+			
 			//invoke the LDA function
 			tm.LDA(number_of_topics, number_of_iterations, false, fitness_index);
 	

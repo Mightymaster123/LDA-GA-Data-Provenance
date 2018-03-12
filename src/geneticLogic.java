@@ -46,6 +46,7 @@ public class geneticLogic {
 		
 		int population = numMachines * THREADS_PER_MACHINE;
 		int[][] initialPopulation = new int[population][2];
+		double[] initialFitnessValues = new double[population];
 		
 		boolean maxFitnessFound = false;
 		
@@ -62,11 +63,7 @@ public class geneticLogic {
 		    //initialPopulation[i][1] = 500;
 		}
 		
-		while( !maxFitnessFound) {
-			
-			//to get the fitness values
-			double[] fitnessValues = new double[population];
-		
+		while( !maxFitnessFound) {		
 			/**
 			 * the total number of documents that are being processed. Put them in a folder and add the folder path here.
 			 */
@@ -82,7 +79,7 @@ public class geneticLogic {
 			Thread threads[] = new Thread[THREADS_PER_MACHINE];
 			for(int i = 0; i < THREADS_PER_MACHINE; i++){
 				int population_index = THREADS_PER_MACHINE * (machineId+1) + i;
-				threads[i] = new Thread( new MyThread(i, initialPopulation[population_index][0], initialPopulation[population_index][1], tm, numberOfDocuments, fitnessValues, population_index));			
+				threads[i] = new Thread( new MyThread(i, initialPopulation[population_index][0], initialPopulation[population_index][1], tm, numberOfDocuments, initialFitnessValues, population_index));			
 				//System.out.println("Thread " + i + " begin start...");
 				threads[i].start();
 				//System.out.println("Thread " + i + " end start...");
@@ -100,14 +97,15 @@ public class geneticLogic {
 			//no sorting code found?(by Xiaolin)
 			//We need only the top 1/3rd of the chromosomes with high fitness values - Silhouette coefficient
 			int[][] newPopulation = new int[initialPopulation.length][2];
+			double[] newFitnessValues = new double[population];
 			//copy only the top 1/3rd of the chromosomes to the new population 
 			final int BEST_POPULATION_SIZE = initialPopulation.length / 3;
 			for(int i = 0 ; i < BEST_POPULATION_SIZE ; i++) {
 				double maxFitness = Integer.MIN_VALUE;
 				int maxFitnessChromosome = -1;
 				for(int j = 0 ; j < initialPopulation.length ; j++) {
-					if(fitnessValues[j] > maxFitness) {
-						maxFitness = fitnessValues[j];
+					if(initialFitnessValues[j] > maxFitness) {
+						maxFitness = initialFitnessValues[j];
 						
 						//stop reproducing or creating new generations if the expected fitness is reached by one of the machines
 						/**
@@ -159,7 +157,8 @@ public class geneticLogic {
 			
 				//copy the chromosome with high fitness to the next generation
 				newPopulation[i] = initialPopulation[maxFitnessChromosome];
-				fitnessValues[maxFitnessChromosome] = Integer.MIN_VALUE;
+				newFitnessValues[i] = initialFitnessValues[maxFitnessChromosome];
+				initialFitnessValues[maxFitnessChromosome] = Integer.MIN_VALUE;
 			}
 			
 			if(maxFitnessFound) {
@@ -175,32 +174,13 @@ public class geneticLogic {
 //				newPopulation[(i+1)*2+1][1] = newPopulation[i][1];
 //			}
 			
-			//perform crossover and mutation
-			final double CROSS_OVER_FROM_BEST_POPULATION_RATIO = 0.5;
-			final double MUTATION_RATIO = 0.2;
-			for(int i = BEST_POPULATION_SIZE ; i < initialPopulation.length; ++i ) {
-				//cross over
-				int[] parent_a = new int[2];
-				if(Math.random()<CROSS_OVER_FROM_BEST_POPULATION_RATIO)
-				{
-					parent_a = newPopulation[(int)(Math.random() * BEST_POPULATION_SIZE)]; //cross over from best 1/3
-				}else
-				{
-					parent_a = initialPopulation[(int)(Math.random() * initialPopulation.length)]; //cross over from any part
-				}
-
-				int[] parent_b = new int[2];
-				if(Math.random()<CROSS_OVER_FROM_BEST_POPULATION_RATIO)
-				{
-					parent_b = newPopulation[(int)(Math.random() * BEST_POPULATION_SIZE)]; //cross over from best 1/3
-				}else
-				{
-					parent_b = initialPopulation[(int)(Math.random() * initialPopulation.length)]; //cross over from any part
-				}
-				newPopulation[i][0] = (parent_a[0] + parent_b[0])/2;
-				newPopulation[i][1] = (parent_a[1] + parent_b[1])/2;
-				
-				//mutation
+			//perform crossover - to fill the rest of the 2/3rd of the initial Population
+			final double MUTATION_RATIO = 0.5;
+			for(int i = BEST_POPULATION_SIZE ; i < initialPopulation.length; ++i ) 
+			{
+				int iParent = i % BEST_POPULATION_SIZE;
+				newPopulation[i][0] = newPopulation[iParent][0];
+				newPopulation[i][1] = newPopulation[iParent][1];
 				if(Math.random()<MUTATION_RATIO)
 				{
 					newPopulation[i][0] = (int) Math.floor(Math.random()*12 + 3);
@@ -210,10 +190,46 @@ public class geneticLogic {
 					newPopulation[i][1] = (int) Math.floor(Math.random()*1000 + 1);
 				}
 			}
+			
+			//perform crossover and mutation
+//			final double CROSS_OVER_FROM_BEST_POPULATION_RATIO = 0.7;
+//			final double MUTATION_RATIO = 0.2;
+//			for(int i = BEST_POPULATION_SIZE ; i < initialPopulation.length; ++i ) {
+//				//cross over
+//				int[] parent_a = new int[2];
+//				if(Math.random()<CROSS_OVER_FROM_BEST_POPULATION_RATIO)
+//				{
+//					parent_a = newPopulation[(int)(Math.random() * BEST_POPULATION_SIZE)]; //cross over from best 1/3
+//				}else
+//				{
+//					parent_a = initialPopulation[(int)(Math.random() * initialPopulation.length)]; //cross over from any part
+//				}
+//
+//				int[] parent_b = new int[2];
+//				if(Math.random()<CROSS_OVER_FROM_BEST_POPULATION_RATIO)
+//				{
+//					parent_b = newPopulation[(int)(Math.random() * BEST_POPULATION_SIZE)]; //cross over from best 1/3
+//				}else
+//				{
+//					parent_b = initialPopulation[(int)(Math.random() * initialPopulation.length)]; //cross over from any part
+//				}
+//				newPopulation[i][0] = (parent_a[0] + parent_b[0])/2;
+//				newPopulation[i][1] = (parent_a[1] + parent_b[1])/2;
+//				
+//				//mutation
+//				if(Math.random()<MUTATION_RATIO)
+//				{
+//					newPopulation[i][0] = (int) Math.floor(Math.random()*12 + 3);
+//				}
+//				if(Math.random()<MUTATION_RATIO)
+//				{
+//					newPopulation[i][1] = (int) Math.floor(Math.random()*1000 + 1);
+//				}
+//			}
 		
 			//substitute the initial population with the new population and continue 
 			initialPopulation = newPopulation;
-			
+			initialFitnessValues = newFitnessValues;			
 			
 			long endTime = System.currentTimeMillis();
 			System.out.println("other part takes " + (endTime - paraEndTime) + "ms");
