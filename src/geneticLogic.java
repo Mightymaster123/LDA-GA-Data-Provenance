@@ -119,7 +119,7 @@ public class geneticLogic {
 							break;
 						}
 						// set fitness threshold here!!!
-						if(maxFitness > 0.75) {
+						if(maxFitness > 0.5) {
 						// when maxFitness satisfies the requirement, stop running GA
 
 							// if this machine is slave, tell the master what the best combination is
