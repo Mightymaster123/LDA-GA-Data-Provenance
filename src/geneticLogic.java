@@ -18,8 +18,9 @@ public class geneticLogic {
 	private static int machineId;
 	private static MySocket my_socket[] = null;
 
-	public static void genetic_logic(MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
+	public static long genetic_logic(MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
 		Socket sockets[] = mms.connect();
+		long start_time = System.currentTimeMillis();
 		nMachines = mms.getNumSlaves() + 1;
 		machineId = mms.getId();
 
@@ -39,6 +40,7 @@ public class geneticLogic {
 		for (int i = 0; i < my_socket.length; ++i) {
 			my_socket[i].close();
 		}
+		return start_time;
 	}
 
 	public static void genetic_logic_master(MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {

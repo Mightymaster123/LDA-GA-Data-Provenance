@@ -344,7 +344,7 @@ public class Main {
 		// threads and the number of cores
 		// on the master and worker machine to find the best iteration and fitness from
 		// the set of documents
-		geneticLogic.genetic_logic(mms);
+		long net_connect_start_time = geneticLogic.genetic_logic(mms);
 
 		// Outputs the time it took to finish the genetic algorithm
 		long geneticEndTime = System.currentTimeMillis();
@@ -375,7 +375,7 @@ public class Main {
 
 		long endTime = System.currentTimeMillis();
 
-		long totalTime = endTime - preprocessEndTime;
+		long totalTime = endTime - net_connect_start_time;
 		System.out.println("execution time : " + totalTime + "ms");
 		mms.close();
 	}
