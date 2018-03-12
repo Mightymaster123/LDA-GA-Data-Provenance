@@ -12,6 +12,7 @@ import com.google.common.collect.Multimap;
 public class geneticLogic {
 
 	public static final int THREADS_PER_MACHINE = 3;
+	public static final double FITNESS_THRESHHOLD = 0.292;
 
 	private static int nMachines;
 	private static int machineId;
@@ -113,7 +114,7 @@ public class geneticLogic {
 							break;
 						}
 						// set fitness threshold here!!!
-						if (maxFitness > 0.5) {
+						if (maxFitness > FITNESS_THRESHHOLD) {
 							// when maxFitness satisfies the requirement, stop running GA
 							// if this machine is slave, tell the master what the best combination is
 							if (machineId != -1) {
