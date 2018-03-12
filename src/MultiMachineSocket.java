@@ -145,7 +145,7 @@ public class MultiMachineSocket {
 				}
 			}
 			System.out.println("I am slave " + id);
-			System.out.println("slave " + id + "will try to connect with master");
+			System.out.println("slave " + id + " will try to connect with master");
 			// System.out.println(InetAddress.getByName("localhost").toString() + " " +
 			// (port + id));
 			Socket socket = new Socket(masterAddr, port + id);

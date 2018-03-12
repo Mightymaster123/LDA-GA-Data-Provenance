@@ -114,14 +114,14 @@ public class geneticLogic {
 							break;
 						}
 						// set fitness threshold here!!!
-						if (maxFitness > (machineId==-1 ? (FITNESS_THRESHHOLD*3) : FITNESS_THRESHHOLD)) {
+						if (maxFitness > FITNESS_THRESHHOLD){
 							// when maxFitness satisfies the requirement, stop running GA
 							// if this machine is slave, tell the master what the best combination is
 							if (machineId != -1) {
 								ObjectOutputStream output = null;
 								output = new ObjectOutputStream(sockets[0].getOutputStream());
 								output.writeObject(initialPopulation[j]);
-								System.out.println("message sent!  "+initialPopulation[j].to_string());
+								System.out.println("message sent!  " + initialPopulation[j].to_string());
 							}
 							// if this machine is master, stop all listener threads and then stop GA
 							// else{
@@ -263,7 +263,6 @@ public class geneticLogic {
 			}
 			if (input != null) {
 				finishedByOthers = true;
-				System.out.println("slave " + listenerId + " has finished the job");
 				population_config cfg = null;
 				try {
 					cfg = (population_config) input.readObject();
@@ -274,7 +273,7 @@ public class geneticLogic {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				System.out.print("slave: "+cfg.to_string());
+				System.out.println("slave " + listenerId + " has finished the job: " + cfg.to_string());
 				setMsgFromOthers(cfg.number_of_topics, cfg.number_of_iterations);
 			}
 		}
