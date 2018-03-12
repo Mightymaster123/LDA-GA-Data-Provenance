@@ -148,9 +148,14 @@ public class MultiMachineSocket {
 			System.out.println("slave " + id + " will try to connect with master");
 			// System.out.println(InetAddress.getByName("localhost").toString() + " " +
 			// (port + id));
-			Socket socket = new Socket(masterAddr, port + id);
-			sockets[0] = socket;
-			return sockets;
+			try {
+				Socket socket = new Socket(masterAddr, port + id);
+				sockets[0] = socket;
+				return sockets;
+			} catch (Exception e) {
+				e.printStackTrace(System.err);
+				System.out.println("\n\nPlease start master first");
+			}
 		}
 	}
 
