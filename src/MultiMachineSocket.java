@@ -99,7 +99,7 @@ public class MultiMachineSocket {
 		return false;
 	}
 
-	public Socket[] connect() {
+	public Socket[] connect() throws IOException {
 		// System.out.println("My IP is: " + InetAddress.getLocalHost().toString());
 		Socket sockets[] = null;
 
@@ -119,26 +119,18 @@ public class MultiMachineSocket {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-
-				try {
-					masterSockets[i] = new ServerSocket(port + i);
-					sockets = new Socket[numSlaves];
-					for (int j = 0; j < numSlaves; ++j) {
-						sockets[j] = null;
-					}
-					while (true) {
-						sockets[i] = masterSockets[i].accept();
-						// System.out.println("*****tag****");
-						if (sockets[i] != null)
-							break;
-					}
-					System.out.println("slave connection estblished " + i);
-				}catch (IOException e) {
-					e.printStackTrace();
-				} catch (Exception e) {
-					e.printStackTrace();
-					throw e;
+				masterSockets[i] = new ServerSocket(port + i);
+				sockets = new Socket[numSlaves];
+				for (int j = 0; j < numSlaves; ++j) {
+					sockets[j] = null;
 				}
+				while (true) {
+					sockets[i] = masterSockets[i].accept();
+					// System.out.println("*****tag****");
+					if (sockets[i] != null)
+						break;
+				}
+				System.out.println("slave connection estblished " + i);
 			}
 			return sockets;
 		}
@@ -159,10 +151,7 @@ public class MultiMachineSocket {
 			try {
 				Socket socket = new Socket(masterAddr, port + id);
 				sockets[0] = socket;
-			} catch(IOException e) {
-				e.printStackTrace();
-				System.out.println("\n\nPlease start master first");
-			} catch (Exception e) {
+			} catch (IOException e) {
 				System.out.println("\n\nPlease start master first");
 				throw e;
 			}
