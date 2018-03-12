@@ -7,9 +7,11 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.StreamTokenizer;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -304,7 +306,7 @@ public class Main {
 		}
 	}
 
-	public static void main(String[] argv) throws IOException, InterruptedException, ClassNotFoundException {
+	public static void main(String[] argv) throws IOException, InterruptedException, ClassNotFoundException {		
 		// Build connection between multiple machines: 1 master, multiple slaves
 		MultiMachineSocket mms = new MultiMachineSocket();
 		mms.config();
