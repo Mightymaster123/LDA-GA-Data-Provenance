@@ -120,8 +120,7 @@ public class geneticLogic {
 								ObjectOutputStream output = null;
 								output = new ObjectOutputStream(sockets[0].getOutputStream());
 								output.writeObject(initialPopulation[j]);
-								System.out.println("message sent! ");
-								initialPopulation[j].println();
+								System.out.println("message sent!  "+initialPopulation[j].to_string());
 							}
 							// if this machine is master, stop all listener threads and then stop GA
 							// else{
@@ -133,8 +132,7 @@ public class geneticLogic {
 							// run the function again to get the words in each topic
 							// the third parameter states that the topics are to be written to a file
 							tm.LDA(initialPopulation[j].number_of_topics, initialPopulation[j].number_of_iterations, true);
-							System.out.print("the best distribution is: ");
-							initialPopulation[j].println();
+							System.out.println("the best distribution is: " + initialPopulation[j].to_string());
 							maxFitnessFound = true;
 							break;
 						}
@@ -275,8 +273,7 @@ public class geneticLogic {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				System.out.print("slave: ");
-				cfg.println();
+				System.out.print("slave: "+cfg.to_string());
 				setMsgFromOthers(cfg.number_of_topics, cfg.number_of_iterations);
 			}
 		}

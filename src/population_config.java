@@ -28,15 +28,10 @@ public class population_config {
 		fitness_value = 0;
 	}
 	
-	public void print()
+	public String to_string()
 	{
-		System.out.println("number_of_topics: " + number_of_topics + "  number_of_iterations:" + number_of_iterations + "  fitness_value:" + fitness_value);
+		String str = "number_of_topics: " + number_of_topics + "  number_of_iterations:" + number_of_iterations + "  fitness_value:" + fitness_value;
+		return str;
 		
-	}
-	
-	public void println()
-	{
-		print();
-		System.out.println("");
 	}
 }

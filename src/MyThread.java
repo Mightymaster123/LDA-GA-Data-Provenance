@@ -28,8 +28,7 @@ public class MyThread implements Runnable{
 			if(population_cfg.fitness_value > 0.0f)
 			{
 				//we have already got the fitness value. For example: this is one of the best chromosomes in last round
-				System.out.println(" ********************************  population is already generated  ************************************************");	
-				population_cfg.println();
+				System.out.println(" ********************************  population is already generated" + population_cfg.to_string() + "  ************************************************");	
 				return;
 			}
 			
