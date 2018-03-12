@@ -377,5 +377,6 @@ public class Main {
 
 		long totalTime = endTime - preprocessEndTime;
 		System.out.println("execution time : " + totalTime + "ms");
+		mms.close();
 	}
 }

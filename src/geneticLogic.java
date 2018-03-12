@@ -36,6 +36,10 @@ public class geneticLogic {
 			my_socket[0] = new MySocket(sockets[0], -1);
 			genetic_logic_slave(mms);
 		}
+		for(int i=0; i<my_socket.length; ++i)
+		{
+			my_socket[i].close();
+		}
 	}
 
 	public static void genetic_logic_master(MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
@@ -212,7 +216,7 @@ public class geneticLogic {
 		while (true) {
 			population_config[] slavePopulation = my_socket[0].receive();
 			if (slavePopulation == null || slavePopulation.length != THREADS_PER_MACHINE) {
-				System.out.println("Slave" + machineId + " failed to receive population: " + (slavePopulation!=null ? slavePopulation.length : 0));
+				System.out.println("Slave" + machineId + " failed to receive population: " + (slavePopulation != null ? slavePopulation.length : 0));
 				break;
 			}
 			/**
@@ -242,7 +246,9 @@ public class geneticLogic {
 			long paraEndTime = System.currentTimeMillis();
 			System.out.println("parallel part takes " + (paraEndTime - startTime) + "ms");
 			if (!my_socket[0].send(slavePopulation)) {
-				System.out.println("Slave" + machineId + " failed to send population: " + (slavePopulation!=null ? slavePopulation.length : 0));
+				if (slavePopulation != null) {
+					System.out.println("Slave " + machineId + " failed to send population: " + slavePopulation.length);
+				}
 				break;
 			}
 		}

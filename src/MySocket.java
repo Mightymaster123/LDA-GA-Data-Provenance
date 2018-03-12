@@ -1,3 +1,4 @@
+import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -12,26 +13,23 @@ public class MySocket {
 		target_machine_id = _target_machine_id;
 	}
 
-	String to_string(population_config[] cfg_array)
-	{
-		if(cfg_array==null || cfg_array.length<=0)
-		{
+	String to_string(population_config[] cfg_array) {
+		if (cfg_array == null || cfg_array.length <= 0) {
 			return "";
 		}
 		String text = "";
-		for(int i=0; i<cfg_array.length; ++i )
-		{
+		for (int i = 0; i < cfg_array.length; ++i) {
 			text += "  " + cfg_array[i].to_string();
 		}
 		return text;
 	}
-	
+
 	public boolean send(population_config[] cfg_array) {
 		try {
 			ObjectOutputStream output = null;
 			output = new ObjectOutputStream(socket.getOutputStream());
 			output.writeObject(cfg_array);
-			System.out.println("send to machine "+ target_machine_id + to_string(cfg_array));
+			System.out.println("send to machine " + target_machine_id + to_string(cfg_array));
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -44,23 +42,29 @@ public class MySocket {
 		try {
 			input = new ObjectInputStream(socket.getInputStream());
 			if (input != null) {
-				try {
-					population_config[] cfg_array = (population_config[] ) input.readObject();
-					System.out.println("receive from machine "+ target_machine_id + to_string(cfg_array));
-					return cfg_array;
-				} catch (ClassNotFoundException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				population_config[] cfg_array = (population_config[]) input.readObject();
+				System.out.println("receive from machine " + target_machine_id + to_string(cfg_array));
+				return cfg_array;
 			}
-		} catch (IOException e) {
+		} catch (EOFException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return null;
-	}	
+	}
+
+	public void close() {
+		if (socket != null) {
+			try {
+				if (!socket.isClosed()) {
+					socket.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace(System.err);
+			}
+			socket = null;
+		}
+	}
 }

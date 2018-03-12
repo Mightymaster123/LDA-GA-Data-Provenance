@@ -100,7 +100,7 @@ public class MultiMachineSocket {
 	}
 
 	public Socket[] connect() throws IOException {
-		//System.out.println("My IP is: " + InetAddress.getLocalHost().toString());
+		// System.out.println("My IP is: " + InetAddress.getLocalHost().toString());
 		Socket sockets[] = null;
 
 		// if this machine is master
@@ -113,15 +113,15 @@ public class MultiMachineSocket {
 			// slave
 			masterSockets = new ServerSocket[numSlaves];
 			for (int i = 0; i < numSlaves; i++) {
-			    try {
-					Process p = Runtime.getRuntime().exec("fuser -k "+(port + i)+"/tcp");
+				try {
+					Process p = Runtime.getRuntime().exec("fuser -k " + (port + i) + "/tcp");
 					p.waitFor();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 				masterSockets[i] = new ServerSocket(port + i);
 				sockets = new Socket[numSlaves];
-				for(int j=0; j<numSlaves; ++j){
+				for (int j = 0; j < numSlaves; ++j) {
 					sockets[j] = null;
 				}
 				while (true) {
@@ -151,6 +151,21 @@ public class MultiMachineSocket {
 			Socket socket = new Socket(masterAddr, port + id);
 			sockets[0] = socket;
 			return sockets;
+		}
+	}
+
+	public void close() {
+		if (masterSockets != null) {
+			for (int i = 0; i < masterSockets.length; ++i) {
+				try {
+					if (!masterSockets[i].isClosed()) {
+						masterSockets[i].close();
+					}
+				} catch (Exception e) {
+					e.printStackTrace(System.err);
+				}
+			}
+			masterSockets = null;
 		}
 	}
 }
