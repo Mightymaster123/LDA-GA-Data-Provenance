@@ -46,8 +46,8 @@ public class geneticLogic {
 		// to make paralleling work easier, make it size = number of machines * number
 		// of cores on each machine
 
-		int population_count = nMachines * THREADS_PER_MACHINE;
-		population_config[] initialPopulation = new population_config[population_count];
+		final int POPULATION_COUNT = nMachines * THREADS_PER_MACHINE;
+		population_config[] initialPopulation = init_population_array(POPULATION_COUNT);
 
 		boolean maxFitnessFound = false;
 
@@ -89,7 +89,7 @@ public class geneticLogic {
 			// no sorting code found?(by Xiaolin)
 			// We need only the top 1/3rd of the chromosomes with high fitness values -
 			// Silhouette coefficient
-			population_config[] newPopulation = new population_config[initialPopulation.length];
+			population_config[] newPopulation = init_population_array(POPULATION_COUNT);
 			// copy only the top 1/3rd of the chromosomes to the new population
 			final int BEST_POPULATION_SIZE = initialPopulation.length / 3;
 			for (int i = 0; i < BEST_POPULATION_SIZE; i++) {
@@ -232,6 +232,17 @@ public class geneticLogic {
 		}
 
 	}
+	
+	public static population_config[] init_population_array(int count)
+	{
+		population_config[] array = new population_config[count];
+		for(int i=0; i<count; ++i)
+		{
+			array[i] = new population_config();
+		}
+		return array;
+	}
+	
 
 	private static class Listener extends Thread {
 		private Socket socket;
