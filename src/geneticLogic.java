@@ -101,7 +101,8 @@ public class geneticLogic {
 			//We need only the top 1/3rd of the chromosomes with high fitness values - Silhouette coefficient
 			int[][] newPopulation = new int[initialPopulation.length][2];
 			//copy only the top 1/3rd of the chromosomes to the new population 
-			for(int i = 0 ; i < (initialPopulation.length / 3) ; i++) {
+			final int BEST_POPULATION_SIZE = initialPopulation.length / 3;
+			for(int i = 0 ; i < BEST_POPULATION_SIZE ; i++) {
 				double maxFitness = Integer.MIN_VALUE;
 				int maxFitnessChromosome = -1;
 				for(int j = 0 ; j < initialPopulation.length ; j++) {
@@ -167,11 +168,47 @@ public class geneticLogic {
 		
 		
 			//perform crossover - to fill the rest of the 2/3rd of the initial Population
-			for(int i = 0 ; i < initialPopulation.length / 3  ; i++ ) {
-				newPopulation[(i+1)*2][0] = newPopulation[i][0];
-				newPopulation[(i+1)*2][1] = (int) Math.floor(Math.random()*1000 + 1);
-				newPopulation[(i+1)*2+1][0] = (int) Math.floor(Math.random()*12 + 2);
-				newPopulation[(i+1)*2+1][1] = newPopulation[i][1];
+//			for(int i = 0 ; i < BEST_POPULATION_SIZE  ; i++ ) {
+//				newPopulation[(i+1)*2][0] = newPopulation[i][0];
+//				newPopulation[(i+1)*2][1] = (int) Math.floor(Math.random()*1000 + 1);
+//				newPopulation[(i+1)*2+1][0] = (int) Math.floor(Math.random()*12 + 2);
+//				newPopulation[(i+1)*2+1][1] = newPopulation[i][1];
+//			}
+			
+			//perform crossover and mutation
+			final double CROSS_OVER_FROM_BEST_POPULATION_RATIO = 0.5;
+			final double MUTATION_RATIO = 0.2;
+			for(int i = BEST_POPULATION_SIZE ; i < initialPopulation.length; ++i ) {
+				//cross over
+				int[] parent_a = new int[2];
+				if(Math.random()<CROSS_OVER_FROM_BEST_POPULATION_RATIO)
+				{
+					parent_a = newPopulation[(int)(Math.random() * BEST_POPULATION_SIZE)]; //cross over from best 1/3
+				}else
+				{
+					parent_a = initialPopulation[(int)(Math.random() * initialPopulation.length)]; //cross over from any part
+				}
+
+				int[] parent_b = new int[2];
+				if(Math.random()<CROSS_OVER_FROM_BEST_POPULATION_RATIO)
+				{
+					parent_b = newPopulation[(int)(Math.random() * BEST_POPULATION_SIZE)]; //cross over from best 1/3
+				}else
+				{
+					parent_b = initialPopulation[(int)(Math.random() * initialPopulation.length)]; //cross over from any part
+				}
+				newPopulation[i][0] = (parent_a[0] + parent_b[0])/2;
+				newPopulation[i][1] = (parent_a[1] + parent_b[1])/2;
+				
+				//mutation
+				if(Math.random()<MUTATION_RATIO)
+				{
+					newPopulation[i][0] = (int) Math.floor(Math.random()*12 + 3);
+				}
+				if(Math.random()<MUTATION_RATIO)
+				{
+					newPopulation[i][1] = (int) Math.floor(Math.random()*1000 + 1);
+				}
 			}
 		
 			//substitute the initial population with the new population and continue 
