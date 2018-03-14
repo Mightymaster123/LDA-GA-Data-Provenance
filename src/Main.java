@@ -281,8 +281,8 @@ public class Main {
 		float precision_percentage = (float) (precision_total / precision.length) * 100;
 		float recall_percentage = (float) (recall_total / recall.length) * 100;
 
-		System.out.println("Precision: " + precision_percentage +" %");
-		System.out.println("Recall:    " + recall_percentage +" %");
+		System.out.println("Precision: " + precision_percentage +"%");
+		System.out.println("Recall:    " + recall_percentage +"%");
 
 		truthFile.close();
 	}
