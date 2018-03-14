@@ -28,9 +28,10 @@ public class MyThread implements Runnable{
 			if(population_cfg.fitness_value > 0.0f)
 			{
 				//we have already got the fitness value. For example: this is one of the best chromosomes in last round
-				System.out.println(" ********************************  Chromosome is already generated. " + population_cfg.to_string() + "  ************************************************");	
+				System.out.println("Thread " + thread_index + ": Use one of the best chromosomes in last round. Don't have to call LDA algorithm again. " + population_cfg.to_string() + "  ************************************************");	
 				return;
 			}
+			System.out.println("Thread " + thread_index + " start running");
 			
 			//invoke the LDA function
 			tm.LDA(population_cfg.number_of_topics, population_cfg.number_of_iterations, false, population_index);
@@ -38,9 +39,9 @@ public class MyThread implements Runnable{
 			//clustermatrix - matrix explaining the distribution of documents into different topics
 			//the distibution is written to a text file by the name "distribution.txt"
 			double[][] clusterMatrix = new double[numberOfDocuments - 1][population_cfg.number_of_topics];
-			System.out.println("Thread " + thread_index + " is about to sleep");
-			Thread.sleep(2000);//todo: Don't sleep such a long time [liudong]
-			System.out.println("Thread " + thread_index + " is out of sleep");
+			//System.out.println("Thread " + thread_index + " is about to sleep");
+			//Thread.sleep(2000);//todo: Don't sleep such a long time [liudong]
+			//System.out.println("Thread " + thread_index + " is out of sleep");
 	
 			//reading the values from distribution.txt and populating the cluster matrix
 			int rowNumber=0, columnNumber = 0;
@@ -156,12 +157,13 @@ public class MyThread implements Runnable{
 				total = total + silhouetteCoefficient[m]; 
 			}
 			population_cfg.fitness_value = total / (numberOfDocuments - 1);		
+			System.out.println("Thread " + thread_index + " finish");
 		}
 		catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		catch (InterruptedException e) {
+		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

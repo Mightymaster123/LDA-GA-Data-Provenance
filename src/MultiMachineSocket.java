@@ -64,6 +64,11 @@ public class MultiMachineSocket {
 		line = b.readLine();
 		setNumSlaves(line);
 		System.out.println("number of slaves: " + line);
+		
+		if(numSlaves <= 0)
+		{
+			return;
+		}
 
 		// 3)read slave addresses
 		slaveAddr = new InetAddress[numSlaves];

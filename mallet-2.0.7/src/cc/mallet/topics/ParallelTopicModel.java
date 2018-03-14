@@ -693,7 +693,7 @@ public class ParallelTopicModel implements Serializable {
 		
 	}
 
-	public void estimate () throws IOException {
+	public void estimate () throws IOException {		
 
 		long startTime = System.currentTimeMillis();
 
@@ -871,7 +871,7 @@ public class ParallelTopicModel implements Serializable {
 				}
 				runnables[0].run();
 			}
-
+			
 			long elapsedMillis = System.currentTimeMillis() - iterationStart;
 			if (elapsedMillis < 1000) {
 				logger.fine(elapsedMillis + "ms ");
@@ -911,7 +911,7 @@ public class ParallelTopicModel implements Serializable {
 		if (days != 0) { timeReport.append(days); timeReport.append(" days "); }
 		if (hours != 0) { timeReport.append(hours); timeReport.append(" hours "); }
 		if (minutes != 0) { timeReport.append(minutes); timeReport.append(" minutes "); }
-		timeReport.append(seconds); timeReport.append(" seconds");
+		timeReport.append(seconds); timeReport.append(" seconds  ************************************************************************************** ");
 		
 		logger.info(timeReport.toString());
 	}
@@ -1290,6 +1290,7 @@ public class ParallelTopicModel implements Serializable {
 	public void printDocumentTopics (File file) throws IOException {
 		PrintWriter out = new PrintWriter (new FileWriter (file) );
 		printDocumentTopics (out);
+		out.flush();
 		out.close();
 	}
 

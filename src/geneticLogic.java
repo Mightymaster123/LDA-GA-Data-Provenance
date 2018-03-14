@@ -145,7 +145,7 @@ public class geneticLogic {
 							// run the function again to get the words in each topic
 							// the third parameter states that the topics are to be written to a file
 							tm.LDA(initialPopulation[j].number_of_topics, initialPopulation[j].number_of_iterations, true);
-							System.out.println("the best distribution is: " + initialPopulation[j].to_string());
+							System.out.println("The best distribution is: " + initialPopulation[j].to_string());
 							maxFitnessFound = true;
 							break;
 						}
@@ -175,16 +175,24 @@ public class geneticLogic {
 			// }
 
 			// perform crossover - to fill the rest of the 2/3rd of the initial Population
-			final double MUTATION_RATIO = 0.5;
-			for (int i = BEST_POPULATION_SIZE; i < initialPopulation.length; ++i) {
-				int iParent = i % BEST_POPULATION_SIZE;
-				newPopulation[i].copy(newPopulation[iParent]);
-				newPopulation[i].fitness_value = 0;
-				if (Math.random() < MUTATION_RATIO) {
-					newPopulation[i].random_topic();
+			if(BEST_POPULATION_SIZE <= 0)
+			{
+				for (int i = 0; i < initialPopulation.length; ++i) {
+					newPopulation[i].random();
 				}
-				if (Math.random() < MUTATION_RATIO) {
-					newPopulation[i].random_iteration();
+			}else
+			{
+				final double MUTATION_RATIO = 0.5;
+				for (int i = BEST_POPULATION_SIZE; i < initialPopulation.length; ++i) {
+					int iParent = i % BEST_POPULATION_SIZE;
+					newPopulation[i].copy(newPopulation[iParent]);
+					newPopulation[i].fitness_value = 0;
+					if (Math.random() < MUTATION_RATIO) {
+						newPopulation[i].random_topic();
+					}
+					if (Math.random() < MUTATION_RATIO) {
+						newPopulation[i].random_iteration();
+					}
 				}
 			}
 
