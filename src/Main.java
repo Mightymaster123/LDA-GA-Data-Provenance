@@ -281,8 +281,8 @@ public class Main {
 		float precision_percentage = (float) (precision_total / precision.length) * 100;
 		float recall_percentage = (float) (recall_total / recall.length) * 100;
 
-		System.out.println("PRECISION : " + precision_percentage);
-		System.out.println("RECALL : " + recall_percentage);
+		System.out.println("Precision: " + precision_percentage +" %");
+		System.out.println("Recall:    " + recall_percentage +" %");
 
 		truthFile.close();
 	}
@@ -386,7 +386,7 @@ public class Main {
 		long endTime = System.currentTimeMillis();
 
 		long totalTime = endTime - net_connect_start_time;
-		System.out.println("execution time : " + totalTime + "ms");
+		System.out.println("Execution time : " + totalTime + "ms");
 		mms.close();
 	}
 }
