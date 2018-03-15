@@ -105,6 +105,7 @@ public class geneticLogicOriginal {
 							System.out.println("the best distribution is " + cfgFromSlave.to_string());
 							result.cfg = cfgFromSlave;
 							maxFitnessFound = true;
+							mms.close();
 							break;
 						}
 						// set fitness threshold here!!!
@@ -128,6 +129,7 @@ public class geneticLogicOriginal {
 							System.out.println("the best distribution is: " + initialPopulation[j].to_string());
 							result.cfg = initialPopulation[j];
 							maxFitnessFound = true;
+							mms.close();
 							break;
 						}
 						maxFitnessChromosome = j;

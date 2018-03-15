@@ -20,6 +20,14 @@ public class MultiMachineSocket {
 	public int getId() {
 		return id;
 	}
+	
+	public boolean is_master(){
+		return (-1==id);
+	}
+	
+	public boolean is_slave(){
+		return !is_master();
+	}
 
 	private InetAddress slaveAddr[];
 
@@ -153,12 +161,23 @@ public class MultiMachineSocket {
 			System.out.println("slave " + id + " will try to connect with master");
 			// System.out.println(InetAddress.getByName("localhost").toString() + " " +
 			// (port + id));
-			try {
-				Socket socket = new Socket(masterAddr, port + id);
-				sockets[0] = socket;
-			} catch (IOException e) {
-				System.out.println("\n\nPlease start master first\n\n");
-				throw e;
+			for(int seconds=0; seconds < 3600; ++seconds)
+			{
+				try {
+					Socket socket = new Socket(masterAddr, port + id);
+					sockets[0] = socket;
+					break;
+				}catch (IOException e) {
+					e.printStackTrace();
+					System.out.println("\n\nPlease start master first: " + seconds + " seconds\n\n");
+				}
+				
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 			return sockets;
 		}
@@ -176,6 +195,16 @@ public class MultiMachineSocket {
 				}
 			}
 			masterSockets = null;
+			if(is_slave())
+			{
+				try {
+					//Wait for master to restart
+					Thread.sleep(1000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
 		}
 	}
 }
