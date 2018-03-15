@@ -42,14 +42,14 @@ public class Main {
 		System.out.println("\n\n\n original_version:");
 		for (int i = 0; i < listResultOriginal.size(); ++i) {
 			ResultStatistics result = listResultOriginal.get(i);
-			if (result != null) {
+			if (result != null && result.is_master) {
 				System.out.println(result.to_string("    " + (i + 1) + "."));
 			}
 		}
 		System.out.println("\n\n\n new_version:");
 		for (int i = 0; i < listResultNew.size(); ++i) {
 			ResultStatistics result = listResultNew.get(i);
-			if (result != null) {
+			if (result != null && result.is_master) {
 				System.out.println(result.to_string(String.format("    %3d.", (i + 1))));
 			}
 		}

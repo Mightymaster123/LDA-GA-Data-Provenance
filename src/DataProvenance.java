@@ -369,33 +369,36 @@ public class DataProvenance {
 		long geneticEndTime = System.currentTimeMillis();
 		System.out.println("Genetic algorithm takes " + (geneticEndTime - net_connect_start_time) + "ms");
 
-		// create clusters based on the distribution.txt
-		List<Cluster> clusters = Cluster.createClusters();
+		if (mms.is_master()) {
+			// create clusters based on the distribution.txt
+			List<Cluster> clusters = Cluster.createClusters();
 
-		// by cleaning the clusters
-		// we got through the obtained list of clusters
-		// check for conditions where there are more than 2 articles in the same cluster
-		// perform the job of splitting the cluster into 2
-		Cluster.cleanCluster(clusters, articleMap, sourceFileMap);
+			// by cleaning the clusters
+			// we got through the obtained list of clusters
+			// check for conditions where there are more than 2 articles in the same cluster
+			// perform the job of splitting the cluster into 2
+			Cluster.cleanCluster(clusters, articleMap, sourceFileMap);
 
-		System.out.println("clusters before cleaning source file \n \n ");
-		printOutput(clusters);
+			System.out.println("clusters before cleaning source file \n \n ");
+			printOutput(clusters);
 
-		// there might be some clusters with no article in them but all source files
-		// to handle that we use the following technique/function
-		Cluster.cleanSourceFileCluster(clusters, sourceFileMap);
-		System.out.println("Clusters after cleaning the source file");
-		printOutput(clusters);
+			// there might be some clusters with no article in them but all source files
+			// to handle that we use the following technique/function
+			Cluster.cleanSourceFileCluster(clusters, sourceFileMap);
+			System.out.println("Clusters after cleaning the source file");
+			printOutput(clusters);
 
-		long clusteringEndTime = System.currentTimeMillis();
-		System.out.println("Clustering takes " + (clusteringEndTime - geneticEndTime) + "ms");
+			long clusteringEndTime = System.currentTimeMillis();
+			System.out.println("Clustering takes " + (clusteringEndTime - geneticEndTime) + "ms");
 
-		calculatePrecisionRecall(result, clusters);
+			calculatePrecisionRecall(result, clusters);
+		}
 
 		long endTime = System.currentTimeMillis();
 
 		result.execution_milliseconds = endTime - net_connect_start_time;
 		System.out.println("Execution time : " + result.execution_milliseconds + "ms");
+
 		mms.close();
 		if (mms.is_slave()) {
 			try {
