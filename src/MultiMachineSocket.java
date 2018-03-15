@@ -187,7 +187,7 @@ public class MultiMachineSocket {
 		if (masterSockets != null) {
 			for (int i = 0; i < masterSockets.length; ++i) {
 				try {
-					if (!masterSockets[i].isClosed()) {
+					if (masterSockets[i]!=null && !masterSockets[i].isClosed()) {
 						masterSockets[i].close();
 					}
 				} catch (Exception e) {
