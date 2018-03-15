@@ -310,6 +310,7 @@ public class DataProvenance {
 		// Build connection between multiple machines: 1 master, multiple slaves
 		MultiMachineSocket mms = new MultiMachineSocket();
 		mms.config();
+		result.is_master = mms.is_master();
 
 		long startTime = System.currentTimeMillis();
 
@@ -354,6 +355,13 @@ public class DataProvenance {
 		} catch (Exception e) {
 			e.printStackTrace(System.err);
 			mms.close();
+			try {
+				// Wait for master to restart
+				Thread.sleep(1000);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			return result;
 		}
 
@@ -389,6 +397,15 @@ public class DataProvenance {
 		result.execution_milliseconds = endTime - net_connect_start_time;
 		System.out.println("Execution time : " + result.execution_milliseconds + "ms");
 		mms.close();
+		if (mms.is_slave()) {
+			try {
+				// Wait for master to restart
+				Thread.sleep(1000);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}
 		return result;
 	}
 }

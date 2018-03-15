@@ -31,7 +31,13 @@ public class MySocket {
 			output.writeObject(cfg_array);
 			System.out.println("send to machine " + target_machine_id + to_string(cfg_array));
 			return true;
-		} catch (Exception e) {
+		} catch (EOFException e) {
+			e.printStackTrace();
+		} catch (java.net.SocketException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 		return false;
@@ -44,7 +50,13 @@ public class MySocket {
 			output.writeObject(cfg);
 			System.out.println("send to machine " + target_machine_id + cfg.to_string());
 			return true;
-		} catch (Exception e) {
+		} catch (EOFException e) {
+			e.printStackTrace();
+		} catch (java.net.SocketException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 		return false;
@@ -60,8 +72,12 @@ public class MySocket {
 				return cfg_array;
 			}
 		} catch (EOFException e) {
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (java.net.SocketException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -79,8 +95,12 @@ public class MySocket {
 				return cfg;
 			}
 		} catch (EOFException e) {
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (java.net.SocketException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 

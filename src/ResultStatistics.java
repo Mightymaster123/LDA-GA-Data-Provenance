@@ -5,6 +5,7 @@ public class ResultStatistics {
 	public double precision_percentage;
 	public double recall_percentage;
 	public long execution_milliseconds;
+	public boolean is_master;
 
 	public String to_string(String head)
 	{

@@ -195,16 +195,6 @@ public class MultiMachineSocket {
 				}
 			}
 			masterSockets = null;
-			if(is_slave())
-			{
-				try {
-					//Wait for master to restart
-					Thread.sleep(1000);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			}
 		}
 	}
 }
