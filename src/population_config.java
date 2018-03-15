@@ -3,6 +3,15 @@ public class population_config implements java.io.Serializable{
 	public int number_of_topics;
 	public int number_of_iterations;
 	public double fitness_value;
+	
+	public population_config() {
+	}
+	
+	public population_config(int _number_of_topics, int _number_of_iterations, double _fitness_value) {
+		number_of_topics = _number_of_topics;
+		number_of_iterations = _number_of_iterations;
+		fitness_value = _fitness_value;
+	}
 
 	public void copy(population_config rhs) {
 		number_of_topics = rhs.number_of_topics;
@@ -24,7 +33,7 @@ public class population_config implements java.io.Serializable{
 	
 	public void random_iteration()
 	{
-		number_of_iterations = (int) Math.floor(Math.random() * 1000 + 1);
+		number_of_iterations = (int) Math.floor(Math.random() * 2000 + 1);
 		fitness_value = 0;
 	}
 	

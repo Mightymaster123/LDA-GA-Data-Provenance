@@ -36,7 +36,20 @@ public class MySocket {
 		}
 		return false;
 	}
-
+	
+	public boolean send(population_config cfg) {
+		try {
+			ObjectOutputStream output = null;
+			output = new ObjectOutputStream(socket.getOutputStream());
+			output.writeObject(cfg);
+			System.out.println("send to machine " + target_machine_id + cfg.to_string());
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
 	public population_config[] receive() {
 		ObjectInputStream input = null;
 		try {
@@ -45,6 +58,25 @@ public class MySocket {
 				population_config[] cfg_array = (population_config[]) input.readObject();
 				System.out.println("receive from machine " + target_machine_id + to_string(cfg_array));
 				return cfg_array;
+			}
+		} catch (EOFException e) {
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return null;
+	}
+
+
+	public population_config receive_one() {
+		ObjectInputStream input = null;
+		try {
+			input = new ObjectInputStream(socket.getInputStream());
+			if (input != null) {
+				population_config cfg = (population_config) input.readObject();
+				System.out.println("receive from machine " + target_machine_id + cfg.to_string());
+				return cfg;
 			}
 		} catch (EOFException e) {
 		} catch (Exception e) {

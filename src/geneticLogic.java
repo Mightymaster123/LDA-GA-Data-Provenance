@@ -18,7 +18,7 @@ public class geneticLogic {
 	private static int machineId;
 	private static MySocket my_socket[] = null;
 
-	public static long genetic_logic(MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
+	public static long genetic_logic(ResultStatistics result, MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
 		Socket sockets[] = mms.connect();
 		long start_time = System.currentTimeMillis();
 		nMachines = mms.getNumSlaves() + 1;
@@ -30,7 +30,7 @@ public class geneticLogic {
 			for (int i = 0; i < nMachines - 1; i++) {
 				my_socket[i] = new MySocket(sockets[i], i);
 			}
-			genetic_logic_master(mms);
+			genetic_logic_master(result, mms);
 		} else {
 			// slave
 			my_socket = new MySocket[1];
@@ -43,7 +43,7 @@ public class geneticLogic {
 		return start_time;
 	}
 
-	public static void genetic_logic_master(MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
+	public static void genetic_logic_master(ResultStatistics result, MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
 		// the initial population of size 6(numMachines * 3)
 		// to make paralleling work easier, make it size = number of machines * number
 		// of cores on each machine
@@ -87,7 +87,7 @@ public class geneticLogic {
 			Thread threads[] = new Thread[THREADS_PER_MACHINE];
 			for (int i = 0; i < THREADS_PER_MACHINE; i++) {
 				int population_index = THREADS_PER_MACHINE * (machineId + 1) + i;
-				threads[i] = new Thread(new MyThread(i, initialPopulation[population_index], population_index, tm, numberOfDocuments));
+				threads[i] = new Thread(new MyThread(i, initialPopulation[population_index], population_index, tm, numberOfDocuments, false));
 				// System.out.println("Thread " + i + " begin start...");
 				threads[i].start();
 				// System.out.println("Thread " + i + " end start...");
@@ -144,8 +144,9 @@ public class geneticLogic {
 
 							// run the function again to get the words in each topic
 							// the third parameter states that the topics are to be written to a file
-							tm.LDA(initialPopulation[j].number_of_topics, initialPopulation[j].number_of_iterations, true);
+							tm.LDA(initialPopulation[j].number_of_topics, initialPopulation[j].number_of_iterations, true, false);
 							System.out.println("The best distribution is: " + initialPopulation[j].to_string());
+							result.cfg = initialPopulation[j];
 							maxFitnessFound = true;
 							break;
 						}
@@ -241,7 +242,7 @@ public class geneticLogic {
 			Thread threads[] = new Thread[THREADS_PER_MACHINE];
 			for (int i = 0; i < THREADS_PER_MACHINE; i++) {
 				int population_index = THREADS_PER_MACHINE * (machineId + 1) + i;
-				threads[i] = new Thread(new MyThread(i, slavePopulation[i], population_index, tm, numberOfDocuments));
+				threads[i] = new Thread(new MyThread(i, slavePopulation[i], population_index, tm, numberOfDocuments, false));
 				// System.out.println("Thread " + i + " begin start...");
 				threads[i].start();
 				// System.out.println("Thread " + i + " end start...");
