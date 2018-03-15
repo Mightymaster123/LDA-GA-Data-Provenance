@@ -99,4 +99,19 @@ public class MySocket {
 			socket = null;
 		}
 	}
+	
+	public boolean isClosed()
+	{
+		if (socket != null) {
+			try {
+				return socket.isClosed();
+			} catch (Exception e) {
+				e.printStackTrace(System.err);
+			}
+		}
+		return true;
+	}
+	
+	
+	
 }

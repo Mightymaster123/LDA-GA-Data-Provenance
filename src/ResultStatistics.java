@@ -37,7 +37,7 @@ public class ResultStatistics {
 		String precision = String.format("Precision:%.3f ", precision_percentage);
 		String recall = String.format("Recall:%.3f ", recall_percentage);
 		
-		String str = head +  "  " + time + "    " + precision + "    " + recall + "    " + cfg.to_string();
+		String str = head +  "  " + time + "    " + precision + "    " + recall + "    " + (cfg!=null?cfg.to_string():"");
 		return str;
 	}
 }

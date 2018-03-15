@@ -112,22 +112,24 @@ public class geneticLogicOriginal {
 						if (maxFitness > geneticLogic.FITNESS_THRESHHOLD){
 							// when maxFitness satisfies the requirement, stop running GA
 							// if this machine is slave, tell the master what the best combination is
-							if (machineId != -1) {
+							if (mms.is_slave()) {
 								 mySocket.send(initialPopulation[j]);								
 								 System.out.println("message sent!  " + initialPopulation[j].to_string());
-							}
-							// if this machine is master, stop all listener threads and then stop GA
-							// else{
-							// for(int i = 0; i < numMachines - 1; i++){
-							// listeners[i].end();
-							// break;
-							// }
+							}else
+							{
+								// if this machine is master, stop all listener threads and then stop GA
+								// else{
+								// for(int i = 0; i < numMachines - 1; i++){
+								// listeners[i].end();
+								// break;
+								// }
 
-							// run the function again to get the words in each topic
-							// the third parameter states that the topics are to be written to a file
-							tm.LDA(initialPopulation[j].number_of_topics, initialPopulation[j].number_of_iterations, true, true);
-							System.out.println("the best distribution is: " + initialPopulation[j].to_string());
-							result.cfg = initialPopulation[j];
+								// run the function again to get the words in each topic
+								// the third parameter states that the topics are to be written to a file
+								tm.LDA(initialPopulation[j].number_of_topics, initialPopulation[j].number_of_iterations, true, true);
+								System.out.println("the best distribution is: " + initialPopulation[j].to_string());
+								result.cfg = initialPopulation[j];
+							}
 							maxFitnessFound = true;
 							mms.close();
 							break;
@@ -183,6 +185,12 @@ public class geneticLogicOriginal {
 			 * be reached. In such cases add a variable to check how many times the GA loop
 			 * is repeated. Terminate the loop in predetermined number of iterations.
 			 */
+			if(mms.is_slave() && (mySocket==null || mySocket.isClosed()))
+			{
+				System.out.println("Master has notified my to kill the job.");
+				mms.close();
+				break;
+			}
 		}
 		return start_time;
 	}

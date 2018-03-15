@@ -142,11 +142,14 @@ public class geneticLogic {
 								my_socket[i_socket].close();
 							}
 
-							// run the function again to get the words in each topic
-							// the third parameter states that the topics are to be written to a file
-							tm.LDA(initialPopulation[j].number_of_topics, initialPopulation[j].number_of_iterations, true, false);
-							System.out.println("The best distribution is: " + initialPopulation[j].to_string());
-							result.cfg = initialPopulation[j];
+							if(mms.is_master())
+							{
+								// run the function again to get the words in each topic
+								// the third parameter states that the topics are to be written to a file
+								tm.LDA(initialPopulation[j].number_of_topics, initialPopulation[j].number_of_iterations, true, false);
+								System.out.println("The best distribution is: " + initialPopulation[j].to_string());
+								result.cfg = initialPopulation[j];
+							}
 							maxFitnessFound = true;
 							break;
 						}
