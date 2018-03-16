@@ -331,7 +331,7 @@ public class DataProvenance {
 	}
 
 	public ResultStatistics run(boolean original_version) {
-		ResultStatistics result = new ResultStatistics();
+		ResultStatistics result = null;
 
 		long startTime = System.currentTimeMillis();
 
@@ -389,6 +389,10 @@ public class DataProvenance {
 		}
 		if (!mIsRunning) {
 			return result;
+		}
+		if(result==null)
+		{
+			result = new ResultStatistics();
 		}
 
 		// Outputs the time it took to finish the genetic algorithm
