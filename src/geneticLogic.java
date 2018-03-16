@@ -43,10 +43,7 @@ public class geneticLogic {
 		for (int i = 0; i < mInitialPopulation.length; i++) {
 			mInitialPopulation[i].random();
 		}
-		while (!NetworkManager.getInstance().IsAllSlavesIdle()) {
-			System.out.println("Some slaves are not idle. Wait for them");
-			Thread.sleep(100);
-		}
+		NetworkManager.getInstance().WaitForAllSlaves();
 		NetworkManager.getInstance().sendProtocol_PrepareNew();
 
 		while (!maxFitnessFound && isRunning) {

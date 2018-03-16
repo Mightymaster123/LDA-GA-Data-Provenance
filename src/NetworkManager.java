@@ -297,6 +297,20 @@ public class NetworkManager {
 		return true;
 	}
 
+	public void WaitForAllSlaves() {
+		double seconds = 0.0f;
+		try {
+			while (!IsAllSlavesIdle()) {
+				System.out.println("Some slaves are not idle. Wait for them: " + seconds + " seconds");
+				Thread.sleep(100);
+				seconds += 0.1f;
+			}
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 	public void registerReceivedProtocolHandler(ReceivedProtocolHandler handler) {
 		if (!mReceivedProtocolHandler.contains(handler)) {
 			mReceivedProtocolHandler.add(handler);

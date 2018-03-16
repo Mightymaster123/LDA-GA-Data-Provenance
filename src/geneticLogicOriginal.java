@@ -9,6 +9,9 @@ public class geneticLogicOriginal{
 	public ResultStatistics run() throws IOException, InterruptedException, ClassNotFoundException {
 		ResultStatistics result = new ResultStatistics();
 		
+		NetworkManager.getInstance().WaitForAllSlaves();
+		NetworkManager.getInstance().sendProtocol_StartOriginal();
+		
 		// the initial population of size 6(numMachines * 3)
 		// to make paralleling work easier, make it size = number of machines * number
 		// of cores on each machine
