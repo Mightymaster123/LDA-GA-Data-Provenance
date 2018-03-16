@@ -39,6 +39,7 @@ public class Master implements NetworkManager.ReceivedProtocolHandler{
 			NetworkManager.getInstance().sendProtocol_StopAllSlaves();
 		}
 		mDataProvenance = null;
+		NetworkManager.getInstance().sendProtocol_ShutdownProcess();
 
 		//print out result
 		System.out.println("\n\n\n original_version:");

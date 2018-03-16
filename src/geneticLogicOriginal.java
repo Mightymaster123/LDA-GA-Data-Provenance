@@ -1,17 +1,18 @@
 import java.io.File;
 import java.io.IOException;
 
-public class geneticLogicOriginal{
+public class geneticLogicOriginal {
 	public boolean isRunning = true;
 	private PopulationConfig mPopulationConfigFromSlave = null; // means one of the slave machines has finished the job
 
-	
 	public ResultStatistics run() throws IOException, InterruptedException, ClassNotFoundException {
 		ResultStatistics result = new ResultStatistics();
-		
-		NetworkManager.getInstance().waitForAllSlaves();
-		NetworkManager.getInstance().sendProtocol_StartOriginal();
-		
+
+		if (NetworkManager.getInstance().isMaster()) {
+			NetworkManager.getInstance().waitForAllSlaves();
+			NetworkManager.getInstance().sendProtocol_StartOriginal();
+		}
+
 		// the initial population of size 6(numMachines * 3)
 		// to make paralleling work easier, make it size = number of machines * number
 		// of cores on each machine
@@ -80,7 +81,7 @@ public class geneticLogicOriginal{
 						if (mPopulationConfigFromSlave != null) {
 							// if this machine is master, stop all slaves
 							NetworkManager.getInstance().sendProtocol_StopAllSlaves();
-							
+
 							tm.LDA(mPopulationConfigFromSlave.number_of_topics, mPopulationConfigFromSlave.number_of_iterations, true, true);
 							System.out.println("the best distribution is " + mPopulationConfigFromSlave.to_string());
 							result.cfg = mPopulationConfigFromSlave;
@@ -110,8 +111,7 @@ public class geneticLogicOriginal{
 						maxFitnessChromosome = j;
 					}
 				}
-				if(maxFitnessFound)
-				{
+				if (maxFitnessFound) {
 					break;
 				}
 
@@ -167,10 +167,9 @@ public class geneticLogicOriginal{
 		}
 		return result;
 	}
-	
-	public void SlaveFinish(NetworkManager.ReceivedProtocol protocol)
-	{
-		System.out.println("Receive result from slave " + protocol.targetMachineID + "  "+protocol.to_string());
-		mPopulationConfigFromSlave = (PopulationConfig)protocol.obj;
+
+	public void SlaveFinish(NetworkManager.ReceivedProtocol protocol) {
+		System.out.println("Receive result from slave " + protocol.targetMachineID + "  " + protocol.to_string());
+		mPopulationConfigFromSlave = (PopulationConfig) protocol.obj;
 	}
 }
