@@ -352,6 +352,7 @@ public class NetworkManager {
 		synchronized (NetworkManager.getInstance().mListReceivedProtocol) {
 			if (NetworkManager.getInstance().mListReceivedProtocol != null && NetworkManager.getInstance().mListReceivedProtocol.size() > 0) {
 				list = new ArrayList<>(NetworkManager.getInstance().mListReceivedProtocol);
+				NetworkManager.getInstance().mListReceivedProtocol.clear();
 			}
 		}
 		if (list == null) {
