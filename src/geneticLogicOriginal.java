@@ -7,11 +7,13 @@ public class geneticLogicOriginal {
 
 	public ResultStatistics run() throws IOException, InterruptedException, ClassNotFoundException {
 		ResultStatistics result = new ResultStatistics();
-
+		
 		if (NetworkManager.getInstance().isMaster()) {
+			System.out.println("Start geneticLogicOriginal: Waiting for slaves ");
 			NetworkManager.getInstance().waitForAllSlaves();
 			NetworkManager.getInstance().sendProtocol_StartOriginal();
 		}
+		System.out.println("Start geneticLogicOriginal: begin to work ");
 
 		// the initial population of size 6(numMachines * 3)
 		// to make paralleling work easier, make it size = number of machines * number
@@ -41,18 +43,19 @@ public class geneticLogicOriginal {
 
 			// int coresNum = 4;
 			Thread threads[] = new Thread[geneticLogic.THREADS_PER_MACHINE];
-			for (int i = 0; i < geneticLogic.THREADS_PER_MACHINE; i++) {
+			for (int i = 0; i < threads.length; i++) {
 				int population_index = geneticLogic.THREADS_PER_MACHINE * (NetworkManager.getInstance().getMyMachineID() + 1) + i;
 				threads[i] = new Thread(new MyThread(i, initialPopulation[population_index], population_index, tm, numberOfDocuments, true));
-				// System.out.println("Thread " + i + " begin start...");
+				System.out.println("Original thread " + i + " begin start...");
 				threads[i].start();
-				// System.out.println("Thread " + i + " end start...");
+				System.out.println("Original thread " + i + " end start...");
 			}
 
 			for (int i = 0; i < geneticLogic.THREADS_PER_MACHINE; i++) {
 				threads[i].join();
-				// System.out.println("Thread " + i + " joined");
+				System.out.println("Original thread " + i + " joined");
 			}
+			NetworkManager.getInstance().dispatchProtocols();
 
 			long paraEndTime = System.currentTimeMillis();
 			System.out.println("parallel part takes " + (paraEndTime - startTime) + "ms");

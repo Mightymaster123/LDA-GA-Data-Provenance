@@ -30,6 +30,9 @@ public class geneticLogic {
 
 	public ResultStatistics run_master() throws IOException, InterruptedException, ClassNotFoundException {
 		ResultStatistics result = new ResultStatistics();
+		
+		System.out.println("Start geneticLogic: master begin to work ");
+		
 		// the initial population of size 6(numMachines * 3)
 		// to make paralleling work easier, make it size = number of machines * number
 		// of cores on each machine

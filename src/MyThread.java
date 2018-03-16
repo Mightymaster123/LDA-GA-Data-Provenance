@@ -31,7 +31,7 @@ public class MyThread implements Runnable {
 				System.out.println("Thread " + thread_index + ": Use one of the best chromosomes in last round. Don't have to call LDA algorithm again. " + population_cfg.to_string() + "  ************************************************");
 				return;
 			}
-			System.out.println("Thread " + thread_index + " start running " + population_cfg.to_string());
+			System.out.println((original_version?"Original":"New")+" thread " + thread_index + " start running " + population_cfg.to_string());
 
 			// invoke the LDA function
 			tm.LDA(population_cfg.number_of_topics, population_cfg.number_of_iterations, false, population_index, original_version);

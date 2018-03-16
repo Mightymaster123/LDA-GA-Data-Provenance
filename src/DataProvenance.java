@@ -376,6 +376,16 @@ public class DataProvenance {
 		// on the master and worker machine to find the best iteration and fitness from
 		// the set of documents
 		try {
+			if(mGeneticLogicOriginal!=null)
+			{
+				System.out.println("Error: An old GeneticLogicOriginal is running.");
+				mGeneticLogicOriginal.isRunning = false;
+			}
+			if(mGeneticLogic!=null)
+			{
+				System.out.println("Error: An old GeneticLogic is running.");
+				mGeneticLogic.isRunning = false;
+			}
 			if (original_version) {
 				mGeneticLogicOriginal = new geneticLogicOriginal();
 				result = mGeneticLogicOriginal.run();
