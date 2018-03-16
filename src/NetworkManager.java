@@ -511,29 +511,28 @@ public class NetworkManager {
 				ObjectInputStream input = new ObjectInputStream(mSocket.getInputStream());
 				while (input != null && running) {
 					int protocol = (int) input.readObject();
+					if (protocol == PROTOCOL_SHUTDOWN_PROCESS) {
+						running = false;
+					}
 					Object obj = input.readObject();
 					System.out.println("Receive from machine " + mTargetMachineID + "  protocol:" + protocol + " " + to_string(obj));
-					if (running) {
-						synchronized (NetworkManager.getInstance().mListReceivedProtocol) {
-							NetworkManager.getInstance().mListReceivedProtocol.add(new ReceivedProtocol(mTargetMachineID, protocol, obj));
-						}
+					synchronized (NetworkManager.getInstance().mListReceivedProtocol) {
+						NetworkManager.getInstance().mListReceivedProtocol.add(new ReceivedProtocol(mTargetMachineID, protocol, obj));
 					}
 				}
 
 			} catch (EOFException e) {
 				if (running) {
 					e.printStackTrace();
-				} else {
-					System.out.println("socket is closed. " + e);
 				}
 			} catch (java.net.SocketException e) {
 				if (running) {
 					e.printStackTrace();
-				} else {
-					System.out.println("socket might be closed. " + e);
 				}
 			} catch (Exception e) {
-				e.printStackTrace();
+				if (running) {
+					e.printStackTrace();
+				}
 			}
 		}
 	}
