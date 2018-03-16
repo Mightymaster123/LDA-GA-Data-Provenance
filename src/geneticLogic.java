@@ -43,17 +43,15 @@ public class geneticLogic {
 		for (int i = 0; i < mInitialPopulation.length; i++) {
 			mInitialPopulation[i].random();
 		}
-		NetworkManager.getInstance().WaitForAllSlaves();
+		NetworkManager.getInstance().waitForAllSlaves();
 		NetworkManager.getInstance().sendProtocol_PrepareNew();
 
 		while (!maxFitnessFound && isRunning) {
+			NetworkManager.getInstance().dispatchProtocols();
 			long startTime = System.currentTimeMillis();
 			boolean error = false;
 			// send populations to slaves
-			while (!NetworkManager.getInstance().IsAllSlavesIdle()) {
-				System.out.println("Some slaves are not idle. Wait for them.");
-				Thread.sleep(1);
-			}
+			NetworkManager.getInstance().waitForAllSlaves();
 			mFinishedSlaveCount = 0;
 			for (int iSlave = 0; iSlave < NetworkManager.getInstance().getSlaveCount(); ++iSlave) {
 				PopulationConfig[] subPopulation = new PopulationConfig[THREADS_PER_MACHINE];
@@ -89,9 +87,11 @@ public class geneticLogic {
 				threads[i].join();
 				// System.out.println("Thread " + i + " joined");
 			}
+			NetworkManager.getInstance().dispatchProtocols();
 
 			// receive populations from slaves
 			while (mFinishedSlaveCount < NetworkManager.getInstance().getSlaveCount() && isRunning) {
+				NetworkManager.getInstance().dispatchProtocols();
 				Thread.sleep(1);
 			}
 

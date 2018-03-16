@@ -275,7 +275,9 @@ public class NetworkManager {
 			}
 			mSockets = null;
 		}
+		synchronized (NetworkManager.getInstance().mListReceivedProtocol) {
 		mListReceivedProtocol.clear();
+		}
 		mReceivedProtocolHandler.clear();
 		mSlaveStatus = null;
 	}
@@ -297,13 +299,14 @@ public class NetworkManager {
 		return true;
 	}
 
-	public void WaitForAllSlaves() {
+	public void waitForAllSlaves() {
 		double seconds = 0.0f;
 		try {
 			while (!IsAllSlavesIdle()) {
 				System.out.println("Some slaves are not idle. Wait for them: " + seconds + " seconds");
 				Thread.sleep(100);
 				seconds += 0.1f;
+				dispatchProtocols();
 			}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -376,6 +379,10 @@ public class NetworkManager {
 					}
 				}
 			}
+		}
+		if (obj instanceof Integer) {
+			int num = (int)obj;
+			msg += " " + num;
 		}
 		return msg;
 	}

@@ -9,7 +9,7 @@ public class geneticLogicOriginal{
 	public ResultStatistics run() throws IOException, InterruptedException, ClassNotFoundException {
 		ResultStatistics result = new ResultStatistics();
 		
-		NetworkManager.getInstance().WaitForAllSlaves();
+		NetworkManager.getInstance().waitForAllSlaves();
 		NetworkManager.getInstance().sendProtocol_StartOriginal();
 		
 		// the initial population of size 6(numMachines * 3)
@@ -27,6 +27,7 @@ public class geneticLogicOriginal{
 		}
 
 		while (!maxFitnessFound && isRunning) {
+			NetworkManager.getInstance().dispatchProtocols();
 			/**
 			 * the total number of documents that are being processed. Put them in a folder
 			 * and add the folder path here.
