@@ -443,10 +443,10 @@ public class DataProvenance {
 	}
 
 	public void SlaveFinish(NetworkManager.ReceivedProtocol protocol) {
-		if (mGeneticLogicOriginal != null) {
+		if (mGeneticLogicOriginal != null && protocol!=null && protocol.protocol == NetworkManager.PROTOCOL_FINISH_ORIGINAL) {
 			mGeneticLogicOriginal.SlaveFinish(protocol);
 		}
-		if (mGeneticLogic != null) {
+		if (mGeneticLogic != null && protocol!=null && protocol.protocol == NetworkManager.PROTOCOL_FINISH_NEW) {
 			mGeneticLogic.SlaveFinish(protocol);
 		}
 	}

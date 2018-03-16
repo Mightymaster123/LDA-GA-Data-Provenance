@@ -195,8 +195,12 @@ public class geneticLogic {
 
 	public void SlaveFinish(NetworkManager.ReceivedProtocol protocol) {
 		System.out.println("Receive result from slave " + protocol.targetMachineID + "  " + protocol.to_string());
-		PopulationConfig[] cfgs = (PopulationConfig[]) protocol.obj;
+		PopulationConfig[] cfgs = null;
+		if (protocol.obj instanceof PopulationConfig[]) {
+			cfgs = (PopulationConfig[]) protocol.obj;
+		}
 		if (cfgs == null) {
+			System.out.println("Receive result from slave " + protocol.targetMachineID + ". Result is empty");
 			return;
 		}
 		if (cfgs.length != THREADS_PER_MACHINE) {
@@ -220,9 +224,8 @@ public class geneticLogic {
 		if (!isRunning) {
 			return;
 		}
-		if(subPopulation.length != THREADS_PER_MACHINE)
-		{
-			System.out.println("StartSubPopulation sub-population count:"+subPopulation.length+" does not match threads count:"+THREADS_PER_MACHINE);
+		if (subPopulation.length != THREADS_PER_MACHINE) {
+			System.out.println("StartSubPopulation sub-population count:" + subPopulation.length + " does not match threads count:" + THREADS_PER_MACHINE);
 			return;
 		}
 		NetworkManager.getInstance().sendProtocol_SlaveStatus(NetworkManager.SLAVE_STATUS_WORKING);

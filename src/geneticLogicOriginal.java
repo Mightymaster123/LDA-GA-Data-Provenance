@@ -170,6 +170,6 @@ public class geneticLogicOriginal {
 
 	public void SlaveFinish(NetworkManager.ReceivedProtocol protocol) {
 		System.out.println("Receive result from slave " + protocol.targetMachineID + "  " + protocol.to_string());
-		mPopulationConfigFromSlave = (PopulationConfig) protocol.obj;
+		mPopulationConfigFromSlave = (protocol.obj instanceof PopulationConfig) ? (PopulationConfig) protocol.obj : null;
 	}
 }

@@ -521,9 +521,17 @@ public class NetworkManager {
 				}
 
 			} catch (EOFException e) {
-				e.printStackTrace();
+				if (running) {
+					e.printStackTrace();
+				} else {
+					System.out.println("socket is closed. " + e);
+				}
 			} catch (java.net.SocketException e) {
-				e.printStackTrace();
+				if (running) {
+					e.printStackTrace();
+				} else {
+					System.out.println("socket might be closed. " + e);
+				}
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
