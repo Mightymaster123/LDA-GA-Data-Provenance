@@ -14,60 +14,56 @@ public class geneticLogic {
 	public static final int THREADS_PER_MACHINE = 3;
 	public static final double FITNESS_THRESHHOLD = 0.292;
 
-	private static int nMachines;
-	private static int machineId;
-	private static MySocket my_socket[] = null;
+	public boolean isRunning = true;
+	private PopulationConfig[] mInitialPopulation = null;
+	private int mFinishedSlaveCount = 0;
 
-	public static long genetic_logic(ResultStatistics result, MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
-		Socket sockets[] = mms.connect();
-		long start_time = System.currentTimeMillis();
-		nMachines = mms.getNumSlaves() + 1;
-		machineId = mms.getId();
-
-		if (machineId == -1) {
+	public ResultStatistics run() throws IOException, InterruptedException, ClassNotFoundException {
+		if (NetworkManager.getInstance().isMaster()) {
 			// master
-			my_socket = new MySocket[nMachines - 1];
-			for (int i = 0; i < nMachines - 1; i++) {
-				my_socket[i] = new MySocket(sockets[i], i);
-			}
-			genetic_logic_master(result, mms);
+			return run_master();
 		} else {
-			// slave
-			my_socket = new MySocket[1];
-			my_socket[0] = new MySocket(sockets[0], -1);
-			genetic_logic_slave(mms);
+			// Slaves only have to prepare in the first stage.
 		}
-		for (int i = 0; i < my_socket.length; ++i) {
-			my_socket[i].close();
-		}
-		return start_time;
+		return null;
 	}
 
-	public static void genetic_logic_master(ResultStatistics result, MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
+	public ResultStatistics run_master() throws IOException, InterruptedException, ClassNotFoundException {
+		ResultStatistics result = new ResultStatistics();
 		// the initial population of size 6(numMachines * 3)
 		// to make paralleling work easier, make it size = number of machines * number
 		// of cores on each machine
 
-		final int POPULATION_COUNT = nMachines * THREADS_PER_MACHINE;
-		population_config[] initialPopulation = init_population_array(POPULATION_COUNT);
+		final int POPULATION_COUNT = NetworkManager.getInstance().getMachineCount() * THREADS_PER_MACHINE;
+		mInitialPopulation = PopulationConfig.initArray(POPULATION_COUNT);
 
 		boolean maxFitnessFound = false;
 
 		// populating the initial population
-		for (int i = 0; i < initialPopulation.length; i++) {
-			initialPopulation[i].random();
+		for (int i = 0; i < mInitialPopulation.length; i++) {
+			mInitialPopulation[i].random();
 		}
+		while (!NetworkManager.getInstance().IsAllSlavesIdle()) {
+			System.out.println("Some slaves are not idle. Wait for them");
+			Thread.sleep(100);
+		}
+		NetworkManager.getInstance().sendProtocol_PrepareNew();
 
-		while (!maxFitnessFound) {
+		while (!maxFitnessFound && isRunning) {
 			long startTime = System.currentTimeMillis();
 			boolean error = false;
-			// send chromesomes to slaves
-			for (int i_socket = 0; i_socket < my_socket.length; ++i_socket) {
-				population_config[] slavePopulation = new population_config[THREADS_PER_MACHINE];
+			// send populations to slaves
+			while (!NetworkManager.getInstance().IsAllSlavesIdle()) {
+				System.out.println("Some slaves are not idle. Wait for them.");
+				Thread.sleep(1);
+			}
+			mFinishedSlaveCount = 0;
+			for (int iSlave = 0; iSlave < NetworkManager.getInstance().getSlaveCount(); ++iSlave) {
+				PopulationConfig[] subPopulation = new PopulationConfig[THREADS_PER_MACHINE];
 				for (int j = 0; j < THREADS_PER_MACHINE; ++j) {
-					slavePopulation[j] = initialPopulation[THREADS_PER_MACHINE * (my_socket[i_socket].target_machine_id + 1) + j];
+					subPopulation[j] = mInitialPopulation[THREADS_PER_MACHINE * (iSlave + 1) + j];
 				}
-				if (!my_socket[i_socket].send(slavePopulation)) {
+				if (!NetworkManager.getInstance().sendProtocol_ProcessSubPopulationNew(iSlave, subPopulation)) {
 					error = true;
 					break;
 				}
@@ -83,11 +79,10 @@ public class geneticLogic {
 			// create an instance of the topic modelling class
 			TopicModelling tm = new TopicModelling();
 
-			// int coresNum = 4;
 			Thread threads[] = new Thread[THREADS_PER_MACHINE];
 			for (int i = 0; i < THREADS_PER_MACHINE; i++) {
-				int population_index = THREADS_PER_MACHINE * (machineId + 1) + i;
-				threads[i] = new Thread(new MyThread(i, initialPopulation[population_index], population_index, tm, numberOfDocuments, false));
+				int population_index = THREADS_PER_MACHINE * (NetworkManager.getInstance().getMyMachineID() + 1) + i;
+				threads[i] = new Thread(new MyThread(i, mInitialPopulation[population_index], population_index, tm, numberOfDocuments, false));
 				// System.out.println("Thread " + i + " begin start...");
 				threads[i].start();
 				// System.out.println("Thread " + i + " end start...");
@@ -98,18 +93,12 @@ public class geneticLogic {
 				// System.out.println("Thread " + i + " joined");
 			}
 
-			// receive chromesomes from slaves
-			for (int i_socket = 0; i_socket < my_socket.length; ++i_socket) {
-				population_config[] slavePopulation = my_socket[i_socket].receive();
-				if (slavePopulation == null || slavePopulation.length != THREADS_PER_MACHINE) {
-					error = true;
-					break;
-				}
-				for (int j = 0; j < THREADS_PER_MACHINE; ++j) {
-					initialPopulation[THREADS_PER_MACHINE * (my_socket[i_socket].target_machine_id + 1) + j] = slavePopulation[j];
-				}
+			// receive populations from slaves
+			while (mFinishedSlaveCount < NetworkManager.getInstance().getSlaveCount() && isRunning) {
+				Thread.sleep(1);
 			}
-			if (error) {
+
+			if (!isRunning) {
 				break;
 			}
 
@@ -120,15 +109,15 @@ public class geneticLogic {
 			// no sorting code found?(by Xiaolin)
 			// We need only the top 1/3rd of the chromosomes with high fitness values -
 			// Silhouette coefficient
-			population_config[] newPopulation = init_population_array(POPULATION_COUNT);
-			// copy only the top 1/3rd of the chromosomes to the new population
-			final int BEST_POPULATION_SIZE = initialPopulation.length / 3;
+			PopulationConfig[] newPopulation = PopulationConfig.initArray(POPULATION_COUNT);
+			// copy only the top 1/3rd of the population to the new population
+			final int BEST_POPULATION_SIZE = mInitialPopulation.length / 3;
 			for (int i = 0; i < BEST_POPULATION_SIZE; i++) {
 				double maxFitness = Integer.MIN_VALUE;
 				int maxFitnessChromosome = -1;
-				for (int j = 0; j < initialPopulation.length; j++) {
-					if (initialPopulation[j].fitness_value > maxFitness) {
-						maxFitness = initialPopulation[j].fitness_value;
+				for (int j = 0; j < mInitialPopulation.length; j++) {
+					if (mInitialPopulation[j].fitness_value > maxFitness) {
+						maxFitness = mInitialPopulation[j].fitness_value;
 
 						// stop reproducing or creating new generations if the expected fitness is
 						// reached by one of the machines
@@ -138,18 +127,11 @@ public class geneticLogic {
 						 */
 						// set fitness threshold here!!!
 						if (maxFitness > FITNESS_THRESHHOLD) {
-							for (int i_socket = 0; i_socket < my_socket.length; ++i_socket) {
-								my_socket[i_socket].close();
-							}
-
-							if(mms.is_master())
-							{
-								// run the function again to get the words in each topic
-								// the third parameter states that the topics are to be written to a file
-								tm.LDA(initialPopulation[j].number_of_topics, initialPopulation[j].number_of_iterations, true, false);
-								System.out.println("The best distribution is: " + initialPopulation[j].to_string());
-								result.cfg = initialPopulation[j];
-							}
+							// run the function again to get the words in each topic
+							// the third parameter states that the topics are to be written to a file
+							tm.LDA(mInitialPopulation[j].number_of_topics, mInitialPopulation[j].number_of_iterations, true, false);
+							System.out.println("The best distribution is: " + mInitialPopulation[j].to_string());
+							result.cfg = mInitialPopulation[j];
 							maxFitnessFound = true;
 							break;
 						}
@@ -162,8 +144,8 @@ public class geneticLogic {
 				}
 
 				// copy the chromosome with high fitness to the next generation
-				newPopulation[i].copy(initialPopulation[maxFitnessChromosome]);
-				initialPopulation[maxFitnessChromosome].fitness_value = Integer.MIN_VALUE;
+				newPopulation[i].copy(mInitialPopulation[maxFitnessChromosome]);
+				mInitialPopulation[maxFitnessChromosome].fitness_value = Integer.MIN_VALUE;
 			}
 
 			if (maxFitnessFound) {
@@ -179,15 +161,13 @@ public class geneticLogic {
 			// }
 
 			// perform crossover - to fill the rest of the 2/3rd of the initial Population
-			if(BEST_POPULATION_SIZE <= 0)
-			{
-				for (int i = 0; i < initialPopulation.length; ++i) {
+			if (BEST_POPULATION_SIZE <= 0) {
+				for (int i = 0; i < newPopulation.length; ++i) {
 					newPopulation[i].random();
 				}
-			}else
-			{
+			} else {
 				final double MUTATION_RATIO = 0.5;
-				for (int i = BEST_POPULATION_SIZE; i < initialPopulation.length; ++i) {
+				for (int i = BEST_POPULATION_SIZE; i < newPopulation.length; ++i) {
 					int iParent = i % BEST_POPULATION_SIZE;
 					newPopulation[i].copy(newPopulation[iParent]);
 					newPopulation[i].fitness_value = 0;
@@ -201,7 +181,7 @@ public class geneticLogic {
 			}
 
 			// substitute the initial population with the new population and continue
-			initialPopulation = newPopulation;
+			mInitialPopulation = newPopulation;
 
 			long endTime = System.currentTimeMillis();
 			System.out.println("other part takes " + (endTime - paraEndTime) + "ms");
@@ -213,66 +193,76 @@ public class geneticLogic {
 			 * is repeated. Terminate the loop in predetermined number of iterations.
 			 */
 		}
-
+		return result;
 	}
 
-	public static void genetic_logic_slave(MultiMachineSocket mms) throws IOException, InterruptedException, ClassNotFoundException {
+	public void SlaveFinish(NetworkManager.ReceivedProtocol protocol) {
+		System.out.println("Receive result from slave " + protocol.targetMachineID + "  " + protocol.to_string());
+		PopulationConfig[] cfgs = (PopulationConfig[]) protocol.obj;
+		if (cfgs == null) {
+			return;
+		}
+		if (cfgs.length != THREADS_PER_MACHINE) {
+			System.out.println("Receive result from slave " + protocol.targetMachineID + ". Result count does not match: " + cfgs.length + " != " + THREADS_PER_MACHINE);
+			return;
+		}
 
-		// the initial population of size 6(numMachines * 3)
-		// to make paralleling work easier, make it size = number of machines * number
-		// of cores on each machine
+		for (int j = 0; j < cfgs.length; ++j) {
+			mInitialPopulation[THREADS_PER_MACHINE * (protocol.targetMachineID + 1) + j] = cfgs[j];
+		}
 
-		final int POPULATION_COUNT = nMachines * THREADS_PER_MACHINE;
-		while (true) {
-			population_config[] slavePopulation = my_socket[0].receive();
-			if (slavePopulation == null || slavePopulation.length != THREADS_PER_MACHINE) {
-				if (slavePopulation != null) {
-					System.out.println("Slave " + machineId + " failed to receive population: " + slavePopulation.length);
-				}
-				break;
-			}
-			/**
-			 * the total number of documents that are being processed. Put them in a folder
-			 * and add the folder path here.
-			 */
-			int numberOfDocuments = new File("txtData").listFiles().length;
-			// create an instance of the topic modelling class
-			TopicModelling tm = new TopicModelling();
+		++mFinishedSlaveCount;
+	}
 
-			long startTime = System.currentTimeMillis();
+	public void StartSubPopulation(NetworkManager.ReceivedProtocol protocol) {
+		System.out.println("Receive sub population from master " + protocol.targetMachineID + "  " + protocol.to_string());
+		PopulationConfig[] subPopulation = (PopulationConfig[]) protocol.obj;
+		if (subPopulation == null) {
+			return;
+		}
+		if (!isRunning) {
+			return;
+		}
+		if(subPopulation.length != THREADS_PER_MACHINE)
+		{
+			System.out.println("StartSubPopulation sub-population count:"+subPopulation.length+" does not match threads count:"+THREADS_PER_MACHINE);
+			return;
+		}
+		NetworkManager.getInstance().sendProtocol_SlaveStatus(NetworkManager.SLAVE_STATUS_WORKING);
+		/**
+		 * the total number of documents that are being processed. Put them in a folder
+		 * and add the folder path here.
+		 */
+		int numberOfDocuments = new File("txtData").listFiles().length;
+		// create an instance of the topic modelling class
+		TopicModelling tm = new TopicModelling();
 
-			// int coresNum = 4;
-			Thread threads[] = new Thread[THREADS_PER_MACHINE];
-			for (int i = 0; i < THREADS_PER_MACHINE; i++) {
-				int population_index = THREADS_PER_MACHINE * (machineId + 1) + i;
-				threads[i] = new Thread(new MyThread(i, slavePopulation[i], population_index, tm, numberOfDocuments, false));
-				// System.out.println("Thread " + i + " begin start...");
-				threads[i].start();
-				// System.out.println("Thread " + i + " end start...");
-			}
+		long startTime = System.currentTimeMillis();
 
-			for (int i = 0; i < THREADS_PER_MACHINE; i++) {
+		Thread threads[] = new Thread[subPopulation.length];
+		for (int i = 0; i < subPopulation.length; i++) {
+			int population_index = THREADS_PER_MACHINE * (NetworkManager.getInstance().getMyMachineID() + 1) + i;
+			threads[i] = new Thread(new MyThread(i, subPopulation[i], population_index, tm, numberOfDocuments, false));
+			// System.out.println("Thread " + i + " begin start...");
+			threads[i].start();
+			// System.out.println("Thread " + i + " end start...");
+		}
+
+		for (int i = 0; i < threads.length; i++) {
+			try {
 				threads[i].join();
-				// System.out.println("Thread " + i + " joined");
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-			long paraEndTime = System.currentTimeMillis();
-			System.out.println("parallel part takes " + (paraEndTime - startTime) + "ms");
-			if (!my_socket[0].send(slavePopulation)) {
-				if (slavePopulation != null) {
-					System.out.println("Slave " + machineId + " failed to send population: " + slavePopulation.length);
-				}
-				break;
-			}
+			// System.out.println("Thread " + i + " joined");
 		}
-
-	}
-
-	public static population_config[] init_population_array(int count) {
-		population_config[] array = new population_config[count];
-		for (int i = 0; i < count; ++i) {
-			array[i] = new population_config();
+		long paraEndTime = System.currentTimeMillis();
+		System.out.println("parallel part takes " + (paraEndTime - startTime) + "ms");
+		if (!NetworkManager.getInstance().sendProtocol_FinishNew(subPopulation)) {
+			System.out.println("Slave " + NetworkManager.getInstance().getMyMachineID() + " failed to send population: " + NetworkManager.to_string(subPopulation));
 		}
-		return array;
+		NetworkManager.getInstance().sendProtocol_SlaveStatus(NetworkManager.SLAVE_STATUS_IDLE);
 	}
 
 }

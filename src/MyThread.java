@@ -8,13 +8,13 @@ import com.google.common.collect.Multimap;
 
 public class MyThread implements Runnable {
 	private int thread_index;
-	private population_config population_cfg;
+	private PopulationConfig population_cfg;
 	private int population_index;
 	private TopicModelling tm;
 	private int numberOfDocuments;
 	private boolean original_version;
 
-	public MyThread(int _thread_index, population_config _population_cfg, int _population_index, TopicModelling tm, int numberOfDocuments, boolean _original_version) {
+	public MyThread(int _thread_index, PopulationConfig _population_cfg, int _population_index, TopicModelling tm, int numberOfDocuments, boolean _original_version) {
 		thread_index = _thread_index;// thread index on one machine
 		population_cfg = _population_cfg;
 		population_index = _population_index;
