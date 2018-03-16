@@ -18,15 +18,15 @@ import java.util.HashMap;
 public class NetworkManager {
 
 	// Network protocol types.
-	public final static int PROTOCOL_START_ORIGINAL = 1; 	// Master tells the slaves to start working (original version)
-	public final static int PROTOCOL_STOP_ORIGINAL = 2; 	// Master tells the slaves to stop working (original version)
-	public final static int PROTOCOL_FINISH_ORIGINAL = 3; 	// A slave tells the master that he has finished his job (original version)
-	public final static int PROTOCOL_PREPARE_NEW = 11; 		// Master tells the slaves to prepare for work (new version)
+	public final static int PROTOCOL_START_ORIGINAL = 1; // Master tells the slaves to start working (original version)
+	public final static int PROTOCOL_STOP_ORIGINAL = 2; // Master tells the slaves to stop working (original version)
+	public final static int PROTOCOL_FINISH_ORIGINAL = 3; // A slave tells the master that he has finished his job (original version)
+	public final static int PROTOCOL_PREPARE_NEW = 11; // Master tells the slaves to prepare for work (new version)
 	public final static int PROTOCOL_PROCESS_SUB_POPULATION_NEW = 12; // Master tells the slaves to work on a sub population
-	public final static int PROTOCOL_STOP_NEW = 13; 		// Master tells the slaves to stop working (new version)
-	public final static int PROTOCOL_FINISH_NEW = 14; 		// A slave tells the master that he has finished his job (new version)
+	public final static int PROTOCOL_STOP_NEW = 13; // Master tells the slaves to stop working (new version)
+	public final static int PROTOCOL_FINISH_NEW = 14; // A slave tells the master that he has finished his job (new version)
 	public final static int PROTOCOL_SHUTDOWN_PROCESS = 100;// Master tells the slaves to shutdown their processes.
-	public final static int PROTOCOL_SLAVE_STATUS = 101;	// Whether a slave is ready to work
+	public final static int PROTOCOL_SLAVE_STATUS = 101; // Whether a slave is ready to work
 
 	public final static int SLAVE_STATUS_NONE = 0;
 	public final static int SLAVE_STATUS_IDLE = 1;
@@ -85,9 +85,8 @@ public class NetworkManager {
 	public boolean isSlave() {
 		return !isMaster();
 	}
-	
-	public int getSlaveCount()
-	{
+
+	public int getSlaveCount() {
 		return mNumSlaves;
 	}
 
@@ -347,16 +346,20 @@ public class NetworkManager {
 
 	static String to_string(Object obj) {
 		String msg = "";
-		PopulationConfig cfg = (PopulationConfig) obj;
-		if (cfg != null) {
-			msg += " " + cfg.to_string();
+		if (obj instanceof PopulationConfig) {
+			PopulationConfig cfg = (PopulationConfig) obj;
+			if (cfg != null) {
+				msg += " " + cfg.to_string();
+			}
 		}
-		PopulationConfig[] cfgs = (PopulationConfig[]) obj;
-		if (cfgs != null) {
-			msg += " ";
-			for (int j = 0; j < cfgs.length; ++j) {
-				if (cfgs[j] != null) {
-					msg += "  " + cfgs[j].to_string();
+		if (obj instanceof PopulationConfig[]) {
+			PopulationConfig[] cfgs = (PopulationConfig[]) obj;
+			if (cfgs != null) {
+				msg += " ";
+				for (int j = 0; j < cfgs.length; ++j) {
+					if (cfgs[j] != null) {
+						msg += "  " + cfgs[j].to_string();
+					}
 				}
 			}
 		}
@@ -404,13 +407,12 @@ public class NetworkManager {
 	public boolean sendProtocol_FinishOriginal(PopulationConfig cfg) {
 		return send(PROTOCOL_FINISH_ORIGINAL, cfg);
 	}
-	
+
 	public boolean sendProtocol_PrepareNew() {
 
 		return send(PROTOCOL_PREPARE_NEW, null);
 	}
 
-		
 	public boolean sendProtocol_ProcessSubPopulationNew(int targetMachineID, PopulationConfig[] cfgs) {
 		if (mSockets == null) {
 			return false;
@@ -420,12 +422,11 @@ public class NetworkManager {
 			Socket socket = mSockets[iSocket];
 			if (socket != null) {
 				try {
+					int protocol = PROTOCOL_PROCESS_SUB_POPULATION_NEW;
 					ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
-					output.writeObject(PROTOCOL_PROCESS_SUB_POPULATION_NEW);
-					if (cfgs != null) {
-						output.writeObject(cfgs);
-					}
-					System.out.println("Send to machine " + iSocket + "  protocol:" + PROTOCOL_PROCESS_SUB_POPULATION_NEW + " " + to_string(cfgs));
+					output.writeObject(protocol);
+					output.writeObject(cfgs);
+					System.out.println("Send to machine " + iSocket + "  protocol:" + protocol + " " + to_string(cfgs));
 					return true;
 				} catch (EOFException e) {
 					e.printStackTrace();
