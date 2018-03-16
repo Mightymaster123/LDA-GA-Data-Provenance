@@ -25,6 +25,7 @@ public class Slave implements NetworkManager.ReceivedProtocolHandler {
 		NetworkManager.getInstance().sendProtocol_SlaveStatus(NetworkManager.SLAVE_STATUS_IDLE);
 		while(true)
 		{
+			NetworkManager.getInstance().dispatchProtocols();
 			if(mListReceivedProtocol.size()<=0)
 			{
 				Thread.sleep(1);
