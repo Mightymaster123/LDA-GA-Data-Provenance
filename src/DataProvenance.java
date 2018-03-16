@@ -331,7 +331,7 @@ public class DataProvenance {
 	}
 
 	public ResultStatistics run(boolean original_version) {
-		ResultStatistics result = null;
+		ResultStatistics result = new ResultStatistics();
 
 		long startTime = System.currentTimeMillis();
 
