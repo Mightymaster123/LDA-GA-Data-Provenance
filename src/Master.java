@@ -46,7 +46,7 @@ public class Master implements NetworkManager.ReceivedProtocolHandler{
 		for (int i = 0; i < listResultOriginal.size(); ++i) {
 			ResultStatistics result = listResultOriginal.get(i);
 			if (result != null && NetworkManager.getInstance().isMaster()) {
-				System.out.println(result.to_string("    " + (i + 1) + "."));
+				System.out.println(result.to_string(String.format("    %3d.", (i + 1))));
 			}
 		}
 		System.out.println("\n\n\n new_version:");
