@@ -53,9 +53,6 @@ public class NetworkManager {
 		}
 	}
 	
-	public class emptyObject implements java.io.Serializable{
-	}
-
 	public interface ReceivedProtocolHandler {
 		void processProtocol(ReceivedProtocol protocol);
 	}
@@ -402,7 +399,7 @@ public class NetworkManager {
 			try {
 				ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
 				output.writeObject(protocol);
-				output.writeObject(obj != null ? obj : new emptyObject());
+				output.writeObject(obj != null ? obj : 0);// 0 is a placeholder
 				System.out.println("Send to machine " + (isMaster() ? iSocket : -1) + "  protocol:" + protocol + " " + to_string(obj));
 				return true;
 			} catch (EOFException e) {
