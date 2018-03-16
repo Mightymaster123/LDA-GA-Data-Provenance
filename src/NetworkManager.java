@@ -71,6 +71,7 @@ public class NetworkManager {
 	private ServerSocket mMasterServerSockets[] = null;
 	private ListenerThread[] mListenerThread = null;
 	private Socket[] mSockets = null;
+	private ObjectOutputStream[] mObjectOutputStream = null;
 
 	private ArrayList<ReceivedProtocol> mListReceivedProtocol = new ArrayList<ReceivedProtocol>();
 	private ArrayList<ReceivedProtocolHandler> mReceivedProtocolHandler = new ArrayList<ReceivedProtocolHandler>();
@@ -223,8 +224,15 @@ public class NetworkManager {
 				System.out.println("I am neither a master nor a slave");
 			}
 		}
-		// Create threads to listen to another machine
+
 		if (mSockets != null && mSockets.length != 0) {
+			// Create ObjectOutputStream for sockets
+			mObjectOutputStream = new ObjectOutputStream[mSockets.length];
+			for (int i = 0; i < mSockets.length; i++) {
+				mObjectOutputStream[i] = new ObjectOutputStream(mSockets[i].getOutputStream());
+			}
+
+			// Create threads to listen to another machine
 			mListenerThread = new ListenerThread[mSockets.length];
 			for (int i = 0; i < mSockets.length; i++) {
 				mListenerThread[i] = new ListenerThread(mSockets[i], i);
@@ -241,6 +249,21 @@ public class NetworkManager {
 	}
 
 	public void close() {
+		if (mObjectOutputStream != null) {
+			for (int i = 0; i < mObjectOutputStream.length; ++i) {
+				ObjectOutputStream stream = mObjectOutputStream[i];
+				if (stream != null) {
+					try {
+						stream.flush();
+						stream.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+			mObjectOutputStream = null;
+		}
 		if (mListenerThread != null) {
 			for (int i = 0; i < mListenerThread.length; ++i) {
 				if (mListenerThread[i] != null) {
@@ -390,16 +413,15 @@ public class NetworkManager {
 		if (mSockets == null) {
 			return false;
 		}
-		for (int iSocket = 0; iSocket < mSockets.length; ++iSocket) {
-			Socket socket = mSockets[iSocket];
-			if (socket == null) {
+		for (int i = 0; i < mObjectOutputStream.length; ++i) {
+			ObjectOutputStream output = mObjectOutputStream[i];
+			if (output == null) {
 				continue;
 			}
 			try {
-				ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
 				output.writeObject(protocol);
 				output.writeObject(obj != null ? obj : 0);// 0 is a placeholder
-				System.out.println("Send to machine " + (isMaster() ? iSocket : -1) + "  protocol:" + protocol + " " + to_string(obj));
+				System.out.println("Send to machine " + (isMaster() ? i : -1) + "  protocol:" + protocol + " " + to_string(obj));
 				return true;
 			} catch (EOFException e) {
 				e.printStackTrace();
@@ -436,23 +458,23 @@ public class NetworkManager {
 			return false;
 		}
 		int iSocket = targetMachineID;
-		if (iSocket >= 0 && iSocket < mSockets.length) {
-			Socket socket = mSockets[iSocket];
-			if (socket != null) {
-				try {
-					int protocol = PROTOCOL_PROCESS_SUB_POPULATION_NEW;
-					ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
-					output.writeObject(protocol);
-					output.writeObject(cfgs);
-					System.out.println("Send to machine " + iSocket + "  protocol:" + protocol + " " + to_string(cfgs));
-					return true;
-				} catch (EOFException e) {
-					e.printStackTrace();
-				} catch (java.net.SocketException e) {
-					e.printStackTrace();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+		if (iSocket >= 0 && iSocket < mObjectOutputStream.length) {
+			ObjectOutputStream output = mObjectOutputStream[iSocket];
+			if (output == null) {
+				return false;
+			}
+			try {
+				int protocol = PROTOCOL_PROCESS_SUB_POPULATION_NEW;
+				output.writeObject(protocol);
+				output.writeObject(cfgs);
+				System.out.println("Send to machine " + iSocket + "  protocol:" + protocol + " " + to_string(cfgs));
+				return true;
+			} catch (EOFException e) {
+				e.printStackTrace();
+			} catch (java.net.SocketException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
 		return false;
@@ -487,33 +509,21 @@ public class NetworkManager {
 			try {
 				ObjectInputStream input = new ObjectInputStream(mSocket.getInputStream());
 				while (input != null && running) {
-					try {
-						Object p = input.readObject();
-						if (p instanceof Integer) {
-							int protocol = (int) p;
-							Object obj = input.readObject();
-							System.out.println("Receive from machine " + mTargetMachineID + "  protocol:" + protocol + " " + to_string(obj));
-							if (running) {
-								synchronized (NetworkManager.getInstance().mListReceivedProtocol) {
-									NetworkManager.getInstance().mListReceivedProtocol.add(new ReceivedProtocol(mTargetMachineID, protocol, obj));
-								}
-							}
-						} else {
-							System.out.println("Protocol's first paramater is not integer");
+					int protocol = (int) input.readObject();
+					Object obj = input.readObject();
+					System.out.println("Receive from machine " + mTargetMachineID + "  protocol:" + protocol + " " + to_string(obj));
+					if (running) {
+						synchronized (NetworkManager.getInstance().mListReceivedProtocol) {
+							NetworkManager.getInstance().mListReceivedProtocol.add(new ReceivedProtocol(mTargetMachineID, protocol, obj));
 						}
-					} catch (EOFException e) {
-						e.printStackTrace();
-						break;
-					} catch (java.net.SocketException e) {
-						e.printStackTrace();
-						break;
-					} catch (Exception e) {
-						e.printStackTrace();
-						break;
 					}
 				}
+
+			} catch (EOFException e) {
+				e.printStackTrace();
+			} catch (java.net.SocketException e) {
+				e.printStackTrace();
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
