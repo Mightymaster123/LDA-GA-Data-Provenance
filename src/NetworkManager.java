@@ -513,6 +513,7 @@ public class NetworkManager {
 					int protocol = (int) input.readObject();
 					if (protocol == PROTOCOL_SHUTDOWN_PROCESS) {
 						running = false;
+						System.out.println("Master tells me to shutdown my process.");
 					}
 					Object obj = input.readObject();
 					System.out.println("Receive from machine " + mTargetMachineID + "  protocol:" + protocol + " " + to_string(obj));
