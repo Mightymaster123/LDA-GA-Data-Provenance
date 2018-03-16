@@ -29,6 +29,7 @@ public class geneticLogic {
 	}
 
 	public ResultStatistics run_master() throws IOException, InterruptedException, ClassNotFoundException {
+		
 		ResultStatistics result = new ResultStatistics();
 		
 		System.out.println("Start geneticLogic: master begin to work ");
@@ -182,6 +183,7 @@ public class geneticLogic {
 
 			// substitute the initial population with the new population and continue
 			mInitialPopulation = newPopulation;
+			SortInitialPopulation();
 
 			long endTime = System.currentTimeMillis();
 			System.out.println("other part takes " + (endTime - paraEndTime) + "ms");
@@ -194,6 +196,50 @@ public class geneticLogic {
 			 */
 		}
 		return result;
+	}
+	
+
+	
+	void SortInitialPopulation()
+	{
+		if(mInitialPopulation==null || mInitialPopulation.length<=0)
+		{
+			return;
+		}
+		PopulationConfig[] sortedPopulation = new PopulationConfig[mInitialPopulation.length];
+		for(int i=0; i<sortedPopulation.length; ++i)
+		{
+			sortedPopulation[i] = null;
+		}
+		final int machineCount = NetworkManager.getInstance().getMachineCount();
+		int iBest = 0;
+		for(int i=0; i<mInitialPopulation.length; ++i)
+		{
+			if(mInitialPopulation[i]!=null && mInitialPopulation[i].fitness_value>0.0f)
+			{
+				int iMachine = iBest % machineCount;
+				int iThread  = iBest / machineCount;
+				sortedPopulation[iMachine*THREADS_PER_MACHINE+iThread] = mInitialPopulation[i];
+				++iBest;
+			}
+		}
+		
+		int iSort = 0;
+		for(int iInitial=0; iInitial<mInitialPopulation.length; ++iInitial)
+		{
+			if(mInitialPopulation[iInitial]!=null && mInitialPopulation[iInitial].fitness_value<=0.0f)
+			{
+				for(; iSort<mInitialPopulation.length; ++iSort)
+				{
+					if(sortedPopulation[iSort]==null)
+					{
+						sortedPopulation[iSort] = mInitialPopulation[iInitial];
+						break;
+					}
+				}
+			}
+		}	
+		mInitialPopulation = sortedPopulation;
 	}
 
 	public void SlaveFinish(NetworkManager.ReceivedProtocol protocol) {
