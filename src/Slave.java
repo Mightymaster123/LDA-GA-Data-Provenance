@@ -8,7 +8,7 @@ public class Slave implements NetworkManager.ReceivedProtocolHandler {
 	
 	public void processProtocol(NetworkManager.ReceivedProtocol protocol)
 	{
-		if (protocol.protocol ==  NetworkManager.PROTOCOL_STOP_ORIGINAL || protocol.protocol ==  NetworkManager.PROTOCOL_STOP_NEW)
+		if (protocol.protocol ==  NetworkManager.PROTOCOL_STOP)
 		{
 			if(mDataProvenance!=null)
 			{

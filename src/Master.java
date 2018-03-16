@@ -26,13 +26,17 @@ public class Master implements NetworkManager.ReceivedProtocolHandler{
 		
 		ArrayList<ResultStatistics> listResultOriginal = new ArrayList<ResultStatistics>(CHECK_COUNT);
 		for (int i = 0; i < CHECK_COUNT; ++i) {
+			NetworkManager.getInstance().waitForAllSlaves();
 			mDataProvenance = new DataProvenance();
 			listResultOriginal.add(mDataProvenance.run(true));
+			NetworkManager.getInstance().sendProtocol_StopAllSlaves();
 		}
 		ArrayList<ResultStatistics> listResultNew = new ArrayList<ResultStatistics>(CHECK_COUNT);
 		for (int i = 0; i < CHECK_COUNT; ++i) {
+			NetworkManager.getInstance().waitForAllSlaves();
 			mDataProvenance = new DataProvenance();
 			listResultNew.add(mDataProvenance.run(false));
+			NetworkManager.getInstance().sendProtocol_StopAllSlaves();
 		}
 		mDataProvenance = null;
 

@@ -78,6 +78,9 @@ public class geneticLogicOriginal{
 						 */
 						// if other machines has finished
 						if (mPopulationConfigFromSlave != null) {
+							// if this machine is master, stop all slaves
+							NetworkManager.getInstance().sendProtocol_StopAllSlaves();
+							
 							tm.LDA(mPopulationConfigFromSlave.number_of_topics, mPopulationConfigFromSlave.number_of_iterations, true, true);
 							System.out.println("the best distribution is " + mPopulationConfigFromSlave.to_string());
 							result.cfg = mPopulationConfigFromSlave;
@@ -93,7 +96,7 @@ public class geneticLogicOriginal{
 								System.out.println("message sent!  " + initialPopulation[j].to_string());
 							} else {
 								// if this machine is master, stop all slaves
-								NetworkManager.getInstance().sendProtocol_StopOriginal();
+								NetworkManager.getInstance().sendProtocol_StopAllSlaves();
 
 								// run the function again to get the words in each topic
 								// the third parameter states that the topics are to be written to a file

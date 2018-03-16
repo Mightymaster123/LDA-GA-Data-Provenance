@@ -19,12 +19,11 @@ public class NetworkManager {
 
 	// Network protocol types.
 	public final static int PROTOCOL_START_ORIGINAL = 1; // Master tells the slaves to start working (original version)
-	public final static int PROTOCOL_STOP_ORIGINAL = 2; // Master tells the slaves to stop working (original version)
+	public final static int PROTOCOL_STOP = 2; // Master tells the slaves to stop working
 	public final static int PROTOCOL_FINISH_ORIGINAL = 3; // A slave tells the master that he has finished his job (original version)
 	public final static int PROTOCOL_PREPARE_NEW = 11; // Master tells the slaves to prepare for work (new version)
 	public final static int PROTOCOL_PROCESS_SUB_POPULATION_NEW = 12; // Master tells the slaves to work on a sub population
-	public final static int PROTOCOL_STOP_NEW = 13; // Master tells the slaves to stop working (new version)
-	public final static int PROTOCOL_FINISH_NEW = 14; // A slave tells the master that he has finished his job (new version)
+	public final static int PROTOCOL_FINISH_NEW = 13; // A slave tells the master that he has finished his job (new version)
 	public final static int PROTOCOL_SHUTDOWN_PROCESS = 100;// Master tells the slaves to shutdown their processes.
 	public final static int PROTOCOL_SLAVE_STATUS = 101; // Whether a slave is ready to work
 
@@ -52,7 +51,7 @@ public class NetworkManager {
 			return str;
 		}
 	}
-	
+
 	public interface ReceivedProtocolHandler {
 		void processProtocol(ReceivedProtocol protocol);
 	}
@@ -276,7 +275,7 @@ public class NetworkManager {
 			mSockets = null;
 		}
 		synchronized (NetworkManager.getInstance().mListReceivedProtocol) {
-		mListReceivedProtocol.clear();
+			mListReceivedProtocol.clear();
 		}
 		mReceivedProtocolHandler.clear();
 		mSlaveStatus = null;
@@ -381,7 +380,7 @@ public class NetworkManager {
 			}
 		}
 		if (obj instanceof Integer) {
-			int num = (int)obj;
+			int num = (int) obj;
 			msg += " " + num;
 		}
 		return msg;
@@ -418,9 +417,9 @@ public class NetworkManager {
 		return send(PROTOCOL_START_ORIGINAL, null);
 	}
 
-	public boolean sendProtocol_StopOriginal() {
+	public boolean sendProtocol_StopAllSlaves() {
 
-		return send(PROTOCOL_STOP_ORIGINAL, null);
+		return send(PROTOCOL_STOP, null);
 	}
 
 	public boolean sendProtocol_FinishOriginal(PopulationConfig cfg) {
@@ -459,11 +458,6 @@ public class NetworkManager {
 		return false;
 	}
 
-	public boolean sendProtocol_StopNew() {
-
-		return send(PROTOCOL_STOP_NEW, null);
-	}
-
 	public boolean sendProtocol_FinishNew(PopulationConfig[] cfgs) {
 		return send(PROTOCOL_FINISH_NEW, cfgs);
 	}
@@ -494,13 +488,18 @@ public class NetworkManager {
 				ObjectInputStream input = new ObjectInputStream(mSocket.getInputStream());
 				while (input != null && running) {
 					try {
-						int protocol = (int) input.readObject();
-						Object obj = input.readObject();
-						System.out.println("Receive from machine " + mTargetMachineID + "  protocol:" + protocol + " " + to_string(obj));
-						if (running) {
-							synchronized (NetworkManager.getInstance().mListReceivedProtocol) {
-								NetworkManager.getInstance().mListReceivedProtocol.add(new ReceivedProtocol(mTargetMachineID, protocol, obj));
+						Object p = input.readObject();
+						if (p instanceof Integer) {
+							int protocol = (int) p;
+							Object obj = input.readObject();
+							System.out.println("Receive from machine " + mTargetMachineID + "  protocol:" + protocol + " " + to_string(obj));
+							if (running) {
+								synchronized (NetworkManager.getInstance().mListReceivedProtocol) {
+									NetworkManager.getInstance().mListReceivedProtocol.add(new ReceivedProtocol(mTargetMachineID, protocol, obj));
+								}
 							}
+						} else {
+							System.out.println("Protocol's first paramater is not integer");
 						}
 					} catch (EOFException e) {
 						e.printStackTrace();
