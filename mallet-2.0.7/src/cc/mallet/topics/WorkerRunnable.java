@@ -548,7 +548,9 @@ public class WorkerRunnable implements Runnable {
 				//  is a new topic for this word.
 				
 				index = 0;
-				while (currentTypeTopicCounts[index] > 0 &&
+				while (currentTypeTopicCounts!=null &&
+						index<currentTypeTopicCounts.length &&
+						currentTypeTopicCounts[index] > 0 &&
 					   (currentTypeTopicCounts[index] & topicMask) != newTopic) {
 					index++;
 					if (index == currentTypeTopicCounts.length) {
