@@ -567,24 +567,26 @@ public class WorkerRunnable implements Runnable {
 
 				// index should now be set to the position of the new topic,
 				//  which may be an empty cell at the end of the list.
-
-				if (currentTypeTopicCounts[index] == 0) {
-					// inserting a new topic, guaranteed to be in
-					//  order w.r.t. count, if not topic.
-					currentTypeTopicCounts[index] = (1 << topicBits) + newTopic;
-				}
-				else {
-					currentValue = currentTypeTopicCounts[index] >> topicBits;
-					currentTypeTopicCounts[index] = ((currentValue + 1) << topicBits) + newTopic;
-
-					// Bubble the increased value left, if necessary
-					while (index > 0 &&
-						   currentTypeTopicCounts[index] > currentTypeTopicCounts[index - 1]) {
-						int temp = currentTypeTopicCounts[index];
-						currentTypeTopicCounts[index] = currentTypeTopicCounts[index - 1];
-						currentTypeTopicCounts[index - 1] = temp;
-
-						index--;
+				if(currentTypeTopicCounts!=null && index<currentTypeTopicCounts.length)
+				{
+					if (currentTypeTopicCounts[index] == 0) {
+						// inserting a new topic, guaranteed to be in
+						//  order w.r.t. count, if not topic.
+						currentTypeTopicCounts[index] = (1 << topicBits) + newTopic;
+					}
+					else {
+						currentValue = currentTypeTopicCounts[index] >> topicBits;
+						currentTypeTopicCounts[index] = ((currentValue + 1) << topicBits) + newTopic;
+	
+						// Bubble the increased value left, if necessary
+						while (index > 0 &&
+							   currentTypeTopicCounts[index] > currentTypeTopicCounts[index - 1]) {
+							int temp = currentTypeTopicCounts[index];
+							currentTypeTopicCounts[index] = currentTypeTopicCounts[index - 1];
+							currentTypeTopicCounts[index - 1] = temp;
+	
+							index--;
+						}
 					}
 				}
 
