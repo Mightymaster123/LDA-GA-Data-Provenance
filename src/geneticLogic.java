@@ -106,7 +106,7 @@ public class geneticLogic {
 			}
 
 			long paraEndTime = System.currentTimeMillis();
-			System.out.println("parallel part takes " + (paraEndTime - startTime) + "ms   "+NetworkManager.to_string(mInitialPopulation));
+			System.out.println("round "+loop_round+" parallel part takes " + (paraEndTime - startTime) + "ms   "+NetworkManager.to_string(mInitialPopulation));
 
 			// ranking and ordering the chromosomes based on the fitness function.
 			// no sorting code found?(by Xiaolin)
@@ -188,7 +188,7 @@ public class geneticLogic {
 			SortInitialPopulation();
 
 			long endTime = System.currentTimeMillis();
-			System.out.println("other part takes " + (endTime - paraEndTime) + "ms");
+			System.out.println("round "+loop_round+" other part takes " + (endTime - paraEndTime) + "ms");
 
 			/**
 			 * The genetic algorithm loop will not exit until the required fitness is

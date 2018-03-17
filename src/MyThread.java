@@ -28,7 +28,7 @@ public class MyThread implements Runnable {
 			if (!original_version && population_cfg.fitness_value > 0.0f) {
 				// we have already got the fitness value. For example: this is one of the best
 				// chromosomes in last round
-				System.out.println("Thread " + thread_index + ": Use one of the best chromosomes in last round. Don't have to call LDA algorithm again. " + population_cfg.to_string() + "  ************************************************");
+				System.out.println("New thread " + thread_index + ": Use one of the best chromosomes in last round. Don't have to call LDA algorithm again. " + population_cfg.to_string() + "  ************************************************");
 				return;
 			}
 			System.out.println((original_version?"Original":"New")+" thread " + thread_index + " start running " + population_cfg.to_string());
@@ -41,9 +41,9 @@ public class MyThread implements Runnable {
 			// the distibution is written to a text file by the name "distribution.txt"
 			double[][] clusterMatrix = new double[numberOfDocuments - 1][population_cfg.number_of_topics];
 			if (original_version) {
-				System.out.println("Thread " + thread_index + " is about to sleep");
+				System.out.println((original_version?"Original":"New")+" thread " + thread_index + " is about to sleep");
 				Thread.sleep(2000);// todo: Don't sleep such a long time [liudong]
-				System.out.println("Thread " + thread_index + " is out of sleep");
+				System.out.println((original_version?"Original":"New")+" thread " + thread_index + " is out of sleep");
 			}
 
 			// reading the values from distribution.txt and populating the cluster matrix
@@ -160,7 +160,7 @@ public class MyThread implements Runnable {
 				total = total + silhouetteCoefficient[m];
 			}
 			population_cfg.fitness_value = total / (numberOfDocuments - 1);
-			System.out.println("Thread " + thread_index + " finish  " + population_cfg.to_string());
+			System.out.println((original_version?"Original":"New")+" thread " + thread_index + " finish  " + population_cfg.to_string());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
