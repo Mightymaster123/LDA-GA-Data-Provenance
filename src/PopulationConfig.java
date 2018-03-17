@@ -34,7 +34,7 @@ public class PopulationConfig implements java.io.Serializable{
 	
 	public void random_iteration()
 	{
-		number_of_iterations = (int) Math.floor(Math.random() * 2000 + 1);
+		number_of_iterations = (int) Math.floor(Math.random() * 1000 + 1);
 		fitness_value = 0;
 	}
 	

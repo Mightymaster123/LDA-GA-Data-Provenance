@@ -443,7 +443,8 @@ public class DataProvenance {
 
 		// Outputs the time it took to finish the genetic algorithm
 		long geneticEndTime = System.currentTimeMillis();
-		System.out.println("Genetic algorithm takes " + (geneticEndTime - preprocessEndTime) + "ms");
+		result.genetic_milliseconds = geneticEndTime - preprocessEndTime;
+		System.out.println("Genetic algorithm takes " + result.genetic_milliseconds + "ms");
 
 		if (NetworkManager.getInstance().isMaster()) {
 			// create clusters based on the distribution.txt

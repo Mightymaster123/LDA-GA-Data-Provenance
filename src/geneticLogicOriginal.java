@@ -7,7 +7,7 @@ public class geneticLogicOriginal {
 
 	public ResultStatistics run() throws IOException, InterruptedException, ClassNotFoundException {
 		ResultStatistics result = new ResultStatistics();
-		
+
 		if (NetworkManager.getInstance().isMaster()) {
 			System.out.println("Start geneticLogicOriginal: Waiting for slaves ");
 			NetworkManager.getInstance().waitForAllSlaves();
@@ -28,6 +28,7 @@ public class geneticLogicOriginal {
 		for (int i = 0; i < initialPopulation.length; i++) {
 			initialPopulation[i].random();
 		}
+		final int BEST_POPULATION_SIZE = initialPopulation.length / 3;
 
 		while (!maxFitnessFound && isRunning) {
 			NetworkManager.getInstance().dispatchProtocols();
@@ -45,6 +46,9 @@ public class geneticLogicOriginal {
 			Thread threads[] = new Thread[geneticLogic.THREADS_PER_MACHINE];
 			for (int i = 0; i < threads.length; i++) {
 				int population_index = geneticLogic.THREADS_PER_MACHINE * (NetworkManager.getInstance().getMyMachineID() + 1) + i;
+				if (initialPopulation[population_index].fitness_value <= 0.0f) {
+					++result.LDA_call_count;
+				}
 				threads[i] = new Thread(new MyThread(i, initialPopulation[population_index], population_index, tm, numberOfDocuments, true));
 				System.out.println("Original thread " + i + " begin start...");
 				threads[i].start();
@@ -66,7 +70,6 @@ public class geneticLogicOriginal {
 			// Silhouette coefficient
 			PopulationConfig[] newPopulation = PopulationConfig.initArray(POPULATION_COUNT);
 			// copy only the top 1/3rd of the chromosomes to the new population
-			final int BEST_POPULATION_SIZE = initialPopulation.length / 3;
 			for (int iPopulation = 0; iPopulation < BEST_POPULATION_SIZE && isRunning; iPopulation++) {
 				double maxFitness = Integer.MIN_VALUE;
 				int maxFitnessChromosome = -1;
@@ -85,6 +88,7 @@ public class geneticLogicOriginal {
 							// if this machine is master, stop all slaves
 							NetworkManager.getInstance().sendProtocol_StopAllSlaves();
 
+							++result.LDA_call_count;
 							tm.LDA(mPopulationConfigFromSlave.number_of_topics, mPopulationConfigFromSlave.number_of_iterations, true, true);
 							System.out.println("the best distribution is " + mPopulationConfigFromSlave.to_string());
 							result.cfg = mPopulationConfigFromSlave;
@@ -104,6 +108,7 @@ public class geneticLogicOriginal {
 
 								// run the function again to get the words in each topic
 								// the third parameter states that the topics are to be written to a file
+								++result.LDA_call_count;
 								tm.LDA(initialPopulation[j].number_of_topics, initialPopulation[j].number_of_iterations, true, true);
 								System.out.println("the best distribution is: " + initialPopulation[j].to_string());
 								result.cfg = initialPopulation[j];
