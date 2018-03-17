@@ -31,7 +31,7 @@ public class MyThread implements Runnable {
 				System.out.println("New thread " + thread_index + ": Use one of the best chromosomes in last round. Don't have to call LDA algorithm again. " + population_cfg.to_string() + "  ************************************************");
 				return;
 			}
-			System.out.println((original_version?"Original":"New")+" thread " + thread_index + " start running " + population_cfg.to_string());
+			System.out.println((original_version ? "Original" : "New") + " thread " + thread_index + " start running " + population_cfg.to_string());
 
 			// invoke the LDA function
 			tm.LDA(population_cfg.number_of_topics, population_cfg.number_of_iterations, false, population_index, original_version);
@@ -41,38 +41,47 @@ public class MyThread implements Runnable {
 			// the distibution is written to a text file by the name "distribution.txt"
 			double[][] clusterMatrix = new double[numberOfDocuments - 1][population_cfg.number_of_topics];
 			if (original_version) {
-				System.out.println((original_version?"Original":"New")+" thread " + thread_index + " is about to sleep");
-				Thread.sleep(2000);// todo: Don't sleep such a long time [liudong]
-				System.out.println((original_version?"Original":"New")+" thread " + thread_index + " is out of sleep");
+				System.out.println((original_version ? "Original" : "New") + " thread " + thread_index + " is about to sleep");
+				Thread.sleep(2000);
+				System.out.println((original_version ? "Original" : "New") + " thread " + thread_index + " is out of sleep");
 			}
-
-			// reading the values from distribution.txt and populating the cluster matrix
-			int rowNumber = 0, columnNumber = 0;
-			Scanner fileRead = new Scanner(new File("distribution" + population_index + ".txt"));
-			fileRead.nextLine();
 
 			// Map to save the documents that belong to each cluster
 			// An arraylist multimap allows to save <Key, Value[]> combination
 			// each topic will have a cluster
 			Multimap<Integer, Integer> clusterMap = ArrayListMultimap.create();
 
-			int documentCount = 0;
-			// read the values for every document
-			while (documentCount < (numberOfDocuments - 1)) {
+			// reading the values from distribution.txt and populating the cluster matrix
+			int rowNumber = 0, columnNumber = 0;
+			Scanner scanner = null;
+			try {
+				scanner = new Scanner(new File("distribution" + population_index + ".txt"));
+				scanner.nextLine();
 
-				rowNumber = fileRead.nextInt();
-				fileRead.next();
+				int documentCount = 0;
+				// read the values for every document
+				while (documentCount < (numberOfDocuments - 1)) {
 
-				for (int z = 0; z < population_cfg.number_of_topics; z++) {
-					columnNumber = fileRead.nextInt();
-					if (z == 0) {
-						clusterMap.put(columnNumber, rowNumber);
+					rowNumber = scanner.nextInt();
+					scanner.next();
+
+					for (int z = 0; z < population_cfg.number_of_topics; z++) {
+						columnNumber = scanner.nextInt();
+						if (z == 0) {
+							clusterMap.put(columnNumber, rowNumber);
+						}
+						clusterMatrix[rowNumber][columnNumber] = scanner.nextDouble();
 					}
-					clusterMatrix[rowNumber][columnNumber] = fileRead.nextDouble();
+					documentCount = documentCount + 1;
 				}
-				documentCount = documentCount + 1;
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (scanner != null) {
+					scanner.close();
+					scanner = null;
+				}
 			}
-			fileRead.close();
 
 			// getting the centroid of each cluster by calculating the average of their
 			// cluster distribution
@@ -160,7 +169,7 @@ public class MyThread implements Runnable {
 				total = total + silhouetteCoefficient[m];
 			}
 			population_cfg.fitness_value = total / (numberOfDocuments - 1);
-			System.out.println((original_version?"Original":"New")+" thread " + thread_index + " finish  " + population_cfg.to_string());
+			System.out.println((original_version ? "Original" : "New") + " thread " + thread_index + " finish  " + population_cfg.to_string());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

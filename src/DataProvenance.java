@@ -51,7 +51,7 @@ public class DataProvenance {
 	private geneticLogicOriginal mGeneticLogicOriginal = null;
 	private geneticLogic mGeneticLogic = null;
 	private boolean mIsRunning = true;
-	
+
 	public boolean isRunning() {
 		return mIsRunning;
 	}
@@ -60,16 +60,38 @@ public class DataProvenance {
 		kwe = KeywordExtractor.getInstance();
 		javaKeys = new HashMap<String, Long>();
 
+		FileReader fr = null;
+		BufferedReader br = null;
 		try {
 			File f = new File(s);
-			BufferedReader br = new BufferedReader(new FileReader(f));
+			fr = new FileReader(f);
+			br = new BufferedReader(fr);
 			String key;
 			while ((key = br.readLine()) != null) {
 				javaKeys.put(key.trim(), new Long(0));
 			}
-			br.close();
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			if (br != null) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				br = null;
+			}
+			if(fr!=null)
+			{
+				try {
+					fr.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				fr = null;
+			}
 		}
 	}
 
@@ -109,60 +131,69 @@ public class DataProvenance {
 				if (new File(original_directory + "/" + file).isDirectory())
 					extract_useful_words(original_directory + "/" + file, processed_directory + "/" + file);
 				else {
+					String content = "";// todo: use StringBuffer [liudong]
 
 					// Initialize a stream tokenizer
-					FileReader rd = new FileReader(original_directory + "/" + file);
-					StreamTokenizer st = new StreamTokenizer(rd);
+					FileReader rd = null;
+					try {
+						rd = new FileReader(original_directory + "/" + file);
+						StreamTokenizer st = new StreamTokenizer(rd);
 
-					// Prepare the tokenizer for Java-style tokenizing rules
-					st.parseNumbers();
-					st.wordChars('_', '_');
-					// st.wordChars('.', '.');
-					st.eolIsSignificant(true);
+						// Prepare the tokenizer for Java-style tokenizing rules
+						st.parseNumbers();
+						st.wordChars('_', '_');
+						// st.wordChars('.', '.');
+						st.eolIsSignificant(true);
 
-					// Parse file
-					int token = st.nextToken();
-					String content = "";// todo: use StringBuffer [liudong]
-					String previous = "";
-					while (token != StreamTokenizer.TT_EOF) {
-						switch (token) {
+						// Parse file
+						int token = st.nextToken();
+						String previous = "";
+						while (token != StreamTokenizer.TT_EOF) {
+							switch (token) {
 
-						case StreamTokenizer.TT_WORD:
-							// Check if it is a package name from package import statement
-							if (previous.compareTo("package") == 0 || previous.compareTo("import") == 0) {
-								String[] fields = st.sval.split("\\.");
-								for (int i = 0; i < fields.length; i++) {
-									previous = fields[i];
-									if (categorize(fields[i]))
-										content += fields[i] + " ";
+							case StreamTokenizer.TT_WORD:
+								// Check if it is a package name from package import statement
+								if (previous.compareTo("package") == 0 || previous.compareTo("import") == 0) {
+									String[] fields = st.sval.split("\\.");
+									for (int i = 0; i < fields.length; i++) {
+										previous = fields[i];
+										if (categorize(fields[i]))
+											content += fields[i] + " ";
+									}
+									break;
 								}
+								previous = st.sval;
+								// Check if the word a stopword, etc.
+								// If not, append it to the content to be written back
+								if (categorize(st.sval))
+									content += st.sval.toLowerCase() + " ";
+								break;
+
+							case StreamTokenizer.TT_NUMBER:
+								// Check for numbers, decimal and hexadecimal
+								if ((token = st.nextToken()) != StreamTokenizer.TT_EOF) {
+									if (token == StreamTokenizer.TT_WORD && st.sval.startsWith("x"))
+										;
+									else
+										st.pushBack();
+								} else
+									st.pushBack();
+								break;
+
+							default:
+								// Ignore every other case
 								break;
 							}
-							previous = st.sval;
-							// Check if the word a stopword, etc.
-							// If not, append it to the content to be written back
-							if (categorize(st.sval))
-								content += st.sval.toLowerCase() + " ";
-							break;
-
-						case StreamTokenizer.TT_NUMBER:
-							// Check for numbers, decimal and hexadecimal
-							if ((token = st.nextToken()) != StreamTokenizer.TT_EOF) {
-								if (token == StreamTokenizer.TT_WORD && st.sval.startsWith("x"))
-									;
-								else
-									st.pushBack();
-							} else
-								st.pushBack();
-							break;
-
-						default:
-							// Ignore every other case
-							break;
+							token = st.nextToken();
 						}
-						token = st.nextToken();
+					} catch (Exception e) {
+						e.printStackTrace();
+					} finally {
+						if (rd != null) {
+							rd.close();
+							rd = null;
+						}
 					}
-					rd.close();
 
 					// check if the file is of the type article
 					// if the file is of the type article it has an _a in it
@@ -184,11 +215,16 @@ public class DataProvenance {
 						if (newDir.exists() == false)
 							newDir.mkdirs();
 						FileWriter wt = null;
-						wt = new FileWriter(processed_directory + "/" + file);
-
-						wt.write(content);
-
-						wt.close();
+						try {
+							wt = new FileWriter(processed_directory + "/" + file);
+							wt.write(content);
+						} catch (Exception e) {
+							e.printStackTrace();
+						} finally {
+							if (wt != null) {
+								wt.close();
+							}
+						}
 					}
 				}
 			}
@@ -216,29 +252,33 @@ public class DataProvenance {
 
 	}
 
-	public void calculatePrecisionRecall(ResultStatistics result, List<Cluster> clusters){
+	public void calculatePrecisionRecall(ResultStatistics result, List<Cluster> clusters) {
 
 		if (clusters == null || clusters.size() <= 0) {
 			System.out.println("Precision : " + 0);
 			System.out.println("Recall : " + 0);
 			return;
 		}
+		Hashtable<String, String> truthData = new Hashtable<String, String>();
 		// read the truth file
 		Scanner truthFile = null;
 		try {
 			truthFile = new Scanner(new File("truthfile.txt"));
+			// get the data and construct a hash table with it
+			while (truthFile.hasNextLine()) {
+				String line = truthFile.nextLine();
+				String[] split = line.split("# ");
+				truthData.put(split[0], split[1]);
+			}
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-
-		Hashtable<String, String> truthData = new Hashtable<String, String>();
-
-		// get the data and construct a hash table with it
-		while (truthFile.hasNextLine()) {
-			String line = truthFile.nextLine();
-			String[] split = line.split("# ");
-			truthData.put(split[0], split[1]);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (truthFile != null) {
+				truthFile.close();
+				truthFile = null;
+			}
 		}
 
 		float[] precision = new float[clusters.size()];
@@ -308,7 +348,6 @@ public class DataProvenance {
 		System.out.println("Precision: " + result.precision_percentage + "%");
 		System.out.println("Recall:    " + result.recall_percentage + "%");
 
-		truthFile.close();
 	}
 
 	public void delete_directory(String directory_name) {
@@ -376,13 +415,11 @@ public class DataProvenance {
 		// on the master and worker machine to find the best iteration and fitness from
 		// the set of documents
 		try {
-			if(mGeneticLogicOriginal!=null)
-			{
+			if (mGeneticLogicOriginal != null) {
 				System.out.println("Error: An old GeneticLogicOriginal is running.");
 				mGeneticLogicOriginal.isRunning = false;
 			}
-			if(mGeneticLogic!=null)
-			{
+			if (mGeneticLogic != null) {
 				System.out.println("Error: An old GeneticLogic is running.");
 				mGeneticLogic.isRunning = false;
 			}
@@ -400,8 +437,7 @@ public class DataProvenance {
 		if (!mIsRunning) {
 			return result;
 		}
-		if(result==null)
-		{
+		if (result == null) {
 			result = new ResultStatistics();
 		}
 
@@ -453,10 +489,10 @@ public class DataProvenance {
 	}
 
 	public void SlaveFinish(NetworkManager.ReceivedProtocol protocol) {
-		if (mGeneticLogicOriginal != null && protocol!=null && protocol.protocol == NetworkManager.PROTOCOL_FINISH_ORIGINAL) {
+		if (mGeneticLogicOriginal != null && protocol != null && protocol.protocol == NetworkManager.PROTOCOL_FINISH_ORIGINAL) {
 			mGeneticLogicOriginal.SlaveFinish(protocol);
 		}
-		if (mGeneticLogic != null && protocol!=null && protocol.protocol == NetworkManager.PROTOCOL_FINISH_NEW) {
+		if (mGeneticLogic != null && protocol != null && protocol.protocol == NetworkManager.PROTOCOL_FINISH_NEW) {
 			mGeneticLogic.SlaveFinish(protocol);
 		}
 	}
