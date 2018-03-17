@@ -1,0 +1,966 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:lang="en" lang="en">
+ <head> 
+  <title>ccMixter - The Annual New England Xylophone Symposium</title> 
+  <meta name="keywords" content="cchost, remix, sharing, media"> 
+  <meta name="description" content="ccMixter is a community remix site operated by ArtisTech Media, created by Creative Commons"> 
+  <meta name="verify-v1" content="PEEIrYmur1ilJAiOk6Ky5lEDaJYIltd3L3qgUsbdGco="> 
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"> 
+  <meta name="robots" content="index, follow"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <script type="text/javascript">
+//<!--
+var home_url  = 'http://ccmixter.org/';
+var root_url  = 'http://ccmixter.org/';
+var query_url = 'http://ccmixter.org/api/query?';
+var q         = '?';
+var user_name =  null; 
+//-->
+</script> 
+  <link rel="alternate" type="application/atom+xml" href="http://ccmixter.org/api/query?ids=19848&amp;title=The+Annual+New+England+Xylophone+Symposium&amp;f=rss" title="The Annual New England Xylophone Symposium [ RSS 2.0 ]"> 
+  <link rel="alternate" type="application/atom+xml" href="http://ccmixter.org/api/query?ids=19848&amp;title=The+Annual+New+England+Xylophone+Symposium&amp;f=atom" title="The Annual New England Xylophone Symposium [ Atom 1.0 ]"> 
+  <script type="text/javascript" src="http://ccmixter.org/content/media_skin_20180310222505.js"></script> 
+  <link rel="stylesheet" type="text/css" title="Default Style" href="http://ccmixter.org/content/media_skin_20180310222505.css"> 
+  <script src="https://www.google.com/recaptcha/api.js"></script> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+  <script type="text/javascript">
+var $j = jQuery.noConflict();
+
+function LoadCCPlusBlock() {
+    if (!$j("div.taglinks").length) {
+        return;
+    }
+    if ($j("div.taglinks").html().indexOf("ccplus") > -1) {
+        var NavURL = "http://tunetrack.net/license/" + window.location.host + window.location.pathname;
+        var AppendString = '<div class="box"><h2>CCPlus Licensing</h2><p>Like this song? Click <a href="' + NavURL + '">here to license this media</a> for commercial use.</p></div>';
+        //get existing license box
+        var lBox = $j('#license_info').parent().html();
+        $j('#license_info').parent().html(lBox + AppendString);
+    }
+
+}
+
+var FlashReplaceString = "http://ccmixter.org/api/query/stream.m3u?f=m3u&ids=";
+$j(document).ready(function () {
+    LoadCCPlusBlock();
+    ProcessIDsList();
+    //may need a second pass
+    setTimeout(ProcessIDsList, 1000);
+});
+
+var ProcessIDsList = function () {
+    var IDList = GetIDsList();
+    if (IDList.length == 0) {
+        return;
+    }
+    for (var i = 0; i < IDList.length; i++) {
+        SetupPlayer(IDList[i]);
+    }
+}
+
+var SetupPlayer = function (DownloadID) {
+    var SubmitURL = "http://ccmixter.org/api/query/api?ids=" + DownloadID +
+        "&f=json&dataview=links_dl";
+    $j.ajax({
+        type: "GET",
+        url: SubmitURL,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            if (data.length > 0) {
+                var fileResult = data[0];
+                if (fileResult.files.length > 0) {
+                    var DownloadURL = fileResult.files[0].download_url;
+                    var ReplaceURL = "_ep_" + DownloadID;
+                    var ReplaceContent = "<audio preload='none' controls><source src='" +
+                        DownloadURL + "' type='audio/mpeg'>Your browser does not support the audio element</audio>\r\n";
+                    $j("a[id='" + ReplaceURL + "']").parent().html(ReplaceContent);
+                }
+            }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            //leave it.
+        }
+    });
+
+}
+
+var GetIDsList = function () {
+    var IDList = new Array();
+    var list = $j("a[href*='m3u']").each(function (index) {
+        var IDToProcess = $j(this).attr("href").replace(FlashReplaceString, "");
+        IDList.push(IDToProcess);
+    });
+    return IDList;
+}
+
+  </script> 
+ </head>
+ <body> 
+  <script>
+    window.fbAsyncInit = function() {
+    // facebook
+    FB.init({
+            appId      : '1550961735160190',
+            xfbml      : true,
+            version    : 'v2.2'
+            });
+        };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script> 
+  <div id="beta_message" style="position:absolute;">
+   <a href="http://beta.ccmixter.org/playlist/browse/50757">Interstellar Secret Mixter: Listening Mode</a>
+  </div> 
+  <div class="hide"> 
+   <a href="#content">skip</a> 
+  </div> 
+  <div id="container" style="background-color:white;"> 
+   <div id="header" class="light_color"> 
+    <div id="login_info"> 
+     <!-- not logged in --> 
+     <span class="med_color">Not logged in</span> 
+     <a class="light_color" href="http://ccmixter.org/login">Log In</a> 
+     <script type="text/javascript" src="http://ccmixter.org/ccskins/shared/js/facebook.js"></script> 
+     <br>
+     <fb:login-button scope="public_profile,email" onlogin="fb_check_login_state();"> 
+     </fb:login-button> 
+    </div> 
+    <div id="header_search">
+     <img id="header_search_img" height="50" width="70" src="http://ccmixter.org/ccskins/commons/images/find.png"> 
+     <a class="light_color" id="search_site_link" href="http://ccmixter.org/search"><h3>Search</h3> <span class="light_color">Find content</span></a>
+    </div> 
+    <h1 id="site_title"><a href="http://ccmixter.org/" title="ccMixter"> <img src="http://ccmixter.org/mixter-files/images/cc-mixter-logo.png" style="width:131px;height:36px"> </a></h1> 
+    <div id="site_description">
+     Download, Sample, Cut-up, Share.
+    </div> 
+    <ul id="tabs"> 
+     <li><a href="http://ccmixter.org/view/media/home" title="Home page"><span>Home</span></a></li> 
+     <li><a href="http://ccmixter.org/view/media/picks" title="See picks by the Editorial Staff"><span>Picks</span></a></li> 
+     <li><a href="http://ccmixter.org/view/media/remix" title="See the latest remixes"><span>Remixes</span></a></li> 
+     <li><a href="http://ccmixter.org/view/media/samples" title="Browse Stems"><span>Samples <img src="/mixter-files/images/new.png"></span></a></li> 
+     <li><a href="http://ccmixter.org/view/media/pells" title="Browse Pells"><span>A Cappellas <img src="/mixter-files/images/new.png"></span></a></li> 
+     <li><a href="http://ccmixter.org/view/media/people" title="See the newest users who uploaded here"><span>People</span></a></li> 
+     <li><a href="http://ccmixter.org/view/media/extras" title="Extras goodies"><span>Extras</span></a></li> 
+     <li><a href="http://ccmixter.org/view/media/playlists" title="Playlists"><span>Playlists <img src="/mixter-files/images/new.png"></span></a></li> 
+    </ul> 
+    <div class="post_tab_breaker"></div> 
+   </div>
+   <!-- header --> 
+   <div style="display:none" id="debug"></div> 
+   <div id="wrapper"> 
+    <div id="content"> 
+     <div class="cc_breadcrumbs">
+      <a href="http://ccmixter.org/"><span>Home</span></a> » 
+      <a href="http://ccmixter.org/people"><span>People</span></a> » 
+      <a href="http://ccmixter.org/people/DoKashiteru"><span>DoKashiteru</span></a> » 
+      <span>"The Annual New England Xylophone Symposium"</span>
+     </div> 
+     <h1 class="title">The Annual New England Xylophone Symposium </h1> 
+     <a name="content"></a> 
+     <div id="inner_content"> 
+      <!-- template upload_page_pieces.tpl --> 
+      <style>
+        table#upload_page_table td {
+            vertical-align: top;
+        }
+        td#upload_menu_box {
+            width: 20%;
+        }
+        td#upload_sidebar_td {
+            width: 30%;
+        }
+    </style> 
+      <link rel="stylesheet" type="text/css" title="Default Style" href="http://ccmixter.org/ccskins/shared/css/upload_page.css"> 
+      <script type="text/javascript">
+    var ratings_enabled = '1';
+    </script> 
+      <a class="flag upload_flag" title="Flag this upload for possible violation of terms" href="http://ccmixter.org/flag/upload/19848">&nbsp;</a> 
+      <div id="date_box">
+        uploaded: Sat, Mar 14, 2009 @ 12:37 PM 
+      </div> 
+      <table id="upload_page_table"> 
+       <tbody>
+        <tr> 
+         <td id="upload_menu_box"> </td> 
+         <td id="upload_middle_td"> 
+          <div class="box"> 
+           <img src="http://ccmixter.org/content/DoKashiteru/DoKashiteru93x93.jpg" style="float:right"> 
+           <table cellspacing="0" cellpadding="0" id="credit_info"> 
+            <tbody>
+             <tr>
+              <th>by</th>
+              <td><a class="cc_user_link" href="http://ccmixter.org/people/DoKashiteru">DoKashiteru</a></td>
+             </tr> 
+             <tr>
+              <th>Featuring</th>
+              <td>spinning merkaba</td>
+             </tr> 
+             <tr>
+              <th>length</th>
+              <td>3:19</td>
+             </tr> 
+             <tr>
+              <th>BPM</th>
+              <td>130</td>
+             </tr> 
+             <tr>
+              <th>Recommends</th> 
+              <td>
+               <div class="rated recommend_block" id="recommend_block_19848">
+                Recommends 
+                <span>(43)</span>
+               </div></td>
+             </tr> 
+            </tbody>
+           </table> As far as I know, there isn’t a real Annual New England Xylophone Symposium. But if there was, this is what it may sound like. I bet it’d be fun. 
+           <br> 
+           <br> (Thanks to spinning merkaba for the guitar sample that got this going!) 
+           <div class="taglinks"> 
+            <a href="http://ccmixter.org/tags/media">media</a>, 
+            <a href="http://ccmixter.org/tags/remix">remix</a>, 
+            <a href="http://ccmixter.org/tags/trackback">trackback</a>, 
+            <a href="http://ccmixter.org/tags/in_video">in_video</a>, 
+            <a href="http://ccmixter.org/tags/in_podcast">in_podcast</a>, 
+            <a href="http://ccmixter.org/tags/in_web">in_web</a>, 
+            <a href="http://ccmixter.org/tags/bpm_130_135">bpm_130_135</a>, 
+            <a href="http://ccmixter.org/tags/ccplus">ccplus</a>, 
+            <a href="http://ccmixter.org/tags/non_commercial">non_commercial</a>, 
+            <a href="http://ccmixter.org/tags/audio">audio</a>, 
+            <a href="http://ccmixter.org/tags/mp3">mp3</a>, 
+            <a href="http://ccmixter.org/tags/44k">44k</a>, 
+            <a href="http://ccmixter.org/tags/stereo">stereo</a>, 
+            <a href="http://ccmixter.org/tags/CBR">CBR</a>, 
+            <a href="http://ccmixter.org/tags/electronic">electronic</a>, 
+            <a href="http://ccmixter.org/tags/fun">fun</a>, 
+            <a href="http://ccmixter.org/tags/guitar">guitar</a>, 
+            <a href="http://ccmixter.org/tags/instrumental">instrumental</a>, 
+            <a href="http://ccmixter.org/tags/rhythmic">rhythmic</a>, 
+            <a href="http://ccmixter.org/tags/xylophone">xylophone</a> 
+           </div> 
+           <!-- template render_play_link --> 
+           <div class="playerdiv">
+            <span class="playerlabel">Play</span>
+            <a class="cc_player_button cc_player_hear" id="_ep_19848"> <span>The Annual New England Xylophone Symposium</span></a>
+           </div> 
+           <script type="text/javascript"> $('_ep_19848').href = 'http://ccmixter.org/content/DoKashiteru/DoKashiteru_-_The_Annual_New_England_Xylophone_Symposium.mp3' </script> 
+           <div class="info_box_clear">
+            &nbsp;
+           </div> 
+          </div>
+          <!-- info box --> 
+          <div class="box"> 
+           <div id="requested_reviews">
+            Recent Reviews
+            <ul> 
+             <li>Pitx <a href="http://ccmixter.org/reviews/DoKashiteru/19848#58880">World needs more music like this.</a></li> 
+             <li>Scott Altham <a href="http://ccmixter.org/reviews/DoKashiteru/19848#58798">New Order meets a kid playing xylophone ...</a></li> 
+             <li>Anchor <a href="http://ccmixter.org/reviews/DoKashiteru/19848#58808">Splendid! Made me happy from start to en...</a></li> 
+             <li>panu <a href="http://ccmixter.org/reviews/DoKashiteru/19848#58819">Great Stuff, Dok. your xylo &amp; merkaba's...</a></li> 
+             <li>Scomber <a href="http://ccmixter.org/reviews/DoKashiteru/19848#58836">That xylo is working overtime. I once p...</a></li> 
+            </ul> 
+            <div style="width:25%">
+             <a class="cc_gen_button" href="http://ccmixter.org/reviews/DoKashiteru/19848"><span>Read all...</span></a>
+            </div>
+           </div>
+           <div id="recommended_by">
+            Recommended by: 
+            <a href="http://ccmixter.org/people/scottaltham/recommends">Scott Altham (scottaltham)</a>, 
+            <a href="http://ccmixter.org/people/anchormejans/recommends">Anchor (anchormejans)</a>, 
+            <a href="http://ccmixter.org/people/panumoon/recommends">panu (panumoon)</a>, 
+            <a href="http://ccmixter.org/people/scomber/recommends">Scomber</a>, 
+            <a href="http://ccmixter.org/people/radiotimes/recommends">radiotimes</a>, 
+            <a href="http://ccmixter.org/people/Pitx/recommends">Pitx</a>, 
+            <a href="http://ccmixter.org/people/storyoscope/recommends">storyoscope</a>, 
+            <a href="http://ccmixter.org/people/onlymeith/recommends">onlymeith</a>, 
+            <a href="http://ccmixter.org/people/George_Ellinas/recommends">George_Ellinas</a>, 
+            <a href="http://ccmixter.org/people/CiggiBurns/recommends">CiggiBurns</a>, 
+            <a href="http://ccmixter.org/people/mcjackinthebox/recommends">MC Jack in the Box (mcjackinthebox)</a>, 
+            <a href="http://ccmixter.org/people/khidir/recommends">khidir</a>, 
+            <a href="http://ccmixter.org/people/victor/recommends">fourstones (victor)</a>, 
+            <a href="http://ccmixter.org/people/djlang59/recommends">J.Lang (djlang59)</a>, 
+            <a href="http://ccmixter.org/people/jacindae/recommends">jacindae</a>, 
+            <a href="http://ccmixter.org/people/mghicks/recommends">mghicks</a>, 
+            <a href="http://ccmixter.org/people/WilliamE/recommends">ghosts4hire (WilliamE)</a>, 
+            <a href="http://ccmixter.org/people/GregBulmash/recommends">GregBulmash</a>, 
+            <a href="http://ccmixter.org/people/maajonic/recommends">maajonic</a>, 
+            <a href="http://ccmixter.org/people/cuajitoben/recommends">Down With Ben (cuajitoben)</a>, 
+            <a href="http://ccmixter.org/people/yeliy/recommends">yeliy</a>, 
+            <a href="http://ccmixter.org/people/thehookpodcast/recommends">The Hook (w/spinning merkaba) (thehookpodcast)</a>, 
+            <a href="http://ccmixter.org/people/sindy1/recommends">sindy1</a>, 
+            <a href="http://ccmixter.org/people/Senacharim/recommends">Senacharim</a>, 
+            <a href="http://ccmixter.org/people/GreenEyeGemini87/recommends">GreenEyeGemini87</a>, 
+            <a href="http://ccmixter.org/people/mikethebee/recommends">MikeTheBee</a>, 
+            <a href="http://ccmixter.org/people/retsina_film/recommends">retsina_film</a>, 
+            <a href="http://ccmixter.org/people/snowflake/recommends">Snowflake</a>, 
+            <a href="http://ccmixter.org/people/SackJo22/recommends">SackJo22</a>, 
+            <a href="http://ccmixter.org/people/Benolds/recommends">Benolds</a>, 
+            <a href="http://ccmixter.org/people/dugdale/recommends">dugdale</a>, 
+            <a href="http://ccmixter.org/people/jpw21683/recommends">jpw21683</a>, 
+            <a href="http://ccmixter.org/people/bakotaco/recommends">bakotaco</a>, 
+            <a href="http://ccmixter.org/people/ichip917/recommends">ichip917</a>, 
+            <a href="http://ccmixter.org/people/tcbr04/recommends">tcbr04</a>, 
+            <a href="http://ccmixter.org/people/innocentoutrage/recommends">innocentoutrage</a>, 
+            <a href="http://ccmixter.org/people/edo964/recommends">edo964</a>, 
+            <a href="http://ccmixter.org/people/Susanv78660/recommends">Susanv78660</a>, 
+            <a href="http://ccmixter.org/people/guenevereschwien/recommends">Guenevere Schwien (guenevereschwien)</a>, 
+            <a href="http://ccmixter.org/people/817201/recommends">817201</a>, 
+            <a href="http://ccmixter.org/people/hansatom/recommends">Hans Atom (hansatom)</a>, 
+            <a href="http://ccmixter.org/people/mindmapthat/recommends">Kara Square (mindmapthat)</a>, 
+            <a href="http://ccmixter.org/people/hamsamster/recommends">hamsamster</a>
+           </div> 
+           <div class="upload_num_playlists_link" style="text-align: right;">
+            Found in 
+            <a href="http://ccmixter.org/playlist/browse?upload=19848">30 playlists</a>
+           </div> 
+          </div> </td> 
+         <td id="upload_sidebar_td"> 
+          <div class="box" id="license_info" about="urn:sha1:MWFHAN6XFP77OCXTVGZSV3KEBK7ARY6I"> 
+           <p> </p>
+           <div id="license_info_t">
+             "
+            <a href="http://ccmixter.org/files/DoKashiteru/19848" rel="cc:attributionURL"><span href="http://purl.org/dc/dcmitype/Sound" property="dc:title" rel="dc:type">The Annual New England Xylophone Symposium</span></a>" 
+            <br> by 
+            <span property="cc:attributionName"> DoKashiteru</span>
+            <br>
+            <br> 2009 - Licensed under
+            <br> Creative Commons
+            <br> 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/" title="Attribution Noncommercial  (3.0)">Attribution Noncommercial (3.0)</a>
+            <br>
+            <br> 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/" title="Attribution Noncommercial  (3.0)"><img title="Attribution Noncommercial  (3.0)" src="http://ccmixter.org/ccskins/shared/images/lics/by-nc-3.png"></a>
+            <br>
+            <br> 
+            <p id="license_more_info"> 
+             <!-- license --> Click <a href="http://creativecommons.org/licenses/by-nc/3.0/">here</a> for how to give credit and other conditions. </p> 
+           </div> 
+           <p></p> 
+          </div> 
+          <div class="box" id="remix_info"> 
+           <img src="http://ccmixter.org/ccskins/shared/images/downloadicon.gif"> 
+           <h2>Uses samples from:</h2> 
+           <div> 
+            <a class="remix_links cc_file_link" rel="dc:source" href="http://ccmixter.org/files/jlbrock44/19829">More Emin Gtr 03</a> by 
+            <a href="http://ccmixter.org/people/jlbrock44" class="cc_user_link user_name">spinningmer...</a> 
+           </div> 
+           <div id="histogram_link"> 
+            <p> <a href="http://ccmixter.org/api/query?t=upload_histogram&amp;ids=19848">Remix History Chart</a> </p> 
+           </div> 
+          </div> 
+          <div class="box" id="remix_info"> 
+           <img src="http://ccmixter.org/ccskins/shared/images/uploadicon.gif"> 
+           <h2>Samples are used in:</h2> 
+           <div style="overflow: scroll;height:300px;"> 
+            <div> 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/files/anchormejans/19894">Spinning Merkaba*</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/people/anchormejans">Anchor</a> 
+            </div> 
+            <div> 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/files/anchormejans/20775">Merkaba (Trans-H...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/people/anchormejans">Anchor</a> 
+            </div> 
+            <div> 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/files/scomber/20835">Things I love, t...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/people/scomber">Scomber</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/33774">Sleeping Time Lapse</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/33774">Ssmallfry</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Podcast</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/35065">HatchetJob.com</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/35065">HatchetJob.com</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/35078"> Jmac&amp;apos...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/35078">Jason McIntosh</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/35570">Happy Videos - Twe...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/35570">Greg Bulmash</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/36685">Lead Generation Sy...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/36685">Teach Jim</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/39008">"Fast 3450&amp;qu...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/39008">I did!</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/44279">50xWOD Dingle Mara...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/44279">MikeTheBee for the...</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/44365">Die Sorg</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/44365">F.J. Reichert</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/44395">Die Sorg</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/44395">F.J. Reichert</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/45611">StatiCats: Recall ...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/45611">biocats2</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/46395">We Are One (A Mess...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/46395">Gaile Burchill</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/47573">Patty Cakes Makes ...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/47573">Pat B. Allen (aka ...</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/48327">Fernandina Beach Q...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/48327">Jim</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/48462">REALIZZA IL TUO SI...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/48462">Art Director Sas</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/49592">National Library W...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/49592">Greg Landgraf</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50086">"Missed Connection...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50086">Megan Selheim</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50149">Simple Soynut Butter</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50149">Eric Smith</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50447">Sherwood Art Week ...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50447">Julian Phillips</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50572">June - July Trip P...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50572">Carina</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50649">Splatter! Paint! P...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50649">Vivi Hoang</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50768">VeloCityArt open w...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50768">Culture Sparks</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50806">Moving, Music, and...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50806">AndyMan4000</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50823">Woodward Academy A...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50823">Nanci Lee</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Web Page</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50827">Woodward Academy L...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50827">Nanci Lee</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50830">mark Magalog 9 Fal...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50830">Erica</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50957">BuySparklers: Wedd...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50957">BuySparklers.com</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50977">Deviated Mentation...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50977">Joseph Arikan</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50980">clickflashwhirr</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50980">youtube.com</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50985">4. BISTRŠKI TEK, ...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50985">Dino Alberini</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/50997">Ink Trolls Vial</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/50997">Maylar</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/51173">27 Scraps of Paper</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/51173">Scott Stark</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/51247">www.virtualsensei.it</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/51247">Ivano Cappelli, An...</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/51613">she takes a photo ...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/51613">madandcrazychild</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/52194">Absolutely Free Ph...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/52194">t00nz843z</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/52261">How to stop a trai...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/52261">Carrie Niphe</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/52379">Minecraft Hell Gat...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/52379">TheOldMan</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/52790">How a Stirling Eng...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/52790">Michael Streeter</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/52812">Festibubbles 2012 ...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/52812">Romi Shamai</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/52924">inviting classroom...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/52924">Ashley Davenport a...</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/53017">Can a centipede sw...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/53017">Daniel Andrei R. G...</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/53038">Profesjonalne rozg...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/53038">Łukasz Kacprzak</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/53145">Videoreceta de biz...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/53145">Manuel Iglesias</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/53155">Work Notification:...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/53155">Re Lim</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/53214">Espai Infantil de ...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/53214">Montserrat Ayala Riu</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/53238">Critical Mass Marc...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/53238">Luke</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/53304">ANGRY BIRDS SPONGE...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/53304">FunVideoTV</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/53616">England Trip: iday...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/53616">Ben Babcock</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Web Page</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/53763">she takes a photo ...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/53763">clickflashwhirr</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/54007">CIL Presentation V...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/54007">Greg Szczyrbak</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Podcast</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/54047">Open Licensed Musi...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/54047">Ralph Wacksworth</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/54651">Scarlett's first h...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/54651">Mel Hamada</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/55460">Silvester 20zwölf...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/55460">Klaus Bossert</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/55482">COMO ELIMINAR O CU...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/55482">F.F.Machado</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/55581">Come aggiungere la...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/55581">Antonio Pistillo</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/55640">Adaptoid Session -...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/55640">Christian K</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/55680">Winter roadtrip to...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/55680">Mike St. Martin</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/55828">Cuentos colección...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/55828">Isabel de Ron</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/55846">natalia b</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/55846">DoKashiteru</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/55893">she takes a photo ...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/55893">clickflashwhirr</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/56427">Designersblock at ...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/56427">Linda</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/56609">MED104 Remediation...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/56609">Sandra Gultiano</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/56660">MBS - Gobernación...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/56660">Ana Camelo</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/56709">KIOSKAP Le Kiosque...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/56709">PAM / AP-HP</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/56914">Haile Plantation S...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/56914">Coleen DeGroff</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/57694">Mermelada de Moras...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/57694">Tere marinval</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/57820">A Little Inspirati...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/57820">Alex Yakacki</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/57867">Matrimonio Belen R...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/57867">Elena Gissi</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/58209">Umwelttag Luisensc...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/58209">Georges</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/58219">My Stupeflix Video 4</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/58219">Louise Morgan</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/58222">Flat Charlotte Vis...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/58222">Louise Morgan</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/58405">Group 25: J300 Les...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/58405">Yuan Zhuang</a> 
+            </div> 
+            <div> 
+             <span class="pool_item_type">Video</span>: 
+             <a class="remix_links cc_file_link" href="http://ccmixter.org/pools/item/61508">#JamPackedUK Raspb...</a> 
+             <span>by</span> 
+             <a class="cc_user_link" href="http://ccmixter.org/pools/item/61508">David Gilmour</a> 
+            </div> 
+           </div> 
+          </div> </td> 
+        </tr> 
+       </tbody>
+      </table> 
+      <!-- template playerembed --> 
+      <link href="http://ccmixter.org/ccskins/shared/css/playerembed.css" rel="stylesheet" type="text/css" title="Default Style"> 
+      <script type="text/javascript" src="http://ccmixter.org/ccskins/shared/js/playerembed.js"></script> 
+      <script type="text/javascript" src="http://ccmixter.org/ccskins/shared//js/swfobject.js"></script> 
+      <div id="flash_goes_here"></div> 
+      <script type="text/javascript">
+    var swfObj = new SWFObject('http://ccmixter.org/cchost_lib/fplayer/ccmixter2.swf', 'uploadMovie', '1', '1', '8', "#FFFFFF" );
+    swfObj.addVariable('allowScriptAccess','always');
+    swfObj.write('flash_goes_here');
+    var flashVersion = deconcept.SWFObjectUtil.getPlayerVersion();
+    new ccEmbeddedPlayer( {  }, flashVersion['major'] );
+  </script> 
+      <script type="text/javascript">
+    if( window.ccEPlayer )
+        ccEPlayer.hookElements($('upload_middle'));
+    </script> 
+      <script type="text/javascript">
+    function menu_cb(resp) {
+        $('upload_menu_box').innerHTML = resp.responseText;
+        var dl_hook = new queryPopup("download_hook","download",str_download); 
+        dl_hook.height = '550';
+        dl_hook.width = '700';
+        dl_hook.hookLinks();
+        if( window.round_box_enabled )
+            cc_round_boxes();
+        if( user_name && ratings_enabled )
+        {
+            null_star = 'http://ccmixter.org/ccskins/shared/images/stars/star-empty.gif';
+            full_star = 'http://ccmixter.org/ccskins/shared/images/stars/star-red.gif';
+            rate_return_t = 'ratings_stars_user';
+            recommend_return_t = 'recommends';
+            new userHookup('upload_list', 'ids=19848');
+                            playlist_hook_menu();
+                    }
+    }
+    var menu_url = query_url + 't=upload_menu&f=html&ids=19848';
+    new Ajax.Request( menu_url, { method: 'get', onComplete: menu_cb } );
+    </script> 
+     </div> 
+    </div> 
+    <!-- content --> 
+   </div> 
+   <!-- wrapper --> 
+   <div id="navigation"> 
+    <div id="menu"> 
+     <div class="menu_group"> 
+      <p>Visitors</p> 
+      <ul> 
+       <li><a href="http://ccmixter.org/find-music" id="mi_find_music">Find Music</a></li> 
+       <li><a href="http://ccmixter.org/forums" id="mi_forums">Forums</a></li> 
+       <li><a href="http://ccmixter.org/about" id="mi_about">About</a></li> 
+       <li><a href="http://ccmixter.org/thread/1921" id="mi_find_everything">Looking for...?</a></li> 
+       <li><a href="http://twitter.com/ccMixterMusic" id="mi_16">Twitter</a></li> 
+      </ul> 
+     </div> 
+     <div class="menu_group"> 
+      <p>Artists</p> 
+      <ul> 
+       <li><a href="http://ccmixter.org/media/login" id="mi_login">Log In</a></li> 
+       <li><a href="http://ccmixter.org/register" id="mi_register">Register</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+    <!-- end of menu --> 
+   </div> 
+   <div id="extra"> 
+    <div class="menu_group"> 
+    </div> 
+    <div class="menu_group"> 
+     <br>
+     <br> 
+     <a href="http://dig.ccmixter.org"><img src="http://dig.ccmixter.org/images/dig.ccmixter-white-on-black-100x22.jpg"></a> 
+     <ul>
+      <li> Search our archives for<br> music for your video,<br> podcast or school project<br> at <a href="http://dig.ccmixter.org" style="font-weight:bold;text-decoration:underline;color:blue;">dig.ccMixter</a></li>
+     </ul> 
+    </div> 
+    <div class="menu_group"> 
+     <p>Support ccMixter</p> 
+     <ul>
+      <li> <a href="/keep-ccmixter-open-and-free"><img src="/mixter-files/images/ccmixter_logo_88x31.jpg" alt="Support ccMixter"></a> </li>
+     </ul> 
+    </div> 
+    <div class="menu_group"> 
+     <p>Editors' Picks</p> 
+     <ul> 
+      <li><a href="http://ccmixter.org/files/SiobhanD/57378" class="cc_file_link">Unbury Your H...</a></li> 
+      <li><a href="http://ccmixter.org/files/admiralbob77/57373" class="cc_file_link">Unfinished So...</a></li> 
+      <li><a href="http://ccmixter.org/files/JeffSpeed68/57367" class="cc_file_link">The Abstract ...</a></li> 
+      <li><a href="http://ccmixter.org/files/The_Stereo_Inspectors/57336" class="cc_file_link">Figure It Out</a></li> 
+      <li><a href="http://ccmixter.org/files/kris_sky/57287" class="cc_file_link">the wrong end...</a></li> 
+      <li><a href="http://ccmixter.org/editorial/picks" class="cc_more_menu_link">More picks...</a></li> 
+     </ul> 
+    </div> 
+    <div class="menu_group"> 
+     <p>Highest Rated</p> 
+     <ul> 
+      <li><a class="cc_file_link" href="http://ccmixter.org/files/mindmapthat/57391">The Heart ...</a></li> 
+      <li><a class="cc_file_link" href="http://ccmixter.org/files/SiobhanD/57378">Unbury You...</a></li> 
+      <li><a class="cc_file_link" href="http://ccmixter.org/files/snowflake/57366">Running</a></li> 
+      <li><a class="cc_file_link" href="http://ccmixter.org/files/JeffSpeed68/57367">The Abstra...</a></li> 
+      <li><a class="cc_file_link" href="http://ccmixter.org/files/speck/57387">Interstell...</a></li> 
+      <li><a class="cc_file_link" href="http://ccmixter.org/files/admiralbob77/57397">All the Li...</a></li> 
+     </ul> 
+    </div> 
+    <div class="menu_group"> 
+     <p>Recent Reviewers</p> 
+     <ul> 
+      <li><a href="http://ccmixter.org/reviews/copperhead/57403#241038">Snowflake</a></li> 
+      <li><a href="http://ccmixter.org/reviews/JeffSpeed68/57407#241037">Admiral Bob</a></li> 
+      <li><a href="http://ccmixter.org/reviews/Bluemillenium/56245#241036">DreamSynth</a></li> 
+      <li><a href="http://ccmixter.org/reviews/Vidian/57398#241035">copperhead</a></li> 
+      <li><a href="http://ccmixter.org/reviews/Beluga/57400#241032">urmymuse</a></li> 
+      <li><a href="http://ccmixter.org/reviews/admiralbob77/57402#241026">Kara Square</a></li> 
+      <li><a href="http://ccmixter.org/reviews/speck/57387#241019">reiswerk</a></li> 
+      <li><a href="http://ccmixter.org/reviews" class="cc_more_menu_link">More reviews...</a></li> 
+     </ul> 
+    </div> 
+    <div class="menu_group"> 
+     <p>Syndication</p> 
+     <ul> 
+      <li><a rel="alternate" type="application/atom+xml" href="http://ccmixter.org/api/query?ids=19848&amp;title=The+Annual+New+England+Xylophone+Symposium&amp;f=rss" title="The Annual New England Xylophone Symposium [ RSS 2.0 ]"><img src="http://ccmixter.org/ccskins/shared/images/feed-icon16x16.png" title="[ RSS 2.0 ]"> The Annual New England Xylophone Symposium</a></li> 
+      <li><a rel="alternate" type="application/atom+xml" href="http://ccmixter.org/api/query?ids=19848&amp;title=The+Annual+New+England+Xylophone+Symposium&amp;f=atom" title="The Annual New England Xylophone Symposium [ Atom 1.0 ]"><img src="http://ccmixter.org/ccskins/shared/images/feed-atom16x16.png" title="[ Atom 1.0 ]"> The Annual New England Xylophone Symposium</a></li> 
+     </ul> 
+    </div> 
+   </div> 
+   <div id="footer" class="med_light_bg"> 
+    <div id="license">
+     <p><a href="http://creativecommons.org/licenses/by-nc/3.0/us/"> <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/us/88x31.png"> </a> <br>This text and images on this site are licensed under a <a href="http://creativecommons.org/licenses/by-nc/3.0/us/">Creative Commons Attribution-Noncommercial 3.0 United States License</a>.</p>
+    </div> 
+    <p><img style="display:none" src="http://ccmixter.org/mixter-files/images/cc-mixter-sq-logo.png">This site uses <a href="http://wiki.creativecommons.org/CcHost">ccHost</a>, licensed under <a href="http://creativecommons.org/licenses/GPL/2.0/">CC-GNU-GPL</a>, which is a product of the <a href="http://sourceforge.net/projects/cctools/">ccTools</a> project and uses <a href="http://getid3.sourceforge.net/">GetID3</a>. This site is sponsored by <a href="http://artistechmedia.com/">ArtisTech Media</a>. By using this site, you agree to our <a href="/terms">Terms of Use</a> and <a href="/privacy">Privacy Policy</a>. <br><br>Please note our <a href="/credits">site credits</a>. Contact: <a href="/media/people/contact/admin">site administrator</a>.<br><br> <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script> <script type="text/javascript">
+
+_uacct = "UA-2878955-1";
+
+urchinTracker();
+
+</script> </p>
+    <div class="hide" style="font-size:1px;"> 
+     <a href="/emails/indexe.php?index=90463027" rel="nofollow" id="__cnt_st">&nbsp;</a> 
+    </div> 
+    <script>$('__cnt_st').href = '';</script>
+    <p></p> 
+   </div>
+   <!-- footer --> 
+  </div> 
+  <!-- container --> 
+  <script type="text/javascript"> 
+    new modalHook( [ 'search_site_link' ]);  
+    $$('.selected_tab a').each( function(e) { e.style.cursor = 'default'; e.href = 'javascript:// disabled'; } );
+if( typeof(_cc_post_page_load) == 'function' ) { _cc_post_page_load(); }</script> 
+  <!--[if lt IE 7.]>
+<script defer type="text/javascript" src="http://ccmixter.org/ccskins/shared/js/pngfix.js"></script>
+<![endif]-->  
+ </body>
+</html>

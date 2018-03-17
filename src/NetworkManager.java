@@ -166,6 +166,10 @@ public class NetworkManager {
 			}
 
 			mMasterServerSockets = new ServerSocket[mNumSlaves];
+			mSockets = new Socket[mNumSlaves];
+			for (int j = 0; j < mSockets.length; ++j) {
+				mSockets[j] = null;
+			}
 			for (int i = 0; i < mNumSlaves; i++) {
 				int currentPort = mFirstPort + i;
 				try {
@@ -175,10 +179,6 @@ public class NetworkManager {
 					e.printStackTrace();
 				}
 				mMasterServerSockets[i] = new ServerSocket(currentPort);
-				mSockets = new Socket[mNumSlaves];
-				for (int j = 0; j < mNumSlaves; ++j) {
-					mSockets[j] = null;
-				}
 				while (true) {
 					mSockets[i] = mMasterServerSockets[i].accept();
 					// System.out.println("*****tag****");
@@ -229,7 +229,9 @@ public class NetworkManager {
 			// Create ObjectOutputStream for sockets
 			mObjectOutputStream = new ObjectOutputStream[mSockets.length];
 			for (int i = 0; i < mSockets.length; i++) {
+				System.out.println("a mObjectOutputStream "+i+" "+mSockets[i]);
 				mObjectOutputStream[i] = new ObjectOutputStream(mSockets[i].getOutputStream());
+				System.out.println("b mObjectOutputStream "+i+" "+mSockets[i]+"    "+mObjectOutputStream[i]);
 			}
 
 			// Create threads to listen to another machine
@@ -411,28 +413,31 @@ public class NetworkManager {
 	}
 
 	private boolean send(int protocol, Object obj) {
-		if (mSockets == null) {
+		if (mObjectOutputStream == null) {
 			return false;
 		}
 		for (int i = 0; i < mObjectOutputStream.length; ++i) {
 			ObjectOutputStream output = mObjectOutputStream[i];
 			if (output == null) {
+				System.out.println("machine " + (isMaster() ? i : -1) + " socket-output-stream is null.  protocol:" + protocol + " " + to_string(obj));
 				continue;
 			}
 			try {
 				output.writeObject(protocol);
 				output.writeObject(obj != null ? obj : 0);// 0 is a placeholder
 				System.out.println("Send to machine " + (isMaster() ? i : -1) + "  protocol:" + protocol + " " + to_string(obj));
-				return true;
 			} catch (EOFException e) {
 				e.printStackTrace();
+				return false;
 			} catch (java.net.SocketException e) {
 				e.printStackTrace();
+				return false;
 			} catch (Exception e) {
 				e.printStackTrace();
+				return false;
 			}
 		}
-		return false;
+		return true;
 	}
 
 	public boolean sendProtocol_StartOriginal() {

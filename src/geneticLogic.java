@@ -50,7 +50,9 @@ public class geneticLogic {
 		NetworkManager.getInstance().waitForAllSlaves();
 		NetworkManager.getInstance().sendProtocol_PrepareNew();
 
+		int loop_round = 0;
 		while (!maxFitnessFound && isRunning) {
+			++loop_round;
 			NetworkManager.getInstance().dispatchProtocols();
 			long startTime = System.currentTimeMillis();
 			boolean error = false;
@@ -104,7 +106,7 @@ public class geneticLogic {
 			}
 
 			long paraEndTime = System.currentTimeMillis();
-			System.out.println("parallel part takes " + (paraEndTime - startTime) + "ms");
+			System.out.println("parallel part takes " + (paraEndTime - startTime) + "ms   "+NetworkManager.to_string(mInitialPopulation));
 
 			// ranking and ordering the chromosomes based on the fitness function.
 			// no sorting code found?(by Xiaolin)
@@ -195,6 +197,7 @@ public class geneticLogic {
 			 * is repeated. Terminate the loop in predetermined number of iterations.
 			 */
 		}
+		System.out.println("geneticLogic runs " + loop_round + " loops for fitness-threshhold: "+FITNESS_THRESHHOLD+".  "+ NetworkManager.to_string(result.cfg)+"    mInitialPopulation:"+ NetworkManager.to_string(mInitialPopulation));
 		return result;
 	}
 	

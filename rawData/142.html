@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+ <head> 
+  <base href="http://www.vybory.izbirkom.ru/"> 
+  <link href="/css/report.css" rel="stylesheet" type="text/css"> 
+  <title>Сведения о проводящихся выборах и референдумах</title> 
+  <meta http-equiv="pragma" content="no-cache"> 
+  <meta http-equiv="cache-control" content="no-cache"> 
+  <meta http-equiv="expires" content="0"> 
+  <script type="text/javascript">
+	
+	var st1 = null; // переменная, хранящая ссылку на SortableTable, !=null для сортируемых таблиц
+
+	function getXls() {
+		var sortorder = "0";
+		if ((st1 != null)&&(st1.sortDesc != null)) {
+			if (st1.sortDesc) {
+				sortorder = "1";
+			} else {
+				sortorder = "-1";
+			}
+		}
+
+		window.location.assign("http://www.vybory.izbirkom.ru/servlet/ExcelReportVersion?"+
+								"region=0&"+
+								"sub_region=0&"+
+								"root=1&"+
+						
+								"global=1&"+
+								"vrn=100100031793505&"+
+								"tvd=100100031793509&"+
+								"type=226&"+
+								"vibid=100100031793509&"+
+								"condition=&"+
+								"action=show&"+
+								"version=null&"+
+								"prver=0&"+
+								"sortorder="+sortorder);
+	}
+	
+</script> 
+ </head> 
+ <body text="#000000" link="#0000ff" vlink="#0000ff" alink="#ff0000" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" bottommargin="0"> 
+  <table cellpadding="0" cellspacing="0" width="100%" border="0"> 
+   <tbody>
+    <tr> 
+     <td align="center" width="100%"> </td> 
+    </tr> 
+   </tbody>
+  </table> 
+  <link href="header/00/00.css" rel="stylesheet" type="text/css"> 
+  <link type="text/css" rel="stylesheet" href="header/00/fonts/PTS75F_stylesheet.css"> 
+  <div class="ib-header"> 
+   <div class="ib-header-wrapper"> 
+    <a class="ib-header-cik" href="http://cikrf.ru"> <img src="header/00/header_bg.jpg" alt=""> </a> 
+    <a class="ib-header-link" href="http://www.vybory.izbirkom.ru/region/izbirkom">Выборы, референдумы и иные формы прямого волеизъявления</a> 
+   </div> 
+  </div> 
+  <table width="100%" cellpadding="0" cellspacing="0" height="80%" style="padding-left: 3px; padding-right: 3px;"> 
+   <tbody>
+    <tr valign="top" height="20px"> 
+     <td width="100%" align="center" height="20px" valign="top">
+      <!-- history --> <a href="region/izbirkom?action=show&amp;root_a=1&amp;vrn=100100031793505&amp;region=0&amp;global=1&amp;type=0&amp;prver=0&amp;pronetvd=null">ЦИК России</a> </td> 
+    </tr> 
+    <tr valign="top" height="20px"> 
+     <td width="100%" align="center" height="20px" valign="top"> 
+      <form name="go_reg">
+       Нижестоящие избирательные комиссии: 
+       <select name="gs"><option val="">---</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000022&amp;tvd=100100031793851&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793851"> Республика Адыгея (Адыгея)</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000061&amp;tvd=100100031793910&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793910"> Республика Алтай</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000023&amp;tvd=100100031793852&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793852"> Республика Башкортостан</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000024&amp;tvd=100100031793853&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793853"> Республика Бурятия</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000025&amp;tvd=100100031793854&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793854"> Республика Дагестан</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000027&amp;tvd=100100031793876&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793876"> Республика Ингушетия</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000064&amp;tvd=100100031793913&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793913"> Кабардино-Балкарская Республика</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000028&amp;tvd=100100031793877&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793877"> Республика Калмыкия</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000045&amp;tvd=100100031793894&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793894"> Карачаево-Черкесская Республика</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000029&amp;tvd=100100031793878&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793878"> Республика Карелия</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000031&amp;tvd=100100031793880&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793880"> Республика Коми</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000032&amp;tvd=100100031793881&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793881"> Республика Марий Эл</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000046&amp;tvd=100100031793895&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793895"> Республика Мордовия</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000005&amp;tvd=100100031793514&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793514"> Республика Саха (Якутия)</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000006&amp;tvd=100100031793835&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793835"> Республика Северная Осетия - Алания</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000035&amp;tvd=100100031793884&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793884"> Республика Татарстан (Татарстан)</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000037&amp;tvd=100100031793886&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793886"> Республика Тыва</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000038&amp;tvd=100100031793887&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793887"> Удмуртская Республика</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000007&amp;tvd=100100031793836&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793836"> Республика Хакасия</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000065&amp;tvd=100100031793914&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793914"> Чеченская Республика</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000016&amp;tvd=100100031793845&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793845"> Чувашская Республика - Чувашия</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000066&amp;tvd=100100031793915&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793915"> Алтайский край</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000083&amp;tvd=100100031793932&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793932"> Забайкальский край</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000081&amp;tvd=100100031793930&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793930"> Камчатский край</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000017&amp;tvd=100100031793846&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793846"> Краснодарский край</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000008&amp;tvd=100100031793837&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793837"> Красноярский край</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000082&amp;tvd=100100031793931&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793931"> Пермский край</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000060&amp;tvd=100100031793909&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793909"> Приморский край</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000067&amp;tvd=100100031793916&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793916"> Ставропольский край</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000040&amp;tvd=100100031793889&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793889"> Хабаровский край</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000068&amp;tvd=100100031793917&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793917"> Амурская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000047&amp;tvd=100100031793896&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793896"> Архангельская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000009&amp;tvd=100100031793838&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793838"> Астраханская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000010&amp;tvd=100100031793839&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793839"> Белгородская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000069&amp;tvd=100100031793918&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793918"> Брянская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000011&amp;tvd=100100031793840&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793840"> Владимирская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000070&amp;tvd=100100031793919&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793919"> Волгоградская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000048&amp;tvd=100100031793897&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793897"> Вологодская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000012&amp;tvd=100100031793841&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793841"> Воронежская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000013&amp;tvd=100100031793842&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793842"> Ивановская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000014&amp;tvd=100100031793843&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793843"> Иркутская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000071&amp;tvd=100100031793920&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793920"> Калининградская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000015&amp;tvd=100100031793844&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793844"> Калужская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000062&amp;tvd=100100031793911&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793911"> Кемеровская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000018&amp;tvd=100100031793847&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793847"> Кировская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000019&amp;tvd=100100031793848&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793848"> Костромская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000049&amp;tvd=100100031793898&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793898"> Курганская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000050&amp;tvd=100100031793899&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793899"> Курская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000072&amp;tvd=100100031793921&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793921"> Ленинградская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000051&amp;tvd=100100031793900&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793900"> Липецкая область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000052&amp;tvd=100100031793901&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793901"> Магаданская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000021&amp;tvd=100100031793850&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793850"> Московская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000073&amp;tvd=100100031793922&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793922"> Мурманская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000053&amp;tvd=100100031793902&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793902"> Нижегородская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000079&amp;tvd=100100031793928&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793928"> Новгородская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000074&amp;tvd=100100031793923&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793923"> Новосибирская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000080&amp;tvd=100100031793929&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793929"> Омская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000030&amp;tvd=100100031793879&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793879"> Оренбургская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000075&amp;tvd=100100031793924&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793924"> Орловская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000034&amp;tvd=100100031793883&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793883"> Пензенская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000041&amp;tvd=100100031793890&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793890"> Псковская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000076&amp;tvd=100100031793925&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793925"> Ростовская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000058&amp;tvd=100100031793907&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793907"> Рязанская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000054&amp;tvd=100100031793903&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793903"> Самарская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000055&amp;tvd=100100031793904&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793904"> Саратовская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000059&amp;tvd=100100031793908&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793908"> Сахалинская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000077&amp;tvd=100100031793926&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793926"> Свердловская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000002&amp;tvd=100100031793511&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793511"> Смоленская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000003&amp;tvd=100100031793512&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793512"> Тамбовская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000036&amp;tvd=100100031793885&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793885"> Тверская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000078&amp;tvd=100100031793927&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793927"> Томская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000004&amp;tvd=100100031793513&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793513"> Тульская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000063&amp;tvd=100100031793912&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793912"> Тюменская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000056&amp;tvd=100100031793905&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793905"> Ульяновская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000033&amp;tvd=100100031793882&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793882"> Челябинская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000026&amp;tvd=100100031793875&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793875"> Ярославская область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000020&amp;tvd=100100031793849&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793849"> Город Москва</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000039&amp;tvd=100100031793888&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793888"> Город Санкт-Петербург</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000042&amp;tvd=100100031793891&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793891"> Еврейская автономная область</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000043&amp;tvd=100100031793892&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793892"> Ненецкий автономный округ</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000057&amp;tvd=100100031793906&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793906"> Ханты-Мансийский автономный округ - Югра</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000044&amp;tvd=100100031793893&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793893"> Чукотский автономный округ</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000001&amp;tvd=100100031793510&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100031793510"> Ямало-Ненецкий автономный округ</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000084&amp;tvd=100100032124922&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100032124922">98 Город Байконур (Республика Казахстан)</option><option value="http://www.vybory.izbirkom.ru/region/izbirkom?action=show&amp;global=true&amp;root=1000085&amp;tvd=100100032124923&amp;vrn=100100031793505&amp;prver=0&amp;pronetvd=null&amp;region=0&amp;sub_region=0&amp;type=226&amp;vibid=100100032124923">99 Территория за пределами РФ</option></select> 
+       <input type="Button" name="go" value="Перейти" onclick="if(this.form.gs.value!='' &amp;&amp; this.form.gs.value!='---')self.location=this.form.gs.value">
+      </form> </td> 
+    </tr> 
+    <tr valign="top" align="left"> 
+     <td> <a href="javascript:getXls();">Версия для печати</a> <br><br> </td> 
+    </tr> 
+    <tr valign="top" height="100%"> 
+     <td valign="top" height="100%"> 
+      <link href="css/226.css" rel="stylesheet" type="text/css"><script type="text/javascript" src="js/sorter.js"></script>
+      <table border="0" cellpadding="3" width="100%" cellspacing="1" bgcolor="white"> 
+       <tbody>
+        <tr class="w2"> 
+         <td bgcolor="#555555" class="headers" align="center"><b>Результаты выборов</b></td> 
+        </tr> 
+        <tr class="w2"> 
+         <td bgcolor="#555555" class="headers" align="center"><b>Выборы Президента Российской Федерации</b></td> 
+        </tr> 
+       </tbody>
+      </table>
+      <table width="100%"> 
+       <tbody>
+        <tr> 
+         <td align="center"> Дата голосования:&nbsp; </td> 
+        </tr> 
+       </tbody>
+      </table>
+      <table border="0" cellpadding="5" cellspacing="1" width="100%" bgcolor="ffffff"> 
+       <tbody>
+        <tr style="padding:0;border-spacing:0;height:2px;"> 
+         <td background="img/e.gif" colspan="2" style="padding:0;border-spacing:0;height:2px;"></td> 
+        </tr> 
+        <tr bgcolor="eeeeee"> 
+         <td valign="top" width="45%"><b>Наименование избирательной комиссии</b></td>
+         <td>ЦИК России</td> 
+        </tr> 
+        <tr style="padding:0;border-spacing:0;height:2px;"> 
+         <td background="img/e.gif" colspan="2" style="padding:0;border-spacing:0;height:2px;"></td> 
+        </tr> 
+       </tbody>
+      </table>
+      <table border="0" cellpadding="3" width="100%" cellspacing="1" bgcolor="white"> 
+       <tbody>
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black"><font style="color:black">Число избирательных комиссий субъектов Российской Федерации - <b>83</b></font> <br> <font style="color:black">Число избирательных комиссий субъектов Российской Федерации, территориальные комиссии которых приступили к передаче сведений - <b>83</b></font> <br> </td> 
+        </tr> 
+       </tbody>
+      </table>
+      <table border="0" cellpadding="3" width="100%" cellspacing="1" bgcolor="white"> 
+       <tbody>
+        <tr class="w2"> 
+         <td bgcolor="#555555" class="headers" align="right"> Дата и время подписания протокола 07.03.2012 21:59:00</td> 
+        </tr> 
+       </tbody>
+      </table>
+      <table border="0" bgcolor="#ffffff" cellpadding="2" cellspacing="1" width="100%"> 
+       <tbody>
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">1</td>
+         <td style="color:black">Число избирателей, включенных в список избирателей</td>
+         <td style="color:black" align="right"><b>109860331</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">2</td>
+         <td style="color:black">Число избирательных бюллетеней, полученных участковой избирательной комиссией</td>
+         <td style="color:black" align="right"><b>103567183</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">3</td>
+         <td style="color:black">Число избирательных бюллетеней, выданных избирателям, проголосовавшим досрочно</td>
+         <td style="color:black" align="right"><b>239569</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">4</td>
+         <td style="color:black">Число избирательных бюллетеней, выданных в помещении для голосования в день голосования</td>
+         <td style="color:black" align="right"><b>65639398</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">5</td>
+         <td style="color:black">Число избирательных бюллетеней, выданных вне помещения для голосования в день голосования</td>
+         <td style="color:black" align="right"><b>5901833</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">6</td>
+         <td style="color:black">Число погашенных избирательных бюллетеней</td>
+         <td style="color:black" align="right"><b>31785750</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">7</td>
+         <td style="color:black">Число избирательных бюллетеней в переносных ящиках для голосования</td>
+         <td style="color:black" align="right"><b>6139277</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">8</td>
+         <td style="color:black">Число бюллетеней в стационарных ящиках для голосования</td>
+         <td style="color:black" align="right"><b>65562388</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">9</td>
+         <td style="color:black">Число недействительных избирательных бюллетеней</td>
+         <td style="color:black" align="right"><b>836691</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">10</td>
+         <td style="color:black">Число действительных избирательных бюллетеней</td>
+         <td style="color:black" align="right"><b>70864974</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">11</td>
+         <td style="color:black">Число полученных открепительных удостоверений</td>
+         <td style="color:black" align="right"><b>2257205</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">12</td>
+         <td style="color:black">Число открепительных удостоверений, выданных избирателям на избирательном участке</td>
+         <td style="color:black" align="right"><b>1979696</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">13</td>
+         <td style="color:black">Число избирателей, проголосовавших по открепительным удостоверениям</td>
+         <td style="color:black" align="right"><b>1600046</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">14</td>
+         <td style="color:black">Число неиспользованных открепительных удостоверений</td>
+         <td style="color:black" align="right"><b>277475</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">15</td>
+         <td style="color:black">Число открепительных удостоверений, выданных избирателям ТИК</td>
+         <td style="color:black" align="right"><b>187217</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">16</td>
+         <td style="color:black">Число утраченных открепительных удостоверений</td>
+         <td style="color:black" align="right"><b>34</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">17</td>
+         <td style="color:black">Число утраченных избирательных бюллетеней</td>
+         <td style="color:black" align="right"><b>730</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">18</td>
+         <td style="color:black">Число избирательных бюллетеней, не учтенных при получении</td>
+         <td style="color:black" align="right"><b>97</b> <br> </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black"></td>
+         <td style="color:black" colspan="2">
+          <nobr>
+           <b>&nbsp;</b>
+          </nobr></td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">19</td>
+         <td style="color:black">Жириновский Владимир Вольфович</td>
+         <td style="color:black" align="right"><b>4458103</b> <br>6.22% </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">20</td>
+         <td style="color:black">Зюганов Геннадий Андреевич</td>
+         <td style="color:black" align="right"><b>12318353</b> <br>17.18% </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">21</td>
+         <td style="color:black">Миронов Сергей Михайлович</td>
+         <td style="color:black" align="right"><b>2763935</b> <br>3.85% </td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">22</td>
+         <td style="color:black">Прохоров Михаил Дмитриевич</td>
+         <td style="color:black" align="right"><b>5722508</b> <br>7.98% </td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">23</td>
+         <td style="color:black">Путин Владимир Владимирович</td>
+         <td style="color:black" align="right"><b>45602075</b> <br>63.60% </td> 
+        </tr> 
+       </tbody>
+      </table>
+      <table border="0" cellpadding="3" width="100%" cellspacing="1" bgcolor="white"> 
+       <tbody>
+        <tr class="w2"> 
+         <td bgcolor="#555555" class="headers" align="right"><b><a style="text-decoration: none; color:#FFFFFF;" href="http://www.vybory.izbirkom.ru/region/region/izbirkom?action=show&amp;root=1&amp;tvd=100100031793509&amp;vrn=100100031793505&amp;region=0&amp;global=1&amp;sub_region=0&amp;prver=0&amp;pronetvd=null&amp;type=227">Перейти к сводной таблице итогов голосования</a></b></td> 
+        </tr> 
+       </tbody>
+      </table><br>
+      <table border="0" bgcolor="#ffffff" cellpadding="2" cellspacing="1" width="100%"> 
+       <tbody>
+        <tr> 
+         <td colspan="3" bgcolor="#555555" class="headers" align="center">Данные Центральной избирательной комиссии Российской Федерации о числе открепительных удостоверений</td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">и</td>
+         <td style="color:black" align="left">Число открепительных удостоверений, полученных Центральной избирательной комиссией Российской Федерации</td>
+         <td style="color:black" align="right"><b>2600000</b></td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">к</td>
+         <td style="color:black" align="left">Число открепительных удостоверений, выданных нижестоящим избирательным комиссиям</td>
+         <td style="color:black" align="right"><b>2600000</b></td> 
+        </tr> 
+        <tr bgcolor="#CCCCCC"> 
+         <td style="color:black">л</td>
+         <td style="color:black" align="left">Число неиспользованных открепительных удостоверений, оставшихся в Центральной избирательной комиссии Российской Федерации</td>
+         <td style="color:black" align="right"><b>0</b></td> 
+        </tr> 
+        <tr bgcolor="#FFFFFF"> 
+         <td style="color:black">м</td>
+         <td style="color:black" align="left">Число утраченных в Центральной избирательной комиссии Российской Федерации открепительных удостоверений</td>
+         <td style="color:black" align="right"><b>0</b></td> 
+        </tr> 
+        <tr> 
+         <td colspan="3" bgcolor="#555555" class="headers" align="center"> &nbsp; </td> 
+        </tr> 
+       </tbody>
+      </table> </td> 
+    </tr> 
+   </tbody>
+  </table> 
+  <br> 
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26136728-1']);
+  _gaq.push(['_setDomainName', 'izbirkom.ru']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>   
+ </body>
+</html>
