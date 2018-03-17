@@ -1,426 +1,717 @@
-<html>
+<!doctype html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9" lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec" prefix="og: http://ogp.me/ns#">
+ <!--<![endif]-->
  <head> 
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-  <script>var wp_ms_start = new Date().getTime();</script> 
-  <script type="text/javascript" src="http://media3.washingtonpost.com/wp-srv/javascript/framework/prototype.js"></script> 
-  <script language="javascript" src="http://media10.washingtonpost.com/wp/js/papl.js"></script> 
-  <script type="text/javascript" src="http://media3.washingtonpost.com/wp-srv/js/utilsStatic.js"></script> 
-  <script type="text/javascript" src="http://media3.washingtonpost.com/wp-srv/js/Utils.js"></script> 
-  <script>var utils = new Utils();</script> 
-  <script type="text/javascript" src="http://media3.washingtonpost.com/wp-srv/js/vendor-on_off.js"></script> 
-  <script src="http://media3.washingtonpost.com/wp-srv/javascript/factorTG.js"></script> 
-  <!-- None --> 
-  <title>A Surfeit of Scoundrels</title> 
-  <link rel="canonical" href="http://www.washingtonpost.com/wp-dyn/content/article/2005/09/22/AR2005092202023.html"> 
-  <meta name="keywords" content=""> 
-  <meta name="description" content="MARYLAND Republicans are angry, and rightly so, that Democratic operatives would fraudulently obtain the credit report of Lt. Gov. Michael S. Steele, an all-but-declared candidate in next year's race for the U.S. Senate. A pair of twentysomething operatives for the Democratic Senatorial Campaign..."> 
-  <script language="javascript">
-<!--
-thisNode = 'opinions/editorials/fedpage';
-commercialNode ='opinion/editorials/fedpage';
-// -->
-</script> 
-  <script src="http://media3.washingtonpost.com/wp-srv/ad/ad_v2.js"></script> 
-  <script language="JavaScript" type="text/javascript">
-<!--
-function popitup(url, height, width)
-{
-var dimString = "'" + "height=" + height + ",width=" + width + ",scrollbars=1" + "'"
-newwindow=window.open(url,'name',dimString);
-if (window.focus) {newwindow.focus()}
-return false;
-}
-// -->
-</script> 
-  <script src="http://media3.washingtonpost.com/wp-srv/javascript/init.js"></script> 
-  <style>
-@import url("http://media3.washingtonpost.com/wp-srv/css/topstrip_teased.css");
-@import url("http://media3.washingtonpost.com/wp-srv/css/sidebars.css");
-@import url("http://media3.washingtonpost.com/wp-srv/css/bullets.css");
-@import url("http://media3.washingtonpost.com/wp-srv/css/feature.css");
-@import url("http://media3.washingtonpost.com/wp-srv/css/feature_ls.css");
-@import url("http://media3.washingtonpost.com/wp-srv/css/misc_linkset.css");
-@import url("http://media3.washingtonpost.com/wp-srv/css/story/main.css");
-@import url("http://media3.washingtonpost.com/wp-srv/css/article_media.css");
-@import url("http://media3.washingtonpost.com/wp-srv/css/related-bottom-content.css");
-@import url("http://media3.washingtonpost.com/wp-srv/css/bookmarking_v2.css");
-@import url("http://media3.washingtonpost.com/wp-srv/css/networked-news.css");
-@import url("http://media10.washingtonpost.com/wp/css/specials-js.css");
-</style> 
-  <!--[if IE]>
-<link href="http://media3.washingtonpost.com/wp-srv/css/networked-news-ie.css" rel="stylesheet" media="all"/>
+  <meta charset="UTF-8">
+  <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script> 
+  <meta name="viewport" content="width=device-width"> 
+  <title>New Observations of "Most Mysterious Star in the Galaxy"</title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://www.skyandtelescope.com/xmlrpc.php"> 
+  <!--[if lt IE 9]>
+<script src="http://wwwcdn.skyandtelescope.com/wp-content/themes/fw-twentytwelve/js/html5.js" type="text/javascript"></script>
 <![endif]--> 
-  <script src="http://media3.washingtonpost.com/wp-srv/js/related-bottom-content.js"></script> 
-  <meta name="DC.date.issued" content="2005-09-23"> 
-  <link rel="image_src" href="http://media3.washingtonpost.com/wp-srv/images/twp-50x50.jpg"> 
-  <meta property="og:type" content="article"> 
-  <meta property="og:title" content="A Surfeit of Scoundrels"> 
-  <meta property="og:url" content="http://www.washingtonpost.com/wp-dyn/content/article/2005/09/22/AR2005092202023.html"> 
-  <meta property="og:image" content="http://media3.washingtonpost.com/wp-srv/images/twp-50x50.jpg"> 
-  <meta name="canonical_url" content="http://www.washingtonpost.com/wp-dyn/content/article/2005/09/22/AR2005092202023.html"> 
-  <meta name="profile_description" value="MARYLAND Republicans are angry, and rightly so, that Democratic operatives would fraudulently obtain the credit report of Lt. Gov. Michael S. Steele, an all-but-declared candidate in next year's race for the U.S. Senate. A pair of twentysomething operatives for the Democratic Senatorial Campaign..."> 
-  <meta name="profile_picture" value="http://media3.washingtonpost.com/wp-srv/images/twp-50x50.jpg"> 
-  <meta property="fb:app_id" content="41245586762"> 
-  <script language="javascript" src="http://media3.washingtonpost.com/wp-srv/js/HotContent.js"></script> 
-  <script src="http://media3.washingtonpost.com/wp-srv/javascript/article/init.js"></script> 
-  <script language="JavaScript">var SA_Message="SACategory=" + 'opinions/editorials';</script> 
-  <script language="javascript" src="http://media.washingtonpost.com/wp-srv/ad/ad_configurations_article_v2.js"></script> 
-  <script language="javascript" src="http://media.washingtonpost.com/wp-srv/popjs/popupCampaignClasses.js"></script> 
   <script type="text/javascript">
-<!--
-/** Variables from WPNI Article Page **/
-var wp_article = {
-"publishDate":	 new Date(1127448000000),
-"id":				 "AR2005092202023",
-"path":			  "http://www.washingtonpost.com/wp-dyn/content/article/2005/09/22/AR2005092202023.html",
-"comments_url":	"http://www.washingtonpost.com/wp-dyn/content/article/2005/09/22/AR2005092202023_Comments.html",
-"headline":		 "A Surfeit of Scoundrels",
-"reporter":		 "",
-"abstract":		 "MARYLAND Republicans are angry, and rightly so, that Democratic operatives would fraudulently obtain the credit report of Lt. Gov. Michael S. Steele, an all-but-declared candidate in next year's race for the U.S. Senate. A pair of twentysomething operatives for the Democratic Senatorial Campaign...",
-"section":		  "print",
-"allow_comments": "",
-"comments_period": 3
-};
-// -->
+var dataLayer = [];
 </script> 
-  <!--#include virtual="/wp-srv/network-news/ssi/head-1.0.html"--> 
-  <!--#include virtual="/wp-srv/js/timefmt.html"--> 
-  <link href="http://media3.washingtonpost.com/wp-srv/css/global.css" rel="stylesheet" media="all"> 
-  <link href="http://media3.washingtonpost.com/wp-srv/css/layout/revclamp970.css" rel="stylesheet" media="all"> 
-  <link href="http://media3.washingtonpost.com/wp-srv/css/article.css" rel="stylesheet" media="all"> 
+  <script type="text/javascript" src="//assets.adobedtm.com/eeabfecf1ea8efeee8089b11ad6abf60b1923718/satelliteLib-75ece947334e84857cbf24e6f743caf4de53db34.js"></script> 
+  <meta name="adobe-dtm-wordpress" content="true"> 
+  <!-- This site is optimized with the Yoast SEO plugin v6.1.1 - https://yoa.st/1yg?utm_content=6.1.1 --> 
+  <meta name="description" content="New data on Boyajian's Star show that dust — not an alien megastructure — is probably the cause of this star's mysterious behavior."> 
+  <meta name="news_keywords" content="tabby's star, science, space, astronomy, night sky"> 
+  <meta name="original-source" content="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"> 
+  <link rel="canonical" href="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"> 
+  <link rel="publisher" href="https://plus.google.com/111570038166307347855/about"> 
+  <meta property="og:locale" content="en_US"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:title" content="New Observations of &quot;Most Mysterious Star in the Galaxy&quot;"> 
+  <meta property="og:description" content="New data on Boyajian's Star show that dust — not an alien megastructure — is probably the cause of this star's mysterious behavior."> 
+  <meta property="og:url" content="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"> 
+  <meta property="og:site_name" content="Sky &amp; Telescope"> 
+  <meta property="article:publisher" content="https://www.facebook.com/pages/Sky-Telescope-Magazine/66274830772"> 
+  <meta property="article:tag" content="Tabby's Star"> 
+  <meta property="article:section" content="Astronomy News"> 
+  <meta property="article:published_time" content="2018-01-03T16:12:55-04:00"> 
+  <meta property="article:modified_time" content="2018-01-03T16:20:11-04:00"> 
+  <meta property="og:updated_time" content="2018-01-03T16:20:11-04:00"> 
+  <meta property="og:image" content="http://wwwcdn.skyandtelescope.com/wp-content/uploads/BoyajiansStar-art-480px.jpg"> 
+  <meta property="og:image:width" content="480"> 
+  <meta property="og:image:height" content="274"> 
+  <meta name="twitter:card" content="summary"> 
+  <meta name="twitter:description" content="New data on Boyajian's Star show that dust — not an alien megastructure — is probably the cause of this star's mysterious behavior."> 
+  <meta name="twitter:title" content="New Observations of &quot;Most Mysterious Star in the Galaxy&quot;"> 
+  <meta name="twitter:site" content="@skyandtelescope"> 
+  <meta name="twitter:image" content="http://wwwcdn.skyandtelescope.com/wp-content/uploads/BoyajiansStar-art-480px.jpg"> 
+  <meta name="twitter:creator" content="@skyandtelescope"> 
+  <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"http:\/\/www.skyandtelescope.com\/","name":"Sky &amp; Telescope","potentialAction":{"@type":"SearchAction","target":"http:\/\/www.skyandtelescope.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script> 
+  <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"http:\/\/www.skyandtelescope.com\/astronomy-news\/new-observations-mysterious-star-boyajian\/","sameAs":["https:\/\/www.facebook.com\/pages\/Sky-Telescope-Magazine\/66274830772","https:\/\/plus.google.com\/111570038166307347855\/about","https:\/\/twitter.com\/skyandtelescope"],"@id":"#organization","name":"Sky & Telescope","logo":""}</script> 
+  <!-- / Yoast SEO plugin. --> 
+  <link rel="dns-prefetch" href="//www.skyandtelescope.com"> 
+  <link rel="dns-prefetch" href="//fonts.googleapis.com"> 
+  <link rel="dns-prefetch" href="//s.w.org"> 
+  <link rel="alternate" type="application/rss+xml" title="Sky &amp; Telescope » Feed" href="http://www.skyandtelescope.com/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="Sky &amp; Telescope » Comments Feed" href="http://www.skyandtelescope.com/comments/feed/"> 
+  <link rel="alternate" type="text/calendar" title="Sky &amp; Telescope » iCal Feed" href="http://www.skyandtelescope.com/astronomy-events/?ical=1"> 
+  <link rel="alternate" type="application/rss+xml" title="Sky &amp; Telescope » New Observations of the “Most Mysterious Star in the Galaxy” Comments Feed" href="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/feed/"> 
+  <script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/wwwcdn.skyandtelescope.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script> 
+  <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style> 
+  <link rel="stylesheet" id="dashicons-css" href="http://wwwcdn.skyandtelescope.com/wp-includes/css/dashicons.min.css?ver=4.8.2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="theme-my-login-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/theme-my-login/theme-my-login.css?ver=6.4.10" type="text/css" media="all"> 
+  <link rel="stylesheet" id="widget-calendar-pro-style-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/events-calendar-pro/src/resources/css/widget-calendar-full.css?ver=4.4.21" type="text/css" media="all"> 
+  <link rel="stylesheet" id="tribe_events-widget-calendar-pro-style-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/events-calendar-pro/src/resources/css/widget-calendar-theme.css?ver=4.4.21" type="text/css" media="all"> 
+  <link rel="stylesheet" id="tribe_events--widget-calendar-pro-override-style-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/events-calendar-pro/src/resources/css/widget-calendar-theme.css?ver=4.4.21" type="text/css" media="all"> 
+  <link rel="stylesheet" id="contact-form-7-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.9.2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="tribe-events-full-pro-calendar-style-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-full.min.css?ver=4.4.21" type="text/css" media="all"> 
+  <link rel="stylesheet" id="tribe-events-calendar-pro-style-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-theme.min.css?ver=4.4.21" type="text/css" media="all"> 
+  <link rel="stylesheet" id="tribe-events-calendar-full-pro-mobile-style-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-full-mobile.min.css?ver=4.4.21" type="text/css" media="only screen and (max-width: 768px)"> 
+  <link rel="stylesheet" id="tribe-events-calendar-pro-mobile-style-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-theme-mobile.min.css?ver=4.4.21" type="text/css" media="only screen and (max-width: 768px)"> 
+  <link rel="stylesheet" id="twentytwelve-fonts-css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext" type="text/css" media="all"> 
+  <link rel="stylesheet" id="twentytwelve-style-css" href="http://wwwcdn.skyandtelescope.com/wp-content/themes/fw-twentytwelve/style.css?ver=4.8.2" type="text/css" media="all"> 
+  <!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://wwwcdn.skyandtelescope.com/wp-content/themes/fw-twentytwelve/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="addthis_all_pages-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/addthis/frontend/build/addthis_wordpress_public.min.css?ver=4.8.2" type="text/css" media="all"> 
+  <link rel="stylesheet" id="fancybox-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.8.min.css?ver=1.6.2" type="text/css" media="screen"> 
+  <link rel="stylesheet" id="wp-form-css" href="http://wwwcdn.skyandtelescope.com/wp-content/plugins/fw-exacttarget-forms/css/frontend.form.css?ver=0.1.0" type="text/css" media="screen"> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/plugins/fw-embedded-media/behavior.js?ver=4.8.2"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.7.2"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/plugins/theme-my-login/modules/themed-profiles/themed-profiles.js?ver=4.8.2"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/plugins/usp-pro/js/usp-pro.js?ver=2.7.1"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/plugins/fw-exacttarget-forms/js/et_onsubmit.js?ver=4.8.2"></script> 
+  <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=etCaptchaInit&amp;render=explicit&amp;ver=4.8.2"></script> 
+  <link rel="https://api.w.org/" href="http://www.skyandtelescope.com/wp-json/"> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.skyandtelescope.com/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://wwwcdn.skyandtelescope.com/wp-includes/wlwmanifest.xml"> 
+  <meta name="generator" content="WordPress 4.8.2"> 
+  <link rel="shortlink" href="http://www.skyandtelescope.com/?p=255471581"> 
+  <link rel="alternate" type="application/json+oembed" href="http://www.skyandtelescope.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.skyandtelescope.com%2Fastronomy-news%2Fnew-observations-mysterious-star-boyajian%2F"> 
+  <link rel="alternate" type="text/xml+oembed" href="http://www.skyandtelescope.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.skyandtelescope.com%2Fastronomy-news%2Fnew-observations-mysterious-star-boyajian%2F&amp;format=xml"> 
+  <!-- OpenX header script --> 
+  <script type="text/javascript" src="http://fwmedia-d.openx.net/w/1.0/jstag"></script> 
+  <script type="text/javascript">
+                     var OX_ab68b0ad5d = OX();
+                     OX_ab68b0ad5d.addVariable("kw", "cat11,cat16,post255471581,tag1406")
+                     OX_ab68b0ad5d.addPage("537063111");
+                     OX_ab68b0ad5d.fetchAds();
+                   </script> 
+  <!-- end generated tag -->
+  <!-- Category Reference
+Category 11 = Astronomy News
+Category 16 = Stellar Science
+Tag 1406 = Tabby's Star
+--> 
+  <script type="text/javascript"><!--
+function powerpress_pinw(pinw_url){window.open(pinw_url, 'PowerPressPlayer','toolbar=0,status=0,resizable=1,width=460,height=320');	return false;}
+//-->
+</script> 
+  <meta name="tec-api-version" content="v1">
+  <meta name="tec-api-origin" content="http://www.skyandtelescope.com">
+  <link rel="https://theeventscalendar.com/" href="http://www.skyandtelescope.com/wp-json/tribe/events/v1/"> 
+  <!-- Google Tag Manager for WordPress by DuracellTomi - http://duracelltomi.com --> 
+  <script data-cfasync="false" type="text/javascript">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+	dataLayer.push({"pagePostType":"post","pagePostType2":"single-post","pageCategory":["astronomy-news","stellar-science"],"pageAttributes":["tabbys-star"],"pagePostAuthor":"John Bochanski"});
+</script> 
+  <script data-cfasync="false">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MFDSTQ');</script> 
+  <!-- End Google Tag Manager --> 
+  <!-- End Google Tag Manager for WordPress by DuracellTomi -->
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/plugins/si-captcha-for-wordpress/captcha/si_captcha.js?ver=1521323222"></script> 
+  <!-- begin SI CAPTCHA Anti-Spam - login/register form style --> 
+  <style type="text/css">
+.si_captcha_small { width:175px; height:45px; padding-top:10px; padding-bottom:10px; }
+.si_captcha_large { width:250px; height:60px; padding-top:10px; padding-bottom:10px; }
+img#si_image_com { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_reg { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_log { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_side_login { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_checkout { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_jetpack { border-style:none; margin:0; padding-right:5px; float:left; }
+img#si_image_bbpress_topic { border-style:none; margin:0; padding-right:5px; float:left; }
+.si_captcha_refresh { border-style:none; margin:0; vertical-align:bottom; }
+div#si_captcha_input { display:block; padding-top:15px; padding-bottom:5px; }
+label#si_captcha_code_label { margin:0; }
+input#si_captcha_code_input { width:65px; }
+p#si_captcha_code_p { clear: left; padding-top:10px; }
+.si-captcha-jetpack-error { color:#DC3232; }
+</style> 
+  <!-- end SI CAPTCHA Anti-Spam - login/register form style --> 
+  <script data-cfasync="false" type="text/javascript">if (window.addthis_product === undefined) { window.addthis_product = "wpp"; } if (window.wp_product_version === undefined) { window.wp_product_version = "wpp-6.1.2"; } if (window.wp_blog_version === undefined) { window.wp_blog_version = "4.8.2"; } if (window.addthis_share === undefined) { window.addthis_share = {}; } if (window.addthis_config === undefined) { window.addthis_config = {"data_track_clickback":true,"ignore_server_config":true,"ui_atversion":300}; } if (window.addthis_layers === undefined) { window.addthis_layers = {}; } if (window.addthis_layers_tools === undefined) { window.addthis_layers_tools = [{"sharetoolbox":{"numPreferredServices":5,"counts":"one","size":"16px","style":"fixed","shareCountThreshold":0,"elements":".addthis_inline_share_toolbox_above,.at-above-post,.at-above-post-page"}}]; } else { window.addthis_layers_tools.push({"sharetoolbox":{"numPreferredServices":5,"counts":"one","size":"16px","style":"fixed","shareCountThreshold":0,"elements":".addthis_inline_share_toolbox_above,.at-above-post,.at-above-post-page"}});  } if (window.addthis_plugin_info === undefined) { window.addthis_plugin_info = {"info_status":"enabled","cms_name":"WordPress","plugin_name":"Share Buttons by AddThis","plugin_version":"6.1.2","plugin_mode":"WordPress","anonymous_profile_id":"wp-32de68bf39e985d9c3a40197b730dc73","page_info":{"template":"posts","post_type":""},"sharing_enabled_on_post_via_metabox":false}; } 
+                    (function() {
+                      var first_load_interval_id = setInterval(function () {
+                        if (typeof window.addthis !== 'undefined') {
+                          window.clearInterval(first_load_interval_id);
+                          if (typeof window.addthis_layers !== 'undefined' && Object.getOwnPropertyNames(window.addthis_layers).length > 0) {
+                            window.addthis.layers(window.addthis_layers);
+                          }
+                          if (Array.isArray(window.addthis_layers_tools)) {
+                            for (i = 0; i < window.addthis_layers_tools.length; i++) {
+                              window.addthis.layers(window.addthis_layers_tools[i]);
+                            }
+                          }
+                        }
+                     },1000)
+                    }());
+                </script> 
+  <script data-cfasync="false" type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55d1eec37e2152db" async></script> 
+  <!-- Easy FancyBox 1.6.2 using FancyBox 1.3.8 - RavanH (http://status301.net/wordpress-plugins/easy-fancybox/) --> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var fb_timeout = null;
+var fb_opts = { 'overlayShow' : true, 'hideOnOverlayClick' : true, 'showCloseButton' : true, 'margin' : 20, 'centerOnScroll' : true, 'enableEscapeButton' : true, 'autoScale' : true };
+var easy_fancybox_handler = function(){
+	/* IMG */
+	var fb_IMG_select = 'a[href*=".jpg"]:not(.nolightbox,li.nolightbox>a), area[href*=".jpg"]:not(.nolightbox), a[href*=".jpeg"]:not(.nolightbox,li.nolightbox>a), area[href*=".jpeg"]:not(.nolightbox), a[href*=".png"]:not(.nolightbox,li.nolightbox>a), area[href*=".png"]:not(.nolightbox), a[href*=".gif"]:not(.nolightbox,li.nolightbox>a), area[href*=".gif"]:not(.nolightbox)';
+	jQuery(fb_IMG_select).addClass('fancybox image');
+	var fb_IMG_sections = jQuery('div.gallery');
+	fb_IMG_sections.each(function() { jQuery(this).find(fb_IMG_select).attr('rel', 'gallery-' + fb_IMG_sections.index(this)); });
+	jQuery('a.fancybox, area.fancybox, li.fancybox a').fancybox( jQuery.extend({}, fb_opts, { 'transitionIn' : 'elastic', 'easingIn' : 'easeOutBack', 'transitionOut' : 'elastic', 'easingOut' : 'easeInBack', 'opacity' : false, 'hideOnContentClick' : false, 'titleShow' : true, 'titlePosition' : 'over', 'titleFromAlt' : true, 'showNavArrows' : true, 'enableKeyboardNav' : true, 'cyclic' : false }) );
+}
+var easy_fancybox_auto = function(){
+	/* Auto-click */
+	setTimeout(function(){jQuery('#fancybox-auto').trigger('click')},1000);
+}
+/* ]]> */
+</script> 
+  <style type="text/css">
+#fancybox-content{background:#fff}
+#fancybox-content{border-color:#fff}#fancybox-outer{background:#fff}
+#fancybox-content{color:inherit}
+</style> 
+  <link rel="stylesheet" type="text/css" href="http://wwwcdn.skyandtelescope.com/wp-content/themes/fw-twentytwelve/menu.css"> 
  </head> 
- <body id="PageArticle"> 
-  <script>
-var saveshare_recipe = 'bottom';
-// init_save_share();
-</script> 
-  <!-- start visible content --> 
-  <div class="wrapperFull" id="PageArticleCommon"> 
-   <div id="wrapperTop"> 
-    <!--#include virtual="/wp-srv/ssi/globalnav/wp_sp_header_top.html"--> 
-    <script language="javascript">
-<!--
-if ( show_doubleclick_ad && ( adTemplate & BANNER_FLEX_TOP ) == BANNER_FLEX_TOP  )
-{
-document.write('<div id="banner_wrapper_top" align="center">') ;
-document.write('<table cellpadding="0" cellspacing="0" border="0">') ;
-document.write('<tr>') ;
-document.write('<td valign="middle">') ;
-document.writeln ('<img src="http://media3.washingtonpost.com/wp-srv/article/pieces/adLabel_bluebackground_13x60.gif" alt="ad_icon" width="13" height="60" border="0"/>' );
-document.write('</td>') ;
-document.write('<td>') ;
-}
-// -->
-</script> 
-    <script>
-if ( show_doubleclick_ad && ( adTemplate & BANNER_FLEX_TOP ) == BANNER_FLEX_TOP  )
-{
-placeAd('ARTICLE',commercialNode,1,'',true) ;
-}
-</script> 
-    <script language="javascript">
-<!--
-if ( show_doubleclick_ad && ( adTemplate & BANNER_FLEX_TOP ) == BANNER_FLEX_TOP  )
-{
-document.write('</td>') ;
-document.write('</tr>') ;
-document.write('</table>') ;
-document.write('</div>') ;
-}
-// -->
-</script> 
-    <!--#include virtual="/wp-srv/ssi/globalnav/wp_sp_nav_search.html"--> 
-    <div id="bread_crumbs"> 
-     <div id="bread_crumbs_inside"> 
-      <a href="http://www.washingtonpost.com">washingtonpost.com</a> &nbsp;&gt;&nbsp;
-      <a href="http://www.washingtonpost.com/wp-dyn/content/opinions/outlook/index.html">Opinions</a> 
-     </div> 
-     <!--#include virtual="/wp-srv/ssi/breadcrumb/opinions/badge.html"--> 
+ <body class="post-template-default single single-post postid-255471581 single-format-standard tribe-no-js full-width custom-font-enabled"> 
+  <div id="site-wrapper"> 
+   <header id="masthead" class="site-header" role="banner"> 
+    <span id="site-title">Sky &amp; Telescope</span> 
+    <a href="/">
+     <div class="header-image"></div></a> 
+    <div class="header-sky-chart">
+     <a href="/observing/interactive-sky-watching-tools/interactive-sky-chart/"><img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/NewStcht_button.png" alt=""></a>
     </div> 
-    <div style="clear:both;"></div> 
-   </div> 
-   <div id="wrapperMain"> 
-    <div id="wrapperMainCenter"> 
-     <div id="wrapperInternalCenter"> 
-      <div id="banner"> 
+    <div id="user-links"> 
+     <div class="container"> 
+      <div class="social">
+       <a href="https://www.facebook.com/pages/Sky-Telescope-Magazine/66274830772" target="_blank"><img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/social-facebook.png" alt="facebook"></a>
+       <a href="https://twitter.com/skyandtelescope" target="_blank"><img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/social-twitter.png" alt="twitter"></a>
+       <a href="https://www.youtube.com/user/SkyandTelescope" target="_blank"><img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/social-youtube.png" alt="youtube"></a>
+       <a href="https://plus.google.com/111570038166307347855/about" target="_blank"><img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/social-gplus.png" alt="google plus"></a>
+       <a href="http://www.skyandtelescope.com/subscribing-sky-telescope-rss-feeds"><img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/social-rss.png" alt="rss"></a> 
       </div> 
-      <!--#include virtual="/wp-srv/hp/ssi/article_alert.html"--> 
-      <div id="article"> 
-       <img src="http://www.washingtonpost.com/wp-dyn/content/photo/2005/03/26/PH2005032604413.jpg" width="454" height="19" border="0"> 
-       <div style="padding-left:10px;"> 
-        <h1 style="margin-bottom:10px;">A Surfeit of Scoundrels</h1> 
-        <table cellpadding="0" cellspacing="0" style="float:right;clear:both;" width="238" id="content_column_table"> 
-         <tbody>
-          <tr>
-           <td width="10"></td>
-           <td width="228"> 
-            <!--#include virtual="/wp-srv/network-news/ssi/nn-module-sidebar-1.0.html"--> 
-            <div id="content_column_tools"> 
-             <script src="http://media3.washingtonpost.com/wp-srv/article/js/storyPageTools.js"></script> 
-             <div class="sidebarhack">
-              <b></b>
-             </div> 
-             <div class="sidebar"> 
-              <div class="seo-header">
-               TOOLBOX
-              </div> 
-              <div class="sidebarcontent"> 
-               <div class="sidebarColumnGeneric" id="sidebarColumnWide"> 
-                <a href="javascript:void(0);" onclick="article_fontSizer('small')"><img src="http://media3.washingtonpost.com/wp-srv/article/images/font_resize_small.gif" alt="" width="9" height="14" border="0" align="absbottom"></a>
-                <a href="javascript:void(0);" onclick="article_fontSizer('medium')"><img src="http://media3.washingtonpost.com/wp-srv/article/images/font_resize_medium.gif" alt="" width="12" height="14" border="0" align="absbottom"></a>
-                <a href="javascript:void(0);" onclick="article_fontSizer('large')"><img src="http://media3.washingtonpost.com/wp-srv/article/images/font_resize_large.gif" alt="" width="11" height="14" border="0" align="absbottom"></a> Resize 
-               </div> 
-               <div class="sidebarColumnGeneric" id="sidebarColumnWide"> 
-                <a href="http://www.washingtonpost.com/wp-dyn/content/article/2005/09/22/AR2005092202023_pf.html" style="background:transparent url(http://media3.washingtonpost.com/wp-srv/article/images/icon_printer.gif) no-repeat scroll 0px 0px;padding:0pt 0pt 0pt 22px;" rel="nofollow">Print</a> 
-               </div> 
-               <div style="clear:both;"></div> 
-               <div class="sidebarColumnGeneric" id="sidebarColumnWide"> 
-                <a href="http://www.washingtonpost.com/ac2/wp-dyn/emailafriend?contentId=AR2005092202023&amp;sent=no" style="background:transparent url(http://media3.washingtonpost.com/wp-srv/article/images/icon_email.gif) no-repeat scroll 0px 0px;padding:0pt 0pt 0pt 22px;" rel="nofollow">E-mail</a> 
-               </div> 
-               <div class="sidebarColumnGeneric" id="sidebarColumnReprints"> 
-                <a href="http://help.washingtonpost.com/ics/support/default.asp?deptID=15080&amp;task=knowledge&amp;questionID=302?nav=globebot" style="background:transparent url(http://media3.washingtonpost.com/wp-srv/article/images/icon_reprint.gif) no-repeat scroll 0px 0px;padding:0pt 0pt 0pt 22px;" rel="nofollow">Reprints</a> 
-               </div> 
-               <!--#include virtual="/wp-srv/network-news/ssi/nn-module-share-icon-1.0.html"--> 
-               <div style="clear:both;"></div> 
-               <div style="clear:both;"></div> 
-               <script src="http://media.washingtonpost.com/wp-srv/ad/toolbox.js"></script> 
-              </div> 
-             </div> 
-            </div> 
-            <!--#include virtual="/wp-adv/ssi/ad_links_sidebar/google/article/print.html"--> </td>
-          </tr>
-         </tbody>
-        </table> 
-        <font size="2"> Friday, September 23, 2005 </font>
-        <p> </p>
+      <div class="login"> 
+       <div class="acct-signedout"> 
+        <a href="http://www.skyandtelescope.com/register">Register</a>
+        <a style="margin: 0 0 0 15px;" href="http://www.skyandtelescope.com/login">Log In</a> 
        </div> 
-       <div id="article_body" style="padding-left:10px;"> 
-        <p> MARYLAND Republicans are angry, and rightly so, that Democratic operatives would fraudulently obtain the credit report of Lt. Gov. Michael S. Steele, an all-but-declared candidate in next year's race for the U.S. Senate. A pair of twentysomething operatives for the Democratic Senatorial Campaign Committee apparently procured the report for the purpose of "opposition research." They've been fired by the DSCC, and the case has been referred to the FBI and the U.S. attorney's office in Washington, which are investigating. </p> 
-        <div id="body_after_content_column"> 
-         <p> Mr. Steele, a Republican whose credit history is of interest to the Democrats because of personal debts and other financial troubles earlier in his career, wants the Democratic aides to be prosecuted to the hilt. They may indeed be liable for a fine and even some prison time; under federal law, it is illegal to knowingly and willfully obtain a credit report under false pretenses. But it was some of Mr. Steele's own Republican colleagues who, while trying to contain their glee at the political ammunition furnished them by the Democrats, supplied a reality check on his righteous indignation. The incident demonstrates that Mr. Steele has arrived in big-time politics, said Gov. Robert L. Ehrlich Jr. The governor, no slouch at partisanship himself, added that both parties were guilty of similarly unsavory tactics, which he attributed to "Capitol Hill politics." </p> 
-         <p> As political dirty tricks go, snooping for financial dirt on Mr. Steele by illegal means strikes us as roughly on a par with eavesdropping on a rival party's private telephone conversations, as Virginia Republican officials did several years ago. Both acts display a disregard for fair play and the spirit of the law; both are indicative of the current state of partisan enmity. Voters might like to punish all the scoundrels -- if only they could tell one party's scoundrels from the other's. </p> 
+      </div> 
+      <form method="get" id="searchform" action="http://www.skyandtelescope.com/"> 
+       <label for="s" class="assistive-text">Search</label> 
+       <input type="text" class="field" name="s" id="s" placeholder="Search"> 
+       <input type="submit" class="submit" name="submit" id="searchsubmit" value=""> 
+      </form> 
+     </div> 
+    </div> 
+   </header>
+   <!-- #masthead --> 
+   <div id="page" class="hfeed site"> 
+    <!-- Navigation --> 
+    <h3 class="menu-toggle toggleMenu">Navigate</h3> 
+    <div class="menu-primary-nav-container">
+     <ul id="nav-menu" class="nav">
+      <li id="menu-item-246612541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-246612541"><a href="http://www.skyandtelescope.com/">Home</a></li> 
+      <li id="menu-item-246613604" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-246613604"><a title="Astronomy News" href="http://www.skyandtelescope.com/astronomy-news/">News</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-246613605" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613605"><a title="Observing News &amp; Current Celestial Events" href="http://www.skyandtelescope.com/astronomy-news/observing-news/">Observing News</a></li> 
+        <li id="menu-item-246613609" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613609"><a href="http://www.skyandtelescope.com/astronomy-news/solar-system/">Solar System</a></li> 
+        <li id="menu-item-246613610" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613610"><a href="http://www.skyandtelescope.com/astronomy-news/spacecraft-and-space-missions/">Spacecraft &amp; Space Missions</a></li> 
+        <li id="menu-item-246613600" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613600"><a href="http://www.skyandtelescope.com/astronomy-news/exoplanets/">Exoplanets</a></li> 
+        <li id="menu-item-246613601" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613601"><a href="http://www.skyandtelescope.com/astronomy-news/galaxies/">Galaxies</a></li> 
+        <li id="menu-item-246613599" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613599"><a href="http://www.skyandtelescope.com/astronomy-news/cosmology/">Cosmology</a></li> 
+        <li id="menu-item-255438848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255438848"><a href="http://www.skyandtelescope.com/all-astronomy-news-categories/">All News Categories</a></li> 
+       </ul> </li> 
+      <li id="menu-item-246613631" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-246613631"><a title="Observing Tips &amp; Resources" href="http://www.skyandtelescope.com/observing/">Observing</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-246613636" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246613636"><a href="http://www.skyandtelescope.com/astronomy-information/">For Beginners</a></li> 
+        <li id="menu-item-246613632" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613632"><a title="Observing News &amp; Current Celestial Events" href="http://www.skyandtelescope.com/astronomy-news/observing-news/">Observing News</a></li> 
+        <li id="menu-item-246613624" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613624"><a href="http://www.skyandtelescope.com/observing/sky-at-a-glance/">This Week’s Sky at a Glance</a></li> 
+        <li id="menu-item-255181876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255181876"><a title="Celestial Objects to Observe" href="http://www.skyandtelescope.com/celestial-objects-observe/">Observing Guides</a></li> 
+        <li id="menu-item-246613633" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613633"><a title="Interactive Observing Tools, Sky Chart &amp; Apps" href="http://www.skyandtelescope.com/observing/interactive-sky-watching-tools/">Interactive Tools</a></li> 
+        <li id="menu-item-255436091" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255436091"><a title="Stargazer’s Corner: Adventures Under the Night Sky" href="http://www.skyandtelescope.com/observing/stargazers-corner/">Stargazer’s Corner</a></li> 
+        <li id="menu-item-246613634" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613634"><a title="Astronomy and Stargazing Projects" href="http://www.skyandtelescope.com/observing/astronomy-stargazing-projects/">Observing Projects</a></li> 
+        <li id="menu-item-246613623" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613623"><a title="Sky Tour Podcasts – Discover the Night Sky" href="http://www.skyandtelescope.com/observing/astronomy-podcasts/">Sky Tour Podcasts</a></li> 
+        <li id="menu-item-246613635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246613635"><a title="Sky &amp; Telescope Mobile Apps" href="http://www.skyandtelescope.com/sky-and-stargazing-apps/">Sky &amp; Tel Apps</a></li> 
+       </ul> </li> 
+      <li id="menu-item-255455719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-255455719"><a title="Astronomy Equipment: Guides and Recommendations" href="http://www.skyandtelescope.com/astronomy-equipment-telescopes-mounts-cameras-eyepieces/">Equipment</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-246613639" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-246613639"><a title="Choosing Your Equipment – Telescope, Binocular, and Camera Guides for Astonomers" href="http://www.skyandtelescope.com/astronomy-equipment/choosing-astronomy-equipment/">Choosing Equipment</a> 
+         <ul class="sub-menu"> 
+          <li id="menu-item-246613646" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613646"><a title="Telescope Reviews, Guides &amp; Recommendations" href="http://www.skyandtelescope.com/astronomy-equipment/choosing-astronomy-equipment/telescopes/">Telescopes</a></li> 
+          <li id="menu-item-246613640" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613640"><a title="Binocular Reviews, Guides &amp; Recommendationss" href="http://www.skyandtelescope.com/astronomy-equipment/choosing-astronomy-equipment/binoculars/">Binoculars</a></li> 
+          <li id="menu-item-255455720" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255455720"><a title="Astronomy Equipment Reviews, Guides &amp; Recommendations" href="http://www.skyandtelescope.com/astronomy-equipment/choosing-astronomy-equipment/">All Equipment</a></li> 
+         </ul> </li> 
+        <li id="menu-item-246613647" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613647"><a href="http://www.skyandtelescope.com/astronomy-equipment/new-products/">New Product Showcase</a></li> 
+        <li id="menu-item-255463643" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255463643"><a href="http://www.skyandtelescope.com/astronomy-videos/under-the-hood/">Under the Hood</a></li> 
+        <li id="menu-item-255181878" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255181878"><a title="Astronomy Equipment Videos" href="/astronomy-equipment/product-videos/">Product Videos</a></li> 
+        <li id="menu-item-246613642" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613642"><a title="Do It Yourself: Projects &amp; Guidance" href="http://www.skyandtelescope.com/astronomy-equipment/equipment-diy/">Do It Yourself</a></li> 
+        <li id="menu-item-255181879" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255181879"><a title="Astronomical Equipment Manufacturers, Suppliers, and Specialty Dealers" href="/astronomy-equipment/astronomical-equipment-manufacturers-suppliers-and-specialty-dealers/">Supplier Directories</a></li> 
+        <li id="menu-item-246613648" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613648"><a href="http://www.marketplace.skyandtelescope.com/">MarketPlace Classifieds</a></li> 
+       </ul> </li> 
+      <li id="menu-item-246613649" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-246613649"><a href="http://www.skyandtelescope.com/astronomy-resources/">Resources &amp; Education</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-255432008" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255432008"><a title="Learn the night sky" href="http://www.skyandtelescope.com/astronomy-resources/stargazing-basics/learn-the-sky/">Learn the Night Sky</a></li> 
+        <li id="menu-item-255447371" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255447371"><a href="http://www.skyandtelescope.com/astronomy-resources/stargazing-basics/observar/">Observar el Cielo</a></li> 
+        <li id="menu-item-255439454" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255439454"><a title="Astronomy Q&amp;A: Science- and Hobby-Based Questions and Answers" href="http://www.skyandtelescope.com/astronomy-qa-science-and-hobby-based-questions-and-answers/">Astronomy Q&amp;A</a></li> 
+        <li id="menu-item-255440044" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-255440044"><a title="Download Free Astronomy e-books!" href="http://www.skyandtelescope.com/free-ebook-library/">Free eBook Library</a></li> 
+        <li id="menu-item-246613657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246613657"><a title="Glossary of Astronomy Terms" href="http://www.skyandtelescope.com/astronomy-terms/">Astronomy Terms</a></li> 
+        <li id="menu-item-246613653" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613653"><a title="Interactive Observing Tools, Star Chart, &amp; Mobile Apps" href="http://www.skyandtelescope.com/observing/interactive-sky-watching-tools/">Interactive Tools</a></li> 
+        <li id="menu-item-246613654" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613654"><a title="Astrophotography: Tips &amp; Examples" href="http://www.skyandtelescope.com/astronomy-resources/astrophotography-tips/">Astrophotography Tips</a></li> 
+        <li id="menu-item-246613655" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613655"><a title="Online Astrophotography Classes &amp; Telescope Tutorials" href="http://www.shopatsky.com/tutorials/">Online Classes</a></li> 
+       </ul> </li> 
+      <li id="menu-item-246613658" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-246613658"><a title="Community: Clubs, Events &amp; More" href="http://www.skyandtelescope.com/community/">Community</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-255444600" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-255444600"><a href="http://www.skyandtelescope.com/astronomy-blogs/">Astronomy Blogs</a> 
+         <ul class="sub-menu"> 
+          <li id="menu-item-255444603" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255444603"><a href="http://www.skyandtelescope.com/astronomy-blogs/explore-night-bob-king/">Explore the Night with Bob King</a></li> 
+          <li id="menu-item-255469868" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255469868"><a href="http://www.skyandtelescope.com/astronomy-blogs/imaging-foundations-richard-wright/">Imaging Foundations with Richard Wright</a></li> 
+          <li id="menu-item-255444601" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255444601"><a href="http://www.skyandtelescope.com/astronomy-blogs/astronomy-space-david-dickinson/">Astronomy in Space with David Dickinson</a></li> 
+          <li id="menu-item-255444602" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255444602"><a href="http://www.skyandtelescope.com/astronomy-blogs/cosmic-relief-david-grinspoon/">Cosmic Relief with David Grinspoon</a></li> 
+         </ul> </li> 
+        <li id="menu-item-255436090" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255436090"><a title="Stargazer’s Corner: Adventures Under the Night Sky" href="http://www.skyandtelescope.com/observing/stargazers-corner/">Stargazer’s Corner</a></li> 
+        <li id="menu-item-246613659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-246613659"><a title="Astronomy Clubs &amp; Organizations" href="http://www.skyandtelescope.com/astronomy-clubs-organizations/">Clubs &amp; Organizations</a> 
+         <ul class="sub-menu"> 
+          <li id="menu-item-246618177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246618177"><a title="Astronomy Clubs &amp; Organizations – Submission Form" href="http://www.skyandtelescope.com/astronomy-clubs-organizations/clubs-organizations-submission/">Submit Your Club</a></li> 
+         </ul> </li> 
+        <li id="menu-item-246613661" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-246613661"><a title="Astronomy Events Calendar" href="http://www.skyandtelescope.com/astronomy-events/">Events Calendar</a> 
+         <ul class="sub-menu"> 
+          <li id="menu-item-246613806" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246613806"><a title="Astronomy Events &amp; Gatherings – Submission Form" href="http://www.skyandtelescope.com/event-submission-form/">Submit Your Event</a></li> 
+         </ul> </li> 
+        <li id="menu-item-246613660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246613660"><a title="Astronomy Travel Opportunities" href="http://www.skyandtelescope.com/astronomy-travel/">Astronomy Travel</a></li> 
+        <li id="menu-item-246613662" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-246613662"><a href="http://www.skyandtelescope.com/get-involved/">Get Involved</a> 
+         <ul class="sub-menu"> 
+          <li id="menu-item-246613665" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613665"><a title="Saving Dark Skies – How to Help" href="http://www.skyandtelescope.com/get-involved/saving-dark-skies/">Saving Dark Skies</a></li> 
+          <li id="menu-item-246613663" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613663"><a title="Citizen Science: Projects &amp; Collaboration" href="http://www.skyandtelescope.com/get-involved/citizen-science-collaboration/">Citizen Science</a></li> 
+          <li id="menu-item-246613664" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613664"><a href="http://www.skyandtelescope.com/get-involved/pro-am-collaboration/">Pro-Am Collaboration</a></li> 
+         </ul> </li> 
+       </ul> </li> 
+      <li id="menu-item-246613666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-246613666"><a href="http://www.skyandtelescope.com/pictures-and-videos/">Multimedia</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-255461558" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-255461558"><a title="Astronomy Pictures: Sky &amp; Telescope’s Online Photo Gallery" href="http://www.skyandtelescope.com/online-gallery/">Photo Gallery</a> 
+         <ul class="sub-menu"> 
+          <li id="menu-item-246613673" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613673"><a title="Editor’s Choice from the Photo Gallery" href="http://www.skyandtelescope.com/online-gallery/editors-choice-photos/">Editor’s Choice Archive</a></li> 
+          <li id="menu-item-246618175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246618175"><a title="Share Your Astronomy Pictures" href="http://www.skyandtelescope.com/astronomy-pictures/share-your-astronomy-pictures/">Share Your Photos</a></li> 
+         </ul> </li> 
+        <li id="menu-item-246613675" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-246613675"><a title="Astronomy Podcasts" href="http://www.skyandtelescope.com/observing/astronomy-podcasts/">Astronomy Podcasts</a> 
+         <ul class="sub-menu"> 
+          <li id="menu-item-255452910" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255452910"><a title="Sky Tour Podcasts – Discover the Night Sky" href="http://www.skyandtelescope.com/observing/astronomy-podcasts/">Sky Tour Podcasts</a></li> 
+          <li id="menu-item-255452909" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255452909"><a title="Orbital Path Podcasts with Michelle Thaller" href="http://www.skyandtelescope.com/astronomy-resources/orbital-path-astronomy-podcast/">Orbital Path Podcasts</a></li> 
+         </ul> </li> 
+        <li id="menu-item-246613667" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-246613667"><a title="Astronomy Videos" href="http://www.skyandtelescope.com/astronomy-videos/">Videos</a> 
+         <ul class="sub-menu"> 
+          <li id="menu-item-246613668" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613668"><a title="Premium Astrophotography Classes &amp; Telescope Tutorials" href="http://www.shopatsky.com/tutorials/">Premium Tutorials</a></li> 
+          <li id="menu-item-255181877" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255181877"><a title="Product Videos &amp; Demonstrations" href="/astronomy-equipment/product-videos/">Product Videos</a></li> 
+          <li id="menu-item-255456311" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-255456311"><a href="http://www.skyandtelescope.com/astronomy-videos/neaf-talks/">NEAF Talks</a></li> 
+          <li id="menu-item-246613669" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613669"><a title="Stargazing Videos: Tips &amp; Techniques" href="http://www.skyandtelescope.com/astronomy-videos/stargazing-tips-and-techniques/">Stargazing Tips</a></li> 
+          <li id="menu-item-246613670" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613670"><a href="http://www.skyandtelescope.com/astronomy-videos/interviews-excerpts/">Interviews &amp; Excerpts</a></li> 
+          <li id="menu-item-246613697" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246613697"><a href="http://www.skyandtelescope.com/astronomy-videos/skyweek-tv-archive/">SkyWeek TV Archive</a></li> 
+         </ul> </li> 
+       </ul> </li> 
+      <li id="menu-item-246613678" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-246613678"><a title="Subscribe to Sky &amp; Telescope" href="http://www.skyandtelescope.com/subscribe/">Subscribe</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-246613679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613679"><a title="Subscribe to Sky &amp; Telescope magazine" href="https://ssl.palmcoastd.com/03401/apps/K_KEYS?ikey=I**K01">Print + Digital</a></li> 
+        <li id="menu-item-246613680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613680"><a href="https://secure.palmcoastd.com/pcd/eSv?iMagId=03401&amp;i4Ky=SH01">Digital Only</a></li> 
+        <li id="menu-item-246613681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613681"><a href="https://secure.palmcoastd.com/pcd/eSv?iMagId=03401&amp;i4Ky=IF01">Gift Subscription</a></li> 
+        <li id="menu-item-255424082" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255424082"><a href="https://ssl.palmcoastd.com/pcd/apps/index.cfm?iMagId=03401&amp;iPage=SPLASH&amp;iXz=E683C94E33C6B7CF90BD15BBCE000625">Renew</a></li> 
+        <li id="menu-item-246613688" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613688"><a href="https://secure.palmcoastd.com/pcd/eServ?iServ=MDM0MDE0NDQwNCZpVHlwZT1NQUlO">Subscriber Services</a></li> 
+        <li id="menu-item-246613682" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246613682"><a title="SkyandTelescope.com’s Email Newsletters" href="http://www.skyandtelescope.com/newsletter/">Email Newsletter</a></li> 
+       </ul> </li> 
+      <li id="menu-item-246613683" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-246613683"><a title="Read Sky &amp; Telescope Magazine" href="http://www.skyandtelescope.com/sky-and-telescope-magazine/">Magazine</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-246613684" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613684"><a title="What’s in this month’s issue of Sky &amp; Telescope?" href="/skytel">Current Issue Highlights</a></li> 
+        <li id="menu-item-246613685" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613685"><a title="Access the current digital issue of Sky &amp; Telescope" href="http://www.nxtbook.com/fx/mags/lastissue.php?mp=/nxtbooks/newtrack/skytelescope">Current Digital Issue</a></li> 
+        <li id="menu-item-246613686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613686"><a title="Find what you’re looking for in past issues of Sky &amp; Telescope" href="/astronomy-news/sky-and-telescope-index-1941-2013">Index of Previous Issues</a></li> 
+        <li id="menu-item-255429936" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255429936"><a title="Sky &amp; Telescope’s All-Year Observing Guide" href="https://www.shopatsky.com/skywatch-2018-sw2018">SkyWatch 2018</a></li> 
+        <li id="menu-item-246613687" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246613687"><a title="Subscribe to Sky &amp; Telescope Magazine" href="http://www.skyandtelescope.com/subscribe/">Subscribe</a></li> 
+       </ul> </li> 
+      <li id="menu-item-246613689" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-246613689"><a target="_blank" href="http://www.shopatsky.com/?utm_source=stnavprimary&amp;utm_medium=stnav&amp;utm_campaign=stnav">Shop</a> 
+       <ul class="sub-menu"> 
+        <li id="menu-item-246613690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613690"><a title="ShopatSky" target="_blank" href="http://www.shopatsky.com/?utm_source=stnavdrop&amp;utm_medium=stnav&amp;utm_campaign=stnav">Shop@Sky</a></li> 
+        <li id="menu-item-246613691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613691"><a title="Planet Maps &amp; Globes" target="_blank" href="http://www.shopatsky.com/maps-globes/?utm_source=stnavdrop&amp;utm_medium=stnav&amp;utm_campaign=stnav">Maps &amp; Globes</a></li> 
+        <li id="menu-item-255450305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255450305"><a href="http://www.shopatsky.com/zenith-club">Join Our Zenith Club</a></li> 
+        <li id="menu-item-246613692" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-246613692"><a title="Sky &amp; Telescope Test Reports Review Telescopes, Mounts, and More." target="_blank" href="http://www.shopatsky.com/resource-materials/test-reports/?utm_source=stnavdrop&amp;utm_medium=stnav&amp;utm_campaign=stnav">Test Reports</a></li> 
+        <li id="menu-item-246613693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246613693"><a title="Sky &amp; Telescope Mobile Apps" href="http://www.skyandtelescope.com/sky-and-stargazing-apps/">Mobile Stargazing Apps</a></li> 
+       </ul> </li> 
+     </ul>
+    </div> 
+    <div id="Offer">
+     <aside id="text-2" class="widget widget_text"> 
+      <div class="textwidget">
+       <div class="left"> 
+        <h2>FREE eBook:</h2> 
+        <h4>Stargazing: Getting Started</h4> 
+       </div> 
+       <div class="right"> 
+        <p>Download Your Stargazing eBook from <em>Sky &amp; Telescope</em>!</p> 
+       </div> 
+      </div> 
+     </aside> 
+     <div id="et_form-div-quicksubscribe-246618180" class="et-quick-subscribe et-form"> 
+      <form id="form-quicksubscribe-246618180" name="form-quicksubscribe-246618180" class="et_form" action="/wp-content/plugins/fw-exacttarget-client/subscribe-form.php" method="POST" onsubmit="return ET_LongFormSubmit('quicksubscribe-246618180');"> 
+       <fieldset class="et_fieldset"> 
+        <input id="ETSubscriberKeyThxquicksubscribe-246618180" name="ETSubscriberKey" type="hidden">
+        <input name="SubAction" type="hidden" value="sub_add_update">
+        <input name="formId" type="hidden" value="quicksubscribe-246618180">
+        <ul style="list-style-type:none; margin:0; padding:0;" class="et_field_list">
+         <li><label for="EmailAddressThx"><span class="required">*</span> </label><input type="text" autocomplete="off" id="EmailAddressThxquicksubscribe-246618180" class="et_text" name="et_emailAddress" value="Enter Email" placeholder="Enter Email" onfocus="etEmailFocus('Enter Email',this)" onblur="if (this.value == '') {this.value = 'Enter Email';}"></li>
+         <input type="hidden" name="et2_list[1354863][]" value="Sky &amp; Telescope Partners">
+         <input type="hidden" name="et2_list[1354863][]" value="Sky &amp; Telescope Newsletter">
+         <input type="hidden" name="et2_list[1354863][]" value="Sky &amp; Telescope Astro Alert">
+         <input type="hidden" name="et2_list[1354863][]" value="Shop at Sky">
+         <input type="hidden" name="et2_list[1354863][]" value="Sky &amp; Telescope TV">
+         <input type="hidden" name="et2_list[1354863][]" value="Sky &amp; Telescope Magazine Offers">
+         <input type="hidden" name="et2_customField[1354863][brand_skyandtel]" value="True" class="">
+        </ul>
+        <input type="hidden" id="thx255471581" name="thx" value="http://www.skyandtelescope.com/stargazing-free-ebook/thank-you-download-stargazing-ebook/">
+        <input type="hidden" id="err255471581" name="err" value="http://www.skyandtelescope.com/newsletter/newsletter-error">
+        <input type="hidden" name="et_emailSource" value="Main Content Site">
+        <input class="submit" name="submitSubscription" id="submit-quicksubscribe-246618180" type="submit" value="">
+        <div class="g-recaptcha" data-sitekey="6LekQCgTAAAAAL_uurePCfHR9Yo8CCaTgMFU4iPk"></div> 
+       </fieldset> 
+       <input type="hidden" name="action" id="quicksubscribe-246618180" value="submitSubscription"> 
+       <input type="hidden" name="et_mid[]" value="1354863"> 
+      </form> 
+     </div> 
+    </div> 
+    <div id="leaderboard">
+     <div class="mobile-leaderboard">
+      <script type="text/javascript">OX_ab68b0ad5d.showAdUnit('537250146');</script>
+     </div>
+     <div class="desktop-leaderboard">
+      <script type="text/javascript">OX_ab68b0ad5d.showAdUnit('537073634');</script>
+     </div>
+     <div id="small-leaderboard-ad">
+      <script type="text/javascript">OX_ab68b0ad5d.showAdUnit('537084255');</script>
+     </div> 
+    </div> 
+    <div id="subscribe-shadow">
+     <img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/quick-subscribe-shadow.png" alt="">
+    </div> 
+    <div id="main" class="wrapper"> 
+     <div id="primary" class="site-content"> 
+      <div id="content" role="main"> 
+       <article id="post-255471581" class="post-255471581 post type-post status-publish format-standard has-post-thumbnail hentry category-astronomy-news category-stellar-science tag-tabbys-star"> 
+        <header class="entry-header"> 
+         <h1 class="entry-title">New Observations of the “Most Mysterious Star in the Galaxy”</h1> 
+         <div class="entry-meta"> 
+          <!-- Grab the author and the date of post --> 
+          <span class="byline">By: <span class="by-author"><span class="author vcard"><a class="url fn n" href="http://www.skyandtelescope.com/author/john-bochanski-2/" title="View all posts by John Bochanski" rel="author">John Bochanski</a></span></span> | <time class="entry-date" datetime="2018-01-03T16:12:55+00:00">January 3, 2018</time></span> 
+          <div class="sharethis"> 
+           <span class="st_facebook" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+           <span class="st_twitter" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+           <span class="st_linkedin" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+           <span class="st_email" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+           <span class="st_sharethis" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+           <span class="st_plusone" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+           <span class="st_pinterest" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span> 
+          </div>
+          <!-- sharethis --> 
+         </div>
+         <!-- .entry-meta --> 
+        </header>
+        <!-- .entry-header --> 
+        <div class="entry-content"> 
+         <div class="at-above-post addthis_tool" data-url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></div>
+         <p><span style="color: #5274ae;"><strong><em>New data on Boyajian's Star show that dust — not an alien megastructure — is probably the cause of this star's mysterious behavior.</em></strong></span></p> 
+         <p>After years of speculation, astronomers have announced observations of the mysterious KIC 8462852, also known as Boyajian’s Star. It’s even been popularly referred to as the “alien megastructure” star, but the new measurements show one thing definitively: there’s <em>no</em> alien megastructure. Instead, cosmic dust is probably the culprit behind this star’s strange behavior. Still, plenty of questions remain about how and why this star is dimming.</p> 
+         <div id="attachment_255471586" style="width: 410px" class="wp-caption aligncenter">
+          <img class="wp-image-255471586 size-full" src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/BoyajiansStar-art-400px.jpg" alt="Dust ring around Boyajian's Star" width="400" height="225" srcset="http://wwwcdn.skyandtelescope.com/wp-content/uploads/BoyajiansStar-art-400px.jpg 400w, http://wwwcdn.skyandtelescope.com/wp-content/uploads/BoyajiansStar-art-400px-300x169.jpg 300w" sizes="(max-width: 400px) 100vw, 400px">
+          <p class="wp-caption-text">This illustration depicts an uneven ring of dust orbiting KIC 8462852, also known as Boyajian’s Star or Tabby's Star.<br> <em>NASA / JPL-Caltech</em></p>
+         </div> 
+         <h3>Why is Boyajian’s Star So Mysterious?</h3> 
+         <p>In 2016 Tabetha Boyajian (Louisiana State University) and collaborators, including citizen scientists on the Planet Hunters website, <a href="https://arxiv.org/abs/1509.03622">announced the discovery</a> of the “most mysterious star in the Galaxy.” Boyajian’s Star exhibited lots of strange behavior: In data collected by Kepler satellite, the star’s brightness appeared to dip in ways that were not easily explained. Some dips diminished the stars brightness by up to 22% for several days at a time, and they weren’t periodic or symmetric.</p> 
+         <p>The discovery set off a flurry of investigations into the star. Scientists trawling through astronomical archives found that Boyajian’s star had dimmed over much longer timelines, slowly fading over the last century.</p> 
+         <p>Yet despite its strange behavior, the star itself looked remarkably ordinary. It was a bit more massive than the Sun, a little younger, but the star showed no extra infrared radiation that would be expected if it hosted a large debris disk or planets. The spectrum also didn’t show any strange spectral lines that would have indicated material accreting onto the star (or being ejected from it).</p> 
+         <p>So Boyajian and collaborators proposed an unlikely but not impossible scenario: that something had kicked large amounts of dust, potentially from swarms of comets, into orbit around the star. Other astronomers proposed that interstellar dust was obscuring our view of Boyajian’s star, while still others suggested the star had recently <a href="https://arxiv.org/abs/1612.07332">ingested a planet</a>. Some astronomers even proposed that the star itself could be misbehaving.</p> 
+         <p>One thing was clear: more data were necessary. Kepler’s steady gaze garnered incredibly detailed observations of the star over four years, but the spacecraft’s main mission had <a href="http://www.skyandtelescope.com/astronomy-news/kepler-goes-down-and-probably-out/">come to an end in 2013</a>, before the discovery paper was even published. Ground-based observations since Kepler had glimpsed the star only on good behavior. Moreover, the dips that Kepler had caught provided limited information, since they were only observed at a single wavelength band.</p> 
+         <p>What astronomers really needed was round-the-clock observations.</p> 
+         <h3>Kickstarting Astronomy</h3> 
+         <p>So Boyajian set off on a first for astronomy: crowdfunding observations of a star. She used a <a href="https://www.kickstarter.com/projects/608159144/the-most-mysterious-star-in-the-galaxy">Kickstarter campaign</a> to secure the funding for observations using the Las Cumbres Observatory (LCO), a network of robotic telescopes around the globe. LCO could monitor the star 24/7, providing all the data needed to catch the star’s fleeting dips and trigger follow-up observations.</p> 
+         <div id="attachment_255471585" style="width: 610px" class="wp-caption aligncenter">
+          <img class="size-full wp-image-255471585" src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/BoyajianLab-600px.jpg" alt="Boyajian's Star observing team" width="600" height="400" srcset="http://wwwcdn.skyandtelescope.com/wp-content/uploads/BoyajianLab-600px.jpg 600w, http://wwwcdn.skyandtelescope.com/wp-content/uploads/BoyajianLab-600px-285x190.jpg 285w, http://wwwcdn.skyandtelescope.com/wp-content/uploads/BoyajianLab-600px-540x360.jpg 540w" sizes="(max-width: 600px) 100vw, 600px">
+          <p class="wp-caption-text">Tabetha Boyajian (center) and her students and research staff. From left to right: Robert Parks, undergraduate student Rory Bentley, Assistant Professor Tabetha Boyajian, PhD candidate Tyler Ellis, undergrad Katie Nugent, Professor Geoff Clayton and graduate student Emily Safron. <br><em>Louisiana State University</em></p>
+         </div> 
+         <p>The network began observing the star in March 2017, and in May 2017 the team caught the <a href="http://www.skyandtelescope.com/astronomy-news/finally-the-galaxys-most-mysterious-star-is-dipping/">first dip of the new campaign</a>. The dip was nicknamed “Elsie” (a play on LC, which could stand for “light curve” or “Las Cumbres”), and was relatively small, with just about 1% of the star’s light obscured. The telescope network observed three more dips, each separated by a few weeks, until the campaign ended in August 2017. When the dips began, Boyajian alerted the astronomical community, resulting in a deluge of data across the spectrum. Dozens of teams secured data at visible, infrared and even radio wavelengths. Others took detailed spectra and measured the star’s polarized light.</p> 
+         <h3>What the New Data Say</h3> 
+         <div id="attachment_255471588" style="width: 310px" class="wp-caption alignright">
+          <img class="wp-image-255471588" src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/LCOGT-600px.jpg" alt="Las Cumbres Observatory telescope" width="300" height="225" srcset="http://wwwcdn.skyandtelescope.com/wp-content/uploads/LCOGT-600px.jpg 600w, http://wwwcdn.skyandtelescope.com/wp-content/uploads/LCOGT-600px-253x190.jpg 253w, http://wwwcdn.skyandtelescope.com/wp-content/uploads/LCOGT-600px-480x360.jpg 480w" sizes="(max-width: 300px) 100vw, 300px">
+          <p class="wp-caption-text">One of the many robotic telescopes part of the Las Cumbres Observatory used to observe Boyajian's Star.<br> <em>Louisana State University</em></p>
+         </div> 
+         <p>Analysis of the new observations will appear in the <em>Astrophysical Journal Letters</em> (<a href="https://arxiv.org/abs/1801.00732">full text available here</a>).</p> 
+         <p>Most notably, the data indicate that the star didn’t dim the same way at all wavelengths. Blue light was slightly more obscured than redder wavelengths, indicating that the dimming must be caused by material that’s not solid. That’s a strike against the unlikely idea that there might be “alien megastructures” forming a Dyson sphere (or swarm) around the star. The star’s infrared output also didn’t change during the dip, another strike against this idea.</p> 
+         <p>The fact that more blue light is blocked or scattered suggests that dust is the culprit. To match the observations, the dust grains must be quite small, about 1000 times smaller than the smallest grains of sand. This size tells us that the dust is probably circumstellar, as interstellar dust grains tend to be even smaller.</p> 
+         <p>Stars themselves easily disrupt small dust grains nearby. The star’s light exerts pressure, which can knock the grains around, blowing the dust out of orbit. So the dust is probably short-lived — how it got there is the next mystery the team hopes to solve.</p> 
+         <p>One possible explanation is that the a swarm of comets, asteroids, or a dusty planetesimal could generate dust. That dust could briefly dim the star’s light before being ejected to greater distances, where it might gradually dim the star over much longer timescales.</p> 
+         <p>Once again, more observations may be all that’s needed to unravel the mysteries of the dust. In their 2016 paper, Boyajian and colleagues predicted that the next dips would start in May 2017, and they were correct. If this signal is indeed periodic, it should repeat again in June 2019. Any periodicity would help further explain the dust’s source and how it’s interacting with the star’s light.</p> 
+         <p>Years after its identification by a citizen scientist, Boyajian’s Star continues to be a source of wonder for the public and astronomers alike. Tabby and her team led the first successful crowdfunding campaign for telescope time, and she has done an amazing job at keeping her supporters informed. (Full disclosure: I am one of her Kickstarter supporters). While the current observations rule out the splashy alien headlines, it underscores this object’s unique nature, and the need for continuing observations for years to come.</p> 
+         <!-- AddThis Advanced Settings above via filter on the_content -->
+         <!-- AddThis Advanced Settings below via filter on the_content -->
+         <!-- AddThis Advanced Settings generic via filter on the_content -->
+         <!-- AddThis Share Buttons above via filter on the_content -->
+         <!-- AddThis Share Buttons below via filter on the_content -->
+         <div class="at-below-post addthis_tool" data-url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></div>
+         <!-- AddThis Share Buttons generic via filter on the_content --> 
+         <!-- Display photo gallery custom fields --> 
+         <div class="sharethis"> 
+          <span class="st_facebook" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+          <span class="st_twitter" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+          <span class="st_linkedin" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+          <span class="st_email" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+          <span class="st_sharethis" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+          <span class="st_plusone" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span>
+          <span class="st_pinterest" data-st_title="New Observations of the “Most Mysterious Star in the Galaxy”" data-st_url="http://www.skyandtelescope.com/astronomy-news/new-observations-mysterious-star-boyajian/"></span> 
+         </div>
+         <!-- sharethis --> 
+        </div>
+        <!-- .entry-content --> 
+        <footer class="entry-meta"> 
+         <!-- Get the Categories --> CATEGORIES
+         <br> 
+         <a href="http://www.skyandtelescope.com/astronomy-news/" rel="category tag">Astronomy News</a>, 
+         <a href="http://www.skyandtelescope.com/astronomy-news/stellar-science/" rel="category tag">Stellar Science</a> 
+         <!-- Get the tags --> 
+         <div class="tag-meta">
+          <p>TAGS<br> <a href="http://www.skyandtelescope.com/tag/tabbys-star/" rel="tag">Tabby's Star</a></p>
+         </div> 
+         <!-- Related Posts --> 
+         <div class="tag-meta">
+          RELATED POSTS
+          <br>
+          <a href="http://www.skyandtelescope.com/astronomy-news/explaining-curious-case-tabbys-star/" rel="bookmark" title="Permanent Link to Can We Explain the Curious Case of Tabby’s Star?">Can We Explain the Curious Case of Tabby’s Star?</a>
+          <br>
+          <a href="http://www.skyandtelescope.com/astronomy-news/finally-the-galaxys-most-mysterious-star-is-dipping/" rel="bookmark" title="Permanent Link to Finally! The Galaxy’s Most Mysterious Star Is Dimming">Finally! The Galaxy’s Most Mysterious Star Is Dimming</a>
+          <br>
+          <a href="http://www.skyandtelescope.com/astronomy-news/tabbys-star-weird-star-gets-weirder/" rel="bookmark" title="Permanent Link to Tabby’s Star: Weird Star Gets Weirder">Tabby’s Star: Weird Star Gets Weirder</a>
+          <br>
+          <a href="http://www.skyandtelescope.com/astronomy-blogs/cosmic-relief-david-grinspoon/could-it-be-possible-signs-of-e-t-intelligence/" rel="bookmark" title="Permanent Link to Could It Be: Possible Signs of Extraterrestrial Intelligence?">Could It Be: Possible Signs of Extraterrestrial Intelligence?</a>
+          <br>
+          <a href="http://www.skyandtelescope.com/astronomy-news/curious-case-of-kic-8462852-102020155/" rel="bookmark" title="Permanent Link to The Curious Case of KIC 8462852">The Curious Case of KIC 8462852</a>
+          <br>
+         </div> 
+         <div class="author-info"> 
+          <div class="author-avatar"> 
+           <img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/userphoto/81927.thumbnail.jpg" alt="John Bochanski" width="80" height="80" class="photo"> 
+          </div>
+          <!-- #author-avatar --> 
+          <div class="author-description"> 
+           <h2>About John Bochanski</h2> John Bochanski is a physics professor at Rider University in Lawrenceville, NJ. John uses large surveys of the sky to study its coolest members, from nearby low-mass stars and brown dwarfs, to some of the most distant red giant stars ever discovered. 
+           <div class="author-link"> 
+            <a href="http://www.skyandtelescope.com/author/john-bochanski-2/" rel="author"> View all posts by John Bochanski <span class="meta-nav">→</span> </a> 
+           </div>
+           <!-- author-link	--> 
+          </div>
+          <!-- author-description --> 
+         </div>
+         <!-- author-info --> 
+        </footer>
+        <!-- .entry-meta --> 
+       </article>
+       <!-- #post-255471581 --> 
+       <div id="comments" class="comments-area"> 
+        <div>
+         All comments must follow the Sky &amp; Telescope 
+         <a href="http://www.skyandtelescope.com/terms-of-use-agreement/">Terms of Use</a> and will be moderated prior to posting. Please be civil in your comments. Sky &amp; Telescope reserves the right to use the comments we receive, in whole or in part, and to use the commenter’s username, in any medium. See also the 
+         <a href="http://www.skyandtelescope.com/terms-of-use-agreement/">Terms of Use</a> and 
+         <a href="http://www.fwcommunity.com/privacy">Privacy Policy</a>.
+         <br>
+         <br>
+        </div> 
+        <div id="respond" class="comment-respond"> 
+         <h3 id="reply-title" class="comment-reply-title">COMMENT <small><a rel="nofollow" id="cancel-comment-reply-link" href="/astronomy-news/new-observations-mysterious-star-boyajian/#respond" style="display:none;">Cancel reply</a></small></h3>
+         <p class="must-log-in">You must be <a href="http://www.skyandtelescope.com/login/?redirect_to=http%3A%2F%2Fwww.skyandtelescope.com%2Fastronomy-news%2Fnew-observations-mysterious-star-boyajian%2F">logged in</a> to post a comment.</p> 
+        </div>
+        <!-- #respond --> 
+       </div>
+       <!-- #comments .comments-area --> 
+      </div>
+      <!-- #content --> 
+     </div>
+     <!-- #primary --> 
+     <div id="sidebar"> 
+      <div id="secondary" class="" role="complementary"> 
+       <div class="ad-block"> 
+        <script type="text/javascript">OX_ab68b0ad5d.showAdUnit('537073636');</script> 
+       </div> 
+       <div class="content-block special-right-block"> 
+        <script type="text/javascript">OX_ab68b0ad5d.showAdUnit('537074181');</script> 
+       </div> 
+       <div class="content-block ad-block"> 
+        <aside id="text-11" class="widget widget_text">
+         <h3 class="widget-title">Featured Observing Resources</h3> 
+         <div class="textwidget">
+          <div style="float: none; width: 300px; margin: 0 auto; font-size:12px;"> 
+           <div class="magazine-block"> 
+            <a href="http://www.shopatsky.com/sky-telescope-s-15-cm-earth-globe-r5292?utm_source=hmwidget&amp;utm_medium=hmwidget&amp;utm_campaign=hmwidget" target="_blank"><img src="http://fw.cdn.iwp.com/media/catalog/product/cache/38/image/200x/9df78eab33525d08d6e5fb8d27136e95/R/5/R5292_1.jpg" alt="Earth Globe"></a> 
+            <h2><a href="http://www.shopatsky.com/sky-telescope-s-15-cm-earth-globe-r5292?utm_source=hmwidget&amp;utm_medium=hmwidget&amp;utm_campaign=hmwidget" target="_blank">NEW! Sky &amp; Telescope's 15-cm Earth Globe</a></h2> 
+            <p>Sky and Telescope’s beloved Earth Globe is now available in a smaller 6-inch size! The detailed globe includes a freestanding base and information card filled with key features. Hold the whole world in your hands today!</p> 
+           </div> 
+           <div class="more-link">
+            <a href="http://www.shopatsky.com/?utm_source=hmwidget&amp;utm_medium=hmwidget&amp;utm_campaign=hmwidget" target="_blank">More Products</a>
+           </div> 
+          </div>
+         </div> 
+        </aside> 
+       </div> 
+       <div class="content-block right-block"> 
+        <script type="text/javascript">OX_ab68b0ad5d.showAdUnit('537074182');</script> 
+       </div> 
+       <div class="content-block right-block"> 
+        <aside id="text-15" class="widget widget_text">
+         <h3 class="widget-title">Sky &amp; Telescope Mobile Apps</h3> 
+         <div class="textwidget">
+          <div style="height: 206px; overflow: hidden; width: 300px; margin: 0 auto; float: none;"> 
+           <a href="https://itunes.apple.com/us/app/saturnmoons/id606938707?mt=8" target="_blank"> <img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/2014-04-10_5345e0720dd21_ExploreSaturn_STApp.jpg" alt="Sky &amp; Telescope's SaturnMoons app reveals the weird worlds orbiting the ringed giant!"> </a> 
+          </div> 
+          <div class="more-link">
+           <a href="/sky-and-stargazing-apps/">View All S&amp;T Apps</a>
+          </div> 
+         </div> 
+        </aside> 
+       </div> 
+      </div>
+      <!-- #secondary -->
+     </div> 
+    </div>
+    <!-- main wrapper --> 
+    <div id="sponsored-links"> 
+     <div class="google-ads"> 
+      <script type="text/javascript">OX_ab68b0ad5d.showAdUnit('537157791');</script> 
+     </div> 
+     <div class="featured-ads"> 
+      <script type="text/javascript">OX_ab68b0ad5d.showAdUnit('537157792');</script> 
+     </div> 
+     <div class="sponsored-ads"> 
+      <script type="text/javascript">OX_ab68b0ad5d.showAdUnit('537074183');</script> 
+     </div> 
+    </div> 
+    <footer id="colophon" role="contentinfo"> 
+     <aside id="text-3" class="widget widget_text"> 
+      <div class="textwidget">
+       <div class="footer-links"> 
+        <div class="linkgroup"> 
+         <h2>About S&amp;T</h2> 
+         <a href="/about ">About Us</a> 
+         <a href="/about/meet-the-staff">Meet the Staff</a> 
+         <a href="/about/job-opportunities">Job Opportunities</a> 
+         <a href="/australian-edition-sky-telescope">Australian Edition</a> 
+         <a href="http://www.shopatsky.com/?utm_source=stfooter&amp;utm_medium=stfooter&amp;utm_campaign=stfooter" target="_blank">Shop @ Sky</a> 
+        </div> 
+        <div class="linkgroup"> 
+         <h2>For Contributors</h2> 
+         <a href="/writing-for-sky-telescope">Writing for S&amp;T</a> 
+         <a href="/submitting-photos-faq">Image Submission FAQ</a> 
+         <a href="/sky-telescope-photographers-guide">Tips for Submitting Images</a> 
+        </div> 
+        <div class="linkgroup"> 
+         <h2>For Media</h2> 
+         <a href="/press-releases">S&amp;T Press Releases</a> 
+         <a href="/permissions-faqs-how-to-use-sky-telescope-content/">Permission Requests</a> 
+        </div> 
+        <div class="linkgroup"> 
+         <h2>For Advertisers</h2> 
+         <a href="http://marketplace.skyandtelescope.com/default.aspx" target="_blank">MarketPlace</a> 
+         <a href="/advertise">Advertising Information</a> 
+         <a href="/advertise/contact-information">Contact Advertising</a> 
+        </div> 
+        <div class="linkgroup"> 
+         <h2>Customer Service</h2> 
+         <a href="https://secure.palmcoastd.com/pcd/eServ?iServ=MDM0MDE0NDQwNCZpVHlwZT1NQUlO" target="_blank">Subscriber Services</a> 
+         <a href="/contact-us">Contact Us</a> 
+         <a href="/help">Help</a> 
         </div> 
        </div> 
+       <div class="footer-bottom"> 
+        <div class="footer-logo"> 
+         <a href="http://www.skyandtelescope.com"><img src="http://wwwcdn.skyandtelescope.com/wp-content/uploads/footer-logo.png" alt="Sky &amp; Telescope | Astronomy News, Tools &amp; Resources" border="0"></a> 
+        </div> 
+        <p>Sky &amp; Telescope Media, an F+W, Content + eCommerce Company<br> Copyright ©<script language="JavaScript">var dteNow = new Date();
+<!--
+var intYear = dteNow.getFullYear();
+document.write(intYear);
+//-->
+</script><a name="F+W, a Content + eCommerce Company" href="http://www.fwmedia.com" target="_blank">&nbsp;F+W Media, Inc.</a> All rights reserved. | <a href="http://www.skyandtelescope.com/terms-of-use-agreement/" target="_blank">Terms of Use</a> | <a href="http://www.fwmedia.com/privacy" target="_blank">Privacy</a><br> Sky &amp; Telescope, Night Sky, and SkyandTelescope.com are registered trademarks of F+W, a Content + eCommerce Company. </p> 
+       </div>
       </div> 
-      <br clear="all"> 
-      <div style="clear:both"></div> 
-      <!--#include virtual="/wp-adv/ssi/ad_links_bottom/google/article/print.html"--> 
-      <!-- start the copyright for the articles --> 
-      <div id="articleCopyright" style="clear:both;" align="center">
-       ©&nbsp;2005&nbsp;The Washington Post Company
-      </div>
-      <!-- end the copyright for the aricles -->
-      <!-- start the copyright for the secions -->
-      <!-- end the copyright for the secions --> 
-     </div> 
-    </div> 
-    <div id="wrapperMainRight"> 
-     <script>
-<!--
-if ( show_doubleclick_ad && ( adTemplate & TILE_RIGHT_TOP ) == TILE_RIGHT_TOP  )
-{
-document.write('<div style="margin-top:4px; margin-bottom:4px; margin-right:10px; float:left;">') ;
-document.writeln ('<div><img src="http://media3.washingtonpost.com/wp-srv/hp/img/ad_label_leftjust.gif" alt="ad_icon" width="100" height="13" border="0"/></div>' );
-}
-// -->
-</script> 
-     <script>
-if ( show_doubleclick_ad && ( adTemplate & TILE_RIGHT_TOP ) == TILE_RIGHT_TOP  )
-{
-placeAd('ARTICLE',commercialNode,8,'',false) ;
-}
-</script> 
-     <script language="javascript">
-<!--
-if ( show_doubleclick_ad && ( adTemplate & TILE_RIGHT_TOP ) == TILE_RIGHT_TOP  )
-{
-document.write('</div>') ;
-}
-// -->
-</script> 
-     <script>
-<!--
-if ( show_doubleclick_ad && ( adTemplate & TILE_RIGHT_TOP2 ) == TILE_RIGHT_TOP2  )
-{
-document.write('<div style="margin-top:4px; margin-bottom:4px; float:left;">') ;
-document.writeln ('<div><img src="http://media3.washingtonpost.com/wp-srv/hp/img/ad_label_leftjust.gif" alt="ad_icon" width="100" height="13" border="0"/></div>' );
-}
-// -->
-</script> 
-     <script>
-if ( show_doubleclick_ad && ( adTemplate & TILE_RIGHT_TOP2 ) == TILE_RIGHT_TOP2  )
-{
-placeAd('ARTICLE',commercialNode,10,'',false) ;
-}
-</script> 
-     <script language="javascript">
-<!--
-if ( show_doubleclick_ad && ( adTemplate & TILE_RIGHT_TOP2 ) == TILE_RIGHT_TOP2  )
-{
-document.write('</div>') ;
-}
-// -->
-</script> 
-     <script>
-<!--
-if ( show_doubleclick_ad && ( adTemplate & BIG_FLEX_RIGHT ) == BIG_FLEX_RIGHT  )
-{
-document.write('<div style="margin-top:4px; margin-bottom:4px;clear:left;">') ;
-document.writeln ('<div><img src="http://media3.washingtonpost.com/wp-srv/hp/img/ad_label_leftjust.gif" alt="ad_icon" width="100" height="13" border="0"/></div>' );
-}
-// -->
-</script> 
-     <script>
-if ( show_doubleclick_ad && ( adTemplate & BIG_FLEX_RIGHT ) == BIG_FLEX_RIGHT  )
-{
-placeAd('ARTICLE',commercialNode,6,'',true) ;
-}
-</script> 
-     <script language="javascript">
-<!--
-if ( show_doubleclick_ad && ( adTemplate & BIG_FLEX_RIGHT ) == BIG_FLEX_RIGHT  )
-{
-document.write('</div>') ;
-}
-// -->
-</script> 
-     <div style="clear:both;"> 
-      <!--#include virtual="/wp-adv/ssi/ad_links_right/google/article/print.html"--> 
-      <!--#include virtual="/wp-adv/ssi/topjobs/index.html"--> 
-      <!--http://www.washingtonpost.com/wp-adv/ssi/textlinks/article/print.html--> 
-      <script>
-<!--
-document.write('<div id="textlinks">') ;
-// -->
-</script> 
-      <!--#include virtual="/wp-adv/ssi/textlinks/article/print.html"--> 
-      <script language="javascript">
-<!--
-document.write('</div>') ;
-if (! ( ( adTemplate & TEXTLINKS ) == TEXTLINKS ) ) {
-if ( document.getElementById )
-document.getElementById('textlinks').style.display='none' ;
-}
-// -->
-</script> 
-     </div> 
-     <!--#include virtual="/wp-srv/network-news/ssi/nn-module-rr-1.0.html"--> 
-    </div> 
-   </div> 
-   <div id="wrapperBottom"> 
-    <script language="javascript">
-<!--
-if ( show_doubleclick_ad && ( adTemplate & BANNER_FLEX_BOTTOM ) == BANNER_FLEX_BOTTOM  )
-{
-document.write('<div id="banner_wrapper_bottom" align="center">') ;
-document.write('<table cellpadding="0" cellspacing="0" border="0">') ;
-document.write('<tr>') ;
-document.write('<td valign="middle">') ;
-document.writeln ('<img src="http://media3.washingtonpost.com/wp-srv/article/pieces/adLabel_bluebackground_13x60.gif" alt="ad_icon" width="13" height="60" border="0"/>' );
-document.write('</td>') ;
-document.write('<td>') ;
-}
-// -->
-</script> 
-    <script>
-if ( show_doubleclick_ad && ( adTemplate & BANNER_FLEX_BOTTOM ) == BANNER_FLEX_BOTTOM  )
-{
-placeAd('ARTICLE',commercialNode,2,'',true) ;
-}
-</script> 
-    <script language="javascript">
-<!--
-if ( show_doubleclick_ad && ( adTemplate & BANNER_FLEX_BOTTOM ) == BANNER_FLEX_BOTTOM  )
-{
-document.write('</td>') ;
-document.write('</tr>') ;
-document.write('</table>') ;
-document.write('</div>') ;
-}
-// -->
-</script> 
-    <!--#include virtual="/wp-srv/ssi/globalnav/wp_sp_footer.html"--> 
-   </div> 
-  </div> 
-  <!-- end visible content --> 
+     </aside> 
+    </footer>
+    <!-- #colophon --> 
+   </div>
+   <!-- page --> 
+  </div>
+  <!-- site wrapper --> 
+  <script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script> 
+  <!-- Google Tag Manager (noscript) --> 
+  <noscript>
+   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MFDSTQ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <!-- End Google Tag Manager (noscript) -->
+  <script type="text/javascript"> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done"}};/* ]]> */ </script>
   <script type="text/javascript">
-<!--
-if (typeof place_badges_at_bottom != "undefined")
-place_badges_at_bottom();
-// -->
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/www.skyandtelescope.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"cached":"1"};
+/* ]]> */
 </script> 
-  <script>
-<!--
-if ( typeof inlineAdClearance == "undefined") {
-var inlineAdClearance = 200;
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9.2"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-includes/js/comment-reply.min.js?ver=4.8.2"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/themes/fw-twentytwelve/js/navigation.js?ver=1.0"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-includes/js/wp-embed.min.js?ver=4.8.2"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/plugins/easy-fancybox/fancybox/jquery.fancybox-1.3.8.min.js?ver=1.6.2"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/plugins/easy-fancybox/js/jquery.easing.min.js?ver=1.4.0"></script> 
+  <script type="text/javascript" src="http://wwwcdn.skyandtelescope.com/wp-content/plugins/easy-fancybox/js/jquery.mousewheel.min.js?ver=3.1.13"></script> 
+  <script type="text/javascript">
+jQuery(document).on('ready post-load', function(){ jQuery('.nofancybox,a.pin-it-button,a[href*="pinterest.com/pin/create"]').addClass('nolightbox'); });
+jQuery(document).on('ready post-load',easy_fancybox_handler);
+jQuery(document).on('ready',easy_fancybox_auto);</script> 
+  <script type="text/javascript">
+if(typeof _satellite !== "undefined"){
+  _satellite.pageBottom();
 }
-var inlineAdGraf = getInlineAdGraf2('body_after_content_column','content_column_table',inlineAdClearance) ;
-if ( show_doubleclick_ad && ( adTemplate & INLINE_ARTICLE_AD ) == INLINE_ARTICLE_AD && inlineAdGraf )
-{
-document.write('<div id="inline-ad" style="margin-bottom:4px;padding-right:10px;float:left;">') ;
-document.writeln ('<div><img src="http://media3.washingtonpost.com/wp-srv/hp/img/ad_label_leftjust.gif" alt="ad_icon" width="100" height="13" border="0"/></div>' );
-}
-// -->
-</script> 
-  <script>
-if ( show_doubleclick_ad && ( adTemplate & INLINE_ARTICLE_AD ) == INLINE_ARTICLE_AD && inlineAdGraf )
-{
-placeAd('ARTICLE',commercialNode,20,'inline=y;',true) ;
-}
-</script> 
-  <script language="javascript">
-<!--
-if ( show_doubleclick_ad && ( adTemplate & INLINE_ARTICLE_AD ) == INLINE_ARTICLE_AD && inlineAdGraf )
-{
-document.write('</div>') ;
-}
-// -->
-</script> 
-  <script language="javascript">
-<!--
-if ( show_doubleclick_ad && ( adTemplate & INLINE_ARTICLE_AD ) == INLINE_ARTICLE_AD && inlineAdGraf )
-{
-move_the_inline_ad(document.getElementById('body_after_content_column'),document.getElementById('inline-ad'),inlineAdGraf );
-}
-// -->
-</script> 
-  <script language="javascript">
-<!--
-// OMNITURE VARIABLES
-var wp_photo_gallery = '';
-var wp_photo_name = '';
-var wp_search_keywords = '';
-var wp_search_type = '';
-var wp_sectionfront = '';
-var wp_content_type = 'column' ;
-var wp_content_id = 'AR2005092202023' ;
-var wp_headline = ('') ? '' : 'A Surfeit of Scoundrels' ;
-var wp_page_name = 'wp - column - ' + wp_content_id + ' - A Surfeit of Scoundrels' ;
-var wp_section = 'opinions'.split('/')[0] ;
-var wp_subsection = ('opinions'.indexOf('/') != -1 ) ? 'opinions'.replace(/\//g,' - ') : '' ;
-var wp_author = '' ;
-var wp_page_num = 'single page format' ;
-var wp_hierarchy = 'opinions'.replace(/\//g,'|')+'|columns' ;
-var wp_application = ('') ? 'partner - ' : '' ;
-var wp_source = 'Post' ;
-var wp_blog_name = '' ;
-var wp_events = (wp_page_num == 1) ? 'event4' : '' ;
-// -->
-</script> 
-  <!--#include virtual="/wp-srv/javascript/omniture/omniture.html"--> 
-  <script>
-function fixRelatedBoxWidth() {
-var w = 0 ;
-if ( document.getElementById('related-box') ) {
-w = Math.floor( document.getElementById('related-box').offsetWidth/2 ) - 17 ;
-}
-if ( w>150 && document.getElementById('related-box-left') && document.getElementById('related-box-right') ) {
-document.getElementById('related-box-left').style.width = w ;
-document.getElementById('related-box-right').style.width = w ;
-}
-}
-fixRelatedBoxWidth();
-</script> 
-  <!--#include virtual="/wp-srv/ssi/common/global_ssi_bottom.html"-->   
+</script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7c6878bca9","applicationID":"44033017","transactionName":"YwFSYBBQXhdVUkRYWlpLcVcWWF8KG0JZX1JYAQ==","queueTime":0,"applicationTime":361,"atts":"T0ZRFlhKTRk=","errorBeacon":"bam.nr-data.net","agent":""}</script> 
  </body>
 </html>

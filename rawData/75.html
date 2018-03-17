@@ -1,1434 +1,405 @@
 <!doctype html>
-<!--[if lte IE 7]><html class="ie7 lte8 lte9" lang="en-au"><![endif]-->
-<!--[if IE 8]><html class="ie8 lte8 lte9" lang="en-au"><![endif]-->
-<!--[if IE 9]><html class="ie9 lte9" lang="en-au"><![endif]-->
-<!--[if gt IE 9]>-->
-<html lang="en-au">
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
  <!--<![endif]-->
- <!-- TODO: These various components should be moved to new component framework, and new packages -->
  <head> 
-  <meta charset="utf-8"> 
-  <link rel="dns-prefetch" href="//www.fairfaxstatic.com.au"> 
-  <link rel="dns-prefetch" href="//ad.doubleclick.net"> 
-  <link rel="dns-prefetch" href="//widgets.outbrain.com"> 
-  <link rel="dns-prefetch" href="//plugin.mediavoice.com"> 
-  <link rel="dns-prefetch" href="//static.chartbeat.com">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="http://www.canberratimes.com.au/favicon.ico"> 
-  <link rel="shortcut icon" type="image/ico" href="http://www.canberratimes.com.au/favicon.ico"> 
-  <link rel="apple-touch-icon" href="http://www.canberratimes.com.au/favicon.ico"> 
-  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png"> 
-  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--> 
-  <!-- Always force IE to render in the most recent mode --> 
-  <meta name="application-name" content="Canberra Times"> 
-  <meta name="msapplication-tooltip" content="Open Canberra Times"> 
-  <meta name="msapplication-starturl" content="http://www.canberratimes.com.au"> 
-  <meta name="msapplication-task" content="name=National;action-uri=http://www.canberratimes.com.au/national;icon-uri=http://www.canberratimes.com.au/favicon.ico;"> 
-  <meta name="msapplication-task" content="name=World;action-uri=http://www.canberratimes.com.au/world;icon-uri=http://www.canberratimes.com.au/favicon.ico;"> 
-  <meta name="msapplication-task" content="name=Sport;action-uri=http://www.canberratimes.com.au/sport;icon-uri=http://www.canberratimes.com.au/favicon.ico;"> 
-  <meta name="msapplication-task" content="name=Weather;action-uri=http://www.canberratimes.com.au/weather;icon-uri=http://www.canberratimes.com.au/favicon.ico;"> 
-  <meta name="robots" content="noarchive,noodp,index"> 
-  <meta name="robots" content="ACAP allow-index"> 
-  <meta name="robots" content="ACAP allow-follow"> 
-  <meta name="robots" content="ACAP disallow-preserve"> 
-  <meta name="robots" content="ACAP allow-present prohibited-modification=annotation"> 
-  <link rel="canonical" href="http://www.smh.com.au/sport/its-a-honeybunny-win-for-english-20130331-2h1je.html"> 
-  <meta name="description" content="Hot cross buns with honey were the secret weapon that helped power Jason English to his sixth consecutive Australian solo 24-hour championship at Stromlo Forest ..."> 
-  <meta name="keywords" content="Cycling, Sport"> 
-  <meta name="news_keywords" content="Cycling, Sport"> 
-  <link rel="author" href="https://plus.google.com/+DavidPolkinghorne/posts"> 
-  <link rel="publisher" href="https://plus.google.com/u/0/+canberratimes"> 
-  <meta name="twitter:card" content="summary_large_image"> 
-  <meta name="twitter:image:src" content="http://www.canberratimes.com.au/content/dam/images/2/h/1/q/1/image.related.articleLeadwide.620x349.2h1je.png/1364745600000.jpg"> 
-  <meta name="twitter:site" content="@canberratimes"> 
-  <meta name="twitter:title" content="It's a honey-bunny win for English"> 
-  <meta name="twitter:description" content="Hot cross buns with honey were the secret weapon that helped power Jason English to his sixth consecutive Australian solo 24-hour championship at Stromlo Forest Park."> 
-  <meta name="twitter:creator" content="@Super_Couch"> 
-  <meta property="og:title" content="It's a honey-bunny win for English"> 
-  <meta property="og:description" content="Hot cross buns with honey were the secret weapon that helped power Jason English to his sixth consecutive Australian solo 24-hour championship at Stromlo Forest Park."> 
-  <meta property="og:url" content="http://www.canberratimes.com.au/sport/its-a-honeybunny-win-for-english-20130331-2h1je.html"> 
-  <meta property="og:image" content="http://www.canberratimes.com.au/content/dam/images/2/h/1/q/1/image.related.articleLeadwide.620x349.2h1je.png/1364745600000.jpg"> 
-  <meta property="og:site_name" content="Canberra Times"> 
-  <meta property="og:locale" content="en_US"> 
-  <meta property="og:type" content="article"> 
-  <meta property="article:section" content="Sport"> 
-  <meta property="article:published_time" content="2013-04-01T03:00:00+1100"> 
-  <meta property="article:modified_time" content="2013-04-01T03:00:00+1100"> 
-  <meta property="fb:app_id" content="106020559517129"> 
-  <meta property="fb:pages" content="347700997164"> 
-  <meta property="fb:pages" content="108603349088"> 
-  <meta property="fb:pages" content="144226982353442"> 
-  <meta property="fb:pages" content="1512741838937542"> 
-  <meta property="fb:pages" content="353068424784135"> 
-  <meta property="fb:pages" content="211554685698074"> 
-  <meta itemprop="datePublished" name="pubdate" content="2013-04-01T03:00:00+1100"> 
-  <meta itemprop="author" name="author" content="David Polkinghorne"> 
-  <title>It's a honey-bunny win for English</title> 
-  <!-- Google Tag Manager --> 
-  <script>
-    (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start':
-                new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '';
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-N6VZRKC');
-</script> 
-  <!-- End Google Tag Manager --> 
-  <style>
-		*{box-sizing:border-box}a,article,aside,body,cite,dd,div,dl,dt,fieldset,figcaption,figure,form,h1,h2,h3,h4,h5,header,html,iframe,img,label,li,nav,ol,p,section,small,span,strong,time,ul,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,figcaption,figure,header,main,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}.article__body:after,.commentform__top:after,.nav:after,.panel .header:after,.panel:after,.story:after,.strap .header:after,.strap:after,.wrap:after{clear:both;content:"";display:table}.aside--main,.panel,.story,.strap{width:100%}.grid{display:block;padding:0;margin:0 -10px;text-align:left;letter-spacing:-.32em;text-rendering:optimizespeed}.aside--main,.aside .panel,.grid__cell,.header-wrap .ad-wrap--promo,.module,.panel,.search-box,.strap,.template--home .header-wrap .logo-wrap,.template--home .headerright-wrap,article.article{box-sizing:border-box;display:inline-block;margin:0;padding-left:10px;padding-right:10px;vertical-align:top;letter-spacing:normal;word-spacing:normal;text-rendering:auto}.grid__cell{text-align:left;width:100%}.unit-1-2{width:50%}.unit-1-3{width:33.3333%}.unit-1-4{width:25%}h1{font-size:2rem;line-height:1.5}h1,h2{margin-bottom:1.5rem}h2{font-size:1.875rem;line-height:1.6}h2 a{color:inherit;text-decoration:none}h3{font-size:1.5rem;margin-bottom:1.5rem;line-height:1}h3 a{color:inherit;text-decoration:none}h4{font-size:1.25rem;line-height:1.2}h4,h5{margin-bottom:1.5rem}h5{font-size:1rem;line-height:1.5}img:not([data-src]){display:block;max-width:100%;height:auto;border:0}img[height],img[width]{max-width:none}figure>img{display:block}.template--sidebar-right .main .media img{height:auto;max-width:100%;width:100%}html{font:1em/1.5 Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;min-height:100%}body{color:#1d1d1d;height:100%;line-height:1.5}video{display:block;max-width:100%;height:auto;border:0}figure,iframe{margin-bottom:0}figcaption{font-style:italic}p{margin-bottom:.75em}cite{font-style:italic}strong{font-weight:700}small{font-size:80%}.outer-wrap,.wrap{position:relative}.outer-wrap{z-index:2;margin:0 auto;overflow:hidden}.wrap{width:940px}.wrap.grid{width:960px}.main{float:left}.aside{width:300px;float:right}.article__body ul{margin:0 0 1em 1.5em}.article__body ul li{margin-bottom:7.5px}.article__body ul{list-style:disc}.commentform__social li,.nav ol li,.nav ul li,.network-strip__links li,.social--horizontal li{display:inline-block;margin-right:15px}.commentform__social li:last-child,.nav ol li:last-child,.nav ul li:last-child,.network-strip__links li:last-child,.social--horizontal li:last-child{margin-right:0}.btn{position:relative;display:inline-block;background-color:#fff;line-height:1;padding:10px;border:0;text-align:center;text-decoration:none}.btn--primary{background:#0078be}.btn--full{width:100%}.breadcrumb .breadcrumb__item+.breadcrumb__item:before,.breadcrumb ol>li+li:before{content:"/"}.error{display:block}.commentform__sent,.commentform__sent ul li{position:relative}.comment__pagination{overflow:hidden}.comment__pagination .comment__prev{float:left}.comment__pagination .comment__next{float:right}.comment__pagination .comment__next a,.comment__pagination .comment__prev a{display:block}.scriptable .commentform__bottom,.scriptable .commentform__top{display:none}.commentform__top{width:100%}.commentform__top p{display:block}.commentform__profile{float:left;width:100%}.commentform__profile strong{display:inline-block;overflow:hidden;text-overflow:ellipsis;vertical-align:bottom}.commentform__top div{position:absolute;right:0;top:0}.scriptable .commentform__chars{display:none}.commentform__close{position:absolute;right:0;top:0}.commentform__fieldwrap{float:left}.commentform__fieldwrap>input{width:100%}.commentform__social{clear:both;display:block}.commentform__social li{vertical-align:middle}.commentform__disclaimer{clear:both;display:block}form ul{list-style:none;margin-left:0}fieldset{border:0;padding:0;margin:0}label{display:inline-block;margin:0;vertical-align:middle}.btn,input{border-radius:2px;font-family:inherit;font-size:100%;margin:0;letter-spacing:normal;line-height:normal}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input[type=checkbox],input[type=radio]{width:auto;padding:0;vertical-align:middle}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}:not(.ie8) input[type=search],:not(.ie8) input[type=search]::-webkit-search-cancel-button,:not(.ie8) input[type=search]::-webkit-search-decoration{-webkit-appearance:none;-moz-appearance:none;appearance:none}:not(.ie8) input[type=checkbox],:not(.ie8) input[type=radio]{position:absolute;overflow:hidden;margin:0;padding:0;border:0;outline:0;opacity:0}:not(.ie8) input[type=checkbox]+label:before,:not(.ie8) input[type=radio]+label:before{display:inline-block;content:" ";vertical-align:middle}.form input{display:block}input[type=search],input[type=text]{display:inline-block;padding:10px;border:1px solid #ccc}.nav{list-style:none;margin-left:0}.nav ol>li,.nav ol>li>a,.nav ul>li,.nav ul>li>a{display:inline-block;*display:inline;zoom:1;text-decoration:none}.strap{margin-bottom:30px}.modal__content{display:none}.module.module--inline-player{padding:0}.aside--main .module.module--inline-player{padding:0 10px}.module__lead{width:100%;height:auto}.media--video.module__lead{position:relative}.media--video.module__lead:after{content:"";display:block;padding-top:56.25%}.media--video.module__lead .video-js{position:absolute;bottom:0;left:0;right:0;top:0;width:100%;height:100%}.module__lead{position:relative}.panel{padding:10px}.panel,.story{margin-bottom:30px}.story{display:block}.story__lead{float:left}.story__lead img{display:block;margin-bottom:0}.story__wof{overflow:hidden}.story--imgright .story__lead{float:right;margin-left:15px}.story--stacked{display:block}.story--stacked .story__lead{float:none;margin-bottom:15px}.story--stacked .story__lead img{width:100%}.story--overlay{display:block;position:relative;margin-bottom:15px}.story--overlay .story__lead{float:none;margin-bottom:0}.story--overlay .story__lead img{width:100%;margin-bottom:0}.story--overlay .story__wof{position:absolute;bottom:0;right:0;left:0;background-color:rgba(0,0,0,.7)}.media--video{overflow:hidden}.media--video video::-webkit-media-controls-enclosure,.media--video video::-webkit-media-controls-overlay-enclosure,.media--video video::-webkit-media-controls-panel,.media--video video::-webkit-media-controls-panel-container,.media--video video::-webkit-media-controls-start-playback-button,.media--video video::-webkit-media-show-controls{opacity:0}.is-hidden{display:none!important;visibility:hidden!important}.is-vishidden,.weatherblock__details dt{position:absolute!important;overflow:hidden;width:1px;height:1px;padding:0;border:0;clip:rect(1px,1px,1px,1px);white-space:nowrap}.header-wrap .logo,.header-wrap .tagline,.logo{background-color:transparent;border:0;overflow:hidden;*text-indent:-999em}.header-wrap .logo:before,.header-wrap .tagline:before,.logo:before{content:"";display:block;height:100%;width:0}.aside .panel{width:100%}.grid{position:relative;clear:both}.wrap{display:block;padding:0;margin:0 auto;text-align:left;letter-spacing:-.31em;text-rendering:optimizespeed}.outer-wrap{z-index:auto}.main{display:block;padding:0;margin-left:0;margin-right:0;text-align:left;letter-spacing:-.31em;text-rendering:optimizespeed;overflow:visible;position:static;width:100%}.aside--main{margin-top:0}.outer-wrap{width:990px;padding-left:15px;padding-right:15px;background:#fff}.aside--main{width:320px}.template--sidebar-right .main{overflow:visible;width:640px;padding-right:10px}.template--sidebar-right .aside--main{width:320px}a{color:#0078c8;text-decoration:none}:visited{color:#78777a}.skip-link{position:absolute;top:0;display:block;left:-999px;overflow:hidden}h1{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}h1,h2,h3{letter-spacing:normal}.header .heading:not(h1){font-family:Montserrat,Helvetica,Arial,sans-serif}.adWrapper small{display:none}.ad-wrap--leaderboard{max-width:996px;clear:both;margin:0 auto 20px;min-height:90px}ol,p,ul{margin-bottom:1em}.breadcrumb{position:relative;font-size:12px;margin-bottom:20px;z-index:1}.breadcrumb ol{display:inline-block;margin-bottom:0}.breadcrumb ol>li+li:before{margin-left:-.7em;margin-right:.5em}.breadcrumb a,.breadcrumb li:before{color:#777579}.btn,.social--share .social__toggle{padding:10px 15px;border:1px solid #c4c5c6;border-radius:0;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;font-size:16px;text-transform:uppercase;text-align:center;color:#666;box-sizing:border-box;-webkit-appearance:none;-moz-appearance:none;appearance:none}.btn--primary{background-color:#0078be;border-color:#0078be;color:#fff}.btn--mini{font-size:14px;line-height:1.0715;padding:9px 10px 6px}.btn--full{display:block}.btn.btn--text{display:inline-block;border-color:transparent;background:transparent}.btn--full.btn--full{width:100%}form label{font-size:14px;font-size:.875em;font-weight:700}:not(.ie8) input[type=checkbox]+label:before,:not(.ie8) input[type=radio]+label:before{width:18px;height:18px;box-sizing:border-box;border:1px solid #ccc;text-indent:25px;line-height:1.1em;margin-right:.5em}.btn,input{border-radius:0}input[type=search],input[type=text]{box-sizing:border-box;font-size:1rem;line-height:1.125;color:#333;vertical-align:middle}input[type=submit]{vertical-align:middle}form input[type=checkbox]+label,form input[type=radio]+label{font-weight:400}:not(.ie8) input[type=checkbox]+label:before{background:#fff url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='96' viewBox='0 0 32 96'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='4' stroke-miterlimit='10' d='M30 8.3L11.3 26.9 2 17.6'/%3E%3Cpath fill='none' stroke='%234FC053' stroke-width='4' stroke-miterlimit='10' d='M30 72L11.3 90.7 2 81.4'/%3E%3C/svg%3E") 50% 0 no-repeat;background-size:14px auto}:not(.ie8) input[type=radio]+label:before{background:#fff url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='96' viewBox='0 0 32 96'%3E%3Ccircle fill='none' stroke='%23fff' stroke-width='4' stroke-miterlimit='10' cx='16.1' cy='18' r='14'/%3E%3Ccircle fill='none' stroke='%234FC053' stroke-width='4' stroke-miterlimit='10' cx='16' cy='79' r='14'/%3E%3C/svg%3E") 50% 0 no-repeat;background-size:14px auto;border-radius:100%}.nav--primary ul,.nav--secondary ul{white-space:nowrap;overflow:hidden;margin:0}.nav--primary ul li{box-sizing:border-box;vertical-align:top;text-align:left;letter-spacing:normal;word-spacing:normal;text-rendering:auto;font-size:1rem;line-height:1.3125;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;width:auto;padding:0}.nav--primary a{padding:11px 11px 9px}.nav--primary .nav__item{margin:0}.nav--primary .nav__menu{margin-right:30px;position:relative}.nav--primary .nav__item--home{font-size:1em;padding-right:9px;line-height:24px}.nav-wrap{padding:20px 0 5px;z-index:5}.nav-wrap .nav:last-child{margin-bottom:15px}.nav--primary,.nav--secondary{margin-left:auto;margin-right:auto;position:relative}.nav--primary__wrap{background:#efeff4}.nav--primary__wrap .inner-wrap{margin-left:auto;margin-right:auto;position:relative;width:940px}.nav--primary{width:940px;margin:0}.nav--primary:before{background-image:linear-gradient(270deg,rgba(239,239,244,0),#efeff4)}.nav--primary:after{background-image:linear-gradient(270deg,#efeff4,rgba(239,239,244,0))}.nav--primary ul{margin:0 auto;display:block}.nav--secondary{width:940px;background:#0078be}.nav--secondary.has-subnav{margin-bottom:0}.nav--secondary ul{padding:0}.social li{margin-bottom:10px;background:#fff}.social li:last-child{margin-right:0}.social a,.social button{display:block;padding:6px 11px;text-align:center;color:#fff;font-size:1rem;line-height:1;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;text-transform:uppercase}.social [class^=icon--]{font-size:20px;margin:0 auto;background-position:0 -2em}.social .social__text{vertical-align:middle}.social .facebook{background:#3b5998}.social .email{background:#777579}.social .google-plus{background:#dd4b39}.social .twitter{background:#03b3ee}.social .link{background:#666}.social .linkedin{background:#0077b5}.social .reddit{background:#ff4500}.social--horizontal li{margin-bottom:0}.social--share{position:relative}.social--share li{margin-right:5px}.social--share li a,.social--share li button{height:32px;font-size:.875em}.social--share .social__total{color:#1d1d1d;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;font-weight:700;line-height:2;text-transform:uppercase}.social--share .social__number{margin-bottom:0;white-space:nowrap}.social--share .social__expand{position:absolute;left:calc(100% - 150px);top:0}.social--share .social__total{position:absolute;left:calc(100% - 67px);top:0}.social--share .social__text{display:inline-block;margin-top:3px}.social--share .expand-show{opacity:0;visibility:hidden}.social--share .social__toggle{font-size:.875rem;line-height:1;background-color:#fff;padding:1px 0 0;height:32px;width:64px}.story{letter-spacing:normal;margin-bottom:12px}.module__wof p{display:block;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:.9375rem;margin-bottom:0}.story__lead{float:right;margin-left:15px;margin-right:0}.story__headline{display:inline;color:#1d1d1d;font-family:merriweather,georgia,serif;font-weight:700;margin-bottom:0;margin-right:.3333em;font-size:1rem;line-height:1.25}.story__headline:last-child{margin-bottom:0}.story__wof .byline{display:block;position:relative;top:3px;margin-bottom:0;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:-.32em;font-size:.875rem;line-height:1.2857}.story__wof .byline li{position:relative;display:inline;margin-right:8px;letter-spacing:normal}.story__wof{overflow:visible;line-height:1.125em}.story__wof .byline{color:#777579}.story__wof .author,.story__wof .time{text-transform:none}.story__wof .author,.story__wof .category,.story__wof .time{white-space:nowrap}.story__wof .meta{display:none}.signpost{display:inline-block;text-transform:uppercase;line-height:1;margin-right:4px}.signpost--breaking{color:#d35400;font-weight:700}.story--overlay .story__lead,.story--stacked .story__lead{float:none;margin-left:0}.story--stacked .story__lead{margin-bottom:.5em}.story--stacked:not(.story--small) .media .tag{font-size:1.5em}.story--overlay .story__wof{z-index:1}.story--overlay .story__wof:after{content:"";display:block;position:absolute;z-index:-1;top:-60%;bottom:0;left:0;right:0;background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.9))}.story--overlay{padding-bottom:0}.story--overlay .story__wof{padding:12px;background:none;color:#fff}.story--overlay .story__wof .byline li:not(.signpost){color:#fff}.story--overlay .story__lead{position:relative}.story--overlay .story__headline{font-weight:400;color:#fff}.story--overlay .story__headline a:visited{color:inherit}.story--overlay .byline{display:block;position:absolute;top:-8px}.story--imgright .story__lead{margin-right:0;margin-left:10px}.story--large .story__headline{font-size:1.25rem;line-height:1.2}.tag{position:absolute;display:block}.media figcaption{color:#666;margin-top:5px;font:normal 14px/1.4286 Source Sans Pro,Helvetica,Arial,sans-serif}.media cite{font-style:normal;color:#777579}.media .social{margin-bottom:0;margin-left:0;font-family:Arial,Helvetica,sans-serif}.media .social .social__toggle{opacity:1;background:rgba(29,29,29,.6);color:#fff;margin:0;font-size:.8125rem;line-height:.7692;font-weight:400;height:32px;width:64px}.media .social li{background:inherit;position:absolute;top:-32px;z-index:2}.media .social li:first-child{top:10px;left:10px}.media .social .link{border:0;padding:0;height:32px;width:42px}.media .social .social__url{position:absolute;padding:10px;width:230px;background:#666;left:-100px;font-size:.8125rem;line-height:1.1538;color:#fff;opacity:0;top:-52px}.media .social li+li{left:83px}.media .social li+li+li{left:179px}.media .social li+li+li+li{left:275px}.media--video{position:relative}.media--video .tag{content:"";width:2em;height:2em;bottom:0;right:0;z-index:2;overflow:hidden;text-indent:-9999px;background-color:#333}.media--video .tag:after{content:"";position:absolute;left:50%;top:50%;z-index:2;background-position:0 -2em;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);font-size:1em}.notification .btn{position:static}.notification-wrap{border-radius:2px;max-width:600px!important;min-width:200px;display:none;position:fixed;top:45%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:2000020}.notification{padding:15px 15px 15px 20px;position:relative;background:hsla(0,0%,100%,.95);border:1px solid #e1e2e3;box-shadow:0 6px 15px rgba(0,0,0,.25);color:#666;text-align:center;min-width:280px;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;font-size:16px}.notification [class*=icon--]{margin-right:5px;position:relative;top:-1px}.notification .action-group{margin-left:10px}.notification .action-group .btn{position:static;float:none;margin-left:0;margin-right:8px}.notification .action-group .btn:last-child{margin-right:0}.notification .action-group,.toggle{display:inline-block}.toggle{position:relative}.toggle__btn{background:transparent;padding:9px;border:1px solid transparent;z-index:12}.toggle__btn.icon--after{padding-right:30px}.togglebox{display:none;position:absolute;right:0;top:40px;box-sizing:border-box;padding:20px;background-color:#fff;border:1px solid #c4c5c6;text-align:left;z-index:11;box-shadow:0 6px 15px rgba(0,0,0,.25)}.network-strip__links .links__social [class*=icon--]{background-position:0 -1em}.network-strip__links .togglebox--network{letter-spacing:normal}.network-strip__links .togglebox--network .grid--table{display:table}.network-strip__links .togglebox--network .grid--table__col{display:table-cell;padding:0 20px;letter-spacing:normal}.network-strip__links .togglebox--network .grid--table__col:first-child{padding-left:10px}.network-strip__links .togglebox--network nav{font-size:.75rem;line-height:1.5}.network-strip__links .togglebox--network nav h3,.network-strip__links .togglebox--network nav li{padding:3px 0}.network-strip__links .togglebox--network nav h3{margin-bottom:6px;color:#000;font-size:12px;font-weight:700}.network-strip__links .togglebox--network nav a{color:#777579}.network-strip__links .toggle--network{z-index:25}.network-strip__links .togglebox--network{position:absolute;width:650px;padding:10px}.network-strip__links .togglebox--network nav h3,.network-strip__links .togglebox--network nav li{white-space:nowrap}.network-strip__links .togglebox--network a{display:block;height:20px}.network-strip__links .togglebox--network .grid--table{padding:10px 0 15px;width:100%}.network-strip__links .togglebox--network .grid--table:after,.network-strip__links .togglebox--network .grid--table:before{content:none}.network-strip__links .togglebox--network .grid--table h3,.network-strip__links .togglebox--network .grid--table li{width:100%;margin-right:0;padding:0;padding:6px 0;font-size:.75rem;line-height:1.5}.network-strip__links .togglebox--network .nav{margin-bottom:0}.network-strip__links .togglebox--network .logo{width:100%;font-size:0;line-height:20px;background-size:contain}.network-strip-wrap{border-top:6px solid #1d1d1d;padding:0 10px;background:#fff;position:relative}.network-strip-wrap .network-strip{padding:8px 0;margin:0 auto;height:41px}.network-strip-wrap .network-strip:after{content:"";display:block;position:absolute;left:10px;right:10px;bottom:0;border-bottom:1px solid #c4c5c6}.network-strip-wrap .network-strip li{font-size:.8125rem;line-height:1.8462;margin-bottom:0}.network-strip-wrap .network-strip a{color:#777579}.network-strip-wrap{min-width:980px}.network-strip__links{letter-spacing:normal;margin-bottom:0;display:inline-block;margin-right:10px;font-size:.8125rem;line-height:1.8462;padding:0 10px}.network-strip__links .links__social{margin-right:0;padding-left:7.5px;padding-right:7.5px}.network-strip__links .links__social:first-child{padding-left:0}.network-strip__date{float:none;position:absolute;letter-spacing:normal;font-size:.8125rem;line-height:1.8462;display:block;text-align:center;white-space:nowrap;width:100%}.links--right{margin-right:0;margin-top:-8px}.network-strip__links{position:absolute}.links--left{left:0}.links--right{right:0}.network__additional{padding:15px 0 10px;margin:0 10px;border-top:1px solid #efeff4;font-size:.6875rem;line-height:1}.network__additional li{display:inline-block;font-size:.6875rem;line-height:1.6364;margin-right:10px}.togglebox--mega-menu{left:0;right:auto}.togglebox--mega-menu h3{font-size:.8125rem;font-family:Montserrat,Helvetica,Arial,sans-serif;margin-bottom:10px;text-transform:uppercase}.togglebox--mega-menu ul{margin-bottom:20px}.togglebox--mega-menu ul li{font-size:.875rem;line-height:1.5;display:block}.togglebox--mega-menu a{padding:0}.togglebox--mega-menu.togglebox--mega-menu h3 a{color:#1d1d1d}.mega-menu{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column wrap;-ms-flex-flow:column wrap;flex-flow:column wrap;height:680px}.mega-menu .mega-menu__section{width:16.67%}.togglebox--mega-menu{width:940px}.search-box{font-family:Source Sans Pro,Helvetica,Arial,sans-serif;position:relative}input.search-box__text{position:relative;width:100%;z-index:1;padding-right:40px}.search-box__btn{z-index:1;position:absolute;top:50%;right:15px;margin:5px;margin-top:-11px;font-size:1.375em}.search-box-wrap{position:absolute;right:0;top:0;width:auto;background:#efeff4}.search-box-wrap:after{content:"";display:block;width:40px;height:100%;position:absolute;top:0;left:-40px;background-image:linear-gradient(270deg,#efeff4,rgba(239,239,244,0))}.search-box--primary{position:relative;z-index:13}.search-box--primary .search-box__text{box-sizing:border-box;height:41px}.scriptable .search-box--primary .search-box__text{padding-right:32px;border-color:transparent;background-color:transparent;width:44px;color:transparent}.scriptable .search-box--primary .search-box__btn{z-index:0}.search-box--primary{padding-right:0}.search-box--primary .search-box__btn{right:5px}.signature{margin-bottom:5px}.article__header .signature{display:inline-block}.signature__img-wrap{display:inline-block;width:37px;height:37px;margin-right:10px;margin-top:-4px;border-radius:50%;overflow:hidden;border:1px solid #ccc;vertical-align:middle;box-sizing:content-box}.signature__info{display:inline-block;vertical-align:top}.signature__info ul{margin-bottom:0}.signature__info .social{margin-left:10px;display:inline-block}.signature__info .social li{margin:0;background-color:transparent}.signature__info .social a{background:#fff;padding:5px}.signature__info .social [class^=icon--]{font-size:15px;margin:0 auto;background-position:0 -1em}.signature__name{position:relative;margin-right:.75em;display:inline-block}.signature__name>:first-child{vertical-align:middle}.signature__name h5{font-size:.9375rem;font-weight:700;color:#1d1d1d;display:inline-block;margin-bottom:0}.comments h2,.signature__name h5{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}.comments h2{border-top:1px solid #e1e2e3;color:#333;font-size:24px;margin-bottom:10px;padding-top:20px}.error{font-size:.75rem;line-height:2;color:#d94b4b}.commentform__sent{background:#fff;border:1px solid #e1e2e3;margin-bottom:30px;padding:30px 40px}.commentform__sent h2{border-bottom:1px solid #e1e2e3;font-weight:700;margin-bottom:25px}.commentform__sent h4{font-size:1rem;line-height:1.5;font-weight:700;margin-bottom:10px}.commentform__sent ul{margin-bottom:0}.commentform__sent ul li{font-size:.8125rem;line-height:1.2308;margin-bottom:30px;padding:0 0 0 30px}.commentform__sent ul li .icon--checkmark{background-position:0 -2em;left:0;position:absolute;top:3px}.commentform__sent .icon--close{position:absolute;right:10px;top:10px}.comment__pagination{margin:40px auto 0}.comment__pagination .comment__next,.comment__pagination .comment__prev{border:1px solid #c4c5c6;text-align:center;text-transform:uppercase}.comment__pagination .comment__next a,.comment__pagination .comment__prev a{color:#0078be;line-height:1;padding:10px 15px}.commentform__bottom{margin-top:20px}.commentform__top{left:0;position:absolute;top:0}.commentform__top p{font-size:12px;margin-bottom:5px}.commentform__profile{padding-right:20px}.commentform__profile strong{margin-right:10px;max-width:75%}.commentform__top div{padding-right:30px}.commentform__chars{color:#777579}.commentform__fieldwrap{margin-bottom:20px;width:48%}.commentform__fieldwrap:first-child{margin-right:4%}.commentform__fieldwrap label span{font-weight:400}.commentform__social{margin-bottom:20px}.commentform__social li{margin-right:10px}.commentform__social li:first-child{font-size:12px;line-height:20px;margin-top:2px;text-transform:uppercase;vertical-align:bottom}.commentform__social .icon--small:before{background-position:0 -18px;display:inline-block}.commentform__social input[type=checkbox]{height:22px;width:22px}.commentform__disclaimer{margin-bottom:0}.commentform__disclaimer label{padding-left:27px;text-indent:-27px}.commentform__disclaimer input{height:22px;width:22px}.comment__list .spinner{border-color:#0078be;border-top-color:#fff;border-width:4px;display:block;height:30px;margin:0 auto -30px;width:30px}.panel .header,.strap .header{position:relative;border-bottom-width:3px;border-bottom-style:solid;border-bottom-color:#c4c5c6;text-align:left;margin-bottom:20px;padding-top:5px}.panel .heading{position:relative;font-weight:700;text-transform:uppercase;margin-right:10px;color:#1d1d1d;margin-bottom:10px}.panel--huffpost .story,.panel--video .story,.panel--video .story--stacked,.panel .story,.strap .story{padding-bottom:18px;margin-bottom:18px}.panel--huffpost .story:before,.panel--video .story--stacked:before,.panel--video .story:before,.panel .story:before,.strap .story:before{content:"";display:block;position:absolute;left:0;right:0;top:-18px;border-top:1px solid #e1e2e3}.panel .story:first-child:before,.strap .story:first-child:before{content:none}.panel--popular ol>li:not(:first-child){padding-top:15px;margin-top:15px}.panel--popular ol>li:after{content:"";display:block;position:absolute;left:0;right:0;bottom:-15px;border-bottom:1px solid #e1e2e3}.panel--popular ol>li:last-child:after{content:none}.panel,.strap{margin-bottom:20px}.panel .header .heading{float:left}.panel .heading{font-size:1.375rem;line-height:1.25}.panel .heading a:visited{color:inherit}.panel .header+.story:before{content:none}.panel .story,.strap .story{position:relative;box-sizing:border-box;display:inline-block;padding-left:10px;padding-right:10px;vertical-align:top;letter-spacing:normal;word-spacing:normal;text-rendering:auto}.panel .story:last-child{margin-bottom:0}.panel .story--stacked,.strap .story--overlay{padding-top:0}.panel .story--stacked:before,.strap .story--overlay:before{content:none}.strap .story--overlay{padding-bottom:0}.grid__cell>.story{padding-left:0;padding-right:0}.grid__cell>.story:before{left:0;right:0}.subfirststrap--1s-1s-1s .header .logo{width:200px;height:20px;margin-bottom:10px}.subfirststrap--1s-1s-1s.subfirst-loggedout .header{display:none}.panel--related{margin-bottom:40px}.panel--related .header{border-width:2px;border-color:#e1e2e3;margin-bottom:12px}.panel--related .header .heading{font-weight:700;font-size:.875em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;text-transform:uppercase;border-top:none;color:#1d1d1d}.panel--related ul li{color:#666}.panel--related ul li:last-child{border-bottom:0}.aside .panel{margin-bottom:60px;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}.aside .panel header h2{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:1.25rem;line-height:1.2;letter-spacing:.02em;margin-bottom:10px}.aside .panel h3{display:inline;margin-right:6px}.panel--popular ol{counter-reset:a;margin-bottom:0}.panel--popular ol>:before{content:counter(a) "";counter-increment:a}.panel--popular ol>li{position:relative}.panel--popular ol>li:last-child{padding-bottom:0;margin-bottom:0}.panel--popular ol>li:before{position:absolute;color:#1d1d1d;font-size:1.25rem;line-height:1.2;font-family:Montserrat,Helvetica,Arial,sans-serif;font-weight:700}.panel--popular ol>li .story{margin-left:20px;padding-right:0;width:auto}.panel{padding:0 10px}.panel>.story{padding-left:0;padding-right:0}.panel>.story:before{left:0;right:0}.panel--related{font-family:merriweather,georgia,serif}.panel--related ul{margin-bottom:0}.panel--related ul li{border-bottom:1px solid #e1e2e3;padding:10px 0}.panel--related ul li:first-child{padding-top:0}.template--article .aside .panel{margin-bottom:80px}.aside .panel .story__headline{font-family:merriweather,georgia,serif;font-weight:400;font-size:.875rem;line-height:1.1429}.aside .panel .story:last-of-type{padding-bottom:0;margin-bottom:0}.aside .panel .media{padding:0}.panel--follow--masthead .social .email .icon--email{display:none}.panel--video .story__headline a{font-size:1rem;line-height:1.375;overflow:hidden;display:block;max-height:4.0563em}.module{margin-bottom:24px;width:100%}.module__lead{margin-bottom:.75em}.module__headline{font-family:merriweather,georgia,serif;font-size:1.375rem;line-height:1.0909;font-weight:700;margin-bottom:.125em;margin-right:.3333em}.panel--poll{margin-bottom:40px}.panel--poll.panel{background:#f7f7f7;padding:0}.panel--poll.panel .poll{padding:10px 20px 20px}.aside--main .panel--poll{margin-left:10px}.aside--main .panel--poll.panel{width:calc(100% - 20px)}.panel--poll .header{border-bottom:none;border-top:3px solid #c4c5c6;margin-bottom:0;padding-left:20px;padding-top:20px}.panel--poll .poll__options{font-family:Source Sans Pro,Helvetica,Arial,sans-serif;font-size:1.125rem}.panel--poll .poll__options li{padding-bottom:1em}.panel--poll .poll__options label{padding-left:25px;text-indent:-25px}.panel--poll .poll__question{font-weight:700;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;font-size:1.125rem;color:#000;padding-top:10px}.panel--poll .poll__action .btn{margin-right:10px}.panel--poll .poll__action .poll__total{font-size:16px;display:inline;margin-right:10px}.panel--poll .poll__action a{font-size:16px;color:#666;padding-left:0;padding-right:0}.panel--poll .poll__close,.panel--poll .poll__disclaimer{font-size:12px}.panel--poll .poll__disclaimer{margin-bottom:0}.panel--poll .poll__bar{margin-top:3px;display:block;position:relative;height:25px;min-width:36px;background:#008939}.panel--poll .poll__value{padding:0 10px;height:24px;vertical-align:middle;float:right;font-size:.875rem;line-height:1.7143;color:#fff}.panel--poll .error{margin-bottom:1em}.headerright-wrap .btn--sign-up:before{display:block;content:"/";position:absolute;left:-3px;top:8px;color:#666;z-index:11}.headerright-wrap .action-group>.btn{color:#0078c8}.headerright-wrap .btn{letter-spacing:normal}.headerright-wrap .btn--text{border:1px solid transparent;color:#007cc3}.headerright-wrap .dropdown{display:inline-block;position:relative;white-space:normal;letter-spacing:normal;vertical-align:top}.headerright-wrap .dropdown>.btn{color:#0078c8;text-decoration:none}.headerright-wrap .sign-up-wrap>.btn{width:80px}.headerright-wrap .sign-up-wrap .sign-up__row{margin:0 -10px!important}.headerright-wrap .sign-up-wrap .sign-up__row img{margin:0 auto}.headerright-wrap .sign-up-wrap .sign-up__row h4{font-weight:700;margin-bottom:0;text-align:center;font-size:.75rem;line-height:2}.headerright-wrap .sign-up-wrap .sign-up__row .grid__cell{padding-top:6px;padding-bottom:6px}.headerright-wrap .sign-up-wrap .sign-up__row.bordered{border-top:1px solid #c4c5c6}.headerright-wrap .sign-up-wrap .sign-up__row.bordered:first-of-type{border-top:none}.headerright-wrap .sign-up-wrap .sign-up__row.bordered .grid__cell{border-right:1px solid #c4c5c6;border-left:1px solid #c4c5c6;margin-right:-1px}.headerright-wrap .sign-up-wrap .sign-up__row.bordered .grid__cell:first-child{border-left:none}.headerright-wrap .sign-up-wrap .sign-up__row.bordered .grid__cell:last-child{border-right:none}.headerright-wrap .sign-up-wrap .signup__cell{display:block;text-align:center;font-size:.75rem;line-height:1}.headerright-wrap .sign-up-wrap .btn{margin-bottom:0}.headerright-wrap .sign-up-wrap .dropdownbox{padding-top:10px;width:280px!important}.headerright-wrap .sign-up-wrap .dropdownbox h3{font-size:.9375rem;line-height:1.0267}.headerright-wrap .sign-up-wrap .dropdownbox .btn{margin-top:20px}.headerright-wrap .dropdownbox{top:39px;width:280px;font-size:.75rem;line-height:1.1667}.headerright-wrap .dropdownbox h3{margin-bottom:15px;font-size:1.125rem;line-height:1.3333;font-weight:700}.headerright-wrap .dropdownbox--sign-up .sign-up__row{margin-bottom:20px}.headerright-wrap .dropdownbox--sign-up img{padding-right:10px;display:table-cell}.headerright-wrap .dropdownbox--sign-up .signup__cell{display:table-cell;vertical-align:middle}.headerright-wrap .dropdownbox--sign-up .btn{margin-top:0;margin-bottom:0}.header-wrap{background:#fff}.header-wrap .wrap{padding:20px 0}.header-wrap .logo,.header-wrap .tagline{vertical-align:middle;letter-spacing:normal;display:inline-block;margin:0 auto;text-align:left;padding-left:0;background-position:50%}.header-wrap .logo{max-width:100%;height:32px;background-size:auto 100%}.header-wrap .tagline{height:20px;max-width:80%}.header-wrap .search-box__btn,.header-wrap a:not(.btn){color:#666}.header-wrap .logo-wrap{float:left;position:relative;letter-spacing:-.25em;margin-right:20px;text-align:center}.header-wrap .headerright-wrap{float:right;letter-spacing:normal;text-align:right}.header-wrap .headerright-wrap .action-group{display:inline-block;width:100%;letter-spacing:-.25em}.section-name{float:left;letter-spacing:normal;border-left:1px solid #efeff4;padding-left:20px;font-family:merriweather,georgia,serif;text-decoration:none!important}.section-name h2{font-size:1.25em;text-transform:none;margin:0}.weatherblock-wrap{height:42px;margin:-2px 0 12px;padding-right:10px}.weatherblock{position:relative;padding-left:40px;float:right}.weatherblock dl{display:inline-block;vertical-align:middle;font-weight:700;margin-right:5px}.weatherblock dd{margin-right:3px}.weatherblock dd,.weatherblock dt{display:inline;text-transform:lowercase}.weatherblock dt{float:right}.weatherblock .weatherblock__location{display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:120px;vertical-align:middle;font-size:.875rem;line-height:1.7143}.weatherblock .icon{width:36px;height:36px;position:absolute;top:50%;left:0;margin-top:-22px}.weatherblock__details{clear:both;letter-spacing:-.25em;font-size:.75rem;float:right}.weatherblock__details dd,.weatherblock__details dl,.weatherblock__details dt,.weatherblock__details p{display:inline-block;color:#777579;margin-bottom:0;letter-spacing:normal}.weatherblock__details p{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;max-width:160px}.weatherblock__details dl{margin-right:6px}.weatherblock__details .min:after{content:"-"}.header-wrap{min-width:980px}.dropdownbox{position:absolute;right:0;top:41px;box-sizing:border-box;padding:20px;background-color:#fff;border:1px solid #c4c5c6;text-align:left;z-index:14;box-shadow:0 6px 15px rgba(0,0,0,.25);height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}.dropdown__btn{background:transparent;padding:9px 10px 6px;border:1px solid transparent;z-index:15}.dropdown__btn.btn{border-color:#c4c5c6}.dropdown__btn.btn--text{border:1px solid transparent}.nav__toggle{display:none!important;float:left}.header-wrap .ad-wrap--promo{float:none;margin-bottom:15px;padding-left:0;height:85px}.template--home .headerright-wrap{float:none;padding-right:0}.template--home .header-wrap{padding-top:12px}.template--home .header-wrap .wrap{padding-top:0;padding-bottom:0;margin-left:auto;margin-right:auto}.template--home .header-wrap .logo-wrap{margin:9px 0 15px;float:none}.template--home .header-wrap .logo{width:100%}.outer-wrap{overflow:visible}.header-wrap .ad-wrap--promo{width:30%}.template--home .headerright-wrap{text-align:right;width:30%}.template--home .header-wrap .logo-wrap{width:40%}.template--home .header-wrap .logo{height:38px;margin-bottom:8px}.template--article .main{padding-right:0}.template--article .aside--main{padding-top:182px;position:relative}.template--article .aside--main>div{position:static}article.article{width:100%;margin-bottom:40px;position:relative}.article__signpost-wrap{color:#000}.article__readers{color:#777579}.article__comments a{color:#1d1d1d}.article__save{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;text-align:right}.article__header{position:relative;padding-bottom:0}.article__header h1{font-family:merriweather,georgia,serif;font-weight:700;margin-bottom:.5em;font-size:2rem;line-height:1.25;width:940px}.article__header .social{display:inline-block}.article__activity{font-family:Source Sans Pro,Helvetica,Arial,sans-serif;float:right;margin-top:2px}.article__activity div{font-size:.9375rem;display:inline-block;margin-left:10px}.article:not(.article--gallery) .social--share-wrap{border-top:1px solid #e1e2e3;padding-top:25px}.article__summary{padding-bottom:10px}.article__summary p{font-family:merriweather,georgia,serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#1d1d1d;margin-bottom:0;font-weight:700;font-size:1.25rem;line-height:1.5;padding-right:60px}.article__toolbar{font-family:Source Sans Pro,Helvetica,Arial,sans-serif;text-transform:uppercase;font-size:.875rem;line-height:1.7143;display:-webkit-flex;display:-ms-flexbox;display:flex;color:#777579;margin-bottom:20px;width:940px}.article__toolbar div{z-index:1;padding:0 10px}.article__toolbar div:first-child{padding-left:0}.article__toolbar div:last-child{padding-right:0}.article__toolbar a{color:#777579}.article__toolbar .article__save a{color:#1d1d1d}.signpost{font-weight:700}.article__body{font-family:merriweather,georgia,serif;margin-bottom:40px}.article__body .pez-iframe{width:620px}.article__body>p{margin-bottom:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1rem;line-height:1.625;padding-right:60px}.article__body h2{font-size:1.375rem;line-height:1.2727;font-weight:700;margin-top:30px;margin-bottom:20px;color:#000}.article__body h2:first-child{margin-top:0}.article__body .media{margin-top:20px;margin-bottom:20px;clear:both;position:relative;overflow:hidden}.article__body .panel li,.article__body .panel ul{list-style:none;margin:0}.panel--related{padding:0;margin-bottom:20px;-webkit-font-smoothing:antialiased}.panel--related .header.header{border-color:#e1e2e3}.panel--related .story{padding:0}.panel--related h3{font-weight:400}.panel--related a{color:#0078c8}</style> 
-  <style>
-    /* The below overrides are active while the webfonts are loading.  Once loaded they are removed. */
-    .no-sourcesanspro .headerright-wrap .btn {
-        font-family: Helvetica, Arial, sans-serif !important;
-        font-size: 0.8125em !important;
-    }
-    .no-sourcesanspro .byline {
-        font-family: Helvetica, Arial, sans-serif !important;
-        font-size: 0.75em !important;
-        line-height: 1rem !important;
-    }
-    .no-sourcesanspro .social a {
-        font-family: Helvetica, Arial, sans-serif !important;
-    }
-    .no-sourcesanspro li, .no-sourcesanspro .nav--secondary li, .no-sourcesanspro .nav--tertiary li {
-        font-family: Helvetica, Arial, sans-serif !important;
-        font-size: 0.9375em !important;
-    }
-    .no-merriweather .story__headline, .no-merriweather-bold .story__headline, .no-merriweather .section-name {
-        font-family: georgia, serif !important;
-    }
-    .no-merriweather-bold .article__header h1, .no-merriweather-bold .article__summary p, .no-merriweather .article__body {
-        font-family: georgia, serif !important;
-    }
-    .no-montserrat-bold .header .heading:not(h1) {
-        font-family: verdana !important;
-    }
-</style> 
-  <style class="webfont" data-webfont-name="merriweather" data-webfont-woff2="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/fonts/merriweather-regular-woff2.css" data-webfont-woff="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/fonts/merriweather-regular-woff.css"></style> 
-  <style class="webfont" data-webfont-name="merriweather-bold" data-webfont-woff2="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/fonts/merriweather-bold-woff2.css" data-webfont-woff="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/fonts/merriweather-bold-woff.css"></style> 
-  <style class="webfont" data-webfont-name="sourcesanspro" data-webfont-woff2="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/fonts/sourcesanspro-regular-woff2.css" data-webfont-woff="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/fonts/sourcesanspro-regular-woff.css"></style> 
-  <style class="webfont" data-webfont-name="sourcesanspro-bold" data-webfont-woff2="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/fonts/sourcesanspro-bold-woff2.css" data-webfont-woff="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/fonts/sourcesanspro-bold-woff.css"></style> 
-  <style class="webfont" data-webfont-name="montserrat-bold" data-webfont-woff2="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/fonts/montserrat-bold-woff2.css" data-webfont-woff="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/fonts/montserrat-bold-woff.css"></style> 
-  <script type="text/javascript">
-            !function(){function t(t,n,i){4===t.readyState&&200===t.status&&(r&&localStorage.setItem(e(i),t.responseText),o(n,i,t.responseText),t=null)}function e(t){return"masthead.fonts."+t}function n(){if(!("FontFace"in window))return"woff";var t=new FontFace("t",'url( "data:application/font-woff2;base64,d09GMgABAAAAAAIkAAoAAAAABVwAAAHcAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABlYAgloKLEoBNgIkAxgLDgAEIAWDcgc1G7IEyB6SJAFID5YA3nAHC6h4+H7s27nP1kTyOoQkGuJWtNGIJKYznRI3VEL7IaHq985ZUuKryZKcAtJsi5eULwUybm9KzajBBhywZ5ZwoJNuwDX5C/xBjvz5DbsoNsvG1NGQiqp0NMLZ7JlnW+5MaM3HwcHheUQeiVokekHkn/FRdefvJaTp2PczN+I1Sc3k9VuX51Tb0Tqqf1deVXGdJsDOhz0/EffMOPOzHNH06pYkDDjs+P8fb/z/8n9Iq8ITzWywkP6PBMMN9L/O7vY2FNoTAkp5PpD6g1nV9WmyQnM5uPpAMHR2fe06jbfvzPriekVTQxC6lpKr43oDtRZfCATl5OVAUKykqwm9o8R/kg37cxa6eZikS7cjK4aIwoyh6jOFplhFrz2b833G3Jii9AjDUiAZ9AxZtxdEYV6imvRF0+0Nej3wu6nPZrTLh81AVcV3kmMVdQj6Qbe9qetzbuDZ7vXOlRrqooFSxCv6SfrDICA6rnHZXQPVcUHJYGcoqa3jVH7ATrjWBNYYkEqF3RFpVIl0q2JvMOJd7/TyjXHw2NyAuJpNaEbz8RTEVtCbSH7JrwQQOqwGl7sTUOtdBZIY2DKqKlvOmPvUxJaURAZZcviTT0SKHCXqzwc=" ) format( "woff2" )',{});return t.load()["catch"](function(){}),"loading"==t.status||"loaded"==t.status?"woff2":"woff"}function o(t,e,n){t.innerHTML=n,"undefined"!=typeof FontFaceObserver?c(e,n):document.documentElement.classList.remove("no-"+e)}function i(e,o){void 0===s&&(s=n());var i=e.getAttribute("data-webfont-"+s),a=new XMLHttpRequest;a.open("GET",i,!0),a.timeout=5e3,a.onreadystatechange=function(){t(a,e,o)},a.ontimeout=function(){a=null},a.send()}function a(t,n){var a=localStorage.getItem(e(n));null!==a?o(t,n,a):i(t,n)}function r(){try{return localStorage.setItem("storageTest","storageTest"),localStorage.removeItem("storageTest"),!0}catch(t){return!1}}function c(t,e){var n=e.match(/font-family:\s?['"]([a-zA-Z\s]*)['"]/im),o=e.match(/font-weight:\s?([a-zA-Z0-9]*)\;/im),i=new FontFaceObserver(n[1],{weight:o[1]});i.load().then(function(){document.documentElement.classList.remove("no-"+t)})}!function(){"use strict";function t(t){d.push(t),1==d.length&&u()}function e(){for(;d.length;)d[0](),d.shift()}function n(t){this.a=l,this.b=void 0,this.f=[];var e=this;try{t(function(t){a(e,t)},function(t){r(e,t)})}catch(n){r(e,n)}}function o(t){return new n(function(e,n){n(t)})}function i(t){return new n(function(e){e(t)})}function a(t,e){if(t.a==l){if(e==t)throw new TypeError;var n=!1;try{var o=e&&e.then;if(null!=e&&"object"==typeof e&&"function"==typeof o)return void o.call(e,function(e){n||a(t,e),n=!0},function(e){n||r(t,e),n=!0})}catch(i){return void(n||r(t,i))}t.a=0,t.b=e,c(t)}}function r(t,e){if(t.a==l){if(e==t)throw new TypeError;t.a=1,t.b=e,c(t)}}function c(e){t(function(){if(e.a!=l)for(;e.f.length;){var t=e.f.shift(),n=t[0],o=t[1],i=t[2],t=t[3];try{0==e.a?i("function"==typeof n?n.call(void 0,e.b):e.b):1==e.a&&("function"==typeof o?i(o.call(void 0,e.b)):t(e.b))}catch(a){t(a)}}})}function s(t){return new n(function(e,n){function o(n){return function(o){r[n]=o,a+=1,a==t.length&&e(r)}}var a=0,r=[];0==t.length&&e(r);for(var c=0;c<t.length;c+=1)i(t[c]).c(o(c),n)})}function f(t){return new n(function(e,n){for(var o=0;o<t.length;o+=1)i(t[o]).c(e,n)})}var u,d=[];u=function(){setTimeout(e)};var l=2;n.prototype.g=function(t){return this.c(void 0,t)},n.prototype.c=function(t,e){var o=this;return new n(function(n,i){o.f.push([t,e,n,i]),c(o)})},window.Promise||(window.Promise=n,window.Promise.resolve=i,window.Promise.reject=o,window.Promise.race=f,window.Promise.all=s,window.Promise.prototype.then=n.prototype.c,window.Promise.prototype["catch"]=n.prototype.g)}(),function(){function t(t,e){document.addEventListener?t.addEventListener("scroll",e,!1):t.attachEvent("scroll",e)}function e(t){document.body?t():document.addEventListener?document.addEventListener("DOMContentLoaded",function e(){document.removeEventListener("DOMContentLoaded",e),t()}):document.attachEvent("onreadystatechange",function n(){("interactive"==document.readyState||"complete"==document.readyState)&&(document.detachEvent("onreadystatechange",n),t())})}function n(t){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(t)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function o(t,e){t.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;left:-999px;white-space:nowrap;font-synthesis:none;font:"+e+";"}function i(t){var e=t.a.offsetWidth,n=e+100;return t.f.style.width=n+"px",t.c.scrollLeft=n,t.b.scrollLeft=t.b.scrollWidth+100,t.g!==e?(t.g=e,!0):!1}function a(e,n){function o(){var t=a;i(t)&&t.a.parentNode&&n(t.g)}var a=e;t(e.b,o),t(e.c,o),i(e)}function r(t,e){var n=e||{};this.family=t,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}function c(){if(null===d){var t=document.createElement("div");try{t.style.font="condensed 100px sans-serif"}catch(e){}d=""!==t.style.font}return d}function s(t,e){return[t.style,t.weight,c()?t.stretch:"","100px",e].join(" ")}var f=null,u=null,d=null,l=null;r.prototype.load=function(t,i){var r=this,c=t||"BESbswy",d=0,h=i||3e3,m=(new Date).getTime();return new Promise(function(t,i){var p;if(null===l&&(l=!!document.fonts),(p=l)&&(null===u&&(u=/OS X.*Version\/10\.0.*Safari/.test(window.navigator.userAgent)&&/Apple/.test(window.navigator.vendor)),p=!u),p){p=new Promise(function(t,e){function n(){(new Date).getTime()-m<h?document.fonts.load(s(r,'"'+r.family+'"'),c).then(function(e){1>e.length?setTimeout(n,25):t()},function(){e()}):e()}n()});var w=new Promise(function(t,e){d=setTimeout(e,h)});Promise.race([w,p]).then(function(){clearTimeout(d),t(r)},function(){i(r)})}else e(function(){function e(){var e;(e=-1!=v&&-1!=A||-1!=v&&-1!=y||-1!=A&&-1!=y)&&((e=v!=A&&v!=y&&A!=y)||(null===f&&(e=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),f=!!e&&(536>parseInt(e[1],10)||536===parseInt(e[1],10)&&11>=parseInt(e[2],10))),e=f&&(v==g&&A==g&&y==g||v==b&&A==b&&y==b||v==T&&A==T&&y==T)),e=!e),e&&(x.parentNode&&x.parentNode.removeChild(x),clearTimeout(d),t(r))}function u(){if((new Date).getTime()-m<h){var t=document.hidden;(!0===t||void 0===t)&&(v=l.a.offsetWidth,A=p.a.offsetWidth,y=w.a.offsetWidth,e()),d=setTimeout(u,50)}else x.parentNode&&x.parentNode.removeChild(x),i(r)}var l=new n(c),p=new n(c),w=new n(c),v=-1,A=-1,y=-1,g=-1,b=-1,T=-1,x=document.createElement("div");x.dir="ltr",o(l,s(r,"sans-serif")),o(p,s(r,"serif")),o(w,s(r,"monospace")),x.appendChild(l.a),x.appendChild(p.a),x.appendChild(w.a),document.body.appendChild(x),g=l.a.offsetWidth,b=p.a.offsetWidth,T=w.a.offsetWidth,u(),a(l,function(t){v=t,e()}),o(l,s(r,'"'+r.family+'",sans-serif')),a(p,function(t){A=t,e()}),o(p,s(r,'"'+r.family+'",serif')),a(w,function(t){y=t,e()}),o(w,s(r,'"'+r.family+'",monospace'))})})},"undefined"!=typeof module?module.exports=r:(window.FontFaceObserver=r,window.FontFaceObserver.prototype.load=r.prototype.load)}();for(var s,f=document.querySelectorAll(".webfont"),r=r(),u=0;u<f.length;u++){var d=f[u],l=d.getAttribute("data-webfont-name");document.documentElement.classList.add("no-"+l),r?a(d,l):i(d,l)}}();</script> 
-  <link href="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/icons.css" media="none" rel="stylesheet"> 
-  <noscript>
-   <link href="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/icons.css" rel="stylesheet">
-  </noscript>
-  <link rel="stylesheet" href="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/desktop.css" type="text/css" media="none"> 
-  <noscript>
-   <link href="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/desktop.css" rel="stylesheet">
-  </noscript> 
-  <link rel="stylesheet" href="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/skin-canberratimes.css" media="none" type="text/css"> 
-  <noscript>
-   <link href="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/skin-canberratimes.css" rel="stylesheet">
-  </noscript> 
-  <link rel="stylesheet" href="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/skin-sport.css" media="none" type="text/css"> 
-  <noscript>
-   <link href="https://www.fairfaxstatic.com.au/resources/css/mastheads/1.23.14/skin-sport.css" rel="stylesheet">
-  </noscript> 
-  <!-- Digital Data Script --> 
-  <script>
-    var titanEnabled = true;
-    var digitalData = {"page":{"pageInfo":{"pageID":"4154378","pageName":"It's a honey-bunny win for English","brand":"ctimes","generator":"CQ","author":"David Polkinghorne","effectiveDate":"","issueDate":"2013-03-31T09:13:00Z","sysEnv":"desktop","template":"article","environment":"","domain":"","layout":"lego"},"category":{"pageType":"Article","primaryCategory":"sport","subCategory1":"","subCategory2":"","subCategory3":"","subCategory4":""}},"titan":{"adSite":"canberratimes","adZone":"sport","adKeyValues":{"cat":"sport","ctype":"article","csub":"visitor"},"adSlots":["adspot-996x120_970x250_940x250_940x120_728x90-pos1","adspot-300x1515-pos1","adspot-300x600_300x250-pos1","adspot-300x250-pos2","adspot-1x11-pos1","adspot-620x164-pos1","adspot-728x90-pos2","adspot-300x250-pos3"],"adRegistry":"117","cmsRemove":"false"},"user":[{"profile":[{"profileInfo":{"profileID":""},"membershipType":"visitor"}]}],"version":"1.0","events":[],"myfairfax":{"baseUrl":"http://www.canberratimes.com.au","brandSite":"canberratimes","domain":"canberratimes.com.au","hagridApiUrl":"https://api.myfairfax.com.au","hagridBaseUrl":"https://canberratimes.myfairfax.com.au","hagridChannelKey":"qmijur57bxF1rHojHDpApA"},"vendor":{"GoogleAnalytics":{"account":"UA-16730067-2"},"Nielsen":{"apid":"nielsenAPID"}}};
-    var dataLayer = window.dataLayer || [];
-    dataLayer.push({"page":{"author":"David Polkinghorne","publishDate":"2013-03-31T09:13:00Z","updateDate":"","renderedPlatform":"CQ","authoredPlatform":"","viewID":"","type":"Article","assetId":"4154378","contentSource":"","primaryTag":"","tags":"","components":"","maxScrollDepth":"","meteredType":"","labels":"","sponsored":"","name":"It's a honey-bunny win for English","template":"article","didMount":"","customReferrer":"","customReferrerComponent":"","customReferrerCategory":"","customReferrerPageType":"","lifecycleType":"","experimentName":"","experimentVariant":""},"network":{"deviceID":"","marketingID":"","appNexusID":"","fingerprint":""},"client":{"deviceType":"desktop"},"section":{"primaryCategory":"sport","subCategory":"","nielsenAppID":"nielsenAPID","nielsenASN":""},"session":{"adBlocked":"","gCookie":"","privateBrowsingMode":""},"subs":{"memberID":"","memberType":"","meterCount":"","meterPeriodStart":"","meterPeriodEnd":""},"brand":{"name":"ctimes","engagement":""},"performance":{"startTimestamp":"","pageInit":"","pageView":"","pageReady":""},"GTM":{"container_id":"","container_version":""},"w3_performance_timings":""});
-
-    var titan = window.titan || {};
-    titan.requestAd = titan.requestAd || [];
-    titan.requestConditionalAd = titan.requestConditionalAd || [];
-    titan.requestLazyAd = titan.requestLazyAd || [];
-
-    function getAdCookie(name) {
-        var regex = new RegExp('(?:^|; )' + name + '=([^;]*)');
-        var value = regex.exec(document.cookie);
-        if (value && value.length > 1) {
-            value = decodeURIComponent(value[1]);
-        } else {
-            value = "";
-        }
-        return value;
-    }
-
-    function conditionalTitanAdPushExternalReferrer(adUniqueName, cookieExternalReferrer) {
-        window.externalReferrerAds = window.externalReferrerAds || [];
-        externalReferrerAds.push(function() {
-            var externalReferrer = getAdCookie(cookieExternalReferrer);
-            if (externalReferrer != "") {
-                titan.requestConditionalAd.push(adUniqueName);
-            }
-        });
-    }
-</script> 
-  <style>
-    .ads-edit-mode-placeholder {
-        line-height: normal;
-        background: #fff;
-        color: #4779bc;
-        border: .4em solid;
-        font-size: 1.0em;
-        padding: 0.5em 0;
-        text-align: center;
-        margin: 5px 0px 0px 5px;
-    }
-
-    .ads-edit-mode-placeholder .title {
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: normal;
-        padding-left: .4em
-    }
-
-    .ads-edit-mode-placeholder .message {
-        font-size: .7em;
-        font-weight: 300;
-        font-style: italic;
-        letter-spacing: .12em;
-        padding-left: .12em
-    }
-
-    .ads-edit-mode-placeholder .green {
-        color: #2e8b57;
-    }
-
-    .ads-edit-mode-placeholder .red {
-        color: #cd5c5c;
-    }
-</style>
-  <script src="https://www.fairfaxstatic.com.au/resources/fmjs/1.92.1-11/jquery/jquery-1.12.3.min.js" type="text/javascript"></script>
-  <script src="https://www.fairfaxstatic.com.au/optimizely/3948122815.js" type="text/javascript"></script> 
-  <script src="https://www.fairfaxstatic.com.au/dtm/7d5ea80d054b96730162d0905d59678c4d2bf30c/satelliteLib-fc35eab6559a121532bab25bb77b90e6a30892b9.js"></script> 
-  <script>
-        (function () {
-            var links = window.document.getElementsByTagName('link');
-            for (var i in links) {
-                if (links[i].media == "none") {
-                    links[i].media = "all";
-                }
-            }
-        })();
-    </script> 
- </head>
- <body class="adaptive noscript desktop template--sidebar-right template--article canberratimes"> 
-  <!-- Google Tag Manager --> 
-  <noscript> 
-   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6VZRKC" height="0" width="0" style="display:none;visibility:hidden"> </iframe> 
-  </noscript> 
-  <!-- End Google Tag Manager --> 
-  <script>
-    //<![CDATA[
-    document.body.className += " scriptable";
-    document.body.className = document.body.className.replace( /(?:^|\s)noscript(?!\S)/g , '' )
-    //]]>
-</script> 
-  <!--[if lt IE 9]><script type="text/javascript" src="/etc/clientlibs/fmjs/lib/html5shiv.min.js"></script>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width"> 
+  <title>What We’ve Learned About Boyajian’s Star I: Background | AstroWright</title> 
+  <link rel="profile" href="http://gmpg.org/xfn/11"> 
+  <link rel="pingback" href="http://sites.psu.edu/astrowright/xmlrpc.php"> 
+  <!--[if lt IE 9]>
+<script src="http://sites.psu.edu/astrowright/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
 <![endif]--> 
-  <a class="skip-link" href="#nav">Skip to navigation</a> 
-  <a class="skip-link" href="#content">Skip to content</a> 
-  <a class="skip-link" href="#footer">Skip to footer</a> 
-  <a class="skip-link" href="?deviceType=text">View text version of this page</a> 
-  <a class="skip-link" href="/siteguide/accessibility">Help using this website - Accessibility statement</a>
-  <header class="header-wrap adops-gutter-after"> 
-   <div class="wrap"> 
-    <button id="navigation-toggle" class="nav__toggle nav--primary__toggle icon">Menu</button>
-    <div class="logo-wrap"> 
-     <a href="http://www.canberratimes.com.au" title="Canberra Times"> <span class="logo logo--canberratimes">Canberra Times</span> </a> 
-    </div>
-    <a class="section-name" href="/sport"><h2>Sport</h2></a> 
-    <div class="headerright-wrap"> 
-     <div class="account header-account">
-      <div class="action-group" data-fm-mymasthead-account="refreshURL:'/ugc/adaptive/desktop/accountButtons.html',signUpButtonURL:'https://canberratimes.myfairfax.com.au/members/members/signup?channel_key=qmijur57bxF1rHojHDpApA&amp;callback_uri=http%3A%2F%2Fwww.canberratimes.com.au&amp;single_use_token=true',subscribeButtonURL:'',subscribedButtonText:'Subscriber Hub',subscribedButtonURL:''"> 
-       <div class="action-group"> 
-        <a class="btn btn--mini btn--text btn--login fm-mymasthead-account-login" href="https://canberratimes.myfairfax.com.au/members/session/new?channel_key=qmijur57bxF1rHojHDpApA&amp;callback_uri=http%3A%2F%2Fwww.canberratimes.com.au&amp;single_use_token=true">Login</a> 
-        <div class="sign-up-wrap dropdown"> 
-         <a class="btn btn--mini btn--text btn--sign-up dropdown__btn fm-mymasthead-account-sign-up" href="https://canberratimes.myfairfax.com.au/members/members/signup?channel_key=qmijur57bxF1rHojHDpApA&amp;callback_uri=http%3A%2F%2Fwww.canberratimes.com.au&amp;single_use_token=true" data-fm-analytics="trackingData:{event:'registrationStarts',loginRegistrationTrigger:'Dock_Register'}">Sign-up</a> 
-         <div class="dropdownbox dropdownbox--sign-up"> 
-          <h3 style="width: 240px">Become a Canberra Times member today</h3> 
-          <div class="sign-up__row"> 
-           <span class="signup__cell"></span> 
-           <span class="signup__cell">Join today and you can easily save your favourite articles, join in the conversation and comment, plus select which news your want direct to your inbox.</span> 
-          </div> 
-          <a href="https://canberratimes.myfairfax.com.au/members/members/signup?channel_key=qmijur57bxF1rHojHDpApA&amp;callback_uri=http%3A%2F%2Fwww.canberratimes.com.au&amp;single_use_token=true" class="btn btn--mini btn--primary btn--full">Create your account now!</a>
-         </div> 
-        </div> 
-       </div>
-       <div class="is-hidden fm-mymasthead-account-sign-up-drop-down-content"> 
-        <h3 style="width: 240px">Become a Canberra Times member today</h3> 
-        <div class="sign-up__row"> 
-         <span class="signup__cell"></span> 
-         <span class="signup__cell">Join today and you can easily save your favourite articles, join in the conversation and comment, plus select which news your want direct to your inbox.</span> 
-        </div> 
-        <a href="https://canberratimes.myfairfax.com.au/members/members/signup?channel_key=qmijur57bxF1rHojHDpApA&amp;callback_uri=http%3A%2F%2Fwww.canberratimes.com.au&amp;single_use_token=true" class="btn btn--mini btn--primary btn--full">Create your account now!</a>
-       </div>
-      </div>
-     </div> 
-    </div> 
-   </div> 
-   <div class="navigation header-navigation"> 
-    <div id="nav--primary__wrap" class="nav--primary__wrap"> 
-     <div class="inner-wrap"> 
-      <nav id="nav" class="nav nav--primary" tabindex="-1"> 
-       <ul class="nav__menu"> 
-        <li class="nav__item nav__item--home"> <a href="/" class="icon--home">Home</a> </li>
-        <li class="nav__item"> <a href="/act-news">News</a> </li>
-        <li class="nav__item is-selected"> <a href="/sport">Sport</a> </li>
-        <li class="nav__item"> <a href="/business">Business</a> </li>
-        <li class="nav__item"> <a href="/national/public-service">Public Service</a> </li>
-        <li class="nav__item"> <a href="/world">World</a> </li>
-        <li class="nav__item"> <a href="/federal-politics">Politics</a> </li>
-        <li class="nav__item"> <a href="/comment">Comment</a> </li>
-        <li class="nav__item"> <a href="http://www.allhomes.com.au">Property</a> </li>
-        <li class="nav__item"> <a href="/entertainment">Entertainment</a> </li>
-        <li class="nav__item"> <a href="/lifestyle">Lifestyle</a> </li>
-        <li class="nav__item"> <a href="http://www.drive.com.au">Cars</a> </li>
-        <li class="nav__item"> <a href="http://www.traveller.com.au">Travel</a> </li>
-        <li class="nav__item"> <a href="/technology">Tech</a> </li>
-        <li class="nav__item"> <a href="/video">Video</a> </li>
-        <li class="nav__item nav__item-toggle mega-menu-toggle"> <a href="#">All</a> </li> 
-       </ul> 
-       <div class="cq-wrap">
-        <div class="togglebox togglebox--mega-menu"> 
-         <div class="mega-menu"> 
-          <div class="mega-menu__section"> 
-           <h3> <a href="/act-news">News</a> </h3> 
-           <ul> 
-            <li> <a href="/act-news">ACT News</a> </li> 
-            <li> <a href="/act-news/act-election-2016">ACT Election 2016</a> </li> 
-            <li> <a href="/national">National</a> </li> 
-            <li> <a href="/environment">Environment</a> </li> 
-            <li> <a href="/national/health">Health</a> </li> 
-            <li> <a href="/national/education">Education</a> </li> 
-            <li> <a href="/good-weekend">Good Weekend</a> </li> 
-            <li> <a href="/nsw">NSW News</a> </li> 
-            <li> <a href="/victoria">Victoria News</a> </li> 
-            <li> <a href="/queensland">Queensland</a> </li> 
-            <li> <a href="/wa-news">WA News</a> </li> 
-           </ul>
-          </div> 
-          <div class="mega-menu__section"> 
-           <h3> <a href="/sport">Sport</a> </h3> 
-           <ul> 
-            <li> <a href="/sport/act-sport">ACT Sport</a> </li> 
-            <li> <a href="/rugby-league">NRL</a> </li> 
-            <li> <a href="/rugby-union">Union</a> </li> 
-            <li> <a href="/afl">AFL</a> </li> 
-            <li> <a href="/sport/cricket">Cricket</a> </li> 
-            <li> <a href="/sport/horseracing">Racing</a> </li> 
-            <li> <a href="/sport/soccer">Soccer</a> </li> 
-            <li> <a href="/sport/golf">Golf</a> </li> 
-            <li> <a href="/sport/basketball">Basketball</a> </li> 
-            <li> <a href="/sport/cycling">Cycling</a> </li> 
-            <li> <a href="/sport/motorsport">Motorsport</a> </li> 
-            <li> <a href="/sport/tennis">Tennis</a> </li> 
-            <li> <a href="/sport/live-scores">Scores</a> </li> 
-            <li> <a href="/sport/athletics">Athletics</a> </li> 
-            <li> <a href="/sport/swimming">Swimming</a> </li> 
-            <li> <a href="/sport/boxing">Boxing</a> </li> 
-            <li> <a href="/sport/sailing">Sailing</a> </li> 
-            <li> <a href="/sport/netball">Netball</a> </li> 
-            <li> <a href="/sport/the-fitz-files">Fitz Files</a> </li> 
-           </ul>
-          </div> 
-          <div class="mega-menu__section"> 
-           <h3> <a href="http://www.canberratimes.com.au/business">Business</a> </h3> 
-           <ul> 
-            <li> <a href="/business/national">News</a> </li> 
-            <li> <a href="/business/markets">Markets</a> </li> 
-            <li> <a href="/business/markets/quotes">Quotes</a> </li> 
-            <li> <a href="/business/workplace-relations">Workplace</a> </li> 
-            <li> <a href="/business/consumer-affairs">Consumer</a> </li> 
-            <li> <a href="/business/property">Property</a> </li> 
-            <li> <a href="/business/innovation">Innovation</a> </li> 
-            <li> <a href="/business/retail">Retail</a> </li> 
-            <li> <a href="/business/the-economy">Economy</a> </li> 
-            <li> <a href="/business/cbd">CBD</a> </li> 
-            <li> <a href="/money">Money</a> </li> 
-            <li> <a href="/small-business">Small Business</a> </li> 
-           </ul>
-          </div> 
-          <div class="mega-menu__section"> 
-           <h3> <a href="/federal-politics/political-news">News</a> </h3> 
-           <ul> 
-            <li> <a href="/federal-politics/political-opinion">Opinion </a> </li> 
-            <li> <a href="/federal-politics/breaking-politics">Video </a> </li> 
-            <li> <a href="/federal-politics/cartoons">Cartoons</a> </li> 
-            <li> <a href="/federal-politics/the-pulse-live">The Pulse</a> </li> 
-            <li> <a href="/federal-politics/electorate-map">Electorate Map</a> </li> 
-           </ul>
-          </div> 
-          <div class="mega-menu__section"> 
-           <h3> <a href="/comment/ct-letters">Letters</a> </h3> 
-           <ul> 
-            <li> <a href="/comment/ct-editorial">Editorials</a> </li> 
-            <li> <a href="/comment/obituaries">Obituaries</a> </li> 
-            <li> <a href="/comment/view-from-the-street">View from the Street</a> </li> 
-            <li> <a href="/comment/blunt-instrument">Blunt Instrument</a> </li> 
-            <li> <a href="/comment/satire">Satire</a> </li> 
-           </ul>
-          </div> 
-          <div class="mega-menu__section"> 
-           <h3> <a href="/entertainment/movies">Movies</a> </h3> 
-           <ul> 
-            <li> <a href="/entertainment/music">Music</a> </li> 
-            <li> <a href="/entertainment/tv-guide">TV Guide</a> </li> 
-            <li> <a href="/entertainment/tv-and-radio">TV &amp; Radio</a> </li> 
-            <li> <a href="/entertainment/art-and-design">Art</a> </li> 
-            <li> <a href="/entertainment/books">Books</a> </li> 
-            <li> <a href="entertainment/stage">Stage</a> </li> 
-            <li> <a href="/video/video-entertainment">Video </a> </li> 
-           </ul>
-          </div> 
-          <div class="mega-menu__section"> 
-           <h3> <a href="/lifestyle/news-and-views">News &amp; Views</a> </h3> 
-           <ul> 
-            <li> <a href="/lifestyle/life-and-relationships">Life &amp; Relationships</a> </li> 
-            <li> <a href="/lifestyle/health-and-wellbeing">Health &amp; Wellbeing</a> </li> 
-            <li> <a href="/lifestyle/beauty">Beauty</a> </li> 
-            <li> <a href="/lifestyle/fashion">Fashion</a> </li> 
-            <li> <a href="/lifestyle/celebrity">Celebrity</a> </li> 
-            <li> <a href="/lifestyle/home">Home</a> </li> 
-            <li> <a href="/lifestyle/the-optimist">The Optimist</a> </li> 
-            <li> <a href="https://www.thestore.com.au">The Store</a> </li> 
-           </ul>
-          </div> 
-          <div class="mega-menu__section"> 
-           <h3> <a href="/technology/technology-news">News</a> </h3> 
-           <ul> 
-            <li> <a href="/technology/consumer-security">Security</a> </li> 
-            <li> <a href="/technology/web-culture">Web Culture</a> </li> 
-            <li> <a href="/technology/innovation">Innovation</a> </li> 
-            <li> <a href="/technology/sci-tech">Science </a> </li> 
-            <li> <a href="/technology/games">Games </a> </li> 
-            <li> <a href="/technology/gadgets-on-the-go">Gadgets on the Go </a> </li> 
-            <li> <a href="/technology/smartphone-apps">Smartphone Apps</a> </li> 
-            <li> <a href="/technology/mobiles">Mobiles</a> </li> 
-            <li> <a href="/technology/esports">eSports</a> </li> 
-           </ul>
-          </div> 
-          <div class="mega-menu__section"> 
-           <h3> <a href="/video/video-news">News</a> </h3> 
-           <ul> 
-            <li> <a href="/video/video-sport">Sport</a> </li> 
-            <li> <a href="/video/video-business">Business</a> </li> 
-            <li> <a href="/video/video-entertainment">Entertainment</a> </li> 
-            <li> <a href="/video/video-life-and-style">Lifestyle</a> </li> 
-            <li> <a href="/video/video-travel">Travel</a> </li> 
-            <li> <a href="/video/video-property">Property</a> </li> 
-            <li> <a href="/video/video-cars">Cars</a> </li> 
-            <li> <a href="/video/video-food">Food</a> </li> 
-            <li> <a href="/video/video-executive-style">Exec Style</a> </li> 
-            <li> <a href="/video/video-parenting">Parenting</a> </li> 
-           </ul>
-          </div> 
-         </div> 
-        </div> 
-       </div> 
-      </nav> 
-      <div class="search-box-wrap"> 
-       <div class="cq-search-box">
-        <div class="search-box-wrap"> 
-         <form action="/search" method="get" class="form search-box search-box--primary" id="site-search"> 
-          <label for="site-search-placeholder" class="is-vishidden">Search Site</label> 
-          <input type="search" class="search-box__text" name="text" id="site-search-placeholder" placeholder="Search the site"> 
-          <input type="submit" class="search-box__btn icon--search" value="Search"> 
-         </form> 
-        </div> 
-       </div> 
-      </div> 
-     </div> 
-    </div> 
-   </div> 
-  </header> 
-  <div class="nav-wrap"> 
-   <div class="ad-wrap--leaderboard"> 
-    <div class="adWrapper adPageTop"> 
-     <div id="adspot-996x120_970x250_940x250_940x120_728x90-pos1" style="display:none;"> 
-      <script>
-                            titan.requestAd.push("adspot-996x120_970x250_940x250_940x120_728x90-pos1");
-                        </script> 
-     </div> 
-    </div> 
-   </div>
-   <div class="navigation header-navigation"> 
-    <nav id="nav--secondary" class="nav nav--secondary has-subnav"> 
-     <ul class="nav__menu"> 
-      <li class="nav__item"> <a href="/sport/act-sport">ACT Sport</a> </li>
-      <li class="nav__item"> <a href="/rugby-league">NRL</a> </li>
-      <li class="nav__item"> <a href="/rugby-union">Union</a> </li>
-      <li class="nav__item"> <a href="/afl">AFL</a> </li>
-      <li class="nav__item"> <a href="/sport/cricket">Cricket</a> </li>
-      <li class="nav__item"> <a href="/sport/horseracing">Racing</a> </li>
-      <li class="nav__item"> <a href="/sport/soccer">Soccer</a> </li>
-      <li class="nav__item"> <a href="/sport/commonwealth-games/gold-coast-2018">Gold Coast 2018</a> </li>
-      <li class="nav__item"> <a href="/sport/golf">Golf</a> </li>
-      <li class="nav__item"> <a href="/sport/basketball">Basketball</a> </li>
-      <li class="nav__item"> <a href="/sport/cycling">Cycling</a> </li>
-      <li class="nav__item"> <a href="/sport/motorsport">Motorsport</a> </li>
-      <li class="nav__item"> <a href="/sport/tennis">Tennis</a> </li>
-      <li class="nav__item"> <a href="/sport/live-scores">Scores</a> </li>
-      <li class="nav__item"> <a href="/sport/athletics">Athletics</a> </li>
-      <li class="nav__item"> <a href="/sport/swimming">Swimming</a> </li>
-      <li class="nav__item"> <a href="/sport/boxing">Boxing</a> </li>
-      <li class="nav__item"> <a href="/sport/sailing">Sailing</a> </li>
-      <li class="nav__item"> <a href="/sport/netball">Netball</a> </li>
-      <li class="nav__item"> <a href="/sport/the-fitz-files">Fitz Files</a> </li>
-     </ul> 
-    </nav> 
-   </div> 
-  </div> 
-  <div class="outer-wrap"> 
-   <div class="header-strip html-assets">
-    <style>
-/* Place temporary css hot fixes here with the removal release version. e.g. NEWSA-1472 - Remove after 1.84 */
-/* NEWSA-1471 - Remove after 1.87 */
-.smh .tagline__award {
-  display: none;
-}
-.smh.mobile .header-wrap .logo {
-  margin-top: 0;
-  max-height: none;
-}
-.smh.tablet.template--home:not(.persistent-on) .header-wrap .logo {
-  margin-top: 0;
-  margin-bottom: 4px;
-}
-.smh.desktop.template--home:not(.persistent-on) .header-wrap .logo {
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-.smh.tablet:not(.template--home):not(.persistent-on) .header-wrap .wrap, .smh.desktop:not(.template--home):not(.persistent-on) .header-wrap .wrap {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* GFR-1298 - Programmatic billboard support - Remove after 1.88 */
-.ad-wrap--leaderboard { max-width: 996px; min-height: 90px; height: auto; }
-.template--home .ad-wrap--leaderboard { min-height: auto; }
-.adops-billboard .nav-wrap .ad-wrap--leaderboard .ad { margin-left: auto; margin-right: auto; }
-.desktop.adops-billboard .ad { z-index: 4 }
-
-</style> 
-    <script>
-(function() {
-  // AUD-3625 - Adblocker stats - remove after December 2017
-  var url;
-  switch(digitalData.page.pageInfo.brand) {
-    case 'smh':
-      url = '//j745s.com/gfysw1x06517x1hcgyd23i8owd.js';
-      break;
-    case 'theage':
-      url = '//m203a.com/jdzkxemyqxt245epm5t9boxt7zepfbsfgn.js'
-      break;
-    case 'watoday':
-      url = '//zm232.com/hlhn3691n0guthta0372ehflwbs3gp7ee.js'
-    break;
-  }
-
-  if (typeof url !== 'undefined') {
-    var orielAnalytics = document.createElement('script');
-    orielAnalytics.type = 'text/javascript';
-    orielAnalytics.async = true;
-    orielAnalytics.src = url;
-    orielAnalytics.id = 'Oriel_Analytics_Script';
-    (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(orielAnalytics);
-  }
-
-  window.addEventListener('DOMContentLoaded', function(event) {
-    // NEWSA-1515 - Remove after 1.86
-    if ($('.panel--bus-storylist').length != 0) {
-      $('.panel--bus-storylist .story__headline a').each(
-        function() {    
-          var url = $(this).attr('href').replace(/^(\/content\/adaptive\/.*?)(?=\/)/, '');
-          $(this).attr('href', url);
-        }
-      )
-    }
-  });
-})();
-</script>
-   </div> 
-   <div id="content" class="content wrap grid" tabindex="-1"> 
-    <div class="nav breadcrumb grid__cell"> 
-     <ol itemscope itemtype="http://schema.org/BreadcrumbList"> 
-      <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a href="http://www.canberratimes.com.au" itemprop="item"><span itemprop="name">Home</span></a> </li> 
-      <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a href="/sport" itemprop="item"><span itemprop="name">Sport</span></a> </li> 
-     </ol> 
-    </div> 
-    <div class="return-link grid__cell"></div> 
-    <main class="main"> 
-     <article class="article"> 
-      <header class="article__header"> 
-       <div class="article__toolbar"> 
-        <div class="article__datetime"> 
-         <time class="signature__datetime" datetime="2013-04-01T03:00:00+1100" itemprop="datePublished">April 1 2013</time> 
-        </div> 
-        <div class="article__save" data-event-tracking-enabled="false" data-track-data="{&quot;name_component&quot;:&quot;Save_Mymasthead&quot;}"> 
-         <a class="" href="javascript:;" title="Add to your clippings" data-fm-mymasthead-favourite="assetId:'u-2h1je'">Save</a> 
-        </div> 
-        <div class="article__print" data-event-tracking-enabled="false" data-track-data="{&quot;name_component&quot;:&quot;Print_DCDS&quot;}"> 
-         <a href="?deviceType=text" class="" title="Print this story" data-fm-social-sharing="width:1024,height:620"> Print </a> 
-        </div> 
-       </div> 
-       <h1 itemprop="name headline"> It's a honey-bunny win for English </h1> 
-       <div class="advertiser-disclaimer"></div> 
-       <div class="signature"> 
-        <a class="signature__img-wrap" href="http://www.canberratimes.com.au/sport/by/David-Polkinghorne-hvepe" tabindex="-1"> <img alt="David Polkinghorne" title="" src="https://www.fairfaxstatic.com.au/content/dam/images/1/2/l/8/m/f/image.imgtype.columnistThumbnail.60x60.png/1420786206944.jpg" itemprop="image" class="signature__img"></a> 
-        <div class="signature__info"> 
-         <ul> 
-          <li class="signature__name" itemprop="author creator" itemscope itemtype="http://schema.org/Person"> <a href="http://www.canberratimes.com.au/sport/by/David-Polkinghorne-hvepe" itemprop="url"> <h5 itemprop="name" rel="author">David Polkinghorne</h5> </a> 
-           <ul class="social  social--horizontal"> 
-            <li> <a href="mailto:david.polkinghorne@fairfaxmedia.com.au" class="email" title="Contact via Email" data-fm-analytics="trackingData:{event:'socialFollow',socialNetwork:'email',socialShareLocation:'author'}"> <span class="icon--email">Contact via Email</span> </a> </li> 
-            <li> <a href="https://plus.google.com/+DavidPolkinghorne" class="google-plus" title="Follow on Google Plus" data-fm-analytics="trackingData:{event:'socialFollow',socialNetwork:'googleplus',socialShareLocation:'author'}"> <span class="icon--google-plus">Follow on Google Plus</span> </a> </li> 
-            <li> <a href="https://twitter.com/Super_Couch" class="twitter" title="Follow on Twitter" data-fm-analytics="trackingData:{event:'socialFollow',socialNetwork:'twitter',socialShareLocation:'author'}"> <span class="icon--twitter">Follow on Twitter</span> </a> </li> 
-           </ul> </li> 
-         </ul> 
-        </div> 
-       </div> 
-       <div class="adblocker-wrap"></div>
-       <div class="social--share-wrap"> 
-        <ul class="social social--share social--horizontal social--toggle " data-event-tracking-enabled="true" data-track-data="{&quot;name_component&quot;:&quot;Social_Toolbar&quot;}"> 
-         <li> <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.canberratimes.com.au%2Fsport%2Fits-a-honeybunny-win-for-english-20130331-2h1je.html&amp;title=It%27s+a+honey-bunny+win+for+English" class="facebook" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'facebook',socialShareLocation:'header'}" data-fm-social-sharing="width:600,height:600"> <span class="icon--facebook">facebook</span> <span class="social__text">SHARE</span> </a> </li> 
-         <li> <a href="https://twitter.com/share?url=http%3A%2F%2Fwww.canberratimes.com.au%2Fsport%2Fits-a-honeybunny-win-for-english-20130331-2h1je.html&amp;text=It%27s+a+honey-bunny+win+for+English&amp;via=canberratimes" class="twitter" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'twitter',socialShareLocation:'header'}" data-fm-social-sharing="width:600,height:600"> <span class="icon--twitter">twitter</span> <span class="social__text">TWEET</span> </a> </li> 
-         <li> <a href="mailto:?subject=It%27s%20a%20honey-bunny%20win%20for%20English&amp;body=I%20would%20like%20to%20share%20something%20with%20you%0A%0Dhttp%3A%2F%2Fwww.canberratimes.com.au%2Fsport%2Fits-a-honeybunny-win-for-english-20130331-2h1je.html" class="email" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'email',socialShareLocation:'header'}" data-fm-social-sharing="suppressPopup:true"> <span class="icon--email">email</span> </a> </li> 
-         <li class="expand-show"> <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.canberratimes.com.au%2Fsport%2Fits-a-honeybunny-win-for-english-20130331-2h1je.html&amp;title=It%27s+a+honey-bunny+win+for+English" class="google-plus" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'googleplus',socialShareLocation:'header'}" data-fm-social-sharing="width:600,height:600"> <span class="icon--google-plus">google-plus</span> </a> </li> 
-         <li class="expand-show"> <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.canberratimes.com.au%2Fsport%2Fits-a-honeybunny-win-for-english-20130331-2h1je.html&amp;title=It%27s+a+honey-bunny+win+for+English&amp;source=Canberra+Times&amp;summary=Hot+cross+buns+with+honey+were+the+secret+weapon+that+helped+power+Jason+English+to+his+sixth+consecutive+Australian+solo+24-hour+championship+at+Stromlo+Forest+Park." class="linkedin" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'linkedin',socialShareLocation:'header'}" data-fm-social-sharing="width:600,height:600"> <span class="icon--linkedin">linkedin</span> </a> </li> 
-         <li class="expand-show"> <a href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.canberratimes.com.au%2Fsport%2Fits-a-honeybunny-win-for-english-20130331-2h1je.html&amp;title=It%27s+a+honey-bunny+win+for+English" class="reddit" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'reddit',socialShareLocation:'header'}" data-fm-social-sharing="width:900,height:800"> <span class="icon--reddit">reddit</span> </a> </li> 
-         <li class="social__expand"> <button class="social__toggle">More</button> </li> 
-        </ul> 
-       </div> 
-      </header>
-      <div class="article__body" itemprop="articleBody"> 
-       <p>Hot cross buns with honey were the secret weapon that helped power Jason English to his sixth consecutive Australian solo 24-hour championship at Stromlo Forest Park on Sunday.</p>
-       <p>The Port Macquarie teacher is hoping to find a baker willing to make some of the traditional Easter buns in October when he'll return to Canberra for the world 24-hour championships.</p>
-       <figure class="media  media--photo social--sharing" data-fm-image-sharing="twitterTag:'canberratimes'" data-event-tracking-enabled="false" data-track-data="{&quot;name_component&quot;:&quot;Inline_Image&quot;}" itemscope itemprop="image" itemtype="http://schema.org/ImageObject"> 
-        <ul class="social social--horizontal social--share"> 
-         <li> <button class="social__toggle">SHARE</button> </li> 
-         <li> <a href="javascript:;" class="facebook" title="Share on Facebook" data-network="facebook" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'facebook'}"> <span class="icon--facebook">Share on Facebook</span> <span class="social__text">SHARE</span> </a></li> 
-         <li> <a href="javascript:;" class="twitter" title="Share on Twitter" data-network="twitter" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'twitter'}"> <span class="icon--twitter">Share on Twitter</span> <span class="social__text">TWEET</span> </a></li> 
-         <li class="social__link"> <button class="link"> <span class="icon--link">Link</span> </button> <input type="text" class="social__url" value=""> </li> 
-        </ul>
-        <img alt="Jason English wins the men's 30-34 category." title="" src="https://www.fairfaxstatic.com.au/content/dam/images/2/h/1/q/1/image.related.articleLeadwide.620x349.2h1je.png/1364745600000.jpg">
-        <figcaption class="media__caption">
-          Jason English wins the men's 30-34 category.&nbsp;
-         <cite>Photo: Katherine Griffiths</cite> 
-        </figcaption> 
-        <meta itemprop="url" content="https://www.fairfaxstatic.com.au/content/dam/images/2/h/1/q/1/image.related.articleLeadwide.620x349.2h1je.png/1364745600000.jpg"> 
-        <meta itemprop="height" content="349"> 
-        <meta itemprop="width" content="620">
-       </figure>
-       <p>He'll be going for a remarkable fourth consecutive world title in the endurance event.</p>
-       <p>''Hot cross buns with honey is amazing,'' English told <em>The Canberra Times</em> after the race.</p>
-       <figure class="media  media--photo social--sharing" data-fm-image-sharing="twitterTag:'canberratimes'" data-event-tracking-enabled="false" data-track-data="{&quot;name_component&quot;:&quot;Inline_Image&quot;}" itemscope itemprop="image" itemtype="http://schema.org/ImageObject"> 
-        <ul class="social social--horizontal social--share"> 
-         <li> <button class="social__toggle">SHARE</button> </li> 
-         <li> <a href="javascript:;" class="facebook" title="Share on Facebook" data-network="facebook" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'facebook'}"> <span class="icon--facebook">Share on Facebook</span> <span class="social__text">SHARE</span> </a></li> 
-         <li> <a href="javascript:;" class="twitter" title="Share on Twitter" data-network="twitter" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'twitter'}"> <span class="icon--twitter">Share on Twitter</span> <span class="social__text">TWEET</span> </a></li> 
-         <li class="social__link"> <button class="link"> <span class="icon--link">Link</span> </button> <input type="text" class="social__url" value=""> </li> 
-        </ul>
-        <img alt="Cyclists on the home stretch after 24 hours of riding." title="" src="https://www.fairfaxstatic.com.au/content/dam/images/2/h/1/p/z/image.related.articleLeadwide.620x349.2h1je.png/1364745600000.jpg">
-        <figcaption class="media__caption">
-          Cyclists on the home stretch after 24 hours of riding.&nbsp;
-         <cite>Photo: Katherine Griffiths</cite> 
-        </figcaption> 
-        <meta itemprop="url" content="https://www.fairfaxstatic.com.au/content/dam/images/2/h/1/p/z/image.related.articleLeadwide.620x349.2h1je.png/1364745600000.jpg"> 
-        <meta itemprop="height" content="349"> 
-        <meta itemprop="width" content="620">
-       </figure>
-       <p>''I haven't really tried it before, I don't know how many I had.</p>
-       <p>''I'll have to get a bread shop to sponsor me so they can make hot cross buns in October, it'll definitely be handy.''</p>
-       <div class="adWrapper "> 
-        <small style="display:none">Advertisement</small> 
-        <div id="adspot-300x250-pos3" style="display:none;"> 
-         <script>
-                            titan.requestAd.push("adspot-300x250-pos3");
-                        </script> 
-        </div> 
-       </div> 
-       <p>While English has established himself as the benchmark in the men's event, Wollongong's Liz Smith was starting to do the same for herself in the women's.</p>
-       <p>She won her second consecutive national title, to go with her 2012 Scott 24-hour title, by more than one lap of the 12-kilometre course.</p>
-       <figure class="media  media--portrait-photo social--sharing" data-fm-image-sharing="twitterTag:'canberratimes'" data-event-tracking-enabled="false" data-track-data="{&quot;name_component&quot;:&quot;Inline_Image&quot;}" itemscope itemprop="image" itemtype="http://schema.org/ImageObject"> 
-        <ul class="social social--horizontal social--share"> 
-         <li> <button class="social__toggle">SHARE</button> </li> 
-         <li> <a href="javascript:;" class="facebook" title="Share on Facebook" data-network="facebook" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'facebook'}"> <span class="icon--facebook">Share on Facebook</span> </a></li> 
-         <li> <a href="javascript:;" class="twitter" title="Share on Twitter" data-network="twitter" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'twitter'}"> <span class="icon--twitter">Share on Twitter</span> </a></li> 
-         <li class="social__link"> <button class="link"> <span class="icon--link">Link</span> </button> <input type="text" class="social__url" value=""> </li> 
-        </ul>
-        <img alt="David De Melis in the men's 35-39 division crosses the finish line." title="" src="https://www.fairfaxstatic.com.au/content/dam/images/2/h/1/q/3/image.related.articleLeadNarrow.300x0.2h1je.png/1364745600000.jpg">
-        <figcaption class="media__caption">
-          David De Melis in the men's 35-39 division crosses the finish line.&nbsp;
-         <cite>Photo: Katherine Griffiths</cite> 
-        </figcaption> 
-        <meta itemprop="url" content="https://www.fairfaxstatic.com.au/content/dam/images/2/h/1/q/3/image.related.articleLeadNarrow.300x0.2h1je.png/1364745600000.jpg"> 
-        <meta itemprop="height" content="0"> 
-        <meta itemprop="width" content="300">
-       </figure>
-       <p>Smith is yet to win a world title, but gets her chance to change that later this year.</p>
-       <p>While she'll celebrate her 33rd birthday on Friday, Smith said she felt closer to 50 after her 24-hour ordeal, although she looked as if she'd just been on a Sunday afternoon ride.</p>
-       <figure class="media  media--portrait-photo social--sharing" data-fm-image-sharing="twitterTag:'canberratimes'" data-event-tracking-enabled="false" data-track-data="{&quot;name_component&quot;:&quot;Inline_Image&quot;}" itemscope itemprop="image" itemtype="http://schema.org/ImageObject"> 
-        <ul class="social social--horizontal social--share"> 
-         <li> <button class="social__toggle">SHARE</button> </li> 
-         <li> <a href="javascript:;" class="facebook" title="Share on Facebook" data-network="facebook" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'facebook'}"> <span class="icon--facebook">Share on Facebook</span> </a></li> 
-         <li> <a href="javascript:;" class="twitter" title="Share on Twitter" data-network="twitter" data-fm-analytics="trackingData:{event:'socialShare',socialNetwork:'twitter'}"> <span class="icon--twitter">Share on Twitter</span> </a></li> 
-         <li class="social__link"> <button class="link"> <span class="icon--link">Link</span> </button> <input type="text" class="social__url" value=""> </li> 
-        </ul>
-        <img alt="Damian Gillard takes a break during in the men's 40-44 category." title="" src="https://www.fairfaxstatic.com.au/content/dam/images/2/h/1/q/2/image.related.articleLeadNarrow.300x0.2h1je.png/1364745600000.jpg">
-        <figcaption class="media__caption">
-          Damian Gillard takes a break during in the men's 40-44 category.&nbsp;
-         <cite>Photo: Katherine Giffiths</cite> 
-        </figcaption> 
-        <meta itemprop="url" content="https://www.fairfaxstatic.com.au/content/dam/images/2/h/1/q/2/image.related.articleLeadNarrow.300x0.2h1je.png/1364745600000.jpg"> 
-        <meta itemprop="height" content="0"> 
-        <meta itemprop="width" content="300">
-       </figure>
-       <p>''I'd like to think I could [emulate English], but there's a lot of good girls out there and a lot of strong competition,'' Smith said.</p>
-       <p>''I'll give it everything I've got and see what happens.</p>
-       <p>''I think there's going to be lots of competition [at the world titles], not just from the internationals, but from the other Australians that weren't here today.</p>
-       <p>''Hopefully I'd like to [finish] top five.''</p>
-       <p>Smith completed 25 laps in 24 hours and 25 seconds.</p>
-       <p>Libby Adamson finished second and Francesca Sanders third, both with 24 laps.</p>
-       <p>While her win was comfortable, English was made to fight for his until the very last lap.</p>
-       <p>The OnTheGo Racing team member was just 10 minutes ahead of Canberra's Ed McDonald going into the 33rd-and-final lap.</p>
-       <p>It had been as low as 90 seconds on Sunday morning before English ground it out to nearly 26 minutes by the end of race.</p>
-       <p>The 32-year-old felt it pointed to a close race at the world titles, albeit one dominated by Aussies.</p>
-       <p>''You definitely can't be confident [going into world titles], a race that close, it could've gone either way,'' English said.</p>
-       <p>''That just comes down to a flat tyre.''</p>
-       <p>The world titles will be held at Stromlo on October 12.</p>
-      </div> 
-      <div class="adWrapper "> 
-       <div id="adspot-620x164-pos1" style="display:none;"> 
-        <script>
-                            titan.requestAd.push("adspot-620x164-pos1");
-                        </script> 
-       </div> 
-      </div> 
-      <div class="panel panel--third-party"> 
-       <div id="jobs"> 
-        <iframe frameborder="0" height="180" width="100%" marginheight="0" marginwidth="0" scrolling="no" data-src="https://adzuna-jobbox.fairfaxmedia.com.au/adzuna/api/jobs.html?platform=DESKTOP&amp;publication=ct&amp;section=Sport"> </iframe> 
-       </div> 
-      </div> 
-      <div id="content-bottom-recommendations" class="panel panel--third-party"></div> 
-     </article>
-    </main> 
-    <aside class="aside aside--main" role="complementary"> 
-     <div class="grid"> 
-      <div class="adWrapper "> 
-       <div id="adspot-300x1515-pos1" style="display:none;"> 
-        <script>
-                            titan.requestAd.push("adspot-300x1515-pos1");
-                        </script> 
-       </div> 
-      </div> 
-      <div class="adWrapper "> 
-       <small style="display:none">Advertisement</small> 
-       <div id="adspot-300x600_300x250-pos1" style="display:none;"> 
-        <script>
-                            titan.requestAd.push("adspot-300x600_300x250-pos1");
-                        </script> 
-       </div> 
-      </div> 
-      <div class="iparys_inherited">
-       <div class="article page adaptive base"></div> 
-      </div>
-      <div class="most_popular most-popular section">
-       <div class="panel panel--popular" data-event-tracking-enabled="true" data-track-data="{&quot;name_component&quot;:&quot;Most_Popular&quot;}"> 
-        <header class="header"> 
-         <h2 class="heading">Most Popular</h2> 
-        </header> 
-        <ol> 
-         <li> 
-          <article class="story" data-track-data="{&quot;shared_content_type&quot;:&quot;ARTICLE&quot;,&quot;shared_content_name&quot;:&quot;Canberra Cavalry star Steve Kent sets strikeout record in ACT grand final&quot;,&quot;shared_content_iterativenumber&quot;:&quot;0&quot;}"> 
-           <div class="story__wof"> 
-            <h3 class="story__headline"> <a href="http://www.canberratimes.com.au/sport/act-sport/canberra-cavalry-star-steve-kent-sets-strikeout-record-in-act-grand-final-20180316-h0xkud.html" data-trackable="true" data-track-data="{&quot;event&quot;:&quot;click-headline&quot;}">Kent sets strikeout record in ACT grand final</a> </h3>
-            <ul class="byline"> 
-            </ul> 
-           </div>
-          </article> </li> 
-         <li> 
-          <article class="story" data-track-data="{&quot;shared_content_type&quot;:&quot;ARTICLE&quot;,&quot;shared_content_name&quot;:&quot;Cricket ACT Douglas Cup: Eastlake's showdown with Weston Creek Molonglo evenly poised&quot;,&quot;shared_content_iterativenumber&quot;:&quot;1&quot;}"> 
-           <div class="story__wof"> 
-            <h3 class="story__headline"> <a href="http://www.canberratimes.com.au/sport/act-sport/cricket-act-douglas-cup-eastlakes-showdown-with-weston-creek-molonglo-evenly-poised-20180315-h0xjkf.html" data-trackable="true" data-track-data="{&quot;event&quot;:&quot;click-headline&quot;}">Cricket ACT Douglas Cup grand final evenly poised</a> </h3>
-            <ul class="byline"> 
-            </ul> 
-           </div>
-          </article> </li> 
-         <li> 
-          <article class="story" data-track-data="{&quot;shared_content_type&quot;:&quot;ARTICLE&quot;,&quot;shared_content_name&quot;:&quot;'I take responsibility': Rabada admits blame for Smith incident&quot;,&quot;shared_content_iterativenumber&quot;:&quot;2&quot;}"> 
-           <div class="story__wof"> 
-            <h3 class="story__headline"> <a href="http://www.canberratimes.com.au/sport/cricket/i-take-responsibility-rabada-admits-blame-for-smith-incident-20180316-p4z4tm.html" data-trackable="true" data-track-data="{&quot;event&quot;:&quot;click-headline&quot;}">'I take responsibility': Rabada admits blame for Smith incident</a> </h3>
-            <ul class="byline"> 
-            </ul> 
-           </div>
-          </article> </li> 
-         <li> 
-          <article class="story" data-track-data="{&quot;shared_content_type&quot;:&quot;ARTICLE&quot;,&quot;shared_content_name&quot;:&quot;Channel Seven coverage hasn't done Winter Paralympics 'justice': Michael Milton&quot;,&quot;shared_content_iterativenumber&quot;:&quot;3&quot;}"> 
-           <div class="story__wof"> 
-            <h3 class="story__headline"> <a href="http://www.canberratimes.com.au/sport/act-sport/channel-seven-coverage-hasnt-done-winter-paralympics-justice-michael-milton-20180314-h0xhop.html" data-trackable="true" data-track-data="{&quot;event&quot;:&quot;click-headline&quot;}">Seven coverage hasn't done Winter Paralympics 'justice': Milton</a> </h3>
-            <ul class="byline"> 
-            </ul> 
-           </div>
-          </article> </li> 
-         <li> 
-          <article class="story" data-track-data="{&quot;shared_content_type&quot;:&quot;ARTICLE&quot;,&quot;shared_content_name&quot;:&quot;'He's only human': Starc hopeful Australia can slow down enigma AB&quot;,&quot;shared_content_iterativenumber&quot;:&quot;4&quot;}"> 
-           <div class="story__wof"> 
-            <h3 class="story__headline"> <a href="http://www.canberratimes.com.au/sport/cricket/he-s-only-human-starc-hopeful-australia-can-slow-down-enigma-ab-20180316-p4z4s7.html" data-trackable="true" data-track-data="{&quot;event&quot;:&quot;click-headline&quot;}">'He's only human': Starc hopeful Australia can slow down enigma AB</a> </h3>
-            <ul class="byline"> 
-            </ul> 
-           </div>
-          </article> </li> 
-        </ol>
-       </div> 
-      </div> 
-      <div class="component-wrap section"> 
-       <div class="panel panel--video " data-event-tracking-enabled="false" data-track-data="{}"> 
-        <header class="header"> 
-         <h2 class="heading">Latest Sport Videos</h2> 
-        </header> 
-        <article class="story story--stacked"> 
-         <figure class="module__lead media media--video" data-fm-video-player-stand-alone="{&quot;autoPlay&quot;:false,&quot;autoPlayMuted&quot;:true,&quot;loadWhenInView&quot;:true,&quot;showCountdown&quot;:false,&quot;accountId&quot;:&quot;3910869709001&quot;,&quot;playerId&quot;:&quot;r1iMXzgF&quot;,&quot;videoId&quot;:&quot;8556822&quot;,&quot;videoPlayerId&quot;:&quot;story-video-player-8556822&quot;,&quot;adOptions&quot;:{&quot;captionText&quot;:&quot;Ad&quot;,&quot;category&quot;:&quot;video-sport/video-rugby-league&quot;},&quot;trackingOptions&quot;:{&quot;autoPlay&quot;:false,&quot;playCountdown&quot;:false,&quot;playIndex&quot;:0,&quot;category&quot;:&quot;video-sport/video-rugby-league&quot;,&quot;contentType&quot;:&quot;Video&quot;,&quot;duration&quot;:&quot;89698&quot;,&quot;headline&quot;:&quot;Adelaide United draw with Melbourne City&quot;,&quot;lastPublishedDate&quot;:&quot;2018-03-16T21:13:11.918Z&quot;,&quot;playMode&quot;:&quot;single&quot;,&quot;producer&quot;:&quot;Omnisport, Rebecca Leaver&quot;,&quot;site&quot;:&quot;canberratimes&quot;,&quot;source&quot;:&quot;Omnisport&quot;,&quot;videoId&quot;:&quot;8556822&quot;,&quot;nielsenOptions&quot;:{&quot;sfcode&quot;:&quot;dcr&quot;}}}"> 
-          <video id="story-video-player-8556822" class="video-js" controls="controls" preload="metadata" data-embed="default" poster="https://www.fairfaxstatic.com.au/content/dam/images/5/3/e/h/j/image.imgtype.videoThumbnail.620x349.png/1521234793476.jpg" playsinline></video> 
-          <div class="video__overlay"> 
-           <div class="video__play-wrap"> 
-            <a href="javascript:;" tabindex="-1"> <button class="video__play">Play Video</button> </a> 
-           </div>
-           <div class="video__replay-wrap"> 
-            <a href="javascript:;" tabindex="-1"> <button class="video__replay">Replay Video</button> </a> 
-           </div>
-          </div> 
-         </figure> 
-         <div class="story__wof"> 
-          <h3 class="story__headline"> <a href="/video/video-sport/video-rugby-league/adelaide-united-draw-with-melbourne-city-20180316-53ehi.html">Adelaide United draw with Melbourne City</a> </h3>
-          <ul class="byline"> 
-          </ul> 
-         </div>
-        </article> 
-        <script>
-    var _fmjsdrjs = window._fmjsdrjs || [];
-    _fmjsdrjs.push('desktop/brightcove');
-</script>
-        <article class="story story--imgright"> 
-         <figure class="story__lead media media--video"> 
-          <a class="story__img media__content" href="/video/video-sport/video-rugby-league/roosters-run-riot-over-dogs-20180316-53ehe.html" tabindex="-1"> <img src="https://www.fairfaxstatic.com.au/content/dam/images/5/3/e/h/f/image.related.landscape.100x67.53ehe.png/1521233375345.jpg" alt="null" width="100" height="67">
-           <div class="tag">
-            <dl>
-             <dt>
-              Video duration
-             </dt>
-             <dd>
-              01:30
-             </dd>
-            </dl>
-           </div> </a> 
-         </figure> 
-         <div class="story__wof"> 
-          <h3 class="story__headline"> <a href="/video/video-sport/video-rugby-league/roosters-run-riot-over-dogs-20180316-53ehe.html">Roosters run riot over Dogs</a> </h3>
-          <ul class="byline"> 
-          </ul> 
-         </div>
-        </article> 
-        <article class="story story--imgright"> 
-         <figure class="story__lead media media--video"> 
-          <a class="story__img media__content" href="/video/video-sport/video-rugby-league/goal-post-denies-cowboys-victory-20180316-53ehb.html" tabindex="-1"> <img src="https://www.fairfaxstatic.com.au/content/dam/images/5/3/e/h/c/image.related.landscape.100x67.53ehb.png/1521233146296.jpg" alt="null" width="100" height="67">
-           <div class="tag">
-            <dl>
-             <dt>
-              Video duration
-             </dt>
-             <dd>
-              01:30
-             </dd>
-            </dl>
-           </div> </a> 
-         </figure> 
-         <div class="story__wof"> 
-          <h3 class="story__headline"> <a href="/video/video-sport/video-rugby-league/goal-post-denies-cowboys-victory-20180316-53ehb.html">Goal post denies Cowboys victory</a> </h3>
-          <ul class="byline"> 
-          </ul> 
-         </div>
-        </article> 
-       </div> 
-      </div> 
-      <div class="follow-site follow_site section">
-       <div class="panel panel--follow panel--follow--masthead"> 
-        <header class="header"> 
-         <h2 class="heading">Follow Canberra Times</h2> 
-        </header> 
-        <p>Get notified when the big things happen.</p> 
-        <ul class="social"> 
-         <li> <a class="facebook" href="http://www.facebook.com/CanberraTimes" title="Share on Facebook" data-fm-analytics="trackingData:{event:'socialFollow',socialNetwork:'facebook'}"><span class="icon--facebook">Share on Facebook</span></a> </li> 
-         <li> <a class="twitter" href="https://twitter.com/canberratimes" title="Share on Twitter" data-fm-analytics="trackingData:{event:'socialFollow',socialNetwork:'twitter'}"><span class="icon--twitter">Share on Twitter</span></a> </li> 
-         <li> <a class="email" href="https://membercentre.fairfax.com.au/NewsletterSubscription.aspx" title="Share on Email" data-fm-analytics="trackingData:{event:'socialFollow',socialNetwork:'email'}"><span class="icon--email">Share on Email</span><span class="social__text">Newsletters</span></a> </li> 
-        </ul> 
-       </div> 
-      </div> 
-      <div class="sticky-wrap grid"> 
-       <div class="adWrapper "> 
-        <small style="display:none">Advertisement</small> 
-        <div id="adspot-300x250-pos2" style="display:none;"> 
-         <script>
-                            titan.requestAd.push("adspot-300x250-pos2");
-                        </script> 
-        </div> 
-       </div> 
-      </div> 
-     </div> 
-    </aside> 
-   </div> 
-   <aside class="pre-footer"> 
-    <div class="ad-wrap--leaderboard"> 
-     <div class="adWrapper "> 
-      <div id="adspot-728x90-pos2" style="display:none;"> 
-       <script>
-                            titan.requestAd.push("adspot-728x90-pos2");
-                        </script> 
-      </div> 
-     </div> 
-    </div>
-    <div class="iparys_inherited">
-     <div class="article page adaptive base">
-      <div class="section html-assets">
-       <iframe name="compare_save" data-src="https://s3-ap-southeast-2.amazonaws.com/domain-ad-ops/adtech/compareconnect/smh_compareandconnect_180118.html" height="275" width="940" style="border: 0;outline:none;width:100%"></iframe>
-      </div> 
-      <div class="most-read section">
-       <div class="panel panel--most-read carousel-container"> 
-        <header class="header"> 
-         <h2 class="heading">Most Viewed Today</h2> 
-        </header> 
-        <div class="carousel__controls"> 
-         <button class="carousel__prev" rel="prev"> <span class="icon--chevron-left">Previous slide</span> </button> 
-         <button class="carousel__next" rel="next"> <span class="icon--chevron-right">Next slide</span> </button> 
-        </div> 
-        <div class="carousel"> 
-         <div class="carousel__slides"> 
-          <div class="item unit-1-3"> 
-           <div class="story-group story-group--section"> 
-            <h3 class="heading"> Sport</h3> 
-            <ol> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.canberratimes.com.au/sport/act-sport/cricket-act-douglas-cup-grand-final-eastlakes-hayden-page-inspiring-youths-20180314-h0xhjv.html" }>How a Canberra cricketer is transforming young lives through his club</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.canberratimes.com.au/sport/act-sport/canberra-cavalry-star-steve-kent-sets-strikeout-record-in-act-grand-final-20180316-h0xkud.html" }>Kent sets strikeout record in ACT grand final</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.canberratimes.com.au/sport/act-sport/cricket-act-douglas-cup-eastlakes-showdown-with-weston-creek-molonglo-evenly-poised-20180315-h0xjkf.html" }>Cricket ACT Douglas Cup grand final evenly poised</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.canberratimes.com.au/sport/act-sport/channel-seven-coverage-hasnt-done-winter-paralympics-justice-michael-milton-20180314-h0xhop.html" }>Seven coverage hasn't done Winter Paralympics 'justice': Milton</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.canberratimes.com.au/sport/act-sport/paralympic-great-michael-milton-adds-a-third-world-record-to-his-resume-20180316-h0xkbc.html" }>Paralympian Michael Milton breaks third world record</a> </h4> 
-               </div> 
-              </article> </li> 
-            </ol> 
-           </div> 
-          </div>
-          <div class="item unit-1-3"> 
-           <div class="story-group "> 
-            <h3 class="heading"> <a class="logo logo--canberratimes" href="http://www.canberratimes.com.au" title="Canberra Times">Canberra Times</a> </h3> 
-            <ol> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.canberratimes.com.au/federal-politics/political-news/vikki-campion-travel-records-freedom-of-information-request-denied-20180315-p4z4nk.html" }>Freedom of information request denied on Vikki Campion travel records</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.canberratimes.com.au/world/you-re-fired-and-you-too-mcmaster-on-brink-others-on-thin-ice-20180316-p4z4p3.html" }>'You're fired, and you too': McMaster on brink, others on thin ice</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.canberratimes.com.au/act-news/canberra-life/skyfire-2018-fireworks-music-and-a-30th-birthday-to-celebrate-20180315-h0xifo.html" }>Skyfire's secret soundtrack ready to light up the sky</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.canberratimes.com.au/queensland/we-know-what-bus-you-catch-bullies-texted-to-schoolgirl-victim-20180314-p4z4gb.html" }>'We know what bus you catch' bullies texted to schoolgirl victim</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.canberratimes.com.au/comment/all-media-critical-to-effective-government-whether-andrew-barr-likes-it-or-not-20180315-h0xjkd.html" }>Barr deletes negative media messages</a> </h4> 
-               </div> 
-              </article> </li> 
-            </ol> 
-           </div> 
-          </div>
-          <div class="item unit-1-3"> 
-           <div class="story-group "> 
-            <h3 class="heading"> <a class="logo logo--smh" href="http://www.smh.com.au" title="The Sydney Morning Herald">The Sydney Morning Herald</a> </h3> 
-            <ol> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.smh.com.au/national/why-can-t-sunrise-apologise-20180315-p4z4jt.html" }>Why can't Sunrise apologise?</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.smh.com.au/business/workplace-relations/herbert-smith-freehills-to-sack-senior-partner-after-harassment-claims-20180315-p4z4n2.html" }>Herbert Smith Freehills to sack senior partner after harassment claims</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.smh.com.au/lifestyle/celebrity/karl-stefanovic-returning-to-today-with-magazine-set-to-publish-uber-conversation-20180316-p4z4qs.html" }>Magazine set to publish Uber conversation</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.smh.com.au/world/donald-trump-jr-s-wife-vanessa-seeks-divorce-after-12-year-marriage-20180315-p4z4na.html" }>Donald Trump jnr's wife Vanessa seeks divorce after 12-year marriage</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.smh.com.au/nsw/footage-shows-brazen-execution-of-ex-bikie-boss-mick-hawi-in-sydney-20180316-p4z4p1.html" }>Footage shows brazen execution of ex-bikie boss Mick Hawi in Sydney</a> </h4> 
-               </div> 
-              </article> </li> 
-            </ol> 
-           </div> 
-          </div>
-          <div class="item unit-1-3"> 
-           <div class="story-group "> 
-            <h3 class="heading"> <a class="logo logo--theage" href="http://www.theage.com.au" title="The Age">The Age</a> </h3> 
-            <ol> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.theage.com.au/afl/melbourne-demons/the-fall-out-from-the-melbourne-pre-season-camp-fiasco-20180316-p4z4oe.html" }>The fall-out from the Melbourne pre-season camp fiasco</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.theage.com.au/queensland/we-know-what-bus-you-catch-bullies-texted-to-schoolgirl-victim-20180314-p4z4gb.html" }>'We know what bus you catch' bullies texted to schoolgirl victim</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.theage.com.au/business/retail/solly-lew-threatens-mass-store-closures-as-rent-fight-escalates-20180315-p4z4mu.html" }>Solly Lew threatens mass store closures as rent fight escalates</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.theage.com.au/victoria/gangland-matriarch-roberta-williams-loses-inherited-home-to-taxman-20180316-p4z4pb.html" }>Gangland matriarch Roberta Williams loses inherited home to taxman</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.theage.com.au/world/he-gamed-cheated-ignored-her-she-bought-herself-a-samurai-sword-20180315-p4z4mi.html" }>He gamed, cheated, ignored her, she bought herself a samurai sword</a> </h4> 
-               </div> 
-              </article> </li> 
-            </ol> 
-           </div> 
-          </div>
-          <div class="item unit-1-3"> 
-           <div class="story-group "> 
-            <h3 class="heading"> <a class="logo logo--brisbanetimes" href="http://www.brisbanetimes.com.au" title="Brisbane Times">Brisbane Times</a> </h3> 
-            <ol> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.brisbanetimes.com.au/queensland/road-closure-to-affect-thousands-in-south-brisbane-20180315-p4z4kx.html" }>Road closure to affect thousands in south Brisbane</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.brisbanetimes.com.au/national/why-can-t-sunrise-apologise-20180315-p4z4jt.html" }>Why can't Sunrise apologise?</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.brisbanetimes.com.au/queensland/attempted-murder-charges-after-man-pushed-from-brisbane-balcony-20180315-p4z4mw.html" }>Attempted murder charges after man 'pushed' from Brisbane balcony</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.brisbanetimes.com.au/queensland/truck-explosion-nasty-two-car-smash-cause-lengthy-delays-for-weekend-commute-20180316-p4z4sk.html" }>Truck explosion, nasty two-car smash cause lengthy delays for weekend commute</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.brisbanetimes.com.au/queensland/bob-katter-ignored-road-closure-in-queensland-flood-20180316-p4z4q1.html" }>Bob Katter ignored road closure in Queensland flood</a> </h4> 
-               </div> 
-              </article> </li> 
-            </ol> 
-           </div> 
-          </div>
-          <div class="item unit-1-3"> 
-           <div class="story-group "> 
-            <h3 class="heading"> <a class="logo logo--watoday" href="http://www.watoday.com.au" title="WA Today">WA Today</a> </h3> 
-            <ol> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.watoday.com.au/wa-news/neonazi-men-fight-in-dock-after-murder-verdict-handed-down-20180312-h0xdh5.html" }>Perth murder scene reveals desperate attempts to conceal what really happened</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.watoday.com.au/national/why-can-t-sunrise-apologise-20180315-p4z4jt.html" }>Why can't Sunrise apologise?</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.watoday.com.au/world/he-gamed-cheated-ignored-her-she-bought-herself-a-samurai-sword-20180315-p4z4mi.html" }>He gamed, cheated, ignored her, she bought herself a samurai sword</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.watoday.com.au/wa-news/growing-up-rough-wounds-never-heal-for-my-dad-the-fairbridge-kid-20180313-h0xepl.html" }>Growing up rough: Wounds never heal for my dad, the Fairbridge kid</a> </h4> 
-               </div> 
-              </article> </li> 
-             <li> 
-              <article class="story"> 
-               <div class="story__wof"> 
-                <h4 class="story__headline"> <a href="http://www.watoday.com.au/wa-news/bureaucrat-bungle-fmg-railway-threat-to-23-000-years-of-pilbara-history-20180315-p4z4lc.html" }>Bureaucrat bungle? FMG railway threat to 23,000 years of Pilbara history</a> </h4> 
-               </div> 
-              </article> </li> 
-            </ol> 
-           </div> 
-          </div>
-         </div> 
-        </div> 
-       </div> 
-      </div> 
-     </div> 
-    </div>
-    <div class="html_assets_598f section html-assets"></div> 
-   </aside>
-  </div> 
-  <footer class="footer" role="contentinfo"> 
-   <div class="section">
-    <div class="new *"></div> 
-   </div>
-   <div class="iparys_inherited">
-    <div class="article page adaptive base">
-     <div class="links section">
-      <div class="footer__wrap"> 
-       <div class="content wrap grid"> 
-        <div class="grid__cell footer__top"> 
-         <a class="logo logo--canberratimes-white" href="http://www.canberratimes.com.au" title="Canberra Times">Canberra Times</a>
-         <ul class="social social--horizontal social--tertiary"> 
-          <li> <a class="email" href="http://www.canberratimes.com.au/support/" target="_blank" title="Share via Email" data-fm-analytics="trackingData:{event:'socialFollow',socialNetwork:'subscribe'}"><span class="icon--email">Share via Email</span></a> </li> 
-          <li> <a class="facebook" href="https://www.facebook.com/CanberraTimes" target="_blank" title="Share on Facebook" data-fm-analytics="trackingData:{event:'socialFollow',socialNetwork:'facebook',socialFollowLocation:'footer'}"><span class="icon--facebook">Share on Facebook</span></a> </li> 
-          <li> <a class="google-plus" href="https://plus.google.com/u/0/+canberratimes/posts" target="_blank" title="Share on Google Plus" data-fm-analytics="trackingData:{event:'socialFollow',socialNetwork:'googleplus',socialFollowLocation:'footer'}"><span class="icon--google-plus">Share on Google Plus</span></a> </li> 
-          <li> <a class="twitter" href="https://twitter.com/canberratimes" target="_blank" title="Share on Twitter" data-fm-analytics="trackingData:{event:'socialFollow',socialNetwork:'twitter',socialFollowLocation:'footer'}"><span class="icon--twitter">Share on Twitter</span></a> </li> 
-          <li> <a class="rss" href="/rssheadlines" title="RSS Feed"><span class="icon--rss">RSS Feed</span></a> </li> 
-         </ul> 
-        </div> 
-        <section class="footer__links grid"> 
-         <div class="grid__cell"> 
-          <nav role="navigation"> 
-           <h3>Products and Services</h3> 
-           <ul> 
-            <li><a href="/am/">AM Edition</a></li> 
-            <li><a href="/pm/">PM Edition</a></li> 
-            <li><a href="http://www.goodfood.com.au">Good Food Guide</a></li> 
-            <li><a href="https://membercentre.fairfax.com.au/NewsletterSubscription.aspx">Newsletters</a></li> 
-            <li><a href="http://www.fairfaxsyndication.com/">Canberra Times Photos</a></li> 
-           </ul> 
-          </nav> 
-         </div> 
-         <div class="grid__cell"> 
-          <nav role="navigation"> 
-           <h3>Canberra Times</h3> 
-           <ul> 
-            <li><a href="http://www.canberratimes.com.au/siteguide">Sitemap</a></li> 
-            <li><a href="http://fairfaxruralandregional.com.au/product/options/ct">Subscriptions</a></li> 
-            <li><a href="http://www.canberratimes.com.au/support">Contact Us</a></li> 
-            <li><a href="http://www.adcentre.com.au/brands/the-canberra-times/">Advertise With Us</a></li> 
-            <li><a href="http://www.canberratimes.com.au/national/about-us/work-with-us-the-canberra-times-sponsorship-20150218-13h3ff.html">Sponsorship</a></li> 
-            <li><a href="?deviceType=text">Text Version</a></li> 
-            <li><a href="http://www.canberratimes.com.au/siteguide/accessibility">Site Accessibility Guide</a></li> 
-           </ul> 
-          </nav> 
-         </div> 
-         <div class="grid__cell"> 
-          <nav role="navigation"> 
-           <h3>Classifieds</h3> 
-           <ul> 
-            <li><a href="http://www.canberratimes.com.au/classifieds/place-an-ad">Place an Ad</a></li> 
-            <li><a href="http://www.canberratimes.com.au/classifieds/free">Place a free ad</a></li> 
-            <li><a href="http://www.canberratimes.com.au/classifieds/search">CT Classifieds &amp; Notices</a></li> 
-            <li><a href="http://www.drive.com.au/">Cars</a></li> 
-            <li><a href="https://www.rsvp.com.au">Dating</a></li> 
-            <li><a href="http://www.adzuna.com.au/">Jobs</a></li> 
-            <li><a href="http://www.domain.com.au">Domain</a></li> 
-            <li><a href="http://www.commercialrealestate.com.au">Commercial Real Estate</a></li> 
-            <li><a href="https://www.oneflare.com.au">Oneflare</a></li> 
-            <li><a href="https://www.nabo.com.au/">Nabo</a></li> 
-            <li><a href="http://tributes.canberratimes.com.au/obituaries/canberratimes-au">Tributes</a></li> 
-            <li><a href="http://celebrations.canberratimes.com.au/celebration/canberratimes-au">Celebrations</a></li> 
-           </ul> 
-          </nav> 
-         </div> 
-         <div class="grid__cell"> 
-          <nav role="navigation"> 
-           <h3>Our Sites</h3> 
-           <ul> 
-            <li><a href="http://www.smh.com.au/">SMH</a></li> 
-            <li><a href="http://www.theage.com.au">The Age</a></li> 
-            <li><a href="http://www.afr.com">AFR.com</a></li> 
-            <li><a href="http://www.adzuna.com.au">Adzuna</a></li> 
-            <li><a href="http://www.allhomes.com.au/">Allhomes</a></li> 
-            <li><a href="http://www.domain.com.au">Domain</a></li> 
-            <li><a href="http://www.drive.com.au">Drive</a></li> 
-            <li><a href="http://www.rsvp.com.au">RSVP</a></li> 
-            <li><a href="http://www.essentialbaby.com.au">Essential Baby</a></li> 
-            <li><a href="http://www.domain.com.au/property-profile">Home Price Guide</a></li> 
-            <li><a href="http://www.weatherzone.com.au">Weatherzone</a></li> 
-           </ul> 
-          </nav> 
-         </div> 
-        </section> 
-        <div class="grid__cell footer__bottom"> 
-         <nav role="navigation"> 
-          <h3 class="is-vishidden">Fairfax Media</h3> 
-          <ul> 
-           <li><a href="https://canberratimes.myfairfax.com.au/beta/members/my_account/profile?callback_uri=http%3A%2F%2Fwww.canberratimes.com.au%2F&amp;channel_key=qmijur57bxF1rHojHDpApA">Account Details</a></li> 
-           <li><a href="http://newsstore.fairfax.com.au/apps/newsSearch.ac?sy=nstore">News Store Archive</a></li> 
-           <li><a href="http://www.fairfaxsyndication.com/C.aspx?VP3=CMS3&amp;VF=FXJO50_1">Fairfax Syndication</a></li> 
-           <li><a href="https://www.fairfaxmediacareers.com/home">Careers</a></li> 
-           <li><a href="http://www.fairfaxevents.com.au">Events</a></li> 
-           <li><a href="http://www.presscouncil.org.au/what-we-do/">Press Council</a></li> 
-          </ul> 
-         </nav> 
-         <div class="copyright"> 
-          <span>Copyright © 2018</span>
-          <a class="logo logo--fairfax" title="Fairfax Media">Fairfax Media</a> 
-         </div>
-         <a class="btn btn--mini ll-open-feedback-widget" href="">Website Feedback</a> 
-        </div> 
-       </div> 
-      </div>
-     </div> 
-    </div> 
-   </div> 
-  </footer>
-  <div class="ad-block-message"></div> 
-  <div class="section">
-   <div class="new *"></div> 
-  </div>
-  <div class="iparys_inherited">
-   <div class="article page adaptive base"> 
-   </div> 
-  </div> 
-  <script>
-            window.myFairfaxGeo = true;
-        </script> 
-  <script>
-/*
-RequireJS 2.2.0 Copyright jQuery Foundation and other contributors.
-Released under MIT license, http://github.com/requirejs/requirejs/LICENSE
-*/
-var requirejs,require,define;
-(function(ga){function ka(b,c,d,g){return g||""}function K(b){return"[object Function]"===Q.call(b)}function L(b){return"[object Array]"===Q.call(b)}function y(b,c){if(b){var d;for(d=0;d<b.length&&(!b[d]||!c(b[d],d,b));d+=1);}}function X(b,c){if(b){var d;for(d=b.length-1;-1<d&&(!b[d]||!c(b[d],d,b));--d);}}function x(b,c){return la.call(b,c)}function e(b,c){return x(b,c)&&b[c]}function D(b,c){for(var d in b)if(x(b,d)&&c(b[d],d))break}function Y(b,c,d,g){c&&D(c,function(c,e){if(d||!x(b,e))!g||"object"!==
-typeof c||!c||L(c)||K(c)||c instanceof RegExp?b[e]=c:(b[e]||(b[e]={}),Y(b[e],c,d,g))});return b}function z(b,c){return function(){return c.apply(b,arguments)}}function ha(b){throw b;}function ia(b){if(!b)return b;var c=ga;y(b.split("."),function(b){c=c[b]});return c}function F(b,c,d,g){c=Error(c+"\nhttp://requirejs.org/docs/errors.html#"+b);c.requireType=b;c.requireModules=g;d&&(c.originalError=d);return c}function ma(b){function c(a,n,b){var h,k,f,c,d,l,g,r;n=n&&n.split("/");var q=p.map,m=q&&q["*"];
-if(a){a=a.split("/");k=a.length-1;p.nodeIdCompat&&U.test(a[k])&&(a[k]=a[k].replace(U,""));"."===a[0].charAt(0)&&n&&(k=n.slice(0,n.length-1),a=k.concat(a));k=a;for(f=0;f<k.length;f++)c=k[f],"."===c?(k.splice(f,1),--f):".."===c&&0!==f&&(1!==f||".."!==k[2])&&".."!==k[f-1]&&0<f&&(k.splice(f-1,2),f-=2);a=a.join("/")}if(b&&q&&(n||m)){k=a.split("/");f=k.length;a:for(;0<f;--f){d=k.slice(0,f).join("/");if(n)for(c=n.length;0<c;--c)if(b=e(q,n.slice(0,c).join("/")))if(b=e(b,d)){h=b;l=f;break a}!g&&m&&e(m,d)&&
-(g=e(m,d),r=f)}!h&&g&&(h=g,l=r);h&&(k.splice(0,l,h),a=k.join("/"))}return(h=e(p.pkgs,a))?h:a}function d(a){E&&y(document.getElementsByTagName("script"),function(n){if(n.getAttribute("data-requiremodule")===a&&n.getAttribute("data-requirecontext")===l.contextName)return n.parentNode.removeChild(n),!0})}function m(a){var n=e(p.paths,a);if(n&&L(n)&&1<n.length)return n.shift(),l.require.undef(a),l.makeRequire(null,{skipMap:!0})([a]),!0}function r(a){var n,b=a?a.indexOf("!"):-1;-1<b&&(n=a.substring(0,
-b),a=a.substring(b+1,a.length));return[n,a]}function q(a,n,b,h){var k,f,d=null,g=n?n.name:null,p=a,q=!0,m="";a||(q=!1,a="_@r"+(Q+=1));a=r(a);d=a[0];a=a[1];d&&(d=c(d,g,h),f=e(v,d));a&&(d?m=f&&f.normalize?f.normalize(a,function(a){return c(a,g,h)}):-1===a.indexOf("!")?c(a,g,h):a:(m=c(a,g,h),a=r(m),d=a[0],m=a[1],b=!0,k=l.nameToUrl(m)));b=!d||f||b?"":"_unnormalized"+(T+=1);return{prefix:d,name:m,parentMap:n,unnormalized:!!b,url:k,originalName:p,isDefine:q,id:(d?d+"!"+m:m)+b}}function u(a){var b=a.id,
-c=e(t,b);c||(c=t[b]=new l.Module(a));return c}function w(a,b,c){var h=a.id,k=e(t,h);if(!x(v,h)||k&&!k.defineEmitComplete)if(k=u(a),k.error&&"error"===b)c(k.error);else k.on(b,c);else"defined"===b&&c(v[h])}function A(a,b){var c=a.requireModules,h=!1;if(b)b(a);else if(y(c,function(b){if(b=e(t,b))b.error=a,b.events.error&&(h=!0,b.emit("error",a))}),!h)g.onError(a)}function B(){V.length&&(y(V,function(a){var b=a[0];"string"===typeof b&&(l.defQueueMap[b]=!0);G.push(a)}),V=[])}function C(a){delete t[a];
-delete Z[a]}function J(a,b,c){var h=a.map.id;a.error?a.emit("error",a.error):(b[h]=!0,y(a.depMaps,function(h,f){var d=h.id,g=e(t,d);!g||a.depMatched[f]||c[d]||(e(b,d)?(a.defineDep(f,v[d]),a.check()):J(g,b,c))}),c[h]=!0)}function H(){var a,b,c=(a=1E3*p.waitSeconds)&&l.startTime+a<(new Date).getTime(),h=[],k=[],f=!1,g=!0;if(!aa){aa=!0;D(Z,function(a){var l=a.map,e=l.id;if(a.enabled&&(l.isDefine||k.push(a),!a.error))if(!a.inited&&c)m(e)?f=b=!0:(h.push(e),d(e));else if(!a.inited&&a.fetched&&l.isDefine&&
-(f=!0,!l.prefix))return g=!1});if(c&&h.length)return a=F("timeout","Load timeout for modules: "+h,null,h),a.contextName=l.contextName,A(a);g&&y(k,function(a){J(a,{},{})});c&&!b||!f||!E&&!ja||ba||(ba=setTimeout(function(){ba=0;H()},50));aa=!1}}function I(a){x(v,a[0])||u(q(a[0],null,!0)).init(a[1],a[2])}function O(a){a=a.currentTarget||a.srcElement;var b=l.onScriptLoad;a.detachEvent&&!ca?a.detachEvent("onreadystatechange",b):a.removeEventListener("load",b,!1);b=l.onScriptError;a.detachEvent&&!ca||a.removeEventListener("error",
-b,!1);return{node:a,id:a&&a.getAttribute("data-requiremodule")}}function P(){var a;for(B();G.length;){a=G.shift();if(null===a[0])return A(F("mismatch","Mismatched anonymous define() module: "+a[a.length-1]));I(a)}l.defQueueMap={}}var aa,da,l,R,ba,p={waitSeconds:7,baseUrl:"./",paths:{},bundles:{},pkgs:{},shim:{},config:{}},t={},Z={},ea={},G=[],v={},W={},fa={},Q=1,T=1;R={require:function(a){return a.require?a.require:a.require=l.makeRequire(a.map)},exports:function(a){a.usingExports=!0;if(a.map.isDefine)return a.exports?
-v[a.map.id]=a.exports:a.exports=v[a.map.id]={}},module:function(a){return a.module?a.module:a.module={id:a.map.id,uri:a.map.url,config:function(){return e(p.config,a.map.id)||{}},exports:a.exports||(a.exports={})}}};da=function(a){this.events=e(ea,a.id)||{};this.map=a;this.shim=e(p.shim,a.id);this.depExports=[];this.depMaps=[];this.depMatched=[];this.pluginMaps={};this.depCount=0};da.prototype={init:function(a,b,c,h){h=h||{};if(!this.inited){this.factory=b;if(c)this.on("error",c);else this.events.error&&
-(c=z(this,function(a){this.emit("error",a)}));this.depMaps=a&&a.slice(0);this.errback=c;this.inited=!0;this.ignore=h.ignore;h.enabled||this.enabled?this.enable():this.check()}},defineDep:function(a,b){this.depMatched[a]||(this.depMatched[a]=!0,--this.depCount,this.depExports[a]=b)},fetch:function(){if(!this.fetched){this.fetched=!0;l.startTime=(new Date).getTime();var a=this.map;if(this.shim)l.makeRequire(this.map,{enableBuildCallback:!0})(this.shim.deps||[],z(this,function(){return a.prefix?this.callPlugin():
-this.load()}));else return a.prefix?this.callPlugin():this.load()}},load:function(){var a=this.map.url;W[a]||(W[a]=!0,l.load(this.map.id,a))},check:function(){if(this.enabled&&!this.enabling){var a,b,c=this.map.id;b=this.depExports;var h=this.exports,k=this.factory;if(!this.inited)x(l.defQueueMap,c)||this.fetch();else if(this.error)this.emit("error",this.error);else if(!this.defining){this.defining=!0;if(1>this.depCount&&!this.defined){if(K(k)){if(this.events.error&&this.map.isDefine||g.onError!==
-ha)try{h=l.execCb(c,k,b,h)}catch(d){a=d}else h=l.execCb(c,k,b,h);this.map.isDefine&&void 0===h&&((b=this.module)?h=b.exports:this.usingExports&&(h=this.exports));if(a)return a.requireMap=this.map,a.requireModules=this.map.isDefine?[this.map.id]:null,a.requireType=this.map.isDefine?"define":"require",A(this.error=a)}else h=k;this.exports=h;if(this.map.isDefine&&!this.ignore&&(v[c]=h,g.onResourceLoad)){var f=[];y(this.depMaps,function(a){f.push(a.normalizedMap||a)});g.onResourceLoad(l,this.map,f)}C(c);
-this.defined=!0}this.defining=!1;this.defined&&!this.defineEmitted&&(this.defineEmitted=!0,this.emit("defined",this.exports),this.defineEmitComplete=!0)}}},callPlugin:function(){var a=this.map,b=a.id,d=q(a.prefix);this.depMaps.push(d);w(d,"defined",z(this,function(h){var k,f,d=e(fa,this.map.id),M=this.map.name,r=this.map.parentMap?this.map.parentMap.name:null,m=l.makeRequire(a.parentMap,{enableBuildCallback:!0});if(this.map.unnormalized){if(h.normalize&&(M=h.normalize(M,function(a){return c(a,r,!0)})||
-""),f=q(a.prefix+"!"+M,this.map.parentMap),w(f,"defined",z(this,function(a){this.map.normalizedMap=f;this.init([],function(){return a},null,{enabled:!0,ignore:!0})})),h=e(t,f.id)){this.depMaps.push(f);if(this.events.error)h.on("error",z(this,function(a){this.emit("error",a)}));h.enable()}}else d?(this.map.url=l.nameToUrl(d),this.load()):(k=z(this,function(a){this.init([],function(){return a},null,{enabled:!0})}),k.error=z(this,function(a){this.inited=!0;this.error=a;a.requireModules=[b];D(t,function(a){0===
-a.map.id.indexOf(b+"_unnormalized")&&C(a.map.id)});A(a)}),k.fromText=z(this,function(h,c){var d=a.name,f=q(d),M=S;c&&(h=c);M&&(S=!1);u(f);x(p.config,b)&&(p.config[d]=p.config[b]);try{g.exec(h)}catch(e){return A(F("fromtexteval","fromText eval for "+b+" failed: "+e,e,[b]))}M&&(S=!0);this.depMaps.push(f);l.completeLoad(d);m([d],k)}),h.load(a.name,m,k,p))}));l.enable(d,this);this.pluginMaps[d.id]=d},enable:function(){Z[this.map.id]=this;this.enabling=this.enabled=!0;y(this.depMaps,z(this,function(a,
-b){var c,h;if("string"===typeof a){a=q(a,this.map.isDefine?this.map:this.map.parentMap,!1,!this.skipMap);this.depMaps[b]=a;if(c=e(R,a.id)){this.depExports[b]=c(this);return}this.depCount+=1;w(a,"defined",z(this,function(a){this.undefed||(this.defineDep(b,a),this.check())}));this.errback?w(a,"error",z(this,this.errback)):this.events.error&&w(a,"error",z(this,function(a){this.emit("error",a)}))}c=a.id;h=t[c];x(R,c)||!h||h.enabled||l.enable(a,this)}));D(this.pluginMaps,z(this,function(a){var b=e(t,a.id);
-b&&!b.enabled&&l.enable(a,this)}));this.enabling=!1;this.check()},on:function(a,b){var c=this.events[a];c||(c=this.events[a]=[]);c.push(b)},emit:function(a,b){y(this.events[a],function(a){a(b)});"error"===a&&delete this.events[a]}};l={config:p,contextName:b,registry:t,defined:v,urlFetched:W,defQueue:G,defQueueMap:{},Module:da,makeModuleMap:q,nextTick:g.nextTick,onError:A,configure:function(a){a.baseUrl&&"/"!==a.baseUrl.charAt(a.baseUrl.length-1)&&(a.baseUrl+="/");if("string"===typeof a.urlArgs){var b=
-a.urlArgs;a.urlArgs=function(a,c){return(-1===c.indexOf("?")?"?":"&")+b}}var c=p.shim,h={paths:!0,bundles:!0,config:!0,map:!0};D(a,function(a,b){h[b]?(p[b]||(p[b]={}),Y(p[b],a,!0,!0)):p[b]=a});a.bundles&&D(a.bundles,function(a,b){y(a,function(a){a!==b&&(fa[a]=b)})});a.shim&&(D(a.shim,function(a,b){L(a)&&(a={deps:a});!a.exports&&!a.init||a.exportsFn||(a.exportsFn=l.makeShimExports(a));c[b]=a}),p.shim=c);a.packages&&y(a.packages,function(a){var b;a="string"===typeof a?{name:a}:a;b=a.name;a.location&&
-(p.paths[b]=a.location);p.pkgs[b]=a.name+"/"+(a.main||"main").replace(na,"").replace(U,"")});D(t,function(a,b){a.inited||a.map.unnormalized||(a.map=q(b,null,!0))});(a.deps||a.callback)&&l.require(a.deps||[],a.callback)},makeShimExports:function(a){return function(){var b;a.init&&(b=a.init.apply(ga,arguments));return b||a.exports&&ia(a.exports)}},makeRequire:function(a,n){function m(c,d,f){var e,r;n.enableBuildCallback&&d&&K(d)&&(d.__requireJsBuild=!0);if("string"===typeof c){if(K(d))return A(F("requireargs",
-"Invalid require call"),f);if(a&&x(R,c))return R[c](t[a.id]);if(g.get)return g.get(l,c,a,m);e=q(c,a,!1,!0);e=e.id;return x(v,e)?v[e]:A(F("notloaded",'Module name "'+e+'" has not been loaded yet for context: '+b+(a?"":". Use require([])")))}P();l.nextTick(function(){P();r=u(q(null,a));r.skipMap=n.skipMap;r.init(c,d,f,{enabled:!0});H()});return m}n=n||{};Y(m,{isBrowser:E,toUrl:function(b){var d,f=b.lastIndexOf("."),g=b.split("/")[0];-1!==f&&("."!==g&&".."!==g||1<f)&&(d=b.substring(f,b.length),b=b.substring(0,
-f));return l.nameToUrl(c(b,a&&a.id,!0),d,!0)},defined:function(b){return x(v,q(b,a,!1,!0).id)},specified:function(b){b=q(b,a,!1,!0).id;return x(v,b)||x(t,b)}});a||(m.undef=function(b){B();var c=q(b,a,!0),f=e(t,b);f.undefed=!0;d(b);delete v[b];delete W[c.url];delete ea[b];X(G,function(a,c){a[0]===b&&G.splice(c,1)});delete l.defQueueMap[b];f&&(f.events.defined&&(ea[b]=f.events),C(b))});return m},enable:function(a){e(t,a.id)&&u(a).enable()},completeLoad:function(a){var b,c,d=e(p.shim,a)||{},g=d.exports;
-for(B();G.length;){c=G.shift();if(null===c[0]){c[0]=a;if(b)break;b=!0}else c[0]===a&&(b=!0);I(c)}l.defQueueMap={};c=e(t,a);if(!b&&!x(v,a)&&c&&!c.inited)if(!p.enforceDefine||g&&ia(g))I([a,d.deps||[],d.exportsFn]);else return m(a)?void 0:A(F("nodefine","No define call for "+a,null,[a]));H()},nameToUrl:function(a,b,c){var d,k,f,m;(d=e(p.pkgs,a))&&(a=d);if(d=e(fa,a))return l.nameToUrl(d,b,c);if(g.jsExtRegExp.test(a))d=a+(b||"");else{d=p.paths;k=a.split("/");for(f=k.length;0<f;--f)if(m=k.slice(0,f).join("/"),
-m=e(d,m)){L(m)&&(m=m[0]);k.splice(0,f,m);break}d=k.join("/");d+=b||(/^data\:|^blob\:|\?/.test(d)||c?"":".js");d=("/"===d.charAt(0)||d.match(/^[\w\+\.\-]+:/)?"":p.baseUrl)+d}return p.urlArgs&&!/^blob\:/.test(d)?d+p.urlArgs(a,d):d},load:function(a,b){g.load(l,a,b)},execCb:function(a,b,c,d){return b.apply(d,c)},onScriptLoad:function(a){if("load"===a.type||oa.test((a.currentTarget||a.srcElement).readyState))N=null,a=O(a),l.completeLoad(a.id)},onScriptError:function(a){var b=O(a);if(!m(b.id)){var c=[];
-D(t,function(a,d){0!==d.indexOf("_@r")&&y(a.depMaps,function(a){if(a.id===b.id)return c.push(d),!0})});return A(F("scripterror",'Script error for "'+b.id+(c.length?'", needed by: '+c.join(", "):'"'),a,[b.id]))}}};l.require=l.makeRequire();return l}function pa(){if(N&&"interactive"===N.readyState)return N;X(document.getElementsByTagName("script"),function(b){if("interactive"===b.readyState)return N=b});return N}var g,B,C,H,O,I,N,P,u,T,qa=/(\/\*([\s\S]*?)\*\/|([^:]|^)\/\/(.*)$)/mg,ra=/[^.]\s*require\s*\(\s*["']([^'"\s]+)["']\s*\)/g,
-U=/\.js$/,na=/^\.\//;B=Object.prototype;var Q=B.toString,la=B.hasOwnProperty,E=!("undefined"===typeof window||"undefined"===typeof navigator||!window.document),ja=!E&&"undefined"!==typeof importScripts,oa=E&&"PLAYSTATION 3"===navigator.platform?/^complete$/:/^(complete|loaded)$/,ca="undefined"!==typeof opera&&"[object Opera]"===opera.toString(),J={},w={},V=[],S=!1;if("undefined"===typeof define){if("undefined"!==typeof requirejs){if(K(requirejs))return;w=requirejs;requirejs=void 0}"undefined"===typeof require||
-K(require)||(w=require,require=void 0);g=requirejs=function(b,c,d,m){var r,q="_";L(b)||"string"===typeof b||(r=b,L(c)?(b=c,c=d,d=m):b=[]);r&&r.context&&(q=r.context);(m=e(J,q))||(m=J[q]=g.s.newContext(q));r&&m.configure(r);return m.require(b,c,d)};g.config=function(b){return g(b)};g.nextTick="undefined"!==typeof setTimeout?function(b){setTimeout(b,4)}:function(b){b()};require||(require=g);g.version="2.2.0";g.jsExtRegExp=/^\/|:|\?|\.js$/;g.isBrowser=E;B=g.s={contexts:J,newContext:ma};g({});y(["toUrl",
-"undef","defined","specified"],function(b){g[b]=function(){var c=J._;return c.require[b].apply(c,arguments)}});E&&(C=B.head=document.getElementsByTagName("head")[0],H=document.getElementsByTagName("base")[0])&&(C=B.head=H.parentNode);g.onError=ha;g.createNode=function(b,c,d){c=b.xhtml?document.createElementNS("http://www.w3.org/1999/xhtml","html:script"):document.createElement("script");c.type=b.scriptType||"text/javascript";c.charset="utf-8";c.async=!0;return c};g.load=function(b,c,d){var m=b&&b.config||
-{},e;if(E){e=g.createNode(m,c,d);e.setAttribute("data-requirecontext",b.contextName);e.setAttribute("data-requiremodule",c);!e.attachEvent||e.attachEvent.toString&&0>e.attachEvent.toString().indexOf("[native code")||ca?(e.addEventListener("load",b.onScriptLoad,!1),e.addEventListener("error",b.onScriptError,!1)):(S=!0,e.attachEvent("onreadystatechange",b.onScriptLoad));e.src=d;if(m.onNodeCreated)m.onNodeCreated(e,m,c,d);P=e;H?C.insertBefore(e,H):C.appendChild(e);P=null;return e}if(ja)try{setTimeout(function(){},
-0),importScripts(d),b.completeLoad(c)}catch(q){b.onError(F("importscripts","importScripts failed for "+c+" at "+d,q,[c]))}};E&&!w.skipDataMain&&X(document.getElementsByTagName("script"),function(b){C||(C=b.parentNode);if(O=b.getAttribute("data-main"))return u=O,w.baseUrl||-1!==u.indexOf("!")||(I=u.split("/"),u=I.pop(),T=I.length?I.join("/")+"/":"./",w.baseUrl=T),u=u.replace(U,""),g.jsExtRegExp.test(u)&&(u=O),w.deps=w.deps?w.deps.concat(u):[u],!0});define=function(b,c,d){var e,g;"string"!==typeof b&&
-(d=c,c=b,b=null);L(c)||(d=c,c=null);!c&&K(d)&&(c=[],d.length&&(d.toString().replace(qa,ka).replace(ra,function(b,d){c.push(d)}),c=(1===d.length?["require"]:["require","exports","module"]).concat(c)));S&&(e=P||pa())&&(b||(b=e.getAttribute("data-requiremodule")),g=J[e.getAttribute("data-requirecontext")]);g?(g.defQueue.push([b,c,d]),g.defQueueMap[b]=!0):V.push([b,c,d])};define.amd={jQuery:!0};g.exec=function(b){return eval(b)};g(w)}})(this);
-</script>
-  <script>
-    requirejs.config({
-        baseUrl: 'https://www.fairfaxstatic.com.au/resources/fmjs/1.92.1-11',
-        paths: {
-            'bc': '//players.brightcove.net/3910869709001/r1iMXzgF_default/index.min',
-            'chart': 'fmjs/lib/chart/Chart-1.1.1',
-            'ckegmapembed': 'fmjs/lib/ckegmapembed/cke-gmaps-end',
-            'enquire': 'fmjs/lib/enquire/enquire-2.1.2',
-            'excanvas': 'fmjs/lib/excanvas/excanvas',
-            'facebook.sdk': '//connect.facebook.net/en_US/sdk',
-            'google-maps-loader': 'fmjs/lib/google-maps-loader/google-maps-loader',
-            'idangerous-swiper': 'fmjs/lib/dangercarousel/idangerous.swiper-2.7.0',
-            'idangerous-swiper.progress': 'fmjs/lib/dangercarousel/swiper-progress/idangerous.swiper.progress',
-            'iframeresizer': 'fmjs/lib/iframeresizer/iframeResizer',
-            'iframeresizer.contentWindow': 'fmjs/lib/iframeresizer/iframeResizer.contentWindow',
-            'jquery.accessibleMegaMenu': 'fmjs/lib/accessibleMegaDropDown/jquery-accessibleMegaMenu',
-            'jquery.blockui': 'fmjs/lib/blockui/jquery.blockui-2.70.0',
-            'jquery': 'jquery/jquery-1.12.3.min',
-            'jquery.cookie': 'fmjs/lib/cookie/jquery.cookie-1.4.1',
-            'jquery.hoverintent': 'fmjs/lib/hoverintent/jquery.hoverintent-1.8.0',
-            'jquery.jstockticker': 'fmjs/lib/jstockticker/jquery.jstockticker-1.1.1',
-            'jquery.knob': 'fmjs/lib/knob/jquery.knob',
-            'jquery.popupoverlay': 'fmjs/lib/popupoverlay/jquery.popupoverlay-1.7.4',
-            'jquery.textfit': 'fmjs/lib/textfit/textFit-1.0',
-            'jquery.throttledebounce': 'fmjs/lib/throttledebounce/jquery.ba-throttle-debounce',
-            'jquery.validate': 'fmjs/lib/validate/jquery.validate-1.13.1',
-            'jquery.validate.unobtrusive': 'fmjs/lib/validate-unobtrusive/jquery.validate.unobtrusive',
-            'jquery.viewport': 'fmjs/lib/viewport/jquery.viewport',
-            'jquery-ui': 'jquery-ui/jquery-ui-1.11.4.min',
-            'moment': 'fmjs/lib/moment/moment-2.10.3'
-        },
-        shim: {
-            'idangerous-swiper.progress': ['idangerous-swiper'],
-            'iframeresizer.contentWindow': ['iframeresizer'],
-            'jquery.accessibleMegaMenu': ['jquery'],
-            'jquery.blockui': ['jquery'],
-            'jquery.cookie': ['jquery'],
-            'jquery.hoverintent': ['jquery'],
-            'jquery.jstockticker': ['jquery'],
-            'jquery.knob': ['jquery'],
-            'jquery.popupoverlay': ['jquery'],
-            'jquery.textfit': ['jquery'],
-            'jquery.throttledebounce': ['jquery'],
-            'jquery.validate': ['jquery'],
-            'jquery.viewport': ['jquery'],
-            'facebook.sdk' : {
-                exports: 'FB'
-            }
-        },
-        waitSeconds: 60
-    });
-</script>
-  <script>
-    window._loadFMJSDRJS = function () {
-        var _fmjsdrjs = window._fmjsdrjs || [];
-        var _fmjsuniquedrjs = [];
-        if (_fmjsdrjs.length > 0) {
-            $.each(_fmjsdrjs, function (i, el) {
-                if ($.inArray(el, _fmjsuniquedrjs) == -1) {
-                    _fmjsuniquedrjs.push('requirejs/mastheads/' + el);
-                }
-            });
-            window._fmjsdrjs = [];
-            require(_fmjsuniquedrjs);
-        }
-    };
-</script>
-  <script>
-    require(['requirejs/mastheads/desktop/article'], function () {
-        
-var _fmjscb = window._fmjscb || [];
-if (_fmjscb.constructor === Array) {
-    for (var i = 0; i < _fmjscb.length; i++) {
-        if (_fmjscb[i].constructor === Function) {
-            _fmjscb[i]();
-        }
-    }
-}
-window._loadFMJSDRJS();
-
-(function () {
-
-    var _fmjsds = window._fmjsds || [];
-    var _fmjsuniqueds = [];
-    var index = 0;
-
-    function filterScripts() {
-        $.each(_fmjsds, function(i, el) {
-            if($.inArray(el, _fmjsuniqueds) == -1) {
-                _fmjsuniqueds.push(el);
-            }
-        });
-    }
-
-    function loadScript() {
-        if (index < _fmjsuniqueds.length) {
-            $.getScript(_fmjsuniqueds[index], function () {
-                index++;
-                loadScript();
-            });
-        }
-    }
-
-    if(_fmjsds.length > 0) {
-        filterScripts();
-        loadScript();
-    }
-})();
-
-
-    });
-</script> 
-  <script type="text/javascript">_satellite.pageBottom();</script> 
+  <link rel="dns-prefetch" href="//s0.wp.com"> 
+  <link rel="dns-prefetch" href="//fonts.googleapis.com"> 
+  <link rel="dns-prefetch" href="//s.w.org"> 
+  <link rel="alternate" type="application/rss+xml" title="AstroWright » Feed" href="http://sites.psu.edu/astrowright/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="AstroWright » Comments Feed" href="http://sites.psu.edu/astrowright/comments/feed/"> 
+  <link rel="alternate" type="application/rss+xml" title="AstroWright » What We’ve Learned About Boyajian’s Star I: Background Comments Feed" href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star/feed/"> 
   <script type="text/javascript">
-    (function(d){
-        var f = d.getElementsByTagName('script')[0], p = d.createElement('script');
-        p.type = 'text/javascript';
-        p.async = true;
-        p.src = '//assets.pinterest.com/js/pinit.js';
-        f.parentNode.insertBefore(p, f);
-    }(document));
-</script>
-  <script src="https://platform.instagram.com/en_US/embeds.js" async defer></script>
-  <div class="adWrapper "> 
-   <div id="adspot-1x11-pos1" style="display:none;"> 
-    <script>
-                            titan.requestAd.push("adspot-1x11-pos1");
-                        </script> 
-   </div> 
-  </div> 
-  <div id="adspot-interstitial">
-   <script>titan.requestAd.push("adspot-interstitial");</script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/sites.psu.edu\/astrowright\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.5"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script> 
+  <style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style> 
+  <link rel="stylesheet" id="dashicons-css" href="http://sites.psu.edu/astrowright/wp-includes/css/dashicons.min.css?ver=4.8.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="admin-bar-css" href="http://sites.psu.edu/astrowright/wp-includes/css/admin-bar.min.css?ver=4.8.5" type="text/css" media="all"> 
+  <link rel="stylesheet" id="wdcab-admin-bar-css" href="http://sites.psu.edu/astrowright/wp-content/mu-plugins/campus-files/plugins-mods/ultimate-branding/assets/admin-bar-public.css?ver=20150323" type="text/css" media="all"> 
+  <link rel="stylesheet" id="lean-captcha-css-css" href="http://sites.psu.edu/astrowright/wp-content/mu-plugins/lean-captcha/css/lean-captcha.css?ver=1" type="text/css" media="all"> 
+  <link rel="stylesheet" id="twentytwelve-fonts-css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext" type="text/css" media="all"> 
+  <link rel="stylesheet" id="twentytwelve-style-css" href="http://sites.psu.edu/astrowright/wp-content/themes/twentytwelve/style.css?ver=4.8.5" type="text/css" media="all"> 
+  <!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://sites.psu.edu/astrowright/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]--> 
+  <link rel="stylesheet" id="subscribe-by-email-widget-css-css" href="http://sites.psu.edu/astrowright/wp-content/mu-plugins/subscribe-by-email/assets/css/widget.css?ver=20131002" type="text/css" media="all"> 
+  <link rel="stylesheet" id="jetpack_css-css" href="http://sites.psu.edu/astrowright/wp-content/plugins/jetpack/css/jetpack.css?ver=5.1" type="text/css" media="all"> 
+  <script type="text/javascript" src="http://sites.psu.edu/astrowright/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script> 
+  <script type="text/javascript" src="http://sites.psu.edu/astrowright/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script> 
+  <link rel="https://api.w.org/" href="http://sites.psu.edu/astrowright/wp-json/"> 
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://sites.psu.edu/astrowright/xmlrpc.php?rsd"> 
+  <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sites.psu.edu/astrowright/wp-includes/wlwmanifest.xml"> 
+  <link rel="prev" title="1I/’Oumuamua updates!" href="http://sites.psu.edu/astrowright/2017/12/12/1ioumuamua-updates/"> 
+  <link rel="next" title="What We’ve Learned About Boyajian’s Star II: Data and Interpretation" href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star-ii/"> 
+  <meta name="generator" content="Sites At Penn State"> 
+  <link rel="canonical" href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star/"> 
+  <link rel="shortlink" href="http://sites.psu.edu/astrowright/?p=3499"> 
+  <link rel="alternate" type="application/json+oembed" href="http://sites.psu.edu/astrowright/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsites.psu.edu%2Fastrowright%2F2017%2F12%2F26%2Fwhat-weve-learned-about-boyajians-star%2F"> 
+  <link rel="alternate" type="text/xml+oembed" href="http://sites.psu.edu/astrowright/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsites.psu.edu%2Fastrowright%2F2017%2F12%2F26%2Fwhat-weve-learned-about-boyajians-star%2F&amp;format=xml"> 
+  <script type="text/javascript">
+				var _gaq = _gaq || [];
+
+				
+									_gaq.push(['b._setAccount', 'UA-35165292-1']);
+                    					_gaq.push(['b._trackPageview']);
+				
+				(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                				    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+			</script> 
+  <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','gaplusu');
+
+                                                            gaplusu('create', 'UA-2861904-31', 'auto', {'allowLinker': true});
+                                        gaplusu('send', 'pageview');
+
+                                    
+                            </script> 
+  <style id="simpler-css-style" type="text/css">
+</style>
+  <!-- end of custom css --> 
+  <link rel="shortcut icon" href="https://cpb-us-east-1-juc1ugur1qwqqqo4.stackpathdns.com/sites.psu.edu/dist/favicon/favicon.png"> 
+  <link rel="dns-prefetch" href="//v0.wordpress.com"> 
+  <style type="text/css">
+        #wp-admin-bar-msreader-follow {width: 100px;}
+        #wp-admin-bar-msreader-follow .hover-text {display:none;}
+        #wp-admin-bar-msreader-follow:hover .hover-text {display:inline;}
+        #wp-admin-bar-msreader-follow:hover .current-text {display:none;}
+        #wp-admin-bar-msreader-follow .ab-item .ab-icon:before {content: "\f487"; top: 2px;}
+        #wp-admin-bar-msreader-follow.following .ab-item .ab-icon:before {color: #d54e21;}
+        #wp-admin-bar-msreader-follow.following:hover .ab-item .ab-icon:before {color: #999;}
+        #wp-admin-bar-msreader-follow.following:hover .ab-item {color: #999 !important;}</style>
+  <style type="text/css">
+/* <![CDATA[ */
+img.latex { vertical-align: middle; border: none; }
+/* ]]> */
+</style> 
+  <style type="text/css" media="print">#wpadminbar { display:none; }</style> 
+  <style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style> 
+ </head> 
+ <body class="post-template-default single single-post postid-3499 single-format-standard admin-bar no-customize-support custom-font-enabled single-author"> 
+  <div id="page" class="hfeed site"> 
+   <header id="masthead" class="site-header" role="banner"> 
+    <hgroup> 
+     <h1 class="site-title"><a href="http://sites.psu.edu/astrowright/" title="AstroWright" rel="home">AstroWright</a></h1> 
+     <h2 class="site-description">Astronomy and meta-Astronomy by Jason Wright</h2> 
+    </hgroup> 
+    <nav id="site-navigation" class="main-navigation" role="navigation"> 
+     <button class="menu-toggle">Menu</button> 
+     <a class="assistive-text" href="#content" title="Skip to content">Skip to content</a> 
+     <div class="menu-main-container">
+      <ul id="menu-main" class="nav-menu">
+       <li id="menu-item-1180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1180"><a href="http://sites.psu.edu/astrowright/jason-t-wright-assistant-professor-of-astronomy-and-astrophysics/">Jason T Wright</a></li> 
+       <li id="menu-item-1599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1599"><a href="http://sites.psu.edu/astrowright/">Blog</a></li> 
+       <li id="menu-item-1598" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1598"><a href="http://sites.psu.edu/astrowright/popular-posts/">Popular posts</a></li> 
+       <li id="menu-item-1179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1179"><a href="http://sites.psu.edu/astrowright/research/">Research</a></li> 
+       <li id="menu-item-1178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1178"><a href="http://sites.psu.edu/astrowright/research-group/">Research Group</a></li> 
+       <li id="menu-item-1177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1177"><a href="http://sites.psu.edu/astrowright/courses/">Courses</a></li> 
+       <li id="menu-item-1176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1176"><a href="http://sites.psu.edu/astrowright/cv/">cv</a></li> 
+       <li id="menu-item-1181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1181"><a href="http://sites.psu.edu/astrowright/about/">About</a></li> 
+       <li id="menu-item-1175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1175"><a href="http://sites.psu.edu/astrowright/presentations-and-videos/">Presentations, Videos, and Popular Press</a></li> 
+       <li id="menu-item-1174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1174"><a href="http://sites.psu.edu/astrowright/press/">Press</a></li> 
+      </ul>
+     </div> 
+    </nav>
+    <!-- #site-navigation --> 
+    <a href="http://sites.psu.edu/astrowright/"><img src="http://sites.psu.edu/astrowright/wp-content/uploads/sites/9476/2014/07/cropped-Dock-for-cargo.jpg" class="header-image" width="670" height="174" alt="AstroWright"></a> 
+   </header>
+   <!-- #masthead --> 
+   <div id="main" class="wrapper"> 
+    <div id="primary" class="site-content"> 
+     <div id="content" role="main"> 
+      <article id="post-3499" class="post-3499 post type-post status-publish format-standard hentry category-uncategorized"> 
+       <header class="entry-header"> 
+        <h1 class="entry-title">What We’ve Learned About Boyajian’s Star I: Background</h1> 
+        <div class="comments-link"> 
+         <a href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star/#comments">3 Replies</a> 
+        </div>
+        <!-- .comments-link --> 
+       </header>
+       <!-- .entry-header --> 
+       <div class="entry-content"> 
+        <p style="text-align: left;">For those just catching up on Tabby’s Star, read <a href="https://www.scientificamerican.com/article/have-aliens-built-huge-structures-around-boyajian-rsquo-s-star/">Kimberly Cartier’s article in Scientific American</a>&nbsp;and my series of blog posts <a href="http://sites.psu.edu/astrowright/popular-posts/">here</a>. And don’t read or trust anything the Daily Mail writes on this (<a href="https://twitter.com/Astro_Wright/status/941122411520409600">or any other topic involving me</a>).</p> 
+        <p>The star exhibits two unique and very difficult to understand behaviors: the short-term”dips” in brightness (of up to 22%) and long-term brightness variations on years-to-centuries timescales.</p> 
+        <p>Since the&nbsp;<em>Kepler</em> mission stopped observing it, it seems to have continued it slow decline in brightness over the past few years, and that dimming <a href="https://uanews.arizona.edu/story/sorry-no-alien-megastructure-around-mysterious-star">does not seem to be due to solid objects.</a>&nbsp; But we still don’t have any information about what’s responsible for the dips because we hadn’t been able to see one happening in real time.</p> 
+        <p>But now, thanks to the generous support of <a href="https://www.kickstarter.com/projects/608159144/the-most-mysterious-star-in-the-galaxy">our Kickstarter backers</a>, Tabby’s team has been able to pay for year-long monitoring of the star with the Las Cumbres Observatory global telescope network to “catch it in the act” of dipping again so we can study what’s going on.</p> 
+        <p>And in May, it finally happened (when by amazing coincidence I just happened to be at the Breakthrough Listen Lab at UC Berkeley during my sabbatical):</p> 
+        <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="625" height="382" src="http://www.youtube.com/embed/eYpIGZS8nJc?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;"></iframe></span></p> 
+        <p>Since then, Tabby’s team has been able to collect a huge amount of data not only from our own organized follow-up efforts, but thanks to he amazing generosity and interest of astronomers around the world who volunteered to observe the star during the dips.&nbsp; We&nbsp;sincerely appreciate their contributions, and they are all authors of our latest paper.</p> 
+        <p>You can follow every twist and turn of this summer’s activity on the Kickstarter project blog <a href="http://www.wherestheflux.com/">here</a>&nbsp;and follow along with the fans of the project on the Reddit <a href="https://www.reddit.com/r/KIC8462852/">page.</a>&nbsp; Here’s what’s been going on all summer and fall:</p> 
+        <p><a href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star/09f35d_63bbe8aab5df408c958460ad35be00dc_mv2-1h640ex/" rel="attachment wp-att-3501"><img class="aligncenter size-full wp-image-3501" src="https://sites.psu.edu/astrowright/files/2017/12/09f35d_63bbe8aab5df408c958460ad35be00dc_mv2-1h640ex.png" alt="" width="1200" height="733" srcset="http://sites.psu.edu/astrowright/files/2017/12/09f35d_63bbe8aab5df408c958460ad35be00dc_mv2-1h640ex.png 1200w, http://sites.psu.edu/astrowright/files/2017/12/09f35d_63bbe8aab5df408c958460ad35be00dc_mv2-1h640ex-150x92.png 150w, http://sites.psu.edu/astrowright/files/2017/12/09f35d_63bbe8aab5df408c958460ad35be00dc_mv2-1h640ex-300x183.png 300w, http://sites.psu.edu/astrowright/files/2017/12/09f35d_63bbe8aab5df408c958460ad35be00dc_mv2-1h640ex-768x469.png 768w, http://sites.psu.edu/astrowright/files/2017/12/09f35d_63bbe8aab5df408c958460ad35be00dc_mv2-1h640ex-1024x625.png 1024w, http://sites.psu.edu/astrowright/files/2017/12/09f35d_63bbe8aab5df408c958460ad35be00dc_mv2-1h640ex-624x381.png 624w" sizes="(max-width: 1200px) 100vw, 1200px"></a></p> 
+        <p>In this plot, the different colors represent different LCO sites where data were taken.&nbsp; The brightness of the star is on the y-axis, and the date (measured in days with an arbitrary offset astronomers like to use ) is on the x-axis.</p> 
+        <p>One of the rewards for our Kickstarter backers was to name the various dips (they need names!).&nbsp; After the first (“Elsie”, a nod to Las Cumbres Observatory (“LC”) who was one of our most generous backers), the star continued to oblige with a series of dips.&nbsp;The next dip, “Celeste,” was named as a near reversal of “Elsie” when it looked like the two events might be exhibiting time symmetry (it’s also a nod to team member Angelle Tanner’s mother, who sadly died around the time of the event). The subsequent events have started a theme of “lost cities” which it seems the backers would like to maintain going forward.</p> 
+        <p>After all of that, the star exhibited a strange&nbsp;<em>brightening</em> for a couple of months.</p> 
+        <p>To recap, we were hoping that once we finally caught a dip happening in real time we could see if the dips were the same depth at all wavelengths.&nbsp; If they were nearly the same, this would suggest that the cause was something opaque, like a disk or (whispering)&nbsp;<em>alien megastructures</em>.</p> 
+        <p>The long-term dimming doesn’t&nbsp;<em>seem</em> to be the same at all wavelengths, which suggests it’s being caused by something like ordinary astronomical dust, but that doesn’t tell us what’s causing the dips (which are what got everyone excited in the first place).</p> 
+        <p>So, what have we found!?!&nbsp; Well, our paper with a&nbsp;<em>huge </em>author list has been accepted by Astrophysical Journal Letters (thanks to a quick and conscientious referee) and we’re ready to reveal what happened in <a href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star-ii/">part II</a>.</p> 
+        <p>&nbsp;</p> 
+       </div>
+       <!-- .entry-content --> 
+       <footer class="entry-meta">
+         This entry was posted in 
+        <a href="http://sites.psu.edu/astrowright/category/uncategorized/" rel="category tag">Uncategorized</a> on 
+        <a href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star/" title="3:05 pm" rel="bookmark"><time class="entry-date" datetime="2017-12-26T15:05:10+00:00">December 26, 2017</time></a>
+        <span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://sites.psu.edu/astrowright/author/jtw13/" title="View all posts by jtw13" rel="author">jtw13</a></span></span>. 
+       </footer>
+       <!-- .entry-meta --> 
+      </article>
+      <!-- #post --> 
+      <nav class="nav-single"> 
+       <h3 class="assistive-text">Post navigation</h3> 
+       <span class="nav-previous"><a href="http://sites.psu.edu/astrowright/2017/12/12/1ioumuamua-updates/" rel="prev"><span class="meta-nav">←</span> 1I/’Oumuamua updates!</a></span> 
+       <span class="nav-next"><a href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star-ii/" rel="next">What We’ve Learned About Boyajian’s Star II: Data and Interpretation <span class="meta-nav">→</span></a></span> 
+      </nav>
+      <!-- .nav-single --> 
+      <div id="comments" class="comments-area"> 
+       <h2 class="comments-title"> 3 thoughts on “<span>What We’ve Learned About Boyajian’s Star I: Background</span>” </h2> 
+       <ol class="commentlist"> 
+        <li class="comment even thread-even depth-1" id="li-comment-190660"> 
+         <article id="comment-190660" class="comment"> 
+          <header class="comment-meta comment-author vcard"> 
+           <img alt="" src="http://www.gravatar.com/avatar/f661de45733e702d850cdf97d07025e4?s=48&amp;d=identicon&amp;r=G" class="avatar avatar-48" height="48" width="48">
+           <cite><b class="fn">Dryson</b> </cite>
+           <a href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star/#comment-190660"><time datetime="2018-01-28T19:57:06+00:00">January 28, 2018 at 7:57 pm</time></a> 
+          </header>
+          <!-- .comment-meta --> 
+          <section class="comment-content comment"> 
+           <p>…or it could be so cold that all of its gas has condensed onto grains</p> 
+           <p>How would a super cold region in space effect the flux of a star like KIC 8462852? </p> 
+           <p>What would cause a super cold region to exist in the vicinity of Tabby’s Star as well?</p> 
+           <p>Is there an Oort Cloud, such as the one theorized to be orbiting our solar system that could possibly reflect heat back into the solar system, similar to a mylar blanket reflecting 90% of the body heat of the user back to keep the user warm? </p> 
+           <p>Could the dips in the light curve of KIC 8462 be attributed to an Oort Cloud?</p> 
+           <p><a href="https://space-facts.com/wp-content/uploads/oort-cloud.png" rel="nofollow">https://space-facts.com/wp-content/uploads/oort-cloud.png</a></p> 
+          </section>
+          <!-- .comment-content --> 
+          <div class="reply"> 
+          </div>
+          <!-- .reply --> 
+         </article>
+         <!-- #comment-## --> </li>
+        <!-- #comment-## --> 
+        <li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-190645"> 
+         <article id="comment-190645" class="comment"> 
+          <header class="comment-meta comment-author vcard"> 
+           <img alt="" src="http://www.gravatar.com/avatar/a50ca52446014729773010833de86dbd?s=48&amp;d=identicon&amp;r=G" class="avatar avatar-48" height="48" width="48">
+           <cite><b class="fn">Paul Leyland</b> </cite>
+           <a href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star/#comment-190645"><time datetime="2018-01-06T13:45:45+00:00">January 6, 2018 at 1:45 pm</time></a> 
+          </header>
+          <!-- .comment-meta --> 
+          <section class="comment-content comment"> 
+           <p>A good rule of thumb, known by most Britons, is to treat *everything* written by The Daily Mail with suspicion…</p> 
+          </section>
+          <!-- .comment-content --> 
+          <div class="reply"> 
+          </div>
+          <!-- .reply --> 
+         </article>
+         <!-- #comment-## --> </li>
+        <!-- #comment-## --> 
+        <li class="comment even thread-even depth-1" id="li-comment-190643"> 
+         <article id="comment-190643" class="comment"> 
+          <header class="comment-meta comment-author vcard"> 
+           <img alt="" src="http://www.gravatar.com/avatar/5c1b527b70bdbce401373ec2e19503c0?s=48&amp;d=identicon&amp;r=G" class="avatar avatar-48" height="48" width="48">
+           <cite><b class="fn">Keith Henson</b> </cite>
+           <a href="http://sites.psu.edu/astrowright/2017/12/26/what-weve-learned-about-boyajians-star/#comment-190643"><time datetime="2018-01-04T16:08:05+00:00">January 4, 2018 at 4:08 pm</time></a> 
+          </header>
+          <!-- .comment-meta --> 
+          <section class="comment-content comment"> 
+           <p>Hi Jason</p> 
+           <p>I have a thought about the brightening. For us to see anything, we have to be close to the ecliptic. Whatever made the huge 22% dip (and other dips) has to go to the far side (from us) of its orbit eventually. </p> 
+           <p>Whatever it is, unless it is totally black, is going to reflect some of the star’s light. Given the brightening data, this might put some constraints on what is in orbit around this strange acting star.</p> 
+          </section>
+          <!-- .comment-content --> 
+          <div class="reply"> 
+          </div>
+          <!-- .reply --> 
+         </article>
+         <!-- #comment-## --> </li>
+        <!-- #comment-## --> 
+       </ol>
+       <!-- .commentlist --> 
+       <div id="respond" class="comment-respond"> 
+        <h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/astrowright/2017/12/26/what-weve-learned-about-boyajians-star/#respond" style="display:none;">Cancel reply</a></small></h3> 
+        <form action="http://sites.psu.edu/astrowright/wp-comments-post.php" method="post" id="commentform" class="comment-form"> 
+         <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>
+         <p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required></textarea></p>
+         <p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required="true" required></p> 
+         <p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required="true" required></p> 
+         <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="3499" id="comment_post_ID"> <input type="hidden" name="comment_parent" id="comment_parent" value="0"> </p>
+         <p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="89df8fe634"></p> 
+         <p style="clear: both;" class="subscribe-to-comments"> <input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"> <label for="subscribe">Notify me of followup comments via e-mail</label> </p> 
+         <p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="96"></p> 
+        </form> 
+       </div>
+       <!-- #respond --> 
+      </div>
+      <!-- #comments .comments-area --> 
+     </div>
+     <!-- #content --> 
+    </div>
+    <!-- #primary --> 
+    <div id="secondary" class="widget-area" role="complementary"> 
+     <aside id="text-4" class="widget widget_text">
+      <h3 class="widget-title">Contact</h3> 
+      <div class="textwidget">
+       <p>astrowright@gmail.com</p> 
+       <p>525 Davey Laboratory<br> Department of Astronomy &amp; Astrophysics<br> The Pennsylvania State University<br> University Park, PA 16802</p> 
+      </div> 
+     </aside>
+     <aside id="search-2" class="widget widget_search">
+      <form role="search" method="get" id="searchform" class="searchform" action="http://sites.psu.edu/astrowright/"> 
+       <div> 
+        <label class="screen-reader-text" for="s">Search for:</label> 
+        <input type="text" value="" name="s" id="s"> 
+        <input type="submit" id="searchsubmit" value="Search"> 
+       </div> 
+      </form>
+     </aside> 
+     <aside id="recent-posts-2" class="widget widget_recent_entries"> 
+      <h3 class="widget-title">Recent Posts</h3> 
+      <ul> 
+       <li> <a href="http://sites.psu.edu/astrowright/2018/01/31/miltons-cosmology-leaned-heliocentric/">Milton’s Cosmology Leaned Heliocentric</a> </li> 
+       <li> <a href="http://sites.psu.edu/astrowright/2018/01/30/maunder-minimum-analogs/">Maunder Minimum Analogs</a> </li> 
+       <li> <a href="http://sites.psu.edu/astrowright/2018/01/20/seti-is-not-about-getting-attention/">SETI is Not About Getting Attention</a> </li> 
+       <li> <a href="http://sites.psu.edu/astrowright/2018/01/16/seti-is-part-of-astrobiology/">SETI is Part of Astrobiology</a> </li> 
+       <li> <a href="http://sites.psu.edu/astrowright/2018/01/11/astrowright-group-science-at-the-231st-aas-meeting-thursday/">AstroWright Group Science at the 231st AAS Meeting: Thursday</a> </li> 
+      </ul> 
+     </aside> 
+     <aside id="archives-2" class="widget widget_archive">
+      <h3 class="widget-title">Archives</h3> 
+      <label class="screen-reader-text" for="archives-dropdown-2">Archives</label> 
+      <select id="archives-dropdown-2" name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;"> <option value="">Select Month</option> <option value="http://sites.psu.edu/astrowright/2018/01/"> January 2018 &nbsp;(7)</option> <option value="http://sites.psu.edu/astrowright/2017/12/"> December 2017 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2017/11/"> November 2017 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2017/10/"> October 2017 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2017/08/"> August 2017 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2017/07/"> July 2017 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2017/06/"> June 2017 &nbsp;(4)</option> <option value="http://sites.psu.edu/astrowright/2017/05/"> May 2017 &nbsp;(9)</option> <option value="http://sites.psu.edu/astrowright/2017/04/"> April 2017 &nbsp;(6)</option> <option value="http://sites.psu.edu/astrowright/2017/03/"> March 2017 &nbsp;(6)</option> <option value="http://sites.psu.edu/astrowright/2017/02/"> February 2017 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2017/01/"> January 2017 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2016/12/"> December 2016 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2016/10/"> October 2016 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2016/09/"> September 2016 &nbsp;(5)</option> <option value="http://sites.psu.edu/astrowright/2016/08/"> August 2016 &nbsp;(5)</option> <option value="http://sites.psu.edu/astrowright/2016/07/"> July 2016 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2016/06/"> June 2016 &nbsp;(4)</option> <option value="http://sites.psu.edu/astrowright/2016/05/"> May 2016 &nbsp;(6)</option> <option value="http://sites.psu.edu/astrowright/2016/04/"> April 2016 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2016/03/"> March 2016 &nbsp;(4)</option> <option value="http://sites.psu.edu/astrowright/2016/02/"> February 2016 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2016/01/"> January 2016 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2015/10/"> October 2015 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2015/09/"> September 2015 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2015/07/"> July 2015 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2015/06/"> June 2015 &nbsp;(4)</option> <option value="http://sites.psu.edu/astrowright/2015/05/"> May 2015 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2015/04/"> April 2015 &nbsp;(7)</option> <option value="http://sites.psu.edu/astrowright/2015/02/"> February 2015 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2015/01/"> January 2015 &nbsp;(5)</option> <option value="http://sites.psu.edu/astrowright/2014/11/"> November 2014 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2014/10/"> October 2014 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2014/09/"> September 2014 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2014/07/"> July 2014 &nbsp;(5)</option> <option value="http://sites.psu.edu/astrowright/2014/06/"> June 2014 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2014/05/"> May 2014 &nbsp;(5)</option> <option value="http://sites.psu.edu/astrowright/2014/04/"> April 2014 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2014/03/"> March 2014 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2014/02/"> February 2014 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2014/01/"> January 2014 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2013/12/"> December 2013 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2013/11/"> November 2013 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2013/10/"> October 2013 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2013/09/"> September 2013 &nbsp;(4)</option> <option value="http://sites.psu.edu/astrowright/2013/08/"> August 2013 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2013/07/"> July 2013 &nbsp;(4)</option> <option value="http://sites.psu.edu/astrowright/2013/06/"> June 2013 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2013/05/"> May 2013 &nbsp;(14)</option> <option value="http://sites.psu.edu/astrowright/2013/04/"> April 2013 &nbsp;(6)</option> <option value="http://sites.psu.edu/astrowright/2013/03/"> March 2013 &nbsp;(4)</option> <option value="http://sites.psu.edu/astrowright/2013/02/"> February 2013 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2013/01/"> January 2013 &nbsp;(5)</option> <option value="http://sites.psu.edu/astrowright/2012/12/"> December 2012 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2012/11/"> November 2012 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2012/10/"> October 2012 &nbsp;(8)</option> <option value="http://sites.psu.edu/astrowright/2012/09/"> September 2012 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2012/08/"> August 2012 &nbsp;(5)</option> <option value="http://sites.psu.edu/astrowright/2012/07/"> July 2012 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2012/06/"> June 2012 &nbsp;(6)</option> <option value="http://sites.psu.edu/astrowright/2012/05/"> May 2012 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2012/04/"> April 2012 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2012/03/"> March 2012 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2012/02/"> February 2012 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2012/01/"> January 2012 &nbsp;(1)</option> <option value="http://sites.psu.edu/astrowright/2011/12/"> December 2011 &nbsp;(2)</option> <option value="http://sites.psu.edu/astrowright/2011/11/"> November 2011 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2011/10/"> October 2011 &nbsp;(3)</option> <option value="http://sites.psu.edu/astrowright/2011/09/"> September 2011 &nbsp;(1)</option> </select> 
+     </aside>
+     <aside id="meta-2" class="widget widget_meta">
+      <h3 class="widget-title">Meta</h3> 
+      <ul> 
+       <li><a href="https://sites.psu.edu/astrowright/wp-login.php?action=shibboleth">Log in</a></li> 
+       <li><a href="http://sites.psu.edu/astrowright/feed/" title="Syndicate this site using RSS 2.0">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+       <li><a href="http://sites.psu.edu/astrowright/comments/feed/" title="The latest comments to all posts in RSS">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li> 
+       <li><a href="http://sites.psu.edu/" title="Powered by Sites at Penn State - WordPress">Sites at Penn State - WordPress</a></li> 
+      </ul> 
+     </aside>
+     <aside id="text-3" class="widget widget_text">
+      <h3 class="widget-title">Disclaimer</h3> 
+      <div class="textwidget">
+       Except where explicitly noted, the content of this site represents my personal and/or professional positions, which are are not necessarily those of my employer, Penn State University, or any other organization or entity.
+      </div> 
+     </aside> 
+    </div>
+    <!-- #secondary --> 
+   </div>
+   <!-- #main .wrapper --> 
+   <footer id="colophon" role="contentinfo"> 
+    <div class="site-info"> 
+     <a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a> 
+    </div>
+    <!-- .site-info --> 
+   </footer>
+   <!-- #colophon --> 
   </div>
-  <script type="application/ld+json">{"image":{"height":349,"width":620,"@type":"ImageObject","url":"http://www.canberratimes.com.au/content/dam/images/2/h/1/q/1/image.related.articleLeadwide.620x349.2h1je.png/1364745600000.jpg"},"publisher":{"logo":{"height":60,"width":600,"@type":"ImageObject","url":"https://www.fairfaxstatic.com.au/cqstatic/gvtj63/logo--canberratimes.jpg"},"name":"The Canberra Times","@type":"Organization"},"author":{"name":"David Polkinghorne","@type":"Person"},"dateModified":"2013-04-01T03:00:00.000+11:00","datePublished":"2013-04-01T03:00:00.000+11:00","headline":"It\u0027s a honey-bunny win for English","keywords":"nullCycling, Sport","@type":"NewsArticle","mainEntityOfPage":{"@id":"http://www.smh.com.au/sport/its-a-honeybunny-win-for-english-20130331-2h1je.html","@type":"WebPage"},"@context":"http://schema.org/","description":"Hot cross buns with honey were the secret weapon that helped power Jason English to his sixth consecutive Australian solo 24-hour championship at Stromlo Forest Park."}</script> 
+  <!-- #page --> 
+  <style type="text/css">/*Missing admin bar button fix on mobile*/
+#wp-admin-bar-abm-login {
+	display: block !important;
+}
+
+/*Addthis aligment fix for iframe*/
+.addthis_toolbox iframe {
+	margin: 0 !important;
+}
+
+/*fix for html5 video wp shortcode being broken by theme */
+body video.wp-video-shortcode, body .wp-video-shortcode video {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	min-width: 0;
+	height:auto;
+	min-height: 0;
+}
+
+/* compatiblity with WP default screen reader class */
+.screen-reader-text:not(button) {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}</style>
+  <!-- MathJax Latex Plugin installed: Disabled as no shortcodes on this page -->
+  <script type="text/javascript" src="http://sites.psu.edu/astrowright/wp-content/plugins/akismet/_inc/form.js?ver=3.1.5"></script> 
+  <script type="text/javascript" src="http://sites.psu.edu/astrowright/wp-includes/js/admin-bar.min.js?ver=4.8.5"></script> 
+  <script type="text/javascript" src="http://sites.psu.edu/astrowright/wp-content/mu-plugins/lean-captcha/js/howler.min.js?ver=2015102605"></script> 
+  <script type="text/javascript">
+/* <![CDATA[ */
+var lean_captcha_object = {"ajax_url":"http:\/\/sites.psu.edu\/astrowright\/wp-content\/mu-plugins\/lean-captcha\/lc_ep.php","key":"lc_v2VXkSinBsZsgSqHqXIL3Q=="};
+/* ]]> */
+</script> 
+  <script type="text/javascript" src="http://sites.psu.edu/astrowright/wp-content/mu-plugins/lean-captcha/js/lean-captcha.js?ver=201709035"></script> 
+  <script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201811"></script> 
+  <script type="text/javascript" src="http://sites.psu.edu/astrowright/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711"></script> 
+  <script type="text/javascript" src="http://sites.psu.edu/astrowright/wp-includes/js/wp-embed.min.js?ver=4.8.5"></script> 
+  <div id="wpadminbar" class="nojq nojs"> 
+   <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a> 
+   <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar" tabindex="0"> 
+    <ul id="wp-admin-bar-root-default" class="ab-top-menu"> 
+     <li id="wp-admin-bar-wdcab_root" class="menupop"><a class="ab-item" aria-haspopup="true" href="http://sites.psu.edu/">Sites at Penn State</a>
+      <div class="ab-sub-wrapper"></div> </li> 
+     <li id="wp-admin-bar-abm-login" class="login-bid-9476"><a class="ab-item" href="https://sites.psu.edu/astrowright/wp-login.php?redirect_to=https%3A%2F%2Fsites.psu.edu%2Fastrowright%2F2017%2F12%2F26%2Fwhat-weve-learned-about-boyajians-star&amp;action=shibboleth">Log In</a> </li>
+    </ul>
+    <ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu"> 
+     <li id="wp-admin-bar-search" class="admin-bar-search">
+      <div class="ab-item ab-empty-item" tabindex="-1">
+       <form action="http://sites.psu.edu/astrowright/" method="get" id="adminbarsearch">
+        <input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150">
+        <label for="adminbar-search" class="screen-reader-text">Search</label>
+        <input type="submit" class="adminbar-button" value="Search">
+       </form>
+      </div> </li>
+    </ul> 
+   </div> 
+  </div>  
  </body>
 </html>

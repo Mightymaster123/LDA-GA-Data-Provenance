@@ -53,5 +53,9 @@ public class ResultStatistics {
 			LDA_time += cfg.LDA_execution_milliseconds;
 			++LDA_count;
 		}
+		if(cfg!=null && cfg.fitness_value==0.0f)
+		{
+			System.out.println(to_string("fitness_value should not be 0 : "));
+		}
 	}
 }

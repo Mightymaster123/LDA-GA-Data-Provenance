@@ -1,23 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml" lang="en-GB">
  <head> 
-  <title>BBC NEWS | Americas | Campaign to seize US judge's home</title> 
+  <title>BBC News - Indonesia leader starts new term</title> 
   <meta name="contentFlavor" content="STORY"> 
   <meta name="keywords" content="BBC, News, BBC News, news online, world, uk, international, foreign, british, online, service"> 
-  <meta name="OriginalPublicationDate" content="2006/01/23 12:25:19"> 
-  <meta name="UKFS_URL" content="/1/hi/world/americas/4639374.stm"> 
-  <meta name="IFS_URL" content="/2/hi/americas/4639374.stm"> 
+  <meta name="OriginalPublicationDate" content="2009/10/20 07:01:22"> 
+  <meta name="UKFS_URL" content="/1/hi/world/asia-pacific/8315624.stm"> 
+  <meta name="IFS_URL" content="/2/hi/asia-pacific/8315624.stm"> 
   <meta http-equiv="content-type" content="text/html;charset=iso-8859-1"> 
-  <link href="http://newsrss.bbc.co.uk/rss/newsonline_world_edition/americas/rss.xml" rel="alternate" type="application/rss+xml" title="BBC NEWS | Americas"> 
-  <link href="/2/low/americas/4639374.stm" rel="alternate" type="text/html" title="Low Graphics"> 
-  <meta name="Headline" content="Campaign to seize US judge's home"> 
-  <meta name="Section" content="Americas"> 
-  <meta name="Description" content="Activists try to seize the home of a US Supreme Court judge who ruled that houses can be demolished for public developments."> 
+  <link href="http://newsrss.bbc.co.uk/rss/newsonline_world_edition/asia-pacific/rss.xml" rel="alternate" type="application/rss+xml" title=""> 
+  <link href="/2/low/asia-pacific/8315624.stm" rel="alternate" type="text/html" title="Low Graphics"> 
+  <meta name="Headline" content="Indonesia leader starts new term"> 
+  <meta name="Section" content="Asia-Pacific"> 
+  <meta name="Description" content="Susilo Bambang Yudhoyono is sworn in for a second term as Indonesia's president following his re-election in July."> 
+  <meta name="THUMBNAIL_URL" content="http://news.bbcimg.co.uk/media/images/46576000/jpg/_46576425_yudhoyono_afp.jpg"> 
+  <meta name="Slug" content="Indonesian polls"> 
   <!-- PULSE_ENABLED:yes --> 
   <!-- 
 HOST_STATIC:http://news.bbcimg.co.uk
 Site_To_Serve:news
-Section_Path:/americas 
+Section_Path:/asia-pacific 
 blq_web_service:on
 blq_webservice_release:r62
 blq_webservice_variant:journalism
@@ -154,17 +156,17 @@ var _userLocation = 'INTERNATIONAL';
   <script type="text/javascript">
 <!--
 	bbc.fmtj.page = {
-		serverTime: 1521250807000,
+		serverTime: 1521323431000,
 		editionToServe: 'international',
 		queryString: null,
 		section: null,
-		sectionPath: '/americas',
+		sectionPath: '/asia-pacific',
 		siteName: null,
 		siteToServe: 'news',
 		siteVersion: '4',
-		storyId: '4639374',
+		storyId: '8315624',
 		assetType: null,
-		uri: '/2/hi/americas/4639374.stm',
+		uri: '/2/hi/asia-pacific/8315624.stm',
 		country: 'us',
 		masthead: false,
 		adKeyword: null,
@@ -246,10 +248,295 @@ require(['jquery-1'], function ($) {
   <script type="text/javascript" src="http://news.bbcimg.co.uk/js/app/ticker/v1_2_0/ticker.js"></script> 
   <script src="http://news.bbcimg.co.uk/js/legacy/1_1/news.js" language="JavaScript" type="text/javascript"></script> 
   <!-- emp_load.inc --> 
-  <!-- not suitable for ads --> 
+  <!-- is suitable for ads adding isadvertise ... --> 
+  <!-- features_enabled.inc --> 
+  <script type="text/javascript">/*<![CDATA[*//*jslint plusplus: true, sloppy: true, browser: true, maxerr: 200, maxlen: 200 */
+/*globals BBC, bbcdotcom*/
+if (bbcdotcom === undefined) {
+    var bbcdotcom = {
+        init: function (params) {},
+        objects: function(str) {
+            return false;
+        },
+        domLoaded: false,
+        data: {
+            ads: 0,
+            stats: 0,
+            statsProvider: null
+        },
+        adverts: {
+            slot: function (id, group) {},
+            layout: {
+                reset: function() {}
+            }
+        },
+        config: {
+            isActive: function(key) { return false; }
+        },
+        addLoadEvent: function(func) {
+            var windowOnload = window.onload;
+            if (typeof window.onload !== 'function') {
+                window.onload = func;
+            } else {
+                window.onload = function() {
+                    if (windowOnload) {
+                        windowOnload();
+                    }
+                    func();
+                }
+            }
+        }
+    }
+}
+
+/**
+ * This differs to the one found under /orb/objects.js
+ */
+bbcdotcom.objects = function (strName, action, obj) {
+    var i,
+        len,
+        args = arguments,
+        nameParts = strName.split(".");
+    if (action === undefined) {
+        action = 'valid';
+    }
+    if (obj === undefined) {
+        obj = window;
+    }
+    for (i = 0, len = nameParts.length; i < len; i++) {
+        if (obj[nameParts[i]] === undefined) {
+            if (action === 'create') {
+                obj[nameParts[i]] = {};
+            } else {
+                return false;
+            }
+        } else if (typeof obj[nameParts[i]] === 'function') {
+            if (typeof args[1] !== 'undefined' && args[1] !== null && obj[nameParts[i]](args[1]) !== undefined) {
+                return obj[nameParts[i]](args[1]);
+            } else if (obj[nameParts[i]]() !== undefined) {
+                return obj[nameParts[i]]();
+            }
+        }
+        obj = obj[nameParts[i]];
+    }
+    return obj;
+};
+
+bbcdotcom.objects('bbcdotcom.stats', 'create');
+
+// Create BBC.adverts skeleton
+if (BBC === undefined) {
+    var BBC = {};
+}
+if (BBC.adverts === undefined) {
+    BBC.adverts = {
+        setZone: function () {},
+        configure: function () {},
+        write: function () {},
+        show: function () {},
+        isActive: function () {
+            return false;
+        },
+        setScriptRoot: function () {},
+        setImgRoot: function () {},
+        getAdvertTag: function () {},
+        getSectionPath: function() {}
+    };
+}
+/*]]>*/</script> 
+  <meta name="application-name" content="BBC"> 
+  <meta name="msapplication-tooltip" content="Explore the BBC, for latest news, sport and weather, TV &amp; radio schedules and highlights, with nature, food, comedy, children's programmes and much more"> 
+  <meta name="msapplication-starturl" content="http://www.bbc.com/news/?ocid=global-news-pinned-ie9"> 
+  <meta name="msapplication-window" content="width=1024;height=768"> 
+  <meta name="msapplication-task" content="name=BBC Home;action-uri=http://www.bbc.com/?ocid=global-homepage-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico"> 
+  <meta name="msapplication-task" content="name=BBC News;action-uri=http://www.bbc.com/news/?ocid=global-news-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico"> 
+  <meta name="msapplication-task" content="name=BBC Sport;action-uri=http://www.bbc.com/sport/0/?ocid=global-sport-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico"> 
+  <meta name="msapplication-task" content="name=BBC Future;action-uri=http://www.bbc.com/future?ocid=global-future-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico"> 
+  <meta name="msapplication-task" content="name=BBC Travel;action-uri=http://www.bbc.com/travel?ocid=global-travel-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico"> 
+  <meta name="msapplication-task" content="name=BBC Weather;action-uri=http://www.bbc.co.uk/weather/?ocid=global-weather-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico"> 
+  <!-- BBCCOM client-side --> 
+  <style type="text/css">.bbccom_display_none{display:none;}</style> 
+  <script type="text/javascript">/*<![CDATA[*/function syncRoadBlock(src,companionId) {
+    var compidarg;
+    if (arguments.length == 2 && typeof companionId == 'string') {
+        compidarg = companionId;
+    }
+    BBC.adverts.empCompanionResponse(src, compidarg);
+};
+pt=new Object();
+pt.aenab = "yes";/*]]>*/</script> 
+  <script type="text/javascript">/*<![CDATA[*/
+    if (typeof orb !== 'undefined' && typeof orb.fig === 'function') {
+        bbcdotcom.data = {
+            a: orb.fig('ad')? 1 : 0,
+            b: (0 == orb.fig('uk')) ? 1 : 0,
+            c: orb.fig('ap')
+        };
+    } else {
+        document.write(unescape('%3Cscript type="text/javascript" src="http://tps.bbc.com/wwscripts/data"%3E%3C/script%3E'));
+    }
+/*]]>*/</script> 
+  <script type="text/javascript">/*<![CDATA[*/
+    if (typeof bbcdotcom.data == 'undefined' || typeof bbcdotcom.data.a == 'undefined' || typeof bbcdotcom.data.b == 'undefined' || typeof bbcdotcom.data.c == 'undefined') {
+        bbcdotcom.data = {a:0,b:0,c:0};
+    }
+    if (bbcdotcom.data.a == 1) {
+        document.write(unescape('%3Clink href="http://news.bbcimg.co.uk/css/screen/shared/1.52.0/3pt_ads.css" rel="stylesheet" type="text/css" /%3E'));
+        
+            document.write(unescape('%3Cscript type="text/javascript" src="http://www.bbc.co.uk/wwscripts/flag"%3E%3C/script%3E'));
+        
+    }
+/*]]>*/</script> 
+  <script type="text/javascript">/*<![CDATA[*/
+    if (typeof bbcdotcom.flag == 'undefined' || bbcdotcom.flag.a != 1) {
+        bbcdotcom.data.a = 0;
+    }
+/*]]>*/</script> 
+  <script type="text/javascript">/*<![CDATA[*/
+    if (bbcdotcom.data.a == 1 || bbcdotcom.data.b == 1) {
+        document.write(unescape('%3Cscript type="text/javascript" src="//www.googletagservices.com/tag/js/gpt.js"%3E%3C/script%3E'));
+        
+            document.write(unescape('%3Cscript type="text/javascript" src="http://news.bbcimg.co.uk/js/app/bbccom/1.52.0/bbccom_all.js"%3E%3C/script%3E'));
+        
+    }
+/*]]>*/</script> 
+  <script type="text/javascript">/*<![CDATA[*/
+    if (bbcdotcom.data.a == 1 || bbcdotcom.data.b == 1) {
+        BBC.adverts.setData(bbcdotcom.data);
+        bbcdotcom.config.setAdsEnabled(bbcdotcom.data.a);
+        bbcdotcom.config.setAnalyticsEnabled(bbcdotcom.data.b);
+        bbcdotcom.dataOrb = {
+            ads: bbcdotcom.data.a,
+            stats: bbcdotcom.data.b,
+            statsProvider: bbcdotcom.data.c
+        };
+
+        bbcdotcom.config.setData(bbcdotcom.dataOrb);
+        bbcdotcom.init({adsToDisplay: ["leaderboard", "sponsor", "mpu"]});
+
+        if(typeof bbcdotcom !== 'undefined' && typeof bbcdotcom.survey !== 'undefined' && typeof bbcdotcom.survey.init === 'function') {
+            bbcdotcom.survey.init();
+        }
+    }
+    /*
+     * Native remove content for UK visitors
+     */
+    (function() {
+        if (bbcdotcom.data.b == 0) {
+            var adKeyword = bbcdotcom.objects('bbc.fmtj.page.adKeyword');
+            if(adKeyword && adKeyword !== null && typeof adKeyword === 'string' && adKeyword.indexOf('native-') !== -1) {
+                document.write('<style >' +
+                                    '#storypage-container .story-body {display:none;}' +
+                                    '#native-uk-disclaimer {border: 2px solid;margin: 8px;padding: 16px;}' +
+                                '</style>');
+                require(['jquery-1'], function($) {
+                    $(function(){
+                        /* Native advertising disclaimer */
+                        $( ".story-body" ).html('<div id="native-uk-disclaimer">' +
+                            '<h1>BBC Sport (International version)</h1>' +
+                            'We\'re sorry but this article is not accessible from the UK as it is part of our ' +
+                            'international service and is not funded by the license fee.' +
+                            '</div>');
+                        $( ".story-body" ).show();
+                    });
+                });
+            }
+        }
+    }());
+    bbcdotcom.objects('page', 'create', bbcdotcom);
+    bbcdotcom.page.edition = 'international';
+    bbcdotcom.page.url = '/2/hi/asia-pacific/8315624.stm';
+    bbcdotcom.page.zoneFile = '3pt_zone_file';
+    bbcdotcom.page.http_host = 'news.bbc.co.uk';
+    
+    
+/*]]>*/</script> 
+  <script type="text/javascript">/*<![CDATA[*/if(bbcdotcom.data.a == 1){(function(){
+    switch(bbcdotcom.page.url) {
+        case "/":
+        case "/default.stm":
+            bbcdotcom.page.url = (bbcdotcom.page.edition === "domestic") ? "/1/hi/default.stm" : "/2/hi/default.stm";
+            break;
+        case "/sport":
+        case "/sport/":
+        case "/sport/default.stm":
+            bbcdotcom.page.url = (bbcdotcom.page.edition === "domestic") ? "/sport1/hi/default.stm" : "/sport2/hi/default.stm";
+            break;
+    }
+
+
+    BBC.adverts.setScriptRoot('http://news.bbcimg.co.uk/js/app/bbccom/1.52.0/');
+    bbcdotcom.config.setJsPrefix   ('http://news.bbcimg.co.uk/js/app/bbccom/1.52.0');
+    bbcdotcom.config.setAssetPrefix('http://news.bbcimg.co.uk/shared/bbccom/1.52.0/');
+    bbcdotcom.config.setVersion('1.52.0');
+    bbcdotcom.config.setSwfPrefix  ('http://news.bbcimg.co.uk/shared/swf/bbccom/1.52.0');
+    bbcdotcom.config.setCssPrefix  ('http://news.bbcimg.co.uk/css/screen/shared/1.52.0');
+
+    BBC.adverts.setImgRoot('http://news.bbcimg.co.uk/shared/img/bbccom/');
+    BBC.adverts.init({
+        domain: bbcdotcom.page.http_host,
+        location: bbcdotcom.page.url,
+        zoneVersion: bbcdotcom.page.zoneFile,
+        zoneReferrer: document.referrer
+    });
+
+}());
+
+(function(){
+    if(typeof require !== 'undefined') {
+        require({
+            paths:{
+                "bbcdotcom":"http://news.bbcimg.co.uk/js/app/bbccom/1.52.0"
+            }
+        });
+    }
+})();
+
+// Only serve advert.js to news site
+if(BBC.adverts.getV6Gvl3() && 'undefined' !== typeof bbcdotcom.page.bddUseLatestFromTest) {
+    document.write(unescape('%3Cscript type="text/javascript" src="http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/js/app/bbccom/' + bbcdotcom.latest_version + '/advert.js"'));
+} else if(BBC.adverts.getV6Gvl3()) {
+    document.write(unescape('%3Cscript type="text/javascript" src="http://news.bbcimg.co.uk/js/app/bbccom/1.52.0/advert.js"%3E%3C/script%3E'));
+}
+
+if(/[?|&]metadata=yes(&|$)/.test(window.location.search)) {
+    document.write('http://www.test.bbc.com/wwscripts/metadata?bbcdotcom_asset=' + window.location.hostname + window.location.pathname);
+}}/*]]>*/</script> 
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    if (BBC.adverts.isActive('ads')) {
+        document.write(unescape('%3Cscript id="gnlAdsEnabled" class="bbccom_display_none"%3E%3C/script%3E'));
+    }
+    if (BBC.adverts.isActive('analytics')) {
+        document.write(unescape('%3Cscript id="gnlAnalyticsEnabled" class="bbccom_display_none"%3E%3C/script%3E'));
+    }
+    /*]]>*/
+</script> 
+  <script type="text/javascript">
+    require({
+        paths:{
+            "bbcdotcom": "http://news.bbcimg.co.uk/js/app/bbccom/1.52.0"
+        }
+    });
+</script> 
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    document.write(unescape('%3Cscript id="continuous-play-enabled" class="bbccom_display_none"%3E%3C/script%3E'));
+    /*]]>*/
+</script> 
+  <script type="text/javascript">
+	if(typeof BBC.adverts != 'undefined' && typeof BBC.adverts.setPageVersion != 'undefined'){
+		BBC.adverts.setPageVersion('4');
+	}
+</script> 
  </head> 
  <body topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" id="body"> 
   <div class="centerbody"> 
+   <script type="text/javascript">
+	if(typeof BBC.adverts != 'undefined' && typeof BBC.adverts.setPageVersion != 'undefined'){
+		BBC.adverts.setPageVersion('4');
+	}
+</script> 
    <!-- Begin iStats CPS v4 Legacy code 20120127 (UX-CMC 1.1009.3) --> 
    <script type="text/javascript">
 // <![CDATA[
@@ -345,315 +632,300 @@ istats_countername = countername(location.href);
         </table> 
        </div> 
        <!-- start live stats logic --> 
-       <img src="http://stats.bbc.co.uk/o.gif?~RS~s~RS~News~RS~t~RS~HighWeb_Legacy~RS~i~RS~4639374~RS~p~RS~44261~RS~u~RS~/2/hi/americas/4639374.stm~RS~r~RS~(none)~RS~a~RS~International~RS~q~RS~~RS~z~RS~07~RS~" height="1" width="1" alt="">
+       <img src="http://stats.bbc.co.uk/o.gif?~RS~s~RS~News~RS~t~RS~HighWeb_Legacy~RS~i~RS~8315624~RS~p~RS~45341~RS~u~RS~/2/hi/asia-pacific/8315624.stm~RS~r~RS~(none)~RS~a~RS~International~RS~q~RS~~RS~z~RS~31~RS~" height="1" width="1" alt="">
        <br> 
        <!-- end live stats logic --> 
       </div> 
       <!-- adhoc survey invite code --> 
       <!-- end survey_adhoc_worldwide_go --> 
       <!-- end adhoc survey invite --> 
-      <table cellpadding="0" cellspacing="0" class="main"> 
-       <tbody>
-        <tr> 
-         <td class="sidebar1"> 
-          <div class="lhs"> 
-           <div class="lhsb"> 
-            <a href="/2/hi/default.stm">News Front Page</a> 
+      <div class="mainwrapper"> 
+       <table cellpadding="0" cellspacing="0" class="main"> 
+        <tbody>
+         <tr> 
+          <td class="sidebar1"> 
+           <div class="lhs"> 
+            <div class="lhsb"> 
+             <a href="/2/hi/default.stm">News Front Page</a> 
+            </div> 
+            <div class="o"> 
+             <img src="http://news.bbcimg.co.uk/nol/shared/img/nav/v3_map_asia_pac_rb.gif" width="92" height="54" alt="" border="0" usemap="#world_map"> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/africa/default.stm">Africa</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/americas/default.stm">Americas</a> 
+            </div> 
+            <div class="lhssqs"> 
+             <a href="/2/hi/asia-pacific/default.stm">Asia-Pacific</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/europe/default.stm">Europe</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/middle_east/default.stm">Middle East</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/south_asia/default.stm">South Asia</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/uk_news/default.stm">UK</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/business/default.stm">Business</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/health/default.stm">Health</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/science/nature/default.stm">Science &amp; Environment</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/technology/default.stm">Technology</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/entertainment/default.stm">Entertainment</a> 
+            </div> 
+            <div class="lhsb"> 
+             <a href="/2/hi/also_in_the_news/default.stm">Also in the news</a> 
+            </div> 
+            <div class="lhsdl">
+             -----------------
+            </div> 
+            <div class="lhsl"> 
+             <a href="/2/hi/video_and_audio/default.stm">Video and Audio</a> 
+            </div> 
+            <div class="lhsdl">
+             -----------------
+            </div> 
+            <div id="bbccom_button" class="bbccom_display_none"> 
+             <script type="text/javascript">BBC.adverts.write("button");</script> 
+            </div> 
+            <script type="text/javascript">BBC.adverts.show("button");</script> 
+            <div class="lhsb"> 
+             <a href="/2/hi/programmes/default.stm">Programmes</a> 
+            </div> 
+            <div class="lhsl"> 
+             <a href="/2/hi/talking_point/default.stm">Have Your Say</a> 
+            </div> 
+            <div class="lhsl"> 
+             <a href="/2/hi/in_pictures/default.stm">In Pictures</a> 
+            </div> 
+            <div class="lhsl"> 
+             <a href="/2/hi/country_profiles/default.stm">Country Profiles</a> 
+            </div> 
+            <div class="lhsl"> 
+             <a href="/2/hi/in_depth/default.stm">Special Reports</a> 
+            </div> 
            </div> 
+           <div class="relatedbbcsites"> 
+            <h3>Related BBC sites</h3> 
+            <ul> 
+             <li><a href="http://news.bbc.co.uk/sport1/hi/default.stm" title="Home of BBC Sport on the internet">Sport</a></li> 
+             <li><a href="http://www.bbc.co.uk/weather/" title="Weather information from around the world">Weather</a></li> 
+             <li><a href="http://www.bbc.co.uk/onthisday" title="BBC On This Day">On This Day</a></li> 
+             <li><a href="http://www.bbc.co.uk/blogs/theeditors/" title="Editors' Blog">Editors' Blog</a></li> 
+             <li><a href="http://www.bbc.co.uk/worldservice/" title="BBC World Service">BBC World Service</a></li> 
+            </ul> 
+           </div> 
+           <!-- SiteVersions --> 
+           <div class="lang">
+            Languages
+           </div> 
+           <ul id="languages"> 
+            <li id="chineseLoz"><a href="http://www.bbc.co.uk/chinese" title="BBCChinese.com">Chinese</a></li> 
+            <li id="vietnameseLoz"><a href="http://www.bbc.co.uk/vietnamese" title="BBCVietnamese.com">Vietnamese</a></li> 
+            <li id="indonesianLoz"><a href="http://www.bbc.co.uk/indonesian" title="BBCIndonesian.com">Indonesian</a></li> 
+            <li id="burmeseLoz"><a href="http://www.bbc.co.uk/burmese" title="BBCBurmese.com">Burmese</a></li> 
+            <li id="moreLoz"><a href="http://www.bbc.co.uk/worldservice/languages/" title="More languages from the BBC">More</a></li> 
+           </ul> <img height="1" width="1" src="http://switch.atdmt.com/action/agencyrep_bbc_usa_asia_pacific_home" alt="">
+           <!--  --> <img alt="" id="livestats" src="http://stats.bbc.co.uk/o.gif?~RS~s~RS~News~RS~t~RS~HighWeb_Story~RS~i~RS~8315624~RS~p~RS~45341~RS~a~RS~International~RS~u~RS~/2/hi/asia-pacific/8315624.stm~RS~r~RS~(none)~RS~q~RS~~RS~z~RS~31~RS~"></td> 
+          <td class="contentwrapper"> 
            <div class="o"> 
-            <img src="http://news.bbcimg.co.uk/nol/shared/img/nav/v3_map_americas_rb.gif" width="92" height="54" alt="" border="0" usemap="#world_map"> 
            </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/africa/default.stm">Africa</a> 
-           </div> 
-           <div class="lhssqs"> 
-            <a href="/2/hi/americas/default.stm">Americas</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/asia-pacific/default.stm">Asia-Pacific</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/europe/default.stm">Europe</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/middle_east/default.stm">Middle East</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/south_asia/default.stm">South Asia</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/uk_news/default.stm">UK</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/business/default.stm">Business</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/health/default.stm">Health</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/science/nature/default.stm">Science &amp; Environment</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/technology/default.stm">Technology</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/entertainment/default.stm">Entertainment</a> 
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/also_in_the_news/default.stm">Also in the news</a> 
-           </div> 
-           <div class="lhsdl">
-            -----------------
-           </div> 
-           <div class="lhsl"> 
-            <a href="/2/hi/video_and_audio/default.stm">Video and Audio</a> 
-           </div> 
-           <div class="lhsdl">
-            -----------------
-           </div> 
-           <div class="lhsb"> 
-            <a href="/2/hi/programmes/default.stm">Programmes</a> 
-           </div> 
-           <div class="lhsl"> 
-            <a href="/2/hi/talking_point/default.stm">Have Your Say</a> 
-           </div> 
-           <div class="lhsl"> 
-            <a href="/2/hi/in_pictures/default.stm">In Pictures</a> 
-           </div> 
-           <div class="lhsl"> 
-            <a href="/2/hi/country_profiles/default.stm">Country Profiles</a> 
-           </div> 
-           <div class="lhsl"> 
-            <a href="/2/hi/in_depth/default.stm">Special Reports</a> 
-           </div> 
-          </div> 
-          <div class="relatedbbcsites"> 
-           <h3>Related BBC sites</h3> 
-           <ul> 
-            <li><a href="http://news.bbc.co.uk/sport1/hi/default.stm" title="Home of BBC Sport on the internet">Sport</a></li> 
-            <li><a href="http://www.bbc.co.uk/weather/" title="Weather information from around the world">Weather</a></li> 
-            <li><a href="http://www.bbc.co.uk/onthisday" title="BBC On This Day">On This Day</a></li> 
-            <li><a href="http://www.bbc.co.uk/blogs/theeditors/" title="Editors' Blog">Editors' Blog</a></li> 
-            <li><a href="http://www.bbc.co.uk/worldservice/" title="BBC World Service">BBC World Service</a></li> 
-           </ul> 
-          </div> 
-          <!-- SiteVersions --> 
-          <div class="lang">
-           Languages
-          </div> 
-          <ul id="languages"> 
-           <li id="spanishLoz"><a href="http://www.bbc.co.uk/spanish" title="BBCMundo.com">Espanol</a></li> 
-           <li id="brazilLoz"><a href="http://www.bbc.co.uk/portuguese" title="BBCBrazil.com">Brazil</a></li> 
-           <li id="caribbeanLoz"><a href="http://www.bbc.co.uk/caribbean" title="BBCCaribbean.com">Caribbean</a></li> 
-           <li id="moreLoz"><a href="http://www.bbc.co.uk/worldservice/languages/" title="More languages from the BBC">More</a></li> 
-          </ul> <img height="1" width="1" src="http://switch.atdmt.com/action/agencyrep_bbc_usa_americas_home" alt=""> 
-          <!--  --> <img alt="" id="livestats" src="http://stats.bbc.co.uk/o.gif?~RS~s~RS~News~RS~t~RS~HighWeb_Story~RS~i~RS~4639374~RS~p~RS~44261~RS~a~RS~International~RS~u~RS~/2/hi/americas/4639374.stm~RS~r~RS~(none)~RS~q~RS~~RS~z~RS~07~RS~"></td> 
-         <td class="contentwrapper"> 
-          <table class="datetools" cellpadding="0" cellspacing="0"> 
-           <tbody>
-            <tr> 
-             <td> <a name="startcontent"></a>
-              <div class="ds">
-               <span class="lu">Page last updated at </span>12:25 GMT, Monday, 23 January 2006
-              </div> 
-              <div class="mvtb">
-               <table cellspacing="0" width="416" border="0" cellpadding="0">
-                <tbody>
-                 <tr> 
-                  <td width="213"><a class="epl" onclick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/americas/4639374.stm','status=no,scrollbars=yes,resizable=yes,width=370,height=445','Mailer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/americas/4639374.stm" target="Mailer"> <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/email.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3"> E-mail this to a friend </a></td> 
-                  <td width="203"><a class="epl" onclick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/americas/4639374.stm','status=no,scrollbars=yes,toolbar=yes,resizable=yes,menubar=yes,width=600,height=445','Printer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/americas/4639374.stm" target="Printer"> <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/print.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3"> Printable version </a></td> 
-                 </tr>
-                </tbody>
-               </table>
-              </div> </td> 
-            </tr> 
-           </tbody>
-          </table> 
-          <table class="storycontent" cellpadding="0" cellspacing="0"> 
-           <tbody>
-            <tr> 
-             <td colspan="2"> 
-              <div class="mxb"> 
-               <h1> Campaign to seize US judge's home </h1> 
-              </div> </td> 
-            </tr> 
-            <tr> 
-             <td class="storybody"> 
-              <!-- S BO --> 
-              <!-- S IIMA --> 
-              <table border="0" cellspacing="0" align="right" width="203" cellpadding="0"> 
-               <tbody>
-                <tr>
-                 <td> 
-                  <div> 
-                   <img src="http://newsimg.bbc.co.uk/media/images/41246000/jpg/_41246010_canvass-ap203.jpg" width="203" height="152" alt="Logan Clements canvasses for signatures in Weare" border="0" vspace="0" hspace="0"> 
-                   <div class="cap">
-                    Logan Clements canvassed for signatures in Weare
-                   </div> 
-                  </div> </td>
-                </tr> 
-               </tbody>
-              </table> 
-              <!-- E IIMA --> 
-              <!-- S SF --><p class="first"> <b>Activists angered by a US Supreme Court ruling that homes can be demolished for developments are trying to seize the home of one of the judges involved.</b> </p><p> About 60 people rallied in the small New Hampshire town of Weare on Sunday, where Justice David Souter has a house. </p><p> The protesters say they have enough signatures from Weare residents to put their proposal to a town vote in March. </p><p> They want a compulsory purchase order on the 200-year-old farmhouse, and say they will build a hotel in its place. 
-               <!-- E SF --> </p><p> Campaign organiser Logan Clements, from Los Angeles, told supporters in Weare the Supreme Court had "shot a hole in the [US] Constitution". </p><p> 
-               <!-- S IBOX --> </p>
-              <table cellspacing="0" align="right" width="208" border="0" cellpadding="0"> 
-               <tbody>
-                <tr> 
-                 <td width="5"><img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="5" height="1" alt="" border="0" vspace="0" hspace="0"></td> 
-                 <td class="sibtbg"> 
-                  <div> 
-                   <div class="mva"> 
-                    <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/start_quote_rb.gif" width="24" height="13" alt="" border="0"> 
-                    <b>I don't want my house to be taken away to be the next Disneyland</b> 
-                    <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/end_quote_rb.gif" align="right" width="23" height="13" alt="" border="0" vspace="0">
-                    <br clear="all"> 
-                   </div> 
+           <table class="datetools" cellpadding="0" cellspacing="0"> 
+            <tbody>
+             <tr> 
+              <td> <a name="startcontent"></a>
+               <div class="ds">
+                <span class="lu">Page last updated at </span>07:01 GMT, Tuesday, 20 October 2009 08:01 UK
+               </div> 
+               <div class="mvtb">
+                <table cellspacing="0" width="416" border="0" cellpadding="0">
+                 <tbody>
+                  <tr> 
+                   <td width="213"><a class="epl" onclick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/asia-pacific/8315624.stm','status=no,scrollbars=yes,resizable=yes,width=370,height=445','Mailer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/asia-pacific/8315624.stm" target="Mailer"> <img src="http://news.bbcimg.co.uk/nol/shared/img/v3/email.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3"> E-mail this to a friend </a></td> 
+                   <td width="203"><a class="epl" onclick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/asia-pacific/8315624.stm?ad=1','status=no,scrollbars=yes,toolbar=yes,resizable=yes,menubar=yes,width=600,height=445','Printer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/asia-pacific/8315624.stm?ad=1" target="Printer"> <img src="http://news.bbcimg.co.uk/nol/shared/img/v3/print.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3"> Printable version </a></td> 
+                  </tr>
+                 </tbody>
+                </table>
+               </div> </td> 
+             </tr> 
+            </tbody>
+           </table> 
+           <table class="storycontent" cellpadding="0" cellspacing="0"> 
+            <tbody>
+             <tr> 
+              <td colspan="2"> 
+               <div class="mxb"> 
+                <h1> Indonesia leader starts new term </h1> 
+               </div> </td> 
+             </tr> 
+             <tr> 
+              <td class="storybody"> 
+               <!-- S BO --> 
+               <!-- Inline Embbeded Media --> 
+               <!--  This is the embedded player component --> 
+               <div class="videoInStoryC"> 
+                <div id="emp_8316518" class="emp"> 
+                 <noscript> 
+                  <img name="holdingImage" class="holding" src="http://news.bbcimg.co.uk/media/images/46576000/jpg/_46576913_-19.jpg" alt="Susilo Bambang Yudhoyono"> 
+                  <div class="warning">
+                   <p><strong>Please turn on JavaScript.</strong> Media requires JavaScript to play. </p> 
+                   <p></p>
                   </div> 
-                  <div class="mva"> 
-                   <div>
-                    Campaign supporter Eric Dellinger
-                   </div> 
-                  </div> </td> 
-                </tr> 
-               </tbody>
-              </table> 
-              <!-- E IBOX --> <p> Judge Souter was in a 5-4 majority on the court panel that ruled last June that the city of New London in Connecticut could seize homes to make way for a hotel, convention centre, office space and flats. </p><p> The ruling gave government the right to seize homes for "public benefit", where previously they could only be taken for "public use". </p><p> Many fear the ruling means land can now be requisitioned for commercial ventures that benefit the local economy, not just public projects like road building. </p><p> The Supreme Court ruling has prompted many states, including New Hampshire, to consider tightening their laws on "eminent domain", or compulsory purchase. </p><p> <b>'Very scary'</b> </p><p> Mr Clements needed only 25 signatures calling for Mr Souter's house to be compulsorily purchased, to put the issue to a ballot of the 8,500 residents of Weare. </p><p> 
-               <!-- S IIMA --> </p>
-              <table border="0" cellspacing="0" align="right" width="203" cellpadding="0"> 
-               <tbody>
-                <tr>
-                 <td> 
-                  <div> 
-                   <img src="http://newsimg.bbc.co.uk/media/images/41246000/jpg/_41246016_farmhouse-ap203.jpg" width="203" height="152" alt="Logan Clements outside the New Hampshire home of US Supreme Court Justice David Souter" border="0" vspace="0" hspace="0"> 
-                   <div class="cap">
-                    Mr Clements wants to turn Mr Souter's home into a hotel
-                   </div> 
-                  </div> </td>
-                </tr> 
-               </tbody>
-              </table> 
-              <!-- E IIMA --> <p> He says he already has 188 names. </p><p> Weare resident Eric Dellinger signed the petition. </p><p> "I'm not sure that going after a justice is really the right way to do it," he told the Los Angeles Times. </p><p> "But this eminent domain thing is very scary. I don't want my house to be taken away to be the next Disneyland no matter how much good it would be for other people." </p><p> There was no comment on the petition from Justice Souter.
-               <!-- E BO --> <br><br clear="all"> </p>
-              <div class="mvtb">
-               <table cellspacing="0" width="416" border="0" cellpadding="0">
+                 </noscript> 
+                 <object width="0" height="0"> <param name="id" value="embeddedPlayer_8316518"> <param name="width" value="256"> <param name="height" value="144"> <param name="holding" value="http://news.bbcimg.co.uk/media/images/46576000/jpg/_46576913_-19.jpg"> <param name="playlist" value="http://news.bbc.co.uk/media/emp/8310000/8316500/8316518.xml"> <param name="config_settings_autoPlay" value="false"> <param name="config_settings_showPopoutButton" value="false"> <param name="autoPlay" value="false"> <param name="config_plugin_fmtjLiveStats_pageType" value="eav2"> <param name="config_plugin_fmtjLiveStats_edition" value="International"> <param name="fmtjDocURI" value="/2/hi/asia-pacific/8315624.stm"> <param name="config_settings_suppressItemKind" value="advert, ident"> <param name="config_settings_showUpdatedInFooter" value="true"> </object> 
+                 <!-- embedding script --> 
+                 <script type="text/javascript">
+//<![CDATA[
+var empId = 'emp_8316518',
+    settings,
+settings = bbc.fmtj.av.emp.getPlayerSettings(empId);
+bbc.fmtj.av.emp.registerPlayer(empId, settings);
+//]]>
+</script> 
+                </div> 
+                <!-- caption -->
+                <p class="caption">Susilo Bambang Yudhoyono: ''Reformation has come a long way''</p>
+                <!-- END - caption --> 
+               </div> 
+               <!-- end of the embedded player component --> 
+               <!-- END of Inline Embedded Media --> 
+               <!-- S SF --><p class="first"><b>Susilo Bambang Yudhoyono has been sworn in for a second five-year term as president of Indonesia, the world's most populous Muslim nation.</b></p><p>Mr Yudhoyono won a resounding victory at the polls in July, in part because he had clamped down on corruption. </p><p>Under him, the anti-corruption agency has become a powerful state body. </p><p>But correspondents say he now faces other challenges, including terrorism, the aftermath of September's earthquake in Sumatra and high unemployment. </p>
+               <!-- E SF --><p>The global financial crisis has not hit Indonesia as badly as some of its neighbours, but many people have been hurt by the slowdown and millions still live under the poverty line. </p><p><b>Positive growth</b></p><p>At a ceremony in Jakarta attended by the leaders of Australia, Malaysia, Singapore and East Timor that was broadcast to the archipelago of 234m people, Mr Yudhoyono swore on the Koran, Islam's holy book, to uphold the constitution. </p><p>"The essence of our programme for the next five years is to improve welfare, strengthen democracy and the legal system," he said. </p><p>"In the middle of the economic crisis, Indonesia can still grow positively. But we cannot stay idle, as our tasks are far from over."</p> 
+               <!-- S IIMA --> 
+               <table border="0" cellspacing="0" align="right" width="226" cellpadding="0"> 
                 <tbody>
-                 <tr> 
-                  <td width="213"><a class="epl" onclick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/americas/4639374.stm','status=no,scrollbars=yes,resizable=yes,width=370,height=445','Mailer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/americas/4639374.stm" target="Mailer"> <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/email.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3"> E-mail this to a friend </a></td> 
-                  <td width="203"><a class="epl" onclick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/americas/4639374.stm','status=no,scrollbars=yes,toolbar=yes,resizable=yes,menubar=yes,width=600,height=445','Printer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/americas/4639374.stm" target="Printer"> <img src="http://newsimg.bbc.co.uk/nol/shared/img/v3/print.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3"> Printable version </a></td> 
-                 </tr>
+                 <tr>
+                  <td> 
+                   <div> 
+                    <img src="http://news.bbcimg.co.uk/media/images/46025000/jpg/_46025446_-11.jpg" width="226" height="170" alt="A woman casts her ballot at a polling station in Cibubur" border="0" vspace="0" hspace="0"> 
+                    <div class="cap">
+                     Indonesia is the world's largest Muslim-majority country
+                    </div> 
+                   </div> </td>
+                 </tr> 
                 </tbody>
-               </table>
-              </div> 
-              <div id="socialBookMarks" class="sharesb"> 
-               <h3>Bookmark with:</h3> 
-               <ul> 
-                <li class="delicious"> <a id="delicious" title="Post this story to Delicious" href="http://del.icio.us/post?url=http://news.bbc.co.uk/2/hi/americas/4639374.stm&amp;title=Campaign to seize US judge's home">Delicious</a> </li> 
-                <li class="digg"> <a id="digg" title="Post this story to Digg" href="http://digg.com/submit?url=http://news.bbc.co.uk/2/hi/americas/4639374.stm&amp;title=Campaign to seize US judge's home">Digg</a> </li> 
-                <li class="reddit"> <a id="reddit" title="Post this story to reddit" href="http://reddit.com/submit?url=http://news.bbc.co.uk/2/hi/americas/4639374.stm&amp;title=Campaign to seize US judge's home">reddit</a> </li> 
-                <li class="facebook"> <a id="facebook" title="Post this story to Facebook" href="http://www.facebook.com/sharer.php?u=http://news.bbc.co.uk/2/hi/americas/4639374.stm">Facebook</a> </li> 
-                <li class="stumbleupon"> <a id="stumbleupon" title="Post this story to StumbleUpon" href="http://www.stumbleupon.com/submit?url=http://news.bbc.co.uk/2/hi/americas/4639374.stm&amp;title=Campaign to seize US judge's home">StumbleUpon</a> </li> 
-               </ul> 
-               <p class="what"><a href="http://news.bbc.co.uk/1/hi/help/6915817.stm">What are these?</a></p> 
-              </div> <script language="JavaScript">
+               </table> 
+               <!-- E IIMA --> <p>Analysts have said President Yudhoyono must appoint technocrats and professionals rather than career politicians to his new cabinet in order to attract flagging foreign investment. </p><p>Reforms to the bureaucracy and labour laws and improvements to the country's infrastructure are also needed to maintain the country's economic growth, estimated to be about 4% this year, economists say. </p><p>The BBC's Karishma Vaswani in Jakarta says Mr Yudhoyono will have to prove to his voters that they chose the right man. </p><p>In July's election, the president won 60.8% of the vote, 34% more than his nearest challenger, Megawati Sukarnoputri, a former president and daughter of independence hero Sukarno. </p><p>Mrs Megawati and the third-placed candidate, outgoing Vice-President Jusuf Kalla, later demanded that his victory be annulled, saying the voting lists had been inaccurate and millions of votes miscounted. </p><p>But the Constitutional Court ruled in August that there was no evidence to support their allegations. </p>
+               <!-- E BO --> <br><br clear="all"> 
+               <div id="socialBookMarks" class="sharesb"> 
+                <h3>Bookmark with:</h3> 
+                <ul> 
+                 <li class="delicious"> <a id="delicious" title="Post this story to Delicious" href="http://del.icio.us/post?url=http://news.bbc.co.uk/2/hi/asia-pacific/8315624.stm&amp;title=Indonesia leader starts new term">Delicious</a> </li> 
+                 <li class="digg"> <a id="digg" title="Post this story to Digg" href="http://digg.com/submit?url=http://news.bbc.co.uk/2/hi/asia-pacific/8315624.stm&amp;title=Indonesia leader starts new term">Digg</a> </li> 
+                 <li class="reddit"> <a id="reddit" title="Post this story to reddit" href="http://reddit.com/submit?url=http://news.bbc.co.uk/2/hi/asia-pacific/8315624.stm&amp;title=Indonesia leader starts new term">reddit</a> </li> 
+                 <li class="facebook"> <a id="facebook" title="Post this story to Facebook" href="http://www.facebook.com/sharer.php?u=http://news.bbc.co.uk/2/hi/asia-pacific/8315624.stm">Facebook</a> </li> 
+                 <li class="stumbleupon"> <a id="stumbleupon" title="Post this story to StumbleUpon" href="http://www.stumbleupon.com/submit?url=http://news.bbc.co.uk/2/hi/asia-pacific/8315624.stm&amp;title=Indonesia leader starts new term">StumbleUpon</a> </li> 
+                </ul> 
+                <p class="what"><a href="http://news.bbc.co.uk/1/hi/help/6915817.stm">What are these?</a></p> 
+               </div> <script language="JavaScript">
 <!--
-var bm = new BookMark({site:'News',storyid:4639374,sectionid:44261,url:'/2/hi/americas/4639374.stm',edition:'International'});
+var bm = new BookMark({site:'News',storyid:8315685,sectionid:45341,url:'/2/hi/asia-pacific/8315624.stm',edition:'International'});
 //-->
-</script> </td> 
-             <td class="storyextra"> 
-              <div class="puffbox"> 
-               <div class="o"> 
-                <div class="mph1">
-                  FUTURE OF THE SUPREME COURT 
-                </div> 
-                <img height="5" hspace="0" vspace="0" border="0" width="1" alt="" src="http://newsimg.bbc.co.uk/shared/img/o.gif">
-                <br> 
-                <div class="nlp">
-                  KEY STORIES 
-                </div> 
-                <div class="arr"> 
-                 <a href="/2/hi/americas/4665216.stm"> Alito confirmed to US top court </a> 
-                </div> 
-                <div class="arr"> 
-                 <a href="/2/hi/americas/4600376.stm"> Senate grills Bush court nominee </a> 
-                </div> 
-                <div class="arr"> 
-                 <a href="/2/hi/americas/4395668.stm"> Democrats set for US court fight </a> 
-                </div> 
-                <div class="arr"> 
-                 <a href="/2/hi/americas/4382370.stm"> Top court nominee steps down </a> 
-                </div> 
-                <img height="1" hspace="0" vspace="3" border="0" width="203" alt="" src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif">
-                <br> 
-                <div class="nlp">
-                  BACKGROUND AND ANALYSIS 
-                </div> 
-                <img height="5" hspace="0" vspace="0" border="0" width="1" alt="" src="http://newsimg.bbc.co.uk/shared/img/o.gif">
-                <br> 
-                <a href="/2/hi/americas/4392544.stm"><img height="66" hspace="0" align="left" vspace="3" border="0" width="66" alt="Undated photo of Judge Samuel Alito" src="http://newsimg.bbc.co.uk/media/images/40965000/jpg/_40965966_alito66ap.jpg"></a> 
-                <img height="66" hspace="0" align="left" vspace="0" border="0" width="5" alt="" src="http://newsimg.bbc.co.uk/shared/img/o.gif"> 
-                <a href="/2/hi/americas/4392544.stm"> <b> Profile: Samuel Alito </b> </a> 
-                <br> 
-                <a href="/2/hi/americas/4392544.stm"> Bush's choice for the top court is seen as a staunch conservative <br clear="all"> </a> 
-                <img height="5" hspace="0" vspace="0" border="0" width="1" alt="" src="http://newsimg.bbc.co.uk/shared/img/o.gif">
-                <br> 
-                <div class="arr"> 
-                 <a href="/2/hi/americas/4382464.stm"> Deepening gloom </a> 
-                </div> 
-                <div class="arr"> 
-                 <a href="/2/hi/americas/4306552.stm"> Contentious cases ahead </a> 
-                </div> 
-                <div class="arr"> 
-                 <a href="/2/hi/americas/4626893.stm"> Supreme power of US justices </a> 
-                </div> 
-                <div class="arr"> 
-                 <a href="http://news.bbc.co.uk/2/shared/spl/hi/americas/04/us_election/govt_system/html/supreme_court.stm"> How US Supreme Court works </a> 
-                </div> 
-                <div class="arr"> 
-                 <a href="/2/hi/americas/4623119.stm"> Legacy of William Rehnquist </a> 
-                </div> 
-                <img height="1" hspace="0" vspace="3" border="0" width="203" alt="" src="http://newsimg.bbc.co.uk/shared/img/cccccc.gif">
-                <br> 
-                <div class="nlp">
-                  HAVE YOUR SAY 
-                </div> 
-                <img height="5" hspace="0" vspace="0" border="0" width="1" alt="" src="http://newsimg.bbc.co.uk/shared/img/o.gif">
-                <br> 
-                <div class="arr"> 
-                 <a href="http://newsforums.bbc.co.uk/nol/thread.jspa?threadID=132&amp;start=0&amp;edition=1&amp;ttl=20051027185023"> Alito's nomination: Your reaction </a> 
-                </div> 
-                <img height="2" hspace="0" vspace="3" border="0" width="203" alt="" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/line_hyper.gif">
-                <br> 
+</script> 
+               <div class="mvtb">
+                <table cellspacing="0" width="416" border="0" cellpadding="0">
+                 <tbody>
+                  <tr> 
+                   <td width="213"><a class="epl" onclick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/asia-pacific/8315624.stm','status=no,scrollbars=yes,resizable=yes,width=370,height=445','Mailer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/email/news.bbc.co.uk/2/hi/asia-pacific/8315624.stm" target="Mailer"> <img src="http://news.bbcimg.co.uk/nol/shared/img/v3/email.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3"> E-mail this to a friend </a></td> 
+                   <td width="203"><a class="epl" onclick="popUpPage('http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/asia-pacific/8315624.stm?ad=1','status=no,scrollbars=yes,toolbar=yes,resizable=yes,menubar=yes,width=600,height=445','Printer')" href="http://newsvote.bbc.co.uk/mpapps/pagetools/print/news.bbc.co.uk/2/hi/asia-pacific/8315624.stm?ad=1" target="Printer"> <img src="http://news.bbcimg.co.uk/nol/shared/img/v3/print.gif" align="left" width="17" height="11" alt="" border="0" vspace="0" hspace="3"> Printable version </a></td> 
+                  </tr>
+                 </tbody>
+                </table>
                </div> 
-               <img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt="">
-               <br>
-              </div> 
-              <div class="puffbox">
-               [an error occurred while processing this directive]
-               <img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt="">
-               <br>
-              </div> 
-              <div class="topStoryH"> 
-               <a class="lp" href="/2/hi/americas/default.stm">TOP AMERICAS STORIES</a> 
-              </div> 
-              <div class="arr"> 
-               <a href="/news/10596057">US lifts lid on WikiLeaks probe</a> 
-               <br> 
-              </div> 
-              <div class="arr"> 
-               <a href="/news/10626593">Iran scientist heads home</a> 
-               <br> 
-              </div> 
-              <div class="arr"> 
-               <a href="/news/10630683">Argentina legalises gay marriage</a> 
-               <br> 
-              </div> <script language="JavaScript">getRssUrlStory('/rss/newsonline_world_edition/americas/rss.xml')</script> <img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br> <img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="1" alt=""> 
-              <div id="nav1"> 
-               <div id="popStory"> 
-                <h4><a href="/2/shared/bsp/hi/live_stats/html/map.stm" class="lp">MOST POPULAR STORIES NOW</a></h4> 
+               <div id="bbccom_storyprintsponsorship" class="bbccom_display_none"> 
+                <p>Print Sponsor</p> 
+                <div>
+                 <script type="text/javascript">BBC.adverts.write("storyprintsponsorship");</script>
+                </div> 
+               </div> <script type="text/javascript">BBC.adverts.show("storyprintsponsorship");</script> 
+               <div id="bbccom_adsense_middle" class="bbccom_adsense bbccom_display_none"> 
+                <script type="text/javascript">bbc_adsense_slot = "adsense_middle";"us" == "us" ? bbc_adsense_country = "us" : bbc_adsense_country = "rest";</script> 
+                <script type="text/javascript" src="/js/app/bbccom/1.52.0/adsense_write.js"></script> 
+               </div> <script type="text/javascript">BBC.adverts.show("adsense_middle");</script> </td> 
+              <td class="storyextra"> 
+               <div id="bbccom_mpu" class="bbccom_display_none"> 
+                <script type="text/javascript">BBC.adverts.write("mpu");</script> 
+               </div> <script type="text/javascript">BBC.adverts.show("mpu");</script> <img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br> 
+               <div class="seeAlsoH">
+                 SEE ALSO 
                </div> 
-              </div> <script>
+               <div class="arr"> 
+                <a href="/2/hi/asia-pacific/8197421.stm">Indonesia poll challenge rejected</a> 
+                <br> 
+                <span class="sad"> 12 Aug 09&nbsp;|&nbsp; Asia-Pacific </span> 
+               </div> 
+               <div class="arr"> 
+                <a href="/2/hi/asia-pacific/8166409.stm">Indonesian leader wins election</a> 
+                <br> 
+                <span class="sad"> 24 Jul 09&nbsp;|&nbsp; Asia-Pacific </span> 
+               </div> 
+               <div class="arr"> 
+                <a href="/2/hi/asia-pacific/8136996.stm">Indonesia relaxes voter registry</a> 
+                <br> 
+                <span class="sad"> 06 Jul 09&nbsp;|&nbsp; Asia-Pacific </span> 
+               </div> 
+               <div class="arr"> 
+                <a href="/2/hi/asia-pacific/8042095.stm">Democrats win Indonesia election</a> 
+                <br> 
+                <span class="sad"> 09 May 09&nbsp;|&nbsp; Asia-Pacific </span> 
+               </div> 
+               <div class="arr"> 
+                <a href="/2/hi/asia-pacific/country_profiles/1260544.stm">Indonesia country profile</a> 
+                <br> 
+                <span class="sad"> 29 Sep 11&nbsp;|&nbsp; Country profiles </span> 
+               </div> 
+               <div class="arr"> 
+                <a href="/2/hi/asia-pacific/country_profiles/1260546.stm">Indonesia timeline</a> 
+                <br> 
+                <span class="sad"> 16 Aug 11&nbsp;|&nbsp; Country profiles </span> 
+               </div> <img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br> 
+               <div class="nlp">
+                 RELATED BBC LINKS 
+               </div> 
+               <div class="arr"> 
+                <a href="http://www.bbc.co.uk/indonesian/"> BBC News in Indonesian </a> 
+               </div> <img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="1" height="5" alt=""><br> 
+               <div class="nlp">
+                 RELATED INTERNET LINKS 
+               </div> 
+               <div class="arr"> 
+                <a href="http://www.indonesia.go.id/"> Indonesian Government </a> 
+               </div> 
+               <div class="arr"> 
+                <a href="http://www.kpu.go.id/front.php"> General Election Commission </a> 
+               </div> 
+               <div class="di">
+                 The BBC is not responsible for the content of external internet sites 
+               </div> <img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br> 
+               <div class="puffbox"> 
+                <!-- S BO --> 
+                <!-- S IINC --> 
+                <!-- newstracker puffbox news 8315624 --> 
+                <!-- E IINC --> 
+                <!-- E BO --> 
+                <img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="1" height="10" alt="">
+                <br>
+               </div> 
+               <!-- top stories --> <img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="1" height="10" alt=""><br> <img src="http://newsimg.bbc.co.uk/shared/img/o.gif" width="1" height="1" alt=""> 
+               <div id="nav1"> 
+                <div id="popStory"> 
+                 <h4><a href="/2/shared/bsp/hi/live_stats/html/map.stm" class="lp">MOST POPULAR STORIES NOW</a></h4> 
+                </div> 
+               </div> <script>
 	function liveStatsTabs(newTab,oldTab) {
 	
 	if (document.getElementById)
@@ -673,124 +945,124 @@ var bm = new BookMark({site:'News',storyid:4639374,sectionid:44261,url:'/2/hi/am
 	}
 	}
 </script> 
-              <div id="livestats100" class="statsStory"> 
-               <ul class="tabpopStory"> 
-                <li id="livestats101" class="tabpopHead">SHARED</li> 
-                <li id="livestats102"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats200','livestats100')">READ</a></li> 
-                <li id="livestats103"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats300','livestats100')">WATCHED/LISTENED</a></li> 
-               </ul> 
-               <ul class="popstoryList"> 
-                <li class="mp2"> <a href="http://www.bbc.co.uk/2/hi/programmes/from_our_own_correspondent/8587838.stm">Tourists flock to 'Jesus's tomb' in Kashmir</a> </li> 
-               </ul> 
-               <a href="/1/shared/bsp/hi/live_stats/html/map.stm" class="arr">Most popular now, in detail </a> 
-              </div> 
-              <div id="livestats200" class="statsStory"> 
-               <ul class="tabpopStory"> 
-                <li id="livestats201"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats100','livestats200')">SHARED</a></li> 
-                <li id="livestats202" class="tabpopHead">READ</li> 
-                <li id="livestats203"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats300','livestats200')">WATCHED/LISTENED</a></li> 
-               </ul> 
-               <ul class="popstoryList"> 
-                <li class="mp1"> <a href="http://www.bbc.co.uk/news/uk-england-devon-40364632">BBC News</a> </li> 
-                <li class="mp2"> <a href="http://www.bbc.co.uk/news/uk-40366646">BBC News</a> </li> 
-                <li class="mp3"> <a href="http://www.bbc.co.uk/news/world-europe-40362094">BBC News</a> </li> 
-                <li class="mp4"> <a href="http://www.bbc.co.uk/news/uk-40363063">BBC News</a> </li> 
-                <li class="mp5"> <a href="http://www.bbc.co.uk/news/world-middle-east-40363671">BBC News</a> </li> 
-                <li class="mp6"> <a href="http://www.bbc.co.uk/news/technology-40366816">BBC News</a> </li> 
-                <li class="mp7"> <a href="http://www.bbc.co.uk/news/uk-england-birmingham-40364821">BBC News</a> </li> 
-                <li class="mp8"> <a href="http://www.bbc.co.uk/news/world-asia-china-40363281">BBC News</a> </li> 
-                <li class="mp9"> <a href="http://www.bbc.co.uk/news/world-us-canada-40363390">BBC News</a> </li> 
-                <li class="mp10"> <a href="http://www.bbc.co.uk/news/world-africa-40365245">BBC News</a> </li> 
-               </ul> 
-               <a href="/1/shared/bsp/hi/live_stats/html/map.stm" class="arr">Most popular now, in detail </a> 
-              </div> 
-              <div id="livestats300" class="statsStory"> 
-               <ul class="tabpopStory"> 
-                <li id="livestats301"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats100','livestats300')">SHARED</a></li> 
-                <li id="livestats302"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats200','livestats300')">READ</a></li> 
-                <li id="livestats303" class="tabpopHead">WATCHED/LISTENED</li> 
-               </ul> 
-               <ul class="popstoryList"> 
-                <li class="mp1"> <a href="http://www.bbc.co.uk/news/av/uk-40358825/boris-johnson-struggles-in-interview"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
-                <li class="mp2"> <a href="http://www.bbc.co.uk/news/av/world-us-canada-40362067/north-america-prepares-for-august-solar-eclipse"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
-                <li class="mp3"> <a href="http://www.bbc.co.uk/news/av/world-australia-40365981/koalas-facing-extinction-in-some-australian-states"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
-                <li class="mp4"> <a href="http://www.bbc.co.uk/news/av/uk-england-40058866/the-rise-of-the-female-fitness-model"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
-                <li class="mp5"> <a href="http://www.bbc.co.uk/news/av/uk-40358672/theresa-may-apologises-grenfell-response-not-good-enough"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
-                <li class="mp6"> <a href="http://www.bbc.co.uk/news/av/uk-england-beds-bucks-herts-40282863/airlander-10-world-s-longest-aircraft-hits-highest-altitude"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
-                <li class="mp7"> <a href="http://www.bbc.co.uk/news/av/world-asia-40360168/devil-wheel-rider-it-makes-me-happy"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">Indonesia's female 'devil wheel' riders</a> </li> 
-                <li class="mp8"> <a href="http://www.bbc.co.uk/news/av/uk-scotland-40354153/doddie-weir-will-call-me-a-big-jessie-says-tearful-brian-whittle"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
-                <li class="mp9"> <a href="http://www.bbc.co.uk/news/av/uk-40368427/grenfell-cladding-used-on-tottenham-tower-block"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
-                <li class="mp10"> <a href="http://www.bbc.co.uk/news/av/uk-england-suffolk-40362922/oocl-hong-kong-felixstowe-port-welcomes-world-s-biggest-ship"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
-               </ul> 
-               <a href="/2/shared/bsp/hi/live_stats/html/map.stm" class="arr">Most popular now, in detail </a> 
-              </div> 
-              <div class="clear"></div> <script>
+               <div id="livestats100" class="statsStory"> 
+                <ul class="tabpopStory"> 
+                 <li id="livestats101" class="tabpopHead">SHARED</li> 
+                 <li id="livestats102"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats200','livestats100')">READ</a></li> 
+                 <li id="livestats103"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats300','livestats100')">WATCHED/LISTENED</a></li> 
+                </ul> 
+                <ul class="popstoryList"> 
+                 <li class="mp2"> <a href="http://www.bbc.co.uk/2/hi/programmes/from_our_own_correspondent/8587838.stm">Tourists flock to 'Jesus's tomb' in Kashmir</a> </li> 
+                </ul> 
+                <a href="/1/shared/bsp/hi/live_stats/html/map.stm" class="arr">Most popular now, in detail </a> 
+               </div> 
+               <div id="livestats200" class="statsStory"> 
+                <ul class="tabpopStory"> 
+                 <li id="livestats201"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats100','livestats200')">SHARED</a></li> 
+                 <li id="livestats202" class="tabpopHead">READ</li> 
+                 <li id="livestats203"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats300','livestats200')">WATCHED/LISTENED</a></li> 
+                </ul> 
+                <ul class="popstoryList"> 
+                 <li class="mp1"> <a href="http://www.bbc.co.uk/news/uk-england-devon-40364632">BBC News</a> </li> 
+                 <li class="mp2"> <a href="http://www.bbc.co.uk/news/uk-40366646">BBC News</a> </li> 
+                 <li class="mp3"> <a href="http://www.bbc.co.uk/news/world-europe-40362094">BBC News</a> </li> 
+                 <li class="mp4"> <a href="http://www.bbc.co.uk/news/uk-40363063">BBC News</a> </li> 
+                 <li class="mp5"> <a href="http://www.bbc.co.uk/news/world-middle-east-40363671">BBC News</a> </li> 
+                 <li class="mp6"> <a href="http://www.bbc.co.uk/news/technology-40366816">BBC News</a> </li> 
+                 <li class="mp7"> <a href="http://www.bbc.co.uk/news/uk-england-birmingham-40364821">BBC News</a> </li> 
+                 <li class="mp8"> <a href="http://www.bbc.co.uk/news/world-asia-china-40363281">BBC News</a> </li> 
+                 <li class="mp9"> <a href="http://www.bbc.co.uk/news/world-us-canada-40363390">BBC News</a> </li> 
+                 <li class="mp10"> <a href="http://www.bbc.co.uk/news/world-africa-40365245">BBC News</a> </li> 
+                </ul> 
+                <a href="/1/shared/bsp/hi/live_stats/html/map.stm" class="arr">Most popular now, in detail </a> 
+               </div> 
+               <div id="livestats300" class="statsStory"> 
+                <ul class="tabpopStory"> 
+                 <li id="livestats301"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats100','livestats300')">SHARED</a></li> 
+                 <li id="livestats302"><a href="/2/shared/bsp/hi/live_stats/html/map.stm" onclick="return liveStatsTabs('livestats200','livestats300')">READ</a></li> 
+                 <li id="livestats303" class="tabpopHead">WATCHED/LISTENED</li> 
+                </ul> 
+                <ul class="popstoryList"> 
+                 <li class="mp1"> <a href="http://www.bbc.co.uk/news/av/uk-40358825/boris-johnson-struggles-in-interview"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
+                 <li class="mp2"> <a href="http://www.bbc.co.uk/news/av/world-us-canada-40362067/north-america-prepares-for-august-solar-eclipse"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
+                 <li class="mp3"> <a href="http://www.bbc.co.uk/news/av/world-australia-40365981/koalas-facing-extinction-in-some-australian-states"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
+                 <li class="mp4"> <a href="http://www.bbc.co.uk/news/av/uk-england-40058866/the-rise-of-the-female-fitness-model"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
+                 <li class="mp5"> <a href="http://www.bbc.co.uk/news/av/uk-40358672/theresa-may-apologises-grenfell-response-not-good-enough"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
+                 <li class="mp6"> <a href="http://www.bbc.co.uk/news/av/uk-england-beds-bucks-herts-40282863/airlander-10-world-s-longest-aircraft-hits-highest-altitude"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
+                 <li class="mp7"> <a href="http://www.bbc.co.uk/news/av/world-asia-40360168/devil-wheel-rider-it-makes-me-happy"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">Indonesia's female 'devil wheel' riders</a> </li> 
+                 <li class="mp8"> <a href="http://www.bbc.co.uk/news/av/uk-scotland-40354153/doddie-weir-will-call-me-a-big-jessie-says-tearful-brian-whittle"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
+                 <li class="mp9"> <a href="http://www.bbc.co.uk/news/av/uk-40368427/grenfell-cladding-used-on-tottenham-tower-block"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
+                 <li class="mp10"> <a href="http://www.bbc.co.uk/news/av/uk-england-suffolk-40362922/oocl-hong-kong-felixstowe-port-welcomes-world-s-biggest-ship"> <img height="13" hspace="0" align="left" vspace="2" border="0" width="20" alt="video" src="http://newsimg.bbc.co.uk/nol/shared/img/v3/icons/video_single.gif">BBC News</a> </li> 
+                </ul> 
+                <a href="/2/shared/bsp/hi/live_stats/html/map.stm" class="arr">Most popular now, in detail </a> 
+               </div> 
+               <div class="clear"></div> <script>
 	liveStatsTabs('livestats200','livestats100');
 	liveStatsTabs('livestats200','livestats300');
 </script> </td> 
-            </tr> 
-            <tr>
-             <td colspan="3"> 
-              <div class="o"> 
-               <table cellspacing="0" border="0" cellpadding="0" width="466"> 
-                <tbody>
-                 <tr> 
-                  <td valign="top" class="gpromo" width="10"><img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
-                  <td valign="top" width="446"> 
-                   <div class="promotopbg"> 
-                    <div class="nlp">
-                      FEATURES, VIEWS, ANALYSIS 
+             </tr> 
+             <tr>
+              <td colspan="3"> 
+               <div class="o"> 
+                <table cellspacing="0" border="0" cellpadding="0" width="466"> 
+                 <tbody>
+                  <tr> 
+                   <td valign="top" class="gpromo" width="10"><img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+                   <td valign="top" width="446"> 
+                    <div class="promotopbg"> 
+                     <div class="nlp">
+                       FEATURES, VIEWS, ANALYSIS 
+                     </div> 
                     </div> 
-                   </div> 
-                   <table cellspacing="0" border="0" cellpadding="0" width="446"> 
-                    <tbody>
-                     <tr> 
-                      <td valign="top" width="126"> 
-                       <div class="promobottombg"> 
-                        <div class="mvb"> 
-                         <a href="http://www.bbc.co.uk/news/magazine-17390729"><img src="http://news.bbcimg.co.uk/media/images/59123000/jpg/_59123716_125673327_ordos_horses_afp_144.jpg" align="" width="126" height="70" alt="Horses sculpture in memory of Genghis Khan, Ordos, Inner Mongolia" border="0" vspace="0" hspace="0"></a> 
-                         <a class="shl" href="http://www.bbc.co.uk/news/magazine-17390729">Ghost town</a> 
-                         <br> 
-                        </div> 
-                        <div class="o">
-                          Has China's housing bubble burst? 
-                        </div> 
-                       </div> </td>
-                      <td valign="top" class="gpromo" width="34"><img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="34" height="1" alt="" border="0" vspace="0" hspace="0"></td>
-                      <td valign="top" width="126"> 
-                       <div class="promobottombg"> 
-                        <div class="mvb"> 
-                         <a href="http://www.bbc.co.uk/news/magazine-18551857"><img src="http://news.bbcimg.co.uk/media/images/61082000/jpg/_61082421_swatafo_worrall.jpg" align="" width="126" height="70" alt="Afo - the world's oldest clove tree " border="0" vspace="0" hspace="0"></a> 
-                         <a class="shl" href="http://www.bbc.co.uk/news/magazine-18551857">The guerilla plant </a> 
-                         <br> 
-                        </div> 
-                        <div class="o">
-                          How the world's oldest clove tree defied an empire 
-                        </div> 
-                       </div> </td>
-                      <td valign="top" class="gpromo" width="34"><img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="34" height="1" alt="" border="0" vspace="0" hspace="0"></td>
-                      <td valign="top" width="126"> 
-                       <div class="promobottombg"> 
-                        <div class="mvb"> 
-                         <a href="/2/hi/programmes/newsnight/9705123.stm"><img src="http://news.bbcimg.co.uk/media/images/59091000/jpg/_59091876_bbcsergeilook.jpg" align="" width="126" height="71" alt="Sergei Polunin" border="0" vspace="0" hspace="0"></a> 
-                         <a class="shl" href="/2/hi/programmes/newsnight/9705123.stm">Walking away</a> 
-                         <br> 
-                        </div> 
-                        <div class="o">
-                          Why Royal Ballet principal Sergei Polunin quit 
-                        </div> 
-                       </div> </td> 
-                     </tr> 
-                    </tbody>
-                   </table> </td>
-                  <td valign="top" class="gpromo" width="10"><img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td> 
-                 </tr> 
-                </tbody>
-               </table> 
-               <img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="466" height="20" alt="" border="0"> 
-               <!-- S BO --> 
-               <!-- S IINC -->
-               <script language="JavaScript">
+                    <table cellspacing="0" border="0" cellpadding="0" width="446"> 
+                     <tbody>
+                      <tr> 
+                       <td valign="top" width="126"> 
+                        <div class="promobottombg"> 
+                         <div class="mvb"> 
+                          <a href="http://www.bbc.co.uk/news/magazine-17390729"><img src="http://news.bbcimg.co.uk/media/images/59123000/jpg/_59123716_125673327_ordos_horses_afp_144.jpg" align="" width="126" height="70" alt="Horses sculpture in memory of Genghis Khan, Ordos, Inner Mongolia" border="0" vspace="0" hspace="0"></a> 
+                          <a class="shl" href="http://www.bbc.co.uk/news/magazine-17390729">Ghost town</a> 
+                          <br> 
+                         </div> 
+                         <div class="o">
+                           Has China's housing bubble burst? 
+                         </div> 
+                        </div> </td>
+                       <td valign="top" class="gpromo" width="34"><img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="34" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+                       <td valign="top" width="126"> 
+                        <div class="promobottombg"> 
+                         <div class="mvb"> 
+                          <a href="http://www.bbc.co.uk/news/magazine-18551857"><img src="http://news.bbcimg.co.uk/media/images/61082000/jpg/_61082421_swatafo_worrall.jpg" align="" width="126" height="70" alt="Afo - the world's oldest clove tree " border="0" vspace="0" hspace="0"></a> 
+                          <a class="shl" href="http://www.bbc.co.uk/news/magazine-18551857">The guerilla plant </a> 
+                          <br> 
+                         </div> 
+                         <div class="o">
+                           How the world's oldest clove tree defied an empire 
+                         </div> 
+                        </div> </td>
+                       <td valign="top" class="gpromo" width="34"><img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="34" height="1" alt="" border="0" vspace="0" hspace="0"></td>
+                       <td valign="top" width="126"> 
+                        <div class="promobottombg"> 
+                         <div class="mvb"> 
+                          <a href="/2/hi/programmes/newsnight/9705123.stm"><img src="http://news.bbcimg.co.uk/media/images/59091000/jpg/_59091876_bbcsergeilook.jpg" align="" width="126" height="71" alt="Sergei Polunin" border="0" vspace="0" hspace="0"></a> 
+                          <a class="shl" href="/2/hi/programmes/newsnight/9705123.stm">Walking away</a> 
+                          <br> 
+                         </div> 
+                         <div class="o">
+                           Why Royal Ballet principal Sergei Polunin quit 
+                         </div> 
+                        </div> </td> 
+                      </tr> 
+                     </tbody>
+                    </table> </td>
+                   <td valign="top" class="gpromo" width="10"><img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="10" height="1" alt="" border="0" vspace="0" hspace="0"></td> 
+                  </tr> 
+                 </tbody>
+                </table> 
+                <img src="http://news.bbcimg.co.uk/shared/img/o.gif" width="466" height="20" alt="" border="0"> 
+                <!-- S BO --> 
+                <!-- S IINC -->
+                <script language="JavaScript">
 <!--
 
 function randomLiveStats(){
@@ -812,24 +1084,25 @@ document.write('<div class="mostpopular"><span class="now"><a href="/1/shared/bs
 randomLiveStats();
 //-->
 </script> 
-               <noscript> 
-                <div class="mostpopular">
-                 <span class="now"><a href="/1/shared/bsp/hi/live_stats/html/map.stm">Most Popular Now</a></span>
-                 <p class="section"><a href="/1/shared/bsp/hi/live_stats/html/map.stm" class="now">Most Popular Now</a> | <a href="/1/shared/bsp/hi/live_stats/html/map.stm?lsf">56,514 people are reading stories on the site right now.</a>";</p>
-                 <div class="clear"></div>
-                </div> 
-               </noscript> 
-               <!-- E IINC --> 
-               <!-- E BO --> 
-               <img src="http://news.bbcimg.co.uk/shared/img/ffffff.gif" width="466" height="20" alt="" border="0">
-               <br> 
-              </div> </td>
-            </tr> 
-           </tbody>
-          </table> </td> 
-        </tr> 
-       </tbody>
-      </table> 
+                <noscript> 
+                 <div class="mostpopular">
+                  <span class="now"><a href="/1/shared/bsp/hi/live_stats/html/map.stm">Most Popular Now</a></span>
+                  <p class="section"><a href="/1/shared/bsp/hi/live_stats/html/map.stm" class="now">Most Popular Now</a> | <a href="/1/shared/bsp/hi/live_stats/html/map.stm?lsf">56,514 people are reading stories on the site right now.</a>";</p>
+                  <div class="clear"></div>
+                 </div> 
+                </noscript> 
+                <!-- E IINC --> 
+                <!-- E BO --> 
+                <img src="http://news.bbcimg.co.uk/shared/img/ffffff.gif" width="466" height="20" alt="" border="0">
+                <br> 
+               </div> </td>
+             </tr> 
+            </tbody>
+           </table> </td> 
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
       <!-- v4 ifs services /shared/ --> 
       <div class="blq-toplink">
        <a href="#blq-main"><span>Skip to top</span></a>
@@ -857,7 +1130,7 @@ randomLiveStats();
        </div> 
       </div> 
       <form method="get" id="blq-search-form" action="http://search.bbc.co.uk/search" accept-charset="utf-8"> 
-       <p id="blq-nav-search"> <input type="hidden" name="go" value="toolbar"> <input type="hidden" value="http://news.bbc.co.uk/2/hi/americas/4639374.stm" name="uri"> <label for="blq-search" class="blq-hide">Search term:</label> <input id="blq-search" type="text" name="q" value="" maxlength="128"> <input id="blq-search-btn" type="submit" value="Search"> </p> 
+       <p id="blq-nav-search"> <input type="hidden" name="go" value="toolbar"> <input type="hidden" value="http://news.bbc.co.uk/2/hi/asia-pacific/8315624.stm" name="uri"> <label for="blq-search" class="blq-hide">Search term:</label> <input id="blq-search" type="text" name="q" value="" maxlength="128"> <input id="blq-search-btn" type="submit" value="Search"> </p> 
       </form> 
       <h2 class="blq-hide">BBC navigation</h2> 
       <ul id="blq-nav-main"> 
@@ -1012,6 +1285,15 @@ randomLiveStats();
     /*]]>*/
 </script> 
     <!-- End Effective Measure --> 
+    <!-- BBCCOM-5234 Outbrain Tracking --> 
+    <div class="OUTBRAIN" data-src="http://news.bbc.co.uk/2/hi/asia-pacific/8315624.stm" data-widget-id="TR_1" data-ob-template="BBC.com/News"></div> 
+    <script type="text/javascript">
+            /*<![CDATA[*/
+            if (BBC.adverts.isActive('ads') && BBC.adverts.isActive('analytics')) {
+                document.write(unescape('%3Cscript src="http://widgets.outbrain.com/outbrain.js" type="text/javascript"%3E%3C/script%3E'));
+            }
+            /*]]>*/
+        </script> 
     <!-- BBCDOTCOM Body Last --> 
    </div> 
    <script type="text/javascript"> if (typeof require !== 'undefined') { require(['istats-1'], function(istats){ istats.track('external', { region: document.getElementById('blq-main') }); istats.track('download', { region: document.getElementById('blq-main') }); }); } </script> 
@@ -1022,9 +1304,9 @@ randomLiveStats();
 	</script> 
    <map name="world_map" id="world_map"> <area alt="Americas" coords="0,0,34,53" href="/2/hi/americas/default.stm"> <area alt="Africa" shape="poly" coords="37,25,37,51,52,51,52,33,48,33,48,31,40,31" href="/2/hi/africa/default.stm"> <area alt="Europe" shape="poly" coords="35,2,66,2,66,12,56,12,56,20,37,20" href="/1/hi/europe/default.stm"> <area alt="Middle East" shape="poly" coords="44,24,57,24,58,50,55,50,55,31,52,28,44,28" href="/1/hi/middle_east/default.stm"> <area alt="South Asia" coords="60,24,67,49" href="/1/hi/south_asia/default.stm"> <area alt="Asia Pacific" shape="poly" coords="71,2,89,3,88,51,69,51,69,20,62,20,62,16,71,16" href="/1/hi/asia-pacific/default.stm"> </map> 
    <!-- 
-host:nolweb010.wtf.nolcontent.net
+host:nolweb113.lhc.nolcontent.net
 Site_To_Serve:news
-Section_Path:/americas 
+Section_Path:/asia-pacific 
 blq_web_service:on
 blq_webservice_release:r62
 blq_webservice_variant:journalism
