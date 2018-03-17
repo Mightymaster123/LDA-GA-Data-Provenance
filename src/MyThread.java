@@ -10,31 +10,33 @@ public class MyThread implements Runnable {
 	private int thread_index;
 	private PopulationConfig population_cfg;
 	private int population_index;
-	private TopicModelling tm;
 	private int numberOfDocuments;
 	private boolean original_version;
 
-	public MyThread(int _thread_index, PopulationConfig _population_cfg, int _population_index, TopicModelling tm, int numberOfDocuments, boolean _original_version) {
+	public MyThread(int _thread_index, PopulationConfig _population_cfg, int _population_index, int numberOfDocuments, boolean _original_version) {
 		thread_index = _thread_index;// thread index on one machine
 		population_cfg = _population_cfg;
 		population_index = _population_index;
-		this.tm = tm;
 		this.numberOfDocuments = numberOfDocuments;
 		original_version = _original_version;
 	}
 
 	public void run() {
 		try {
+			// create an instance of the topic modelling class
+			TopicModelling tm = new TopicModelling();
+			
 			if (!original_version && population_cfg.fitness_value > 0.0f) {
 				// we have already got the fitness value. For example: this is one of the best
 				// chromosomes in last round
 				System.out.println("New thread " + thread_index + ": Use one of the best chromosomes in last round. Don't have to call LDA algorithm again. " + population_cfg.to_string() + "  ************************************************");
+				population_cfg.LDA_execution_milliseconds = -1;
 				return;
 			}
 			System.out.println((original_version ? "Original" : "New") + " thread " + thread_index + " start running " + population_cfg.to_string());
 
 			// invoke the LDA function
-			tm.LDA(population_cfg.number_of_topics, population_cfg.number_of_iterations, false, population_index, original_version);
+			tm.LDA(population_cfg, false, population_index, original_version);
 
 			// clustermatrix - matrix explaining the distribution of documents into
 			// different topics

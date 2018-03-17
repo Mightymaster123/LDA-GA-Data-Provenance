@@ -371,7 +371,7 @@ public class DataProvenance {
 
 	public ResultStatistics run(boolean original_version) {
 		ResultStatistics result = null;
-
+		System.gc();
 		long startTime = System.currentTimeMillis();
 
 		// pass the stop words list as the parameter. Stop words are useless
@@ -443,8 +443,7 @@ public class DataProvenance {
 
 		// Outputs the time it took to finish the genetic algorithm
 		long geneticEndTime = System.currentTimeMillis();
-		result.genetic_milliseconds = geneticEndTime - preprocessEndTime;
-		System.out.println("Genetic algorithm takes " + result.genetic_milliseconds + "ms");
+		System.out.println("Genetic algorithm takes " + (geneticEndTime - preprocessEndTime) + "ms");
 
 		if (NetworkManager.getInstance().isMaster()) {
 			// create clusters based on the distribution.txt

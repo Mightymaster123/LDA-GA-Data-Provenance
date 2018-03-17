@@ -12,7 +12,7 @@ import com.google.common.collect.Multimap;
 public class geneticLogic {
 
 	public static final int THREADS_PER_MACHINE = 6;
-	public static final double FITNESS_THRESHHOLD = 0.192;
+	public static final double FITNESS_THRESHHOLD = 0.292;
 
 	public boolean isRunning = true;
 	private PopulationConfig[] mInitialPopulation = null;
@@ -63,9 +63,6 @@ public class geneticLogic {
 				PopulationConfig[] subPopulation = new PopulationConfig[THREADS_PER_MACHINE];
 				for (int j = 0; j < THREADS_PER_MACHINE; ++j) {
 					subPopulation[j] = mInitialPopulation[THREADS_PER_MACHINE * (iSlave + 1) + j];
-					if (subPopulation[j].fitness_value <= 0.0f) {
-						++result.LDA_call_count;
-					}
 				}
 				if (!NetworkManager.getInstance().sendProtocol_ProcessSubPopulationNew(iSlave, subPopulation)) {
 					error = true;
@@ -80,16 +77,11 @@ public class geneticLogic {
 			 * and add the folder path here.
 			 */
 			int numberOfDocuments = new File("txtData").listFiles().length;
-			// create an instance of the topic modelling class
-			TopicModelling tm = new TopicModelling();
 
 			Thread threads[] = new Thread[THREADS_PER_MACHINE];
 			for (int i = 0; i < THREADS_PER_MACHINE; i++) {
 				int population_index = THREADS_PER_MACHINE * (NetworkManager.getInstance().getMyMachineID() + 1) + i;
-				if (mInitialPopulation[population_index].fitness_value <= 0.0f) {
-					++result.LDA_call_count;
-				}
-				threads[i] = new Thread(new MyThread(i, mInitialPopulation[population_index], population_index, tm, numberOfDocuments, false));
+				threads[i] = new Thread(new MyThread(i, mInitialPopulation[population_index], population_index, numberOfDocuments, false));
 				// System.out.println("Thread " + i + " begin start...");
 				threads[i].start();
 				// System.out.println("Thread " + i + " end start...");
@@ -105,6 +97,10 @@ public class geneticLogic {
 			while (mFinishedSlaveCount < NetworkManager.getInstance().getSlaveCount() && isRunning) {
 				NetworkManager.getInstance().dispatchProtocols();
 				Thread.sleep(1);
+			}
+			for(int i=0; i<mInitialPopulation.length; ++i)
+			{
+				result.OnLDAFinish(mInitialPopulation[i]);
 			}
 
 			if (!isRunning) {
@@ -138,10 +134,12 @@ public class geneticLogic {
 						if (maxFitness > FITNESS_THRESHHOLD) {
 							// run the function again to get the words in each topic
 							// the third parameter states that the topics are to be written to a file
-							++result.LDA_call_count;
-							tm.LDA(mInitialPopulation[j].number_of_topics, mInitialPopulation[j].number_of_iterations, true, false);
+							// create an instance of the topic modelling class
+							TopicModelling tm = new TopicModelling();
+							tm.LDA(mInitialPopulation[j], true, false);
 							System.out.println("The best distribution is: " + mInitialPopulation[j].to_string());
 							result.cfg = mInitialPopulation[j];
+							result.OnLDAFinish(result.cfg);
 							maxFitnessFound = true;
 							break;
 						}
@@ -293,15 +291,13 @@ public class geneticLogic {
 		 * and add the folder path here.
 		 */
 		int numberOfDocuments = new File("txtData").listFiles().length;
-		// create an instance of the topic modelling class
-		TopicModelling tm = new TopicModelling();
 
 		long startTime = System.currentTimeMillis();
 
 		Thread threads[] = new Thread[subPopulation.length];
 		for (int i = 0; i < subPopulation.length; i++) {
 			int population_index = THREADS_PER_MACHINE * (NetworkManager.getInstance().getMyMachineID() + 1) + i;
-			threads[i] = new Thread(new MyThread(i, subPopulation[i], population_index, tm, numberOfDocuments, false));
+			threads[i] = new Thread(new MyThread(i, subPopulation[i], population_index, numberOfDocuments, false));
 			// System.out.println("Thread " + i + " begin start...");
 			threads[i].start();
 			// System.out.println("Thread " + i + " end start...");

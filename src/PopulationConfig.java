@@ -4,20 +4,17 @@ public class PopulationConfig implements java.io.Serializable{
 	public int number_of_topics;
 	public int number_of_iterations;
 	public double fitness_value;
+	public long LDA_execution_milliseconds;
 	
 	public PopulationConfig() {
 	}
 	
-	public PopulationConfig(int _number_of_topics, int _number_of_iterations, double _fitness_value) {
-		number_of_topics = _number_of_topics;
-		number_of_iterations = _number_of_iterations;
-		fitness_value = _fitness_value;
-	}
 
 	public void copy(PopulationConfig rhs) {
 		number_of_topics = rhs.number_of_topics;
 		number_of_iterations = rhs.number_of_iterations;
 		fitness_value = rhs.fitness_value;
+		LDA_execution_milliseconds = rhs.LDA_execution_milliseconds;
 	}
 	
 	public void random()
@@ -40,7 +37,7 @@ public class PopulationConfig implements java.io.Serializable{
 	
 	public String to_string()
 	{
-		String str = "number_of_topics: " + number_of_topics + "  number_of_iterations:" + number_of_iterations + "  fitness_value:" + fitness_value;
+		String str = "number_of_topics:" + number_of_topics + "  number_of_iterations:" + number_of_iterations + "  fitness_value:" + fitness_value;
 		return str;
 	}
 	

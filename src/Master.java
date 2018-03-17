@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Master implements NetworkManager.ReceivedProtocolHandler{
 
-	static final int CHECK_COUNT = 1;
+	static final int CHECK_COUNT = 2;
 	
 	private DataProvenance mDataProvenance = null;
 	
@@ -30,6 +30,7 @@ public class Master implements NetworkManager.ReceivedProtocolHandler{
 			mDataProvenance = new DataProvenance();
 			listResultOriginal.add(mDataProvenance.run(true));
 			NetworkManager.getInstance().sendProtocol_StopAllSlaves();
+			mDataProvenance = null;
 		}
 		ArrayList<ResultStatistics> listResultNew = new ArrayList<ResultStatistics>(CHECK_COUNT);
 		for (int i = 0; i < CHECK_COUNT; ++i) {
@@ -37,6 +38,7 @@ public class Master implements NetworkManager.ReceivedProtocolHandler{
 			mDataProvenance = new DataProvenance();
 			listResultNew.add(mDataProvenance.run(false));
 			NetworkManager.getInstance().sendProtocol_StopAllSlaves();
+			mDataProvenance = null;
 		}
 		mDataProvenance = null;
 		NetworkManager.getInstance().sendProtocol_ShutdownProcess();

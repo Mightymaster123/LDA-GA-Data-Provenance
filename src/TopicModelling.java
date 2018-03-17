@@ -11,9 +11,13 @@ import java.io.*;
 public class TopicModelling {
 
 	// public static void main(String[] args) throws IOException {
-	public void LDA(int numberOfTopics, int numberOfIterations, boolean topicFile, boolean original_version) throws IOException {
-		// TODO Auto-generated method stub
-
+	public void LDA(PopulationConfig cfg, boolean topicFile, boolean original_version) throws IOException {
+		if(cfg==null)
+		{
+			return;
+		}
+		final long startTime = System.currentTimeMillis();
+		
 		// import documents from the texts to Mallet format
 		ArrayList<Pipe> pipeList = new ArrayList<Pipe>();
 
@@ -47,8 +51,7 @@ public class TopicModelling {
 			// Create a model with 100 topics, alpha_t = 0.01, beta_w = 0.01
 			// Note that the first parameter is passed as the sum over topics, while
 			// the second is the parameter for a single dimension of the Dirichlet prior.
-			int numTopics = numberOfTopics;
-			ParallelTopicModel model = new ParallelTopicModel(numTopics, 0.01, 0.01);
+			ParallelTopicModel model = new ParallelTopicModel(cfg.number_of_topics, 0.01, 0.01);
 
 			model.addInstances(instances);
 
@@ -58,7 +61,7 @@ public class TopicModelling {
 
 			// Run the model for 50 iterations and stop (this is for testing only,
 			// for real applications, use 1000 to 2000 iterations)
-			model.setNumIterations(numberOfIterations);
+			model.setNumIterations(cfg.number_of_iterations);
 			model.estimate();
 			// Show the words and topics in the first instance
 
@@ -68,10 +71,8 @@ public class TopicModelling {
 			// The data alphabet maps word IDs to strings
 			Alphabet dataAlphabet = instances.getDataAlphabet();
 
-			FeatureSequence tokens = (FeatureSequence) model.getData().get(0).instance.getData();
-			LabelSequence topics = model.getData().get(0).topicSequence;
-
-			Formatter out = new Formatter(new StringBuilder(), Locale.US);
+			//FeatureSequence tokens = (FeatureSequence) model.getData().get(0).instance.getData();
+			//LabelSequence topics = model.getData().get(0).topicSequence;
 
 			// Estimate the topic distribution of the first instance,
 			// given the current Gibbs state.
@@ -83,10 +84,10 @@ public class TopicModelling {
 			// writing the topics to the file if topicFile is true
 			if (topicFile == true) {
 
-				out = new Formatter("topic.txt");
+				Formatter out = new Formatter("topic.txt");
 
 				// Show top 5 words in topics with proportions for the first document
-				for (int topic = 0; topic < numTopics; topic++) {
+				for (int topic = 0; topic < cfg.number_of_topics; topic++) {
 					Iterator<IDSorter> iterator = topicSortedWords.get(topic).iterator();
 
 					// out = new Formatter(new StringBuilder(), Locale.US);
@@ -115,6 +116,7 @@ public class TopicModelling {
 				fileInputStream = null;
 			}
 		}
+		cfg.LDA_execution_milliseconds = System.currentTimeMillis() - startTime;
 
 		// Create a new instance with high probability of topic 0
 		/*
@@ -137,8 +139,12 @@ public class TopicModelling {
 		 */
 	}
 
-	public void LDA(int numberOfTopics, int numberOfIterations, boolean topicFile, int distribution_index, boolean original_version) throws IOException {
-		// TODO Auto-generated method stub
+	public void LDA(PopulationConfig cfg, boolean topicFile, int distribution_index, boolean original_version) throws IOException {
+		if(cfg==null)
+		{
+			return;
+		}
+		final long startTime = System.currentTimeMillis();
 
 		// import documents from the texts to Mallet format
 		ArrayList<Pipe> pipeList = new ArrayList<Pipe>();
@@ -173,7 +179,7 @@ public class TopicModelling {
 			// Create a model with 100 topics, alpha_t = 0.01, beta_w = 0.01
 			// Note that the first parameter is passed as the sum over topics, while
 			// the second is the parameter for a single dimension of the Dirichlet prior.
-			ParallelTopicModel model = new ParallelTopicModel(numberOfTopics, 0.01, 0.01);
+			ParallelTopicModel model = new ParallelTopicModel(cfg.number_of_topics, 0.01, 0.01);
 
 			model.addInstances(instances);
 
@@ -183,7 +189,7 @@ public class TopicModelling {
 
 			// Run the model for 50 iterations and stop (this is for testing only,
 			// for real applications, use 1000 to 2000 iterations)
-			model.setNumIterations(numberOfIterations);
+			model.setNumIterations(cfg.number_of_iterations);
 			model.estimate();
 			// Show the words and topics in the first instance
 
@@ -208,7 +214,7 @@ public class TopicModelling {
 			if (topicFile == true) {
 				Formatter out = new Formatter("topic.txt");
 				// Show top 5 words in topics with proportions for the first document
-				for (int topic = 0; topic < numberOfTopics; topic++) {
+				for (int topic = 0; topic < cfg.number_of_topics; topic++) {
 					Iterator<IDSorter> iterator = topicSortedWords.get(topic).iterator();
 
 					// out = new Formatter(new StringBuilder(), Locale.US);
@@ -237,6 +243,7 @@ public class TopicModelling {
 				fileInputStream = null;
 			}
 		}
+		cfg.LDA_execution_milliseconds = System.currentTimeMillis() - startTime;
 	}
 
 }
