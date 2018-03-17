@@ -49,13 +49,14 @@ public class geneticLogicOriginal {
 				System.out.println("Original thread " + i + " end start...");
 			}
 
-			for (int i = 0; i < geneticLogic.THREADS_PER_MACHINE; i++) {
+			for (int i = 0; i < threads.length; i++) {
 				threads[i].join();
 				System.out.println("Original thread " + i + " joined");
 			}
-			for(int i=0; i<initialPopulation.length; ++i)
-			{
-				result.OnLDAFinish(initialPopulation[i]);
+			
+			for (int i = 0; i < threads.length; i++) {
+				int population_index = geneticLogic.THREADS_PER_MACHINE * (NetworkManager.getInstance().getMyMachineID() + 1) + i;
+				result.OnLDAFinish(initialPopulation[population_index]);
 			}
 			NetworkManager.getInstance().dispatchProtocols();
 
