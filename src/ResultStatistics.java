@@ -15,7 +15,7 @@ public class ResultStatistics {
 		String recall = String.format("Recall:%.3f ", recall_percentage);
 		String lda = String.format("LDA-call-count:%d ", LDA_count);
 		if (LDA_count > 0) {
-			lda += "  average-time-per-LDA:" + time_to_str(LDA_time / LDA_count, 0);
+			lda += "  LDA-average-time:" + time_to_str(LDA_time / LDA_count, 0);
 		}
 
 		String str = head + "  " + time + "  " + precision + "  " + recall + "  " + (cfg != null ? cfg.to_string() : "") + "  " + lda;

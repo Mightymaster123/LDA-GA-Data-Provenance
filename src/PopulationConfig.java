@@ -41,6 +41,12 @@ public class PopulationConfig implements java.io.Serializable{
 		return str;
 	}
 	
+	public String to_string_all()
+	{
+		String str = "number_of_topics:" + number_of_topics + "  number_of_iterations:" + number_of_iterations + "  fitness_value:" + fitness_value + "  LDA_execution_milliseconds:" + LDA_execution_milliseconds;
+		return str;
+	}
+	
 	public static PopulationConfig[] initArray(int count) {
 		PopulationConfig[] array = new PopulationConfig[count];
 		for (int i = 0; i < count; ++i) {

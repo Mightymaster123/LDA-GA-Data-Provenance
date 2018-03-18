@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Master implements NetworkManager.ReceivedProtocolHandler{
 
-	static final int CHECK_COUNT = 5;
+	static final int TEST_COUNT = 10;
 	
 	private DataProvenance mDataProvenance = null;
 	
@@ -24,16 +24,16 @@ public class Master implements NetworkManager.ReceivedProtocolHandler{
 	public void run() throws IOException, InterruptedException, ClassNotFoundException {
 		NetworkManager.getInstance().registerReceivedProtocolHandler(this);
 		
-		ArrayList<ResultStatistics> listResultOriginal = new ArrayList<ResultStatistics>(CHECK_COUNT);
-		for (int i = 0; i < CHECK_COUNT; ++i) {
+		ArrayList<ResultStatistics> listResultOriginal = new ArrayList<ResultStatistics>(TEST_COUNT);
+		for (int i = 0; i < TEST_COUNT; ++i) {
 			NetworkManager.getInstance().waitForAllSlaves();
 			mDataProvenance = new DataProvenance();
 			listResultOriginal.add(mDataProvenance.run(true));
 			NetworkManager.getInstance().sendProtocol_StopAllSlaves();
 			mDataProvenance = null;
 		}
-		ArrayList<ResultStatistics> listResultNew = new ArrayList<ResultStatistics>(CHECK_COUNT);
-		for (int i = 0; i < CHECK_COUNT; ++i) {
+		ArrayList<ResultStatistics> listResultNew = new ArrayList<ResultStatistics>(TEST_COUNT);
+		for (int i = 0; i < TEST_COUNT; ++i) {
 			NetworkManager.getInstance().waitForAllSlaves();
 			mDataProvenance = new DataProvenance();
 			listResultNew.add(mDataProvenance.run(false));
