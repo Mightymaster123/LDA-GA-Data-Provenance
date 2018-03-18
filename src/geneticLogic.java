@@ -11,7 +11,7 @@ import com.google.common.collect.Multimap;
 
 public class geneticLogic {
 
-	public static final int THREADS_PER_MACHINE = 6;
+	public static final int THREADS_PER_MACHINE = 3;
 	public static final double FITNESS_THRESHHOLD = 0.35;
 
 	public boolean isRunning = true;
