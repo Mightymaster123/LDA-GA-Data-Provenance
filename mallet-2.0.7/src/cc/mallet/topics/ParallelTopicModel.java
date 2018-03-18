@@ -473,15 +473,15 @@ public class ParallelTopicModel implements Serializable {
 							currentTopic = targetCounts[targetIndex] & topicMask;
 						}
 					}
-					currentCount = targetCounts[targetIndex] >> topicBits;
-					
-					targetCounts[targetIndex] =
-						((currentCount + count) << topicBits) + topic;
+					if(targetIndex>=0 && targetIndex<targetCounts.length)
+					{
+						currentCount = targetCounts[targetIndex] >> topicBits;
+						targetCounts[targetIndex] =	((currentCount + count) << topicBits) + topic;
+					}
 					
 					// Now ensure that the array is still sorted by 
 					//  bubbling this value up.
-					while (targetIndex > 0 &&
-						   targetCounts[targetIndex] > targetCounts[targetIndex - 1]) {
+					while (targetIndex > 0 && targetIndex<targetCounts.length && targetCounts[targetIndex] > targetCounts[targetIndex - 1]) {
 						int temp = targetCounts[targetIndex];
 						targetCounts[targetIndex] = targetCounts[targetIndex - 1];
 						targetCounts[targetIndex - 1] = temp;
