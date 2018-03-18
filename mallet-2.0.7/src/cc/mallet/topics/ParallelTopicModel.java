@@ -464,12 +464,14 @@ public class ParallelTopicModel implements Serializable {
 					int currentTopic = targetCounts[targetIndex] & topicMask;
 					int currentCount;
 					
-					while (targetCounts[targetIndex] > 0 && currentTopic != topic) {
+					while (targetIndex<targetCounts.length && targetCounts[targetIndex] > 0 && currentTopic != topic) {
 						targetIndex++;
-						if (targetIndex == targetCounts.length) {
+						if (targetIndex >= targetCounts.length) {
 							logger.info("overflow in merging on type " + type);
+						}else
+						{
+							currentTopic = targetCounts[targetIndex] & topicMask;
 						}
-						currentTopic = targetCounts[targetIndex] & topicMask;
 					}
 					currentCount = targetCounts[targetIndex] >> topicBits;
 					
