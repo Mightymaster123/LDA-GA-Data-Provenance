@@ -52,7 +52,7 @@ public class Main {
 				}
 			}
 		}
-		System.out.println("\n\n\nSpeed up ratio ( New version execution time / Original verstion execution time):");
+		System.out.println("\n\n\nSpeed-up ratio (Original-verstion's execution time / New-version's execution time):");
 		String str = "topics";
 		for (int i_iteration = 0; i_iteration < results[0].length; ++i_iteration) {
 			str += String.format("    iteration_%-4d", results[0][i_iteration].number_of_iterations);
@@ -70,10 +70,13 @@ public class Main {
 
 	public static void main(String[] argv) throws IOException, InterruptedException, ClassNotFoundException {
 
-		// testLDAPerformance();
+//		testLDAPerformance();
 
 		// Build connection between multiple machines: 1 master, multiple slaves
-		NetworkManager.getInstance().init();
+		if(!NetworkManager.getInstance().init())
+		{
+			return;
+		}
 
 		if (NetworkManager.getInstance().isMaster()) {
 			Master master = new Master();
