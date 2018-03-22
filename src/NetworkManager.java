@@ -83,7 +83,7 @@ public class NetworkManager {
 	}
 
 	public boolean isSlave() {
-		return !isMaster();
+		return (mMyMachineID >= 0 && mMyMachineID < mNumSlaves);
 	}
 
 	public int getSlaveCount() {
@@ -98,7 +98,7 @@ public class NetworkManager {
 		return mMyMachineID;
 	}
 
-	public void init() throws IOException {
+	public boolean init() throws IOException {
 		BufferedReader b = new BufferedReader(new FileReader("config.txt"));
 		String line = "";
 
@@ -127,7 +127,7 @@ public class NetworkManager {
 			System.out.println(" first port: " + mFirstPort);
 		}
 		b.close();
-		Connect();
+		return Connect();
 	}
 
 	public static boolean isMyIP(InetAddress inetAddress) {
@@ -160,32 +160,35 @@ public class NetworkManager {
 			// create serverSocket for each slave, and then listen to request from each
 			// slave
 
-			mSlaveStatus = new int[mNumSlaves];
-			for (int i = 0; i < mNumSlaves; ++i) {
-				mSlaveStatus[i] = SLAVE_STATUS_NONE;
-			}
-
-			mMasterServerSockets = new ServerSocket[mNumSlaves];
-			mSockets = new Socket[mNumSlaves];
-			for (int j = 0; j < mSockets.length; ++j) {
-				mSockets[j] = null;
-			}
-			for (int i = 0; i < mNumSlaves; i++) {
-				int currentPort = mFirstPort + i;
-				try {
-					Process p = Runtime.getRuntime().exec("fuser -k " + currentPort + "/tcp");
-					p.waitFor();
-				} catch (Exception e) {
-					e.printStackTrace();
+			if(mNumSlaves > 0)
+			{
+				mSlaveStatus = new int[mNumSlaves];
+				for (int i = 0; i < mNumSlaves; ++i) {
+					mSlaveStatus[i] = SLAVE_STATUS_NONE;
 				}
-				mMasterServerSockets[i] = new ServerSocket(currentPort);
-				while (true) {
-					mSockets[i] = mMasterServerSockets[i].accept();
-					// System.out.println("*****tag****");
-					if (mSockets[i] != null)
-						break;
+	
+				mMasterServerSockets = new ServerSocket[mNumSlaves];
+				mSockets = new Socket[mNumSlaves];
+				for (int j = 0; j < mSockets.length; ++j) {
+					mSockets[j] = null;
 				}
-				System.out.println("slave connection estblished " + i);
+				for (int i = 0; i < mNumSlaves; i++) {
+					int currentPort = mFirstPort + i;
+					try {
+						Process p = Runtime.getRuntime().exec("fuser -k " + currentPort + "/tcp");
+						p.waitFor();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					mMasterServerSockets[i] = new ServerSocket(currentPort);
+					while (true) {
+						mSockets[i] = mMasterServerSockets[i].accept();
+						// System.out.println("*****tag****");
+						if (mSockets[i] != null)
+							break;
+					}
+					System.out.println("slave connection estblished " + i);
+				}
 			}
 		}
 		// else(is slave)
@@ -229,9 +232,7 @@ public class NetworkManager {
 			// Create ObjectOutputStream for sockets
 			mObjectOutputStream = new ObjectOutputStream[mSockets.length];
 			for (int i = 0; i < mSockets.length; i++) {
-				System.out.println("a mObjectOutputStream "+i+" "+mSockets[i]);
 				mObjectOutputStream[i] = new ObjectOutputStream(mSockets[i].getOutputStream());
-				System.out.println("b mObjectOutputStream "+i+" "+mSockets[i]+"    "+mObjectOutputStream[i]);
 			}
 
 			// Create threads to listen to another machine
@@ -240,14 +241,14 @@ public class NetworkManager {
 				mListenerThread[i] = new ListenerThread(mSockets[i], i);
 				mListenerThread[i].start();
 				if (isMaster()) {
-					System.out.println("Start thread to listen to slave " + i);
+					System.out.println("Listen to slave " + i);
 				} else {
-					System.out.println("Start thread to listen to master");
+					System.out.println("Listen to master");
 				}
 			}
 		}
 
-		return (mSockets != null && mSockets.length > 0);
+		return (isMaster() || isSlave());
 	}
 
 	public void close() {

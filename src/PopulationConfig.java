@@ -1,6 +1,11 @@
 
 
 public class PopulationConfig implements java.io.Serializable{
+	public static long MIN_TOPIC_COUNT = 2;
+	public static long MAX_TOPIC_COUNT = 15;
+	public static long MIN_ITERATION_COUNT = 1;
+	public static long MAX_ITERATION_COUNT = 10000;
+	
 	public int number_of_topics;
 	public int number_of_iterations;
 	public double fitness_value;
@@ -25,19 +30,25 @@ public class PopulationConfig implements java.io.Serializable{
 	
 	public void random_topic()
 	{
-		number_of_topics = (int) Math.floor(Math.random() * 12 + 3);
+		number_of_topics = (int) Math.floor(Math.random() * (MAX_TOPIC_COUNT-MIN_TOPIC_COUNT+1) + MIN_TOPIC_COUNT);
 		fitness_value = 0;
 	}
 	
 	public void random_iteration()
 	{
-		number_of_iterations = (int) Math.floor(Math.random() * 1000 + 1);
+		number_of_iterations = (int) Math.floor(Math.random() * (MAX_ITERATION_COUNT-MIN_ITERATION_COUNT+1) + MIN_ITERATION_COUNT);
 		fitness_value = 0;
 	}
 	
 	public String to_string()
 	{
 		String str = "number_of_topics:" + number_of_topics + "  number_of_iterations:" + number_of_iterations + "  fitness_value:" + fitness_value;
+		return str;
+	}
+	
+	public String to_string_all()
+	{
+		String str = "number_of_topics:" + number_of_topics + "  number_of_iterations:" + number_of_iterations + "  fitness_value:" + fitness_value + "  LDA_execution_milliseconds:" + LDA_execution_milliseconds;
 		return str;
 	}
 	
