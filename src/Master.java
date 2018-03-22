@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Master implements NetworkManager.ReceivedProtocolHandler{
 
-	static final int TEST_COUNT = 2;
+	static final int TEST_COUNT = 10;
 	
 	private DataProvenance mDataProvenance = null;
 	

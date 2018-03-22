@@ -1,67 +1,618 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html40/strict.dtd">
-<html>
+<!doctype html>
+<html lang="en">
  <head> 
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-  <meta name="author" content="Hogarth Communications">
-  <meta name="description" content="Public relations and communications">
-  <title>Home - Hogarth Communications</title>
-  <link rel="stylesheet" type="text/css" media="all" href="main.css">
-  <link rel="stylesheet" type="text/css" media="all" href="colorschemes/colorscheme4/colorscheme.css">
-  <link rel="stylesheet" type="text/css" media="all" href="style.css">
-  <script type="text/javascript" src="live_tinc.js"></script>
- </head>
- <body id="main_body">
-  <div id="container">
-   <div id="main_nav_container">
-    <ul id="main_nav_list">
-     <li><a class="main_nav_active_item" href="index.html">Home</a></li>
-     <li><a class="main_nav_item" href="3.html">Services</a></li>
-     <li><a class="main_nav_item" href="6.html">About Us</a></li>
-     <li><a class="main_nav_item" href="10.html">Contact</a></li>
-    </ul>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"> 
+  <title>Music industry sites DDoSed after Pirate Bay verdict • The Register    </title> 
+  <meta name="viewport" content="initial-scale=1.0, width=device-width"> 
+  <meta property="og:image" content="https://regmedia.co.uk/2013/02/05/default_image-2.png?x=1200&amp;y=794"> 
+  <meta property="og:type" content="article"> 
+  <meta property="og:url" content="https://www.theregister.co.uk/2009/04/20/ddos_hacktivism_pirate_bay/"> 
+  <meta property="og:title" content="Music industry sites DDoSed after Pirate Bay verdict"> 
+  <meta property="og:description" content="Hacktivism cuts both ways"> 
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:site" content="@TheRegister"> 
+  <meta name="news_keywords" content="DDOS, Security , Hacking, The Pirate Bay, Hacktivism"> 
+  <script>
+      var RegPageType = 'Story';
+    </script> 
+  <link rel="canonical" href="https://www.theregister.co.uk/2009/04/20/ddos_hacktivism_pirate_bay/"> 
+  <script>
+        var RegArticle={id:89486,pf:0,af:0,bms:0,cat:'news',ec:[],kw:[['ddos','DDOS'],['security','Security '],['hacking','Hacking'],['the pirate bay','The Pirate Bay'],['hacktivism','Hacktivism']],short_url:'http://reg.cx/12Ar',cp:0,noads:[],author:'John Leyden',vid:0}
+    </script> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arimo:400%7CArimo:700"> 
+  <link rel="stylesheet" type="text/css" href="/css_picker/webkit/564c20bc9b6fecc02bb7347682ed4d890b446120/design.css"> 
+  <style>
+        #sec-security, #m-sec-security,
+        #sub-sec-none a {
+          font-weight: bold;
+        }
+    </style> 
+  <link rel="alternate" type="application/atom+xml" href="/headlines.atom" title="The Register: whole site"> 
+  <link rel="alternate" type="application/atom+xml" href="/security/headlines.atom" title="The Register: Security section"> 
+  <script src="/design_picker/b64efc43aa52eb2812ce7331c4723b013b3d3e23/javascript/_.js"></script> 
+  <script src="//www.googletagservices.com/tag/js/gpt.js"></script> 
+  <script src="https://nir.regmedia.co.uk/?g=c&amp;g=sa&amp;s=c/sec.front"></script> 
+  <script>
+        Reg__adct = 's-async';
+        googletag.cmd.push(function() {
+            init_gpt('reg_security/front');
+        });
+    </script> 
+  <link rel="SHORTCUT ICON" type="image/x-icon" href="/favicon.ico"> 
+  <link rel="search" href="https://search.theregister.co.uk/"> 
+  <link rel="search" type="application/opensearchdescription+xml" title="El Reg Search" href="/Design/page/search.osd"> 
+  <link rel="apple-touch-icon" href="/Design/graphics/icons/vulture_black_60_trans.png"> 
+ </head> 
+ <body class="DYNX" data-pagetype="Story" data-pagenum="0"> 
+  <div id="page"> 
+   <div id="topbar" class="alt_colour dcl"> 
+    <div class="login"></div> 
+    <ul> 
+     <li><a href="https://serverlesscomputing.london/" target="_blank" title="The Serverless Computing Conference London">Serverless</a></li> 
+     <li><a href="http://www.mcubed.london/" target="_blank" title="Minds Mastering Machines - The ML and AI Conference">M³</a></li> 
+     <li><a href="https://continuouslifecycle.london" target="_blank" title="Continuous Lifecycle London 2018">CLL</a></li> 
+     <li><a href="https://whitepapers.theregister.co.uk/events/list" title="Webcasts and Events from The Register">Events</a></li> 
+     <li><a href="https://whitepapers.theregister.co.uk/" title="Whitepapers and tech resources from The Register">Whitepapers</a></li> 
+     <li><a href="https://www.nextplatform.com/" title="High-end computing in-depth">The Next Platform</a></li> 
+    </ul> 
+   </div> 
+   <div id="ad-kite" class="adu"> 
+    <script>
+            show_gpt('ad-kite');
+        </script> 
+   </div> 
+   <div id="masthead"> 
+    <a href="https://www.theregister.co.uk/" id="logo"> <img src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icons/reg_logo.svg" width="330" height="63" alt="The Register® — Biting the hand that feeds IT"> </a> 
+    <div id="follow_btns_top"> 
+     <a class="tweet_link" href="https://twitter.com/intent/user?screen_name=theregister" title="Follow us on twitter" target="_blank"> <img width="18" height="18" alt="Twitter" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/twitter.svg"> </a> 
+     <a href="https://www.facebook.com/VultureCentral" title="Like us on Facebook" target="_blank" class="fbook"> <img width="18" height="18" alt="Facebook" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/facebook.svg"> </a> 
+     <a href="https://google.com/+theregister" title="Follow us on Google+" target="_blank" class="gplus"> <img width="18" height="18" alt="G+" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/google_plus.svg"> </a> 
+     <a href="https://www.linkedin.com/company/the-register" title="Follow us on LinkedIn" target="_blank" class="linkin"> <img width="18" height="18" alt="LinkedIn" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/linkedin.svg"> </a> 
+    </div> 
+   </div> 
+   <div id="site_nav" class="static"> 
+    <nav id="top_nav" class="dcl"> 
+     <a href="https://www.theregister.co.uk/" class="nav_vulture" data-name="Home"> <img width="21" height="17" alt="Home" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/vulture.svg" class="black_vulture"> <img width="21" height="17" alt="Home" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/vulture_white.svg" class="white_vulture"> </a> 
+     <a href="/data_centre/" id="sec-data-centre" data-nav=".data_cent_nav" data-name="Data centre"> Data Center </a> 
+     <a href="/software/" id="sec-software" data-nav=".software_nav" data-name="Software"> Software </a> 
+     <a href="/security/" id="sec-security" data-nav=".sec_nav" data-name="Security"> Security </a> 
+     <a href="/devops/" id="sec-devops" data-nav=".devops_nav" data-name="DevOps"> DevOps </a> 
+     <a href="/business/" id="sec-business" data-nav=".bus_nav" data-name="Business"> Business </a> 
+     <a href="/personal_tech/" id="sec-personal_tech" data-nav=".pers_nav" data-name="Personal Tech"> Personal Tech </a> 
+     <a href="/science/" id="sec-science" data-nav=".sci_nav" data-name="Science"> Science </a> 
+     <a href="/emergent_tech/" id="sec-emergent-tech" data-nav=".emer_nav" data-name="Emergent Tech"> Emergent Tech </a> 
+     <a href="/bootnotes/" id="sec-bootnotes" data-nav=".bootnotes_nav" data-name="Bootnotes"> Bootnotes </a> 
+     <a href="/lectures/" id="sec-lectures" data-nav=".lectures_nav" data-name="Lectures"> Lectures </a> 
+     <a href="https://search.theregister.co.uk/" class="nav_search" data-name="Search"> <img class="black_search_icon" width="18" height="18" alt="search" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icons/search.svg"> </a> 
+    </nav> 
+    <form id="search_form" action="https://search.theregister.co.uk/" method="GET"> 
+     <input type="text" name="q" id="q" placeholder="Search site"> 
+     <img class="white_search_icon" width="18" height="18" alt="search" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icons/search_white.svg"> 
+    </form> 
+    <div id="nav_pop"> 
+     <div class="data_cent_nav"> 
+      <ul class="sub_nav alt_colour dcl"> 
+       <li id="sub-sec-servers"> <a href="/data_centre/servers/" data-name="Servers" title="Enterprise server news, analysis and opinion"> Servers </a> </li> 
+       <li id="sub-sec-hpc"> <a href="/data_centre/hpc/" data-name="HPC" title="High Performance Computing news, analysis and opinion"> HPC </a> </li> 
+       <li id="sub-sec-cloud"> <a href="/data_centre/cloud/" data-name="Cloud" title="Cloud news, analysis and opinion"> Cloud </a> </li> 
+       <li id="sub-sec-storage"> <a href="/data_centre/storage/" data-name="Storage" title="Enterprise Storage news, analysis and opinion"> Storage </a> </li> 
+       <li id="sub-sec-networks"> <a href="/data_centre/networks/" data-name="Networks" title="Networks news, analysis and opinion"> Networks </a> </li> 
+       <li id="sub-sec-virtualization"> <a href="/data_centre/virtualization/" data-name="Virtualisation" title="Virtualization news, analysis and opinion"> Virtualization </a> </li> 
+       <li id="sub-sec-bofh"> <a href="/data_centre/bofh/" data-name="Bofh" title="The Home of the Mighty BOFH"> BOFH </a> </li> 
+      </ul> 
+      <div class="story_row"> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/seagate_to_drop_multiactuator_hamr_in_2020/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="hdd_head_stack_648" width="198" height="131" data-delay_url="https://regmedia.co.uk/2015/08/19/hdd_head_stack_648.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Seagate's HAMR to drop in 2020: Multi-actuator disk drives on the way</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/youve_come_a_long_way_legacy/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Older bearded man inputs data from a printed chart into a computer" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/21/shutterstock_older_computer.jpg?x=198&amp;y=131&amp;crop=1"> <h5>From spinning rust to SSD: What to wear when things are looking worn</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/toshibas_nvme_over_fabrics_storage_node_software/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="" width="198" height="131" data-delay_url="https://regmedia.co.uk/2016/05/04/raincloud_teaser.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Three's a cloud: Toshiba picks its NVMe over Fabrics storage node</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/nvme_fabric_access_arrays_players_list/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Velvet rope behind rolls royce" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/19/shutterstock_velvet_rope.jpg?x=198&amp;y=131&amp;crop=1"> <h5>None of my flash rivals NVMe: Analyst spills tea on who's who in fabric-access NVMe arrays</h5> </a> 
+      </div> 
+     </div> 
+     <div class="software_nav"> 
+      <div class="sub_nav"></div> 
+      <div class="story_row"> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/sap_offers_embed_no_brand_predictive_analytics_leonardo/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="People whispering" width="198" height="131" data-delay_url="https://regmedia.co.uk/2016/09/09/whispering.jpg?x=198&amp;y=131&amp;crop=1"> <h5>SAP: Psst. Use our predictive analytics in your apps – you won't even know we're there</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/philippines_ruby_bato/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Group of People Waving Filipino Flags in Back Lit" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/21/shutterstock_filipino.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Programming languages can be hard to grasp for non-English speakers. Step forward, Bato: A Ruby port for Filipinos</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/20/mozilla_firefox_test_of_privacy_mechanism_prompts_privacy_worries/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Firefox Quantum branding" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/13/firefox_panel.png?x=198&amp;y=131&amp;crop=1"> <h5>Mozilla's opt-out Firefox DNS privacy test sparks, er, privacy outcry</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/20/webos_gets_open_sourced_for_the_pi/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="LG WebOS TV" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/20/lg_tv_webos_ui_teaser.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Screw luxury fridges, you can now run webOS on your Raspberry Pi</h5> </a> 
+      </div> 
+     </div> 
+     <div class="sec_nav"> 
+      <div class="sub_nav"></div> 
+      <div class="story_row"> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/syria_hospital_bombing_hack_theory/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Picture by Orlok / Shutterstock" width="198" height="131" data-delay_url="https://regmedia.co.uk/2016/09/15/shutterstock_isis_bombs.jpg?x=198&amp;y=131&amp;crop=1"> <h5>UK surgeon suspects his PC was hacked to target Syrian hospital</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/google_chrome_distrust/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Boom across construction area with sign denying walkers access " width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/21/shutterstock_denied_access.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Symantec cert holdout sites told: Those Google Chrome warnings are not a good look</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/chrome_os_66_meltdown_fix/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Shutterstock tools" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/01/30/toolkit_shutterstock.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Creaking Chromebooks getting Meltdown protection soon</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/commonwealth_games_wifi_better_with_facebook/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Facebook Lite app" width="198" height="131" data-delay_url="https://regmedia.co.uk/2015/06/05/facebook_lite.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Commonwealth Games are just the ticket for Facebook</h5> </a> 
+      </div> 
+     </div> 
+     <div class="devops_nav"> 
+      <div class="sub_nav"></div> 
+      <div class="story_row"> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/20/etcd_defaults_to_insecure/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Woman holding keys" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/20/shutterstock_keys.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Cluster-f*ck! Etcd DBs spaff passwords, cloud keys to world by default</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/20/cloud_foundry_summit_boston/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="" width="198" height="131" data-delay_url="https://regmedia.co.uk/2017/04/13/cutecloud.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Fire up your app dev skills at Cloud Foundry Summit in Boston</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/20/openmsa_network_microservices/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Man with head in the cloud" width="198" height="131" data-delay_url="https://regmedia.co.uk/2015/09/07/head_in_the_cloud.jpg?x=198&amp;y=131&amp;crop=1"> <h5>OpenMSA: A devops framework for the network admin</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/16/digital_transformation_or_digital_bolt_on/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Bolt and screw on metal surface" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/15/boltandscrew.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Hate to add to the wanky jargon – but your digital transformation is actually a bolt-on</h5> </a> 
+      </div> 
+     </div> 
+     <div class="bus_nav"> 
+      <ul class="sub_nav alt_colour dcl"> 
+       <li id="sub-sec-policy"> <a href="/business/policy/" data-name="Policy" title="Policy News, analysis and opinion"> Policy </a> </li> 
+       <li id="sub-sec-channel"> <a href="/business/channel/" data-name="The Channel" title="The Channel news, analysis and opinion"> The Channel </a> </li> 
+      </ul> 
+      <div class="story_row"> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/ukgov_prep_eu_data_adequacy_decision/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="" width="198" height="131" data-delay_url="https://regmedia.co.uk/2017/01/18/shutterstock_college_it_kids.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Brit MPs chide UK.gov: You're acting like EU data adequacy prep is easy</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/telegram_ordered_hand_over_keys/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="" width="198" height="131" data-delay_url="https://regmedia.co.uk/2016/03/10/keys_648x429.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Telegram still won't hand over crypto keys it says it does not store</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/salesforce_buys_mulesoft/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Salesforce Mulesoft acquisition logo mashup fun" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/20/mulesoft_salesforce_logo_mashup.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Salesforce saddles itself with MuleSoft for $6.5bn</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/cambridge_analytica_ceo_suspended/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="downvote" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/21/downvote_shutterstock.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Cambridge Analytica CEO suspended – and that's not even the worst news for them today</h5> </a> 
+      </div> 
+     </div> 
+     <div class="pers_nav"> 
+      <div class="sub_nav"></div> 
+      <div class="story_row"> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/20/samsung_dex_2018_first_look/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Samsung DeX gives you a &quot;Desktop experience&quot; when docked to a full size screen" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/02/25/samsungdex.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Samsung’s DeX dock clicks the second time around</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/19/carolina_cops_go_minority_report_with_google_location_subpoena/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Minority report" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/19/minority-report.jpg?x=198&amp;y=131&amp;crop=1"> <h5>US cops go all Minority Report: Google told to cough up info on <i>anyone near</i> a crime scene</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/16/google_pixel_silencing_bug/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Woman telling you to be quiet" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/16/shutterstock_sssh.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Android Oreo mic drop fury: Google ups tempo for Pixel mobe audio fix</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/16/phonefree_microsoft_patents_notchfree_phone/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Vic and Bob as Noddy Holder and Dave Hill" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/16/vic_bob_noddy_dave_slade.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Phone-free Microsoft patents Notch-free phone</h5> </a> 
+      </div> 
+     </div> 
+     <div class="sci_nav"> 
+      <ul class="sub_nav alt_colour dcl"> 
+       <li id="sub-sec-geek"> <a href="/science/geeks_guide/" title="Geek's Guide to Britain" data-name="Geeks guide"> Geek's Guide </a> </li> 
+      </ul> 
+      <div class="story_row"> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/trappist1_planets_may_actually_be_too_wet/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="TRAPPIST-1" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/21/trappist-1.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Oh bucket! Unpack the suitcases. TRAPPIST-1 planets too wet to support life</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/satellites_looking_for_plastic/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="" width="198" height="131" data-delay_url="https://regmedia.co.uk/2015/11/06/tsunami.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Seen from spaaaaace: Boffins check world's oceans for plastic</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/geeks_guide_to_britain_bennerley_viadict/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Bennerley viaduct from drone photo Sustrans" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/20/bennerley_viaduct_from_drone_photo_sustrans.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Fancy a viaduct? We have a wrought Victorian iron marvel to sell you</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/esas_announces_ariel_a_new_mission_to_find_out_how_alien_life_might_evolve/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="" width="198" height="131" data-delay_url="https://regmedia.co.uk/2017/06/19/exoplanets.jpg?x=198&amp;y=131&amp;crop=1"> <h5>ESA's Ariel mission will boldly spot exoplanets not seen before</h5> </a> 
+      </div> 
+     </div> 
+     <div class="emer_nav"> 
+      <ul class="sub_nav alt_colour dcl"> 
+       <li id="sub-sec-artificial-intelligence"> <a href="/emergent_tech/artificial_intelligence/" data-name="Artificial Intelligence" title="Artificial Intelligence"> Artificial Intelligence </a> </li> 
+       <li id="sub-sec-internet-of-things"> <a href="/emergent_tech/internet_of_things/" data-name="Internet of Things" title="Internet of Things"> Internet of Things </a> </li> 
+      </ul> 
+      <div class="story_row"> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/ibm_machine_learning_models_trained_fast/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Nerdy kid in class with hand up" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/21/classnerd.jpg?x=198&amp;y=131&amp;crop=1"> <h5>IBM claims its machine learning library is 46x faster than TensorFlow</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/nvidia_titan_v_reproducibility/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="" width="198" height="131" data-delay_url="https://regmedia.co.uk/2017/04/11/sad-computer.jpg?x=198&amp;y=131&amp;crop=1"> <h5>2 + 2 = 4, er, 4.1, no, 4.3... Nvidia's Titan V GPUs spit out 'wrong answers' in scientific simulations</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/hpe_apollo_deep_learning_6500_gen_10_details/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Photo by Gilmanshin / Shutterstock" width="198" height="131" data-delay_url="https://regmedia.co.uk/2016/09/02/shutterstock_apollo.jpg?x=198&amp;y=131&amp;crop=1"> <h5>HPE burns offering to Apollo 6500, unleashes cranked deep learning server on world+dog</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/21/no_sierra_leone_did_not_run_the_worlds_first_blockchain_election/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Wrong" width="198" height="131" data-delay_url="https://regmedia.co.uk/2018/03/21/wrong_sign_shutterstock.jpg?x=198&amp;y=131&amp;crop=1"> <h5>No, Sierra Leone did not just run the world's first 'blockchain election'</h5> </a> 
+      </div> 
+     </div> 
+     <div class="bootnotes_nav"> 
+      <ul class="sub_nav alt_colour dcl"> 
+       <li id="sub-sec-stob"> <a href="/bootnotes/stob/" data-name="Verity Stob" title="Verity Stob"> Verity Stob </a> </li> 
+      </ul> 
+      <div class="story_row"> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/20/you_must_be_yolking_nottingham_pub_to_launch_eggstravagent_yorkshire_pudding/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="" width="198" height="131" data-delay_url="https://regmedia.co.uk/2017/11/22/kideasteregg.jpg?x=198&amp;y=131&amp;crop=1"> <h5>You must be yolking: English pub to launch eggstravagent Yorkshire pudding</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/17/plastic_surgeon_allegations/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="doctor" width="198" height="131" data-delay_url="https://regmedia.co.uk/2017/05/15/doctor_shutterstock.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Nip/Tug: Plastic surgeon accused of mid-surgery 'hardcore' smut binge</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/16/cyborg_fined_for_riding_train_without_valid_ticket/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Robot as person illustration via Shutterstock" width="198" height="131" data-delay_url="https://regmedia.co.uk/2016/07/20/robot_as_person_illustration_via_shutterstock.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Cyborg fined for riding train without valid ticket</h5> </a> 
+       <a class="story_link" href="https://www.theregister.co.uk/2018/03/15/ten_thousandth_boeing_737/"> <img src="https://regmedia.co.uk/2016/04/14/dl.gif" alt="Qantas Boeing 737-838, VH-VZR" width="198" height="131" data-delay_url="https://regmedia.co.uk/2015/11/16/qantas_boeing_737_838_vh_vzr.jpg?x=198&amp;y=131&amp;crop=1"> <h5>Boeing ships its 10,000th 737</h5> </a> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="site_nav_mobile" class="static"> 
+    <img id="mobile_menu_toggle" width="22" height="20" alt="Menu" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/burger_menu.svg"> 
+    <nav id="top_nav_mobile" class="dcl"> 
+     <form id="search_form_mobile" action="https://search.theregister.co.uk/" method="GET"> 
+      <img class="white_search_icon" width="18" height="18" alt="search" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icons/search.svg"> 
+      <input type="text" name="q" id="mobile_q" placeholder="Search site"> 
+     </form> 
+     <a href="/data_centre/" id="m-sec-data-centre" data-nav=".data_cent_nav" data-name="Data_centre"> Data Center </a> 
+     <a href="/software/" id="m-sec-software" data-nav=".software_nav" data-name="Software"> Software </a> 
+     <a href="/security/" id="m-sec-security" data-nav=".sec_nav" data-name="Security"> Security </a> 
+     <a href="/devops/" id="m-sec-devops" data-nav=".devops_nav" data-name="DevOps"> DevOps </a> 
+     <a href="/business/" id="m-sec-business" data-nav=".bus_nav" data-name="Business"> Business </a> 
+     <a href="/personal_tech/" id="m-sec-personal_tech" data-nav=".pers_nav" data-name="Personal Tech"> Personal Tech </a> 
+     <a href="/science/" id="m-sec-science" data-nav=".sci_nav" data-name="Science"> Science </a> 
+     <a href="/emergent_tech/" id="m-sec-emergent-tech" data-nav=".emer_nav" data-name="Emergent Tech"> Emergent Tech </a> 
+     <a href="/bootnotes/" id="m-sec-bootnotes" data-nav=".bootnotes_nav" data-name="Bootnotes"> Bootnotes </a> 
+     <div id="m-sub-sec-bofh"> 
+      <a href="/data_centre/bofh/" data-name="Bofh" title="The Home of the Mighty BOFH">BOFH</a> 
+     </div> 
+     <a href="/lectures/" id="m-sec-lectures" data-nav=".lectures_nav" data-name="Lectures"> Lectures </a> 
+    </nav> 
+   </div> 
+   <div id="page_overlay_side"></div> 
+   <div id="ad-condor" class="adu"> 
+    <script>
+            show_gpt('ad-condor');
+        </script> 
+    <noscript> 
+     <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6978/reg_security/front&amp;sz=728x90%7C970x90%7C970x250&amp;tile=2&amp;c=22WrK2CMCoyKoAAEa09bgAAAAz&amp;t=ct%3Dns%26unitnum%3D2%26unitname%3Dwww_top_leader%26pos%3Dtop%26test%3D0" target="_blank"> <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/6978/reg_security/front&amp;sz=728x90%7C970x90%7C970x250&amp;tile=2&amp;c=22WrK2CMCoyKoAAEa09bgAAAAz&amp;t=ct%3Dns%26unitnum%3D2%26unitname%3Dwww_top_leader%26pos%3Dtop%26test%3D0" alt=""> </a> 
+    </noscript> 
+   </div> 
+   <div id="main-col"> 
+    <div id="crumb_trail"> 
+     <a href="/security/" class="dcl sub_sec"> <h4>Security</h4> </a> 
+    </div> 
+    <div id="article" data-cat="news"> 
+     <div class="article_head"> 
+      <h1>Music industry sites DDoSed after Pirate Bay verdict</h1> 
+      <h2>Hacktivism cuts both ways</h2> 
+      <div class="byline_and_share"> 
+       <div class="byline">
+         By 
+        <a href="/Author/John-Leyden" title="Read more by this author" class="alt_colour dcl">John Leyden</a> 
+        <span class="dateline"> 20&nbsp;Apr&nbsp;2009&nbsp;at&nbsp;10:51 </span> 
+        <script>tweet_btn()</script> 
+       </div> 
+       <div class="comments_share"> 
+        <a href="https://forums.theregister.co.uk/forum/1/2009/04/20/ddos_hacktivism_pirate_bay/" class="reg_comments"> <span class="count">55</span> <img width="17" height="15" src="/design_picker/029b461aa66d73b1e8cb351f99212507d4da660c/graphics/icon/rect_comment_bubble_white.svg" alt="Reg comments"> </a> 
+        <a href="#" class="share_toggle">SHARE <span>▼</span></a> 
+       </div> 
+      </div> 
+      <div class="social_btns alt_colour dcl"> 
+       <a href="https://www.reddit.com/submit?url=https://www.theregister.co.uk/2009/04/20/ddos_hacktivism_pirate_bay/&amp;title=Music%20industry%20sites%20DDoSed%20after%20Pirate%20Bay%20verdict" target="_blank" class="reddit_btn"> 
+        <div class="circ"> 
+         <img width="18" height="18" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/reddit.svg" alt="reddit"> 
+        </div> </a> 
+       <a href="https://twitter.com/share?text=Music%20industry%20sites%20DDoSed%20after%20Pirate%20Bay%20verdict&amp;url=https://www.theregister.co.uk/2009/04/20/ddos_hacktivism_pirate_bay/&amp;via=theregister" class="twit"> 
+        <div class="circ"> 
+         <img width="18" height="18" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/twitter.svg" alt="Twitter"> 
+        </div> </a> 
+       <div class="faceb"> 
+        <div class="circ"> 
+         <img width="18" height="18" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/facebook.svg" alt="Facebook"> 
+        </div> 
+       </div> 
+       <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.theregister.co.uk/2009/04/20/ddos_hacktivism_pirate_bay/&amp;title=Music%20industry%20sites%20DDoSed%20after%20Pirate%20Bay%20verdict&amp;summary=Hacktivism%20cuts%20both%20ways" class="linkedin_social"> 
+        <div class="circ"> 
+         <img width="18" height="18" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/linkedin_alt.svg" alt="linkedin"> 
+        </div> </a> 
+      </div> 
+     </div> 
+     <div id="body"> 
+      <p>Hacktivists have launched denial of service attacks against music industry association ifpi.org and lawyers involved in the prosecution of the four Pirate Bay defendants in the wake of a guilty verdict against the quartet last Friday.</p> 
+      <p>The assault has rendered ifpi.org - the main website of the International Federation of the Phonographic Industry - intermittently unavailable or sluggish for a time on Monday morning.</p> 
+      <p>Discussions involving 250 hackers on irc.anonnet.org talk about retaliation on the ifpi and lawyers involved in the case and a desire to take the ifi.org website off the internet throughout Monday, at a minimum. Discussion on the attack can be found at <a href="http://anonnet.org/webirc/tpb" target="_blank">irc channels</a> at anonnet.org.</p> 
+      <p>"They want to get the message across that the IFPI can not mess with the internet and that the internet is serious business," coldblood, an admin at anonnet.org told <em>El Reg</em>. "This is very much like the Scientology thing started more than a year ago now," he added.</p> 
+      <p><a href="http://partyvan.info/wiki/Operation_Baylout" target="_blank">Operation Baylout(NSFW)</a>, as the attack is called, also involved the reported defacement of the Swedish website of the IFPI.</p> 
+      <p>Meanwhile limited distributed denial of service attacks against some Torrent tracker sites continued in the wake of guilty verdict against the four defendants in the high-profile Pirate Bay trial last Friday.</p> 
+      <p>The main victim of attacks by as yet unidentified vigilantes (or possibly simple griefers) was free-torrents.org, reports security tools firm Arbor Networks. The assault against free-torrents.org has been going on for around a month, and so is hardly a new development. Arbor's <a href="http://asert.arbornetworks.com/2009/04/torrent-sites-and-the-pirate-bay-ddos-afoot" target="_blank">findings</a> (below) contradict rumours that large-scale denial of service attacks against multiple Torrent trackers were underway.</p> 
+      <blockquote>
+       All in all, except for free-torrents.org getting attacked by a Black Energy botnet run out of China (using the C&amp;C at hack-off.ru), we can’t corroborate this spate of attacks. Free-torrents.org has been getting pounded by this botnet since mid March, 2009, in fact. But none of the other major sites appear to be receiving such packet love.
+      </blockquote> 
+      <p>Jose Nazario, manager of security research at Arbor Networks, notes that the trial involved the people who ran Pirate Bay, not the site itself, which remains operational. Even if The Pirate Bay was taken down something else would surely replace it. Nonetheless The Pirate Bay is a major interchange (most of the Pirate Bay swarms also include other trackers), so disrupting TPB may have an impact on BitTorrent traffic as a whole, at least for a short period.</p> 
+      <p>The four Pirate Bay Defendants - Peter Sunde, Fredrik Neij, Gottfrid Svartholm and Carl Lundström - were found guilty and sentenced to one year in prison and heavy fines on Friday. The defendants intend to appeal. ®</p> 
+      <p class="wptl btm"> <span>Sponsored: </span> <a href="https://go.theregister.co.uk/tl/1757/shttp://www.mcubed.london/">Minds Mastering Machines - Call for papers now open</a> </p> 
+     </div> 
+     <div id="article_body_btm"> 
+      <div id="tips_or_corrections"> 
+       <a href="mailto:corrections@theregister.co.uk?subject=%5Bcorrection%5D%20Music%20industry%20sites%20DDoSed%20after%20Pirate%20Bay%20verdict&amp;body=re:%20http%3A%2F%2Fwww.theregister.co.uk/2009/04/20/ddos_hacktivism_pirate_bay/" title="Spotted an error or have a tip? Let us know."> Tips and corrections </a> 
+      </div> 
+      <div class="comments "> 
+       <a class="reg_btn count" title="View comments on this article" href="https://forums.theregister.co.uk/forum/1/2009/04/20/ddos_hacktivism_pirate_bay/"> <span>55</span> Comments </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="tags"> 
+     <ul> 
+      <li> <strong>MORE</strong> </li> 
+      <li> <a href="/Tag/ddos">DDOS</a> </li> 
+      <li> <a href="/Tag/security">Security </a> </li> 
+      <li> <a href="/Tag/hacking">Hacking</a> </li> 
+      <li> <a href="/Tag/the%20pirate%20bay">The Pirate Bay</a> </li> 
+     </ul> 
+    </div> 
+    <div class="social_btns bot_article alt_colour dcl"> 
+     <a href="https://www.reddit.com/submit?url=https://www.theregister.co.uk/2009/04/20/ddos_hacktivism_pirate_bay/&amp;title=Music%20industry%20sites%20DDoSed%20after%20Pirate%20Bay%20verdict" target="_blank" class="reddit_btn"> 
+      <div class="circ"> 
+       <img width="18" height="18" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/reddit.svg" alt="reddit"> 
+      </div> </a> 
+     <a href="https://twitter.com/share?text=Music%20industry%20sites%20DDoSed%20after%20Pirate%20Bay%20verdict&amp;url=https://www.theregister.co.uk/2009/04/20/ddos_hacktivism_pirate_bay/&amp;via=theregister" class="twit"> 
+      <div class="circ"> 
+       <img width="18" height="18" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/twitter.svg" alt="Twitter"> 
+      </div> </a> 
+     <div class="faceb"> 
+      <div class="circ"> 
+       <img width="18" height="18" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/facebook.svg" alt="Facebook"> 
+      </div> 
+     </div> 
+     <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.theregister.co.uk/2009/04/20/ddos_hacktivism_pirate_bay/&amp;title=Music%20industry%20sites%20DDoSed%20after%20Pirate%20Bay%20verdict&amp;summary=Hacktivism%20cuts%20both%20ways" class="linkedin_social"> 
+      <div class="circ"> 
+       <img width="18" height="18" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/linkedin_alt.svg" alt="linkedin"> 
+      </div> </a> 
+    </div> 
+    <script type="text/javascript">show_article_signup_ml();</script> 
+   </div> 
+   <div id="right-col"> 
+    <div id="ad-eagle" class="adu"> 
+     <script>
+                            show_gpt('ad-eagle');
+                        </script> 
+     <noscript> 
+      <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6978/reg_security/front&amp;sz=300x250%7C300x600%7C300x1050&amp;tile=3&amp;c=33WrK2CMCoyKoAAEa09bgAAAAz&amp;t=ct%3Dns%26unitnum%3D3%26unitname%3Dwww_top_mpu%26pos%3Dtop%26test%3D0" target="_blank"> <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/6978/reg_security/front&amp;sz=300x250%7C300x600%7C300x1050&amp;tile=3&amp;c=33WrK2CMCoyKoAAEa09bgAAAAz&amp;t=ct%3Dns%26unitnum%3D3%26unitname%3Dwww_top_mpu%26pos%3Dtop%26test%3D0" alt=""> </a> 
+     </noscript> 
+    </div> 
+    <div id="hot"> 
+     <h3>Most read</h3> 
+     <ol> 
+      <li> <a href="https://www.theregister.co.uk/2018/03/19/boom_cambridge_analytica_explodes_following_extraordinary_tv_expose/"> <img src="https://regmedia.co.uk/2018/03/19/channel4-cambridge-analytica.jpg?x=88&amp;y=58&amp;crop=1" alt="Cambridge Analytica" width="88" height="58"> <h4>BOOM! Cambridge Analytica explodes following extraordinary TV expose </h4> </a> </li> 
+      <li> <a href="https://www.theregister.co.uk/2018/03/21/cambridge_analytica_ceo_suspended/"> <img src="https://regmedia.co.uk/2018/03/21/downvote_shutterstock.jpg?x=88&amp;y=58&amp;crop=1" alt="downvote" width="88" height="58"> <h4>Cambridge Analytica CEO suspended – and that's not even the worst news for them today </h4> </a> </li> 
+      <li> <a href="https://www.theregister.co.uk/2018/03/19/carolina_cops_go_minority_report_with_google_location_subpoena/"> <img src="https://regmedia.co.uk/2018/03/19/minority-report.jpg?x=88&amp;y=58&amp;crop=1" alt="Minority report" width="88" height="58"> <h4>US cops go all Minority Report: Google told to cough up info on <i>anyone near</i> a crime scene </h4> </a> </li> 
+      <li> <a href="https://www.theregister.co.uk/2018/03/20/fbi_nro_contractor_raided/"> <img src="https://regmedia.co.uk/2018/03/20/raid_shutterstock.jpg?x=88&amp;y=58&amp;crop=1" alt="raid" width="88" height="58"> <h4>FBI raids home of spy sat techie over leak of secret comms source code on Facebook </h4> </a> </li> 
+      <li> <a href="https://www.theregister.co.uk/2018/03/19/ability_to_dump_illegal_content_in_bitcoins_blockchain_puts_participants_in_peril/"> <img src="https://regmedia.co.uk/2017/08/01/shutterstock_btc_shock.jpg?x=88&amp;y=58&amp;crop=1" alt="" width="88" height="58"> <h4>Bitcoin's blockchain: Potentially a hazardous waste dump of child abuse, malware, etc </h4> </a> </li> 
+     </ol> 
+    </div> 
+    <div id="ad-falcon" class="adu"> 
+     <script>
+                show_gpt('ad-falcon');
+            </script> 
+     <noscript> 
+      <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6978/reg_security/front&amp;sz=300x100%7C300x250&amp;tile=4&amp;c=44WrK2CMCoyKoAAEa09bgAAAAz&amp;t=ct%3Dns%26unitnum%3D4%26unitname%3Dwww_mid_mpu%26pos%3Dmid%26test%3D0" target="_blank"> <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/6978/reg_security/front&amp;sz=300x100%7C300x250&amp;tile=4&amp;c=44WrK2CMCoyKoAAEa09bgAAAAz&amp;t=ct%3Dns%26unitnum%3D426unitname%3Dwww_mid_mpu%26pos%3Dmid%26test%3D0" alt=""> </a> 
+     </noscript> 
+    </div> 
    </div>
-   <div id="main_container">
-    <div id="header">
-     <div id="key_visual">
-      &nbsp; 
-     </div>
-    </div>
-    <div id="middle">
-     <div id="sub_container1">
-      <div id="logo">
-       <a href="index.html"></a>
+   <hr id="story_section_break"> 
+   <div id="boot"> 
+    <div id="ad-hawk" class="adu"> 
+     <script>show_gpt('ad-hawk');</script> 
+     <noscript> 
+      <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6978/reg_security/front&amp;sz=728x90%7C970x90&amp;tile=6&amp;c=66WrK2CMCoyKoAAEa09bgAAAAz&amp;t=ct%3Dns%26unitnum%3D6%26unitname%3Dwww_btm_leader%26pos%3Dbtm%26test%3D0" target="_blank"> <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/6978/reg_security/front&amp;sz=728x90%7C970x90&amp;tile=6&amp;c=66WrK2CMCoyKoAAEa09bgAAAAz&amp;t=ct%3Dns%26unitnum%3D6%26unitname%3Dwww_btm_leader%26pos%3Dbtm%26test%3D0" alt=""> </a> 
+     </noscript> 
+    </div> 
+   </div> 
+   <div id="story-bot-col"> 
+    <div id="read_more_on" class="deploy_aux"> 
+     <h3>More from The Register</h3> 
+     <div class="stories">
+      <div class="story"> 
+       <a href="/2017/11/01/digital_cert_abuse/"> 
+        <div class="story_grid_img"> 
+         <img src="https://regmedia.co.uk/2015/09/22/malware_security_648.jpg?x=198&amp;y=131&amp;crop=1" alt="malware_security_648" width="198" height="131"> 
+        </div> 
+        <div class="title_standfirst"> 
+         <h4>Hackers abusing digital certs smuggle malware past security scanners</h4> 
+         <div class="standfirst">
+           No longer just a spy game 
+         </div> 
+        </div> </a> 
       </div>
-      <div id="sub_nav_container"></div>
-     </div>
-     <div id="sub_container2">
-      <div id="slogan">
-       Hogarth Communications
+      <div class="story"> 
+       <a href="/2017/08/31/free_trojan_for_hackers/"> 
+        <div class="story_grid_img"> 
+         <img src="https://regmedia.co.uk/2016/07/26/hackers.jpg?x=198&amp;y=131&amp;crop=1" alt="Hackers" width="198" height="131"> 
+        </div> 
+        <div class="title_standfirst"> 
+         <h4>Malware writer offers free trojan to hackers ... with one small drawback</h4> 
+         <div class="standfirst">
+           Beware of geeks bearing Cobian RAT gifts 
+         </div> 
+        </div> </a> 
       </div>
-      <div class="content" id="content_container">
-       <p></p>
-       <p></p>
-       <p style="margin-right:0px;" dir="ltr"></p>
-       <p style="margin-right:0px;" dir="ltr">H<span style="font-size:14px;">ogarth Communications is an independent public relations agency with a clear and straightforward goal: to deliver great results and excellent&nbsp;value to clients. </span></p>
-       <p style="margin-right:0px;" dir="ltr"><span style="font-size:14px;">I offer seasoned, senior-level communications counsel, extensive media contacts and a proven, award-winning track record of meeting and exceeding client expectations. </span></p>
-       <p style="margin-right:0px;" dir="ltr"></p>
-       <p></p>
-       <p></p>
-       <p></p>
-       <p></p>
-       <p></p>
-       <p></p>
-       <p></p>
+      <div class="story"> 
+       <a href="/2018/03/15/mailchimp_malware_spam/"> 
+        <div class="story_grid_img"> 
+         <img src="https://regmedia.co.uk/2018/03/15/shutterstock_chimp.jpg?x=198&amp;y=131&amp;crop=1" alt="young chimpanzee looking thoughtful" width="198" height="131"> 
+        </div> 
+        <div class="title_standfirst"> 
+         <h4>MailChimp 'working' to stop hackers flinging malware-laced spam from accounts</h4> 
+         <div class="standfirst">
+           What can you do about it for now? Sweet 2FA 
+         </div> 
+        </div> </a> 
       </div>
-     </div>
-     <div id="sub_container3"></div>
+      <div class="story"> 
+       <a href="/2017/04/25/linux_malware/"> 
+        <div class="story_grid_img"> 
+         <img src="https://regmedia.co.uk/2017/02/27/shutterstock_405177946.jpg?x=198&amp;y=131&amp;crop=1" alt="Linux penguin canape... snacks. Photo by SHutterstock" width="198" height="131"> 
+        </div> 
+        <div class="title_standfirst"> 
+         <h4>Hackers uncork experimental Linux-targeting malware</h4> 
+         <div class="standfirst">
+           SSH... it's Shishiga 
+         </div> 
+        </div> </a> 
+      </div>
+      <div class="story"> 
+       <a href="/2018/03/01/german_government_confirms_hackers_blitzkrieged_its_servers_to_steal_data/"> 
+        <div class="story_grid_img"> 
+         <img src="https://regmedia.co.uk/2018/02/28/bear_shutterstock.jpg?x=198&amp;y=131&amp;crop=1" alt="bear" width="198" height="131"> 
+        </div> 
+        <div class="title_standfirst"> 
+         <h4>German government confirms hackers blitzkrieged its servers to steal data</h4> 
+         <div class="standfirst">
+           Probably-Russian Fancy Bear team fingered for attack 
+         </div> 
+        </div> </a> 
+      </div>
+      <div class="story"> 
+       <a href="/2017/12/07/microsoft_emergency_update_malware_protection_engine_needs_erm_malware_protection/"> 
+        <div class="story_grid_img"> 
+         <img src="https://regmedia.co.uk/2015/05/12/microsoftpatchscaled.jpg?x=198&amp;y=131&amp;crop=1" alt="Microsoft patch" width="198" height="131"> 
+        </div> 
+        <div class="title_standfirst"> 
+         <h4>Microsoft emergency update: Malware Engine needs, erm, malware protection</h4> 
+         <div class="standfirst">
+           Stop appreciating the irony and go install the patch now 
+         </div> 
+        </div> </a> 
+      </div>
+      <div class="story"> 
+       <a href="/2017/01/31/ransomware_sitrep_report/"> 
+        <div class="story_grid_img"> 
+         <img src="https://regmedia.co.uk/2017/01/26/ransomnote.jpg?x=198&amp;y=131&amp;crop=1" alt="A Ransom Note" width="198" height="131"> 
+        </div> 
+        <div class="title_standfirst"> 
+         <h4>We see you, ransomware flingers, testing out your baddest stuff on... Germany?</h4> 
+         <div class="standfirst">
+           Securobods file data hostage report 
+         </div> 
+        </div> </a> 
+      </div>
+      <div class="story"> 
+       <a href="/2018/03/16/european_cyber_security_pay_survey/"> 
+        <div class="story_grid_img"> 
+         <img src="https://regmedia.co.uk/2017/09/18/shutterstock_salary_calculator.jpg?x=198&amp;y=131&amp;crop=1" alt="" width="198" height="131"> 
+        </div> 
+        <div class="title_standfirst"> 
+         <h4>Ugh, of course Germany trounces Blighty for cyber security salaries</h4> 
+         <div class="standfirst">
+           Britons never, never, never shall be wage slaves. Oh wait 
+         </div> 
+        </div> </a> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="whitepapers"> 
+     <h3> <a href="https://whitepapers.theregister.co.uk/" class="dcl">Whitepapers</a> </h3> 
+     <a class="story" href="https://whitepapers.theregister.co.uk/paper/view/6208/intelliflash-architecture?td=s-uu"> <img src="/design_picker/4ee431b84ac2d23c13376f753522acd7ecbb9b47/graphics/icon/whitepaper_book.png" alt="PDF Icon" width="55" height="55"> <h4>Intelliflash Architecture</h4> 
+      <div class="standfirst">
+        To complicate matters, IT organizations run a wide range of workloads. 
+      </div> </a> 
+     <a class="story" href="https://whitepapers.theregister.co.uk/paper/view/6345/accelerate-deep-learning-with-a-modern-data-platform?td=s-uu"> <img src="/design_picker/4ee431b84ac2d23c13376f753522acd7ecbb9b47/graphics/icon/whitepaper_book.png" alt="PDF Icon" width="55" height="55"> <h4>Accelerate Deep Learning with a Modern Data Platform</h4> 
+      <div class="standfirst">
+        Data is growing at amazing rates and will continue this rapid rate of growth. 
+      </div> </a> 
+     <a class="story" href="https://whitepapers.theregister.co.uk/paper/view/6357/synthesis-modeling-the-intersection-of-hpc-and-machine-learning?td=s-uu"> <img src="/design_picker/4ee431b84ac2d23c13376f753522acd7ecbb9b47/graphics/icon/whitepaper_book.png" alt="PDF Icon" width="55" height="55"> <h4>Synthesis Modeling: The Intersection of HPC and Machine Learning</h4> 
+      <div class="standfirst">
+        How machine learning is being used as a new tool for scientific discovery, augmenting traditional techniques to improve our understanding of the universe. 
+      </div> </a> 
+     <a class="story" href="https://whitepapers.theregister.co.uk/paper/view/6236/the-quick-guide-to-automated-erp-performance?td=s-uu"> <img src="/design_picker/4ee431b84ac2d23c13376f753522acd7ecbb9b47/graphics/icon/whitepaper_book.png" alt="PDF Icon" width="55" height="55"> <h4>The Quick Guide to Automated ERP Performance</h4> 
+      <div class="standfirst">
+        Considering the affects of accelerating change and the explosive impact on the volumes of applications that require data from the ERP systems. 
+      </div> </a> 
     </div>
-    <div id="footer">
-     <div id="footer_text">
-      The Art of Communications
-     </div>
+    <div id="sponlinks"> 
+     <h3>Sponsored links</h3> 
+     <ul> 
+      <li><a href="https://account.theregister.co.uk/register/?product=thereg_daily_newsletter"><strong>Get The Register's Headlines in your inbox daily - quick signup!</strong></a></li> 
+     </ul> 
+    </div> 
+    <div id="ad-owl" class="adu"> 
+     <script>
+                show_gpt('ad-owl');
+            </script> 
+     <noscript> 
+      <a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6978/reg_security/front&amp;sz=300x250&amp;tile=5&amp;c=55WrK2CMCoyKoAAEa09bgAAAAz&amp;t=ct%3Dns%26unitnum%3D5%26unitname%3Dwww_btm_mpu%26pos%3Dbtm%26test%3D0" target="_blank"> <img src="https://pubads.g.doubleclick.net/gampad/ad?iu=/6978/reg_security/front&amp;sz=300x250&amp;tile=5&amp;c=55WrK2CMCoyKoAAEa09bgAAAAz&amp;t=ct%3Dns%26unitnum%3D5%26unitname%3Dwww_btm_mpu%26pos%3Dbtm%26test%3D0" alt=""> </a> 
+     </noscript> 
+    </div> 
+   </div> 
+   <script>facebook_sdk();</script> 
+   <div id="footer">
+    <div class="foot_wrapper"> 
+     <div class="left_block"> 
+      <div class="foot_list alt_colour dcl"> 
+       <h4>About us<img width="7" alt="" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/footer_mob_nav_arrow_black.svg" class="expand_arrow"></h4> 
+       <ul> 
+        <li><a href="https://www.theregister.co.uk/Profile/about_the_register/">Who we are</a></li> 
+        <li><a href="https://www.theregister.co.uk/about/company/website/">Under the hood</a></li> 
+        <li><a href="https://www.theregister.co.uk/about/company/contact/">Contact us</a></li> 
+        <li><a target="_blank" href="https://situationpublishing.com/home/contact-us/">Advertise with us</a></li> 
+       </ul> 
+      </div> 
+      <div class="foot_list more_us alt_colour dcl"> 
+       <h4>More content<img width="7" alt="" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/footer_mob_nav_arrow_black.svg" class="expand_arrow"></h4> 
+       <ul> 
+        <li><a href="https://www.theregister.co.uk/Week/">Week’s headlines</a></li> 
+        <li><a href="https://www.theregister.co.uk/Popular/">Top 20 stories</a></li> 
+        <li><a href="https://account.theregister.co.uk/alert/?create=1">Alerts</a></li> 
+        <li><a href="https://whitepapers.theregister.co.uk/">Whitepapers</a></li> 
+       </ul> 
+      </div> 
+      <div class="foot_list what_else alt_colour dcl"> 
+       <h4>Situation Publishing<img width="7" alt="" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/footer_mob_nav_arrow_black.svg" class="expand_arrow"></h4> 
+       <ul> 
+        <li><a href="https://www.nextplatform.com/">The Next Platform</a></li> 
+        <li><a href="https://continuouslifecycle.london/">Continuous Lifecycle London</a></li> 
+        <li><a href="http://www.mcubed.london/">M-cubed</a></li> 
+        <li><a href="https://whitepapers.theregister.co.uk/events/list">Webinars</a></li> 
+       </ul> 
+      </div> 
+      <span class="foot_delim"></span> 
+      <div class="reg_foot"> 
+       <a href="https://situationpublishing.com/" id="sitpub_logo"> <img width="132" height="51" alt="Situation Publishing" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/sitpub_footer.svg"> </a> 
+       <p class="foot_desc"><strong>The Register</strong> - Independent news and views for the tech community. Part of Situation Publishing</p> 
+      </div> 
+     </div> 
+     <div class="right_block"> 
+      <div class="newsletter_signup alt_colour dcl"> 
+       <h4>Sign up to our Newsletters</h4> 
+       <p>Join our daily or weekly newsletters, subscribe to a specific section or set <a href="https://account.theregister.co.uk/alert/?create=1">News alerts</a></p> 
+       <a class="subscribe_newsletter_button" href="https://account.theregister.co.uk/register/?product=thereg_daily_newsletter">Subscribe<img width="7" alt="" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/footer_mob_nav_arrow_white.svg"></a> 
+      </div> 
+      <div class="social alt_colour dcl"> 
+       <div id="follow_btns"> 
+        <a id="follow_us_twitter" href="https://twitter.com/intent/user?screen_name=theregister" title="Follow us on twitter" target="_blank" class="twit"> 
+         <div class="circ"> 
+          <img width="18" height="18" alt="Twitter" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/twitter.svg"> 
+         </div> </a> 
+        <a href="https://www.facebook.com/VultureCentral" title="Like us on Facebook" target="_blank" class="fbook"> 
+         <div class="circ"> 
+          <img width="18" height="18" alt="Facebook" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/facebook.svg"> 
+         </div> </a> 
+        <a href="https://www.linkedin.com/company/the-register" title="Follow us on LinkedIn" target="_blank" class="linkin"> 
+         <div class="circ"> 
+          <img width="18" height="18" alt="LinkedIn" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/linkedin_white.svg"> 
+         </div> </a> 
+        <a href="https://www.theregister.co.uk/Design/page/feeds.html" title="Follow our RSS" target="_blank" class="rss_feed"> 
+         <div class="circ"> 
+          <img width="18" height="18" alt="feeds" src="/design_picker/c00f80f04b0eaf0123d821f6c9488fc1cb55fd0a/graphics/icon/rss.svg"> 
+         </div> </a> 
+       </div> 
+      </div> 
+     </div> 
+     <noscript>
+      <img src="/Design/graphics/std/transparent_pixel.png" alt="no-js">
+     </noscript> 
     </div>
-   </div>
-  </div>
-  <!-- wfxbuild / 1.0 / layout6-08-l1 / 2012-02-08 21:25:52 CET-->
+   </div> 
+   <div id="foot_btm"> 
+    <p>Biting the hand that feeds IT © 1998–2018 </p> 
+    <div class="foot_btm_links"> 
+     <a href="https://www.theregister.co.uk/Profile/cookies/">Cookies</a> 
+     <a href="https://www.theregister.co.uk/about/company/privacy/">Privacy</a> 
+     <a href="https://www.theregister.co.uk/Profile/terms_and_conditions_of_use/">Ts&amp;Cs</a> 
+    </div> 
+   </div> 
+   <div id="end_scripts"> 
+    <script>
+            googletag.cmd.push(function() { 
+                var abt1 = '<img style="position:absolute" src="https://go.theregister.co.uk/k/abt_';
+                var abt2 = '" width=1 height=1 alt="">';
+                var ch = 0;
+                $('.adu').each(function(i) {
+                    ch += $(this).height();
+                });
+                if (ch == 0 && !ad_free()) {
+                    $("#footer").append($(abt1 + 'b' + abt2));
+                } else {
+                    $("#footer").append($(abt1 + 'a' + abt2));
+                }
+            });
+        </script> 
+    <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-33330076-1', 'theregister.co.uk', { 'allowLinker': true });
+            ga('require', 'linker');
+            ga('linker:autoLink', ['channelregister.co.uk']);
+            ga('require', 'displayfeatures');
+            ga('set', 'dimension2', (typeof RegArticle != 'undefined') ? RegArticle.author : '');
+            ga('set', 'dimension3', (typeof RegSection != 'undefined') ? RegSection : '');
+            ga('set', 'dimension4', (typeof RegArticle != 'undefined' ? (RegArticle.pf ? 'p' : (RegArticle.cp ? 'c' : 'a')) : 'i'));
+            ga('set', 'dimension5', (typeof RegArticle != 'undefined') ? RegArticle.cat : '');
+            ga('set', 'dimension6', (typeof RegArticle != 'undefined') ? RegArticle.ads : '');
+            ga('send', 'pageview');
+        </script> 
+    <script>
+            (function() {
+            var d=document,h=d.getElementsByTagName('head')[0],s=d.createElement('script');
+            s.type='text/javascript';
+            s.async=true;
+            s.src='https://s.dpmsrv.com/dpm_812ed4562d3211363a7b813aa9cd2cf042b63bb2.min.js';
+            h.appendChild(s);
+            })();
+        </script> 
+    <script>
+        $(function() { set_bucket_group(806) });
+    </script> 
+    <div id="fb-root"></div> 
+   </div> 
+  </div>   
  </body>
 </html>

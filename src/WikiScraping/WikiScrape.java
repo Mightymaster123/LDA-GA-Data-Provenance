@@ -38,7 +38,7 @@ public class WikiScrape {
 		Document doc;
 		
 		for(int i = 0; i < noOfArticles; ) {
-			System.out.println("WikiScrape article: "+i+" / "+noOfArticles);
+			System.out.println("WikiScrape article: "+(i+1)+" / "+noOfArticles);
             try {
 
                 // This URL brings us to a random wiki article
