@@ -52,6 +52,7 @@
   <link rel="publisher" href="https://plus.google.com/+fcbayern"> 
   <link rel="stylesheet" type="text/css" href="/fcb/stylesheets/styles.concat.css?tag=0-60-1"> 
   <!-- Replace ß --> 
+<<<<<<< HEAD
   <script type="text/javascript">
     function getTextNodes(element) {
         var node
@@ -332,6 +333,288 @@
     fcbConfig.mobileWebview = {
         hashParam: "mobileWebview"
     };
+=======
+  <script type="text/javascript">
+    function getTextNodes(element) {
+        var node
+                , matchedNodes = []
+                , walker = document.createTreeWalker(element, NodeFilter.SHOW_ELEMENT, null, false);
+
+        while (node = walker.nextNode()) {
+            if(window.getComputedStyle(node).getPropertyValue('text-transform') === 'uppercase') {
+
+                // second & third if included just to make it more transparent what happens here
+                if(node.nodeName !== 'svg' || node.nodeName !== 'path' || node.nodeName !== 'style' || node.nodeName !== 'defs') {
+                    if (node.textContent.indexOf('ß') > -1) {
+                        matchedNodes.push(node);
+                    }
+                }
+            }
+        }
+
+        return matchedNodes;
+    }
+
+    function replaceSharpS(domNode) {
+        matchedTextNodes = getTextNodes(domNode);
+
+        matchedTextNodes.forEach(function (textNode) {
+            var replacedText = textNode.textContent.replace(/ß/gmi, 'ss');
+            textNode.textContent = replacedText;
+        });
+
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+        replaceSharpS(document.querySelector('body'));
+    }, false);
+
+</script> 
+  <script type="text/javascript">
+    var _globalPath = "/fcb/";
+
+    var zo = zo || {};
+    var fcbConfig = fcbConfig || {};
+
+    fcbConfig.locale = "us";
+    fcbConfig.apiLocalePrefix = "/us";
+
+    fcbConfig.googleTagManagerSettings = {
+        containerId: "",
+        isEnabled: true
+    };
+
+    fcbConfig.localization = {
+        textOf: 'from'
+        , textVS: 'v'
+        , textBackLogin: 'Profile'
+        , textLanguage: 'Language'
+    };
+
+    fcbConfig.datepicker = {
+        closeText: "Close",
+        prevText: "&#x3C;Back",
+        nextText: "Next&#x3E;",
+        currentText: "today",
+        monthNames: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+        monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ],
+        dayNames: [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ],
+        dayNamesShort: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"  ],
+        dayNamesMin:  [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ],
+        weekHeader: "Week number",
+        dateFormat: "dd/mm/yy",
+        dateFormatNoYear: "mm/dd",
+        timeDefault: "--:--",
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: "",
+        maxDate: "+2Y"
+    };
+
+    fcbConfig.datepickerBirthday = {
+        yearRange: "c-80:c+2"
+    };
+
+    fcbConfig.defaultMobileMaxDate = {
+        maxDate: 2
+    };
+
+    fcbConfig.appointments = {
+        "allDay": "",
+        "noEndDateTimeFormat": "{hh:mm T}",
+        "sameDayTimeFormat": "{hh:mm T} - {hh:mm T}",
+        "differentDayTimeFormat": "{MM/DD hh:mm T} - {MM/DD hh:mm T}"
+    };
+
+    fcbConfig.dynamicLabels = {
+        interval: 10,
+        checkTimeDifference: 60,
+        dateFormat: "MM/dd/YYYY",
+        timeFormat: "hh:mm",
+        outputTimeDifference: "# minutes ago",
+        outputTimeDifferenceNow: "moments ago",
+        outputTimeText: " ",
+        outputStatusNew: "New",
+        outputStatusUpdated: "Update"
+    };
+
+    fcbConfig.matchcenter = {
+        translations: {
+            'ownGoalShort': "OG"
+        }
+    };
+
+    fcbConfig.countdown = {
+        translations: {
+            days: ['days', 'day']
+            , hours: ['hours', 'hour']
+            , minutes: ['minutes', 'minute']
+            , seconds: ['seconds', 'second']
+        },
+        templates: {
+            3: "<b>{$1}</b>, <b>{$2}</b> and <b>{$3}</b> left"
+            , 2: "<b>{$1}</b>, <b>{$2}</b> left"
+            , 1: "<b>{$1}</b> left"
+            , 0: ""
+        }
+    };
+
+    fcbConfig.liveticker = {
+        translations: {
+            matchPeriodExtraFirstHalf: 'ET',
+            matchPeriodExtraSecondHalf: 'ET',
+            matchPeriodShootOut: 'PSO',
+            scorer: 'Scorer'
+        }
+    };
+
+    fcbConfig.connections = {
+        liveStatistics: {
+            apiPath: ''
+        },
+        loginProcess: {
+            ssoUrlScript: 'https://login.fcbayern.com/api/js/embedded.js'
+            , ssoUrlCSS: 'https://login.fcbayern.com/api/css/embedded.css'
+            , logout: {
+                url: 'https://login.fcbayern.com/'
+                , service: 'https://fcbayern.com/'
+            }
+            , cookieName: 'loginmetainfo'
+            , cookieNameGlobal: 'SSO_LAST_LOGIN'
+            , loginUrlRedirect: 'https://login.fcbayern.com/cas/login?gateway&service=https%3A%2F%2Ffcbayern.com%2Fus%2Fsso-security-check%3Ftarget%3DL3VzL25ld3MvMjAxNy8xMC9wcmVzcy1yZWxlYXNlLWp1cHAtaGV5bmNrZXM%253D'
+            , logoutUrlRedirect: ''
+            , welcome:'Hello'
+        },
+        newsOverview: {
+            apiPath: '/us/api/search'
+            , page: 0
+            , pageSize: 15
+            , scope: [
+            ]
+            , categories: [
+            ]
+            , labels: [
+            ]
+        }
+        , galleryOverview: {
+            apiPath: '/us/api/search'
+            , page: 0
+            , pageSize: 15
+            , contentTypes: [
+                'fcbhippo:ImageGalleryDocument'
+            ]
+            , scope: [
+            ]
+            , categories: [
+            ]
+            , labels: [
+            ]
+        }
+        , videoOverview: {
+            apiPath: '/us/api/search'
+            , page: 0
+            , pageSize: 6
+            , contentTypes: [
+                'fcbhippo:VideoDocument'
+            ]
+            , scope: [
+                ''
+            ]
+            , categories: [
+            ]
+            , labels: [
+            ]
+            , filterProtections: []
+        }
+        , match: {
+            apiPath: '/us/api/sportsdata/match/uuid/'
+            , interval: 10000
+        }
+        , matchBase: {
+            apiPath: '/us/api/sportsdata/match/uuid/'
+        }
+        , appointmentOverview: {
+            apiPath: '/us/api/search/appointments'
+            , page: 0
+            , pageSize: 15
+            , contentTypes: [
+            ]
+            , matchReference: ''
+            , scope: [
+            ]
+            , categories: [
+            ]
+            , labels: [
+            ]
+        },
+        liveStatistics: {
+            apiPath: '/us/api/statistics/'
+        },
+        searchOverview: {
+            apiPath: '/us/api/search/document'
+            , page: 0
+            , pageSize: 15
+            , scope: [
+                ''
+            ], categories: []
+            , labels: []
+        },
+        appointmentTeaser: {
+            apiPath: '/us/api/search/appointments'
+            , page: 0
+            , pageSize: 4
+            , contentTypes: [
+            ]
+            , matchReference: ''
+            , scope: [
+            ]
+            , categories: [
+            ]
+            , labels: [
+            ]
+        }
+    };
+
+    fcbConfig.kalturaPlayer = {
+        partnerId : 2090621
+        , uiConfId : 37544411
+        , width : "100%"
+        , height : "100%"
+        , api : "https://cdnapisec.kaltura.com/p/2090621/sp/0/embedIframeJs/uiconf_id/37544411/partner_id/2090621"
+    };
+
+    fcbConfig.kalturaWebradioPlayer = {
+        partnerId : 2090621
+        , uiConfId : 37544421
+        , api : "https://cdnapisec.kaltura.com/p/2090621/sp/0/embedIframeJs/uiconf_id/37544421/partner_id/2090621"
+    };
+
+    fcbConfig.newsletter = {
+        url: '/us/api/newsletter/register'
+        , failUrl: '/us/newsletter/failure'
+    };
+
+    fcbConfig.socialShare = {
+        infoUrl: 'https://fcbayern.com/datenschutz/',
+        mailBody: '',
+        mailSubject: '',
+        mailUrl: 'mailto:'
+    };
+    fcbConfig.webcamReloadInterval = 5000;
+    fcbConfig.fcbTvGuide = {
+        url : "",
+        noData : 'No data available',
+        dateFormat: 'DD/MM',
+        timeFormat: ' ' + 'hh:mm T',
+        dayOnlyFormat: 'DAY',
+        epgEntries: 4,
+        epgDefaultImage:""
+    };
+    fcbConfig.mobileWebview = {
+        hashParam: "mobileWebview"
+    };
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
   <script type="text/javascript">
         (function forceSSOLoginWhenNeeded() {

@@ -48,6 +48,7 @@
   <link rel="apple-touch-icon-precomposed" href="/wps/build/images/miamiherald/apple-touch-icon-57-precomposed.png"> 
   <link rel="shortcut icon" href="/wps/build/images/miamiherald/favicon.png"> 
   <script type="text/javascript" src="/wps/source/scripts/libs/require.js"></script> 
+<<<<<<< HEAD
   <script type="text/javascript">
     var wpsConfig = {
         baseUrl: '/wps/source/scripts/src',
@@ -261,6 +262,221 @@ mi.pageInfo.setConf({
 </script> 
   <script src="//media.miamiherald.com/misites/mia/miamiherald.js"></script> 
   <script type="text/javascript">
+=======
+  <script type="text/javascript">
+    var wpsConfig = {
+        baseUrl: '/wps/source/scripts/src',
+        urlArgs: 'misv=1d02ada',
+        paths: {
+            'fastdom': '../libs/fastdom.min',
+            'moment': '../libs/moment.min',
+            'flickity': '../libs/flickity.pkgd.min',
+            'identity': '../libs/identityModulev3.min',
+            'videojs': '../libs/video.min',
+            'videojsplaylist': '../libs/videojs-playlist.min',
+            "ads": [
+                "../libs/videojs.ads.min",
+                "../libs/adblocked.ads"
+                ],
+            'ima': [
+                '../libs/videojs.ima.min',
+                "../libs/adblocked.ima"
+                ],
+            'googleima': [
+                '//imasdk.googleapis.com/js/sdkloader/ima3',
+                "../libs/adblocked.sdk"
+                ]
+        },
+        shim:{
+            'ima': {
+                deps: ['googleima','ads']
+            }
+        },
+        map: {
+            '*': {
+                'video.js': 'videojs'
+            }
+        },
+        waitSeconds: 0
+    };
+    
+    var wpsRequire = requirejs.config(wpsConfig);
+
+</script> 
+  <script>
+    var mi = (function(mod) {
+        mod.lazyloaders = mod.lazyloaders || [];
+        return mod;
+    })(mi || {});
+    
+</script> 
+  <script>mi.inMarket=true</script> 
+  <link href="/wps/build/css/theme.markets/miamiherald-1248d584cb.css" rel="stylesheet" type="text/css"> 
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="//oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script type="text/javascript" src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+<![endif]--> 
+  <script type="text/javascript" src=" /wps/source/scripts/libs/jquery-1.10.2.min.js"></script> 
+  <script type="text/javascript" src="/wps/build/js/mi-header-b57491d113.js"></script> 
+  <script type="text/javascript" src="/wps/source/scripts/libs/guid.js"></script> 
+  <script>
+        wpsRequire(['identity'], function(IdentityModule) {
+            $(window).load(function() {
+                var identityCookieName = 'AccessToken';
+                var accessTokenCookie = mi.getCookie(identityCookieName);
+                
+                if (!accessTokenCookie) {
+                    var identityModule = new IdentityModule();
+                    var identityPrefix = 'mcv4';
+                    
+                    $.getJSON('https://api.ipify.org?format=jsonp&callback=?')
+                    .done(function(json) {
+                        identityModule.GenerateIdentity(identityCookieName, identityPrefix, [json.ip]);
+                    })
+                    .fail(function() {
+                        identityModule.GenerateIdentity(identityCookieName, identityPrefix, [getGuid()]);
+                    });
+                }
+            });
+        });
+    </script> 
+  <!-- 
+                
+                
+                
+                
+
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                
+
+                
+                
+                
+                
+                
+                
+                
+
+                
+                
+                
+                
+
+                
+                
+                
+                
+
+
+                
+                    
+                        
+                        
+                    
+
+                
+                
+
+                
+                    
+                
+
+                
+                
+                 --> 
+  <script type="text/javascript">
+mi.pageInfo.setConf({
+'marketInfo.viewsizes':[{"Extra-Small":[0,0]},{"Large":[1200,600]},{"Medium":[992,300]},{"Small":[768,300]}],
+'marketInfo.adsizes':{"outofpage":{},"wallpaper":{'1600x600':[1600,600],'None':[]},"floorboard":{'285x70':[285,70],'None':[]},"default":{'120x20':[120,20],'120x240':[120,240],'120x600':[120,600],'146x60':[146,60],'160x600':[160,600],'160x90':[160,90],'168x28':[168,28],'180x150':[180,150],'216x36':[216,36],'234x60':[234,60],'240x400':[240,400],'300x100':[300,100],'300x250':[300,250],'300x50':[300,50],'300x600':[300,600],'300x75':[300,75],'320x450':[320,450],'320x50':[320,50],'336x280':[336,280],'468x60':[468,60],'500x300':[500,300],'600x250':[600,250],'728x90':[728,90],'960x30':[960,30],'970x90':[970,90],'Billboard Flex':[[960,30],[970,30],[970,90],[970,250]],'Billboard Flex2':[[970,90],[970,250]],'Flex Ad':[[300,250],[300,600]],'None':[],'Rising Star':[500,300],'Welcome Ad':[[300,250],[300,600],[550,480],[600,500]]} },'accuweather.apiKey':'2ce96fe9da724185a27db1e6a3ecf580',
+'accuweather.dev':'false',
+'accuweather.locationKey':'347936',
+'accuweather.locationString':'Miami',
+'accuweather.partnerCode':'MCCLATCHY',
+'classads.apartmentsUrl':'http://www.apartments.com/Florida/Miami',
+'classads.carsUrl':'http://www.cars.com/?aff=miami',
+'classads.homefinderUrl':'http://www.homefinder.com/FL/Miami',
+'facebook.app.id':'133847067760',
+'financialContent.account':'miamiherald',
+'findnsave.tracking':'findnsave',
+'legacy.affiliateId':'mi000150',
+'legacy.siteName':'herald',
+'marketInfo.CarsAFF':'herald',
+'marketInfo.CarsSEO':'',
+'marketInfo.JobsQSCTY':'Miami',
+'marketInfo.JobsQSSTS':'FL,US',
+'marketInfo.JobsSEO':'',
+'marketInfo.JobsSiteID':'cbcb_mh',
+'marketInfo.Jobslr':'CBCB_MH',
+'marketInfo.addcities':'Hollywood, Fort Lauderdale, West Palm Beach',
+'marketInfo.adretargeting.kill_list':'[&quot;simpli.fi&quot;]',
+'marketInfo.allow_ads':'true',
+'marketInfo.allow_nativo':'true',
+'marketInfo.careerbuilder.dmc_code':'mia',
+'marketInfo.careerbuilder.dmc_id':'1048',
+'marketInfo.careerbuilder.lr':'CBCB_MH',
+'marketInfo.careerbuilder.mxjobsrchcriteria_rawwords':'outside+sales',
+'marketInfo.careerbuilder.s_freshness':'30',
+'marketInfo.careerbuilder.s_rawwords':'CustomField3:MIAMITJ',
+'marketInfo.city':'Miami',
+'marketInfo.classads.apartmentsUrl':'http://www.apartments.com/Florida/Miami',
+'marketInfo.clipped_taxonomy':'News/World',
+'marketInfo.code':'MIA',
+'marketInfo.county':'Miami-Dade County',
+'marketInfo.domain':'miamiherald',
+'marketInfo.followLinks':'0',
+'marketInfo.location':'Miami',
+'marketInfo.logoAltText':'Miami Herald',
+'marketInfo.market_identifier':'MIA.site_miamiherald',
+'marketInfo.name':'Miami Herald',
+'marketInfo.networkid':'7675',
+'marketInfo.phone':'1 (800) THE HERALD (1-800-843-4372)',
+'marketInfo.product':'site',
+'marketInfo.region':'South Florida',
+'marketInfo.shortURL':'front',
+'marketInfo.siteId':'56',
+'marketInfo.sourcelevel':'americas',
+'marketInfo.state':'Florida',
+'marketInfo.state_abbreviation':'FL',
+'marketInfo.staticDirectory':'miamiherald',
+'marketInfo.street_address':'3511 NW 91 Ave., Miami, FL 33172',
+'marketInfo.taxonomy':'News/World///',
+'marketInfo.webmaster_email':'webmaster@miamiherald.com',
+'nativo.story.placements':'840170,776813,844318',
+'nativo.video.placements':'869316,869315',
+'olive.localBrand':'',
+'publication.domain':'MiamiHerald.com',
+'publication.mediadomain':'media.miamiherald.com',
+'wishabi.bodyId':'861',
+'wishabi.navId':'1058',
+'wufoo.formID':'',
+'marketInfo.pagelevel':'story',
+});
+</script> 
+  <script type="text/javascript">
+    var mistats = mistats || {};
+    mistats.pagelevel="Story";
+    mistats.cmsid="Story:8009664";
+    mistats.pagename="Story:8009664|U.N. Security Council backs Martelly, calls for elections";
+    mistats.taxonomy="News|World|||";
+    mistats.channel="Haiti";
+    mistats.contentsource="Miami|By Jacqueline Charlesjcharles@MiamiHerald.com";
+    mistats.pubdate="2015/01/23";
+    mistats.moddate="2015/01/24 H08";
+    mistats.keywords="";
+</script> 
+  <script src="//media.miamiherald.com/misites/mia/miamiherald.js"></script> 
+  <script type="text/javascript">
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
         var imgLazyLoadThreshold = 500;
     </script> 
   <script>
@@ -351,9 +567,15 @@ mi.pageInfo.setConf({
     }
 }
 </script> 
+<<<<<<< HEAD
   <script>
     var _prx = window._prx || [];
     _prx.push(['cfg.SetNoAutoStart']);
+=======
+  <script>
+    var _prx = window._prx || [];
+    _prx.push(['cfg.SetNoAutoStart']);
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
   <script src="https://s.ntv.io/serve/load.js" async></script> 
   <script src="http://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5" async></script> 
@@ -734,10 +956,17 @@ mi.pageInfo.setConf({
         </div> 
        </nav> 
       </div> 
+<<<<<<< HEAD
       <script type="text/javascript">
     $(document).ready(function () {
         mi.mainNav.init();
     });
+=======
+      <script type="text/javascript">
+    $(document).ready(function () {
+        mi.mainNav.init();
+    });
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
      </div> 
     </div> 
@@ -781,10 +1010,17 @@ mi.pageInfo.setConf({
        <span class="credits"> Miami Herald Staff </span> 
       </div> 
      </div> 
+<<<<<<< HEAD
      <script>
         jQuery(document).ready(function () {
             mi.leadAssets.init();
         });
+=======
+     <script>
+        jQuery(document).ready(function () {
+            mi.leadAssets.init();
+        });
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
     </script> 
      <div id="story-header"> 
       <h2 class="heading section-main-heading link"> <a href="//www.miamiherald.com/news/nation-world/world/americas/">Americas</a> </h2> 
@@ -814,6 +1050,7 @@ mi.pageInfo.setConf({
          </ul> 
          <div class="glyphicon glyphicon-share"></div> </li> 
        </ul> 
+<<<<<<< HEAD
        <script type="text/javascript">
     $(document).ready(function () {
         mi.articleShareTools.init({
@@ -822,6 +1059,16 @@ mi.pageInfo.setConf({
         });
         mi.socialSharingScroll.init();
     });
+=======
+       <script type="text/javascript">
+    $(document).ready(function () {
+        mi.articleShareTools.init({
+            nextLinkedin: '8564',
+            nextPinterest: '8630'
+        });
+        mi.socialSharingScroll.init();
+    });
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
       </div> 
       <div class="published-date-widget"> 
@@ -860,6 +1107,7 @@ mi.pageInfo.setConf({
          <p>The country now has no elected mayors, no head of the Supreme Court and no Chamber of Deputies or working Senate. Last week, on the fifth anniversary of the quake, lack of elections overdue by more than three years caused the terms of the entire lower house to expire as well as a second-tier of the 30-member Senate.</p> 
          <div class="ad visible-xs"> 
           <div class="ad-widget" id="mn-gpt-5" adtype="default" pkg="c" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Extra-Small" large="None" medium="None" small="None" extra-small="300x250" articleid="8009664"></div> 
+<<<<<<< HEAD
          </div> 
          <p>Despite the crisis, Chilean U.N. Ambassador Christian Barros Melet and U.S. Ambassador Samantha Power, who led the delegation, said they were encouraged. The pair commended Martelly for his efforts in trying to break the impasse by reaching out to the opposition and promising to continue the dialogue to bring opponents demanding his resignation off the streets and to the negotiating table.</p> 
          <p>“We are very encouraged by the effort at consultations with the opposition, with civil society that the president has made and out of this meeting, even more encouraged by his determination to continue those consultations even after the lapsing of the parliament,” Power said. </p> 
@@ -877,6 +1125,25 @@ mi.pageInfo.setConf({
          <div class="ad visible-xs"> 
           <div class="ad-widget" id="mn-gpt-7" adtype="default" pkg="f" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Extra-Small" large="None" medium="None" small="None" extra-small="300x250" articleid="8009664"></div> 
          </div> 
+=======
+         </div> 
+         <p>Despite the crisis, Chilean U.N. Ambassador Christian Barros Melet and U.S. Ambassador Samantha Power, who led the delegation, said they were encouraged. The pair commended Martelly for his efforts in trying to break the impasse by reaching out to the opposition and promising to continue the dialogue to bring opponents demanding his resignation off the streets and to the negotiating table.</p> 
+         <p>“We are very encouraged by the effort at consultations with the opposition, with civil society that the president has made and out of this meeting, even more encouraged by his determination to continue those consultations even after the lapsing of the parliament,” Power said. </p> 
+         <p>“The democratic contract between the government and the governed is a critical part of Haiti’s development and we on the U.N. Security Council want to offer Haiti all of the support we can,” she said.</p> 
+         <p>Power said members were further encouraged by Friday’s installation of a new nine-member Provisional Electoral Council (CEP) to organize the balloting. It is the fifth since Martelly’s 2011 election, and was sworn-in just hours before the delegation touched down. </p> 
+         <p>During the installation ceremony at the council’s headquarters in Petionville, recently installed Prime Minister Evans Paul said, the international community does not have to direct Haitians to hold elections.</p> 
+         <div class="ad visible-xs"> 
+          <div class="ad-widget" id="mn-gpt-6" adtype="default" pkg="e" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Extra-Small" large="None" medium="None" small="None" extra-small="300x250" articleid="8009664"></div> 
+         </div> 
+         <p>“We have to do it,” he said. “Elections are indispensable for the stability of Haiti.”</p> 
+         <p>As Paul spoke, across town thousands of anti-government demonstrators took to the streets in the second day of consecutive protests demanding Martelly’s resignation and accusing him of foot-dragging on elections and of trying to be a dictator.</p> 
+         <p>“Since Martelly came to power, everyone can see how he’s violated the Constitution,” said protester Ronald Fareau, 46, carrying a mini Haitian flag in his hands as he walked down a capital street. “He’s had nine carnivals but not done one election, and instead of defending us, the people, the international community is defending its own self-interests.”</p> 
+         <p>Protesters not only asked for Martelly’s departure but also that of the U.N.’s nearly 7,000 peacekeeping force, known as MINUSTAH. The force is marking its 11th year in Haiti, where it is accused of introducing a deadly cholera outbreak that has killed more than 8,700 and sickened more than 720,000.</p> 
+         <p>Earlier this month, Judge J. Paul Oetken of U.S. District Court in Manhattan dismissed a lawsuit filed by human rights lawyers seeking compensation for thousands of cholera victims. The judge ruled that the U.N. has legal immunity.</p> 
+         <div class="ad visible-xs"> 
+          <div class="ad-widget" id="mn-gpt-7" adtype="default" pkg="f" data-ad-policy="onPageLoad" audience="all" atf="n" defaultsize="Extra-Small" large="None" medium="None" small="None" extra-small="300x250" articleid="8009664"></div> 
+         </div> 
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
          <p>Lawyers for the plaintiffs said they plan to appeal, and this week joined human rights groups here and in the United States in urging the Security Council delegation to address the cholera crisis. The U.N. has refused to take responsibility for allegedly introducing the disease in Haiti through one of its battalions 10 months after the earthquake, but last year on the eve of a visit to Haiti, U.N. Secretary General Ban Ki-moon told the Miami Herald that the global body has “a moral responsibility” to help Haiti.</p> 
          <p>Martelly reminded Security Council members of that responsibility, asking them to help support Haiti’s national plan for cholera eradication.</p> 
          <p>Martelly said Haitians have the right to protest and while conditions “can’t always be beautiful,” he remains committed to reaching out to the opposition to help develop Haiti.</p> 
@@ -895,6 +1162,7 @@ mi.pageInfo.setConf({
         <!-- Nothing is configured --> 
         <!-- Nothing is configured --> 
         <!-- Nothing is configured --> 
+<<<<<<< HEAD
         <script type="text/template" id="inlinegallery-template-8009652"> 
     <div class="story-gallery spillover-gallery">
         <div id="slick-gallery-container-8009652" class="mi-slick-gallery-container clearfix" style="visibility: hidden;">
@@ -934,6 +1202,47 @@ Courtesy of the National Palace
             
         </div>
     </div>
+=======
+        <script type="text/template" id="inlinegallery-template-8009652"> 
+    <div class="story-gallery spillover-gallery">
+        <div id="slick-gallery-container-8009652" class="mi-slick-gallery-container clearfix" style="visibility: hidden;">
+            <div class="preroll-container" data-uniqueID="8009652">
+                
+                
+                <div class="slick-gallery">
+                    
+                        
+                            <div class="gallery-item image">
+                                <span data-src="//www.miamiherald.com/news/nation-world/world/americas/680m5q/picture8009652/alternates/FREE_160/IMG_5057%20(2).JPG" data-width-160></span>
+                                <span data-src="//www.miamiherald.com/news/nation-world/world/americas/680m5q/picture8009652/alternates/FREE_320/IMG_5057%20(2).JPG" data-width-320></span>
+                                <span data-src="//www.miamiherald.com/news/nation-world/world/americas/680m5q/picture8009652/alternates/FREE_480/IMG_5057%20(2).JPG" data-width-480></span>
+                                <span data-src="//www.miamiherald.com/news/nation-world/world/americas/680m5q/picture8009652/alternates/FREE_640/IMG_5057%20(2).JPG" data-width-640></span>
+                                <span data-src="//www.miamiherald.com/news/nation-world/world/americas/680m5q/picture8009652/alternates/FREE_768/IMG_5057%20(2).JPG" data-width-768></span>
+                                <span data-src="//www.miamiherald.com/news/nation-world/world/americas/680m5q/picture8009652/alternates/FREE_960/IMG_5057%20(2).JPG" data-width-960></span>
+                                <span data-src="//www.miamiherald.com/news/nation-world/world/americas/680m5q/picture8009652/alternates/FREE_1140/IMG_5057%20(2).JPG" data-width-1140></span>
+                                <img alt="The signing of a political accord Monday, Dec. 29, 2014 to avert a deeper crisis in Haiti. L-R: President of the Chamber of Deputies, Jacques Stevenson Thimoleon, Senate President Simon Desras, Haiti President Michel Martelly and Supreme Court President Anel Alexis Joseph." title="The signing of a political accord Monday, Dec. 29, 2014 to avert a deeper crisis in Haiti. L-R: President of the Chamber of Deputies, Jacques Stevenson Thimoleon, Senate President Simon Desras, Haiti President Michel Martelly and Supreme Court President Anel Alexis Joseph." />
+                                <div class="caption">
+                                    <span class="caption-text">The signing of a political accord Monday, Dec. 29, 2014 to avert a deeper crisis in Haiti. L-R: President of the Chamber of Deputies, Jacques Stevenson Thimoleon, Senate President Simon Desras, Haiti President Michel Martelly and Supreme Court President Anel Alexis Joseph. </span>
+                                    
+                                    
+                                    <span class="credits">
+Courtesy of the National Palace
+</span>
+                                    
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+            <div class="spillover-caption-carousel">
+                <div class="current-caption  spillover-gallery"></div>
+                
+            </div>
+            
+        </div>
+    </div>
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
      </script>
         <div id="inlinegallery-target-8009652"></div>
         <script> lazyLoadingModule("inlinegallery-template-8009652", "inlinegallery-target-8009652", "gallery",500,
@@ -1198,10 +1507,17 @@ Courtesy of the National Palace
     </div> 
    </div> 
   </div> 
+<<<<<<< HEAD
   <script type="text/javascript">
   jQuery(document).ready(function () {
     mi.footer.init();
   });
+=======
+  <script type="text/javascript">
+  jQuery(document).ready(function () {
+    mi.footer.init();
+  });
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
   <div id="wallpaperWrapper" style="display:none;"> 
    <div class="ad-widget" id="mn-gpt-15" adtype="wallpaper" pkg="None" data-ad-policy="onPageLoad" audience="all" atf="y" defaultsize="Large" large="1600x600" medium="None" small="None" extra-small="None" articleid="8009664">
@@ -1215,6 +1531,7 @@ Courtesy of the National Palace
     </div> 
    </div> 
   </div> 
+<<<<<<< HEAD
   <script type="text/javascript">
         var optimeraEnabled = false;
             optimeraEnabled = true;
@@ -1243,6 +1560,36 @@ Courtesy of the National Palace
 
             mi_Ads.env.create();
         mi_Ads.env.init();
+=======
+  <script type="text/javascript">
+        var optimeraEnabled = false;
+            optimeraEnabled = true;
+            var oDv = [];
+            var oVa = {};
+            mi_OptimeraTools.init('11');
+            //Do not edit
+            (function() {
+                var optimeraHost = window.location.host;
+                var optimeraPathName = window.location.pathname;
+                var optimeraScript = document.createElement('script');
+                optimeraScript.async = true;
+                optimeraScript.type = 'text/javascript';
+                rand = Math.random();
+                optimeraScript.src="https://s3.amazonaws.com/elasticbeanstalk-us-east-1-397719490216/json/client/"+oDv[0]+"/"+optimeraHost+optimeraPathName+".js?t="+rand;
+                var node = document.getElementsByTagName('script')[0];
+                node.parentNode.insertBefore(optimeraScript, node);
+                var optimeraOpsScript = document.createElement('script');
+                optimeraOpsScript.async = true;
+                optimeraOpsScript.type = 'text/javascript';
+                optimeraOpsScript.src="https://s3.amazonaws.com/elasticbeanstalk-us-east-1-397719490216/external_json/oPS.js";
+                document.head.appendChild(optimeraOpsScript);
+                var s = +new Date;
+                while (+new Date < s + 200) {/*Default 200ms Timeout*/};
+            })();
+
+            mi_Ads.env.create();
+        mi_Ads.env.init();
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
         </script> 
   <div id="mistatstag" style="display:none;"> 
    <script src="//media.miamiherald.com/mistats/products/escenic_s_code.js"></script> 

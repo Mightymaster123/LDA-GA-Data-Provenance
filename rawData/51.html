@@ -15,6 +15,7 @@
   <meta name="ABC-Gateway" content="News    ,Current Affairs  ,"> 
   <meta name="ABC-Site" content="AM"> 
   <meta name="ABC-ResourceType" content="0"> 
+<<<<<<< HEAD
   <script language="JavaScript">
 <!-- Begin
 function popUp(URL) {
@@ -23,14 +24,29 @@ id = day.getTime();
 eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=1,menubar=0,resizable=1,width=520,height=420,left = 390,top = 312');");
 }
 // End -->
+=======
+  <script language="JavaScript">
+<!-- Begin
+function popUp(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=1,menubar=0,resizable=1,width=520,height=420,left = 390,top = 312');");
+}
+// End -->
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
   <link rel="stylesheet" href="/am/css/rcaff.css" type="text/css" media="screen"> 
  </head> 
  <body id="am"> 
   <!--noindex--> 
   <!-- ABC nav: News nav [/includes/newsnav.inc] --> 
+<<<<<<< HEAD
   <style type="text/css"><!--
 		@import url("http://www.abc.net.au/includes/css/globalNav.css");
+=======
+  <style type="text/css"><!--
+		@import url("http://www.abc.net.au/includes/css/globalNav.css");
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 	--></style> 
   <div id="abcNav"> 
    <div id="abcNavWrapper"> 
@@ -56,6 +72,7 @@ eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,lo
      <li id="abcNavTopics"><a href="http://www.abc.net.au/more/">more&nbsp;Topics</a></li> 
      <li id="abcNavHelp"><a href="http://www.abc.net.au/help/">help</a></li> 
     </ul> 
+<<<<<<< HEAD
    </div> 
   </div> 
   <script type="text/javascript" src="http://www.abc.net.au/includes/scripts/global.js"></script> 
@@ -74,6 +91,26 @@ eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,lo
    <div> 
     <img src="//secure-au.imrworldwide.com/cgi-bin/m?ci=abc-aust&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt=""> 
    </div> 
+=======
+   </div> 
+  </div> 
+  <script type="text/javascript" src="http://www.abc.net.au/includes/scripts/global.js"></script> 
+  <noscript> 
+   <img alt="" style="border:0;" id="DCSIMG" width="1" height="1" src="http://statse.webtrendslive.com/dcsg85fae000004n0vfjpj8oa_9m4q/njs.gif?dcsuri=/nojavascript&amp;WT.js=No"> 
+  </noscript> 
+  <!-- START Nielsen Online SiteCensus V6.0 --> 
+  <!-- COPYRIGHT 2010 Nielsen Online --> 
+  <script type="text/javascript" src="//secure-au.imrworldwide.com/v60.js"></script> 
+  <script type="text/javascript">
+		var pvar = { cid: "abc-aust", content: "0", server: "secure-au" };
+		var trac = nol_t(pvar);
+		trac.record().post();
+	</script> 
+  <noscript> 
+   <div> 
+    <img src="//secure-au.imrworldwide.com/cgi-bin/m?ci=abc-aust&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt=""> 
+   </div> 
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
   </noscript> 
   <!-- END Nielsen Online SiteCensus V6.0 --> 
   <!-- end ABC nav --> 
@@ -148,6 +185,7 @@ eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,lo
              <td><a href="/correspondents/default.htm" class="programlinktext">Correspondents Report</a></td>
             </tr> 
            </tbody>
+<<<<<<< HEAD
           </table> <br clear="all"><br> <script type="text/javascript" language="Javascript">
 <!-- //
 function goToPage(){
@@ -158,6 +196,18 @@ whichPage = document.programnav.shortcuts.options[chosen].value;
       }
 }
 // -->
+=======
+          </table> <br clear="all"><br> <script type="text/javascript" language="Javascript">
+<!-- //
+function goToPage(){
+chosen = document.programnav.shortcuts.options.selectedIndex;
+whichPage = document.programnav.shortcuts.options[chosen].value;
+      if(whichPage != ''){
+           window.location.href = whichPage;
+      }
+}
+// -->
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> <h3>More Current Affairs:</h3> 
           <form name="programnav" method="post" action="/cgi-bin/gotopage.pl"> 
            <select class="proglist" onchange="goToPage()" name="shortcuts" size="1"> <option value="" selected>Select program</option> <option value="/7.30/">7.30 Report</option> <option value="/austory/">Australian Story</option> <option value="/rn/talks/bbing/">Background Briefing</option> <option value="/foreign/">Foreign Correspondent</option> <option value="/4corners/">Four Corners</option> <option value="/insidebusiness/">Inside Business</option> <option value="/insiders/">Insiders</option> <option value="/landline/">Landline</option> <option value="/lateline/">Lateline</option> </select>

@@ -149,6 +149,7 @@ function contentLoaded(d,i){var c=false,h=true,k=d.document,j=k.documentElement,
   <!-- BBCDOTCOM template: desktop journalismVariant: true ipIsAdvertiseCombined: true adsEnabled: false flagpole: ON adsenseEnabled: true adsense flagpole: ON --> 
   <!-- shared/head --> 
   <meta http-equiv="imagetoolbar" content="no"> 
+<<<<<<< HEAD
   <!--[if !(lt IE 6)]>
    	<link rel="stylesheet" type="text/css" href="http://news.bbcimg.co.uk/view/3_0_21/cream/hi/shared/type.css" />
 
@@ -165,6 +166,24 @@ function contentLoaded(d,i){var c=false,h=true,k=d.document,j=k.documentElement,
 
 <link rel="stylesheet" type="text/css" href="http://news.bbcimg.co.uk/view/3_0_21/cream/hi/shared/components/components.css" />
 
+=======
+  <!--[if !(lt IE 6)]>
+   	<link rel="stylesheet" type="text/css" href="http://news.bbcimg.co.uk/view/3_0_21/cream/hi/shared/type.css" />
+
+
+		<link rel="stylesheet" type="text/css" media="screen" href="http://news.bbcimg.co.uk/view/3_0_21/cream/hi/shared/global.css" />
+
+
+	<link rel="stylesheet" type="text/css" media="print" href="http://news.bbcimg.co.uk/view/3_0_21/cream/hi/shared/print.css" />
+
+	<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 976px)" href="http://news.bbcimg.co.uk/view/3_0_21/cream/hi/shared/mobile.css" />
+	
+
+
+
+<link rel="stylesheet" type="text/css" href="http://news.bbcimg.co.uk/view/3_0_21/cream/hi/shared/components/components.css" />
+
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 <![endif]--> 
   <!--[if !IE]>--> 
   <link rel="stylesheet" type="text/css" href="http://news.bbcimg.co.uk/view/3_0_21/cream/hi/shared/type.css"> 
@@ -173,6 +192,7 @@ function contentLoaded(d,i){var c=false,h=true,k=d.document,j=k.documentElement,
   <link rel="stylesheet" type="text/css" media="screen and (max-device-width: 976px)" href="http://news.bbcimg.co.uk/view/3_0_21/cream/hi/shared/mobile.css"> 
   <link rel="stylesheet" type="text/css" href="http://news.bbcimg.co.uk/view/3_0_21/cream/hi/shared/components/components.css"> 
   <!--<![endif]--> 
+<<<<<<< HEAD
   <script type="text/javascript">
 /*<![CDATA[*/
 gloader.load(["glow","1","glow.dom"],{onLoad:function(glow){glow.dom.get("html").addClass("blq-js")}});
@@ -182,6 +202,17 @@ window.disableFacebookSDK=true;
 if (window.location.pathname.indexOf('+')>=0){window.disableFacebookSDK=true;}
 
 /*]]>*/
+=======
+  <script type="text/javascript">
+/*<![CDATA[*/
+gloader.load(["glow","1","glow.dom"],{onLoad:function(glow){glow.dom.get("html").addClass("blq-js")}});
+gloader.load(["glow","1","glow.dom"],{onLoad:function(glow){glow.ready(function(){if (glow.env.gecko){var gv = glow.env.version.split(".");for (var i=gv.length;i<4;i++){gv[i]=0;}if((gv[0]==1 && gv[1]==9 && gv[2]==0)||(gv[0]==1 && gv[1]<9)||(gv[0]<1)){glow.dom.get("body").addClass("firefox-older-than-3-5");}}});}});
+
+window.disableFacebookSDK=true;
+if (window.location.pathname.indexOf('+')>=0){window.disableFacebookSDK=true;}
+
+/*]]>*/
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
   <script type="text/javascript" src="http://news.bbcimg.co.uk/js/locationservices/locator/v4_0/locator.js"></script> 
   <script type="text/javascript" src="http://news.bbcimg.co.uk/js/core/3_3_1/bbc_fmtj.js"></script> 
@@ -213,6 +244,7 @@ if (window.location.pathname.indexOf('+')>=0){window.disableFacebookSDK=true;}
   <script type="text/javascript">$render("livestats-heatmap");</script> 
   <script type="text/javascript" src="http://news.bbcimg.co.uk/js/config/apps/4_7_2/bbc_fmtj_config.js"></script> 
   <!-- add Bump3 to the require map --> 
+<<<<<<< HEAD
   <script type="text/javascript">
     if (typeof bbcRequireMap !== 'undefined' && bbcRequireMap["jquery-1.9"] === undefined && bbcRequireMap["jquery-1"]) {
         var jquery19Path = bbcRequireMap["jquery-1"].replace(/0.(1|2).(1|4)/, '0.3.0').replace(/jquery-1.(5|7).(1|2)/, 'jquery-1.9.1');
@@ -242,11 +274,43 @@ if (window.location.pathname.indexOf('+')>=0){window.disableFacebookSDK=true;}
 //<![CDATA[
 gloader.load(['glow', '1', 'glow.dom']);
 //]]>
+=======
+  <script type="text/javascript">
+    if (typeof bbcRequireMap !== 'undefined' && bbcRequireMap["jquery-1.9"] === undefined && bbcRequireMap["jquery-1"]) {
+        var jquery19Path = bbcRequireMap["jquery-1"].replace(/0.(1|2).(1|4)/, '0.3.0').replace(/jquery-1.(5|7).(1|2)/, 'jquery-1.9.1');
+        require({
+            paths : {
+                "jquery-1.9": jquery19Path
+            }
+        });
+    }
+    if (typeof bbcRequireMap !== 'undefined' && bbcRequireMap["swfobject-2"]) {
+        require({
+            paths : {
+                "swfobject-2": bbcRequireMap["swfobject-2"].replace('0.1.3', '0.1.10')
+            }
+        });
+    }
+</script> 
+  <script type="text/javascript">
+    require({
+        paths : {
+            "bump-3": "http://emp.bbci.co.uk/emp/bump-3/bump-3"
+        }
+    });
+</script> 
+  <!-- load glow and required modules --> 
+  <script type="text/javascript">
+//<![CDATA[
+gloader.load(['glow', '1', 'glow.dom']);
+//]]>
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
   <!-- pull in our emp code --> 
   <script type="text/javascript" src="http://news.bbcimg.co.uk/js/app/av/emp/2_1_8/emp.js"></script> 
   <!-- pull in compatibility.js --> 
   <script type="text/javascript" src="http://news.bbcimg.co.uk/js/app/av/emp/2_1_8/compatibility.js"></script> 
+<<<<<<< HEAD
   <script type="text/javascript">
 //<![CDATA[
 
@@ -271,6 +335,32 @@ require(['jquery-1'], function ($) {
 });
 //]]>
 
+=======
+  <script type="text/javascript">
+//<![CDATA[
+
+
+
+    
+
+
+
+    
+
+
+// set site specific config
+
+bbc.fmtj.av.emp.configs.push('nature');
+
+
+require(['jquery-1'], function ($) {
+    $(document).ready(function () {
+        bbc.fmtj.av.emp.loadAll();
+    });
+});
+//]]>
+
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
   <!-- Check for advertising testing --> 
   <meta name="viewport" content="width = 996"> 
@@ -392,6 +482,7 @@ if (BBC.adverts === undefined) {
   <meta name="msapplication-task" content="name=BBC Weather;action-uri=http://www.bbc.co.uk/weather/?ocid=global-weather-pinned-ie9;icon-uri=http://news.bbcimg.co.uk/shared/img/bbccom/favicon_16.ico"> 
   <!-- BBCCOM client-side --> 
   <style type="text/css">.bbccom_display_none{display:none;}</style> 
+<<<<<<< HEAD
   <script type="text/javascript">/*<![CDATA[*/
     if (typeof orb !== 'undefined' && typeof orb.fig === 'function') {
         bbcdotcom.data = {
@@ -477,6 +568,93 @@ if (BBC.adverts === undefined) {
     bbcdotcom.page.http_host = 'www.bbc.co.uk';
     
     
+=======
+  <script type="text/javascript">/*<![CDATA[*/
+    if (typeof orb !== 'undefined' && typeof orb.fig === 'function') {
+        bbcdotcom.data = {
+            a: orb.fig('ad')? 1 : 0,
+            b: (0 == orb.fig('uk')) ? 1 : 0,
+            c: orb.fig('ap')
+        };
+    } else {
+        document.write(unescape('%3Cscript type="text/javascript" src="http://tps.bbc.com/wwscripts/data"%3E%3C/script%3E'));
+    }
+/*]]>*/</script> 
+  <script type="text/javascript">/*<![CDATA[*/
+    if (typeof bbcdotcom.data == 'undefined' || typeof bbcdotcom.data.a == 'undefined' || typeof bbcdotcom.data.b == 'undefined' || typeof bbcdotcom.data.c == 'undefined') {
+        bbcdotcom.data = {a:0,b:0,c:0};
+    }
+    if (bbcdotcom.data.a == 1) {
+        document.write(unescape('%3Clink href="http://news.bbcimg.co.uk/css/screen/shared/1.52.0/3pt_ads.css" rel="stylesheet" type="text/css" /%3E'));
+        
+            document.write(unescape('%3Cscript type="text/javascript" src="http://www.bbc.co.uk/wwscripts/flag"%3E%3C/script%3E'));
+        
+    }
+/*]]>*/</script> 
+  <script type="text/javascript">/*<![CDATA[*/
+    if (typeof bbcdotcom.flag == 'undefined' || bbcdotcom.flag.a != 1) {
+        bbcdotcom.data.a = 0;
+    }
+/*]]>*/</script> 
+  <script type="text/javascript">/*<![CDATA[*/
+    if (bbcdotcom.data.a == 1 || bbcdotcom.data.b == 1) {
+        document.write(unescape('%3Cscript type="text/javascript" src="//www.googletagservices.com/tag/js/gpt.js"%3E%3C/script%3E'));
+        
+            document.write(unescape('%3Cscript type="text/javascript" src="http://news.bbcimg.co.uk/js/app/bbccom/1.52.0/bbccom_all.js"%3E%3C/script%3E'));
+        
+    }
+/*]]>*/</script> 
+  <script type="text/javascript">/*<![CDATA[*/
+    if (bbcdotcom.data.a == 1 || bbcdotcom.data.b == 1) {
+        BBC.adverts.setData(bbcdotcom.data);
+        bbcdotcom.config.setAdsEnabled(bbcdotcom.data.a);
+        bbcdotcom.config.setAnalyticsEnabled(bbcdotcom.data.b);
+        bbcdotcom.dataOrb = {
+            ads: bbcdotcom.data.a,
+            stats: bbcdotcom.data.b,
+            statsProvider: bbcdotcom.data.c
+        };
+
+        bbcdotcom.config.setData(bbcdotcom.dataOrb);
+        bbcdotcom.init({adsToDisplay: ["leaderboard", "sponsor", "mpu"]});
+
+        if(typeof bbcdotcom !== 'undefined' && typeof bbcdotcom.survey !== 'undefined' && typeof bbcdotcom.survey.init === 'function') {
+            bbcdotcom.survey.init();
+        }
+    }
+    /*
+     * Native remove content for UK visitors
+     */
+    (function() {
+        if (bbcdotcom.data.b == 0) {
+            var adKeyword = bbcdotcom.objects('bbc.fmtj.page.adKeyword');
+            if(adKeyword && adKeyword !== null && typeof adKeyword === 'string' && adKeyword.indexOf('native-') !== -1) {
+                document.write('<style >' +
+                                    '#storypage-container .story-body {display:none;}' +
+                                    '#native-uk-disclaimer {border: 2px solid;margin: 8px;padding: 16px;}' +
+                                '</style>');
+                require(['jquery-1'], function($) {
+                    $(function(){
+                        /* Native advertising disclaimer */
+                        $( ".story-body" ).html('<div id="native-uk-disclaimer">' +
+                            '<h1>BBC Sport (International version)</h1>' +
+                            'We\'re sorry but this article is not accessible from the UK as it is part of our ' +
+                            'international service and is not funded by the license fee.' +
+                            '</div>');
+                        $( ".story-body" ).show();
+                    });
+                });
+            }
+        }
+    }());
+    bbcdotcom.objects('page', 'create', bbcdotcom);
+    bbcdotcom.page.edition = '(none)';
+    bbcdotcom.page.url = '/nature/14114112';
+    bbcdotcom.page.zoneFile = '3pt_zone_file';
+    bbcdotcom.page.http_host = 'www.bbc.co.uk';
+    
+    
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 /*]]>*/</script> 
   <script type="text/javascript">/*<![CDATA[*/if(bbcdotcom.data.a == 1){(function(){
     switch(bbcdotcom.page.url) {
@@ -529,6 +707,7 @@ if(BBC.adverts.getV6Gvl3() && 'undefined' !== typeof bbcdotcom.page.bddUseLatest
 if(/[?|&]metadata=yes(&|$)/.test(window.location.search)) {
     document.write('http://www.test.bbc.com/wwscripts/metadata?bbcdotcom_asset=' + window.location.hostname + window.location.pathname);
 }}/*]]>*/</script> 
+<<<<<<< HEAD
   <script type="text/javascript">
     /*<![CDATA[*/
     if (BBC.adverts.isActive('ads')) {
@@ -555,12 +734,41 @@ if(/[?|&]metadata=yes(&|$)/.test(window.location.search)) {
 	if(typeof BBC.adverts != 'undefined' && typeof BBC.adverts.setPageVersion != 'undefined'){
 		BBC.adverts.setPageVersion('(none)');
 	}
+=======
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    if (BBC.adverts.isActive('ads')) {
+        document.write(unescape('%3Cscript id="gnlAdsEnabled" class="bbccom_display_none"%3E%3C/script%3E'));
+    }
+    if (BBC.adverts.isActive('analytics')) {
+        document.write(unescape('%3Cscript id="gnlAnalyticsEnabled" class="bbccom_display_none"%3E%3C/script%3E'));
+    }
+    /*]]>*/
+</script> 
+  <script type="text/javascript">
+    require({
+        paths:{
+            "bbcdotcom": "http://news.bbcimg.co.uk/js/app/bbccom/1.52.0"
+        }
+    });
+</script> 
+  <script type="text/javascript">
+    /*<![CDATA[*/
+    document.write(unescape('%3Cscript id="continuous-play-enabled" class="bbccom_display_none"%3E%3C/script%3E'));
+    /*]]>*/
+</script> 
+  <script type="text/javascript">
+	if(typeof BBC.adverts != 'undefined' && typeof BBC.adverts.setPageVersion != 'undefined'){
+		BBC.adverts.setPageVersion('(none)');
+	}
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
   <!-- hi/nature/head_last.inc --> 
   <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/thingstodo/v3/styles/ttd-widget-index.css"> 
   <!--[if IE 6]> <link rel="stylesheet" type="text/css" href="http://static.bbci.co.uk/thingstodo/v3/styles/ttd-widget-ie6.css" /> <![endif]--> 
   <link rel="stylesheet" type="text/css" media="screen" href="http://news.bbcimg.co.uk/view/3_0_11/cream/hi/nature/skin.css"> 
   <link rel="stylesheet" type="text/css" media="print" href="http://news.bbcimg.co.uk/view/3_0_11/cream/hi/nature/printable.css"> 
+<<<<<<< HEAD
   <script type="text/javascript">
             if(bbcdotcom.objects('BBC.adverts.getAdvertTag')) {
                 gloader.load(["glow","1","glow.dom"],{onLoad: function(glow){
@@ -610,6 +818,57 @@ border-color: #660;
 .ie8 .blq-masthead-focus #blq-mast,.ie8 .blq-masthead-focus #blq-mast{
 border-color: #ccc;
 }
+=======
+  <script type="text/javascript">
+            if(bbcdotcom.objects('BBC.adverts.getAdvertTag')) {
+                gloader.load(["glow","1","glow.dom"],{onLoad: function(glow){
+                    glow.ready(function(){
+                        if(bbcdotcom.objects('BBC.adverts.getAdvertTag')) {
+                            var adImageUrl = BBC.adverts.getAdvertTag('printableversionsponsorship','','standardUri');
+                            if(adImageUrl) {
+                                if (glow.env.ie ) {
+                                    window.onbeforeprint = function(){
+                                        var printAdvert = glow.dom.get("#print-advert");
+                                        if (printAdvert.get("img").length == 0)
+                                        {
+                                            printAdvert.append('<img src="'+adImageUrl+'" alt="" />');
+                                        }
+                                    };
+                                }else{
+                                    glow.dom.get("head").append('<style type="text/css">#print-advert {display:none};</style><style type="text/css" media="print">#print-advert::after{content:url('+adImageUrl+');} #print-advert{display:block;overflow:hidden;}</style>');
+                                }
+                            }
+                        }
+                    });
+                }});
+            }
+		</script> 
+  <link rel="apple-touch-icon" href="http://news.bbcimg.co.uk/img/3_0_4/cream/hi/nature/iphone.png"> 
+  <script type="text/javascript">
+blq.externalGoTrackingConfig = {
+	".story-body a":"{path}/ext/story-body/{dir}",
+	".story-related .related-links a":"{path}/ext/related-links/{dir}",
+	".story-related .newstracker-list a":"{path}/ext/newstracker/{dir}"
+}
+</script> 
+  <style type="text/css">
+.ie .blq-mast-bg-transparent-light #blq-blocks, .ie .blq-mast-bg-transparent-light #blq-nav-main, .ie .blq-mast-bg-transparent-light #blq-nav-main li, .ie .blq-mast-bg-transparent-light #id-status,
+.ie .blq-mast-bg-transparent #blq-mast,.ie .blq-mast-bg-transparent-light #blq-mast,
+.ie7 .blq-mast-bg-transparent-light #blq-blocks, .ie7 .blq-mast-bg-transparent-light #blq-nav-main, .ie7 .blq-mast-bg-transparent-light #blq-nav-main li, .ie7 .blq-mast-bg-transparent-light #id-status,
+.ie7 .blq-mast-bg-transparent #blq-mast,.ie7 .blq-mast-bg-transparent-light #blq-mast,
+.ie8 .blq-mast-bg-transparent-light #blq-blocks, .ie8 .blq-mast-bg-transparent-light #blq-nav-main, .ie8 .blq-mast-bg-transparent-light #blq-nav-main li, .ie8 .blq-mast-bg-transparent-light #id-status,
+.ie8 .blq-mast-bg-transparent #blq-mast,.ie8 .blq-mast-bg-transparent-light #blq-mast{
+border-color: #660;
+}
+.ie .blq-masthead-focus #blq-blocks, .ie .blq-masthead-focus #blq-nav-main, .ie .blq-masthead-focus #blq-nav-main li, .ie .blq-masthead-focus #id-status,
+.ie .blq-masthead-focus #blq-mast,.ie .blq-masthead-focus #blq-mast,
+.ie7 .blq-masthead-focus #blq-blocks, .ie7 .blq-masthead-focus #blq-nav-main, .ie7 .blq-masthead-focus #blq-nav-main li, .ie7 .blq-masthead-focus #id-status,
+.ie7 .blq-masthead-focus #blq-mast,.ie7 .blq-masthead-focus #blq-mast,
+.ie8 .blq-masthead-focus #blq-blocks, .ie8 .blq-masthead-focus #blq-nav-main, .ie8 .blq-masthead-focus #blq-nav-main li, .ie8 .blq-masthead-focus #id-status,
+.ie8 .blq-masthead-focus #blq-mast,.ie8 .blq-masthead-focus #blq-mast{
+border-color: #ccc;
+}
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </style> 
   <!--Rendered by 5936006 --> 
   <link rel="schema.dcterms" href="http://purl.org/dc/terms/"> 
@@ -750,6 +1009,7 @@ border-color: #ccc;
          <script type="text/javascript">$render("advert-post-script-load");</script> 
         </div> 
         <div id="bbccom_custom_branding"> 
+<<<<<<< HEAD
          <script type="text/javascript">
         /*<![CDATA[*/
         if(typeof bbcdotcom.objects('bbcdotcom.branding.init') === 'function') {
@@ -770,6 +1030,28 @@ border-color: #ccc;
         /*<![CDATA[*/
 	$render("advert-post-script-load");
         /*]]>*/
+=======
+         <script type="text/javascript">
+        /*<![CDATA[*/
+        if(typeof bbcdotcom.objects('bbcdotcom.branding.init') === 'function') {
+            bbcdotcom.branding.init(BBC.adverts.getZoneData().zone, BBC.adverts.getAdKeyword());
+            bbcdotcom.branding.write();
+        }
+        /*]]>*/
+    </script> 
+         <div class="bbccom_advert_placeholder"> 
+          <script type="text/javascript">
+        /*<![CDATA[*/
+        $render("advert","advert-sponsor-subsection");
+        /*]]>*/
+    </script> 
+         </div> 
+        </div> 
+        <script type="text/javascript">
+        /*<![CDATA[*/
+	$render("advert-post-script-load");
+        /*]]>*/
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
         <!-- START CPS_SITE CLASS: story --> 
         <div id="main-content" class="story blq-clearfix"> 
@@ -792,6 +1074,7 @@ border-color: #ccc;
             </ul> 
             <!--  Social media icons by Paul Annet | http://nicepaul.com/icons  --> 
            </div> 
+<<<<<<< HEAD
            <script type="text/javascript"> 
 <!--
 $render("page-bookmark-links","page-bookmark-links-head",{
@@ -805,6 +1088,21 @@ $render("page-bookmark-links","page-bookmark-links-head",{
     edition:'Domestic'
 }); 
 -->
+=======
+           <script type="text/javascript"> 
+<!--
+$render("page-bookmark-links","page-bookmark-links-head",{
+    useForgeShareTools:"true",
+    position:"top",
+    site:'Vision', 
+    headline:'BBC Nature - Lizard has problem-solving skills', 
+    storyId:'14114112', 
+    sectionId:'101107', 
+    url:'http://www.bbc.co.uk/nature/14114112', 
+    edition:'Domestic'
+}); 
+-->
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
            <h1 class="story-header">Lizard has problem-solving skills</h1> 
            <span class="byline"> <span class="byline-name">By Victoria Gill</span> <span class="byline-title">Science reporter, BBC Nature</span> </span> 
@@ -892,6 +1190,7 @@ bbc.fmtj.av.emp.registerPlayer(empId, settings);
            <!--Related hypers and stories --> 
            <div class="story-related"> 
             <h2>More on This Story</h2> 
+<<<<<<< HEAD
             <style>
 .related-links-list li {
 position: relative;
@@ -901,6 +1200,17 @@ position: absolute;
 top: 0;
 left: 0;
 }
+=======
+            <style>
+.related-links-list li {
+position: relative;
+}
+.related-links-list .gvl3-icon {
+position: absolute;
+top: 0;
+left: 0;
+}
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </style> 
             <div class="see-also"> 
              <h3>Related Stories</h3> 
@@ -952,6 +1262,7 @@ left: 0;
             </div> 
             <script type="text/javascript">$render("advert-post-script-load");</script> 
            </div> 
+<<<<<<< HEAD
            <script type="text/javascript"> 
 <!--
 $render("page-bookmark-links","page-bookmark-links-foot",{
@@ -965,6 +1276,21 @@ $render("page-bookmark-links","page-bookmark-links-foot",{
     edition:'Domestic'
 }); 
 -->
+=======
+           <script type="text/javascript"> 
+<!--
+$render("page-bookmark-links","page-bookmark-links-foot",{
+    useForgeShareTools:"true",
+    position:"bottom",
+    site:'Vision', 
+    headline:'BBC Nature - Lizard has problem-solving skills', 
+    storyId:'14114112', 
+    sectionId:'101107', 
+    url:'http://www.bbc.co.uk/nature/14114112', 
+    edition:'Domestic'
+}); 
+-->
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
           </div> 
           <div class="bbccom_advert_placeholder"> 
@@ -1094,6 +1420,7 @@ $render("page-bookmark-links","page-bookmark-links-foot",{
     <!-- BBCDOTCOM analytics template:client-side journalismVariant: true ipIsAdvertiseCombined: true adsEnabled: false flagpole: ON --> 
     <!-- BBCCOM analytics client-side --> 
     <div id="bbccomWebBug" class="bbccomWebBug"></div> 
+<<<<<<< HEAD
     <script type="text/javascript">
     /*<![CDATA[*/
     if (BBC.adverts.isActive('analytics')) {
@@ -1167,16 +1494,100 @@ $render("page-bookmark-links","page-bookmark-links-foot",{
         })();
     }
     /*]]>*/
+=======
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    if (BBC.adverts.isActive('analytics')) {
+        if (bbcdotcom && bbcdotcom.analytics) {
+            bbcdotcom.analytics.page();
+        }
+    }
+    /*]]>*/
+</script> 
+    <!-- Start Nielsen Online SiteCensus V6.0 --> 
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    if (BBC.adverts.isActive('nielsen-au')) {
+        <!-- COPYRIGHT 2009 Nielsen Online -->
+        document.write(unescape('%3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https:' : 'http:') + '//secure-au.imrworldwide.com/v60.js"%3E%3C/script%3E'));
+    }
+    /*]]>*/
+</script> 
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    if (BBC.adverts.isActive('nielsen-au')) {
+        <!-- Start Nielsen Online SiteCensus V6.0 Part 2 -->
+        nol_t({cid:"au-bbc",content:"0",server:"secure-au"}).record().post();
+        <!-- End Nielsen Online SiteCensus V6.0 Part 2 -->
+    }
+    /*]]>*/
+</script> 
+    <!-- End Nielsen Online SiteCensus V6.0 --> 
+    <!-- Start Nielsen Online SiteCensus V6.0 --> 
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    if (BBC.adverts.isActive('nielsen-nz')) {
+        <!-- COPYRIGHT 2009 Nielsen Online -->
+        document.write(unescape('%3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https:' : 'http:') + '//secure-nz.imrworldwide.com/v60.js"%3E%3C/script%3E'));
+    }
+    /*]]>*/
+</script> 
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    if (BBC.adverts.isActive('nielsen-nz')) {
+        nol_t({cid:"nz-bbc",content:"0",server:"secure-nz"}).record().post();
+    }
+    /*]]>*/
+</script> 
+    <!-- End Nielsen Online SiteCensus V6.0 --> 
+    <!-- Start Nielsen Online SiteCensus V6.0 --> 
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    if (BBC.adverts.isActive('nielsen-us')) {
+        <!-- COPYRIGHT 2010 Nielsen Online -->
+       (function () {
+           var d = new Image(1, 1);
+           d.onerror = d.onload = function () {
+               d.onerror = d.onload = null;
+           };
+           d.src = [('https:' == document.location.protocol ? 'https:' : 'http:') + "//secure-us.imrworldwide.com/cgi-bin/m?ci=us-804789h&amp;cg=0&amp;cc=1&amp;si=", escape(window.location.href), "&amp;rp=",
+           escape(document.referrer), "&amp;ts=compact&amp;rnd=", (new Date()).getTime()].join('');
+        })();
+    }
+    /*]]>*/
+</script> 
+    <!-- End Nielsen Online SiteCensus V6.0 --> 
+    <!-- Effective Measure BBCCOM-1195 --> 
+    <script type="text/javascript">
+    /*<![CDATA[*/
+    if (BBC.adverts.isActive('analytics')) {
+        (function() {
+            var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+            em.src = ('https:' == document.location.protocol ? 'https://me-ssl' : 'http://me-cdn') + '.effectivemeasure.net/em.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+        })();
+    }
+    /*]]>*/
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
     <!-- End Effective Measure --> 
     <!-- BBCCOM-5234 Outbrain Tracking --> 
     <div class="OUTBRAIN" data-src="http://www.bbc.co.uk/nature/14114112" data-widget-id="TR_1" data-ob-template="BBC.com/News"></div> 
+<<<<<<< HEAD
     <script type="text/javascript">
             /*<![CDATA[*/
             if (BBC.adverts.isActive('ads') && BBC.adverts.isActive('analytics')) {
                 document.write(unescape('%3Cscript src="http://widgets.outbrain.com/outbrain.js" type="text/javascript"%3E%3C/script%3E'));
             }
             /*]]>*/
+=======
+    <script type="text/javascript">
+            /*<![CDATA[*/
+            if (BBC.adverts.isActive('ads') && BBC.adverts.isActive('analytics')) {
+                document.write(unescape('%3Cscript src="http://widgets.outbrain.com/outbrain.js" type="text/javascript"%3E%3C/script%3E'));
+            }
+            /*]]>*/
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
         </script> 
     <!-- BBCDOTCOM Body Last --> 
    </div> 
@@ -1191,10 +1602,17 @@ $render("page-bookmark-links","page-bookmark-links-foot",{
 	bbc.fmtj.common.tabs.createTabs({});
 </script> 
   <!-- hi/nature/foot.inc --> 
+<<<<<<< HEAD
   <script type="text/javascript">
 	glow.dom.get("#header").append(
   		'<a href="http://www.bbc.co.uk/blogs/internet/posts/Knowledge-Learning-Product-Curriculum-Refresh" id="kl-beta">Knowledge &amp; Learning Beta</a>'
 	);
+=======
+  <script type="text/javascript">
+	glow.dom.get("#header").append(
+  		'<a href="http://www.bbc.co.uk/blogs/internet/posts/Knowledge-Learning-Product-Curriculum-Refresh" id="kl-beta">Knowledge &amp; Learning Beta</a>'
+	);
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </script> 
   <!-- shared/foot_story --> 
   <!-- #CREAM hi nature domestic foot.inc -->   

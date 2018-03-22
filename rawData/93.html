@@ -28,6 +28,7 @@
   <script type="text/javascript" src="/components/script/frameworks/header-footer.js?v=20151025041904"> </script> 
   <script type="text/javascript" src="/components/script/webanalytics.js?v=20151025041904"> </script> 
   <script type="text/javascript" src="/components/script/theclub.js?v=20151021090338"> </script> 
+<<<<<<< HEAD
   <script type="text/javascript">
             (function() {            
                 var wd = window;
@@ -38,6 +39,18 @@
                 _cbcfg.pageName='u17worldcup:matches:round 249415:match 58933:summary';              
                 _cbcfg.addsections ='';
                 _cbcfg.cbdomain='fifa.com';
+=======
+  <script type="text/javascript">
+            (function() {            
+                var wd = window;
+                wd.fifa = wd.fifa || {};
+                wd.fifa.analytics = wd.fifa.analytics || {};
+                wd.fifa.analytics.cbparams = wd.fifa.analytics.cbparams || {};
+                var _cbcfg = wd.fifa.analytics.cbparams; 
+                _cbcfg.pageName='u17worldcup:matches:round 249415:match 58933:summary';              
+                _cbcfg.addsections ='';
+                _cbcfg.cbdomain='fifa.com';
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
                 })();</script>
   <link href="/imgml/favicon/favicon.ico" rel="shortcut icon">
   <link rel="apple-touch-icon" sizes="512x512" href="/imgml/favicon/touch-icon-newipad.png">
@@ -117,6 +130,7 @@
        </ul>
       </div>
       <!--googleon: index--> 
+<<<<<<< HEAD
       <!--esi <esi:choose>
   <esi:when test="$exists($(HTTP_COOKIE{'FIFAComTracking'}))">
     $add_header('Set-Cookie','FIFAComTracking=' + $url_encode($(HTTP_COOKIE{'FIFAComTracking'}))+ ';path=/;domain=.fifa.com; ')
@@ -124,6 +138,15 @@
   <esi:when test="$exists($(HTTP_COOKIE{'MobileFIFAComTracking'}))">
     $add_header('Set-Cookie','FIFAComTracking=' + $url_encode($(HTTP_COOKIE{'MobileFIFAComTracking'}))+ ';path=/;domain=.fifa.com; ')
   </esi:when>
+=======
+      <!--esi <esi:choose>
+  <esi:when test="$exists($(HTTP_COOKIE{'FIFAComTracking'}))">
+    $add_header('Set-Cookie','FIFAComTracking=' + $url_encode($(HTTP_COOKIE{'FIFAComTracking'}))+ ';path=/;domain=.fifa.com; ')
+  </esi:when>
+  <esi:when test="$exists($(HTTP_COOKIE{'MobileFIFAComTracking'}))">
+    $add_header('Set-Cookie','FIFAComTracking=' + $url_encode($(HTTP_COOKIE{'MobileFIFAComTracking'}))+ ';path=/;domain=.fifa.com; ')
+  </esi:when>
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 </esi:choose> --> 
       <div class="nav-wrap">
        <ul class="nav siteh-toplink-list editorial-links">
@@ -563,6 +586,7 @@
     <div class="ribbonRight "> 
     </div>
     <script type="text/javascript"> currMenuItem('#lev2Menu');</script>
+<<<<<<< HEAD
     <script type="text/javascript" language="javascript">
           currMenuItem('#lev1Menu'); 
           //currMenuItem('#lev2Menu');
@@ -589,6 +613,34 @@
               $j(this).addClass('current');                                                     
             }
           });
+=======
+    <script type="text/javascript" language="javascript">
+          currMenuItem('#lev1Menu'); 
+          //currMenuItem('#lev2Menu');
+
+
+            $j('.lev3menu').mouseenter(function() {
+            $j(this).find('.lev3Content').show();
+            $j(this).find('.lev3TopContent').show();
+            $j(this).find('.lev3').show();
+            $j(this).addClass('arrowMenu')
+            if ($j(this).hasClass('current')) {
+              $j(this).removeClass('current');    
+              $j(this).addClass('currentBusy');                                                     
+            }
+          });
+
+          $j('.lev3menu').mouseleave(function() {
+            $j(this).find('.lev3Content').hide();
+            $j(this).find('.lev3TopContent').hide();
+            $j(this).find('.lev3').hide();
+            $j(this).removeClass('arrowMenu')
+            if ($j(this).hasClass('currentBusy')) {
+              $j(this).removeClass('currentBusy');    
+              $j(this).addClass('current');                                                     
+            }
+          });
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
           </script> 
    </div>
    <div id="bodyContentExt"> 
@@ -618,8 +670,13 @@
          <li class=""><a href="statistics.html">Statistics</a></li>
          <li class=" last"><a href="comments.html">Comments</a></li>
         </ul>
+<<<<<<< HEAD
         <script language="javascript">
             currMenuItem('#menuMatch');
+=======
+        <script language="javascript">
+            currMenuItem('#menuMatch');
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
           </script> 
        </div>
        <div class="mh_container">
@@ -707,6 +764,7 @@
       <div id="thirdRail">
        <div class="row">
         <div class="grid_4"> 
+<<<<<<< HEAD
          <script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[];(function(){var gscript=document.getElementById('google_adv_include');if(gscript){return;}var gads=document.createElement('script');gads.id='google_adv_include';gads.async=true;gads.type='text/javascript';var useSSL='https:'==document.location.protocol;gads.src=(useSSL?'https:':'http:')+'//www.googletagservices.com/tag/js/gpt.js';var node=document.getElementsByTagName('script')[0];node.parentNode.insertBefore(gads,node);})();
 (function(){if(window.gTag){return;}googletag.cmd.push(function(){googletag.pubads().setTargeting('site',['en'])});
 (function(){var DBClickKeyValues=document.location.pathname.match(/[^/]*=[^/|^\.]*/gi);
@@ -786,6 +844,87 @@ googletag.defineSlot('/8584/fifa.com'+adUnit,[300,250],'div-gpt-ad-f1caa222-017a
 .addService(googletag.pubads());
 });
           });
+=======
+         <script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[];(function(){var gscript=document.getElementById('google_adv_include');if(gscript){return;}var gads=document.createElement('script');gads.id='google_adv_include';gads.async=true;gads.type='text/javascript';var useSSL='https:'==document.location.protocol;gads.src=(useSSL?'https:':'http:')+'//www.googletagservices.com/tag/js/gpt.js';var node=document.getElementsByTagName('script')[0];node.parentNode.insertBefore(gads,node);})();
+(function(){if(window.gTag){return;}googletag.cmd.push(function(){googletag.pubads().setTargeting('site',['en'])});
+(function(){var DBClickKeyValues=document.location.pathname.match(/[^/]*=[^/|^\.]*/gi);
+      function isSplittedId() {
+        var pth = window.location.pathname;
+        var exp = new RegExp("(newsid|gallery)/([0-9]{1,3}/){1,}(index.html){0,1}");
+        return exp.test(pth);
+      }
+    function getFullId() {
+      var pth = window.location.pathname;
+      var exp = new RegExp("(newsid|gallery)/([0-9]{1,3}/){1,}(index.html){0,1}");
+      if (exp.test(pth)) {
+        var start = pth.indexOf("newsid/");
+        if (start > -1) {
+          start = start + 7;
+        }
+        else {
+          start = pth.indexOf("gallery/") + 8;
+        }
+        var end = pth.indexOf("index.html");
+        if (end ==-1) {
+          end = pth.length;
+        }
+        var newsid = pth.substring(start, end);
+        newsid = newsid.replace(/\//g, "");
+        return newsid;
+      }
+      else {
+        return "";
+        }
+    }
+    function isGalleryPage() {
+      var pth = window.location.pathname;
+      var exp = new RegExp("(gallery)/([0-9]{1,3}/){1,}(index.html){0,1}");
+      if (exp.test(pth)) {
+        return true;
+      }
+      return false;
+    }
+    if(DBClickKeyValues==null){
+      if (isSplittedId()) {
+        var edttype = "";
+        if (isGalleryPage()) {
+          edttype = "gallery=";
+        }
+        else {
+          edttype = "newsid=";
+        }
+        var edtid = getFullId();
+        if ((edtid.length>0)&&(edttype.length>0)) {
+          DBClickKeyValues=[""+edttype+edtid];
+        }
+      }
+    }
+    if(DBClickKeyValues!=null){
+      
+      if (isSplittedId()) {
+        var edttype = "";
+        if (isGalleryPage()) {
+          edttype = "gallery=";
+        }
+        else {
+          edttype = "newsid=";
+        }
+        var edtid = getFullId();
+        if ((edtid.length>0)&&(edttype.length>0)) {
+          DBClickKeyValues.push(""+edttype+edtid);
+        }
+      }
+    DBClickKeyValues=DBClickKeyValues.toString();DBClickKeyValues=DBClickKeyValues.split(',');for (var i=0;i!=DBClickKeyValues.length;i++){var key=DBClickKeyValues[i].split('=')[0];var value=DBClickKeyValues[i].split('=')[1];googletag.cmd.push(function(){googletag.pubads().setTargeting(key,[value]);});}}
+window.DBClickRefresh=function(){googletag.cmd.push(function(){googletag.pubads().refresh();});};})();googletag.cmd.push(function(){googletag.pubads().setTargeting('user',[((Cookie.get('FIFAComClub'))?'loggedin':'notloggedin')]);});
+googletag.cmd.push(function(){googletag.enableServices();window.gTag=true;});})();</script>
+         <script type="text/javascript">
+          $j(document).ready(function(){
+          var adUnit=fifacom_s.pageName.replace(/ [^:]*/g,"");adUnit=adUnit.split(':');adUnit.splice(-1,1);if(adUnit.length>4){adUnit.reverse();adUnit.splice(0,adUnit.length-4);adUnit.reverse();}adUnit=adUnit.join('/');if(adUnit.length!=0){adUnit='/'+adUnit;}googletag.cmd.push(function(){
+googletag.defineSlot('/8584/fifa.com'+adUnit,[300,250],'div-gpt-ad-f1caa222-017a-41ba-88fb-210fd6ba1cf5')
+.addService(googletag.pubads());
+});
+          });
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
         </script>
          <div class="box advert bNotitle">
           <div class="bH"> 
@@ -795,9 +934,15 @@ googletag.defineSlot('/8584/fifa.com'+adUnit,[300,250],'div-gpt-ad-f1caa222-017a
           <div class="bF"> 
           </div>
          </div>
+<<<<<<< HEAD
          <script type="text/javascript">$j(document).ready(function(){
 googletag.cmd.push(function(){googletag.display('div-gpt-ad-f1caa222-017a-41ba-88fb-210fd6ba1cf5');
 });
+=======
+         <script type="text/javascript">$j(document).ready(function(){
+googletag.cmd.push(function(){googletag.display('div-gpt-ad-f1caa222-017a-41ba-88fb-210fd6ba1cf5');
+});
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 });</script> 
         </div>
        </div>
@@ -843,6 +988,7 @@ googletag.cmd.push(function(){googletag.display('div-gpt-ad-f1caa222-017a-41ba-8
      </ul>
     </div>
    </div>
+<<<<<<< HEAD
    <script type="text/javascript">
 (function(d,wd){
   if(!window.$j){return;}
@@ -882,10 +1028,52 @@ googletag.cmd.push(function(){googletag.display('div-gpt-ad-f1caa222-017a-41ba-8
     }
   });
 }(document,window));
+=======
+   <script type="text/javascript">
+(function(d,wd){
+  if(!window.$j){return;}
+  $j(d).ready(function(){
+    var $cb_script = $j('script[src*="/js/chartbeat.js"]');
+    if($cb_script.length){return;}
+    wd.fifa = wd.fifa || {};
+    wd.fifa.analytics = wd.fifa.analytics || {};
+    wd.fifa.analytics.cbparams = wd.fifa.analytics.cbparams || {};
+    var _cbcfg = wd.fifa.analytics.cbparams; 
+    _cbcfg.cbdomain='fifa.com';
+    var _sf_async_config=_sf_async_config || {};
+    var _cbcfg = wd.fifa.analytics.cbparams || {};
+    cbmanager = wd.fifa.analytics.manager(_cbcfg);
+    _sf_async_config.uid =  cbmanager.Chartbeat.getUid();
+    _sf_async_config.domain = cbmanager.Chartbeat.getDomain();
+    _sf_async_config.authors = cbmanager.Chartbeat.getAuthors();
+    _sf_async_config.title = fifacom_s.prop8;
+    _sf_async_config.sections = fifacom_s.getHierarchy()+cbmanager.Chartbeat.getAddSections(true);
+    _sf_async_config.path = cbmanager.Chartbeat.getPath()+'?site=web'+window.location.hash;
+    _sf_async_config.useCanonical = true;
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement("script");
+      e.setAttribute("language", "javascript");
+      e.setAttribute("type", "text/javascript");
+      e.setAttribute("src",
+      (("https:" == document.location.protocol) ?
+      "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" :
+      "http://static.chartbeat.com/") +
+      "js/chartbeat.js");
+      document.body.appendChild(e);
+    }
+    var dont = new RegExp("(localhost|stg\.|dev\.|dynamic|static)");
+    if (!dont.test(window.location.href)) {
+      loadChartbeat();
+    }
+  });
+}(document,window));
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
             </script> 
   </div>
   <div class="fwc_bottomRoundCorners"> 
   </div>
+<<<<<<< HEAD
   <script language="JavaScript" type="text/javascript"><!--
 fifacom_s.pageName="u17worldcup:matches:round 249415:match 58933:summary";
 fifacom_s.prop11="en";
@@ -895,6 +1083,17 @@ var s_code=fifacom_s.t();if(s_code)document.write(s_code);
 //--></script> 
   <script language="JavaScript" type="text/javascript"><!--
 if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+=======
+  <script language="JavaScript" type="text/javascript"><!--
+fifacom_s.pageName="u17worldcup:matches:round 249415:match 58933:summary";
+fifacom_s.prop11="en";
+fifacom_s.prop13="FIFA U-17 World Cup Final";
+fifacom_s.prop14="FIFA U-17 World Cup UAE 2013";
+var s_code=fifacom_s.t();if(s_code)document.write(s_code);
+//--></script> 
+  <script language="JavaScript" type="text/javascript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
 //--></script>
   <noscript>
    <img src="http://metrics.fifa.com/b/ss/fifaprod/1/H.21--NS/0" height="1" width="1" border="0" alt="">
