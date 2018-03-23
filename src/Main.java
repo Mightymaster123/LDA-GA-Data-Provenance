@@ -10,6 +10,12 @@ public class Main {
 
 	private static void testLDAPerformance() {
 		final int TEST_COUNT = 3;
+		
+		//preprocess data
+		NetworkManager.getInstance().waitForAllSlaves();
+		DataProvenance dataProvenance = new DataProvenance();
+		dataProvenance.run(false);
+		NetworkManager.getInstance().sendProtocol_StopAllSlaves();
 
 		PopulationConfig[][] results = new PopulationConfig[10][10];
 		for (int i_topic = 0; i_topic < results.length; ++i_topic) {

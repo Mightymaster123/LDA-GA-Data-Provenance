@@ -20,6 +20,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class WikiScrape {
+	public static final String RAW_DATA_DIRECTORY = "rawData"; // name of the directory that contains the raw html files
+	public static final String ORIGINAL_DATA_DIRECTORY = "txtData"; // name of the directory that contains the original source data
 	
 	int noOfArticles = 0;
 	int sourceFileCount = 0;
@@ -31,8 +33,29 @@ public class WikiScrape {
 		noOfArticles = i;
 		
 		//create a folder for the raw data
-		new File("rawData").mkdir();
+		delete_directory(RAW_DATA_DIRECTORY);
+		new File(RAW_DATA_DIRECTORY).mkdir();
 	}
+	
+	public static void delete_directory(String directory_name) {
+		File dir = new File(directory_name);
+		if (dir.exists()) {
+			String[] entries = dir.list();
+			if (entries != null) {
+				for (String s : entries) {
+					File currentFile = new File(dir.getPath(), s);
+					if (currentFile.isDirectory()) {
+						delete_directory(currentFile.getPath());
+					} else {
+						currentFile.delete();
+					}
+				}
+			}
+
+			dir.delete();
+		}
+	}
+	
 	
 	private void scrape() {
 		Document doc;
@@ -147,7 +170,7 @@ public class WikiScrape {
 
         // Write the source file
         try {
-            File temp = new File("rawData/" + sourceFileCount + ".html");
+            File temp = new File(RAW_DATA_DIRECTORY+"/" + sourceFileCount + ".html");
             BufferedWriter htmlWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(temp), "UTF-8"));
             htmlWriter.write(doc.toString());
             htmlWriter.close();
@@ -163,7 +186,7 @@ public class WikiScrape {
 	public void saveWikiArticle(Document doc, String title){
         // Write the wiki file
         try {
-            File temp = new File("rawData/" + title + "$AAA$.html");
+            File temp = new File(RAW_DATA_DIRECTORY+"/" + title + "$AAA$.html");
             BufferedWriter htmlWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(temp), "UTF-8"));
             htmlWriter.write(doc.toString());
             htmlWriter.close();
@@ -193,7 +216,7 @@ public class WikiScrape {
 	
 	public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
 		
-		WikiScrape ws = new WikiScrape( 100 );
+		WikiScrape ws = new WikiScrape( 50 );
 		ws.scrape();
 		ws.writeGroundTruth();
 		TextConversion.convertToTxt();

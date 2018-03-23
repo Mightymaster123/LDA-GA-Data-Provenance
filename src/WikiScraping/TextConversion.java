@@ -114,18 +114,19 @@ private static HashMap<String, ITextExtractionHandler> handlerMap;
 
 
 	public static void convertToTxt() {
-		new File("txtData").mkdir();
+		WikiScrape.delete_directory(WikiScrape.ORIGINAL_DATA_DIRECTORY);
+		new File(WikiScrape.ORIGINAL_DATA_DIRECTORY).mkdir();
 		
 		// get teh html files from the directory
-		File dir = new File("rawData");
+		File dir = new File(WikiScrape.RAW_DATA_DIRECTORY);
 		
 		String[] files = dir.list();
 		
 		for (String file : files) {
 			
 			System.out.println(file);
-			File from = new File("rawData/"+file);
-	    	File to = new File("txtData/" + from.getName() +".txt");
+			File from = new File(WikiScrape.RAW_DATA_DIRECTORY + "/"+file);
+	    	File to = new File(WikiScrape.ORIGINAL_DATA_DIRECTORY + "/" + from.getName() +".txt");
 	    	String ext = getExtension(from);
 	    	
 	    	ITextExtractionHandler handler = handlerMap.get(ext);

@@ -9,9 +9,11 @@ import java.util.Scanner;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
+import WikiScraping.WikiScrape;
+
 public class geneticLogic {
 
-	public static final int THREADS_PER_MACHINE = 6;
+	public static final int THREADS_PER_MACHINE = 4;
 	public static final double FITNESS_THRESHHOLD = 0.35;
 
 	public boolean isRunning = true;
@@ -76,7 +78,7 @@ public class geneticLogic {
 			 * the total number of documents that are being processed. Put them in a folder
 			 * and add the folder path here.
 			 */
-			int numberOfDocuments = new File("txtData").listFiles().length;
+			int numberOfDocuments = new File(WikiScrape.ORIGINAL_DATA_DIRECTORY).listFiles().length;
 
 			Thread threads[] = new Thread[THREADS_PER_MACHINE];
 			for (int i = 0; i < THREADS_PER_MACHINE; i++) {
@@ -290,7 +292,7 @@ public class geneticLogic {
 		 * the total number of documents that are being processed. Put them in a folder
 		 * and add the folder path here.
 		 */
-		int numberOfDocuments = new File("txtData").listFiles().length;
+		int numberOfDocuments = new File(WikiScrape.ORIGINAL_DATA_DIRECTORY).listFiles().length;
 
 		long startTime = System.currentTimeMillis();
 

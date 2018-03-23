@@ -1,773 +1,471 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
  <head> 
-  <script type="text/javascript">
-
-        var pageIsResponsive = true;
-
-        function gup(name) { name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]"); var regexS = "[\\?&]" + name + "=([^&#]*)"; var regex = new RegExp(regexS); var results = regex.exec(window.location.href); if (results == null) return ""; else return results[1]; }
-        function get_Cookie(cookieName) {
-            var cookieJar = document.cookie.split("; ");
-            for (var x = 0; x < cookieJar.length; x++) {
-                var oneCookie = cookieJar[x].split("=");
-                if (oneCookie[0] == escape(cookieName)) {
-                    return unescape(oneCookie[1]);
-                }
-            }
-            return null;
-        }
-
-        function set_Cookie(cookieName, cookieValue, lifeTime, path, domain, isSecure) {
-            if (!cookieName) {
-                return false;
-            }
-            if (lifeTime == "delete") {
-                lifeTime = -10;
-            }
-            document.cookie = escape(cookieName) + "=" + escape(cookieValue) + (lifeTime ? ";expires=" + (new Date((new Date()).getTime() + (1000 * lifeTime))).toGMTString() : "") + (path ? ";path=" + path : "") + (domain ? ";domain=" + domain : "") + (isSecure ? ";secure" : "");
-            if (lifeTime < 0) {
-                if (typeof (get_Cookie(cookieName)) == "string") {
-                    return false;
-                } return true;
-            }
-            if (typeof (get_Cookie(cookieName)) == "string") {
-                return true;
-            }
-
-            return false;
-        }
-
-        var cookieKey = 'checkSplashPassage';
-        if ('1' == '1' && gup('from') != 'mobile') {
-            var checkSplashPassage = get_Cookie(cookieKey);
-
-            if (checkSplashPassage == null) {
-                set_Cookie(cookieKey, '1', null, '', '.manutd.com', false);
-
-                var spUrl = '/en/Splash-Page.aspx';
-
-                //DMPG Added START
-//for original classic GA tracking
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-5517923-1']);
-_gaq.push(['_setDomainName', 'none']);
-_gaq.push(['_setAllowLinker', true]);
-_gaq.push(['_trackPageview', '/splash-redirect']);
-
-(function () {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
-//for migrated universal tracking
-(function (i, s, o, g, r, a, m) {
-	i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-		(i[r].q = i[r].q || []).push(arguments)
-	}, i[r].l = 1 * new Date(); a = s.createElement(o),
-	m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-ga('create', 'UA-65645868-1', 'auto');
-ga('send', 'pageview', '/splash-redirect');
-//DMPG Added END
-
-                //Check for matchMedia Support
-                if (typeof (window.matchMedia) === 'function') {
-
-                    if (window.matchMedia("(max-width: 1025px)").matches) {
-                        var splash_header = true;
-                    } else {
-
-                        if (spUrl.length > 3 && spUrl.charAt(3) == '/') {
-                            window.location = spUrl.substring(3);
-                        }
-                        else {
-                            window.location = spUrl;
-                        }
-
-                    }
-
-                }
-                    //Otherwise we just go ahead and redirect
-                else {
-
-                    if (window.innerWidth > 1024 || document.documentElement.clientWidth > 1024) {
-                        if (spUrl.length > 3 && spUrl.charAt(3) == '/') {
-                            window.location = spUrl.substring(3);
-                        }
-                        else {
-                            window.location = spUrl;
-                        }
-                    } else {
-                        var splash_header = true;
-                    }
-
-                }
-
-            }
-        }
-
-    </script> 
-  <script type="text/javascript"> var GB_ROOT_DIR = "/styles/greybox/"; var GB_DIRECTION = "ltr"; var GB_SEPARATOR = "of";</script>
-  <link rel="alternate" title="RSS Feed" type="application/rss+xml" href="/en/Feeds/NewsAndFeaturesRSS.aspx">
-  <title>
-	Official Manchester United Website
-</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta id="descriptionTag" name="description" content="<h2>The official Manchester United website with news, online ticket sales, live match commentary, video highlights, player profiles, mobile content, wallpapers, transfer news and more.</h2>">
-  <meta id="metaTitle" name="metaTitle" content="Official Manchester United Website">
-  <meta id="keywordsTag" name="keywords" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta id="instantArticleRss" property="fb:pages" content="7724542745">
-  <meta property="wb: webmaster" content="640d32b5716816">
-  <link href="/Handlers/YuiCompressorHandlerC.ashx?css=/styles/css/common1,/styles/css/common2,/styles/css/common3,/styles/css/common4,/styles/css/cookiePolicy,/styles/css/left&amp;v=465" type="text/css" rel="stylesheet" media="all and (min-width: 1025px)">
-  <script type="text/javascript" src="/Handlers/YuiCompressorHandlerC.ashx?js=/styles/js/jquery-1.4.4.min,/styles/js/jQuery/JQuery.cookie,/styles/js/imgcore,/styles/js/toolbar,/styles/js/flashObject,/styles/js/fliphp,/styles/greybox/AJS,/styles/greybox/AJS_fx,/styles/greybox/gb_scripts,/styles/greybox/gb_styles,/styles/js/responsive/matchMedia,/styles/js/adManager,/styles/Js/cookiePolicy&amp;v=465"></script>
-  <link href="/Handlers/YuiCompressorHandlerC.ashx?css=/styles/css/responsive/complete.min,/styles/css/responsive/complete.custom.min&amp;v=465" type="text/css" rel="stylesheet" media="all and (max-width: 1024px)">
-  <link href="/Handlers/YuiCompressorHandlerC.ashx?css=/styles/css/responsive/desktop_overrides&amp;v=465" type="text/css" rel="stylesheet" media="all and (min-width: 1025px)">
-  <link href="/Handlers/YuiCompressorHandlerC.ashx?css=/styles/css/english,/styles/greybox/gb_styles&amp;v=465" type="text/css" rel="stylesheet" media="all and (min-width: 1025px)">
-  <link href="/Handlers/YuiCompressorHandlerC.ashx?css=/styles/css/videojs/video-js&amp;v=465" type="text/css" rel="stylesheet"> 
-  <!--[if lt IE 9]>
-        <link href='/Handlers/YuiCompressorHandlerC.ashx?css=/styles/css/common1,/styles/css/common2,/styles/css/common3,/styles/css/common4,/styles/css/cookiePolicy,/styles/css/left,/styles/greybox/gb_styles&v=465' type='text/css' rel='stylesheet' /><link href='/Handlers/YuiCompressorHandlerC.ashx?css=/styles/css/responsive/desktop_overrides&v=465' type='text/css' rel='stylesheet' /><link href='/Handlers/YuiCompressorHandlerC.ashx?css=/styles/css/english&v=465' type='text/css' rel='stylesheet' />
-    <![endif]--> 
-  <script type="text/javascript" src="/Handlers/YuiCompressorHandlerC.ashx?js=/styles/js/userId&amp;v=465"></script>
-  <link href="https://plus.google.com/+manutd" rel="publisher">
-  <script type="text/javascript">
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
-(function() {
-var gads = document.createElement('script');
-gads.async = true;
-gads.type = 'text/javascript';
-var useSSL = 'https:' == document.location.protocol;
-gads.src = (useSSL ? 'https:' : 'http:') + 
-'//www.googletagservices.com/tag/js/gpt.js';
-var node = document.getElementsByTagName('script')[0];
-node.parentNode.insertBefore(gads, node);
-})();
-</script>
-  <script type="text/javascript">googletag.cmd.push(function() {
-            adManager.push(googletag.defineSlot("/11820346/EN_TabletSplash_804x271", [804, 271], "div-gpt-ad-1407231372851-0").addService(googletag.pubads()), "(min-width: 804px) and (max-width: 1024px)");
-        
-            adManager.push(googletag.defineSlot("/11820346/EN_MobileSplash_300x250", [300, 250], "div-gpt-ad-1407231342192-0").addService(googletag.pubads()), "(max-width: 803px)");
-        
-            adManager.push(googletag.defineSlot("/11820346/EN_MobileTabletFooter_300x180", [300, 180], "div-gpt-ad-1407947501505-0").addService(googletag.pubads()), "(max-width: 1024px)");
-        
-            adManager.push(googletag.defineSlot("/11820346/EN_Home_120x600", [120, 600], "div-gpt-ad-1400580360559-0").addService(googletag.pubads()), "(min-width: 1025px)");
-        
-            adManager.push(googletag.defineSlot("/11820346/EN_Home_150x179", [150, 179], "div-gpt-ad-1400580308826-0").addService(googletag.pubads()), "(min-width: 1025px)");
-        
-            adManager.push(googletag.defineSlot("/11820346/EN_Home_300x50", [300, 50], "div-gpt-ad-1407232531968-0").addService(googletag.pubads()), "(max-width: 727px)");
-        
-            adManager.push(googletag.defineSlot("/11820346/EN_Home_314x1213", [314, 1213], "div-gpt-ad-1400580523773-0").addService(googletag.pubads()), "(min-width: 1025px)");
-        
-            adManager.push(googletag.defineSlot("/11820346/EN_Home_315x1213", [315, 1213], "div-gpt-ad-1400580504337-0").addService(googletag.pubads()), "(min-width: 1025px)");
-        
-            adManager.push(googletag.defineSlot("/11820346/EN_Home_352x279", [352, 279], "div-gpt-ad-1400580335258-0").addService(googletag.pubads()), "(min-width: 1025px)");
-        
-            adManager.push(googletag.defineSlot("/11820346/EN_Home_728x90", [728, 90], "div-gpt-ad-1407231546377-0").addService(googletag.pubads()), "(min-width: 728px) and (max-width: 1024px)");
-        
-            adManager.push(googletag.defineSlot("/11820346/EN_Home_663x142", [663, 142], "div-gpt-ad-1422354496632-0").addService(googletag.pubads()), "(min-width: 1025px)");
-        googletag.pubads().enableSingleRequest(); googletag.pubads().disableInitialLoad(); googletag.enableServices(); $(document).ready(adManager.init) });</script> 
-  <!--Start Pinterest Tag --> 
-  <meta name="p:domain_verify" content="3f419e3a14c6b3ade299b28d08da321c"> 
-  <!--End Pinterest Tag --> 
-  <meta property="og:image" content="http://www.manutd.com/~/media/510AE241278B45FF97125DC1E1E32CBF.ashx"> 
-  <script type="text/javascript">(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script> 
- </head>
- <body>
-  <div id="fb-root"></div>
-  <style type="text/css">body{background: #fff url('/~/media/0021F8311AAC40089CBFFC7F5D3FC99D.ashx') no-repeat fixed 50% 0;}</style>
-  <link href="/Handlers/YuiCompressorHandlerC.ashx?css=/styles/css/flipclock,/styles/css/countdownTimer&amp;v=465" type="text/css" rel="stylesheet">
-  <script type="text/javascript" src="/Handlers/YuiCompressorHandlerC.ashx?js=/styles/js/flipclock.min,/styles/js/countdownTimer&amp;v=465"></script>  
-  <script type="text/javascript" src="/Handlers/YuiCompressorHandlerC.ashx?js=/styles/js/GoogleAnalytics/analytics&amp;v=465"></script> 
-  <!-- Google Tag Manager --> 
-  <noscript>
-   <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NPX7WN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript> 
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NPX7WN');</script> 
-  <!-- End Google Tag Manager --> 
-  <!--
-Start of DoubleClick Floodlight Tag: Please do not remove
-Activity name of this tag: ChevroletFC - ManUtd  - Amnet Retargeting Only
-URL of the webpage where the tag is expected to be placed: http://manutd.com
-This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
-Creation Date: 07/02/2014
---> 
-  <script type="text/javascript">
-var axel = Math.random() + "";
-var a = axel * 10000000000000;
-var loc = location.href
-document.write('<iframe src="http://3924042.fls.doubleclick.net/activityi;src=3924042;type=chfutbol;cat=Chevr0;u11=' + loc + ';u16=Page Load;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
-</script> 
-  <noscript> 
-   <iframe src="http://3924042.fls.doubleclick.net/activityi;src=3924042;type=chfutbol;cat=Chevr0;u11=Unknown - NoScript;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe> 
-  </noscript> 
-  <!-- End of DoubleClick Floodlight Tag: Please do not remove --> 
-  <!--BEGIN QUALTRICS SITE INTERCEPT--> 
-  <script type="text/javascript">
-        var SI_6EyGIbUH91Yt1Pu_ed = '';
-        var SI_6EyGIbUH91Yt1Pu_url = '//siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_SIID=SI_6EyGIbUH91Yt1Pu' + SI_6EyGIbUH91Yt1Pu_ed;
-        var SI_6EyGIbUH91Yt1Pu_sampleRate = 100;
-        var q_si_f = function () { if (Math.random() >= SI_6EyGIbUH91Yt1Pu_sampleRate / 100) return; var s = document.createElement('script'); s.type = 'text/javascript'; s.src = SI_6EyGIbUH91Yt1Pu_url + '&Q_LOC=' + encodeURIComponent(window.location.href); if (document.body) document.body.appendChild(s); }; try { if (window.addEventListener) { window.addEventListener('load', q_si_f, false); } else if (window.attachEvent) { r = window.attachEvent('onload', q_si_f); } else { } } catch (e) { }</script> 
-  <div id="SI_6EyGIbUH91Yt1Pu"> 
-   <!--DO NOT REMOVE-CONTENTS PLACED HERE--> 
-  </div> 
-  <noscript> 
-   <a target="_blank" href="//www.qualtrics.com/crm-integration">CRM Integration</a>
-   <br> 
-   <a target="_blank" href="//www.qualtrics.com/enterprise-feedback-management">Enterprise Feedback Management</a>
-   <br> 
-  </noscript> 
-  <!--END SITE INTERCEPT--> 
-  <div id="leftTower"> 
-   <!-- EN_Home_315x1213 --> 
-   <div id="div-gpt-ad-1400580504337-0" style="width:315px; height:1213px;"></div> 
-   <style type="text/css">#siteheader {
-    background-position: 0px;
-}
-</style> 
-  </div> 
-  <div id="pagecontainer"> 
-   <div id="toolbar"> 
-    <div id="toolbarLogo" xmlns:img="http://www.imgworld.com/img">
-     <a href="http://bit.ly/1EXfnBj" target=""><img class="logo-desktop" src="/~/media/0009B095031E421DBC5CC82719EEA7F2.ashx"><img class="logo-mobile" src="/~/media/CDA2A649E90845D9A5FA317EC7AEA5B7.ashx"></a>
-    </div>
-    <div id="toolbarsearch" xmlns:img="http://www.imgworld.com/img">
-     <input type="hidden" id="listCount" value="8">
-     <input type="hidden" value="" name="catTxt" id="catTxt">
-     <select name="qs" id="searchcategory" onchange="document.getElementById('catTxt').value = this.options[this.selectedIndex].text;"><option value="search">All</option><option value="manutd_ClubNews">Club News</option><option value="manutd_ExclusiveInterviews">Exclusive Interviews</option><option value="manutd_Features">Features</option><option value="manutd_FootballNews">Football News</option><option value="manutd_NewsAndFeatures">News &amp; Features</option><option value="manutd_PlayersAndStaff">Players &amp; Staff</option><option value="manutd_WhatThePapersSay">What The Papers Say</option></select>
-     <input type="text" placeholder="Type Keyword" value="" id="search">
-     <input type="button" title="Go" value="" linkpage="/en/Search-Results.aspx" id="btnSearch" class="gobutton">
-     <input type="hidden" value="Type Keyword" name="typeText" id="typeText">
-     <input type="hidden" value="/en/Search-Results.aspx" name="typeText" id="linkSearch">
-     <script type="text/javascript" src="/styles/js/SearchBar/SearchBar.js"></script>
-     <input type="hidden" value="Type Keyword" name="typeText" id="typeText">
-    </div>
-    <div id="faqzone" style="display:inline;" xmlns:img="http://www.imgworld.com/img">
-     <a id="btnFaq" title="FAQ" href="/en/Club/FAQs.aspx"></a>
-     <a id="btnContactUs" title="Contact Us" href="/en/Club/Club-Contacts.aspx"></a>
-     <a id="btnCookieSetting" title="Cookie Policy" href="/en/General-Footer-Section/Cookie-Policy.aspx"></a>
-    </div>
-    <div style="display:inline;" id="toolbarlogin" xmlns:img="http://www.imgworld.com/img">
-     <form action="/Login-and-Sign-Up.aspx?redirectPath=%2fen.aspx%3fpagegid%3d%257BF9E570E6%252D407E%252D44BC%252D800F%252D4A3110258114%257D%26newsid%3d409377" method="post">
-      <input type="hidden" id="returnPath" name="returnPath" value="%2fen.aspx" class="hiddeninput">
-      <button type="submit" title="Login" class="btnLogin" id="btnLogin" value=""><img class="btnLoginHover" src="/~/media/705869E08AD847A9A53DB07487899821.ashx" data-rollover="/~/media/705869E08AD847A9A53DB07487899821.ashx"></button>
-      <a id="btnSignup" title="Sign up" href="/Login-and-Sign-Up/register-short.aspx?redirectPath=%2fen.aspx"><span>Sign up</span><img class="t-logo toolbarLogos" src="/~/media/8331CB5FC07F4138AA47231907E331D9.ashx" data-rollover="/~/media/D6DF8CBCE41D449EA92EAC528E072204.ashx"></a>
-     </form>
-    </div>
-    <div id="loginwelcome" xmlns:img="http://www.imgworld.com/img">
-     <a class="btnBlank" href="/Login-and-Sign-Up/edit-details.aspx?mode=edit&amp;redirectPath=%2fen.aspx">Edit my details</a>
-     <a id="btnLogout" title="Logout" href="/Login-and-Sign-Up.aspx?logout=true&amp;redirectPath=%2fen.aspx%3fpagegid%3d%257BF9E570E6%252D407E%252D44BC%252D800F%252D4A3110258114%257D%26newsid%3d409377"><span>Logout</span><img class="t-logo toolbarLogos" src="/~/media/35EA7FFB87274F6BAC48908A088BF36E.ashx" data-rollover="/~/media/35EA7FFB87274F6BAC48908A088BF36E.ashx"></a>
-    </div>
-    <div class="toolbarLogos" xmlns:img="http://www.imgworld.com/img">
-     <a href="/Home/Club/FAQs.aspx" target="" class="tablet-only"><img class="t-logo" src="/~/media/E1BA41E60D344DECBB1D3D5AC584B7CE.ashx" data-rollover="/~/media/E1BA41E60D344DECBB1D3D5AC584B7CE.ashx"></a>
-     <a href="/Home/Club/FAQs.aspx" target="" class="mobile-only"><img class="t-logo" src="/~/media/E1BA41E60D344DECBB1D3D5AC584B7CE.ashx" data-rollover="/~/media/E1BA41E60D344DECBB1D3D5AC584B7CE.ashx"></a>
-    </div>
-    <div class="toolbarLogos" xmlns:img="http://www.imgworld.com/img">
-     <a href="http://store.manutd.com/stores/manutd/en?portal=EVIHIAG3&amp;CMP=PSC-EVIHIAG3" target="_blank" class="tablet-only"><img class="t-logo" src="/~/media/8DF1B6ECA1B742C59548EC8C216EEE38.ashx" data-rollover="/~/media/8DF1B6ECA1B742C59548EC8C216EEE38.ashx"></a>
-     <a href="http://m.store.manutd.com/stores/manutd/mobile/en?portal=IVG39249&amp;CMP=PSC-IVG39249" target="_blank" class="mobile-only"><img class="t-logo" src="/~/media/BCBF7A9BF45B4A568591E5B60A0D5AC0.ashx" data-rollover="/~/media/BCBF7A9BF45B4A568591E5B60A0D5AC0.ashx"></a>
-    </div>
-    <div id="divWelcome" xmlns:img="http://www.imgworld.com/img">
-     <div id="welcome">
-      WELCOME BACK
-     </div>
-    </div>
-    <div id="ShopSection" style="display:inline" xmlns:img="http://www.imgworld.com/img">
-     <a id="btnShop" title="SHOP" href="http://store.manutd.com/stores/manutd/en?portal=QYTMF8KF&amp;CMP=PSC-QYTMF8KF&amp;intcmp=club_top"></a>
-    </div> 
-   </div> 
-   <div id="siteheader" style="background-image:url('/~/media/B13AFD5EC2FA4A00863DA60C20B7A26A.ashx');">
-    <object type="application/x-shockwave-flash" data="/~/media/1C9813EBCA6E40AE8D0DB155A9825C3C.ashx" width="966" height="150" id="masthead"><param name="allowScriptAccess" value="sameDomain"><param name="swliveconnect" value="true"><param name="movie" value="/~/media/1C9813EBCA6E40AE8D0DB155A9825C3C.ashx"><param name="wmode" value="transparent"><param name="quality" value="high"><param name="menu" value="true"><param name="masthead_noanimation" value="1"><param name="masthead_nologo" value="1"><param name="flashvars" value="xml_feed_url=~/media/XML/masthead_override.ashx">
-     <div class="noflashholder">
-      <a title="Home" href="/en.aspx" id="bannerhomelink"><span>home</span></a>
-      <ul>
-       <li><a href="http://www.arabic.manutd.com/">العربية</a></li>
-       <li><a href="http://www.manunited.com.cn/">中文</a></li>
-       <li><a href="http://www.espanol.manutd.com/">Espanol</a></li>
-       <li><a href="http://www.francais.manutd.com/">Francais</a></li>
-       <li><a href="http://www.manutd.jp/">日本語</a></li>
-       <li><a href="http://www.manutd.kr/">우리말</a></li>
-      </ul>
-      <div id="box-link-chevrolet">
-       <a href="http://www.chevroletfc.com/" class="noFlashSponsorsLogo" target="_blank"></a>
-      </div>
-      <div id="box-link-aon">
-       <a href="http://www.aon.com/manutd/" class="noFlashSponsorsLogo" target="_blank"></a>
-      </div>
-      <div id="box-link-asponsor">
-       <a href="http://www.adidas.co.uk/frontrow" class="noFlashSponsorsLogo" target=""></a>
-      </div>
-     </div></object>
-    <div id="splash_header">
-     <div class="header">
-      <img src="/~/media/D8AA2D18466A484EBCD5E7616B8C3E1F.ashx?h=150&amp;w=150" class="logo" alt="" width="150" height="150">
-      <ul class="lang-selector">
-       <li class="drop-arrow"></li>
-       <li><a href="javascript:;"><span class="flag flag-gb"></span>English </a></li>
-       <li><a href="http://www.arabic.manutd.com"><span class="flag"></span>العربية </a></li>
-       <li><a href="http://www.manunited.com.cn"><span class="flag flag-cn"></span>中文 </a></li>
-       <li><a href="http://www.espanol.manutd.com"><span class="flag"></span>Espanol </a></li>
-       <li><a href="http://www.francais.manutd.com"><span class="flag"></span>Francais </a></li>
-       <li><a href="http://www.manutd.jp"><span class="flag flag-jp"></span>日本語 </a></li>
-       <li><a href="http://www.manutd.kr"><span class="flag flag-kr"></span>우리말 </a></li>
-      </ul>
-     </div>
-     <div class="responsive-advert">
-      <div class="mobile-only">
-       <!-- EN_MobileSplash_300x250 --> 
-       <div id="div-gpt-ad-1407231342192-0" style="width: 300px; height: 250px; margin:0 auto; background-color: #222;"></div>
-      </div>
-      <div class="tablet-only">
-       <!-- EN_TabletSplash_804x271 --> 
-       <div id="div-gpt-ad-1407231372851-0" style="width: 804px; height: 271px; margin:0 auto; background-color: #222;"></div>
-      </div>
-     </div>
-    </div>
-    <div id="mobile_header">
-     <a href="/" class="logo"><img src="/~/media/70B26A46043246B1A46E0060D8F91B18.ashx?h=150&amp;w=150" class="logoMU" alt="ManU logo" width="150" height="150"></a>
-     <a href="http://www.chevroletfc.com/" target="_blank"><img src="/~/media/E6823171DA2144F59F5FA73C7B618FBC.ashx?h=48&amp;w=111" class="chevrolet_logo" alt="chevrolet logo" width="111" height="48"></a>
-     <a href="http://www.aon.com/manutd/" target="_blank"><img src="/~/media/5848695CE4D4457BB902460D42E0DB85.ashx?h=48&amp;w=111" class="aon_logo" alt="Aon Logo" width="111" height="48"></a>
-     <a href="http://www.adidas.co.uk/frontrow" target=""><img src="/~/media/9B5E18979D434770BE4122DCB45073DD.ashx?h=61&amp;w=90" class="asponsor_logo" alt="" width="90" height="61"></a>
-     <div class="menu-btn">
-      <div class="line top"></div>
-      <div class="line middle"></div>
-      <div class="line bottom"></div>
-     </div>
-    </div>
-   </div> 
-   <div id="menucolumn"> 
-    <p id="generictopdevice"><script src="https://apis.google.com/js/platform.js"></script></p>
-    <div style="margin: 1px 10px 6px 11px;">
-     <div class="g-ytsubscribe" data-channelid="UC6yW44UGJJBvYTlfC7CRg2Q" data-layout="default" data-count="hidden"></div>
-    </div>
-    <p></p> 
-    <input type="hidden" id="unitedtogetherC" value="'www10'">
-    <ul id="navigation">
-     <li class="
-              mnSelect first
-            "><a href="/en.aspx">Home</a></li>
-     <li class="" title="Click here to view&nbsp;Login &amp;amp; Sign Up"><a href="/en/Login-and-Sign-Up.aspx">Login &amp; Sign Up</a></li>
-     <li class="" title="Click here to view&nbsp;News &amp;amp; Features"><a href="/en/News-And-Features.aspx">News &amp; Features</a></li>
-     <li class="" title="Click here to view&nbsp;Fixtures &amp;amp; Results"><a class="retro_hide" href="/en/Fixtures-And-Results.aspx">Fixtures &amp; Results</a><a class="mobile" href="/en/Fixtures-And-Results/United-Fixtures-And-Results.aspx">Fixtures &amp; Results</a></li>
-     <li class="" title="Click here to view&nbsp;MUTV"><a href="/en/MUTV-Web.aspx">MUTV</a></li>
-     <li class="" title="Click here to view&nbsp;Fan Competitions"><a href="/en/Fan-Competitions.aspx">Fan Competitions</a></li>
-     <li class="" title="Click here to view&nbsp;StayUnited"><a href="/en/StayUnited.aspx">StayUnited</a></li>
-     <li class="" title="Click here to view&nbsp;Players &amp;amp; Staff"><a href="/en/Players-And-Staff.aspx">Players &amp; Staff</a></li>
-     <li class="" title="Click here to view&nbsp;History"><a href="/en/History.aspx">History</a></li>
-     <li class="" title="Click here to view&nbsp;Tickets &amp;amp; Hospitality"><a href="/en/Tickets-And-Hospitality.aspx">Tickets &amp; Hospitality</a></li>
-     <li class="" title="Click here to view&nbsp;Official Membership&nbsp;-&nbsp;This link will open in a new window"><a href="/en/Official-Membership.aspx" target="_blank">Official Membership</a></li>
-     <li class="" title="Click here to view&nbsp;Season Tickets"><a href="/en/Season-Tickets.aspx">Season Tickets</a></li>
-     <li class="" title="Click here to view&nbsp;Seasonal Hospitality"><a href="/en/Seasonal-Hospitality.aspx">Seasonal Hospitality</a></li>
-     <li class="" title="Click here to view&nbsp;Museum &amp;amp; Stadium Tour"><a href="/en/Visit-Old-Trafford.aspx">Museum &amp; Stadium Tour</a></li>
-     <li class="" title="Click here to view&nbsp;Conference &amp;amp; Events&nbsp;-&nbsp;This link will open in a new window"><a href="http://www.unitedevents-manutd.com/?utm_source=ManUtdCom&amp;utm_medium=Menu&amp;utm_campaign=UnitedEvents" target="_blank">Conference &amp; Events</a></li>
-     <li class="" title="Click here to view&nbsp;Club Information"><a href="/en/Club.aspx">Club Information</a></li>
-     <li class="" title="Click here to view&nbsp;Club Partners"><a href="/en/Partners.aspx">Club Partners</a></li>
-     <li class="" title="Click here to view&nbsp;Fanzone"><a href="/en/Fanzone.aspx">Fanzone</a></li>
-     <li class="" title="Click here to view&nbsp;Shopping&nbsp;-&nbsp;This link will open in a new window"><a href="http://store.manutd.com/stores/manutd/en?portal=QYTMF8KF&amp;CMP=PSC-QYTMF8KF" target="_blank">Shopping<img src="/~/media/6EF5A92F380D47CFA230FBFDC190EE2C.ashx?h=16&amp;mh=16&amp;mw=16&amp;w=16" class="shopping_cart" alt="" width="16" height="16"></a></li>
-     <li class="" title="Click here to view&nbsp;Betting and Gaming&nbsp;-&nbsp;This link will open in a new window"><a href="https://advert-content.com/click/general?bid=30610_23360_2531_false&amp;siteid=" target="_blank">Betting and Gaming</a></li>
-     <li class="" title="Click here to view&nbsp;Music&nbsp;-&nbsp;This link will open in a new window"><a href="http://try.deezer.com/manchesterunited/" target="_blank">Music</a></li>
-     <li class="" title="Click here to view&nbsp;Social Media&nbsp;-&nbsp;This link will open in a new window"><a href="http://social.manutd.com" target="_blank">Social Media</a></li>
-     <li class="" title="Click here to view&nbsp;MU Foundation&nbsp;-&nbsp;This link will open in a new window"><a href="http://www.mufoundation.org/" target="_blank">MU Foundation</a></li>
-     <li class="" title="Click here to view&nbsp;Disabled Supporters"><a href="/en/Tickets-And-Hospitality/Accessibility.aspx">Disabled Supporters</a></li>
-     <li class="" title="Click here to view&nbsp;Investor Relations"><a href="http://ir.manutd.com/">Investor Relations</a></li>
-    </ul>
-    <div id="mobile-navigation">
-     <ul class="lang-selector">
-      <li class="drop-arrow"></li>
-      <li><a href="javascript:;"><span class="flag flag-gb"></span>English </a></li>
-      <li><a href="http://www.arabic.manutd.com"><span class="flag"></span>العربية </a></li>
-      <li><a href="http://www.manunited.com.cn"><span class="flag flag-cn"></span>中文 </a></li>
-      <li><a href="http://www.espanol.manutd.com"><span class="flag"></span>Espanol </a></li>
-      <li><a href="http://www.francais.manutd.com"><span class="flag"></span>Francais </a></li>
-      <li><a href="http://www.manutd.jp"><span class="flag flag-jp"></span>日本語 </a></li>
-      <li><a href="http://www.manutd.kr"><span class="flag flag-kr"></span>우리말 </a></li>
-     </ul>
-     <a href="/Home.aspx" target=""><img src="/~/media/723CDC046E9E487C8219CCB5949F15C3.ashx" class="menu-image"></a>
-     <ul class="mobile-nav">
-      <li class="
-                mnSelect first mobile-item"><a href="/en.aspx">Home</a></li>
-      <li class="
-                          first mobile-item" title="Click here to view Login &amp; Sign Up"><a href="/en/Login-and-Sign-Up.aspx">Login &amp; Sign Up</a>
-       <ul>
-        <li class="mobile-item" id="" title="Click here to view Sign Up"><a href="/en/Login-and-Sign-Up/Register-Short.aspx">Sign Up</a></li>
-        <li class="mobile-item" id="" title="Click here to view Edit My Details"><a href="/en/Login-and-Sign-Up/Edit-Details.aspx">Edit My Details</a></li>
-        <li class="mobile-item" id="" title="Click here to view Log out"><a>Log out</a></li>
-       </ul></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li class="
-                          first mobile-item" title="Click here to view News &amp; Features"><a href="/en/News-And-Features.aspx">News &amp; Features</a>
-       <ul>
-        <li class="mobile-item" id="" title="Click here to view Football News"><a href="/en/News-And-Features/Football-News.aspx">Football News</a></li>
-        <li class="mobile-item" id="" title="Click here to view Features"><a href="/en/News-And-Features/Features.aspx">Features</a></li>
-        <li class="mobile-item" id="" title="Click here to view Club News"><a href="/en/News-And-Features/Club-News.aspx">Club News</a></li>
-        <li class="mobile-item" id="" title="Click here to view Exclusive Interviews"><a href="/en/News-And-Features/Exclusive-Interviews.aspx">Exclusive Interviews</a></li>
-       </ul></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li class="
-                          first mobile-item" title="Click here to view Fixtures &amp; Results"><a href="/en/Fixtures-And-Results/United-Fixtures-And-Results.aspx">Fixtures &amp; Results</a>
-       <ul>
-        <li class="mobile-item" id="" title="Click here to view Reports &amp; Previews"><a href="/en/Fixtures-And-Results/Match-Reports.aspx">Reports &amp; Previews</a></li>
-        <li class="mobile-item" id="" title="Click here to view League Table"><a href="/en/Fixtures-And-Results/Premier-League-Table.aspx">League Table</a></li>
-       </ul></li>
-      <li></li>
-      <li></li>
-      <li class="
-                      first mobile-item" title="Click here to view MUTV"><a href="https://mutv.manutd.com/home?utm_source=Manutd.com&amp;utm_medium=Menu&amp;utm_campaign=MUTV&amp;utm_content=MUTVWeb">MUTV</a>
-       <ul></ul></li>
-      <li class="
-                      first mobile-item" title="Click here to view Opt-in to Stay United"><a href="http://www.manutd.com/en/Tickets-And-Hospitality/Stay-united-info?int_source=manutdweb&amp;int_medium=Menu&amp;int_content=LHMMobile&amp;int_campaign=stayunited&amp;int_term=OptInTostayUnited">Opt-in to Stay United</a>
-       <ul></ul></li>
-      <li class="
-                          first mobile-item" title="Click here to view History"><a href="/en/History.aspx">History</a>
-       <ul>
-        <li class="mobile-item" id="" title="Click here to view History By Decade"><a href="/en/History/History-By-Decade.aspx">History By Decade</a></li>
-        <li class="mobile-item" id="" title="Click here to view Munich Remembered"><a href="/en/History/Munich-Remembered.aspx">Munich Remembered</a></li>
-        <li class="mobile-item" id="" title="Click here to view The Old Trafford Story"><a href="/en/History/The-Old-Trafford-Story.aspx">The Old Trafford Story</a></li>
-        <li class="mobile-item" id="" title="Click here to view Trophy Room"><a href="/en/History/Trophy-Room.aspx">Trophy Room</a></li>
-       </ul></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li class="
-                      first mobile-item" title="Click here to view Official Membership"><a href="http://www.manutd.com/en/Official-Membership.aspx">Official Membership</a>
-       <ul></ul></li>
-      <li class="
-                          first mobile-item" title="Click here to view Tickets &amp; Hospitality"><a href="/en/Tickets-And-Hospitality.aspx">Tickets &amp; Hospitality</a>
-       <ul>
-        <li class="mobile-item" id="" title="Click here to view Buy Tickets"><a href="https://www.eticketing.co.uk/muticketsandmembership/">Buy Tickets</a></li>
-        <li class="mobile-item" id="" title="Click here to view Buy Matchday VIP Tickets - This link will open in a new window"><a target="_blank" href="http://www.matchdayvip.manutd.com">Buy Matchday VIP Tickets</a></li>
-        <li class="mobile-item" id="" title="Click here to view Season Tickets - This link will open in a new window"><a target="_blank" href="http://www.manutd.com/en/Season-Tickets.aspx">Season Tickets</a></li>
-        <li class="mobile-item" id="" title="Click here to view Executive Club - This link will open in a new window"><a target="_blank" href="http://www.executiveclub.manutd.com/?utm_source=ManUtdCom&amp;utm_medium=Menu&amp;utm_content=LHM&amp;utm_campaign=Executive">Executive Club</a></li>
-        <li class="mobile-item" id="" title="Click here to view Ticket and Hotel Breaks - This link will open in a new window"><a target="_blank" href="http://bit.ly/1OboWd6">Ticket and Hotel Breaks</a></li>
-       </ul></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li class="
-                      first mobile-item" title="Click here to view Shopping - This link will open in a new window"><a target="_blank" href="http://store.manutd.com/stores/manutd/default.aspx?portal=QYTMF8KF&amp;CMP=PSC-QYTMF8KF">Shopping</a>
-       <ul>
-        <li class="mobile-item" id="" title="Click here to view United Direct - This link will open in a new window"><a target="_blank" href="http://store.manutd.com/stores/manutd/default.aspx?portal=QYTMF8KF&amp;CMP=PSC-QYTMF8KF">United Direct</a></li>
-        <li class="mobile-item" id="" title="Click here to view Magazine and Programme - This link will open in a new window"><a target="_blank" href="http://www.sportmediashop.com/shop/manchesterunited/manchesterunitedpublications">Magazine and Programme</a></li>
-        <li class="mobile-item" id="" title="Click here to view Man Utd Pics - This link will open in a new window"><a target="_blank" href="http://www.manutdpics.com/">Man Utd Pics</a></li>
-       </ul></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li class="
-                      first mobile-item" title="Click here to view Betting and Gaming - This link will open in a new window"><a target="_blank" href="https://ads-mediarotate.com/click/general?bid=30610_23360_2531_false&amp;siteid=">Betting and Gaming</a>
-       <ul></ul></li>
-      <li class="
-                      first mobile-item" title="Click here to view Music - This link will open in a new window"><a target="_blank" href="http://try.deezer.com/manchesterunited/">Music</a>
-       <ul></ul></li>
-      <li class="
-                      first mobile-item" title="Click here to view Social Media - This link will open in a new window"><a target="_blank" href="http://social.manutd.com">Social Media</a>
-       <ul>
-        <li class="mobile-item" id="" title="Click here to view Facebook - This link will open in a new window"><a target="_blank" href="https://www.facebook.com/manchesterunited">Facebook</a></li>
-        <li class="mobile-item" id="" title="Click here to view Twitter - This link will open in a new window"><a target="_blank" href="https://twitter.com/ManUtd">Twitter</a></li>
-        <li class="mobile-item" id="" title="Click here to view Google + - This link will open in a new window"><a target="_blank" href="https://plus.google.com/+ManUtd">Google +</a></li>
-        <li class="mobile-item" id="" title="Click here to view Instagram - This link will open in a new window"><a target="_blank" href="http://instagram.com/manchesterunited">Instagram</a></li>
-        <li class="mobile-item" id="" title="Click here to view Pinterest - This link will open in a new window"><a target="_blank" href="http://www.pinterest.com/manutd/">Pinterest</a></li>
-       </ul></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li class="
-                          first mobile-item" title="Click here to view Match &amp; News Alerts"><a>Match &amp; News Alerts</a>
-       <ul>
-        <li class="mobile-item" id="" title="Click here to view Terms &amp; Conditions"><a>Terms &amp; Conditions</a></li>
-       </ul></li>
-      <li></li>
-     </ul>
-     <h2>Desktop Site</h2>
-     <ul class="desktop-nav">
-      <li class="" title="Click here to view New Kits 2017/18"><a href="/en/New-Kit-2017-2018.aspx">New Kit 2017 2018</a></li>
-      <li class="" title="Click here to view New Signings 2017/18"><a href="/en/New-Signings-201718.aspx">New Signings 201718</a></li>
-      <li class="" title="Click here to view Players &amp; Staff"><a href="/en/Players-And-Staff.aspx">Players And Staff</a></li>
-      <li class="" title="Click here to view Museum &amp; Stadium Tour"><a href="/en/Visit-Old-Trafford.aspx">Visit Old Trafford</a></li>
-      <li class="" title="Click here to view Conference &amp; Events - This link will open in a new window"><a href="http://www.unitedevents-manutd.com/?utm_source=ManUtdCom&amp;utm_medium=Menu&amp;utm_campaign=UnitedEvents" target="_blank">Conference &amp; Events</a></li>
-      <li class="" title="Click here to view Club Information"><a href="/en/Club.aspx">Club</a></li>
-      <li class="" title="Click here to view Club Partners"><a href="/en/Partners.aspx">Partners</a></li>
-      <li class="" title="Click here to view Fanzone"><a href="/en/Fanzone.aspx">Fanzone</a></li>
-      <li class="" title="Click here to view Disabled Supporters"><a href="/en/Tickets-And-Hospitality/Accessibility.aspx">Disabled Supporters</a></li>
-      <li class="" title="Click here to view Investor Relations"><a href="http://ir.manutd.com/">Investor Relations</a></li>
-      <li class="" title="Click here to view MU Foundation - This link will open in a new window"><a href="http://www.mufoundation.org/" target="_blank">MU Foundation</a></li>
-     </ul>
-    </div> 
-    <div class="device">
-     <div>
-      <div class="desktop banner-ad">
-       <div class="desktop-only">
-        <!-- EN_Home_150x179 --> 
-        <div id="div-gpt-ad-1400580308826-0" style="width:150px; height:179px;"></div>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="device">
-     <div id="deviceHomeEvent" style="
-                  background-image:url(/~/media/37323BD8FF314C52BD827BD3F2EB4F6E.ashx)
-                ">
-      <p>NEXT MATCH<br> <br> <img alt="" src="https://cms.cloud.manutd.com/sitecore/shell//~/media/9C14547F369040C8BC3C2661456C6B3D.ashx?h=60&amp;la=en&amp;w=60" style="height: 60px; width: 60px;"><br> <br> United v Swansea City<br> Premier League<br> Old Trafford<br> Sat 31 Mar, 15:00 BST<br> <br> </p> 
-      <p style="text-align: left;"><a href="http://www.manutd.com/en/Tickets-And-Hospitality/Tickets-And-Hospitality-News.aspx"><img alt="" style="width: 118px; height: 20px;" src="http://www.manutd.com//~/media/3C49930BBBA0442E89CA0F6FFD0E49F0.ashx?la=en"></a></p>
-     </div>
-    </div> 
-   </div> 
-   <div class="clearfix" id="homepagecontainer"> 
-    <div id="homeContentPlaceholder"> 
-     <div id="flashnews"> 
-      <h3>Today on ManUtd.com</h3>
-      <div id="flashNewsContent">
-       <div id="fl_abstract">
-        <a href="/en/News-And-Features/Football-News/2018/Mar/scott-mctominay-reveals-how-darren-fletcher-helped-him-ahead-of-first-scotland-call-up.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/8E64319954AD4EE896F5CEB0D963BDE7.ashx?w=330&amp;h=183&amp;rgn=0,6,2006,1117" alt="" height="183" width="330"><img src="http://www.manutd.com/sitecore/shell/~/media/73CD3571DDF64AF9A1CAA1E920BE6D60.ashx?w=330&amp;h=183&amp;rgn=0,462,3383,2336" alt="" height="183" width="330" style="display:none;"><img src="http://www.manutd.com/sitecore/shell/~/media/EBFFA795DB9449A28F1B6EF1DAE14760.ashx?w=330&amp;h=183&amp;rgn=0,162,2030,1284" alt="" height="183" width="330" style="display:none;"><img src="http://www.manutd.com/sitecore/shell/~/media/6C3AF37D95664F5A8F5F2F5E1632402A.ashx?w=330&amp;h=183&amp;rgn=0,6,2000,1111" alt="" height="183" width="330" style="display:none;"><strong>How Fletch helped McTominay</strong><span>Scott McTominay reveals what ex-United star Darren Fletcher told him ahead of his first Scotland call-up.</span></a>
-       </div>
-       <div class="fl_stack">
-        <a class="currentitem" href="/en/News-And-Features/Football-News/2018/Mar/scott-mctominay-reveals-how-darren-fletcher-helped-him-ahead-of-first-scotland-call-up.aspx"><strong>How Fletch helped McTominay</strong><span>Scott McTominay reveals what ex-United star Darren Fletcher told him ahead of his first Scotland call-up.</span></a>
-        <a href="/en/News-And-Features/Football-News/2018/Mar/Emirates-FA-Cup-semi-final-draw-including-Manchester-United.aspx"><strong>Date set for FA Cup semi-final</strong><span>The kick-off time for United's Emirates FA Cup tie against Tottenham has been confirmed.</span></a>
-        <a href="/en/News-And-Features/Football-News/2018/Mar/largie-ramazani-signs-professional-contract-at-united.aspx"><strong>Ramazani signs pro contract</strong><span>Largie Ramazani becomes the latest United youngster to turn professional with the club.</span></a>
-        <a href="/en/News-And-Features/Football-News/2018/Mar/tahith-chong-exclusive-first-interview-with-mutv.aspx"><strong>Chong won't get carried away</strong><span>Watch Tahith Chong reveal all about his eye-catching form in a first major interview with MUTV.</span></a>
-       </div>
-      </div> 
-     </div> 
-     <!-- Top Section Adtags --> 
-     <div class="mobile banner-ad">
-      <div class="mobile-only">
-       <h3></h3>
-       <!-- EN_Home_300x50 --> 
-       <div id="div-gpt-ad-1407232531968-0" style="width: 300px; height: 50px; margin:0 auto;"></div>
-      </div>
-      <div class="tablet-only">
-       <h3></h3>
-       <!-- EN_Home_728x90 --> 
-       <div id="div-gpt-ad-1407231546377-0" style="width:728px; height:90px; margin:0 auto;"></div>
-      </div>
-     </div>
-     <div id="homepageadvert">
-      <div class="desktop banner-ad">
-       <div class="desktop-only">
-        <h3></h3>
-        <!-- EN_Home_352x279 --> 
-        <div id="div-gpt-ad-1400580335258-0" style="width:352px; height:279px;"></div>
-       </div>
-      </div>
-     </div> 
-     <div id="newscontainer"> 
-      <div id="middlenewscontainer"> 
-       <div class="news3story" xmlns:imgmu="http://www.imgworld.com/imgmu">
-        <h3>Academy &amp; Reserves</h3>
-        <div class="story">
-         <p class="storycontent"><a href="/en/Fanzone/News-And-Blogs/2018/Mar/why-the-under-18s-deserve-to-be-leading-the-way-in-the-table.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/86E9FCA5773E44D08007C61F0EC712D4.ashx?w=120&amp;h=89&amp;rgn=491,63,1300,662" alt="" width="120" height="89"><strong>Why U18s deserve glory</strong>Youth expert Adam Marshall states the case for United winning the U18 title.</a></p>
-        </div>
-        <div class="story">
-         <p class="storycontent"><a href="/en/News-And-Features/Football-News/2018/Mar/Manchester-United-Academy-squad-set-to-take-part-in-Dallas-Cup.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/1A7CF1BD1A23448EB2D7BEFE5B9C37D9.ashx?w=120&amp;h=89&amp;rgn=245,169,2500,1838" alt="" width="120" height="89"><strong>Reds set for Dallas Cup</strong>United's youngsters will compete in a top tournament in Texas this weekend.</a></p>
-        </div>
-        <div class="story">
-         <p class="storycontent"><a href="/en/Players-And-Staff/Reserves/Reserves-News/2018/Mar/Reserves-friendly-match-report-Brentford-B-v-Manchester-United-U23s.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/41478197F7D641789B667E91AE1E8672.ashx?w=120&amp;h=89&amp;rgn=746,86,1420,585" alt="" width="120" height="89"><strong>U23s: Brentford 3 Utd 1</strong>The Reds lose out to the Bees' B team despite taking an early lead.</a></p>
-        </div>
-       </div>
-       <div class="news3story" xmlns:imgmu="http://www.imgworld.com/imgmu">
-        <div class="home-middle-left">
-         <h3>NOW PLAYING ON YOUTUBE</h3>
-         <div style="padding-left: 8px; padding-right: 8px; padding-top: 15px;  height: 54px; background-color: #FFFFFF; border: 1px solid #EEEEEE">
-          <div style="float: left; display:inline; width:46%;">
-           <img style="float: left; border:0px solid #fff; padding-right:6px;" src="" alt="">
-           <span style="font-size:80%; font-color: #000; font-weight:bold; line-height:15px;"><br><script src="https://apis.google.com/js/platform.js"></script>
-            <div style="margin-top: -20px;">
-             <div class="g-ytsubscribe" data-channelid="UC6yW44UGJJBvYTlfC7CRg2Q" data-layout="full" data-count="hidden"></div>
-            </div></span>
-          </div>
-         </div>
-         <div class="news3story">
-          <h3>Official Music Partner</h3>
-          <a href="http://bit.ly/2FMtZJB" title="" target=""><img src="~/media/BC1476842A3248D882236BD7DB175650.ashx?20180320T0950227700" alt="" width="330" height="183"></a>
-         </div>
-        </div>
-        <div class="home-timer-middle-left countdown-timer" style="background-image: url('~/media/35BE871395E84A9A973E97C9367C7F56.ashx')" data-timerhours="24">
-         <script type="text/javascript">
-            $(document).ready(function() { countdownTimer.init(); });
-        </script>
-         <div class="countdown-description"></div>
-         <div class="countdown-clock"></div>
-         <div class="crest">
-          <a target="_blank" href="http://www.tagheuer.com"><img src="~/media/DB0DEC52EFC2433EBD97DAB9066C4DD7.ashx"></a>
-         </div>
-        </div>
-       </div> 
-      </div> 
-      <div id="bottomnewscontainer"> 
-       <div class="news4story hpbs">
-        <h3>Have you seen this? </h3>
-        <div class="story">
-         <p class="storycontent"><a href="/en/News-And-Features/Features/2018/Mar/Romelu-Lukaku-joins-elite-club-after-reaching-25-goals.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/B00A26346A5D4CCBB96170A9B731404C.ashx?w=80&amp;h=59&amp;rgn=0,279,2262,1949" alt="" width="80" height="59"><strong>Lukaku joins elite club</strong>Who has Romelu followed in notching 25 goals in his first season?</a></p>
-        </div>
-        <div class="story">
-         <p class="storycontent"><a href="/en/News-And-Features/Features/2018/Mar/five-key-quotes-from-our-interview-with-man-utd-defender-marcos-rojo.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/640AE702E8D34697BAA619401306E56D.ashx?w=80&amp;h=59&amp;rgn=613,224,2396,1539" alt="" width="80" height="59"><strong>Five key quotes from Rojo</strong>Catch up on the top lines from our recent interview with Marcos.</a></p>
-        </div>
-        <div class="story">
-         <p class="storycontent"><a href="/en/News-And-Features/Features/2018/Mar/long-read-feature-on-the-rise-of-man-utd-defender-marcos-rojo.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/933E73F3A5064CC1B5DBCA01295AB7D2.ashx?w=80&amp;h=59&amp;rgn=462,262,1816,1258" alt="" width="80" height="59"><strong>How Rojo became a star</strong>We examine the endeavour that took Marcos from a "tough neighbourhood" to United.</a></p>
-        </div>
-        <div class="story">
-         <p class="storycontent"><a href="/en/News-And-Features/Features/2018/Mar/Juan-Mata-blogs-after-Man-Utd-FA-Cup-win-over-Brighton.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/9E65FB5251E448A3A2D4E652B62CA0E7.ashx?w=80&amp;h=59&amp;rgn=1150,290,1770,750" alt="" width="80" height="59"><strong>Mata has a 'half-smile'</strong>In his weekly blog, Juan Mata reflects on a 'complicated' week at United.</a></p>
-        </div>
-       </div>
-       <div class="news4story hpbs">
-        <h3>In and around the club</h3>
-        <div class="story">
-         <p class="storycontent"><a href="/en/News-And-Features/Football-News/2018/Mar/Preview-of-Man-United-players-in-action-over-the-international-break.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/6F8CC65C6A5845E7ABDB1A0F87AADB1F.ashx?w=80&amp;h=59&amp;rgn=2286,454,3698,1496" alt="" width="80" height="59"><strong>International fixtures</strong>Find out when our lads are in action for their countries over the break.</a></p>
-        </div>
-        <div class="story">
-         <p class="storycontent"><a href="/en/News-And-Features/Football-News/2018/Mar/Nemanja-Matic-feels-Jose-Mourinho-driven-methods-will-lead-to-more-Man-Utd-success.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/BE2F6ECFEE374439A20408730E7C9278.ashx?w=80&amp;h=59&amp;rgn=1490,249,2370,899" alt="" width="80" height="59"><strong>Matic thrives under Jose</strong>Nemanja enjoys playing for Mourinho, a manager who “always wants more”.</a></p>
-        </div>
-        <div class="story">
-         <p class="storycontent"><a href="/en/Fanzone/News-And-Blogs/2018/Mar/Opinion-Stuart-Mathieson-on-Romelu-Lukaku-FA-Cup-record-and-Everton-v-Man-Utd-2016.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/68E65D88670C4389846A32E3E1179BE6.ashx?w=80&amp;h=59&amp;rgn=1238,339,3036,1668" alt="" width="80" height="59"><strong>Rom on Wembley mission</strong>Lukaku loves the FA Cup but has one memory he'll want to banish.</a></p>
-        </div>
-        <div class="story">
-         <p class="storycontent"><a href="/en/HomePageItems/Homepage-Links/Homepage/2018/February-2018/opt-in-to-stay-united.aspx"><img src="http://www.manutd.com/sitecore/shell/~/media/DF99D91AA624448CAEEBBE9CAB247BA4.ashx?w=80&amp;h=59&amp;rgn=0,0,2000,1475" alt="" width="80" height="59"><strong>Opt-in to Stay United</strong>Ensure you can still get emails containing club news, competitions and special offers.</a></p>
-        </div>
-       </div> 
-      </div> 
-     </div> 
-    </div> 
-    <div class="dco clearfix overlayDiv" style="display: none"> 
-    </div> 
-    <div class="mobile" id="mobile-footer-sponsors">
-     <h3>OFFICIAL PARTNERS</h3>
-     <div id="principal-sponsors">
-      <a href="http://www.manutd.com/en/Partners/Global-Partners.aspx?sponsorid={4FD83A0D-E370-411C-B54A-2E6BAF60275B}"><img class="s_item" alt="logo" src="/~/media/D880914574474A419EDB20FA1649B65B.ashx"></a>
-      <a href="http://www.manutd.com/en/Partners/Global-Partners.aspx?sponsorid={CC819DDA-A807-45EC-8417-FCC583DFA2A0}"><img class="s_item" alt="logo" src="/~/media/93DEEE9FDFED4F52BE87B7DBAFA4700B.ashx"></a>
-      <a href="http://www.manutd.com/en/Partners/Global-Partners.aspx?sponsorid={F745DA14-CB5E-4A81-816A-8DB410E47A75}"><img class="s_item" alt="logo" src="/~/media/67B3565E49554EE99866142B8C7B031A.ashx"></a>
-     </div>
-     <div id="responsive_sponsors">
-      <!-- EN_MobileTabletFooter_300x180 --> 
-      <div id="div-gpt-ad-1407947501505-0" style="width:300px; height:180px; padding-left: 50%; margin-left: -150px;"></div>
-     </div>
-     <div id="epl_logo">
-      <img class="s_item" alt="logo" src="/~/media/C29DC5395D054DD3B4E12BFDFE64746B.ashx">
-     </div>
-    </div> 
-    <div id="sponsors"> 
-     <h3>OFFICIAL PARTNERS</h3>
-     <!-- EN_Home_663x142 --> 
-     <div id="div-gpt-ad-1422354496632-0" style="width:663px; height:142px;"></div> 
-    </div> 
-    <!-- Skyscraper Adtags --> 
-    <div id="adcolumn"> 
-     <div class="desktop banner-ad">
-      <div class="desktop-only">
-       <!-- EN_Home_120x600 --> 
-       <div id="div-gpt-ad-1400580360559-0" style="width:120px; height:600px;"></div>
-      </div>
-     </div>
-     <a class="adcolumnbtn" href="http://www.premierleague.com/"><img src="/~/media/8CE23DDF8B724515B22EBFEC86F0397D.ashx?h=90&amp;w=120" alt="Premier League" width="120" height="90" nopin="true"></a> 
-    </div> 
-   </div> 
-   <div id="footer"> 
-    <div id="footermain">
-     <ul>
-      <li><a href="/~/media/B1390ABD92EC46FF9C6FC4B853BCACAF.ashx">Anti-slavery</a></li>
-      <li><a href="/en/General-Footer-Section/Terms-And-Conditions.aspx">Website Terms Of Use</a></li>
-      <li><a href="/en/General-Footer-Section/Cookie-Policy.aspx">Cookie Policy</a></li>
-      <li><a href="/en/General-Footer-Section/Terms-And-Conditions-Of-Sale.aspx">Terms &amp; Conditions Of Sale</a></li>
-      <li><a href="/en/General-Footer-Section/Privacy-Policy.aspx">Privacy Policy</a></li>
-      <li><a href="/en/Club/FAQs.aspx">FAQs</a></li>
-      <li><a href="/~/media/F97AFB3AD95B4EDF9ADB0CCB367B0E80.ashx">Terms &amp; Conditions for the Purchase of Goods and Services</a></li>
-     </ul>
-     <p>Copyright, Manchester United Ltd, 2017<a title="This link will open in a new window." href="http://editorial.gettyimages.com/ms_gins/source/frontdoors/manu.aspx" target="_blank"> Photography provided by Manchester United Ltd and Getty Images</a></p>
-    </div> 
-   </div> 
-  </div> 
-  <div id="rightTower"> 
-   <!-- EN_Home_314x1213 --> 
-   <div id="div-gpt-ad-1400580523773-0" style="width:314px; height:1213px;"></div> 
-  </div> 
-  <script type="text/javascript" src="/Handlers/YuiCompressorHandlerC.ashx?js=/styles/js/responsive/retrofit,/styles/js/responsive/retrofit.mobile&amp;v=465"></script> 
-  <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-5517923-1']);
-  _gaq.push(['_setDomainName', 'none']);
-  _gaq.push(['_setAllowLinker', true]);
-  _gaq.push(['_trackPageview']);
-if (typeof (gaUser) !== "undefined" && gaUser.getMemberId() !== "") {
-            _gaq.push(['_setCustomVar',7,'userId',gaUser.getMemberId(),1]);
-        }
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script> 
-  <script type="text/javascript">
-        jQuery(function(){
-        jQuery('a[href$="https://www.eticketing.co.uk/muticketsandmembership/default.aspx"]').click(function(){
-            _gaq.push(['_link', this.href ]); 
-            return false;
-          });jQuery('a[href$="https://www.eticketing.co.uk/muticketsandmembership/memberships.aspx"]').click(function(){
-            _gaq.push(['_link', this.href ]); 
-            return false;
-          });
-        });
-      </script> 
-  <script type="text/javascript">
-
-        jQuery(document).ready(function () {
-
-            //------------------------Re-targetting ahead of MUTV Campaing---------------------
-            //If the cookie MUTV1 has been set, let the value be 'True' value for key 'RT_MUTV1'
-            if ($.cookie('MUTV1')) {
-                googletag.pubads().setTargeting("RT_MUTV1", "True");
-            }
-            else
-                googletag.pubads().setTargeting("RT_MUTV1", "False");
-
-            if ($.cookie('MUTV2')) {
-                googletag.pubads().setTargeting("RT_MUTV2", "True");
-            }
-            else
-                googletag.pubads().setTargeting("RT_MUTV2", "False");
-
-            if ($.cookie('MUTV3')) {
-                googletag.pubads().setTargeting("RT_MUTV3", "True");
-            }
-            else
-                googletag.pubads().setTargeting("RT_MUTV3", "False");
-
-            if ($.cookie('MUTV4')) {
-                googletag.pubads().setTargeting("RT_MUTV4", "True");
-            }
-            else
-                googletag.pubads().setTargeting("RT_MUTV4", "False");
-            //--------------------------------------------------------------------------------------
-        });
-
-    </script> 
-  <div class="cookie-policy-message" data-rel="CookiePolicyMessage"> 
-   <div class="policy-wrapper"> 
-    <a href="javascript:void(0)" class="close"> <img src="/styles/Images/CookiePopup-X.png"> </a> 
-    <div class="text"> 
-     <p>Our website uses cookies and other similar technologies to improve our site and your online experience. By continuing to use our website you consent to cookies being used. See our <a href="http://www.manutd.com/en/General-Footer-Section/Cookie-Policy.aspx">Cookie Policy</a> to find out more.</p> 
-    </div> 
-    <div style="clear: both; float: none"></div> 
-   </div> 
-  </div>   
+  <title>FOR IMMEDIATE RELEASE</title> 
+  <meta name="GENERATOR" content="Microsoft FrontPage 3.0"> 
+ </head> 
+ <body> 
+  <dl> 
+   <dt>
+    <b style="mso-bidi-font-weight:
+normal"><u><span style="font-size:16.0pt">FOR IMMEDIATE RELEASE
+       <o:p></o:p></span></u></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal"><u><span style="font-size:16.0pt">
+       <o:p>
+        <span style="text-decoration:none">&nbsp;</span>
+       </o:p></span></u></b>
+   </dt> 
+   <dt>
+    <st1:date month="2" day="18" year="2003">
+     <b style="mso-bidi-font-weight:normal">February 18, 2003</b>
+    </st1:date>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">To: The Associated Press</b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">From: </b>
+    <strong>the Literary Renaissance 
+     <o:p></o:p></strong>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:
+normal"><u><span style="font-size:16.0pt">
+       <o:p>
+        <span style="text-decoration:
+ none">&nbsp;</span>
+       </o:p></span></u></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal"><u><span style="font-size:16.0pt">DESPITE WAR TALK, HATE-MAIL and TURBULENT TIMES, TOURING AMERICAN POETS HIT THE ROAD
+       <o:p></o:p></span></u></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal"><u>Life During Wartime: Poetry Amidst a World in Struggle:
+      <o:p></o:p></u></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">American poets RON WHITEHEAD and FRANK </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">MESSINA</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:normal"> will embark on an artistic invasion of four European cities including </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:
+  normal">Reykjavik</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:
+normal">, </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Edinburgh</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:normal">, </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Durham</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:normal"> and </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Newcastle</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:normal"> on a 2-week poetry tour that promises to ruffle even the stiffest of European feathers. 
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">For almost 10 years, </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Messina</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:normal"> and Whitehead have stood poles apart on political issues yet side by side in the mutual quest to deliver poetry to the world. At first glance, the lanky, bushy bearded Ron Whitehead and the brawny, city slicker Frank Messina appear as a mismatched duo from a David Lynch movie. </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Messina</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:normal"> is the son of </b>
+    <st1:place>
+     <b style="mso-bidi-font-weight:normal">a Bronx</b>
+    </st1:place>
+    <b style="mso-bidi-font-weight:
+normal">-born Sicilian. Whitehead is the son of </b>
+    <st1:state>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">a Kentucky</b>
+     </st1:place>
+    </st1:state>
+    <b style="mso-bidi-font-weight:normal"> coal miner. As Whitehead brilliantly pens poetry about lifes struggles of the disparate south and bids triumphantly for world peace, Messina writes volatile poems ranging in content from dingy jazz haunts to his spirited yet heartwrenching 9/11 works, whose political sentiments have echoed both acclaim and criticism around the globe. 
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">Both poets have fans and foes alike. Whiteheads poems hang in the office of the Dalai Lama, are published on anti-war websites and appear on the lyric sheets of anti-establishment rock albums. Messinas poems appear on the walls of the New York City Fire Department, have been recited at 9/11 tributes and have been engraved on the turrets of tanks in the deserts of </b>
+    <st1:country-region>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Afghanistan</b>
+     </st1:place>
+    </st1:country-region>
+    <b style="mso-bidi-font-weight:normal">. Both writers get their share of hate mail attacking Whitehead as an anti-American pacifist and </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Messina</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:normal"> as a blind sighted patriot, traumatized by his hands-on volunteer efforts at a ground zero triage. But, the works of both poets explicitly celebrate the human condition for all its joy and sorrow and successfully tug hard on the heartstrings of an injured populace, whether caused by terror attack, poverty or social injustice.
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">Together, the two have clocked over a quarter-million travel miles, spanning a dozen countries in the name of poetry. Now, in a world consumed by imminent war, the two deliver their works to an increasingly Anti-American audience in an attempt to give uncensored and candid views directly into the heart of post-9/11 </b>
+    <st1:country-region>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">America</b>
+     </st1:place>
+    </st1:country-region>
+    <b style="mso-bidi-font-weight:normal">. The tour schedule is as follows:
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    &nbsp;
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal"><u>March 6, 7, 8 Reykjavik, Iceland</u>: The tour kicks off in Reykjavik, </b>
+    <st1:country-region>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Iceland</b>
+     </st1:place>
+    </st1:country-region>
+    <b style="mso-bidi-font-weight:normal"> at the </b>
+    <st1:place>
+     <st1:placename>
+      <b style="mso-bidi-font-weight:normal">New</b>
+     </st1:placename>
+     <b style="mso-bidi-font-weight:normal"> </b>
+     <st1:placetype>
+      <b style="mso-bidi-font-weight:
+  normal">Art Museum</b>
+     </st1:placetype>
+    </st1:place>
+    <b style="mso-bidi-font-weight:
+normal"> at </b>
+    <st1:time minute="0" hour="19">
+     <b style="mso-bidi-font-weight:
+ normal">7:00PM</b>
+    </st1:time>
+    <b style="mso-bidi-font-weight:normal">. Also appearing will be the Viking HillBilly Apocalypse Revue, Sarah Elizabeth, L.B.H. Krew, legendary&nbsp;Megas, Bragi �lafsson, Pollock Brothers and Thordeez, and Inspector 99
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal"><u>March 11, Durham, England</u>: after a BBC radio interview, a performance at The Fish Tank, North Road, Center City, </b>
+    <st1:time hour="19" minute="30">
+     <b style="mso-bidi-font-weight:
+ normal">7:30PM</b>
+    </st1:time>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal"><u>March 12, Newcastle, England</u>: Culture Cafe, Newcastle Central Public Library, 12:30PM, book signing, readings with Frank Messina, Ron Whitehead and British poet Keith Armstrong.
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal"><u>March 13, </u></b>
+    <st1:place>
+     <st1:city>
+      <b style="mso-bidi-font-weight:normal"><u>Newcastle</u></b>
+     </st1:city>
+     <b style="mso-bidi-font-weight:normal"><u>, </u></b>
+     <st1:country-region>
+      <b style="mso-bidi-font-weight:normal"><u>England</u></b>
+     </st1:country-region>
+    </st1:place>
+    <b style="mso-bidi-font-weight:normal">: </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Cumberland</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:normal"> Arms, </b>
+    <st1:place>
+     <st1:placename>
+      <b style="mso-bidi-font-weight:normal">Byker</b>
+     </st1:placename>
+     <b style="mso-bidi-font-weight:normal"> </b>
+     <st1:placetype>
+      <b style="mso-bidi-font-weight:
+  normal">Buildings</b>
+     </st1:placetype>
+    </st1:place>
+    <b style="mso-bidi-font-weight:
+normal">, Byker, </b>
+    <st1:time hour="19" minute="30">
+     <b style="mso-bidi-font-weight:
+ normal">7:30PM</b>
+    </st1:time>
+    <b style="mso-bidi-font-weight:normal">. Also appearing will be the New Safe Sextet, British poets Keith Armstrong, Michael Standen, Ian Horn and John Earl. 
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal"><u>March 15, </u></b>
+    <st1:place>
+     <st1:city>
+      <b style="mso-bidi-font-weight:normal"><u>Edinburgh</u></b>
+     </st1:city>
+     <b style="mso-bidi-font-weight:normal"><u>, </u></b>
+     <st1:country-region>
+      <b style="mso-bidi-font-weight:normal"><u>Scotland</u></b>
+     </st1:country-region>
+    </st1:place>
+    <b style="mso-bidi-font-weight:normal">: Cabaret Voltaire, </b>
+    <st1:street>
+     <st1:address>
+      <b style="mso-bidi-font-weight:normal">36-38 Blair St.</b>
+     </st1:address>
+    </st1:street>
+    <b style="mso-bidi-font-weight:normal"> via Royal Mile. 7PM Filmmaker Jack Shea hosts a multi-media event celebrating the life and works of Jack Kerouac. Featuring the works of Kerouac, </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:
+  normal">Messina</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:
+normal">, Ron Whitehead and Angus Calder. Multi-media, films, poetic and musical explorations. 
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:
+normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:
+normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:
+normal">BIOGRAPHIES:
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:
+normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal"><u>RON WHITEHEAD</u> is a Poet, Writer, Editor, Publisher, Organizer, Scholar, and Teacher. His numerous books and CDs include <i style="mso-bidi-font-style:normal">Beaver Dam Rocking Chair Marathon</i> (book), <i style="mso-bidi-font-style:normal">I Will Not Bow Down: Selected Poems 1990-1995 </i>(book), <i style="mso-bidi-font-style:
+normal">The Declaration of Independence This Time: Selected Poems 1996-2000</i> (book), <i style="mso-bidi-font-style:normal">Tapping My Own Phone </i>(CD), <i style="mso-bidi-font-style:normal">I Will Not Bow Down </i>(CD). Ron and </b>
+    <st1:country-region>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Iceland</b>
+     </st1:place>
+    </st1:country-region>
+    <b style="mso-bidi-font-weight:normal"> co-conspirator Michael Pollock put together The Viking Hillbilly Apocalypse Revue which includes some of </b>
+    <st1:country-region>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Iceland</b>
+     </st1:place>
+    </st1:country-region>
+    <b style="mso-bidi-font-weight:normal">s and </b>
+    <st1:state>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Kentucky</b>
+     </st1:place>
+    </st1:state>
+    <b style="mso-bidi-font-weight:normal">s leading musicians and poets. Ron has edited over 600 titles, published over 250, produced over 800 events, and given over 3,000 readings. Hunter S. Thompson has written I have long admired Ron Whitehead. He is crazy as nine loons, and his poetry is a dazzling mix of folk wisdom and pure mathematics. </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:
+  normal">Lawrence</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:
+normal"> Ferlinghetti has written Ron Whitehead, out there in </b>
+    <st1:state>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Kentucky</b>
+     </st1:place>
+    </st1:state>
+    <b style="mso-bidi-font-weight:normal">, out there where the tall heroes used to grow, is sowing the dragons teeth of new heroics. For more information on Ron Whitehead: <a href="http://www.tappingmyownphone.com/">www.tappingmyownphone.com</a>
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal"><u>FRANK MESSINA</u> is a veteran </b>
+    <st1:state>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">New York</b>
+     </st1:place>
+    </st1:state>
+    <b style="mso-bidi-font-weight:normal"> spoken word artist, poet and performer. Nominated for the 2003 Allen Ginsberg Book Award, his recently published book, <u>Disorderly Conduct</u> has been hailed a very important work...deep in the American present by Pulitzer Prize winning poet Alan Dugan. Hes a recipient of the Woolrich Poetry Fellowship of </b>
+    <st1:place>
+     <st1:placename>
+      <b style="mso-bidi-font-weight:normal">Columbia</b>
+     </st1:placename>
+     <b style="mso-bidi-font-weight:normal"> </b>
+     <st1:placetype>
+      <b style="mso-bidi-font-weight:
+  normal">University</b>
+     </st1:placetype>
+    </st1:place>
+    <b style="mso-bidi-font-weight:
+normal"> and the 1993 Allen Ginberg Poetry Award. Tackling issues of racial solidarity, human rights and spiritual redemption through music and verse, his works have been widely published in the Beloit Poetry Journal, <u>Ground Zero: New Yorkers Respond</u>, The 9/11 Peace Poetry Project, Playboy Magazine, Paterson Literary Review and Published in Heaven poster series. Hes recited his highly musical poems in ten different countries and appeared on stage at </b>
+    <st1:place>
+     <st1:placename>
+      <b style="mso-bidi-font-weight:normal">Madison</b>
+     </st1:placename>
+     <b style="mso-bidi-font-weight:normal"> </b>
+     <st1:placename>
+      <b style="mso-bidi-font-weight:
+  normal">Square</b>
+     </st1:placename>
+     <b style="mso-bidi-font-weight:normal"> </b>
+     <st1:placetype>
+      <b style="mso-bidi-font-weight:normal">Garden</b>
+     </st1:placetype>
+    </st1:place>
+    <b style="mso-bidi-font-weight:normal">, the LollaPalooza Rock Concerts, </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">Woodstock</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:normal"> 94, Crossing Border Festival, </b>
+    <st1:city>
+     <st1:place>
+      <b style="mso-bidi-font-weight:normal">London</b>
+     </st1:place>
+    </st1:city>
+    <b style="mso-bidi-font-weight:normal"> International Poetry and Song Festival and various European venues. Frank has collaborated with David Amram, members of Phish, Sun Ra Arkestra, Max Creek, Sonic Youth and the Grateful Dead. Frank often performs with his Spoke n Roll band, <i style="mso-bidi-font-style:
+normal">Spoken Motion</i>, a sextet whose works are deeply rooted in jazz and experimental rock music. The official website is <a href="http://www.spokeface.com/">http://www.spokeface.com</a><span style="mso-spacerun:yes">&nbsp; </span>
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">Old time mountain singer Sarah Elizabeth, and percussionist/didgeridoo artist Inspector 99 will accompany Ron Whitehead on the entire tour.
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">For media contact and interviews
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">
+     <o:p>
+      &nbsp;
+     </o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">Ron Whitehead media contact: <a href="mailto:Tappingmyphone@aol.com">Tappingmyphone@aol.com</a>
+     <o:p></o:p></b>
+   </dt> 
+   <dt>
+    <b style="mso-bidi-font-weight:normal">Frank Messina media contact: <a href="mailto:frank@spokeface.com">media@spokeface.com</a> 
+     <o:p></o:p></b>
+   </dt> 
+  </dl> 
+  <p class="MsoNormal">
+   <o:p>
+    &nbsp;
+   </o:p></p> 
+  <p class="MsoNormal"><a href="http://www.spokeface.com">home</a></p> 
+  <p class="MsoNormal">
+   <o:p>
+    &nbsp;
+   </o:p></p>   
  </body>
 </html>

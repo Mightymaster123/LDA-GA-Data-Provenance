@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.IOException;
 
+import WikiScraping.WikiScrape;
+
 public class geneticLogicOriginal {
 	public boolean isRunning = true;
 	private PopulationConfig mPopulationConfigFromSlave = null; // means one of the slave machines has finished the job
@@ -36,7 +38,7 @@ public class geneticLogicOriginal {
 			 * the total number of documents that are being processed. Put them in a folder
 			 * and add the folder path here.
 			 */
-			int numberOfDocuments = new File("txtData").listFiles().length;
+			int numberOfDocuments = new File(WikiScrape.ORIGINAL_DATA_DIRECTORY).listFiles().length;
 			long startTime = System.currentTimeMillis();
 
 			// int coresNum = 4;

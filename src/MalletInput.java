@@ -16,7 +16,7 @@ public class MalletInput {
 		// TODO Auto-generated method stub
 
 		// pass the location and name of the processed data dir
-		File dir = new File("processed-data");
+		File dir = new File(DataProvenance.PROCESSED_DATA_DIRECTORY);
 
 		// the output is written to the file input.txt
 		PrintWriter writer = null;
@@ -26,7 +26,7 @@ public class MalletInput {
 			String[] files = dir.list();
 
 			for (String file : files) {
-				File rd = new File("processed-data" + "/" + file);
+				File rd = new File(DataProvenance.PROCESSED_DATA_DIRECTORY + "/" + file);
 				System.out.println(rd.getName());
 				FileReader fr = new FileReader(rd);
 				BufferedReader bufferedReader = null;

@@ -24,9 +24,9 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+import WikiScraping.WikiScrape;
+
 public class DataProvenance {
-	public static final String ORIGINAL_DATA_DIRECTORY = "txtData"; // name of the directory that contains the original
-																	// source data
 	public static final String PROCESSED_DATA_DIRECTORY = "processed-data"; // name of the directory where the useful
 																			// data is stored
 
@@ -350,25 +350,6 @@ public class DataProvenance {
 
 	}
 
-	public void delete_directory(String directory_name) {
-		File dir = new File(directory_name);
-		if (dir.exists()) {
-			String[] entries = dir.list();
-			if (entries != null) {
-				for (String s : entries) {
-					File currentFile = new File(dir.getPath(), s);
-					if (currentFile.isDirectory()) {
-						delete_directory(currentFile.getPath());
-					} else {
-						currentFile.delete();
-					}
-				}
-			}
-
-			dir.delete();
-		}
-	}
-
 	public ResultStatistics run(boolean original_version) {
 		ResultStatistics result = null;
 		System.gc();
@@ -383,8 +364,8 @@ public class DataProvenance {
 
 		// Mirror directory structure while retaining only tokenized source files (eg.
 		// PDF files, CSV files, etc. from handlers in pkg1)
-		delete_directory(PROCESSED_DATA_DIRECTORY);
-		extract_useful_words(ORIGINAL_DATA_DIRECTORY, PROCESSED_DATA_DIRECTORY);
+		WikiScrape.delete_directory(PROCESSED_DATA_DIRECTORY);
+		extract_useful_words(WikiScrape.ORIGINAL_DATA_DIRECTORY, PROCESSED_DATA_DIRECTORY);
 		if (!mIsRunning) {
 			return result;
 		}
