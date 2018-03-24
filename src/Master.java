@@ -3,7 +3,9 @@ import java.util.ArrayList;
 
 public class Master implements NetworkManager.ReceivedProtocolHandler{
 
-	static final int TEST_COUNT = 10;
+	// For the purposes of Dong's programming, this number is just for testing purposes
+	// Raising the number increases the time of completion, lowering means the program can finish faster
+	static final int TEST_COUNT = 1;
 	
 	private DataProvenance mDataProvenance = null;
 	
