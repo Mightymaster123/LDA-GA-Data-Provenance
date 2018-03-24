@@ -175,8 +175,8 @@ public class NetworkManager {
 				for (int i = 0; i < mNumSlaves; i++) {
 					int currentPort = mFirstPort + i;
 					try {
-						Process p = Runtime.getRuntime().exec("fuser -k " + currentPort + "/tcp");
-						p.waitFor();
+						//Process p = Runtime.getRuntime().exec("fuser -k " + currentPort + "/tcp");
+						//p.waitFor();
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
