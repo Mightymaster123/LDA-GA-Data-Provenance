@@ -41,6 +41,7 @@
   <script type="application/ld+json">
     {"@context":"http:\/\/schema.org","@type":"ReportageNewsArticle","url":"http:\/\/www.bbc.co.uk\/news\/world-africa-11019823","publisher":{"@type":"NewsMediaOrganization","name":"BBC News","publishingPrinciples":"http:\/\/www.bbc.co.uk\/news\/help-41670342","logo":{"@type":"ImageObject","url":"http:\/\/www.bbc.co.uk\/news\/special\/2015\/newsspec_10857\/bbc_news_logo.png?cb=1"}},"datePublished":"2010-08-18T23:24:17+01:00","dateModified":"2010-08-18T23:24:17+01:00","headline":"Mandela aide quits over diamonds","image":{"@type":"ImageObject","width":720,"height":405,"url":"https:\/\/ichef.bbci.co.uk\/news\/720\/media\/images\/48789000\/jpg\/_48789246_009814285-1.jpg"},"thumbnailUrl":"https:\/\/ichef.bbci.co.uk\/news\/208\/media\/images\/48789000\/jpg\/_48789246_009814285-1.jpg","author":{"@type":"NewsMediaOrganization","name":"BBC News","logo":{"@type":"ImageObject","url":"http:\/\/www.bbc.co.uk\/news\/special\/2015\/newsspec_10857\/bbc_news_logo.png?cb=1"},"noBylinesPolicy":"http:\/\/www.bbc.co.uk\/news\/help-41670342#authorexpertise"},"mainEntityOfPage":"http:\/\/www.bbc.co.uk\/news\/world-africa-11019823"}
     </script> 
+<<<<<<< HEAD
   <meta name="apple-mobile-web-app-title" content="BBC News"> 
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://static.bbci.co.uk/news/1.234.02448/apple-touch-icon-57x57-precomposed.png"> 
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://static.bbci.co.uk/news/1.234.02448/apple-touch-icon-72x72-precomposed.png"> 
@@ -56,6 +57,640 @@
   <meta name="robots" content="NOODP,NOYDIR"> 
   <meta name="theme-color" content="#bb1919"> 
   <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script> 
+=======
+  <!-- jquery Plugins --> 
+  <script type="text/javascript" src="/noticias/js-local/jquery/plugins/colorbox/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript" src="/noticias/js-local/jquery/plugins/timeago/jquery.timeago.js"></script> 
+  <script type="text/javascript" src="/noticias/js-local/jquery/plugins/slimScroll/slimScroll.min.js"></script> 
+  <!--<script type="text/javascript" src="/noticias/js-local/jquery/plugins/slimScroll/jquery-ui.js"></script>--> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script> 
+  <script type="text/javascript" src="/noticias/js-local/jquery/plugins/quick-pagination/js/jquery.quick.pagination.js"></script> 
+  <!-- No jquery --> 
+  <script type="text/javascript" src="/noticias/js-local/Coop.class.js?version=4"></script> 
+  <script type="text/javascript">Coop.fechaHoy  = '20180321';</script> 
+  <!-- Utiles --> 
+  <script type="text/javascript" src="/noticias/js-local/Utiles.class.js"></script> 
+  <script type="text/javascript" src="/noticias/js-local/FontSize.class.js"></script> 
+  <script type="text/javascript" src="/noticias/js-local/Botones.class.js"></script> 
+  <script type="text/javascript" src="/noticias/js-local/Vistas.class.js"></script> 
+  <script type="text/javascript" src="/js-local/dtime/dtime.js"></script> 
+  <!-- DFP SETUP --> 
+  <script type="text/javascript">
+// LLAMADOS POR PORTADAS
+  var sec_id_dfp = "7";
+  var sec_name_dfp = "Sociedad";
+  var fid_dfp = "fid_noticia";
+  var art_fid = fid_dfp;
+  
+  (function() {
+    var useSSL = 'https:' == document.location.protocol;
+    var src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+  })();
+</script> 
+  <script type="text/javascript">
+
+var date_dfp  = new Date();
+var hours_dfp = date_dfp.getHours();
+
+googletag.cmd.push(function() {
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+    //googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210845902-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210845902-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210845902-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210845902-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1450210845902-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Pais_Articulos_ITT_x24', [[1000, 580], [780, 580]], 'div-gpt-ad-1450210845902-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Pais_Articulos_ITT_x24', 'div-gpt-ad-1450210845902-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Pais_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-10').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450210845902-3').addService(googletag.pubads());
+}
+
+
+// (ORIGINAL)
+// if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+// FIN (ORIGINAL) 
+
+// MODIFICADO - DAKAR 2018 
+if((sec_id_dfp == 1 && secc_id != 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+// FIN MODIFICADO - DAKAR 2018
+
+
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210982740-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210982740-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210982740-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210982740-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450210982740-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1450210982740-2').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulos_ITT_x24', [[780, 580], [1000, 580]], 'div-gpt-ad-1450210982740-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Deportes_Articulos_ITT_x24', 'div-gpt-ad-1450210982740-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Deportes_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-1').addService(googletag.pubads());
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam" || fid_dfp == "fid_cartelera")) {
+    //googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211182920-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211182920-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211182920-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211182920-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211182920-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1450211182920-2').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulos_ITT_x24', [[780, 580], [1000, 580]], 'div-gpt-ad-1450211182920-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Entretencion_Articulos_ITT_x24', 'div-gpt-ad-1450211182920-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Entretencion_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-3').addService(googletag.pubads());
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+    //googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211385144-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211385144-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211385144-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211385144-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1450211385144-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Mundo_Articulos_ITT_x24', [[1000, 580], [780, 580]], 'div-gpt-ad-1450211385144-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Mundo_Articulos_ITT_x24', 'div-gpt-ad-1450211385144-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Mundo_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-7').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211385144-3').addService(googletag.pubads());
+}
+
+if(fid_dfp == "fid_foto") {
+    //googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Fotos_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211567329-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Fotos_ITT_x24', [[1000, 580], [780, 580]], 'div-gpt-ad-1450211567329-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Fotos_ITT_x24', 'div-gpt-ad-1450211567329-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Fotos_Footer_x41', 'div-gpt-ad-1482244626812-6').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Fotos_Rob_1_x04', [250, 250], 'div-gpt-ad-1450211567329-3').addService(googletag.pubads());
+}
+if(fid_dfp == "fid_video") {
+    //googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Videos_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211655943-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Videos_ITT_x24', [[1000, 580], [780, 580]], 'div-gpt-ad-1450211655943-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Videos_ITT_x24', 'div-gpt-ad-1450211655943-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Videos_Footer_x41', 'div-gpt-ad-1482244626812-13').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Videos_Rob_1_x04', [300, 250], 'div-gpt-ad-1450211655943-3').addService(googletag.pubads());
+}
+if(fid_dfp == "fid_audio") {
+    //googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211611297-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211611297-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211611297-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211611297-0').addService(googletag.pubads());
+    }
+    
+
+
+
+
+
+
+
+    googletag.defineSlot('/1020719/Coop_D_Audios_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211611297-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Audios_ITT_x24', [[780, 580], [1000, 580]], 'div-gpt-ad-1450211611297-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Audios_ITT_x24', 'div-gpt-ad-1450211611297-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Audios_Footer_x41', 'div-gpt-ad-1482244626812-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Audios_Rob_1_x04', [300, 250], 'div-gpt-ad-1450211611297-3').addService(googletag.pubads());
+}
+
+
+//INSTANCIA BLOQUE CUSTOM HDI PUBLIREPORTAJE
+if((sec_id_dfp == 16) && (fid_dfp == "fid_noticia")) {
+    googletag.defineSlot('/1020719/Coop_D_Portada_Left_x22', [120, 600], 'div-gpt-ad-1450149920562-9').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Portada_Reloj_x26', [173, 125], 'div-gpt-ad-1450149920562-10').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Portada_Right_x23', [120, 600], 'div-gpt-ad-1450149920562-11').addService(googletag.pubads());
+    /*googletag.defineSlot('/1020719/d.esp.hdi.120x600_Articulo_Left_x22', [120, 600], 'div-gpt-ad-1470344528800-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.120x600_Articulo_Right_x23', [120, 600], 'div-gpt-ad-1470344528800-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.350x250_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1470344528800-2').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.350x250_Articulo_Rob_x05', [300, 250], 'div-gpt-ad-1470344528800-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.350x250_Articulo_Rob_x16', [300, 250], 'div-gpt-ad-1470344528800-4').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.350x250_Articulo_Rob_x29', [300, 250], 'div-gpt-ad-1470344528800-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.650x90_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1470344528800-6').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/d.esp.hdi.650x90_Articulo_Cuerpo_3_x25', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1470344528800-7').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.990x90_Articulo_BB_1_x01', [990, 90], 'div-gpt-ad-1470344528800-8').addService(googletag.pubads());*/
+}
+//FIN INSTANCIA BLOQUE CUSTOM HDI PUBLIREPORTAJE
+
+
+//INSTANCIA BLOQUE CUSTOM  
+if((sec_id_dfp == 1 && tema_id == 1963) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol")) {
+    //googletag.defineSlot('/1020719/d.esp.visa.650x90_Articulo_Cuerpo_1_x32', [[650, 40], [650, 90], [650, 60]], 'div-gpt-ad-1470346842424-0').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/d.esp.visa.650x90_Articulo_Cuerpo_3_x25', [[650, 40], [650, 90], [650, 60]], 'div-gpt-ad-1470346842424-1').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/d.esp.visa.650x90_Articulo_Marcadores_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1470349825629-0').addService(googletag.pubads());
+}
+//FIN INSTANCIA BLOQUE CUSTOM 
+
+
+
+
+
+//INSTANCIA BLOQUE CUSTOM - DAKAR 2018
+if((sec_id_dfp == 1 && secc_id == 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210982740-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/d.esp.dakar_2018.990x90_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1515179652769-3').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/d.esp.dakar_2018.990x90_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1515179652769-3').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/d.esp.dakar_2018.990x90_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1515179652769-3').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450210982740-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.dakar_2018.350x250_Deportes_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1515179652769-2').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulos_ITT_x24', [[780, 580], [1000, 580]], 'div-gpt-ad-1450210982740-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Deportes_Articulos_ITT_x24', 'div-gpt-ad-1450210982740-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Deportes_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-1').addService(googletag.pubads());
+}
+//FIN INSTANCIA BLOQUE CUSTOM - DAKAR 2018 ixixi
+
+
+
+
+
+
+
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.pubads().enableSyncRendering();
+    googletag.enableServices();
+  });
+</script> 
+  <script type="text/javascript">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script> 
+  <script type="text/javascript">
+
+/*
+var date_dfp  = new Date();
+var hours_dfp = date_dfp.getHours();
+*/
+
+googletag.cmd.push(function() {
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+    //googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450151095193-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450151095193-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450151095193-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Cuerpo_1_x32', [[650, 40], [650, 60]], 'div-gpt-ad-1450151095193-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Cuerpo_2_x34', [[350, 40],[350, 60]], 'div-gpt-ad-1450151095193-1').addService(googletag.pubads());  
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Cuerpo_3_x25', [[650, 60], [640, 90], [650, 90]], 'div-gpt-ad-1450151095193-2').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Footer_x41', [990, 120], 'div-gpt-ad-1450151095193-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Left_x22', [120, 600], 'div-gpt-ad-1450151095193-4').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Reloj_x26', [173, 125], 'div-gpt-ad-1450151095193-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Right_x23', [120, 600], 'div-gpt-ad-1450151095193-6').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719//*deshabilitado*/Coop_D_Pais_Articulo_Rob_3_x17', [300, 250], '/*deshabilitado*/div-gpt-ad-1450151095193-9').addService(googletag.pubads());    
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Rob_x29', [300, 250], 'div-gpt-ad-1450233628422-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Rob_x16', [300, 250], 'div-gpt-ad-1450236625378-2').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Rob_x05', [300, 250], 'div-gpt-ad-1458762921536-0').addService(googletag.pubads());
+}
+
+
+
+
+// (ORIGINAL)
+//if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+// FIN (ORIGINAL)
+// MODIFICADO - DAKAR 2018
+if((sec_id_dfp == 1 && secc_id != 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+// FIN MODIFICADO - DAKAR 2018
+
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150464142-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150464142-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150464142-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_1_x32', [[650, 40], [650, 60]], 'div-gpt-ad-1450150464142-0').addService(googletag.pubads());
+<<<<<<< HEAD
+    }
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_2_x34', [[350, 40],[350, 60]], 'div-gpt-ad-1450150464142-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_3_x25', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150464142-2').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Footer_x41', [990, 120], 'div-gpt-ad-1450150464142-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Left_x22', [120, 600], 'div-gpt-ad-1450150464142-4').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Reloj_x26', [173, 125], 'div-gpt-ad-1450150464142-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Right_x23', [120, 600], 'div-gpt-ad-1450150464142-6').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719//*deshabilitado*/Coop_D_Deportes_Articulo_Rob_3_x17', [300, 250], '/*deshabilitado*/div-gpt-ad-1450150464142-9').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x29', [300, 250], 'div-gpt-ad-1450233628422-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x16', [300, 250], 'div-gpt-ad-1450236625378-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x05', [300, 250], 'div-gpt-ad-1458762921536-3').addService(googletag.pubads());
+}
+
+
+
+
+// (ORIGINAL)
+//if(sec_id_dfp == 1 && (fid_dfp == "fid_mv_futbol")) {  
+// FIN (ORIGINAL)
+// MODIFICADO - DAKAR 2018
+if((sec_id_dfp == 1 && secc_id != 49) && (fid_dfp == "fid_mv_futbol")) {
+// FIN MODIFICADO - DAKAR 2018
+  
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Cuerpo_1_x32', [[650, 40], [650, 90], [650, 60]], 'div-gpt-ad-1459869405246-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1459869405246-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1459869405246-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Cuerpo_1_x32', [[650, 40], [650, 60]], 'div-gpt-ad-1459869405246-0').addService(googletag.pubads());
+    }
+=======
+    }
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_2_x34', [[350, 40],[350, 60]], 'div-gpt-ad-1450150464142-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_3_x25', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150464142-2').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Footer_x41', [990, 120], 'div-gpt-ad-1450150464142-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Left_x22', [120, 600], 'div-gpt-ad-1450150464142-4').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Reloj_x26', [173, 125], 'div-gpt-ad-1450150464142-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Right_x23', [120, 600], 'div-gpt-ad-1450150464142-6').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719//*deshabilitado*/Coop_D_Deportes_Articulo_Rob_3_x17', [300, 250], '/*deshabilitado*/div-gpt-ad-1450150464142-9').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x29', [300, 250], 'div-gpt-ad-1450233628422-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x16', [300, 250], 'div-gpt-ad-1450236625378-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x05', [300, 250], 'div-gpt-ad-1458762921536-3').addService(googletag.pubads());
+}
+
+
+
+
+// (ORIGINAL)
+//if(sec_id_dfp == 1 && (fid_dfp == "fid_mv_futbol")) {  
+// FIN (ORIGINAL)
+// MODIFICADO - DAKAR 2018
+if((sec_id_dfp == 1 && secc_id != 49) && (fid_dfp == "fid_mv_futbol")) {
+// FIN MODIFICADO - DAKAR 2018
+  
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Cuerpo_1_x32', [[650, 40], [650, 90], [650, 60]], 'div-gpt-ad-1459869405246-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1459869405246-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1459869405246-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Cuerpo_1_x32', [[650, 40], [650, 60]], 'div-gpt-ad-1459869405246-0').addService(googletag.pubads());
+    }
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Left_x22', [120, 600], 'div-gpt-ad-1459869405246-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Right_x23', [120, 600], 'div-gpt-ad-1459869405246-2').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_2_x34', [[350, 40],[350, 60]], 'div-gpt-ad-1450150464142-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Cuerpo_3_x25', [[650, 40], [650, 60], [650, 90]], 'div-gpt-ad-1497362222097-0').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_3_x25', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150464142-2').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Footer_x41', [990, 120], 'div-gpt-ad-1450150464142-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Reloj_x26', [173, 125], 'div-gpt-ad-1450150464142-5').addService(googletag.pubads());    
+    //googletag.defineSlot('/1020719//*deshabilitado*/Coop_D_Deportes_Articulo_Rob_3_x17', [300, 250], '/*deshabilitado*/div-gpt-ad-1450150464142-9').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x29', [300, 250], 'div-gpt-ad-1450233628422-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x16', [300, 250], 'div-gpt-ad-1450236625378-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Marcadores_Rob_x05', [300, 250], 'div-gpt-ad-1497362222097-6').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x05', [300, 250], 'div-gpt-ad-1458762921536-3').addService(googletag.pubads());    
+}
+
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam" || fid_dfp == "fid_cartelera")) {
+    //googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150894176-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150894176-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150894176-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Cuerpo_1_x32', [[650, 40], [650, 60]], 'div-gpt-ad-1450150894176-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Cuerpo_2_x34', [[350, 40],[350, 60]], 'div-gpt-ad-1450150894176-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Cuerpo_3_x25', [[640, 90], [650, 60], [650, 90]], 'div-gpt-ad-1450150894176-2').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Footer_x41', [990, 120], 'div-gpt-ad-1450150894176-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Left_x22', [120, 600], 'div-gpt-ad-1450150894176-4').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Reloj_x26', [173, 125], 'div-gpt-ad-1450150894176-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Right_x23', [120, 600], 'div-gpt-ad-1450150894176-6').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719//*deshabilitado*/Coop_D_Entretencion_Articulo_Rob_3_x17', [300, 250], '/*deshabilitado*/div-gpt-ad-1450150894176-9').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Rob_x29', [300, 250], 'div-gpt-ad-1450233628422-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Rob_x16', [300, 250], 'div-gpt-ad-1450236625378-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Rob_x05', [300, 250], 'div-gpt-ad-1458762921536-2').addService(googletag.pubads());
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+    //googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150645544-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150645544-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150645544-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Cuerpo_1_x32', [[650, 40], [650, 60]], 'div-gpt-ad-1450150645544-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Cuerpo_2_x34', [[350, 40],[350, 60]], 'div-gpt-ad-1450150645544-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Cuerpo_3_x25', [[650, 60], [640, 90], [650, 90]], 'div-gpt-ad-1450150645544-2').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Footer_x41', [990, 120], 'div-gpt-ad-1450150645544-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Left_x22', [120, 600], 'div-gpt-ad-1450150645544-4').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Reloj_x26', [173, 125], 'div-gpt-ad-1450150645544-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Right_x23', [120, 600], 'div-gpt-ad-1450150645544-6').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719//*deshabilitado*/Coop_D_Mundo_Articulo_Rob_3_x17', [300, 250], '/*deshabilitado*/div-gpt-ad-1450150645544-9').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Rob_x29', [300, 250], 'div-gpt-ad-1450233628422-2').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Rob_x16', [300, 250], 'div-gpt-ad-1450236625378-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Rob_x05', [300, 250], 'div-gpt-ad-1458762921536-1').addService(googletag.pubads());
+}
+if(fid_dfp == "fid_foto") {
+    //googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450149318064-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450149318064-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450149318064-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[650, 40], [650, 60]], 'div-gpt-ad-1450149318064-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Fotos_BB_2_x07', [[990, 90], [728, 90], [990, 150], [990, 200]], 'div-gpt-ad-1450149318064-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Fotos_Exp_x03', [[990, 90], [990, 40]], 'div-gpt-ad-1450149318064-2').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Fotos_Footer_x41', [990, 120], 'div-gpt-ad-1450149318064-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Fotos_Left_x22', [120, 600], 'div-gpt-ad-1450149318064-4').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Fotos_Reloj_x26', [173, 125], 'div-gpt-ad-1450149318064-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Fotos_Right_x23', [120, 600], 'div-gpt-ad-1450149318064-6').addService(googletag.pubads());
+}
+if(fid_dfp == "fid_video") {
+    //googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450149421521-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450149421521-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450149421521-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[650, 40], [650, 60]], 'div-gpt-ad-1450149421521-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Videos_BB_2_x07', [[990, 90], [728, 90], [990, 150], [990, 200]], 'div-gpt-ad-1450149421521-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Videos_Exp_x03', [[990, 40], [990, 90]], 'div-gpt-ad-1450149421521-2').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Videos_Footer_x41', [990, 120], 'div-gpt-ad-1450149421521-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Videos_Left_x22', [120, 600], 'div-gpt-ad-1450149421521-4').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Videos_Reloj_x26', [173, 125], 'div-gpt-ad-1450149421521-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Videos_Right_x23', [120, 600], 'div-gpt-ad-1450149421521-6').addService(googletag.pubads());
+}
+if(fid_dfp == "fid_audio") {
+    //googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450149232228-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450149232228-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450149232228-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[650, 40], [650, 60]], 'div-gpt-ad-1450149232228-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Audios_BB_2_x07', [[990, 90], [728, 90], [990, 150], [990, 200]], 'div-gpt-ad-1450149232228-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Audios_Exp_x03', [[990, 90], [990, 40]], 'div-gpt-ad-1450149232228-2').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Audios_Footer_x41', [990, 120], 'div-gpt-ad-1450149232228-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Audios_Left_x22', [120, 600], 'div-gpt-ad-1450149232228-4').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Audios_Reloj_x26', [173, 125], 'div-gpt-ad-1450149232228-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Audios_Right_x23', [120, 600], 'div-gpt-ad-1450149232228-6').addService(googletag.pubads());
+}
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+});
+
+//INSTANCIA BLOQUE CUSTOM - DAKAR 2018
+if((sec_id_dfp == 1 && secc_id == 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150464142-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150464142-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150464142-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_1_x32', [[650, 40], [650, 60]], 'div-gpt-ad-1450150464142-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_2_x34', [[350, 40],[350, 60]], 'div-gpt-ad-1450150464142-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Cuerpo_3_x25', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1450150464142-2').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Footer_x41', [990, 120], 'div-gpt-ad-1450150464142-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.dakar_2018.120x600_Deportes_Articulo_Left_x22', [120, 600], 'div-gpt-ad-1515179652769-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Reloj_x26', [173, 125], 'div-gpt-ad-1450150464142-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.dakar_2018.120x600_Deportes_Articulo_Right_x23', [120, 600], 'div-gpt-ad-1515179652769-1').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719//*deshabilitado*/Coop_D_Deportes_Articulo_Rob_3_x17', [300, 250], '/*deshabilitado*/div-gpt-ad-1450150464142-9').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x29', [300, 250], 'div-gpt-ad-1450233628422-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x16', [300, 250], 'div-gpt-ad-1450236625378-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_x05', [300, 250], 'div-gpt-ad-1458762921536-3').addService(googletag.pubads());
+}
+
+
+
+
+
+
+
+//FIN INSTANCIA BLOQUE CUSTOM - DAKAR 2018 
+</script> 
+  <!--/DFP SETUP --> 
+  <script type="text/javascript">
+    $(function() {
+        Coop.initArtic();
+        Coop.posicionaMenu("Sociedad", 'fid_noticia');
+        Coop.instalarComboGenerico('dial');
+        Coop.instalarComboGenerico('programas');
+        Coop.instalarComboGenerico('rss');
+        //Coop.instalarComboGenerico('email');
+        
+        Coop.aplicarFechaDinamica('20180321', '.fecha-dinamica', 'h2.titular,.relac');
+    });
+    </script> 
+  <!-- Redes Sociales --> 
+  <script type="text/javascript">
+      window.___gcfg = {lang: 'es'};
+
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script> 
+  <script type="text/javascript" charset="utf-8">
+    window.twttr = (function (d,s,id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+        js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+        return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+    }(document, "script", "twitter-wjs"));
+    </script> 
+  <!--PINTEREST--> 
+  <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js" data-pin-hover="true"></script> 
+  <!--/PINTEREST--> 
+  <script type="text/javascript">
+  $(document).ready(function() {
+    Coop.instalaColorboxImagen('');
+    
+    Coop.aplicarFechaDinamicaPublicacion(20110726, '11:39', 'Martes 26 de julio de 2011', 20180321);
+    //Coop.getComentariosTW();
+  });
+  </script> 
+  <!--SST8HEAD --> 
+  <!-- Simplestats --> 
+  <script type="text/javascript" src="/js-local/sst8_3.js"></script> 
+  <!-- /Simplestats --> 
+  <!-- Begin comScore Tag --> 
+  <script>
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "7290944" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script> 
+  <noscript> &lt;img src="http://b.scorecardresearch.com/p?c1=2&amp;amp;c2=7290944&amp;amp;cv=2.0&amp;amp;cj=1"&gt; 
+  </noscript> 
+  <!-- /End comScore Tag --> 
+  <!-- Google Analytics --> 
+<<<<<<< HEAD
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-2229911-1']);
+  _gaq.push(['_setDomainName', '.cooperativa.cl']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+  <!-- /Google Analytics --> 
+  <!-- Social Interaction Analytics --> 
+  <script type="text/javascript">
+=======
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-2229911-1']);
+  _gaq.push(['_setDomainName', '.cooperativa.cl']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+  <!-- /Google Analytics --> 
+  <!-- Social Interaction Analytics --> 
+  <script type="text/javascript">
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
+$(function() {
+  // Social Interaction Twitter
+  twttr.ready(function (twttr) {
+    twttr.events.bind('tweet', function(intent_event) {
+      var extractParamFromUri = function(uri, paramName) {
+        if (!uri) {
+          return;
+        }
+        var regex = new RegExp('[\\?&#]' + paramName + '=([^&#]*)');
+        var params = regex.exec(uri);
+        if (params != null) {
+          return unescape(params[1]);
+        }
+        return;
+      };
+      if (intent_event) {
+        var opt_pagePath;
+        if (intent_event.target && intent_event.target.nodeName == 'IFRAME') {
+          opt_target = extractParamFromUri(intent_event.target.src, 'url');
+        }
+        _gaq.push(['_trackSocial', 'twitter', 'tweet', opt_pagePath]);
+      }
+    });
+  });
+});
+</script> 
+  <!-- /Social Interaction Analytics --> 
+  <!-- Código temporal para la publicidad --> 
+  <meta name="Generator" content="Prontus 11.2"> 
+ </head> 
+ <body> 
+  <!-- Lince Adserver - Precarga --> 
+  <script src="http://v2.adserver.cl/ad/24/7/234/1773" type="text/javascript"></script> 
+  <!--/Lince Adserver - Precarga --> 
+  <!-- INSTANCIA DE FACEBOOK JS --> 
+  <div id="fb-root"></div> 
+>>>>>>> 14a1afdaab6b49574300e8d1dfa9f407632c3733
   <script>
         (function() {
             if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
@@ -124,6 +759,7 @@ function contentLoaded(d,i){var c=false,h=true,k=d.document,j=k.documentElement,
             );
         });
     }
+<<<<<<< HEAD
     /*]]>*/</script> 
   <script type="text/javascript">/*<![CDATA[*/ (function(undefined){if(!window.bbc){window.bbc={}}var ROLLING_PERIOD_DAYS=30;window.bbc.Mandolin=function(id,segments,opts){var now=new Date().getTime(),storedItem,DEFAULT_START=now,DEFAULT_RATE=1,COOKIE_NAME="ckpf_mandolin";opts=opts||{};this._id=id;this._segmentSet=segments;this._store=new window.window.bbc.Mandolin.Storage(COOKIE_NAME);this._opts=opts;this._rate=(opts.rate!==undefined)?+opts.rate:DEFAULT_RATE;this._startTs=(opts.start!==undefined)?new Date(opts.start).getTime():new Date(DEFAULT_START).getTime();this._endTs=(opts.end!==undefined)?new Date(opts.end).getTime():daysFromNow(ROLLING_PERIOD_DAYS);this._signupEndTs=(opts.signupEnd!==undefined)?new Date(opts.signupEnd).getTime():this._endTs;this._segment=null;if(typeof id!=="string"){throw new Error("Invalid Argument: id must be defined and be a string")}if(Object.prototype.toString.call(segments)!=="[object Array]"){throw new Error("Invalid Argument: Segments are required.")}if(opts.rate!==undefined&&(opts.rate<0||opts.rate>1)){throw new Error("Invalid Argument: Rate must be between 0 and 1.")}if(this._startTs>this._endTs){throw new Error("Invalid Argument: end date must occur after start date.")}if(!(this._startTs<this._signupEndTs&&this._signupEndTs<=this._endTs)){throw new Error("Invalid Argument: SignupEnd must be between start and end date")}removeExpired.call(this,now);var overrides=window.bbccookies.get().match(/ckns_mandolin_setSegments=([^;]+)/);if(overrides!==null){eval("overrides = "+decodeURIComponent(RegExp.$1)+";");if(overrides[this._id]&&this._segmentSet.indexOf(overrides[this._id])==-1){throw new Error("Invalid Override: overridden segment should exist in segments array")}}if(overrides!==null&&overrides[this._id]){this._segment=overrides[this._id]}else{if((storedItem=this._store.getItem(this._id))){this._segment=storedItem.segment}else{if(this._startTs<=now&&now<this._signupEndTs&&now<=this._endTs&&this._store.isEnabled()===true){this._segment=pick(segments,this._rate);if(opts.end===undefined){this._store.setItem(this._id,{segment:this._segment})}else{this._store.setItem(this._id,{segment:this._segment,end:this._endTs})}log.call(this,"mandolin_segment")}}}log.call(this,"mandolin_view")};window.bbc.Mandolin.prototype.getSegment=function(){return this._segment};function log(actionType,params){var that=this;require(["istats-1"],function(istats){istats.log(actionType,that._id+":"+that._segment,params?params:{})})}function removeExpired(expires){var items=this._store.getItems(),expiresInt=+expires;for(var key in items){if(items[key].end!==undefined&&+items[key].end<expiresInt){this._store.removeItem(key)}}}function getLastExpirationDate(data){var winner=0,rollingExpire=daysFromNow(ROLLING_PERIOD_DAYS);for(var key in data){if(data[key].end===undefined&&rollingExpire>winner){winner=rollingExpire}else{if(+data[key].end>winner){winner=+data[key].end}}}return(winner)?new Date(winner):new Date(rollingExpire)}window.bbc.Mandolin.prototype.log=function(params){log.call(this,"mandolin_log",params)};window.bbc.Mandolin.prototype.convert=function(params){log.call(this,"mandolin_convert",params);this.convert=function(){}};function daysFromNow(n){var endDate;endDate=new Date().getTime()+(n*60*60*24)*1000;return endDate}function pick(segments,rate){var picked,min=0,max=segments.length-1;if(typeof rate==="number"&&Math.random()>rate){return null}do{picked=Math.floor(Math.random()*(max-min+1))+min}while(picked>max);return segments[picked]}window.bbc.Mandolin.Storage=function(name){validateCookieName(name);this._cookieName=name;this._isEnabled=(bbccookies.isAllowed(this._cookieName)===true&&bbccookies.cookiesEnabled()===true)};window.bbc.Mandolin.Storage.prototype.setItem=function(key,value){var storeData=this.getItems();storeData[key]=value;this.save(storeData);return value};window.bbc.Mandolin.Storage.prototype.isEnabled=function(){return this._isEnabled};window.bbc.Mandolin.Storage.prototype.getItem=function(key){var storeData=this.getItems();return storeData[key]};window.bbc.Mandolin.Storage.prototype.removeItem=function(key){var storeData=this.getItems();delete storeData[key];this.save(storeData)};window.bbc.Mandolin.Storage.prototype.getItems=function(){return deserialise(this.readCookie(this._cookieName)||"")};window.bbc.Mandolin.Storage.prototype.save=function(data){window.bbccookies.set(this._cookieName+"="+encodeURIComponent(serialise(data))+"; expires="+getLastExpirationDate(data).toUTCString()+";")};window.bbc.Mandolin.Storage.prototype.readCookie=function(name){var nameEq=name+"=",ca=window.bbccookies.get().split("; "),i,c;validateCookieName(name);for(i=0;i<ca.length;i++){c=ca[i];if(c.indexOf(nameEq)===0){return decodeURIComponent(c.substring(nameEq.length,c.length))}}return null};function serialise(o){var str="";for(var p in o){if(o.hasOwnProperty(p)){str+='"'+p+'"'+":"+(typeof o[p]==="object"?(o[p]===null?"null":"{"+serialise(o[p])+"}"):'"'+o[p].toString()+'"')+","}}return str.replace(/,\}/g,"}").replace(/,$/g,"")}function deserialise(str){var o;str="{"+str+"}";if(!validateSerialisation(str)){throw"Invalid input provided for deserialisation."}eval("o = "+str);return o}var validateSerialisation=(function(){var OBJECT_TOKEN="<Object>",ESCAPED_CHAR='"\\n\\r\\u2028\\u2029\\u000A\\u000D\\u005C',ALLOWED_CHAR="([^"+ESCAPED_CHAR+"]|\\\\["+ESCAPED_CHAR+"])",KEY='"'+ALLOWED_CHAR+'+"',VALUE='(null|"'+ALLOWED_CHAR+'*"|'+OBJECT_TOKEN+")",KEY_VALUE=KEY+":"+VALUE,KEY_VALUE_SEQUENCE="("+KEY_VALUE+",)*"+KEY_VALUE,OBJECT_LITERAL="({}|{"+KEY_VALUE_SEQUENCE+"})",objectPattern=new RegExp(OBJECT_LITERAL,"g");return function(str){if(str.indexOf(OBJECT_TOKEN)!==-1){return false}while(str.match(objectPattern)){str=str.replace(objectPattern,OBJECT_TOKEN)}return str===OBJECT_TOKEN}})();function validateCookieName(name){if(name.match(/ ,;/)){throw"Illegal name provided, must be valid in browser cookie."}}})(); /*]]>*/</script> 
   <script type="text/javascript">  document.documentElement.className += (document.documentElement.className? ' ' : '') + 'orb-js';  fig.manager.confirm(); </script> 
@@ -258,6 +894,1478 @@ if (typeof bbccookies === 'object' && bbccookies.cookiesEnabled() && bbccookies.
          <li><a href="#page">Skip to content</a></li> 
          <li><a id="orb-accessibility-help" href="/accessibility/">Accessibility Help</a></li> 
         </ul> 
+=======
+    //# Fin Implementacion para medir actividad social G- Analytics
+  };
+
+  // Load the SDK Asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=170282143084659";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script> 
+  <!-- FIN INSTANCIA DE FACEBOOK JS --> 
+  <div id="main"> 
+   <!-- Lince Adserver - BigBanner/Boton Header --> 
+   <!-- DFP ITT_x24 --> 
+   <div style="height:1px;"> 
+    <script>
+if(sec_id_dfp == 0 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Portada_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450210711927-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210711927-2'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 3 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Pais_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450210789293-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210789293-1'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  <!-- /1020719/Coop_D_Pais_Articulos_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450210845902-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210845902-2'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Deportes_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450210918572-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210918572-2'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  <!-- /1020719/Coop_D_Deportes_Articulos_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450210982740-3'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210982740-3'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 4 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Entretencion_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450211094717-3'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211094717-3'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  <!-- /1020719/Coop_D_Entretencion_Articulos_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450211182920-3'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211182920-3'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Mundo_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450211271782-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211271782-0'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  <!-- /1020719/Coop_D_Mundo_Articulos_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450211385144-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211385144-2'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 27 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Opinion_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450211455568-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211455568-2'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 33 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Especiales_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450211509179-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211509179-2'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_foto") {
+  <!-- /1020719/Coop_D_Fotos_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450211567329-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211567329-2'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_video") {
+  <!-- /1020719/Coop_D_Videos_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450211655943-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211655943-2'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_audio") {
+  <!-- /1020719/Coop_D_Audios_ITT_x24 -->
+  document.write("<div id='div-gpt-ad-1450211611297-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211611297-2'); });
+  document.write("</div>");
+}
+</script> 
+   </div> 
+   <!-- /DFP ITT_x24 --> 
+   <!-- DFP Footer_x41 --> 
+   <div style="height:1px;"> 
+    <script>
+if(sec_id_dfp == 0 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Portada_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-12'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-12'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 3 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Pais_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-11'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-11'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  <!-- /1020719/Coop_D_Pais_Articulo_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-10'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-10'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Deportes_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-2'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  <!-- /1020719/Coop_D_Deportes_Articulo_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 4 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Entretencion_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-4'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-4'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  <!-- /1020719/Coop_D_Entretencion_Articulo_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-3'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-3'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Mundo_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-8'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-8'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  <!-- /1020719/Coop_D_Mundo_Articulo_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-7'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-7'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 27 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Opinion_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-9'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-9'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 33 && fid_dfp == "fid_portada") {
+  <!-- /1020719/Coop_D_Especiales_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-5'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-5'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_foto") {
+  <!-- /1020719/Coop_D_Fotos_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-6'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-6'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_video") {
+  <!-- /1020719/Coop_D_Videos_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-13'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-13'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_audio") {
+  <!-- /1020719/Coop_D_Audios_Footer_x41 -->
+  document.write("<div id='div-gpt-ad-1482244626812-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1482244626812-0'); });
+  document.write("</div>");
+}
+</script> 
+   </div> 
+   <!-- /DFP Footer_x41 --> 
+   <section class="banner-top"> 
+    <!-- Google DFP - SideBanners --> 
+    <script>
+var dfp_sec_side = 'portada';
+var hhide = 2000;
+$(document).scroll(function() {
+    if(dfp_sec_side == "portada") hhide = 1033;
+    if(dfp_sec_side == "pais" || dfp_sec_side == "mundo") hhide = 754;
+    if(dfp_sec_side == "entretencion") hhide = 739;
+    if(dfp_sec_side == "deportes") hhide = 772;
+    if(dfp_sec_side == "mundo") hhide = 742;
+    if(art_fid == "fid_noticia") hhide = 706;
+    if(art_fid == "fid_video") hhide = 756;
+    if(art_fid == "fid_audio") hhide = 729;
+    if(art_fid == "fid_foto") hhide = 675;    
+    if($(document).scrollTop() > hhide) { $('#barraleft, #barraright').css('display','none');  };
+    if($(document).scrollTop() < hhide) { $('#barraleft, #barraright').css('display','block'); };
+});
+
+$( document ).ready(function() {
+  if($(window).width() > 1280 ) {
+      $('#barraleft').css('margin-left','-149px');
+      $('#barraright').css('margin-left','1029px');
+  }
+  else {
+      $('#barraleft,#barraright').css('display','block');
+      }
+});
+
+</script> 
+    <div style="position:fixed; margin:5px 0 0 -129px;" id="barraleft"> 
+     <!-- DFP Left_x22 --> 
+     <script type="text/javascript">
+
+if(sec_id_dfp == 0 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450149920562-9' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149920562-9'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 3 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450151046130-4' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151046130-4'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450151095193-4' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151095193-4'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450150369761-5' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150369761-5'); });
+  document.write("</div>");
+}
+// (ORIGINAL)
+//if((sec_id_dfp == 1) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")){
+// FIN (ORIGINAL)
+// MODIFICADO - DAKAR 2018
+if((sec_id_dfp == 1 && secc_id != 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+// FIN MODIFICADO - DAKAR 2018
+  document.write("<div id='div-gpt-ad-1450150464142-4' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-4'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && fid_dfp == "fid_mv_futbol") {
+  document.write("<div id='div-gpt-ad-1459869405246-1' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1459869405246-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 4 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450150808241-5' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150808241-5'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam" || fid_dfp == "fid_cartelera")) {
+  document.write("<div id='div-gpt-ad-1450150894176-4' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150894176-4'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450150569065-7' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150569065-7'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150645544-4' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150645544-4'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 27 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450149480304-1' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149480304-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 33 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450149604963-2' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149604963-2'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_foto") {
+  document.write("<div id='div-gpt-ad-1450149318064-4' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149318064-4'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_video") {
+  document.write("<div id='div-gpt-ad-1450149421521-4' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149421521-4'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_audio") {
+  document.write("<div id='div-gpt-ad-1450149232228-4' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149232228-4'); });
+  document.write("</div>");
+}
+
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE LEFT
+if((sec_id_dfp == 16) && (fid_dfp == "fid_noticia")) {
+  document.write("<div div-gpt-ad-1450149920562-9' style='height:600px; width:120px;'>");
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149920562-9'); });
+  document.write("</div>");
+}
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE LEFT
+//IMPRIME BLOQUE CUSTOM - DAKAR 2018 - Left_x22
+if((sec_id_dfp == 1 && secc_id == 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1515179652769-0'>");
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1515179652769-0'); });
+  document.write("</div>");}
+//FIN IMPRIME BLOQUE CUSTOM - DAKAR 2018 - Left_x22
+</script> 
+     <!-- /DFP Left_x22 --> 
+    </div> 
+    <div style="position:fixed; margin:5px 0 0 1009px;" id="barraright"> 
+     <!-- DFP Right_x23 --> 
+     <script>
+if(sec_id_dfp == 0 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450149920562-11' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149920562-11'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 3 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450151046130-6' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151046130-6'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450151095193-6' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151095193-6'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450150369761-9' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150369761-9'); });
+  document.write("</div>");
+}
+// (ORIGINAL)
+//if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")){
+// FIN (ORIGINAL)
+// MODIFICADO - DAKAR 2018
+if((sec_id_dfp == 1 && secc_id != 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+// FIN MODIFICADO - DAKAR 2018
+  document.write("<div id='div-gpt-ad-1450150464142-6' style='height:600px; width:120px;'>");
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-6'); });
+  document.write("</div>");
+}
+// (ORIGINAL)
+//if(sec_id_dfp == 1 && fid_dfp == "fid_mv_futbol") {
+// FIN (ORIGINAL)
+// MODIFICADO - DAKAR 2018
+if((sec_id_dfp == 1 && secc_id != 49) && (fid_dfp == "fid_mv_futbol")) {
+// FIN MODIFICADO - DAKAR 2018
+  document.write("<div id='div-gpt-ad-1459869405246-2' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1459869405246-2'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 4 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450150808241-7' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150808241-7'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam" || fid_dfp == "fid_cartelera")) {
+  document.write("<div id='div-gpt-ad-1450150894176-6' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150894176-6'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450150569065-2' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150569065-2'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150645544-6' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150645544-6'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 27 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450149480304-3' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149480304-3'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 33 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450149604963-4' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149604963-4'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_foto") {
+  document.write("<div id='div-gpt-ad-1450149318064-6' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149318064-6'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_video") {
+  document.write("<div id='div-gpt-ad-1450149421521-6' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149421521-6'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_audio") {
+  document.write("<div id='div-gpt-ad-1450149232228-6' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149232228-6'); });
+  document.write("</div>");  
+}
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE RIGHT
+if((sec_id_dfp == 16) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450149920562-11' style='height:600px; width:120px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149920562-11'); });
+  document.write("</div>");}
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE RIGHT
+//IMPRIME BLOQUE CUSTOM - DAKAR 2018 - Right_x23
+if((sec_id_dfp == 1 && secc_id == 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1515179652769-1'>");
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1515179652769-1'); });
+  document.write("</div>");}
+//FIN IMPRIME BLOQUE CUSTOM - DAKAR 2018 - Right_x23
+</script> 
+     <!-- /DFP Right_x23 --> 
+    </div> 
+    <!-- Google DFP - SideBanners --> 
+    <div class="aleft" style="overflow: visible;"> 
+     <div style="width:1000px;margin:5px 0 0 0;"> 
+      <center> 
+       <!-- DFP BB_1_x01 --> 
+       <script>
+if(sec_id_dfp == 0 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450210711927-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210711927-0'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 3 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450210789293-3'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210789293-3'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450210845902-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210845902-0'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450210918572-3'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210918572-3'); });
+  document.write("</div>");
+}
+// (ORIGINAL)
+//if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+// FIN (ORIGINAL)
+// MODIFICADO - DAKAR 2018
+if((sec_id_dfp == 1 && secc_id != 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+// FIN MODIFICADO - DAKAR 2018
+  document.write("<div id='div-gpt-ad-1450210982740-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210982740-0'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 4 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450211094717-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211094717-2'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam" || fid_dfp == "fid_cartelera")) {
+  document.write("<div id='div-gpt-ad-1450211182920-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211182920-0'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450211271782-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211271782-2'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450211385144-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211385144-0'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 27 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450211455568-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211455568-0'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 33 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450211509179-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211509179-0'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_foto") {
+  document.write("<div id='div-gpt-ad-1450211567329-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211567329-0'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_video") {
+  document.write("<div id='div-gpt-ad-1450211655943-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211655943-0'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_audio") {
+  document.write("<div id='div-gpt-ad-1450211611297-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211611297-0'); });
+  document.write("</div>");
+}
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE TOP
+if((sec_id_dfp == 16 && tema_id == 2381) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1470344528800-8'>");
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1470344528800-8'); });
+  document.write("</div>");}
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE TOP
+//IMPRIME BLOQUE CUSTOM - DAKAR 2018 - BB_1_x01
+if((sec_id_dfp == 1 && secc_id == 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1515179652769-3'>");
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1515179652769-3'); });
+  document.write("</div>");}
+
+//FIN IMPRIME BLOQUE CUSTOM - DAKAR 2018 - BB_1_x01
+</script> 
+       <!-- /DFP BB_1_x01 --> 
+      </center> 
+     </div> 
+    </div> 
+   </section> 
+   <!--/Lince Adserver - BigBanner/Boton Header --> 
+   <div id="container"> 
+    <esi:include src="/noticias/stat/techo/techo.html" /> 
+    <script type="text/javascript">
+    $(document).ready(function() {
+      var container = $(".switch-vista");
+      $("body").prepend(container);
+      $(".switch-vista").show();  
+    });
+  </script> 
+    <!-- header --> 
+    <header id="header"> 
+     <div class="aleft"> 
+      <div class="link-redes"> 
+       <ul class="radio"> 
+        <li class="first">Radio Cooperativa</li> 
+        <li class="texto" id="programas-btn"><a>Programas</a></li> 
+        <li class="texto-dial" id="dial-btn"><a>Dial</a></li> 
+       </ul>
+       <!-- ul radio --> 
+       <ul class="redes"> 
+        <li class="first">Suscribirse</li> 
+        <li class="texto-rss" id="rss-btn"><a><img src="/noticias/imag/auxi/ico-rss_true.png" width="13" height="14" alt="RSS a la carta" title="RSS a la carta"><span>RSS</span></a></li> 
+        <li id="email-btn"><a href="https://www.cooperativa.cl/app_reg/frontend/modules/index.php?modulo=usuario&amp;accion=VerFicha" onclick="Coop.noticiasEmail(); return false;"> <img src="/noticias/imag/ico/mail_ico2.png" width="14" height="10" style="margin-top:3px;" alt="Noticias en tu Email" title="Noticias en tu Email"> <span>Email</span> </a></li> 
+        <li><a href="https://www.cooperativa.cl/podcast" target="_top"> <img src="/noticias/imag/auxi/ico-podcast_true.png" width="16" height="15" alt="Podcast" title="Podcast"><span>Podcast</span></a></li> 
+       </ul>
+       <!-- ul redes --> 
+       <ul class="social"> 
+        <li class="first">Participa con:</li> 
+        <li><a href="https://www.facebook.com/Cooperativa" target="_blank"> <img src="/noticias/imag/ico/facebook-small.png" width="14" height="14" alt="Facebook" title="Facebook"><span>Facebook</span></a></li> 
+        <li><a href="http://twitter.com/COOPERATIVA" target="_blank"> <img src="/noticias/imag/soci/twitter-bird-light-bgs2.png" width="16" height="16" alt="Twitter" title="Twitter" class="twitter"><span>Twitter</span></a></li> 
+       </ul>
+       <!-- ul social --> 
+       <div class="combo" id="programas-menu"> 
+        <table> 
+         <tbody>
+          <tr> 
+           <td class="imagen"><img src="/noticias/imag/radio/5068587364603.jpg" width="26" height="26" title="El Diario de Cooperativa" alt="El Diario de Cooperativa"></td> 
+           <td><a href="http://programas.cooperativa.cl/eldiariodecooperativa/" class="titulo">El Diario de Cooperativa</a> <a href="http://programas.cooperativa.cl/eldiariodecooperativa/">Lunes a viernes de 06:00 a 09:00 hrs; sábado de 07:00 a 09:00 hrs; domingo de 08:30 a 09:00 hrs.</a></td> 
+          </tr> 
+          <tr> 
+           <td class="imagen"><img src="/noticias/imag/radio/552d0eb5112a7.jpg" width="26" height="26" title="El Primer Café" alt="El Primer Café"></td> 
+           <td><a href="http://programas.cooperativa.cl/unanuevamanana/#primercafe" class="titulo">El Primer Café</a> <a href="http://programas.cooperativa.cl/unanuevamanana/#primercafe">Lunes a viernes, de 09:00 a 10:00 horas.</a></td> 
+          </tr> 
+          <tr> 
+           <td class="imagen"><img src="/noticias/imag/radio/5527de93adceb.jpg" width="26" height="26" title="Una Nueva Mañana" alt="Una Nueva Mañana"></td> 
+           <td><a href="http://programas.cooperativa.cl/unanuevamanana/" class="titulo">Una Nueva Mañana</a> <a href="http://programas.cooperativa.cl/unanuevamanana/">Lunes a viernes, de 09:00 a 13:00 horas.</a></td> 
+          </tr> 
+          <tr> 
+           <td class="imagen"><img src="/noticias/imag/radio/al_aire_libre_28.jpg" width="26" height="26" title="Al Aire Libre" alt="Al Aire Libre"></td> 
+           <td><a href="http://programas.cooperativa.cl/showalairelibre/" class="titulo">Al Aire Libre</a> <a href="http://programas.cooperativa.cl/showalairelibre/">Lunes a viernes de 14:00 a 15:30 hrs.</a></td> 
+          </tr> 
+          <tr> 
+           <td class="imagen"><img src="/noticias/imag/radio/28x28_todo-por-el-deporte.jpg" width="26" height="26" title="Todo por el Deporte " alt="Todo por el Deporte "></td> 
+           <td><a href="http://programas.cooperativa.cl/todoporeldeporte/" class="titulo">Todo por el Deporte </a> <a href="http://programas.cooperativa.cl/todoporeldeporte/">15:30 a 16:00 hrs. </a></td> 
+          </tr> 
+          <tr> 
+           <td class="imagen"><img src="/noticias/imag/radio/LHEN-A-LA-CARTA28x28.jpg" width="26" height="26" title="La Historia es Nuestra " alt="La Historia es Nuestra "></td> 
+           <td><a href="http://programas.cooperativa.cl/lahistoriaesnuestra/" class="titulo">La Historia es Nuestra </a> <a href="http://programas.cooperativa.cl/lahistoriaesnuestra/">16:00 a 18:00 hrs. </a></td> 
+          </tr> 
+          <tr> 
+           <td class="imagen"><img src="/noticias/imag/radio/lqd_28x28.jpg" width="26" height="26" title="Lo que Queda del Día." alt="Lo que Queda del Día."></td> 
+           <td><a href="http://programas.cooperativa.cl/loquequedadeldia/" class="titulo">Lo que Queda del Día.</a> <a href="http://programas.cooperativa.cl/loquequedadeldia/">Lunes a viernes de 18:00 a 20:00 horas.</a></td> 
+          </tr> 
+          <tr> 
+           <td class="imagen"><img src="/noticias/imag/radio/507351367e242.jpg" width="26" height="26" title="Los Sospechosos de Siempre" alt="Los Sospechosos de Siempre"></td> 
+           <td><a href="http://programas.cooperativa.cl/showalairelibre/?p=sospechosos" class="titulo">Al Aire Libre PM</a> <a href="http://programas.cooperativa.cl/showalairelibre/?p=sospechosos">Lunes a viernes de 20:00 a 21:00 horas</a></td> 
+          </tr> 
+          <tr> 
+           <td class="imagen"><img src="/noticias/imag/radio/54a6fa9b5db4d.jpg" width="26" height="26" title="Dulce Patria" alt="Dulce Patria"></td> 
+           <td><a href="http://programas.cooperativa.cl/dulcepatria/" class="titulo">Dulce Patria</a> <a href="http://programas.cooperativa.cl/dulcepatria/">lunes a viernes de 21:00 a 22:00 horas</a></td> 
+          </tr> 
+          <tr> 
+           <td class="imagen"><img src="/noticias/imag/radio/506858b9a85da.jpg" width="26" height="26" title="Tus Años Cuentan" alt="Tus Años Cuentan"></td> 
+           <td><a href="http://programas.cooperativa.cl/cuentan/" class="titulo">Tus Años Cuentan</a> <a href="http://programas.cooperativa.cl/cuentan/">Lunes a viernes de 22:00 a 23:00 horas.</a></td> 
+          </tr> 
+          <tr> 
+           <td colspan="2" class="last"><a href="/programas" class="titulo pie">Ver todos los programas</a></td> 
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+       <div class="combo-dial" id="dial-menu"> 
+        <table cellpadding="0" cellspacing="0" style="width: 100%;"> 
+         <tbody> 
+          <tr> 
+           <td width="70%">Arica</td> 
+           <td width="30%">103.1 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Iquique</td> 
+           <td>104.3 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Copiapó</td> 
+           <td>93.3 FM</td> 
+          </tr> 
+          <tr> 
+           <td>La Serena</td> 
+           <td>106.7 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Valparaíso / Viña del Mar</td> 
+           <td>88.1 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Valparaíso / Viña del Mar</td> 
+           <td>730 AM</td> 
+          </tr> 
+          <tr> 
+           <td>Santiago</td> 
+           <td>93.3 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Rancagua</td> 
+           <td>90.5 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Curicó</td> 
+           <td>101.1 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Concepción</td> 
+           <td>680 AM</td> 
+          </tr> 
+          <tr> 
+           <td>Temuco</td> 
+           <td>103.1 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Temuco</td> 
+           <td>640 AM</td> 
+          </tr> 
+          <tr> 
+           <td>Valdivia</td> 
+           <td>90.9 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Puerto Montt</td> 
+           <td>105.3 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Coyhaique</td> 
+           <td>105.5 FM</td> 
+          </tr> 
+          <tr> 
+           <td>Punta Arenas</td> 
+           <td>104.3 FM</td> 
+          </tr> 
+          <tr> 
+           <td colspan="2"><a href="/radiocooperativa/red-nacional/2012-07-20/162649.html">Ver todos</a></td> 
+          </tr> 
+         </tbody> 
+        </table> 
+       </div> 
+       <div class="combo-rss" id="rss-menu"> 
+        <table width="100%" cellpadding="0" cellspacing="0"> 
+         <tbody>
+          <tr> 
+           <td width="10%"><img src="/noticias/imag/ico/rss-color.gif" width="17" height="17" alt="Rss"></td> 
+           <td width="90%"><a href="/noticias/site/tax/port/all/rss____1.xml" class="titulo">Portada</a> </td>
+          </tr> 
+          <tr> 
+           <td><img src="/noticias/imag/ico/rss-color.gif" width="17" height="17" alt="Rss"></td> 
+           <td><a href="/noticias/stat/rss/rss.html" class="titulo">A la carta</a> </td>
+          </tr> 
+         </tbody>
+        </table> 
+       </div> 
+      </div>
+      <!-- link-redes --> 
+      <div class="logo"> 
+       <a href="https://www.cooperativa.cl/" target="_top"></a> 
+      </div>
+      <!-- logo --> 
+      <!--MODS MENU RADIOS EN VIVIO RR 12/06/2017--> 
+      <div class="radio_vivo"> 
+       <!--MODULO RADIOS EN VIVO --> 
+       <div class="logo_corp"> 
+        <!--ROTULO PRINCIPAL--> 
+        <div class="contenedor-rotulo rotulo-principal"> 
+         <p class="rot-audio text-rotulo-principal">ESCUCHA AQUI</p> 
+        </div> 
+        <!--FIN ROTULO PRINCIPAL--> 
+        <!--LINK RADIO COOPERATIVA JANUS --> 
+        <a href="http://www.cooperativa.cl/radioenvivo" class="link-vivo" onclick="Utiles.subWin('/radioenvivo', 'Radio en Vivo', '1060', '830', '10', '10'); return false;"> 
+         <div class="contenedor-rotulo rotulo-radio-vivo"> 
+          <p class="rot-audio text-rotulo-radio-vivo">RADIO COOPERATIVA</p> 
+         </div> </a> 
+        <!--FIN LINK RADIO COOPERATIVA JANUS --> 
+        <!--LINK AUDIO DIARIO COOPERATIVA --> 
+        <!--<a href="http://www.cooperativa.cl/noticias/site/edic/base/port/_pod_diario.html" class="link-diario" onclick="Utiles.subWin('/noticias/site/edic/base/port/_pod_diario.html', 'Diario Cooperativa', '450', '650', '10', '10'); return false;" target="_top">              
+              <div class="contenedor-rotulo rotulo-radio-diario">
+                <p class="rot-audio text-rotulo-radio-diario">EL DIARIO DE COOPERATIVA</p>
+              </div>
+            </a>--> 
+        <!--FIN LINK AUDIO DIARIO COOPERATIVA --> 
+        <!--LINK RADIO DULCE PATRIA --> 
+        <a href="http://www.radiodulcepatria.cl/" class="link-vivo" onclick="" target="_blank"> 
+         <div class="contenedor-rotulo rotulo-radio-dulce-patria"> 
+          <p class="rot-audio text-rotulo-radio-dulce-patria">RADIO DULCE PATRIA</p> 
+         </div> </a> 
+        <!--FIN LINK RADIO DULCE PATRIA --> 
+       </div> 
+       <!--FIN MODULO RADIOS EN VIVO --> 
+       <div class="head_legales"> 
+        <a href="http://legales.cooperativa.cl/"> <img class="imagen" src="/noticias/imag/head/avisos-legales-icono2.png" width="59" height="74" alt="Legales"></a> 
+        <a href="http://legales.cooperativa.cl/"> <img class="texto" src="/noticias/imag/head/avisos-legales-texto.png" width="48" height="28" alt="Legales"></a> 
+       </div> 
+      </div> 
+      <div class="col208 aright bg-tiempo"> 
+       <!-- Tiempo y Restriccion Vehicular --> 
+       <!--<div class="tiempo2 control">
+    <img src="/noticias/imag/cooperativa_2018/iconos/clima/despejado.svg" alt="Nublado y neblina" title="Nublado y neblina" class="aleft" width="68" height="49">
+    <div class="aleft">
+      <span><strong>Santiago 26.6º</strong></span>
+      <span class="last-child">Humedad 33%</span>
+      <p class="flecha aright"><a href="/eltiempo"></a></p>
+    </div>
+    <div class="separa"></div>
+    <div class="restriccion">
+    <p>R. Vehicular: No rige</p>
+</div>
+
+    <!--<span class="separa"></span>
+</div>--> 
+       <div class="contenedor-clima"> 
+        <div class="contenedor-clima-top"> 
+         <div class="logo-clima">
+          <img src="/noticias/imag/cooperativa_2018/iconos/clima/despejado.svg" title="Despejado" alt="Despejado">
+         </div> 
+         <div class="btn-clima"> 
+          <div class="comuna">
+           Santiago
+           <span>26.6°</span>
+          </div> 
+          <div class="humedad">
+           Humedad
+           <span>33%</span>
+          </div> 
+         </div> 
+         <div class="contenedor-clima-bot"> 
+          <div class="restriccion"> 
+           <p>R. Vehicular: No rige</p> 
+          </div> 
+         </div> 
+         <!--<a href="/noticias/stat/clima/port/clima.html" target="_self"><div class="btn-next">+</div></a>--> 
+        </div> 
+       </div> 
+       <!--formulario--> 
+       <form id="buscar_simple" method="get" action="/cgi-bin/prontus_search.cgi"> 
+        <div class="buscador"> 
+         <div class="button"></div> 
+         <input type="hidden" name="search_prontus" value="noticias"> 
+         <input type="hidden" name="search_tmp" value="search.html"> 
+         <input type="hidden" name="search_modo" value="and"> 
+         <input type="hidden" name="search_orden" value="cro"> 
+         <input type="hidden" name="search_resxpag" value="10"> 
+         <input type="hidden" name="search_maxpags" value="20"> 
+         <input type="hidden" name="search_form" value="yes"> 
+         <input type="text" name="search_texto" value="Buscar..." class="aleft" onclick="this.value=''"> 
+         <span id="buscador_seccion"> <input type="hidden" name="search_seccion" id="search_seccion" value=""> 
+          <div class="texto">
+           Todo
+          </div> 
+          <div class="combo"> 
+           <p>Todo</p> 
+           <p>Deportes</p> 
+           <p>País</p> 
+           <p>Mundo</p> 
+           <p>Entretención</p> 
+          </div> </span> 
+        </div> 
+        <div class="separa"></div> 
+       </form> 
+       <!--/formulario--> 
+      </div>
+      <!-- tiempo --> 
+     </div> 
+     <div class="hora aright"> 
+      <div id="horaFecha"></div> 
+      <div id="horaHora"></div> 
+      <span></span> 
+      <!-- ;) --> 
+      <style type="text/css">
+        
+/* Fecha Hora Header */
+#horaFecha{ font-size:12px; color: white; float:right; position:absolute; margin-top: 73px; margin-left:0px; text-align:center; width:173px; *margin-left: -165px; z-index:999;}
+#horaHora { font-size:35px; color: white; float:right; position:absolute; margin-top: 84px; margin-left:42px; *margin-left: -150px; text-shadow: black 1px 1px;  z-index:999;}
+
+    </style> 
+      <!-- Google DFP - Banner Header Reloj 173x125 --> 
+      <style>
+#horaHora, #horaFecha { display: none !important; }
+#header .hora { background: none !important; }
+</style> 
+      <script>
+/*
+if (sec_id_dfp == 1 && fid_dfp == "fid_portada") {
+document.write('<style>#horaHora, #horaFecha { display: block !important; } #header .hora { background: none !important; } #header #horaFecha {margin-top: 73px !important;} #header #horaHora {margin-top: 84px !important;} </style>');
+}
+else if (sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+document.write('<style>#horaHora, #horaFecha { display: block !important; } #header .hora { background: none !important; } #header #horaFecha {margin-top: 73px !important;} #header #horaHora {margin-top: 84px !important;} </style>');
+}
+else {
+document.write('<style>#horaHora, #horaFecha { display: none !important; } #header .hora { background: none !important; }</style>');
+}
+*/
+</script> 
+      <!--
+<a href="//www.cooperativa.cl/programas" style="display:block; width:172px; height:76px; /*outline:1px dotted red;*/ background:rgba(250,0,0,0.0);"></a>
+--> 
+      <span class="branding"> 
+       <div style="float:left; margin-top:-5px;"> 
+        <script>
+if(sec_id_dfp == 0 && fid_dfp == "fid_portada") {
+
+  document.write("<div id='div-gpt-ad-1450149920562-10' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149920562-10'); });
+  document.write("</div>");
+
+}
+if(sec_id_dfp == 3 && fid_dfp == "fid_portada") {
+
+  document.write("<div id='div-gpt-ad-1450151046130-5' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151046130-5'); });
+  document.write("</div>");
+
+}
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+
+  document.write("<div id='div-gpt-ad-1450151095193-5' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151095193-5'); });
+  document.write("</div>");
+
+}
+if(sec_id_dfp == 1 && fid_dfp == "fid_portada") {
+
+  document.write("<div id='div-gpt-ad-1450150369761-6' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150369761-6'); });
+  document.write("</div>");
+
+}
+if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+
+  document.write("<div id='div-gpt-ad-1450150464142-5' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-5'); });
+  document.write("</div>");
+
+}
+if(sec_id_dfp == 4 && fid_dfp == "fid_portada") {
+
+  document.write("<div id='div-gpt-ad-1450150808241-6' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150808241-6'); });
+  document.write("</div>");
+
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam" || fid_dfp == "fid_cartelera")) {
+
+  document.write("<div id='div-gpt-ad-1450150894176-5' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150894176-5'); });
+  document.write("</div>");
+
+}
+if(sec_id_dfp == 2 && fid_dfp == "fid_portada") {
+
+  document.write("<div id='div-gpt-ad-1450150569065-8' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150569065-8'); });
+  document.write("</div>");
+
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+
+  document.write("<div id='div-gpt-ad-1450150645544-5' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150645544-5'); });
+  document.write("</div>");
+
+}
+if(sec_id_dfp == 27 && fid_dfp == "fid_portada") {
+
+  document.write("<div id='div-gpt-ad-1450149480304-2' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149480304-2'); });
+  document.write("</div>");
+
+}
+if(sec_id_dfp == 33 && fid_dfp == "fid_portada") {
+
+  document.write("<div id='div-gpt-ad-1450149604963-3' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149604963-3'); });
+  document.write("</div>");
+
+}
+if(fid_dfp == "fid_foto") {
+
+  document.write("<div id='div-gpt-ad-1450149318064-5' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149318064-5'); });
+  document.write("</div>");
+
+}
+if(fid_dfp == "fid_video") {
+
+  document.write("<div id='div-gpt-ad-1450149421521-5' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149421521-5'); });
+  document.write("</div>");
+
+}
+if(fid_dfp == "fid_audio") {
+
+  document.write("<div id='div-gpt-ad-1450149232228-5' style='height:125px; width:173px;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149232228-5'); });
+  document.write("</div>");
+
+}
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE RELOJ
+if((sec_id_dfp == 16) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450149920562-10'>");
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450149920562-10'); });
+  document.write("</div>");}
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE RELOJ
+</script> 
+       </div> </span> 
+      <!--/Google DFP - Banner Header Reloj 173x125 --> 
+     </div> 
+     <!-- nav: botonera --> 
+     <nav id="botonera"> 
+      <ul> 
+       <li class="select"><a href="http://www.cooperativa.cl/" target="_top">Portada</a></li> 
+       <li><a href="http://www.cooperativa.cl/noticias/pais" target="_top">País</a></li> 
+       <li><a href="http://www.cooperativa.cl/noticias/deportes" target="_top">Deportes</a></li> 
+       <li><a href="http://www.cooperativa.cl/noticias/entretencion" target="_top">Entretención y Tendencias</a></li> 
+       <li><a href="http://www.cooperativa.cl/noticias/mundo" target="_top">Mundo</a></li> 
+       <li><a href="http://www.cooperativa.cl/opinion/" target="_top">Opinión</a></li> 
+       <li><a href="http://www.cooperativa.cl/especiales" target="_top">Especiales</a></li> 
+       <li><a href="http://www.cooperativa.cl/fotos" target="_top">Fotos</a></li> 
+       <li><a href="http://www.cooperativa.cl/audios" target="_top">Audios</a></li> 
+       <li><a href="http://www.cooperativa.cl/videos" target="_top">CooperativaTV</a></li> 
+       <div class="boton-m360">
+        <a href="http://www.m360.cl/?utm_source=cooperativa&amp;utm_campaign=lanzamiento_m360&amp;utm_medium=menu_cabecera" target="_blank"></a>
+       </div> 
+      </ul> 
+     </nav> 
+     <!-- FIN nav: botonera --> 
+    </header> 
+    <!-- FIN header --> 
+    <!-- Articulo --> 
+    <!-- Contenido 1--> 
+    <!-- Lince Adserver - Huincha Top 990x30 --> 
+    <div style="margin-left:0;" id="oas-bexp"> 
+     <!-- DFP Exp_x03 --> 
+     <script>
+if(sec_id_dfp == 0 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450210711927-1' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210711927-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 3 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450210789293-2' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210789293-2'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+ document.write("<div id='div-gpt-ad-1450210845902-3' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210845902-3'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450210918572-1' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210918572-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450210982740-1' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450210982740-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 4 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450211094717-0' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211094717-0'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450211182920-1' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211182920-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450211271782-3' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211271782-3'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450211385144-3' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211385144-3'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 27 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450211455568-1' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211455568-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 33 && fid_dfp == "fid_portada") {
+  document.write("<div id='div-gpt-ad-1450211509179-1' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211509179-1'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_foto") {
+  document.write("<div id='div-gpt-ad-1450211567329-1' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211567329-1'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_video") {
+  document.write("<div id='div-gpt-ad-1450211655943-1' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211655943-1'); });
+  document.write("</div>");
+}
+if(fid_dfp == "fid_audio") {
+  document.write("<div id='div-gpt-ad-1450211611297-1' style='display:table; margin:auto;'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450211611297-1'); });
+  document.write("</div>");
+}
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE
+if(sec_id_dfp != 0){
+  if(tema_id == 2381 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {}
+}  
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE
+</script> 
+     <!-- /DFP Exp_x03 --> 
+    </div> 
+    <!--/Lince Adserver - Huincha Top 990x30 --> 
+    <!-- Noticias --> 
+    <section class="content" id="cuerpo-articulo"> 
+     <div class="cleft"> 
+      <div id="articulo"> 
+       <div class="col1 col-full"> 
+        <header> 
+         <div class="top"> 
+          <span>Tópicos: <a href="/noticias/site/tax/port/all/taxport_7___1.html">Sociedad</a> <span>|</span> <a href="/noticias/site/tax/port/all/taxport_7_234__1.html">Medios</a> <span>|</span> <a href="/noticias/site/tax/port/all/taxport_7_234_1773_1.html">Televisión</a> </span> 
+          <a href="#fontSizeAgrandar" onclick="FontSize.cambiaSize('mas'); return false;"><img src="/noticias/imag/ico/txt-mas.jpg" alt="Aumentar tamaño" title="Aumentar tamaño" onmouseover="Botones.toogle(this);" onmouseout="Botones.toogle(this);"></a> 
+          <a href="#fontSizeAchicar" onclick="FontSize.cambiaSize('menos'); return false;"><img src="/noticias/imag/ico/txt-menos.jpg" alt="Disminuír tamaño" title="Disminuír tamaño" onmouseover="Botones.toogle(this);" onmouseout="Botones.toogle(this);"></a> 
+          <span class="separa"></span> 
+         </div> 
+         <h3>TVN reconoció error al usar imágenes de encapuchados para describir la movilización estudiantil</h3> 
+         <div>
+          <p>El canal público abordó la denuncia del sitio <i>Otra Prensa</i>.</p> 
+          <p>Dirigentes del Colegio de Periodistas pidieron presentar el caso al Tribunal de Etica.</p>
+         </div> 
+         <div class="pre-footer"> 
+          <span>Publicado: <strong id="seteoFecha"></strong> | Autor: <strong> Cooperativa.cl </strong> </span> 
+          <div class="comentarios aright"> 
+           <span class="label radius"><a href="#comentar_facebook">Comentar</a></span> 
+           <fb:comments-count href="http://www.cooperativa.cl/noticias/sociedad/medios/television/tvn-reconocio-error-al-usar-imagenes-de-encapuchados-para-describir-la-movilizacion-estudiantil/2011-07-26/114017.html"></fb:comments-count> 
+           <div class="separa"></div>
+           <!-- separa con border-bottom --> 
+          </div>
+          <!-- comentarios --> 
+         </div> 
+         <span class="separa"></span>
+         <!-- separa con border-bottom --> 
+         <div class="footer"> 
+          <ul class="botshare"> 
+           <li class="compartelo"><span class="aleft">Compártelo:&nbsp;</span></li> 
+           <li class="tw"><a href="http://twitter.com/share" class="twitter-share-button" data-via="Cooperativa" data-lang="es" data-text="TVN reconoció error al usar imágenes de encapuchados para describir la movilización estudiantil" data-counturl="http://www.cooperativa.cl/noticias/sociedad/medios/television/tvn-reconocio-error-al-usar-imagenes-de-encapuchados-para-describir-la-movilizacion-estudiantil/2011-07-26/114017.html">Comparte en Twitter</a></li> 
+           <li class="fb">
+            <div class="fb-share-button" data-href="http://www.cooperativa.cl/noticias/sociedad/medios/television/tvn-reconocio-error-al-usar-imagenes-de-encapuchados-para-describir-la-movilizacion-estudiantil/2011-07-26/114017.html" data-type="button_count"></div></li> 
+           <li class="gp">
+            <div class="g-plus" data-action="share" data-annotation="bubble"></div></li> 
+          </ul> 
+          <div class="links-artic aright"> 
+           <span>Llévatelo: </span> 
+           <a href="#infoEmbed" class="compartirEmbed"><img width="18" height="18" title="Embeber" alt="Embeber" src="/noticias/imag/ico/llevatelo-1.gif"></a> 
+           <a href="#infoLink" class="compartirLink"><img width="18" height="18" title="Link" alt="Link" src="/noticias/imag/ico/llevatelo-2.gif"></a> 
+           <a href="#enviarArtic" onclick="Utiles.enviarArticulo('/noticias/site/artic/20110726/pags/20110726114017.html','TVN reconoció error al usar imágenes de encapuchados para describir la movilización estudiantil'); return false;"><img width="18" height="18" title="Enviar" alt="Enviar" src="/noticias/imag/ico/llevatelo-3.gif"></a> 
+           <a href="#imprimirArtic" onclick="Utiles.imprimirArticulo('/noticias/site/artic/20110726/pags/20110726114017.html',''); return false;"><img width="18" height="18" title="Imprimir" alt="Imprimir" src="/noticias/imag/ico/llevatelo-4.gif"></a> 
+          </div> 
+          <span class="separa"></span> 
+         </div>
+         <!-- Footer --> 
+        </header> 
+        <!-- DFP Articulo Cuerpo x32 --> 
+        <div class="dfp_box_01"> 
+         <div class="dfp_box_02"> 
+          <script>
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450151095193-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151095193-0'); });
+  document.write("</div>");
+}
+
+
+if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150464142-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-0'); });
+  document.write("</div>");
+}
+
+
+/*
+// USADO EN CUSTOM  ARTICULOS 
+if((sec_id_dfp == 1 && tema_id != 1963) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150464142-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-0'); });
+  document.write("</div>");
+}
+// FIN USADO EN CUSTOM ARTICULOS 
+*/
+
+
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam" || fid_dfp == "fid_cartelera")) {
+  document.write("<div id='div-gpt-ad-1450150894176-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150894176-0'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150645544-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150645544-0'); });
+  document.write("</div>");
+}
+
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE CUERPO 1
+if((sec_id_dfp == 16 && tema_id == 2381) && (fid_dfp == "fid_noticia")) {
+ document.write("<div id='div-gpt-ad-1470344528800-6'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1470344528800-6'); });
+  document.write("</div>");
+}
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE CUERPO 1
+
+
+//IMPRIME BLOQUE CUSTOM  ARTICULOS  CUERPO 1
+if((sec_id_dfp == 1 && tema_id == 1963) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol")) {
+  //document.write("<div id='div-gpt-ad-1470346842424-0'>");
+//googletag.cmd.push(function() { googletag.display('div-gpt-ad-1470346842424-0'); });
+  //document.write("</div>");
+}
+//IMPRIME BLOQUE CUSTOM  ARTICULOS CUERPO 1
+</script> 
+         </div> 
+        </div> 
+        <!-- /DFP Articulo Cuerpo x32 --> 
+        <div class="contenido"> 
+         <div class="col274 aleft"> 
+          <div class="box_separador_01"> 
+           <div class="separa"></div> 
+           <script>var controlRelacionados = false //Si es false no muestra rotulo</script> 
+           <h4 id="rotulo-relacionedos"></h4> 
+           <div class="relac"> 
+            <script>controlRelacionados = true;</script> 
+            <article> 
+             <img src="/noticias/site/artic/20171219/imag/foto_0000000420171219182346.jpg" alt="La Historia Es Nuestra: ¿Quién es Robert Edward Turner III y qué hará con el fútbol chileno?" title="La Historia Es Nuestra: ¿Quién es Robert Edward Turner III y qué hará con el fútbol chileno?" width="83" height="47"> 
+             <span> <span class="fecha-dinamica"> <span class="fecha">20171219</span> <span class="hora">18:22</span> </span> </span> 
+             <span class="barra">|</span> 
+             <a href="/noticias/sociedad/medios/television/la-historia-es-nuestra-quien-es-robert-edward-turner-iii-y-que-hara/2017-12-19/182346.html" class="link"> [Audio] La Historia Es Nuestra: ¿Quién es Robert Edward Turner III y qué hará con el fútbol chileno? </a> 
+             <span class="separa"></span> 
+            </article> 
+            <script type="text/javascript">
+        var counter = 0;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        if (counter > 1) {
+
+            $('div.relac > article a.link').each(function () {
+                var txt = $(this).text();
+                txt = txt.replace(/^\s*|\s*$/g,"");
+                txt = txt.replace(/^\[Foto\].*?/i, '[Fotos]');
+                $(this).text(txt);
+            });
+        }
+    </script> 
+            <script>controlRelacionados = true;</script> 
+            <article> 
+             <img src="/noticias/site/artic/20170825/imag/foto_0000000420170825075447.jpg" alt="Gobierno de Maduro sacó del aire a los canales colombianos RCN y Caracol" title="Gobierno de Maduro sacó del aire a los canales colombianos RCN y Caracol" width="83" height="47"> 
+             <span> <span class="fecha-dinamica"> <span class="fecha">20170825</span> <span class="hora">08:03</span> </span> </span> 
+             <span class="barra">|</span> 
+             <a href="/noticias/mundo/venezuela/politica/gobierno-de-maduro-saco-del-aire-a-los-canales-colombianos-rcn-y-caracol/2017-08-25/075447.html" class="link"> Gobierno de Maduro saca del aire a RCN y Caracol </a> 
+             <span class="separa"></span> 
+            </article> 
+            <script type="text/javascript">
+        var counter = 0;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        if (counter > 1) {
+
+            $('div.relac > article a.link').each(function () {
+                var txt = $(this).text();
+                txt = txt.replace(/^\s*|\s*$/g,"");
+                txt = txt.replace(/^\[Foto\].*?/i, '[Fotos]');
+                $(this).text(txt);
+            });
+        }
+    </script> 
+            <script>controlRelacionados = true;</script> 
+            <article> 
+             <img src="/noticias/site/artic/20170518/imag/foto_0000000420170518091642.jpg" alt="Muere ex ejecutivo de Fox denunciado por acoso sexual" title="Muere ex ejecutivo de Fox denunciado por acoso sexual" width="83" height="47"> 
+             <span> <span class="fecha-dinamica"> <span class="fecha">20170518</span> <span class="hora">09:26</span> </span> </span> 
+             <span class="barra">|</span> 
+             <a href="/noticias/entretencion/television/muere-ex-ejecutivo-de-fox-denunciado-por-acoso-sexual/2017-05-18/091642.html" class="link"> Muere ex ejecutivo de Fox denunciado por acoso sexual </a> 
+             <span class="separa"></span> 
+            </article> 
+            <script type="text/javascript">
+        var counter = 0;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        if (counter > 1) {
+
+            $('div.relac > article a.link').each(function () {
+                var txt = $(this).text();
+                txt = txt.replace(/^\s*|\s*$/g,"");
+                txt = txt.replace(/^\[Foto\].*?/i, '[Fotos]');
+                $(this).text(txt);
+            });
+        }
+    </script> 
+            <script>controlRelacionados = true;</script> 
+            <article> 
+             <img src="/noticias/imag/default/imagen_video_83x47.jpg" width="83" height="47" alt="Periodista de la BBC vivió tierna interrupción durante despacho en vivo" title="Periodista de la BBC vivió tierna interrupción durante despacho en vivo"> 
+             <span> <span class="fecha-dinamica"> <span class="fecha">20170310</span> <span class="hora">10:26</span> </span> </span> 
+             <span class="barra">|</span> 
+             <a href="/noticias/sociedad/medios/television/periodista-de-la-bbc-vivio-tierna-interrupcion-durante-despacho-en-vivo/2017-03-10/103425.html" class="link"> [Video] Periodista de la BBC vivió tierna interrupción durante despacho en vivo </a> 
+             <span class="separa"></span> 
+            </article> 
+            <script type="text/javascript">
+        var counter = 0;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        if (counter > 1) {
+
+            $('div.relac > article a.link').each(function () {
+                var txt = $(this).text();
+                txt = txt.replace(/^\s*|\s*$/g,"");
+                txt = txt.replace(/^\[Foto\].*?/i, '[Fotos]');
+                $(this).text(txt);
+            });
+        }
+    </script> 
+            <script>controlRelacionados = true;</script> 
+            <article> 
+             <img src="/noticias/site/artic/20170223/imag/foto_0000000420170223101011.jpg" alt="Falleció Iván Loscher, voz emblemática de HBO y Chilevisión" title="Falleció Iván Loscher, voz emblemática de HBO y Chilevisión" width="83" height="47"> 
+             <span> <span class="fecha-dinamica"> <span class="fecha">20170223</span> <span class="hora">11:59</span> </span> </span> 
+             <span class="barra">|</span> 
+             <a href="/noticias/sociedad/medios/television/fallecio-ivan-loscher-voz-emblematica-de-hbo-y-chilevision/2017-02-23/101011.html" class="link"> Murió Iván Loscher, la voz de HBO y Chilevisión. </a> 
+             <span class="separa"></span> 
+            </article> 
+            <script type="text/javascript">
+        var counter = 0;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        if (counter > 1) {
+
+            $('div.relac > article a.link').each(function () {
+                var txt = $(this).text();
+                txt = txt.replace(/^\s*|\s*$/g,"");
+                txt = txt.replace(/^\[Foto\].*?/i, '[Fotos]');
+                $(this).text(txt);
+            });
+        }
+    </script> 
+            <script>controlRelacionados = true;</script> 
+            <article> 
+             <img src="/noticias/site/artic/20170216/imag/foto_0000000520170216011749.jpg" alt="El conflicto por la decisión del gobierno de Maduro de sacar del aire a CNN en Español" title="El conflicto por la decisión del gobierno de Maduro de sacar del aire a CNN en Español" width="83" height="47"> 
+             <span> <span class="fecha-dinamica"> <span class="fecha">20170216</span> <span class="hora">01:16</span> </span> </span> 
+             <span class="barra">|</span> 
+             <a href="/noticias/mundo/venezuela/el-conflicto-por-la-decision-del-gobierno-de-maduro-de-sacar-del-aire-a/2017-02-16/011749.html" class="link"> [Audio] El conflicto por la decisión del gobierno de Maduro de sacar del aire a CNN en Español </a> 
+             <span class="separa"></span> 
+            </article> 
+            <script type="text/javascript">
+        var counter = 0;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        if (counter > 1) {
+
+            $('div.relac > article a.link').each(function () {
+                var txt = $(this).text();
+                txt = txt.replace(/^\s*|\s*$/g,"");
+                txt = txt.replace(/^\[Foto\].*?/i, '[Fotos]');
+                $(this).text(txt);
+            });
+        }
+    </script> 
+            <script>controlRelacionados = true;</script> 
+            <!-- Este articulo no va --> 
+            <script>
+if(controlRelacionados == true){
+    var rotuloRel = $('#rotulo-relacionedos');    
+    rotuloRel.html('Relacionados');    
+}else{
+    var separador = $('#separador-relacionados');
+    separador.css('border','none');  
+}
+<<<<<<< HEAD
+</script> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="CUERPO"> 
+          <p>El presidente del directorio de <em>TVN</em>, <strong>Leonidas Montes</strong>, reconoció que <strong>el canal público cometió un "error"</strong> al usar imágenes de encapuchados para describir las movilizaciones estudiantiles, informó el Colegio de Periodistas.</p> 
+          <p>Según el comunicado del órgano, el directorio de <em>TVN</em> analizó la denuncia realizada por el sitio <a href="http://www.otraprensa.com/el-encapuchado-de-tvn/"><em>Otra Prensa</em></a> que, en tres días distintos, mostró la imagen de los conductores Amaro Gómez-Pablos, Gonzalo Ramírez y Consuelo Saavedra anunciando <strong>notas sobre el movimiento con la misma fotografía de fondo: un joven encapuchado.</strong></p>
+          <!--PUBLICIDAD--> 
+          <!--INCLUDE marca 34 DFP ESTADO: OK--> 
+          <div> 
+           <script>
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450151095193-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151095193-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150464142-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-1'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150894176-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150894176-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150645544-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150645544-1'); });
+  document.write("</div>");
+}
+
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE
+//if(tema_id == 2381 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {}
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE
+
+
+
+</script> 
+=======
+</script> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="CUERPO"> 
+          <p>El presidente del directorio de <em>TVN</em>, <strong>Leonidas Montes</strong>, reconoció que <strong>el canal público cometió un "error"</strong> al usar imágenes de encapuchados para describir las movilizaciones estudiantiles, informó el Colegio de Periodistas.</p> 
+          <p>Según el comunicado del órgano, el directorio de <em>TVN</em> analizó la denuncia realizada por el sitio <a href="http://www.otraprensa.com/el-encapuchado-de-tvn/"><em>Otra Prensa</em></a> que, en tres días distintos, mostró la imagen de los conductores Amaro Gómez-Pablos, Gonzalo Ramírez y Consuelo Saavedra anunciando <strong>notas sobre el movimiento con la misma fotografía de fondo: un joven encapuchado.</strong></p>
+          <!--PUBLICIDAD--> 
+          <!--INCLUDE marca 34 DFP ESTADO: OK--> 
+          <div> 
+           <script>
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450151095193-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151095193-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150464142-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-1'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150894176-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150894176-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150645544-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150645544-1'); });
+  document.write("</div>");
+}
+
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE
+//if(tema_id == 2381 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {}
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE
+
+
+
+</script> 
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
+          </div> 
+          <!--/PUBLICIDAD--> 
+          <p>El Colegio de Periodistas recordó que el Código de Etica "sanciona explícitamente este tipo de manipulación" y adelantó que <strong>dirigentes del órgano pidieron presentar el caso ante el Tribunal de Etica.</strong></p> 
+          <p>"Valoramos la actitud del directorio de <em>TVN</em>, pero seguiremos atentos a que se cumplan normas éticas básicas para el ejercicio de la profesión", afirmó Marcelo Castillo, presidente del Colegio de Periodistas.</p> 
+          <p>&nbsp;</p> 
+          <table border="1" cellpadding="1" cellspacing="1" class="table-center" style="float: center;" width="208"> 
+           <tbody> 
+            <tr> 
+             <td style="text-align: center"><img alt="Imagen" border="0" height="358" name="FOTO_02" src="/prontus_nots/site/artic/20110726/imag/FOTO_0220110726114017.jpg" style="float: left;" width="190"></td> 
+            </tr> 
+            <tr> 
+             <td class="piefoto" style="text-align: center">Esta es la captura que hizo Otra Prensa.</td> 
+            </tr> 
+           </tbody> 
+          </table> 
+          <!-- Archivos Adjuntos --> 
+          <!-- Fin Archivos Arjuntos --> 
+         </div> 
+        </div> 
+>>>>>>> 14a1afdaab6b49574300e8d1dfa9f407632c3733
        </div> 
       </section> 
       <div id="mybbc-wrapper" class="orb-nav-section orb-nav-id orb-nav-focus"> 

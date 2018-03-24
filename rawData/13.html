@@ -120,10 +120,273 @@
   <script>
 var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=i[t];return n&&n[1]||null}function e(t,n){if(t){var e,o,r=n[0],i=n[1],u=0,c=0;if(1!==i.length||4294967296!==i[0])for(e=a(t+" "+r)>>>0,u=0,c=0;o=i[u++];)if(e<(c+=o[0]))return o}}function o(n,e,o,a){s+="subject="+n+"&test="+encodeURIComponent(e)+"&variant="+encodeURIComponent(o||0)+"&url="+encodeURIComponent(t.location.href)+"&instant=1&skipAugment=true\n",a&&f.push(a),c||(c=t.setTimeout(r,0))}function r(){var n=new t.XMLHttpRequest,e=f;n.withCredentials=!0,n.open("POST",u),n.onreadystatechange=function(){var t,o;if(4==n.readyState)for(t=200==n.status?null:new Error(n.statusText);o=e.shift();)o(t)},n.send(s),s="",f=[],c=null}function a(t){for(var n,e,o,r,a,i,u,c=0,s=0,f=[],l=[n=1732584193,e=4023233417,~n,~e,3285377520],h=[],p=t.length;s<=p;)h[s>>2]|=(s<p?t.charCodeAt(s):128)<<8*(3-s++%4);for(h[u=p+8>>2|15]=p<<3;c<=u;c+=16){for(n=l,s=0;s<80;n=[0|[(i=((t=n[0])<<5|t>>>27)+n[4]+(f[s]=s<16?~~h[c+s]:i<<1|i>>>31)+1518500249)+((e=n[1])&(o=n[2])|~e&(r=n[3])),a=i+(e^o^r)+341275144,i+(e&o|e&r|o&r)+882459459,a+1535694389][0|s++/20],t,e<<30|e>>>2,o,r])i=f[s-3]^f[s-8]^f[s-14]^f[s-16];for(s=5;s;)l[--s]=l[s]+n[s]|0}return l[0]}var i,u,c,s="",f=[];return n.init=function(n,r){var a,c,s,f,l,h=[],p=(t.document.cookie.match(/(^|;) *nyt-a=([^;]*)/)||[])[2],d=(t.document.cookie.match(/(^|;) *ab7=([^;]*)/)||[])[2],m=new RegExp("[?&]abra(=([^&#]*))"),g=m.exec(t.location.search);if(g&&g[2]&&(d=d?g[2]+"&"+d:g[2]),i)throw new Error("can't init twice");if(u=r,i={},d)for(d=decodeURIComponent(d).split("&"),a=0;a<d.length;a++)l=d[a].split("="),l[0]in i||(i[l[0]]=[,l[1],1],o("ab-alloc",l[0],l[1]),l[1]&&h.push(l[0]+"="+l[1]));for(a=0;a<n.length;a++)s=n[a],(c=s[0])in i||(f=e(p,s)||[],i[c]=f,f[1]&&h.push(c.replace(/[^\w-]/g)+"="+(""+f[1]).replace(/[^\w-]/g)),f[2]&&o("ab-alloc",c,f[1]));h.length&&t.document.documentElement.setAttribute("data-nyt-ab",h.join(" "))},n.reportExposure=function(n,e){var r=i[n];r&&r[2]?o("ab-expose",n,r[1],e):e&&t.setTimeout(function(){e(null)},0)},n}(this);
 </script> 
+<<<<<<< HEAD
   <script>NYTD.Abra.init([["www-story-reader-satisfaction",[[21474837,"Control",1],[21474836,"VariantA",1],[4252017623,null,0]]],["www-signup-favor-test",[[2147483648,"0",0],[2147483648,"1",0]]],["www-auto-newsletter",[[4294967296,"1",0]]],["www-STRIK-nl-regi",[[4294967296,"2",0]]],["abra_dfp",[[3865470567,"control",1],[429496729,"test",1]]],["EC_SampleTest",[[2147483648,"variantA",0],[2147483648,"variantB",0]]]], '//et.nytimes.com/')</script> 
   <!--  end abra  --> 
   <script>
 /* ABRA reporting for Vi rollout. Please don't hand-edit this minified snippet. <https://github.com/nytm/vi-rollout-abra-reporting-js> (67c2140 @ Mon Dec 11 17:51:59 EST 2017) */ function reportViRolloutToABRA(t,e,o){"use strict";var i,a,n,r,s="";if(e&&(/^mobile\./.test(window.location.hostname)?(i=(document.cookie.match(/(?:^|;) *vi=([^;]*)/)||[,""])[1],a=(document.cookie.match(/(?:^|;) *nyt\.np\.vi=([^;]*)/)||[,""])[1],n=/^b1/.test(i)?"WP_ProjectVi&variant=vi":/^z1/.test(i)?"WP_ProjectVi&variant=0":/^a2/.test(i)?"WP_ProjectVi2&variant=hp-st":/^b2/.test(i)?"WP_ProjectVi2&variant=hp":/^c2/.test(i)?"WP_ProjectVi2&variant=st":/^z2/.test(i)?"WP_ProjectVi2&variant=0":/^1\|/.test(a)?"WP_ProjectVi&variant=vi":/^2\|/.test(a)?"WP_ProjectVi&variant=0":null):/^www\./.test(window.location.hostname)&&(i=(document.cookie.match(/(?:^|;) *vi_www_hp=([^;]*)/)||[,""])[1],n=/^a2/.test(i)?"WP_ProjectVi_www_hp&variant=hp-st":/^b2/.test(i)?"WP_ProjectVi_www_hp&variant=hp":/^c2/.test(i)?"WP_ProjectVi_www_hp&variant=st":/^d2/.test(i)?"WP_ProjectVi_www_hp&variant=hp-2":/^y2/.test(i)?"WP_ProjectVi_www_hp&variant=0-2":/^z2/.test(i)?"WP_ProjectVi_www_hp&variant=0":null),n&&(s+="subject=ab-alloc&test="+n+"&url="+encodeURIComponent(window.location.href)+"&instant=1&skipAugment=true\n")),o&&(/^mobile\./.test(window.location.hostname)?(i=(document.cookie.match(/(?:^|;) *vistorymobile=([^;]*)/)||[,""])[1],r=/^a/.test(i)?"WP_ProjectVi_Story_Mobile&variant=st":/^b/.test(i)?"WP_ProjectVi_Story_Mobile&variant=sth":/^c/.test(i)?"WP_ProjectVi_Story_Mobile&variant=mw":/^z/.test(i)?"WP_ProjectVi_Story_Mobile&variant=mwh":null):/^www\./.test(window.location.hostname)&&(i=(document.cookie.match(/(?:^|;) *vistory=([^;]*)/)||[,""])[1],r=/^a/.test(i)?"WP_ProjectVi_story_desktop&variant=sd":/^b/.test(i)?"WP_ProjectVi_story_desktop&variant=sdh":/^c/.test(i)?"WP_ProjectVi_story_desktop&variant=nyt5":/^z/.test(i)?"WP_ProjectVi_story_desktop&variant=nyt5h":null),r&&(s+="subject=ab-alloc&test="+r+"&url="+encodeURIComponent(window.location.href)+"&instant=1&skipAugment=true\n")),s){var c=new XMLHttpRequest;c.withCredentials=!0,c.open("POST",t),c.send(s)}}
+=======
+  <script type="text/javascript">
+
+var date_dfp  = new Date();
+var hours_dfp = date_dfp.getHours();
+
+googletag.cmd.push(function() {
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+    //googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210845902-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210845902-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210845902-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210845902-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1450210845902-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Pais_Articulos_ITT_x24', [[1000, 580], [780, 580]], 'div-gpt-ad-1450210845902-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Pais_Articulos_ITT_x24', 'div-gpt-ad-1450210845902-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Pais_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-10').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Pais_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450210845902-3').addService(googletag.pubads());
+}
+
+
+// (ORIGINAL)
+// if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+// FIN (ORIGINAL) 
+
+// MODIFICADO - DAKAR 2018 
+if((sec_id_dfp == 1 && secc_id != 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+// FIN MODIFICADO - DAKAR 2018
+
+
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210982740-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210982740-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210982740-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210982740-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450210982740-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1450210982740-2').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulos_ITT_x24', [[780, 580], [1000, 580]], 'div-gpt-ad-1450210982740-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Deportes_Articulos_ITT_x24', 'div-gpt-ad-1450210982740-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Deportes_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-1').addService(googletag.pubads());
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam" || fid_dfp == "fid_cartelera")) {
+    //googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211182920-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211182920-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211182920-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211182920-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211182920-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1450211182920-2').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Entretencion_Articulos_ITT_x24', [[780, 580], [1000, 580]], 'div-gpt-ad-1450211182920-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Entretencion_Articulos_ITT_x24', 'div-gpt-ad-1450211182920-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Entretencion_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-3').addService(googletag.pubads());
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+    //googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211385144-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211385144-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211385144-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211385144-0').addService(googletag.pubads());
+<<<<<<< HEAD
+    }
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1450211385144-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Mundo_Articulos_ITT_x24', [[1000, 580], [780, 580]], 'div-gpt-ad-1450211385144-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Mundo_Articulos_ITT_x24', 'div-gpt-ad-1450211385144-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Mundo_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-7').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211385144-3').addService(googletag.pubads());
+}
+
+if(fid_dfp == "fid_foto") {
+    //googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Fotos_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211567329-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Fotos_ITT_x24', [[1000, 580], [780, 580]], 'div-gpt-ad-1450211567329-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Fotos_ITT_x24', 'div-gpt-ad-1450211567329-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Fotos_Footer_x41', 'div-gpt-ad-1482244626812-6').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Fotos_Rob_1_x04', [250, 250], 'div-gpt-ad-1450211567329-3').addService(googletag.pubads());
+}
+if(fid_dfp == "fid_video") {
+    //googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    }
+=======
+    }
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1450211385144-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Mundo_Articulos_ITT_x24', [[1000, 580], [780, 580]], 'div-gpt-ad-1450211385144-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Mundo_Articulos_ITT_x24', 'div-gpt-ad-1450211385144-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Mundo_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-7').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Mundo_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211385144-3').addService(googletag.pubads());
+}
+
+if(fid_dfp == "fid_foto") {
+    //googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Fotos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211567329-0').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Fotos_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211567329-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Fotos_ITT_x24', [[1000, 580], [780, 580]], 'div-gpt-ad-1450211567329-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Fotos_ITT_x24', 'div-gpt-ad-1450211567329-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Fotos_Footer_x41', 'div-gpt-ad-1482244626812-6').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Fotos_Rob_1_x04', [250, 250], 'div-gpt-ad-1450211567329-3').addService(googletag.pubads());
+}
+if(fid_dfp == "fid_video") {
+    //googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Videos_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211655943-0').addService(googletag.pubads());
+    }
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
+    googletag.defineSlot('/1020719/Coop_D_Videos_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211655943-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Videos_ITT_x24', [[1000, 580], [780, 580]], 'div-gpt-ad-1450211655943-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Videos_ITT_x24', 'div-gpt-ad-1450211655943-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Videos_Footer_x41', 'div-gpt-ad-1482244626812-13').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Videos_Rob_1_x04', [300, 250], 'div-gpt-ad-1450211655943-3').addService(googletag.pubads());
+}
+if(fid_dfp == "fid_audio") {
+    //googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211611297-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211611297-0').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211611297-0').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/Coop_D_Audios_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450211611297-0').addService(googletag.pubads());
+    }
+    
+
+
+
+
+
+
+
+    googletag.defineSlot('/1020719/Coop_D_Audios_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450211611297-1').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Audios_ITT_x24', [[780, 580], [1000, 580]], 'div-gpt-ad-1450211611297-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Audios_ITT_x24', 'div-gpt-ad-1450211611297-2').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Audios_Footer_x41', 'div-gpt-ad-1482244626812-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Audios_Rob_1_x04', [300, 250], 'div-gpt-ad-1450211611297-3').addService(googletag.pubads());
+}
+
+
+//INSTANCIA BLOQUE CUSTOM HDI PUBLIREPORTAJE
+if((sec_id_dfp == 16) && (fid_dfp == "fid_noticia")) {
+    googletag.defineSlot('/1020719/Coop_D_Portada_Left_x22', [120, 600], 'div-gpt-ad-1450149920562-9').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Portada_Reloj_x26', [173, 125], 'div-gpt-ad-1450149920562-10').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/Coop_D_Portada_Right_x23', [120, 600], 'div-gpt-ad-1450149920562-11').addService(googletag.pubads());
+    /*googletag.defineSlot('/1020719/d.esp.hdi.120x600_Articulo_Left_x22', [120, 600], 'div-gpt-ad-1470344528800-0').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.120x600_Articulo_Right_x23', [120, 600], 'div-gpt-ad-1470344528800-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.350x250_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1470344528800-2').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.350x250_Articulo_Rob_x05', [300, 250], 'div-gpt-ad-1470344528800-3').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.350x250_Articulo_Rob_x16', [300, 250], 'div-gpt-ad-1470344528800-4').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.350x250_Articulo_Rob_x29', [300, 250], 'div-gpt-ad-1470344528800-5').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.650x90_Articulo_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1470344528800-6').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/d.esp.hdi.650x90_Articulo_Cuerpo_3_x25', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1470344528800-7').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.hdi.990x90_Articulo_BB_1_x01', [990, 90], 'div-gpt-ad-1470344528800-8').addService(googletag.pubads());*/
+}
+//FIN INSTANCIA BLOQUE CUSTOM HDI PUBLIREPORTAJE
+
+
+//INSTANCIA BLOQUE CUSTOM  
+if((sec_id_dfp == 1 && tema_id == 1963) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol")) {
+    //googletag.defineSlot('/1020719/d.esp.visa.650x90_Articulo_Cuerpo_1_x32', [[650, 40], [650, 90], [650, 60]], 'div-gpt-ad-1470346842424-0').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/d.esp.visa.650x90_Articulo_Cuerpo_3_x25', [[650, 40], [650, 90], [650, 60]], 'div-gpt-ad-1470346842424-1').addService(googletag.pubads());
+    //googletag.defineSlot('/1020719/d.esp.visa.650x90_Articulo_Marcadores_Cuerpo_1_x32', [[650, 90], [650, 40], [650, 60]], 'div-gpt-ad-1470349825629-0').addService(googletag.pubads());
+}
+//FIN INSTANCIA BLOQUE CUSTOM 
+
+
+
+
+
+//INSTANCIA BLOQUE CUSTOM - DAKAR 2018
+if((sec_id_dfp == 1 && secc_id == 49) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1450210982740-0').addService(googletag.pubads());
+    if (hours_dfp > 23) {
+      googletag.defineSlot('/1020719/d.esp.dakar_2018.990x90_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1515179652769-3').addService(googletag.pubads());
+    } else if (hours_dfp < 5) {
+      googletag.defineSlot('/1020719/d.esp.dakar_2018.990x90_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1515179652769-3').addService(googletag.pubads());
+    } else {
+      googletag.defineSlot('/1020719/d.esp.dakar_2018.990x90_Deportes_Articulo_BB_1_x01', [[728, 90], [990, 90]], 'div-gpt-ad-1515179652769-3').addService(googletag.pubads());
+    }
+    googletag.defineSlot('/1020719/Coop_D_Deportes_Articulo_Exp_x03', [[990, 40], [990, 50], [990, 60], [728, 40], [728, 50], [728, 60]], 'div-gpt-ad-1450210982740-1').addService(googletag.pubads());
+    googletag.defineSlot('/1020719/d.esp.dakar_2018.350x250_Deportes_Articulo_Rob_1_x04', [300, 250], 'div-gpt-ad-1515179652769-2').addService(googletag.pubads());
+    //
+    //PRUEBA DE OUT OF PAGE//
+    //googletag.defineSlot('/1020719/Coop_D_Deportes_Articulos_ITT_x24', [[780, 580], [1000, 580]], 'div-gpt-ad-1450210982740-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Deportes_Articulos_ITT_x24', 'div-gpt-ad-1450210982740-3').addService(googletag.pubads());
+    googletag.defineOutOfPageSlot('/1020719/Coop_D_Deportes_Articulo_Footer_x41', 'div-gpt-ad-1482244626812-1').addService(googletag.pubads());
+}
+//FIN INSTANCIA BLOQUE CUSTOM - DAKAR 2018 ixixi
+
+
+
+
+
+
+
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.pubads().enableSyncRendering();
+    googletag.enableServices();
+  });
+</script> 
+  <script type="text/javascript">
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+>>>>>>> 14a1afdaab6b49574300e8d1dfa9f407632c3733
 </script> 
   <script>
   reportViRolloutToABRA(
@@ -203,6 +466,7 @@ var NYTD=NYTD||{};NYTD.Abra=function(t){"use strict";function n(t){var n=i[t];re
 --> 
   <script id="magnum-feature-flags" type="application/json">["limitFabrikSave","moreFollowSuggestions","unfollowComments","scoopTool","videoVHSCover","videoVHSShareTools","videoVHSLive","videoVHSNewControls","videoVHSEmbeddedOnly","allTheEmphases","freeTrial","dedupeWhatsNext","trendingPageLinks","sprinklePaidPost","headerBidder","standardizeWhatsNextCollection","onlyLayoutA","simple","simpleExtendedByline","collectionsWhatsNext","mobileMediaViewer","podcastInLede","MovieTickets","MoreInSubsectionFix","seriesIssueMarginalia","serverSideCollectionUrls","multipleBylines","fabrikWebsocketsOnly","translationLinks","papihttps","verticalFullBleed","updateRestaurantReservations","mapDining","newsletterInlineModule","PersonalizationApiUpdate","apsTagEnabled","removeInternationalEdition","headlineBalancer","clientSideABRA","newsletterTitleTracking","surveyInterstitial","removeFBMessengerPromo","removeMarginaliaAbTest","paidpostSprinklingFix","abraOverrideVersion","headlineBalancerEverywhere","signupFavor","lazyloadOakImages","mapleFreeTrial","adQuerySupportForMultipleUserAddedKeywords","removeSectionDependentAdLogicForJanuary","oakUpdateAdStride","autoPlaceNewsletter","piiBlockDFP","adExclusiveIERibbonCheck","FlexAdDoubleHeightTracking","didScroll","supportedByAdFullBleed","anchorsHttps","oakBylineMargin","TopFlexAdSiteWide","BundlePayFlow","loadArticleOptimizely","oakStyleTouchups","oakBasicHeader","serveOakOnVI","opinionHeadline","indexAsHeaderBidder","newsletterRegiTest","bookReviewBuyButton","caslOpt","sectionBasedAmp","abraInCustomParams","jkiddScript","blueKai","showNewDealbookLogo","commentsUserDataUpdateDisabled","tMagazineFontTest","disableServeAsNyt4"]</script> 
   <script>
+<<<<<<< HEAD
 var require = {
     baseUrl: 'https://a1.nyt.com/assets/',
     waitSeconds: 20,
@@ -221,6 +485,74 @@ var require = {
     map: {
         '*': {
             'story/main': 'article/story/main'
+=======
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "7290944" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script> 
+  <noscript> &lt;img src="http://b.scorecardresearch.com/p?c1=2&amp;amp;c2=7290944&amp;amp;cv=2.0&amp;amp;cj=1"&gt; 
+  </noscript> 
+  <!-- /End comScore Tag --> 
+  <!-- Google Analytics --> 
+<<<<<<< HEAD
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-2229911-1']);
+  _gaq.push(['_setDomainName', '.cooperativa.cl']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+  <!-- /Google Analytics --> 
+  <!-- Social Interaction Analytics --> 
+  <script type="text/javascript">
+=======
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-2229911-1']);
+  _gaq.push(['_setDomainName', '.cooperativa.cl']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+  <!-- /Google Analytics --> 
+  <!-- Social Interaction Analytics --> 
+  <script type="text/javascript">
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
+$(function() {
+  // Social Interaction Twitter
+  twttr.ready(function (twttr) {
+    twttr.events.bind('tweet', function(intent_event) {
+      var extractParamFromUri = function(uri, paramName) {
+        if (!uri) {
+          return;
+        }
+        var regex = new RegExp('[\\?&#]' + paramName + '=([^&#]*)');
+        var params = regex.exec(uri);
+        if (params != null) {
+          return unescape(params[1]);
+        }
+        return;
+      };
+      if (intent_event) {
+        var opt_pagePath;
+        if (intent_event.target && intent_event.target.nodeName == 'IFRAME') {
+          opt_target = extractParamFromUri(intent_event.target.src, 'url');
+>>>>>>> 14a1afdaab6b49574300e8d1dfa9f407632c3733
         }
     }
 };
@@ -433,8 +765,177 @@ var require = {
            <div class="ad sharetools-inline-article-ad hidden nocontent robots-nocontent"> 
             <a class="visually-hidden skip-to-text-link" href="#story-continues-1">Continue reading the main story</a> 
            </div> 
+<<<<<<< HEAD
           </div>
           <!-- close shareTools --> 
+=======
+          </div> 
+         </div> 
+         <div class="CUERPO"> 
+          <p style="text-align: left;"><strong>Más de 60 estudiantes ingresaron a las dependencias de <em>Televisión Nacional de Chile</em>, para intentar interrumpir el noticiero central y leer un comunicado para hacer notar su descontento con el medio estatal.</strong></p> 
+          <p style="text-align: left;">Los <img alt="Imagen" border="0" height="210" name="FOTO_02" src="/prontus_nots/site/artic/20110725/imag/FOTO_0220110725231556.jpg" style="float: left;" width="180">estudiantes acusaron al canal de no dar la suficiente cobertura al conflicto estudiantil y lo tildaron de apoyar al Gobierno en materias de educación.</p>
+          <!--PUBLICIDAD--> 
+          <!--INCLUDE marca 34 DFP ESTADO: OK--> 
+          <div> 
+<<<<<<< HEAD
+           <script>
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450151095193-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151095193-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150464142-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-1'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150894176-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150894176-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150645544-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150645544-1'); });
+  document.write("</div>");
+}
+
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE
+//if(tema_id == 2381 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {}
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE
+
+
+
+=======
+           <script>
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450151095193-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151095193-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150464142-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-1'); });
+  document.write("</div>");
+}
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150894176-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150894176-1'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150645544-1'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150645544-1'); });
+  document.write("</div>");
+}
+
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE
+//if(tema_id == 2381 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {}
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE
+
+
+
+>>>>>>> 27b58fc96feaee067df41c4492c2dc255912dc12
+</script> 
+          </div> 
+          <!--/PUBLICIDAD--> 
+          <p style="text-align: left;">El estudiante de la Universidad de Chile Axel Goppschalk acusó la parcialidad de los medios de comunicación en la cobertura del conflicto estudiantil, donde aseguró que <em>TVN</em> ha criminalizado a los estudiantes y explicó que intentaron interrumpir las transmisiones para expresar su descontento.</p> 
+          <p style="text-align: left;">"<strong>Hemos irrumpido en el canal, hemos intentado interrumpir las transmisiones del noticiario, para hacer ver nuestro descontento y para exigir de una vez por todas, que el canal de todos los chilenos, haga valer esa condición y respalde este movimiento social"</strong>, expresó.</p> 
+          <p style="text-align: left;">Los estudiantes pertenecen a las facultades de Derecho, Medicina, Arquitectura y Periodismo de la citada casa de estudios, quienes al salir del lugar señalaron que intentaron conversar con el director de prensa, para exigir un espacio durante el noticiero.</p> 
+          <!-- Archivos Adjuntos --> 
+          <!-- Fin Archivos Arjuntos --> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="separa"></div> 
+       <!-- Lince Adserver - Banner Contenido 2 649x60 --> 
+       <!-- DFP Articulo Cuerpo x25 --> 
+       <div class="dfp_box_01"> 
+        <div class="dfp_box_02"> 
+         <script>
+if((sec_id_dfp == 3 || sec_id_dfp == 6) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450151095193-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450151095193-2'); });
+  document.write("</div>");
+}
+
+
+if(sec_id_dfp == 1 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150464142-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-2'); });
+  document.write("</div>");
+}
+
+
+if(sec_id_dfp == 1 && (fid_dfp == "fid_mv_futbol")) {
+  document.write("<div id='div-gpt-ad-1497362222097-0'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1497362222097-0'); });
+  document.write("</div>");
+}
+
+
+/*
+// USADO EN CUSTOM  ARTICULOS 
+if((sec_id_dfp == 1 && tema_id != 1963) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol" || fid_dfp == "fid_mv_tenis" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150464142-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150464142-2'); });
+  document.write("</div>");
+}
+// FIN USADO EN CUSTOM ARTICULOS 
+*/
+
+
+if((sec_id_dfp == 4 || sec_id_dfp == 5 || sec_id_dfp == 7 || sec_id_dfp == 8) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam" || fid_dfp == "fid_cartelera")) {
+  document.write("<div id='div-gpt-ad-1450150894176-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150894176-2'); });
+  document.write("</div>");
+}
+if(sec_id_dfp == 2 && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mam")) {
+  document.write("<div id='div-gpt-ad-1450150645544-2'>");
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1450150645544-2'); });
+  document.write("</div>");
+}
+
+//IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE CUERPO 3
+if((sec_id_dfp == 16 && tema_id == 2381) && (fid_dfp == "fid_noticia")) {
+// document.write("<div id='div-gpt-ad-1470344528800-7'>");
+// googletag.cmd.push(function() { googletag.display('div-gpt-ad-1470344528800-7'); });
+// document.write("</div>");
+}
+//FIN IMPRIME BLOQUE CUSTOM HDI PUBLIREPORTAJE CUERPO 3
+
+//IMPRIME BLOQUE CUSTOM  ARTICULOS 
+if((sec_id_dfp == 1 && tema_id == 1963) && (fid_dfp == "fid_noticia" || fid_dfp == "fid_mv_futbol")) {
+//  document.write("<div id='div-gpt-ad-1470346842424-1'>");
+// googletag.cmd.push(function() { googletag.display('div-gpt-ad-1470346842424-1'); });
+//  document.write("</div>");
+}
+//IMPRIME BLOQUE CUSTOM  ARTICULOS 
+</script> 
+        </div> 
+       </div> 
+       <!-- /DFP Articulo Cuerpo x25 --> 
+       <!--/Lince Adserver - Banner Contenido 2 649x60 --> 
+       <!-- col1: artículo --> 
+       <div class="col2 col-full"> 
+        <div class="footer"> 
+         <ul class="botshare"> 
+          <li class="compartelo"><span class="aleft">Compártelo:&nbsp;</span></li> 
+          <li class="tw"><a href="http://twitter.com/share" class="twitter-share-button" data-via="Cooperativa" data-lang="es" data-text="Más de 60 universitarios intentaron interrumpir noticiario central de TVN" data-counturl="http://www.cooperativa.cl/noticias/pais/educacion/movimiento-estudiantil/mas-de-60-universitarios-intentaron-interrumpir-noticiario-central-de-tvn/2011-07-25/231556.html">Comparte en Twitter</a></li> 
+          <li class="fb">
+           <div class="fb-share-button" data-href="http://www.cooperativa.cl/noticias/pais/educacion/movimiento-estudiantil/mas-de-60-universitarios-intentaron-interrumpir-noticiario-central-de-tvn/2011-07-25/231556.html" data-type="button_count"></div></li> 
+          <li class="gp">
+           <div class="g-plus" data-action="share" data-annotation="bubble"></div></li> 
+         </ul> 
+         <div class="links-artic aright"> 
+          <span>Llévatelo: </span> 
+          <a href="#infoEmbed" class="compartirEmbed"><img width="18" height="18" title="Embeber" alt="Embeber" src="/noticias/imag/ico/llevatelo-1.gif"></a> 
+          <a href="#infoLink" class="compartirLink"><img width="18" height="18" title="Link" alt="Link" src="/noticias/imag/ico/llevatelo-2.gif"></a> 
+          <a href="#enviarArtic" onclick="Utiles.enviarArticulo('/noticias/site/artic/20110725/pags/20110725231556.html', 'Más de 60 universitarios intentaron interrumpir noticiario central de TVN');
+              return false;"><img width="18" height="18" title="Enviar" alt="Enviar" src="/noticias/imag/ico/llevatelo-3.gif"></a> 
+          <a href="#imprimirArtic" onclick="Utiles.imprimirArticulo('/noticias/site/artic/20110725/pags/20110725231556.html', '');
+              return false;"><img width="18" height="18" title="Imprimir" alt="Imprimir" src="/noticias/imag/ico/llevatelo-4.gif"></a> 
+>>>>>>> 14a1afdaab6b49574300e8d1dfa9f407632c3733
          </div> 
         </div>
         <!-- close story-meta-footer --> 
