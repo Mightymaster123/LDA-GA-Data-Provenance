@@ -4,7 +4,7 @@ public class PopulationConfig implements java.io.Serializable{
 	public static long MIN_TOPIC_COUNT = 2;
 	public static long MAX_TOPIC_COUNT = 15;
 	public static long MIN_ITERATION_COUNT = 1;
-	public static long MAX_ITERATION_COUNT = 10000;
+	public static long MAX_ITERATION_COUNT = 1000;
 	
 	public int number_of_topics;
 	public int number_of_iterations;
