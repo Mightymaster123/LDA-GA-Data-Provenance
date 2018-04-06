@@ -2,25 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a31daef-0cd5-4144-bc66-4b5823867e18" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/Cluster.class" afterPath="$PROJECT_DIR$/bin/Cluster.class" />
-      <change beforePath="$PROJECT_DIR$/bin/DataProvenance.class" afterPath="$PROJECT_DIR$/bin/DataProvenance.class" />
-      <change beforePath="$PROJECT_DIR$/bin/KeywordExtractor.class" afterPath="$PROJECT_DIR$/bin/KeywordExtractor.class" />
-      <change beforePath="$PROJECT_DIR$/bin/Main.class" afterPath="$PROJECT_DIR$/bin/Main.class" />
-      <change beforePath="$PROJECT_DIR$/bin/MalletInput.class" afterPath="$PROJECT_DIR$/bin/MalletInput.class" />
-      <change beforePath="$PROJECT_DIR$/bin/Master.class" afterPath="$PROJECT_DIR$/bin/Master.class" />
-      <change beforePath="$PROJECT_DIR$/bin/MyThread.class" afterPath="$PROJECT_DIR$/bin/MyThread.class" />
-      <change beforePath="$PROJECT_DIR$/bin/NetworkManager$ListenerThread.class" afterPath="$PROJECT_DIR$/bin/NetworkManager$ListenerThread.class" />
-      <change beforePath="$PROJECT_DIR$/bin/NetworkManager$ReceivedProtocol.class" afterPath="$PROJECT_DIR$/bin/NetworkManager$ReceivedProtocol.class" />
-      <change beforePath="$PROJECT_DIR$/bin/NetworkManager$ReceivedProtocolHandler.class" afterPath="$PROJECT_DIR$/bin/NetworkManager$ReceivedProtocolHandler.class" />
-      <change beforePath="$PROJECT_DIR$/bin/NetworkManager.class" afterPath="$PROJECT_DIR$/bin/NetworkManager.class" />
-      <change beforePath="$PROJECT_DIR$/bin/PopulationConfig.class" afterPath="$PROJECT_DIR$/bin/PopulationConfig.class" />
-      <change beforePath="$PROJECT_DIR$/bin/ResultStatistics.class" afterPath="$PROJECT_DIR$/bin/ResultStatistics.class" />
-      <change beforePath="$PROJECT_DIR$/bin/Slave.class" afterPath="$PROJECT_DIR$/bin/Slave.class" />
-      <change beforePath="$PROJECT_DIR$/bin/TopicModelling.class" afterPath="$PROJECT_DIR$/bin/TopicModelling.class" />
-      <change beforePath="$PROJECT_DIR$/bin/WikiScraping/WikiScrape.class" afterPath="$PROJECT_DIR$/bin/WikiScraping/WikiScrape.class" />
-      <change beforePath="$PROJECT_DIR$/bin/geneticLogic.class" afterPath="$PROJECT_DIR$/bin/geneticLogic.class" />
-      <change beforePath="$PROJECT_DIR$/bin/geneticLogicOriginal.class" afterPath="$PROJECT_DIR$/bin/geneticLogicOriginal.class" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Cluster.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Cluster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/DataProvenance.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/DataProvenance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Document.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/KeywordExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/KeywordExtractor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/MalletInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/MalletInput.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Master.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Master.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/MyThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/MyThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/NetworkManager$ListenerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NetworkManager$ListenerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/NetworkManager$ReceivedProtocol.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NetworkManager$ReceivedProtocol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/NetworkManager$ReceivedProtocolHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NetworkManager$ReceivedProtocolHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/NetworkManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NetworkManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/PopulationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PopulationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ResultStatistics.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ResultStatistics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Slave.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Slave.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/SourceFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/SourceFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/TopicModelling.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/TopicModelling.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/WikiScraping/ITextExtractionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/WikiScraping/ITextExtractionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/WikiScraping/TextConversion.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/WikiScraping/TextConversion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/WikiScraping/WikiScrape.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/WikiScraping/WikiScrape.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/geneticLogic.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/geneticLogic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/geneticLogicOriginal.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/geneticLogicOriginal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/BibHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/BibHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/BowerrcHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/BowerrcHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/BstHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/BstHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/CjsHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/CjsHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/ClangFormatHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/ClangFormatHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/ConfHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/ConfHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/CssHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/CssHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/CsvHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/CsvHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/DartHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/DartHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/ES5Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/ES5Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/ES6Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/ES6Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/EditorConfigHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/EditorConfigHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/ElHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/ElHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/FirsteditionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/FirsteditionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/GeneralHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/GeneralHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/GitignoreHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/GitignoreHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/HtmlHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/HtmlHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/ITextExtractionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/ITextExtractionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/IncludeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/IncludeHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/JavaHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/JavaHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/JsHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/JsHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/JsonHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/JsonHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/LockHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/LockHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/MdHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/MdHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/NullHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/NullHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/PdfHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/PdfHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/PyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/PyHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/ScssHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/ScssHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/SedHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/SedHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/ShHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/ShHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/StyHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/StyHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/SvnbaseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/SvnbaseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/TemplateHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/TemplateHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/TexHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/TexHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/TrigHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/TrigHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/TtlHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/TtlHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/TxtHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/TxtHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/VHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/VHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/XmlHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/XmlHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/YamlHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/YamlHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pkg1/YmlHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pkg1/YmlHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/distribution2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/distribution2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NetworkManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,12 +82,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="522">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PopulationConfig.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PopulationConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -45,9 +103,8 @@
       <file leaf-file-name="config.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="17">
+              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -56,8 +113,7 @@
         <entry file="file://$PROJECT_DIR$/src/Slave.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
-              <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-              <folding />
+              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -65,11 +121,17 @@
       <file leaf-file-name="NetworkManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NetworkManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2363">
-              <caret line="165" column="13" lean-forward="false" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
+            <state relative-caret-position="235">
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
               <folding>
                 <element signature="e#2227#2228#0" expanded="true" />
                 <element signature="e#2250#2251#0" expanded="true" />
+                <element signature="e#2957#2958#0" expanded="true" />
+                <element signature="e#2991#2992#0" expanded="true" />
+                <element signature="e#13605#13606#0" expanded="true" />
+                <element signature="e#13654#13655#0" expanded="true" />
+                <element signature="e#14619#14620#0" expanded="true" />
+                <element signature="e#14664#14665#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,9 +140,11 @@
       <file leaf-file-name="Master.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Master.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#1020#1038#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,16 +154,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config.txt" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/config.txt" />
+        <option value="$PROJECT_DIR$/src/NetworkManager.java" />
       </list>
     </option>
   </component>
@@ -109,30 +169,19 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="486" />
-    <option name="y" value="-14" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="675" />
+    <option name="y" value="-9" />
     <option name="width" value="1680" />
     <option name="height" value="981" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,12 +193,6 @@
               <item name="LDA-GA-Data-Provenance" type="b2602c69:ProjectViewProjectNode" />
               <item name="LDA-GA-Data-Provenance" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LDA-GA-Data-Provenance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LDA-GA-Data-Provenance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="WikiScraping" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,42 +222,17 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
       <module name="capstone" />
-      <envs />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -224,24 +242,13 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
-      <envs />
       <patterns />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -254,17 +261,21 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -273,13 +284,10 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <list>
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -295,6 +303,8 @@
       <workItem from="1521106191040" duration="3497000" />
       <workItem from="1521522816006" duration="1243000" />
       <workItem from="1521604529957" duration="2161000" />
+      <workItem from="1522811171424" duration="50000" />
+      <workItem from="1522811478337" duration="3404000" />
     </task>
     <task id="LOCAL-00001" summary="Added Eclipse project and classpath to work with IntelliJ IDEA.">
       <created>1519288231191</created>
@@ -307,39 +317,40 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7187000" />
+    <option name="totallyTimeSpent" value="10957000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295711" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32693782" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3995363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3295711" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32590315" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12851563" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3989239" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,34 +365,104 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/NetworkManager.java</url>
+          <line>158</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/distribution.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/truthfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/topic.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Slave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding>
+            <element signature="e#1020#1038#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NetworkManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7859">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#13605#13606#0" expanded="true" />
+            <element signature="e#13654#13655#0" expanded="true" />
+            <element signature="e#14619#14620#0" expanded="true" />
+            <element signature="e#14664#14665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Slave.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding />
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NetworkManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
-          <caret line="165" column="13" lean-forward="false" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
+          <caret line="165" column="13" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
           <folding>
             <element signature="e#2227#2228#0" expanded="true" />
             <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#13605#13606#0" expanded="true" />
+            <element signature="e#13654#13655#0" expanded="true" />
+            <element signature="e#14619#14620#0" expanded="true" />
+            <element signature="e#14664#14665#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -389,16 +470,17 @@
     <entry file="file://$PROJECT_DIR$/src/Master.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <element signature="e#1020#1038#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -406,31 +488,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Master.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <element signature="e#1020#1038#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -441,23 +522,23 @@
           <folding>
             <element signature="e#2227#2228#0" expanded="true" />
             <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#13605#13606#0" expanded="true" />
+            <element signature="e#13654#13655#0" expanded="true" />
+            <element signature="e#14619#14620#0" expanded="true" />
+            <element signature="e#14664#14665#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/KeywordExtractor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -465,34 +546,101 @@
     <entry file="file://$PROJECT_DIR$/src/WikiScraping/WikiScrape.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Master.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="102">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding>
+            <element signature="e#1020#1038#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Slave.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding />
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NetworkManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7859">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#13605#13606#0" expanded="true" />
+            <element signature="e#13654#13655#0" expanded="true" />
+            <element signature="e#14619#14620#0" expanded="true" />
+            <element signature="e#14664#14665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/Cluster.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/Main.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="1" column="1" lean-forward="true" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Slave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/NetworkManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2363">
-          <caret line="165" column="13" lean-forward="false" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
+          <caret line="165" column="13" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
           <folding>
             <element signature="e#2227#2228#0" expanded="true" />
             <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#13605#13606#0" expanded="true" />
+            <element signature="e#13654#13655#0" expanded="true" />
+            <element signature="e#14619#14620#0" expanded="true" />
+            <element signature="e#14664#14665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <element signature="e#1020#1038#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -500,36 +648,134 @@
     <entry file="file://$PROJECT_DIR$/config.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/Cluster.class">
+    <entry file="file://$PROJECT_DIR$/src/Slave.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9724#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/Main.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#606#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="391">
+          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <element signature="e#1020#1038#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NetworkManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="165" column="13" lean-forward="true" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
+          <folding>
+            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#13605#13606#0" expanded="true" />
+            <element signature="e#13654#13655#0" expanded="true" />
+            <element signature="e#14619#14620#0" expanded="true" />
+            <element signature="e#14664#14665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/KeywordExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/population_config.java" />
+    <entry file="file://$PROJECT_DIR$/src/WikiScraping/WikiScrape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/Cluster.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/Main.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Slave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Master.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#1020#1038#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NetworkManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="e#2227#2228#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#2991#2992#0" expanded="true" />
+            <element signature="e#13605#13606#0" expanded="true" />
+            <element signature="e#13654#13655#0" expanded="true" />
+            <element signature="e#14619#14620#0" expanded="true" />
+            <element signature="e#14664#14665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PopulationConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
         </state>
       </provider>
     </entry>
