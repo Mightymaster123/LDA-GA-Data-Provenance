@@ -105,12 +105,12 @@ public class NetworkManager {
 		// 1)read master address
 		line = b.readLine();
 		mMasterInetAddress = InetAddress.getByName(line);
-		System.out.println("master address: " + line);
+		System.out.println("Master address: " + line);
 
 		// 2)read number of slaves
 		line = b.readLine();
 		mNumSlaves = Integer.parseInt(line);
-		System.out.println("number of slaves: " + line);
+		System.out.println("Number of slaves: " + line);
 
 		if (mNumSlaves > 0) {
 			// 3)read slave addresses
@@ -118,13 +118,15 @@ public class NetworkManager {
 			for (int i = 0; i < mNumSlaves; i++) {
 				line = b.readLine();
 				mSlaveInetAddress[i] = InetAddress.getByName(line);
-				System.out.println("slave " + i + " address: " + line);
+				System.out.println("Slave " + i + " address: " + line);
 			}
-
 			// 4) set port(port for connection with first slave)
 			line = b.readLine();
 			mFirstPort = Integer.parseInt(line);
-			System.out.println(" first port: " + mFirstPort);
+			System.out.println("First port: " + mFirstPort);
+		}
+		else {
+			System.out.println("0 Slaves specified. Program will run without parallelization between machines.");
 		}
 		b.close();
 		return Connect();
@@ -140,6 +142,9 @@ public class NetworkManager {
 					InetAddress address = enumIpAddr.nextElement();
 					System.out.println("        " + address.toString());
 					if (inetAddress.equals(address)) {
+						// Comment out the below print and return statement if you wish to debug and evaluate other
+						// IP Addresses
+						System.out.println("IP address found.");
 						return true;
 					}
 				}
@@ -187,7 +192,7 @@ public class NetworkManager {
 						if (mSockets[i] != null)
 							break;
 					}
-					System.out.println("slave connection estblished " + i);
+					System.out.println("Slave connection established " + i);
 				}
 			}
 		}
