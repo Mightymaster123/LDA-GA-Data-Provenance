@@ -372,12 +372,15 @@ public class DataProvenance {
 
 		// Print out each article's title along with it's keywords
 		System.out.println("The number of articles is " + articleMap.size());
+		// Uncomment the below if you wish to see the name of articles and their keywords
+		/*
 		int article_index = 0;
 		for (String article : articleMap.keySet()) {
 			Article ar = articleMap.get(article);
 			System.out.println((article_index + 1) + ".\t" + ar.name + "    " + ar.getKeyWords());
 			++article_index;
 		}
+		*/
 		if (!mIsRunning) {
 			return result;
 		}

@@ -84,6 +84,8 @@ public class Main {
 			return;
 		}
 
+
+
 		if (NetworkManager.getInstance().isMaster()) {
 			Master master = new Master();
 			master.run();
@@ -91,8 +93,6 @@ public class Main {
 			Slave slave = new Slave();
 			slave.run();
 		}
-
 		NetworkManager.getInstance().close();
-
 	}
 }
