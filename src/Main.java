@@ -84,7 +84,9 @@ public class Main {
 			return;
 		}
 
-
+		// Grab relevant system information and apply it to the algorithm
+		SystemInfo sysInfo = new SystemInfo();
+		sysInfo.getSystemInfo();
 
 		if (NetworkManager.getInstance().isMaster()) {
 			Master master = new Master();
