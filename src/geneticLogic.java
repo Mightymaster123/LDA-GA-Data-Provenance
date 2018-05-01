@@ -13,7 +13,10 @@ import WikiScraping.WikiScrape;
 
 public class geneticLogic {
 
-	public static final int THREADS_PER_MACHINE = 4;
+	// This number will be modified with further thread per machine research
+	public static final int THREADS_PER_MACHINE = 4; //new SystemInfo().getNumCores() - 1;
+	// Set lower fitness for faster results and for debugging purposes
+	// Set higher fitness such as 0.80 or 0.85 to get more reliable results
 	public static final double FITNESS_THRESHHOLD = 0.35;
 
 	public boolean isRunning = true;
@@ -31,7 +34,9 @@ public class geneticLogic {
 	}
 
 	public ResultStatistics run_master() throws IOException, InterruptedException, ClassNotFoundException {
-		
+
+		//System.out.println("geneticLogic, running master with " + THREADS_PER_MACHINE + " threads.");
+
 		ResultStatistics result = new ResultStatistics();
 		
 		System.out.println("Start geneticLogic: master begin to work ");
